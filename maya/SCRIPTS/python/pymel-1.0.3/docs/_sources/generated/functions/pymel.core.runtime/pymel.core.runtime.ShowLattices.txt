@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowLattices
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowLattices

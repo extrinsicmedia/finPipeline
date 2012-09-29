@@ -1,0 +1,6 @@
+pymel.core.runtime.HideClothPanels
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideClothPanels

@@ -1,0 +1,6 @@
+pymel.core.runtime.HideNURBSSurfaces
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideNURBSSurfaces

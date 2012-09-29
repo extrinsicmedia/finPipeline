@@ -1,0 +1,6 @@
+pymel.core.runtime.MirrorSubdivSurface
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MirrorSubdivSurface

@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.system.displayString &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.system" href="../../pymel.core.system.html" />
+    <link rel="next" title="pymel.core.system.displayWarning" href="pymel.core.system.displayWarning.html" />
+    <link rel="prev" title="pymel.core.system.displayInfo" href="pymel.core.system.displayInfo.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.displayWarning.html" title="pymel.core.system.displayWarning"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.displayInfo.html" title="pymel.core.system.displayInfo"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.system.html" accesskey="U">pymel.core.system</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-system-displaystring">
+<h1>pymel.core.system.displayString<a class="headerlink" href="#pymel-core-system-displaystring" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.system.displayString">
+<em class="property">static </em><tt class="descclassname">system.</tt><tt class="descname">displayString</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.system.displayString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign a string value to a string identifier. Allows you define a string in one location and then refer to it by its
+identifier in many other locations. Formatted strings are also supported (NOTE however, this functionality is now
+provided in a more general fashion by the format command, use of format is recommended). You may embed up to 3 special
+character sequences ^1s, ^2s, and ^3s to perform automatic string replacement. The embedded characters will be replaced
+with the extra command arguments. See example section for more detail. Note the extra command arguments do not need to
+be display string identifiers.              In query mode, return type is based on queried flag.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>delete (d)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is used to remove an identifer string. The command will fail if the identifier does not exist.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true or false depending upon whether the specified identifier exists.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>keys (k)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">List all displayString keys that match the identifier string. The identifier string may be a whole or partial key string. The command will return a list of all
+identifier keys that contain this identifier string as a substring.                                       Flag can have multiple arguments, passed either as a
+tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>replace (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Since a displayString command will fail if it tries to assign a new value to an existing identifer, this flag is required to allow updates to the value of an
+already-existing identifier.  If the identifier does not already exist, a new identifier is added as if the -replace flag were not present.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>value (v)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The display string&#8217;s value. If you do not specify this flag when creating a display string then the value will be the same as the identifier.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.displayString</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c">#    Associate a string with an identifier.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleHelloWorld&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;Hello world&#39;</span> <span class="p">)</span>
+<span class="c">#    Query string associated with an identifer.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleHelloWorld&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c">#    Define a simple formatted string to append ellipses.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleEllipsesFormat&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;^1s...&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleEllipsesFormat&#39;</span><span class="p">,</span> <span class="s">&#39;kExampleHelloWorld&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c">#    Define a formatted string using all the available</span>
+<span class="c">#    embedded characters.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleAnotherFormat&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;These ^1s are ^2s me ^3s&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExamplePretzels&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;pretzels&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleAnotherFormat&#39;</span><span class="p">,</span> <span class="s">&#39;kExamplePretzels&#39;</span><span class="p">,</span> <span class="s">&#39;making&#39;</span><span class="p">,</span> <span class="s">&#39;thirsty&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Obtain a list of matching displayString keys.</span>
+<span class="c"># In the first example  a list of  all keys containing the substring</span>
+<span class="c"># &quot;niceName&quot;.</span>
+<span class="c"># In the second example a list of all keys in the string set</span>
+<span class="c"># m_testStrings</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;niceName&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;m_testStrings.&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c">#    If you do not specify the -v/value flag on creating then</span>
+<span class="c">#    the value will be the same as the identifier.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleMissingValue&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">displayString</span><span class="p">(</span> <span class="s">&#39;kExampleMissingValue&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.system.displayInfo.html"
+                        title="previous chapter">pymel.core.system.displayInfo</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.system.displayWarning.html"
+                        title="next chapter">pymel.core.system.displayWarning</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.system/pymel.core.system.displayString.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.displayWarning.html" title="pymel.core.system.displayWarning"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.displayInfo.html" title="pymel.core.system.displayInfo"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.system.html" >pymel.core.system</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

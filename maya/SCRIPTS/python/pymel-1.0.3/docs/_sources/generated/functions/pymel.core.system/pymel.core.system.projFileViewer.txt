@@ -1,0 +1,6 @@
+pymel.core.system.projFileViewer
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.projFileViewer

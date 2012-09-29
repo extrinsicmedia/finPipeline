@@ -1,0 +1,6 @@
+pymel.core.other.OneClickDispatch
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.OneClickDispatch

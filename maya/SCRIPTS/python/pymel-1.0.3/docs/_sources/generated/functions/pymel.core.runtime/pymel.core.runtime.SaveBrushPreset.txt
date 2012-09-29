@@ -1,0 +1,6 @@
+pymel.core.runtime.SaveBrushPreset
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SaveBrushPreset

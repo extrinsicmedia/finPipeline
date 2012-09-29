@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.connectionInfo &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.container" href="pymel.core.general.container.html" />
+    <link rel="prev" title="pymel.core.general.connectAttr" href="pymel.core.general.connectAttr.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.container.html" title="pymel.core.general.container"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.connectAttr.html" title="pymel.core.general.connectAttr"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-connectioninfo">
+<h1>pymel.core.general.connectionInfo<a class="headerlink" href="#pymel-core-general-connectioninfo" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.connectionInfo">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">connectionInfo</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.connectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>The connectionInfocommand is used to get information about connection sources and destinations.  Unlike the isConnected
+command, this command needs only one end of the connection.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>destinationFromSource (dfs)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If the specified plug (or its ancestor) is a source, this flag returns the list of destinations connected from the source. (array of strings, empty array if none)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>getExactDestination (ged)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">If the plug or its ancestor is connection destination, this returns the name of the plug that is the exact destination. (empty string if there is no such
+connection).</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>getExactSource (ges)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If the plug or its ancestor is a connection source, this returns the name of the plug that is the exact source. (empty string if there is no such connection).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>getLockedAncestor (gla)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">If the specified plug is locked, its name is returned.  If an ancestor of the plug is locked, its name is returned.  If more than one ancestor is locked, only the
+name of the closest one is returned.  If neither this plug nor any ancestors are locked, an empty string is returned.                          Flag can have
+multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isDestination (id)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if the plug (or its ancestor) is the destination of a connection, false otherwise.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isExactDestination (ied)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if the plug is the exact destination of a connection, false otherwise.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isExactSource (ies)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if the plug is the exact source of a connection, false otherwise.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isLocked (il)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if this plug (or its ancestor) is locked</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isSource (isSource)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if the plug (or its ancestor) is the source of a connection, false otherwise.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>sourceFromDestination (sfd)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If the specified plug (or its ancestor) is a destination, this flag returns the source of the connection. (string, empty if none)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.connectionInfo</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c">#    Create a sphere and a cone and make the Z translation of the cone</span>
+<span class="c">#    be dependent on the X translation of the sphere.</span>
+<span class="c">#</span>
+<span class="n">cone</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">cone</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="n">sphereTx</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.tx&#39;</span> <span class="o">%</span> <span class="n">sphere</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">coneTz</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">.tz&#39;</span> <span class="o">%</span> <span class="n">cone</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectAttr</span><span class="p">(</span><span class="n">sphereTx</span><span class="p">,</span> <span class="n">coneTz</span><span class="p">)</span>
+
+<span class="c">#    Verify the connection and print out the source plug.</span>
+<span class="c">#</span>
+<span class="k">if</span> <span class="n">pm</span><span class="o">.</span><span class="n">connectionInfo</span><span class="p">(</span> <span class="n">coneTz</span><span class="p">,</span> <span class="n">isDestination</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span> <span class="s">&#39;Source: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">pm</span><span class="o">.</span><span class="n">connectionInfo</span><span class="p">(</span><span class="n">coneTz</span><span class="p">,</span><span class="n">sourceFromDestination</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c">#    Verify the connection and print out the destination plug.</span>
+<span class="c">#</span>
+<span class="k">if</span> <span class="n">pm</span><span class="o">.</span><span class="n">connectionInfo</span><span class="p">(</span> <span class="n">sphereTx</span><span class="p">,</span> <span class="n">isSource</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+  <span class="n">destinations</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">connectionInfo</span><span class="p">(</span><span class="n">sphereTx</span><span class="p">,</span> <span class="n">destinationFromSource</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">destination</span> <span class="ow">in</span> <span class="n">destinations</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">destination</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.connectAttr.html"
+                        title="previous chapter">pymel.core.general.connectAttr</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.container.html"
+                        title="next chapter">pymel.core.general.container</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.connectionInfo.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.container.html" title="pymel.core.general.container"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.connectAttr.html" title="pymel.core.general.connectAttr"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

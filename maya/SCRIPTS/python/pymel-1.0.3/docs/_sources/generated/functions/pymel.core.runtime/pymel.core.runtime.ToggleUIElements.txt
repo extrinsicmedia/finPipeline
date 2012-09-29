@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleUIElements
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleUIElements

@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.DynPaintEditor &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.DynRelEdPanel" href="pymel.core.uitypes.DynRelEdPanel.html" />
+    <link rel="prev" title="pymel.core.uitypes.DevicePanel" href="pymel.core.uitypes.DevicePanel.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.DynRelEdPanel.html" title="pymel.core.uitypes.DynRelEdPanel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.DevicePanel.html" title="pymel.core.uitypes.DevicePanel"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-dynpainteditor">
+<h1>pymel.core.uitypes.DynPaintEditor<a class="headerlink" href="#pymel-core-uitypes-dynpainteditor" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-834c3ec94bfa657c02c2378a8e611559274abcf3.png" alt="Inheritance diagram of DynPaintEditor" usemap="#inheritance0ded344e4b" class="inheritance"/>
+<map id="inheritance0ded344e4b" name="inheritance0ded344e4b">
+<area shape="rect" href="#pymel.core.uitypes.DynPaintEditor" title="DynPaintEditor" alt="" coords="5,44,104,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="19,5,91,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.DynPaintEditor">
+<em class="property">class </em><tt class="descname">DynPaintEditor</tt><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">dynPaintEditor</span></tt></p>
+<p>Create a editor window that can be painted into</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.canvasUndo">
+<tt class="descname">canvasUndo</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.canvasUndo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does a fast undo in Canvas mode. This is a special undo because we are not using any history when we paint in Canvas mode so we provide a single level undo for the Canvas.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.clear">
+<tt class="descname">clear</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the buffer (if in Canvas mode) to the floating point values (R,G,B).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getActiveOnly">
+<tt class="descname">getActiveOnly</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getActiveOnly" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Scene mode, this determines if only the active strokes will be refreshed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getAutoSave">
+<tt class="descname">getAutoSave</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getAutoSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, this determines if the buffer will be saved to a disk file after every stroke. Good for painting textures and viewing the results in shaded display in the model view.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getCamera">
+<tt class="descname">getCamera</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the camera which the Paint Effects panel looks through.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getCanvasMode">
+<tt class="descname">getCanvasMode</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getCanvasMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Paint Effects panel into Canvas mode if true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getChangeCommand">
+<tt class="descname">getChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters: First string: commandSecond string: editorNameThird string: editorCmdFourth string: updateFuncCall the command when something changes in the editor The command should have this prototype :  command(string $editor, string $editorCmd, string $updateFunc, int $reason)  The possible reasons could be : 0: no particular reason1: scale color2: buffer (single/double)3: axis 4: image displayed5: image saved in memory</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getControl">
+<tt class="descname">getControl</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query only. Returns the top level control for this editor. Usually used for getting a parent to attach popup menus. Caution: It is possible, at times, for an editor to exist without a control. This flag returns NONEif no control is present.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getCurrentCanvasSize">
+<tt class="descname">getCurrentCanvasSize</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getCurrentCanvasSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>In Query mode, this returns the (X,Y) resolution of the current canvas.                   Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayAppearance">
+<tt class="descname">getDisplayAppearance</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the display appearance of the model panel.  Possible values are wireframe, points, boundingBox, smoothShaded, flatShaded.  This flag may be used with the -interactive and -default flags.  Note that only wireframe, points, and boundingBoxare valid for the interactive mode.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayFog">
+<tt class="descname">getDisplayFog</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayFog" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Scene mode, this determines if fog will be displayed in the Paint Effects panel when refreshing the scene. If fog is on, but this is off, fog will only be drawn on the strokes, not the rest of the scene.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayImage">
+<tt class="descname">getDisplayImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a particular image in the Editor Image Stack as the current Editor Image. Images are added to the Editor Image Stack using the si/saveImageflag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayLights">
+<tt class="descname">getDisplayLights</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayLights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the lighting for shaded mode.  Possible values are selected, active, all, default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayStyle">
+<tt class="descname">getDisplayStyle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the mode to display the image. Valid values are: colorto display the basic RGB imagemaskto display the mask channellumto display the luminance of the image</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDisplayTextures">
+<tt class="descname">getDisplayTextures</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDisplayTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns on or off display of textures in shaded mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a tag to the Maya editor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDoubleBuffer">
+<tt class="descname">getDoubleBuffer</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDoubleBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the display in double buffer mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getDrawContext">
+<tt class="descname">getDrawContext</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getDrawContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the context.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getFileName">
+<tt class="descname">getFileName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getFileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This sets the file to which the canvas will be saved.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getFilter">
+<tt class="descname">getFilter</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of an itemFilter object to be placed on this editor. This filters the information coming onto the main list of the editor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getForceMainConnection">
+<tt class="descname">getForceMainConnection</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getForceMainConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will use as its source of content.  The editor will only display items contained in the selectionConnection object. This is a variant of the -mainListConnection flag in that it will force a change even when the connection is locked. This flag is used to reduce the overhead when using the -unlockMainConnection , -mainListConnection, -lockMainConnection flags in immediate succession.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getHighlightConnection">
+<tt class="descname">getHighlightConnection</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getHighlightConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will synchronize with its highlight list.  Not all editors have a highlight list. For those that do, it is a secondary selection list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getMainListConnection">
+<tt class="descname">getMainListConnection</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getMainListConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will use as its source of content.  The editor will only display items contained in the selectionConnection object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getNbImages">
+<tt class="descname">getNbImages</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getNbImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of images</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getNewImage">
+<tt class="descname">getNewImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getNewImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new image in edit mode, setting the resolution to the integer values (X,Y) and clearing the buffer to the floating point values (R,G,B). In Query mode, this returns the (X,Y) resolution of the current Image.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getPanel">
+<tt class="descname">getPanel</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the panel that the editor belongs to.  By default if an editor is created in the create callback of a scripted panel it will belong to that panel.  If an editor doesn&#8217;t belong to a panel it will be deleted when the window that it is in is deleted.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getRefreshMode">
+<tt class="descname">getRefreshMode</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getRefreshMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the refresh mode to the specified value. 0 - Do not draw strokes on refresh, 1 - Redraw strokes in wireframe mode, 2 - Redraw strokes in final rendered mode.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getSaveAlpha">
+<tt class="descname">getSaveAlpha</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getSaveAlpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, this determines if the alpha will be saved when storing the canvas to a disk file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getSaveBumpmap">
+<tt class="descname">getSaveBumpmap</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getSaveBumpmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the current buffer as a bump map to the specified file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getScaleBlue">
+<tt class="descname">getScaleBlue</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getScaleBlue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the blue component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getScaleGreen">
+<tt class="descname">getScaleGreen</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getScaleGreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the green component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getScaleRed">
+<tt class="descname">getScaleRed</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getScaleRed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the red component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getSelectionConnection">
+<tt class="descname">getSelectionConnection</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getSelectionConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will synchronize with its own selection list.  As the user selects things in this editor, they will be selected in the selectionConnection object. If the object undergoes changes, the editor updates to show the change.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getSingleBuffer">
+<tt class="descname">getSingleBuffer</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getSingleBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the display in single buffer mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getStateString">
+<tt class="descname">getStateString</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getStateString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query only flag.  Returns the MEL command that will edit an editor to match the current editor state. The returned command string uses the string variable $editorName in place of a specific name.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getWrap">
+<tt class="descname">getWrap</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getWrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, should the buffer wrap in U, and V (respectively) when painting.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.getZoom">
+<tt class="descname">getZoom</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.getZoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zooms the Canvas image by the specified value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.iconGrab">
+<tt class="descname">iconGrab</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.iconGrab" title="Permalink to this definition">¶</a></dt>
+<dd><p>This puts the Paint Effects panel into Grab Icon mode where the user is expected to drag out a section of the screen to be made into an icon.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.loadImage">
+<tt class="descname">loadImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.loadImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>load an image from disk and set it as the current Editor Image</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.lockMainConnection">
+<tt class="descname">lockMainConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.lockMainConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks the current list of objects within the mainConnection, so that only those objects are displayed within the editor. Further changes to the original mainConnection are ignored.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.paintAll">
+<tt class="descname">paintAll</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.paintAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redraws the buffer in current refresh mode.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.redrawLast">
+<tt class="descname">redrawLast</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.redrawLast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redraws the last stroke again. Useful when it&#8217;s brush has just changed. This feature does a fast undo and redraws the stroke again.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.removeAllImages">
+<tt class="descname">removeAllImages</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.removeAllImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove all the Editor Images from the Editor Image Stack</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.removeImage">
+<tt class="descname">removeImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.removeImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove the current Editor Image from the Editor Image Stack</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.rollImage">
+<tt class="descname">rollImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.rollImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>In Canvas mode, this rolls the image by the floating point values (X,Y). X and Y are between 0 (no roll) and 1 (full roll). A value of .5 rolls the image 50% (ie. the border moves to the center of the screen.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.saveImage">
+<tt class="descname">saveImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.saveImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>save the current Editor Image to memory. Saved Editor Images are stored in an Editor Image Stack. The most recently saved image is stored in position 0, the second most recently saved image in position 1, and so on... To set the current Editor Image to a previously saved image use the di/displayImageflag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setActiveOnly">
+<tt class="descname">setActiveOnly</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setActiveOnly" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Scene mode, this determines if only the active strokes will be refreshed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setAutoSave">
+<tt class="descname">setAutoSave</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setAutoSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, this determines if the buffer will be saved to a disk file after every stroke. Good for painting textures and viewing the results in shaded display in the model view.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setCamera">
+<tt class="descname">setCamera</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the camera which the Paint Effects panel looks through.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setCanvasMode">
+<tt class="descname">setCanvasMode</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setCanvasMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Paint Effects panel into Canvas mode if true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setChangeCommand">
+<tt class="descname">setChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters: First string: commandSecond string: editorNameThird string: editorCmdFourth string: updateFuncCall the command when something changes in the editor The command should have this prototype :  command(string $editor, string $editorCmd, string $updateFunc, int $reason)  The possible reasons could be : 0: no particular reason1: scale color2: buffer (single/double)3: axis 4: image displayed5: image saved in memory</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayAppearance">
+<tt class="descname">setDisplayAppearance</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the display appearance of the model panel.  Possible values are wireframe, points, boundingBox, smoothShaded, flatShaded.  This flag may be used with the -interactive and -default flags.  Note that only wireframe, points, and boundingBoxare valid for the interactive mode.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayFog">
+<tt class="descname">setDisplayFog</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayFog" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Scene mode, this determines if fog will be displayed in the Paint Effects panel when refreshing the scene. If fog is on, but this is off, fog will only be drawn on the strokes, not the rest of the scene.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayImage">
+<tt class="descname">setDisplayImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a particular image in the Editor Image Stack as the current Editor Image. Images are added to the Editor Image Stack using the si/saveImageflag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayLights">
+<tt class="descname">setDisplayLights</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayLights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the lighting for shaded mode.  Possible values are selected, active, all, default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayStyle">
+<tt class="descname">setDisplayStyle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the mode to display the image. Valid values are: colorto display the basic RGB imagemaskto display the mask channellumto display the luminance of the image</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDisplayTextures">
+<tt class="descname">setDisplayTextures</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDisplayTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns on or off display of textures in shaded mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a tag to the Maya editor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setDoubleBuffer">
+<tt class="descname">setDoubleBuffer</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setDoubleBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the display in double buffer mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setFileName">
+<tt class="descname">setFileName</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setFileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This sets the file to which the canvas will be saved.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setFilter">
+<tt class="descname">setFilter</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of an itemFilter object to be placed on this editor. This filters the information coming onto the main list of the editor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setForceMainConnection">
+<tt class="descname">setForceMainConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setForceMainConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will use as its source of content.  The editor will only display items contained in the selectionConnection object. This is a variant of the -mainListConnection flag in that it will force a change even when the connection is locked. This flag is used to reduce the overhead when using the -unlockMainConnection , -mainListConnection, -lockMainConnection flags in immediate succession.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setHighlightConnection">
+<tt class="descname">setHighlightConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setHighlightConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will synchronize with its highlight list.  Not all editors have a highlight list. For those that do, it is a secondary selection list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setMainListConnection">
+<tt class="descname">setMainListConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setMainListConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will use as its source of content.  The editor will only display items contained in the selectionConnection object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setNewImage">
+<tt class="descname">setNewImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setNewImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a new image in edit mode, setting the resolution to the integer values (X,Y) and clearing the buffer to the floating point values (R,G,B). In Query mode, this returns the (X,Y) resolution of the current Image.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setParent">
+<tt class="descname">setParent</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the parent layout for this editor. This flag will only have an effect if the editor is currently un-parented.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setRefreshMode">
+<tt class="descname">setRefreshMode</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setRefreshMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the refresh mode to the specified value. 0 - Do not draw strokes on refresh, 1 - Redraw strokes in wireframe mode, 2 - Redraw strokes in final rendered mode.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setSaveAlpha">
+<tt class="descname">setSaveAlpha</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setSaveAlpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, this determines if the alpha will be saved when storing the canvas to a disk file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setSaveBumpmap">
+<tt class="descname">setSaveBumpmap</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setSaveBumpmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the current buffer as a bump map to the specified file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setScaleBlue">
+<tt class="descname">setScaleBlue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setScaleBlue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the blue component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setScaleGreen">
+<tt class="descname">setScaleGreen</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setScaleGreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the green component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setScaleRed">
+<tt class="descname">setScaleRed</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setScaleRed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define the scaling factor for the red component in the View. The default value is 1 and can be between -1000 to +1000</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setSelectionConnection">
+<tt class="descname">setSelectionConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setSelectionConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a selectionConnection object which the editor will synchronize with its own selection list.  As the user selects things in this editor, they will be selected in the selectionConnection object. If the object undergoes changes, the editor updates to show the change.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setSingleBuffer">
+<tt class="descname">setSingleBuffer</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setSingleBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the display in single buffer mode</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setWrap">
+<tt class="descname">setWrap</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setWrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>For Canvas mode, should the buffer wrap in U, and V (respectively) when painting.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.setZoom">
+<tt class="descname">setZoom</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.setZoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zooms the Canvas image by the specified value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.snapShot">
+<tt class="descname">snapShot</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.snapShot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a snapshot of the current camera view.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.tileSize">
+<tt class="descname">tileSize</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.tileSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of the tile for the hardware texture redraw of the display buffer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.unParent">
+<tt class="descname">unParent</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.unParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies that the editor should be removed from its layout. This cannot be used with query.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.undoCache">
+<tt class="descname">undoCache</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.undoCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default the last image is cached for undo. If this is set false, then undoing will be disabled in canvas mode and undo in scene mode will force a full refresh. Less memory will be used if this is set false before the first clear or refresh of the current scene.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.unlockMainConnection">
+<tt class="descname">unlockMainConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.unlockMainConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlocks the mainConnection, effectively restoring the original mainConnection (if it is still available), and dynamic updates.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.updateMainConnection">
+<tt class="descname">updateMainConnection</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.updateMainConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes a locked mainConnection to be updated from the orginal mainConnection, but preserves the lock state.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.DynPaintEditor.writeImage">
+<tt class="descname">writeImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.DynPaintEditor.writeImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>write the current Editor Image to disk</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynPaintEditor</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.DevicePanel.html"
+                        title="previous chapter">pymel.core.uitypes.DevicePanel</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.DynRelEdPanel.html"
+                        title="next chapter">pymel.core.uitypes.DynRelEdPanel</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.DynPaintEditor.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.DynRelEdPanel.html" title="pymel.core.uitypes.DynRelEdPanel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.DevicePanel.html" title="pymel.core.uitypes.DevicePanel"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

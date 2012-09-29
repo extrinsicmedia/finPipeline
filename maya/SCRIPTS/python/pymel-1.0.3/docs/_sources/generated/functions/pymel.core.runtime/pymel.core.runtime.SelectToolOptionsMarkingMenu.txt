@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectToolOptionsMarkingMenu
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectToolOptionsMarkingMenu

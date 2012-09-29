@@ -1,0 +1,6 @@
+pymel.util.breadthArgs
+======================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.breadthArgs

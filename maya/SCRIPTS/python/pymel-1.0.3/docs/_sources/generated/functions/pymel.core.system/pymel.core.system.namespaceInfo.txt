@@ -1,0 +1,6 @@
+pymel.core.system.namespaceInfo
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.namespaceInfo

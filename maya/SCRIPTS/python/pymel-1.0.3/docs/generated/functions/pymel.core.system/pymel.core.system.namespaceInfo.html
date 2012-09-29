@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.system.namespaceInfo &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.system" href="../../pymel.core.system.html" />
+    <link rel="next" title="pymel.core.system.newFile" href="pymel.core.system.newFile.html" />
+    <link rel="prev" title="pymel.core.system.namespace" href="pymel.core.system.namespace.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.newFile.html" title="pymel.core.system.newFile"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.namespace.html" title="pymel.core.system.namespace"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.system.html" accesskey="U">pymel.core.system</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-system-namespaceinfo">
+<h1>pymel.core.system.namespaceInfo<a class="headerlink" href="#pymel-core-system-namespaceinfo" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.system.namespaceInfo">
+<em class="property">static </em><tt class="descclassname">system.</tt><tt class="descname">namespaceInfo</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.system.namespaceInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command displays information about the current namespace. A namespace is a simple grouping of objects under a given
+name. Each item in a namespace can then be identified by its own name, along with what namespace it belongs to.
+Namespaces can contain other namespaces like sets, with the restriction that all namespaces are disjoint. Namespaces are
+primarily used to resolve name-clash issues in Maya, where a new object has the same name as an existing object (from
+importing a file, for example). Using namespaces, you can have two objects with the same name, as long as they are
+contained in differenct namespaces. Note that namespaces are a simple grouping of names, so they do not effect
+selection, the DAG, the Dependency Graph, or any other aspect of Maya.  All namespace names are colon-separated.</p>
+<dl class="docutils">
+<dt>Modifications:</dt>
+<dd><ul class="first last simple">
+<li>returns an empty list when the result is None</li>
+<li>returns wrapped classes for listOnlyDependencyNodes</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>absoluteName (an)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>currentNamespace (cur)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Display the name of the current namespace.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>dagPath (dp)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag modifies the &#8216;-ls/-listNamespace&#8217; and &#8216;-lod-listOnlyDependencyNodes flags to indicate that the names of any dag objects returned will include as much
+of the dag path as is necessary to make the names unique. If this flag is not present, the names returned will not include any dag paths.
+Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isRootNamespace (ir)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>listNamespace (ls)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List the contents of the current namespace.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listOnlyDependencyNodes (lod)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List all dependency nodes in the current namespace.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listOnlyNamespaces (lon)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List all namespaces in the current namespace.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>parent (p)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Display the parent of the current namespace.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>recurse (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Can be specified with -listNamespace, -listOnlyNamespaces or -listOnlyDependencyNode to cause the listing to recursively include any child namespaces of the
+current namespaces.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>shortName (sn)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.namespaceInfo</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># List the contents of the current namespace</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">namespaceInfo</span><span class="p">(</span> <span class="n">listNamespace</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;CubeCompass&#39;, u&#39;DefaultAllLightsFilter&#39;, u&#39;DefaultAllLightsFilter1&#39;, u&#39;DefaultAllLightsFilter2&#39;, u&#39;DefaultAllLightsFilter6&#39;, u&#39;DefaultAllRenderClassificationsFilter&#39;, u&#39;DefaultAllRenderClassificationsFilter1&#39;, u&#39;DefaultAllRenderNodesFilter&#39;, u&#39;DefaultAllShadingNodesFilter&#39;, u&#39;DefaultBakeSetsFilter&#39;, u&#39;DefaultBakeSetsFilter2&#39;, u&#39;DefaultBasicRenderNodesFilter&#39;, u&#39;DefaultCameraShapesFilter&#39;, u&#39;DefaultCameraShapesFilter1&#39;, u&#39;DefaultCameraShapesFilter4&#39;, u&#39;DefaultCameraShapesImagePlanesFilter&#39;, u&#39;DefaultCameraShapesImagePlanesFilter3&#39;, u&#39;DefaultContainerFilter&#39;, u&#39;DefaultContainerNodeFilter&#39;, u&#39;DefaultExclLightShapesFilter&#39;, u&#39;DefaultGeometryFilter&#39;, u&#39;DefaultHiddenAttributesFilter&#39;, u&#39;DefaultIkHandlesFilter&#39;, u&#39;DefaultImagePlanesFilter&#39;, u&#39;DefaultImagePlanesFilter1&#39;, u&#39;DefaultImagePlanesFilter4&#39;, u&#39;DefaultJointsFilter&#39;, u&#39;DefaultLightLinkingLightFilter&#39;, u&#39;DefaultLightShapesFilter&#39;, u&#39;DefaultLightShapesPostProcsFilter&#39;, u&#39;DefaultLightShapesPostProcsFilter1&#39;, u&#39;DefaultLightShapesPostProcsFilter2&#39;, u&#39;DefaultLightShapesTexturesFilter&#39;, u&#39;DefaultLightShapesTexturesFilter1&#39;, u&#39;DefaultLightsAndOpticalFXFilter&#39;, u&#39;DefaultLightsAndOpticalFXFilter4&#39;, u&#39;DefaultMaterialsAndShaderGlowFilter&#39;, u&#39;DefaultMaterialsAndShaderGlowFilter6&#39;, u&#39;DefaultMaterialsFilter&#39;, u&#39;DefaultMaterialsFilter1&#39;, u&#39;DefaultMaterialsFilter2&#39;, u&#39;DefaultMaterialsFilter8&#39;, u&#39;DefaultMaterialsTexturesLightShapesFilter&#39;, u&#39;DefaultMaterialsTexturesLightShapesFilter1&#39;, u&#39;DefaultMrContourContrastFilter&#39;, u&#39;DefaultMrContourOutputFilter&#39;, u&#39;DefaultMrContourShaderFilter&#39;, u&#39;DefaultMrContourStoreFilter&#39;, u&#39;DefaultMrDataConversionFilter&#39;, u&#39;DefaultMrDisplacementFilter&#39;, u&#39;DefaultMrEmitterFilter&#39;, u&#39;DefaultMrEnvironmentFilter&#39;, u&#39;DefaultMrGeometryFilter&#39;, u&#39;DefaultMrLensFilter&#39;, u&#39;DefaultMrLightFilter&#39;, u&#39;DefaultMrLightmapFilter&#39;, u&#39;DefaultMrMaterialFilter&#39;, u&#39;DefaultMrMiscFilter&#39;, u&#39;DefaultMrNodesFilter&#39;, u&#39;DefaultMrOutputFilter&#39;, u&#39;DefaultMrPhotonFilter&#39;, u&#39;DefaultMrPhotonVolumeFilter&#39;, u&#39;DefaultMrSampleCompositingFilter&#39;, u&#39;DefaultMrShadowFilter&#39;, u&#39;DefaultMrStateFilter&#39;, u&#39;DefaultMrTextureFilter&#39;, u&#39;DefaultMrVolumeFilter&#39;, u&#39;DefaultNURBSObjectsFilter&#39;, u&#39;DefaultNoShaderGlowFilter&#39;, u&#39;DefaultNonExclLightShapesFilter&#39;, u&#39;DefaultOpticalFXFilter&#39;, u&#39;DefaultOpticalFXFilter1&#39;, u&#39;DefaultOpticalFXFilter5&#39;, u&#39;DefaultPolygonObjectsFilter&#39;, u&#39;DefaultPostProcFilter&#39;, u&#39;DefaultRenderUtilitiesFilter&#39;, u&#39;DefaultRenderUtilitiesFilter5&#39;, u&#39;DefaultSGLightShapesFilter&#39;, u&#39;DefaultSGLightShapesTexturesFilter&#39;, u&#39;DefaultSetsFilter&#39;, u&#39;DefaultShaderGlowFilter&#39;, u&#39;DefaultShaderGlowFilter1&#39;, u&#39;DefaultShaderGlowFilter2&#39;, u&#39;DefaultShaderGlowFilter8&#39;, u&#39;DefaultShadingGroupsAndMaterialsFilter&#39;, u&#39;DefaultShadingGroupsFilter&#39;, u&#39;DefaultShadingGroupsFilter1&#39;, u&#39;DefaultShadingGroupsFilter2&#39;, u&#39;DefaultShadingGroupsFilter3&#39;, u&#39;DefaultShadingGroupsFilter4&#39;, u&#39;DefaultShadingGroupsFilter5&#39;, u&#39;DefaultShadingGroupsFilter6&#39;, u&#39;DefaultShadingGroupsFilter7&#39;, u&#39;DefaultShadingGroupsFilter8&#39;, u&#39;DefaultSubdivObjectsFilter&#39;, u&#39;DefaultTextures2dFilter&#39;, u&#39;DefaultTextures3dFilter&#39;, u&#39;DefaultTexturesFilter&#39;, u&#39;DefaultTexturesFilter1&#39;, u&#39;DefaultTexturesFilter7&#39;, u&#39;DefaultTexturesSGFilter&#39;, u&#39;DefaultUsesImageFileFilter&#39;, u&#39;Manipulator1&#39;, u&#39;UI&#39;, u&#39;UniversalManip&#39;, u&#39;animCurveFilter&#39;, u&#39;animLayersFilter&#39;, u&#39;characterPartition&#39;, u&#39;characterSetsFilter&#39;, u&#39;clipsFilter&#39;, u&#39;clusterSetsFilter&#39;, u&#39;defaultCreaseDataSet&#39;, u&#39;defaultHardwareRenderGlobals&#39;, u&#39;defaultLayer&#39;, u&#39;defaultLightList1&#39;, u&#39;defaultLightSet&#39;, u&#39;defaultObjectSet&#39;, u&#39;defaultRenderGlobals&#39;, u&#39;defaultRenderLayer&#39;, u&#39;defaultRenderLayerFilter&#39;, u&#39;defaultRenderQuality&#39;, u&#39;defaultRenderUtilityList1&#39;, u&#39;defaultResolution&#39;, u&#39;defaultSetFilter&#39;, u&#39;defaultShaderList1&#39;, u&#39;defaultTextureList1&#39;, u&#39;defaultViewColorManager&#39;, u&#39;deformerSetsFilter&#39;, u&#39;dof1&#39;, u&#39;drivenKeyFilter&#39;, u&#39;dynController1&#39;, u&#39;dynamicFilter&#39;, u&#39;expressionFilter&#39;, u&#39;front&#39;, u&#39;frontShape&#39;, u&#39;globalCacheControl&#39;, u&#39;groundPlane&#39;, u&#39;groundPlane_transform&#39;, u&#39;hardwareRenderGlobals&#39;, u&#39;hyperGraphInfo&#39;, u&#39;hyperGraphLayout&#39;, u&#39;ikSystem&#39;, u&#39;initialMaterialInfo&#39;, u&#39;initialParticleSE&#39;, u&#39;initialShadingGroup&#39;, u&#39;jointClusterSetsFilter&#39;, u&#39;keyableFilter&#39;, u&#39;lambert1&#39;, u&#39;latticeSetsFilter&#39;, u&#39;layerManager&#39;, u&#39;layersFilter&#39;, u&#39;lightLinker1&#39;, u&#39;lightLinkingObjectFilter&#39;, u&#39;lightList1&#39;, u&#39;lightSetFilter&#39;, u&#39;lightSetFilter1&#39;, u&#39;nonLinearSetsFilter&#39;, u&#39;notAnimLayersFilter&#39;, u&#39;objectAttrFilter1&#39;, u&#39;objectAttrFilter2&#39;, u&#39;objectAttrFilter3&#39;, u&#39;objectAttrFilter4&#39;, u&#39;objectAttrFilter5&#39;, u&#39;objectAttrFilter6&#39;, u&#39;objectAttrFilter7&#39;, u&#39;objectAttrFilter8&#39;, u&#39;objectFilter17&#39;, u&#39;objectFilter18&#39;, u&#39;objectFilter19&#39;, u&#39;objectFilter20&#39;, u&#39;objectFilter21&#39;, u&#39;objectNameFilter1&#39;, u&#39;objectNameFilter2&#39;, u&#39;objectNameFilter3&#39;, u&#39;objectNameFilter4&#39;, u&#39;objectScriptFilter1&#39;, u&#39;objectScriptFilter2&#39;, u&#39;objectScriptFilter3&#39;, u&#39;objectScriptFilter4&#39;, u&#39;objectScriptFilter5&#39;, u&#39;objectScriptFilter6&#39;, u&#39;objectScriptFilter7&#39;, u&#39;objectScriptFilter8&#39;, u&#39;objectScriptFilter9&#39;, u&#39;objectScriptFilter10&#39;, u&#39;objectTypeFilter1&#39;, u&#39;objectTypeFilter2&#39;, u&#39;objectTypeFilter3&#39;, u&#39;objectTypeFilter4&#39;, u&#39;objectTypeFilter5&#39;, u&#39;objectTypeFilter6&#39;, u&#39;objectTypeFilter7&#39;, u&#39;objectTypeFilter8&#39;, u&#39;objectTypeFilter9&#39;, u&#39;objectTypeFilter10&#39;, u&#39;objectTypeFilter11&#39;, u&#39;objectTypeFilter12&#39;, u&#39;objectTypeFilter13&#39;, u&#39;objectTypeFilter14&#39;, u&#39;objectTypeFilter15&#39;, u&#39;objectTypeFilter16&#39;, u&#39;objectTypeFilter17&#39;, u&#39;objectTypeFilter18&#39;, u&#39;objectTypeFilter19&#39;, u&#39;objectTypeFilter20&#39;, u&#39;objectTypeFilter21&#39;, u&#39;objectTypeFilter22&#39;, u&#39;objectTypeFilter23&#39;, u&#39;objectTypeFilter24&#39;, u&#39;objectTypeFilter25&#39;, u&#39;objectTypeFilter26&#39;, u&#39;objectTypeFilter27&#39;, u&#39;objectTypeFilter28&#39;, u&#39;objectTypeFilter29&#39;, u&#39;objectTypeFilter30&#39;, u&#39;objectTypeFilter31&#39;, u&#39;objectTypeFilter32&#39;, u&#39;objectTypeFilter33&#39;, u&#39;objectTypeFilter34&#39;, u&#39;objectTypeFilter35&#39;, u&#39;objectTypeFilter36&#39;, u&#39;objectTypeFilter37&#39;, u&#39;objectTypeFilter38&#39;, u&#39;objectTypeFilter39&#39;, u&#39;objectTypeFilter40&#39;, u&#39;objectTypeFilter41&#39;, u&#39;objectTypeFilter42&#39;, u&#39;objectTypeFilter43&#39;, u&#39;objectTypeFilter44&#39;, u&#39;objectTypeFilter45&#39;, u&#39;objectTypeFilter46&#39;, u&#39;objectTypeFilter47&#39;, u&#39;objectTypeFilter48&#39;, u&#39;objectTypeFilter49&#39;, u&#39;objectTypeFilter50&#39;, u&#39;objectTypeFilter51&#39;, u&#39;objectTypeFilter52&#39;, u&#39;objectTypeFilter67&#39;, u&#39;objectTypeFilter68&#39;, u&#39;objectTypeFilter69&#39;, u&#39;objectTypeFilter70&#39;, u&#39;objectTypeFilter71&#39;, u&#39;objectTypeFilter72&#39;, u&#39;objectTypeFilter73&#39;, u&#39;objectTypeFilter74&#39;, u&#39;objectTypeFilter75&#39;, u&#39;objectTypeFilter76&#39;, u&#39;objectTypeFilter77&#39;, u&#39;objectTypeFilter78&#39;, u&#39;otherDeformerSetsFilter&#39;, u&#39;particleCloud1&#39;, u&#39;partitionFilter&#39;, u&#39;persp&#39;, u&#39;perspShape&#39;, u&#39;polyMergeEdgeToolDefaults&#39;, u&#39;polyMergeFaceToolDefaults&#39;, u&#39;postProcessList1&#39;, u&#39;publishedFilter&#39;, u&#39;relationshipPanel1LeftAttrFilter&#39;, u&#39;relationshipPanel1RightAttrFilter&#39;, u&#39;renderGlobalsList1&#39;, u&#39;renderLayerFilter&#39;, u&#39;renderLayerManager&#39;, u&#39;renderPartition&#39;, u&#39;renderPassSetsFilter&#39;, u&#39;renderPassesFilter&#39;, u&#39;renderableObjectSetFilter&#39;, u&#39;renderableObjectSetFilter1&#39;, u&#39;renderableObjectSetFilter2&#39;, u&#39;renderableObjectShapeFilter&#39;, u&#39;renderableObjectShapeFilter1&#39;, u&#39;renderableObjectShapeFilter2&#39;, u&#39;renderableObjectsAndSetsFilter&#39;, u&#39;renderableObjectsAndSetsFilter1&#39;, u&#39;renderingSetsFilter&#39;, u&#39;rotateFilter&#39;, u&#39;scaleFilter&#39;, u&#39;scaleRotateTranslateFilter&#39;, u&#39;selectionListOperator1&#39;, u&#39;selectionListOperator2&#39;, u&#39;selectionListOperator3&#39;, u&#39;selectionListOperator4&#39;, u&#39;selectionListOperator5&#39;, u&#39;selectionListOperator6&#39;, u&#39;selectionListOperator7&#39;, u&#39;selectionListOperator8&#39;, u&#39;selectionListOperator9&#39;, u&#39;selectionListOperator10&#39;, u&#39;selectionListOperator11&#39;, u&#39;selectionListOperator12&#39;, u&#39;selectionListOperator13&#39;, u&#39;selectionListOperator14&#39;, u&#39;selectionListOperator15&#39;, u&#39;selectionListOperator16&#39;, u&#39;selectionListOperator17&#39;, u&#39;selectionListOperator18&#39;, u&#39;selectionListOperator19&#39;, u&#39;selectionListOperator20&#39;, u&#39;selectionListOperator21&#39;, u&#39;selectionListOperator22&#39;, u&#39;selectionListOperator23&#39;, u&#39;selectionListOperator24&#39;, u&#39;selectionListOperator25&#39;, u&#39;selectionListOperator26&#39;, u&#39;selectionListOperator27&#39;, u&#39;selectionListOperator28&#39;, u&#39;selectionListOperator29&#39;, u&#39;selectionListOperator30&#39;, u&#39;selectionListOperator57&#39;, u&#39;selectionListOperator58&#39;, u&#39;selectionListOperator59&#39;, u&#39;selectionListOperator60&#39;, u&#39;selectionListOperator61&#39;, u&#39;selectionListOperator62&#39;, u&#39;selectionListOperator63&#39;, u&#39;selectionListOperator64&#39;, u&#39;selectionListOperator65&#39;, u&#39;selectionListOperator66&#39;, u&#39;shaderGlow1&#39;, u&#39;shared&#39;, u&#39;side&#39;, u&#39;sideShape&#39;, u&#39;skinClusterSetsFilter&#39;, u&#39;strokeGlobals&#39;, u&#39;time1&#39;, u&#39;top&#39;, u&#39;topShape&#39;, u&#39;translateFilter&#39;, u&#39;world&#39;] #</span>
+
+<span class="c"># List the parent of the current namespace</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">namespaceInfo</span><span class="p">(</span> <span class="n">parent</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;&#39; #</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.system.namespace.html"
+                        title="previous chapter">pymel.core.system.namespace</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.system.newFile.html"
+                        title="next chapter">pymel.core.system.newFile</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.system/pymel.core.system.namespaceInfo.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.newFile.html" title="pymel.core.system.newFile"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.system.namespace.html" title="pymel.core.system.namespace"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.system.html" >pymel.core.system</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

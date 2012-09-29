@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectTextureReferenceObject
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectTextureReferenceObject

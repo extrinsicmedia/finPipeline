@@ -1,0 +1,6 @@
+pymel.core.windows.promptForFolder
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.promptForFolder

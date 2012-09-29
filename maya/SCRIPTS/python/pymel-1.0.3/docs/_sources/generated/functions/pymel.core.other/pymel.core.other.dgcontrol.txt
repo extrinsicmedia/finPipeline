@@ -1,0 +1,6 @@
+pymel.core.other.dgcontrol
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.dgcontrol

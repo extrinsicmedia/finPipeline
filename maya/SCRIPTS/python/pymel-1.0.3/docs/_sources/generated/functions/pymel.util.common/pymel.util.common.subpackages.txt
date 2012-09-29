@@ -1,0 +1,6 @@
+pymel.util.common.subpackages
+=============================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: common.subpackages

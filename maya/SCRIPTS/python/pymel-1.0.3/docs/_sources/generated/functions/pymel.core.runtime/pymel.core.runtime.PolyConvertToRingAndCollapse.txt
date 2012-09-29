@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyConvertToRingAndCollapse
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyConvertToRingAndCollapse

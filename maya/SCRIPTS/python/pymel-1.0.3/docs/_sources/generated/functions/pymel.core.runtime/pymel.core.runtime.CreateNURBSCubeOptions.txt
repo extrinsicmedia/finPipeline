@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateNURBSCubeOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateNURBSCubeOptions

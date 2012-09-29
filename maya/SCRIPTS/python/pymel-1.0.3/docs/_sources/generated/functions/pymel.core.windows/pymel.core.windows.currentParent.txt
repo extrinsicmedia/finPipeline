@@ -1,0 +1,6 @@
+pymel.core.windows.currentParent
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.currentParent

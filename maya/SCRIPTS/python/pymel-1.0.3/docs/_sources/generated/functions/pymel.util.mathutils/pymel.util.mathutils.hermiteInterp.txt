@@ -1,0 +1,6 @@
+pymel.util.mathutils.hermiteInterp
+==================================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: mathutils.hermiteInterp

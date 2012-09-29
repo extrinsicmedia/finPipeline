@@ -1,0 +1,6 @@
+pymel.core.runtime.HideIKHandles
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideIKHandles

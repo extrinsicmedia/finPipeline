@@ -1,0 +1,6 @@
+pymel.core.runtime.ConvertInstanceToObject
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConvertInstanceToObject

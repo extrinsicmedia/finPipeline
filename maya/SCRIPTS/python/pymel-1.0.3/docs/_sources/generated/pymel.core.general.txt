@@ -1,0 +1,226 @@
+pymel.core.general
+==================
+
+.. automodule:: pymel.core.general
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+    :toctree: functions/pymel.core.general
+    :nosignatures:
+   
+      about
+      addAttr
+      affectedNet
+      affects
+      aliasAttr
+      align
+      artAttrTool
+      assignCommand
+      attributeInfo
+      attributeName
+      attributeQuery
+      bakePartialHistory
+      color
+      colorIndex
+      commandEcho
+      commandPort
+      condition
+      connectAttr
+      connectionInfo
+      container
+      containerBind
+      containerProxy
+      containerPublish
+      containerTemplate
+      containerView
+      contextInfo
+      copyAttr
+      createDisplayLayer
+      createNode
+      currentUnit
+      cycleCheck
+      delete
+      deleteAttr
+      disconnectAttr
+      displayAffected
+      displayColor
+      displayCull
+      displayLevelOfDetail
+      displayPref
+      displayRGBColor
+      displaySmoothness
+      displayStats
+      displaySurface
+      distanceDimension
+      duplicate
+      editDisplayLayerGlobals
+      editDisplayLayerMembers
+      encodeString
+      evalDeferred
+      exactWorldBoundingBox
+      format
+      getAttr
+      getClassification
+      getEnums
+      group
+      hasAttr
+      hide
+      hilite
+      inheritTransform
+      instance
+      instanceable
+      instancer
+      isConnected
+      isDirty
+      isTrue
+      isolateSelect
+      itemFilter
+      itemFilterAttr
+      itemFilterRender
+      itemFilterType
+      license
+      listAttr
+      listConnections
+      listFuture
+      listHistory
+      listNodeTypes
+      listRelatives
+      listSets
+      listTransforms
+      lockNode
+      ls
+      makeIdentity
+      makeLive
+      makePaintable
+      move
+      nodeCast
+      nodeType
+      objExists
+      objectCenter
+      objectType
+      paramDimension
+      paramLocator
+      parent
+      partition
+      pause
+      performanceOptions
+      pickWalk
+      pixelMove
+      refresh
+      relationship
+      removeMultiInstance
+      rename
+      renameAttr
+      reorder
+      reorderContainer
+      resetTool
+      rotate
+      saveToolSettings
+      scale
+      scaleComponents
+      select
+      selectKey
+      selectMode
+      selectPref
+      selectPriority
+      selectType
+      selected
+      selectedNodes
+      selectionConnection
+      setAttr
+      setEnums
+      setToolTo
+      sets
+      shapeCompare
+      showHidden
+      snapMode
+      softSelect
+      spaceLocator
+      strDeprecateDecorator
+      stringArrayIntersector
+      symmetricModelling
+      threadCount
+      timeCode
+      toggle
+      toggleAxis
+      toolDropped
+      toolHasOptions
+      toolPropertyWindow
+      transformCompare
+      transformLimits
+      ungroup
+      upAxis
+      validComponentIndexType
+      xform
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+    :toctree: classes/pymel.core.general
+    :nosignatures:
+   
+      Attribute
+      AttributeDefaults
+      Component
+      Component1D
+      Component1D64
+      Component1DFloat
+      Component2D
+      Component2DFloat
+      Component3D
+      ComponentArray
+      ComponentIndex
+      ContinuousComponent
+      DimensionedComponent
+      DiscreteComponent
+      HashableSlice
+      LatticePoint
+      MItComponent
+      MItComponent1D
+      MeshEdge
+      MeshFace
+      MeshUV
+      MeshVertex
+      MeshVertexFace
+      NurbsCurveCV
+      NurbsCurveEP
+      NurbsCurveKnot
+      NurbsCurveParameter
+      NurbsSurfaceCV
+      NurbsSurfaceEP
+      NurbsSurfaceFace
+      NurbsSurfaceIsoparm
+      NurbsSurfaceKnot
+      NurbsSurfaceRange
+      Pivot
+      ProxySlice
+      PyNode
+      Scene
+      SubdEdge
+      SubdFace
+      SubdUV
+      SubdVertex
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      AmbiguityWarning
+      MayaAttributeEnumError
+      MayaAttributeError
+      MayaComponentError
+      MayaNodeError
+      MayaObjectError
+   
+   

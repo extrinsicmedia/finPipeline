@@ -1,0 +1,6 @@
+pymel.core.runtime.PlayblastWindow
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PlayblastWindow

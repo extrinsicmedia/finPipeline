@@ -1,0 +1,11 @@
+pymel.util.ProxyUnicode
+=======================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: ProxyUnicode
+    :parts: 1
+
+.. autoclass:: ProxyUnicode
+    :members:
+    :undoc-members:

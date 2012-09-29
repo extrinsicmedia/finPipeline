@@ -1,0 +1,6 @@
+pymel.util.LazyLoadModule
+=========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.LazyLoadModule

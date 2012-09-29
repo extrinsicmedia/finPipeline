@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayDisplaceApprox
+============================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayDisplaceApprox
+    :parts: 1
+
+.. autoclass:: MentalrayDisplaceApprox
+    :members:
+    :undoc-members:

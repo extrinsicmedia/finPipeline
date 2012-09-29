@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.IconTextRadioButton &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.IconTextRadioCollection" href="pymel.core.uitypes.IconTextRadioCollection.html" />
+    <link rel="prev" title="pymel.core.uitypes.IconTextCheckBox" href="pymel.core.uitypes.IconTextCheckBox.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.IconTextRadioCollection.html" title="pymel.core.uitypes.IconTextRadioCollection"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.IconTextCheckBox.html" title="pymel.core.uitypes.IconTextCheckBox"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-icontextradiobutton">
+<h1>pymel.core.uitypes.IconTextRadioButton<a class="headerlink" href="#pymel-core-uitypes-icontextradiobutton" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-a2f0e081f40950d4c4d2f0b043cc6af41c7d6bad.png" alt="Inheritance diagram of IconTextRadioButton" usemap="#inheritance2f6f51c411" class="inheritance"/>
+<map id="inheritance2f6f51c411" name="inheritance2f6f51c411">
+<area shape="rect" href="#pymel.core.uitypes.IconTextRadioButton" title="IconTextRadioButton" alt="" coords="5,44,133,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="33,5,105,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.IconTextRadioButton">
+<em class="property">class </em><tt class="descname">IconTextRadioButton</tt><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">iconTextRadioButton</span></tt></p>
+<p>This control supports up to 3 icon images and 4 different display styles.  The icon image displayed is the one that best fits the current size of the control given its current style. This command creates a iconTextRadioButton that is added to the most recently created iconTextRadioCollection unless the -cl/cluster flag is used.</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.dragCallback">
+<tt class="descname">dragCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.dragCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when the middle mouse button is pressed.  The MEL version of the callback is of the form: global proc string[] callbackName(string $dragControl, int $x, int $y, int $mods) The proc returns a string array that is transferred to the drop site. By convention the first string in the array describes the user settable message type.  Controls that are application defined drag sources may ignore the callback. $mods allows testing for the key modifiers CTL and SHIFT. Possible values are 0 == No modifiers, 1 == SHIFT, 2 == CTL, 3 == CTL + SHIFT. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def callbackName( dragControl, x, y, modifiers ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, x, y, modifiers.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(x)d %(y)d %(modifiers)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.dropCallback">
+<tt class="descname">dropCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.dropCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when a drag and drop operation is released above the drop site.  The MEL version of the callback is of the form: global proc callbackName(string $dragControl, string $dropControl, string $msgs[], int $x, int $y, int $type) The proc receives a string array that is transferred from the drag source. The first string in the msgs array describes the user defined message type. Controls that are application defined drop sites may ignore the callback. $type can have values of 1 == Move, 2 == Copy, 3 == Link. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def pythonDropTest( dragControl, dropControl, messages, x, y, dragType ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, dropControl, messages, x, y, type.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(dropControl)s %(messages)r %(x)d %(y)d %(type)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getAlign">
+<tt class="descname">getAlign</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getAlign" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label alignment.  Alignment values are left, right, and center. By default, the label is aligned center. Currently only available when -st/style is set to iconAndTextCentered.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getAnnotation">
+<tt class="descname">getAnnotation</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getBackgroundColor">
+<tt class="descname">getBackgroundColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getChangeCommand">
+<tt class="descname">getChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control&#8217;s state is changed. Note that this flag should not be used in conjunction with onCommand and offCommand. That is, one should either use changeCommand and test the state of the control from inside the callback, or use onCommand and offCommand as separate callbacks.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getDisabledImage">
+<tt class="descname">getDisabledImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getDisabledImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image used when the button is disabled. Image size must be the same as the image specified with the i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getEnable">
+<tt class="descname">getEnable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getEnableBackground">
+<tt class="descname">getEnableBackground</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getFont">
+<tt class="descname">getFont</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getFont" title="Permalink to this definition">¶</a></dt>
+<dd><p>The font for the text.  Valid values are boldLabelFont, smallBoldLabelFont, tinyBoldLabelFont, plainLabelFont, smallPlainLabelFont, obliqueLabelFont, smallObliqueLabelFont, fixedWidthFontand smallFixedWidthFont.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getFullPathName">
+<tt class="descname">getFullPathName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getFullPathName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the full path name of the widget, which includes all the parents</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getHeight">
+<tt class="descname">getHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getHighlightImage">
+<tt class="descname">getHighlightImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getHighlightImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlight image displayed while the cursor is over the control. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getImage">
+<tt class="descname">getImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>If you are not providing images with different sizes then you may use this flag for the control&#8217;s image. If the iconOnlystyle is set, the icon will be scaled to the size of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getImage1">
+<tt class="descname">getImage1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getImage1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getImage2">
+<tt class="descname">getImage2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getImage2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getImage3">
+<tt class="descname">getImage3</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getImage3" title="Permalink to this definition">¶</a></dt>
+<dd><p>This control supports three icons. The icon that best fits the current size of the control will be displayed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getImageOverlayLabel">
+<tt class="descname">getImageOverlayLabel</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getImageOverlayLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A short string, up to 5 characters, representing a label that will be displayed on top of the image.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getIsObscured">
+<tt class="descname">getIsObscured</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getIsObscured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the control can actually be seen by the user. The control will be obscured if its state is invisible, if it is blocked (entirely or partially) by some other control, if it or a parent layout is unmanaged, or if the control&#8217;s window is invisible or iconified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getLabel">
+<tt class="descname">getLabel</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text that appears in the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getLabelOffset">
+<tt class="descname">getLabelOffset</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getLabelOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label offset. Default is 0. Currently only available when -st/style is set to iconAndTextCentered.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getManage">
+<tt class="descname">getManage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getMarginHeight">
+<tt class="descname">getMarginHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getMarginHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of pixels above and below the control content. The default value is 1 pixel.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getMarginWidth">
+<tt class="descname">getMarginWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getMarginWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of pixels on either side of the control content. The default value is 1 pixel.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getNumberOfPopupMenus">
+<tt class="descname">getNumberOfPopupMenus</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getNumberOfPopupMenus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getOffCommand">
+<tt class="descname">getOffCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getOffCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control is turned off.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getOnCommand">
+<tt class="descname">getOnCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getOnCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control is turned on.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getOverlayLabelBackColor">
+<tt class="descname">getOverlayLabelBackColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getOverlayLabelBackColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RGBA color of the shadow behind the label defined by imageOverlayLabel. Default is 25% transparent black: 0 0 0 .25</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getOverlayLabelColor">
+<tt class="descname">getOverlayLabelColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getOverlayLabelColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RGB color of the label defined by imageOverlayLabel. Default is a light grey: .8 .8 .8</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getPopupMenuArray">
+<tt class="descname">getPopupMenuArray</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getPopupMenuArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the names of all the popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getPreventOverride">
+<tt class="descname">getPreventOverride</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getSelect">
+<tt class="descname">getSelect</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will set this button as the selected one.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getSelectionHighlightImage">
+<tt class="descname">getSelectionHighlightImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getSelectionHighlightImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image displayed while the control is selected and the cursor is over the control. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getSelectionImage">
+<tt class="descname">getSelectionImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getSelectionImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image displayed while the control is selected. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getStyle">
+<tt class="descname">getStyle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The draw style of the control.  Valid styles are iconOnly, textOnly, iconAndTextHorizontal, iconAndTextVertical, and iconAndTextCentered. (Note: iconAndTextCenteredis only available on Windows). If the iconOnlystyle is set, the icon will be scaled to the size of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getVisible">
+<tt class="descname">getVisible</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getVisibleChangeCommand">
+<tt class="descname">getVisibleChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.getWidth">
+<tt class="descname">getWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setAlign">
+<tt class="descname">setAlign</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setAlign" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label alignment.  Alignment values are left, right, and center. By default, the label is aligned center. Currently only available when -st/style is set to iconAndTextCentered.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setAnnotation">
+<tt class="descname">setAnnotation</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setBackgroundColor">
+<tt class="descname">setBackgroundColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setChangeCommand">
+<tt class="descname">setChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control&#8217;s state is changed. Note that this flag should not be used in conjunction with onCommand and offCommand. That is, one should either use changeCommand and test the state of the control from inside the callback, or use onCommand and offCommand as separate callbacks.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setDisabledImage">
+<tt class="descname">setDisabledImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setDisabledImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image used when the button is disabled. Image size must be the same as the image specified with the i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setEnable">
+<tt class="descname">setEnable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setEnableBackground">
+<tt class="descname">setEnableBackground</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setFont">
+<tt class="descname">setFont</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setFont" title="Permalink to this definition">¶</a></dt>
+<dd><p>The font for the text.  Valid values are boldLabelFont, smallBoldLabelFont, tinyBoldLabelFont, plainLabelFont, smallPlainLabelFont, obliqueLabelFont, smallObliqueLabelFont, fixedWidthFontand smallFixedWidthFont.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setHeight">
+<tt class="descname">setHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setHighlightImage">
+<tt class="descname">setHighlightImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setHighlightImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlight image displayed while the cursor is over the control. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setImage">
+<tt class="descname">setImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>If you are not providing images with different sizes then you may use this flag for the control&#8217;s image. If the iconOnlystyle is set, the icon will be scaled to the size of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setImage1">
+<tt class="descname">setImage1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setImage1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setImage2">
+<tt class="descname">setImage2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setImage2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setImage3">
+<tt class="descname">setImage3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setImage3" title="Permalink to this definition">¶</a></dt>
+<dd><p>This control supports three icons. The icon that best fits the current size of the control will be displayed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setImageOverlayLabel">
+<tt class="descname">setImageOverlayLabel</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setImageOverlayLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A short string, up to 5 characters, representing a label that will be displayed on top of the image.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setLabel">
+<tt class="descname">setLabel</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text that appears in the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setLabelOffset">
+<tt class="descname">setLabelOffset</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setLabelOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label offset. Default is 0. Currently only available when -st/style is set to iconAndTextCentered.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setManage">
+<tt class="descname">setManage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setMarginHeight">
+<tt class="descname">setMarginHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setMarginHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of pixels above and below the control content. The default value is 1 pixel.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setMarginWidth">
+<tt class="descname">setMarginWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setMarginWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of pixels on either side of the control content. The default value is 1 pixel.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setOffCommand">
+<tt class="descname">setOffCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setOffCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control is turned off.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setOnCommand">
+<tt class="descname">setOnCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setOnCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the control is turned on.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setOverlayLabelBackColor">
+<tt class="descname">setOverlayLabelBackColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setOverlayLabelBackColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RGBA color of the shadow behind the label defined by imageOverlayLabel. Default is 25% transparent black: 0 0 0 .25</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setOverlayLabelColor">
+<tt class="descname">setOverlayLabelColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setOverlayLabelColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RGB color of the label defined by imageOverlayLabel. Default is a light grey: .8 .8 .8</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setPreventOverride">
+<tt class="descname">setPreventOverride</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setSelect">
+<tt class="descname">setSelect</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will set this button as the selected one.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setSelectionHighlightImage">
+<tt class="descname">setSelectionHighlightImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setSelectionHighlightImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image displayed while the control is selected and the cursor is over the control. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setSelectionImage">
+<tt class="descname">setSelectionImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setSelectionImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image displayed while the control is selected. Image size must be the same as the image specified with the -i/imageflag. This is a Windows only flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setStyle">
+<tt class="descname">setStyle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The draw style of the control.  Valid styles are iconOnly, textOnly, iconAndTextHorizontal, iconAndTextVertical, and iconAndTextCentered. (Note: iconAndTextCenteredis only available on Windows). If the iconOnlystyle is set, the icon will be scaled to the size of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setVisible">
+<tt class="descname">setVisible</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setVisibleChangeCommand">
+<tt class="descname">setVisibleChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.IconTextRadioButton.setWidth">
+<tt class="descname">setWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.IconTextRadioButton.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.iconTextRadioButton</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.IconTextCheckBox.html"
+                        title="previous chapter">pymel.core.uitypes.IconTextCheckBox</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.IconTextRadioCollection.html"
+                        title="next chapter">pymel.core.uitypes.IconTextRadioCollection</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.IconTextRadioButton.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.IconTextRadioCollection.html" title="pymel.core.uitypes.IconTextRadioCollection"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.IconTextCheckBox.html" title="pymel.core.uitypes.IconTextCheckBox"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

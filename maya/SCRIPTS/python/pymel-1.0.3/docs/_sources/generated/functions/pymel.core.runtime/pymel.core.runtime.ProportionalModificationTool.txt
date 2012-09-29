@@ -1,0 +1,6 @@
+pymel.core.runtime.ProportionalModificationTool
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ProportionalModificationTool

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Misss_fast_shader
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Misss_fast_shader
+    :parts: 1
+
+.. autoclass:: Misss_fast_shader
+    :members:
+    :undoc-members:

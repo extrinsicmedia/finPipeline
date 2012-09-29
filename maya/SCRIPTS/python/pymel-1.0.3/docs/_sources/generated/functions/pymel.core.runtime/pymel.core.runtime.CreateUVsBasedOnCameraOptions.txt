@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateUVsBasedOnCameraOptions
+================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateUVsBasedOnCameraOptions

@@ -1,0 +1,7 @@
+<map id="inheritanceb4a5d6e370" name="inheritanceb4a5d6e370">
+<area shape="rect" href="#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="19,160,91,184"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="5,121,104,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,82,99,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
+</map>

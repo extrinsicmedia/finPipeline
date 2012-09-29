@@ -1,0 +1,6 @@
+pymel.core.runtime.FBIKReachKeyingOptionFK
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FBIKReachKeyingOptionFK

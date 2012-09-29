@@ -1,0 +1,11 @@
+pymel.util.EnumValue
+====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: EnumValue
+    :parts: 1
+
+.. autoclass:: EnumValue
+    :members:
+    :undoc-members:

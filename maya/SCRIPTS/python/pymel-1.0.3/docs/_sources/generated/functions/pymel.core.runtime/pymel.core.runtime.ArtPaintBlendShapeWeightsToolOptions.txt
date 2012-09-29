@@ -1,0 +1,6 @@
+pymel.core.runtime.ArtPaintBlendShapeWeightsToolOptions
+=======================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ArtPaintBlendShapeWeightsToolOptions

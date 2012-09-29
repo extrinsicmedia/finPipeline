@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleTangentDisplay
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleTangentDisplay

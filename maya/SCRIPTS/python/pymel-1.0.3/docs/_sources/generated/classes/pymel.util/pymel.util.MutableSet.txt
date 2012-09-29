@@ -1,0 +1,11 @@
+pymel.util.MutableSet
+=====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: MutableSet
+    :parts: 1
+
+.. autoclass:: MutableSet
+    :members:
+    :undoc-members:

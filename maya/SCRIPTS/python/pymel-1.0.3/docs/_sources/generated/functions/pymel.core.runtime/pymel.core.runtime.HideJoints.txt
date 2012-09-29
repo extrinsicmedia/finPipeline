@@ -1,0 +1,6 @@
+pymel.core.runtime.HideJoints
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideJoints

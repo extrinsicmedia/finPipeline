@@ -1,0 +1,6 @@
+pymel.core.general.selectPref
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.selectPref

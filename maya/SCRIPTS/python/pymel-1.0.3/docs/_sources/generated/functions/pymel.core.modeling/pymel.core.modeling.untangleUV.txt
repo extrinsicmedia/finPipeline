@@ -1,0 +1,6 @@
+pymel.core.modeling.untangleUV
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.untangleUV

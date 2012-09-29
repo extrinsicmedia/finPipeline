@@ -1,0 +1,550 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.Light &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.LightFog" href="pymel.core.nodetypes.LightFog.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Leather" href="pymel.core.nodetypes.Leather.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LightFog.html" title="pymel.core.nodetypes.LightFog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Leather.html" title="pymel.core.nodetypes.Leather"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-light">
+<h1>pymel.core.nodetypes.Light<a class="headerlink" href="#pymel-core-nodetypes-light" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-4efaab005350fd6cd82154cec13bfcf0b10b4055.png" alt="Inheritance diagram of Light" usemap="#inheritanced9500b3348" class="inheritance"/>
+<map id="inheritanced9500b3348" name="inheritanced9500b3348">
+<area shape="rect" href="#pymel.core.nodetypes.Light" title="Light" alt="" coords="19,276,91,300"/>
+<area shape="rect" href="pymel.core.nodetypes.Shape.html#pymel.core.nodetypes.Shape" title="Shape" alt="" coords="19,237,91,261"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="19,198,91,222"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,82,99,106"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="5,121,104,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="19,160,91,184"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Light">
+<em class="property">class </em><tt class="descname">Light</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.nodetypes.Light.getCenterOfIllumination">
+<tt class="descname">getCenterOfIllumination</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getCenterOfIllumination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;centerOfIllumination&#8221; attribute of a light node. This attribute represents the distance to the center of illumination of the light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.centerOfIllumination</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getColor">
+<tt class="descname">getColor</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;color&#8221; attribute of a light node. This attribute represents the color of the light emitted by the light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.color</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getIntensity">
+<tt class="descname">getIntensity</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getIntensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;intensity&#8221; attribute of a light node. This attribute represents a uniform scaling factor applied to the light color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.intensity</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getNumShadowSamples">
+<tt class="descname">getNumShadowSamples</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getNumShadowSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;numShadowSamples&#8221; attribute of a light node. This attribute represents the number of shadow samples per point used in occulusion testing.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.numShadowSamples</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getOpticalFXvisibility">
+<tt class="descname">getOpticalFXvisibility</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getOpticalFXvisibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;opticalFXvisibility&#8221; attribute of a light node. This attribute represents an occlusion scaling factor for light glow effects on this light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.opticalFXvisibility</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getRayDepthLimit">
+<tt class="descname">getRayDepthLimit</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getRayDepthLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;rayDepthLimit&#8221; attribute of a light node. This attribute determines a cutoff point for shadow calculations related to the light. Rays whose depth is higher than the value of this attribute will not trigger a shadow calculation for the light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.rayDepthLimit</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getShadowColor">
+<tt class="descname">getShadowColor</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getShadowColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;shadowColor&#8221; attribute of a light node. This attribute represents the color of the shadows cast by the light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.shadowColor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.getUseRayTraceShadows">
+<tt class="descname">getUseRayTraceShadows</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.getUseRayTraceShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;useRayTraceShadows&#8221; attribute of a light node. This attribute determines whether or not the light should raytrace it&#8217;s shadows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.useRayTraceShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.lightAmbient">
+<tt class="descname">lightAmbient</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.lightAmbient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;lightAmbient&#8221; attribute of a light node. This attribute indicates if the light has an ambient component.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.lightAmbient</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.lightDiffuse">
+<tt class="descname">lightDiffuse</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.lightDiffuse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;lightDiffuse&#8221; attribute of a light node. This attribute indicates if the light has a diffuse component.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.lightDiffuse</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.lightDirection">
+<tt class="descname">lightDirection</tt><big>(</big><em>instance</em>, <em>space='world'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.lightDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the direction in which the light is pointing. This is only valid for lights which are associated with a direction, such as area, directional or spot lights. The vector returned is not normalized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>instance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">The instance of the light for which to return the direction.</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">The coordinate space for which the direction vector is returned. If  is passed in the vector will be in the lights world space. If any other  value in pass in the vector will be returned in object (or local) space.</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">FloatVector</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.lightDirection</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.lightIntensity">
+<tt class="descname">lightIntensity</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.lightIntensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;lightIntensity&#8221; attribute of a light node. This attribute represents the intensity of the light specified as a color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.lightIntensity</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.lightSpecular">
+<tt class="descname">lightSpecular</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.lightSpecular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;lightSpecular&#8221; attribute of a light node. This attribute indicates if the light has a specular component.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.lightSpecular</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setCenterOfIllumination">
+<tt class="descname">setCenterOfIllumination</tt><big>(</big><em>dist</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setCenterOfIllumination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;centerOfIllumination&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>dist <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setCenterOfIllumination</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setColor">
+<tt class="descname">setColor</tt><big>(</big><em>col</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;color&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>col <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setColor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setIntensity">
+<tt class="descname">setIntensity</tt><big>(</big><em>intens</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setIntensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;intensity&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>intens <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setIntensity</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setNumShadowSamples">
+<tt class="descname">setNumShadowSamples</tt><big>(</big><em>num_shadow_samples</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setNumShadowSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;numShadowSamples&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>num_shadow_samples <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setNumShadowSamples</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setOpticalFXvisibility">
+<tt class="descname">setOpticalFXvisibility</tt><big>(</big><em>visibility</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setOpticalFXvisibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;opticalFXvisibility&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>visibility <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setOpticalFXvisibility</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setRayDepthLimit">
+<tt class="descname">setRayDepthLimit</tt><big>(</big><em>ray_depth_limit</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setRayDepthLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;rayDepthLimit&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>ray_depth_limit <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setRayDepthLimit</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setShadowColor">
+<tt class="descname">setShadowColor</tt><big>(</big><em>shadow_color</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setShadowColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;shadowColor&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>shadow_color <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Color</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setShadowColor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Light.setUseRayTraceShadows">
+<tt class="descname">setUseRayTraceShadows</tt><big>(</big><em>useRayTraceShadows</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Light.setUseRayTraceShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;useRayTraceShadows&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>useRayTraceShadows <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnLight.setUseRayTraceShadows</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Leather.html"
+                        title="previous chapter">pymel.core.nodetypes.Leather</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.LightFog.html"
+                        title="next chapter">pymel.core.nodetypes.LightFog</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.Light.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LightFog.html" title="pymel.core.nodetypes.LightFog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Leather.html" title="pymel.core.nodetypes.Leather"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

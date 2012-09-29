@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllRigidBodies
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllRigidBodies

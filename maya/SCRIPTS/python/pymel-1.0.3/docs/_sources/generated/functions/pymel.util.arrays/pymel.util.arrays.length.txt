@@ -1,0 +1,6 @@
+pymel.util.arrays.length
+========================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arrays.length

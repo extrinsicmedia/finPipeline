@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.ProgressBar &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.PromptDialog" href="pymel.core.uitypes.PromptDialog.html" />
+    <link rel="prev" title="pymel.core.uitypes.PopupMenu" href="pymel.core.uitypes.PopupMenu.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.PromptDialog.html" title="pymel.core.uitypes.PromptDialog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.PopupMenu.html" title="pymel.core.uitypes.PopupMenu"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-progressbar">
+<h1>pymel.core.uitypes.ProgressBar<a class="headerlink" href="#pymel-core-uitypes-progressbar" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-3bd147f5bcbfcecd73620286d7644abccb7bc5d3.png" alt="Inheritance diagram of ProgressBar" usemap="#inheritanced4fb51bd88" class="inheritance"/>
+<map id="inheritanced4fb51bd88" name="inheritanced4fb51bd88">
+<area shape="rect" href="#pymel.core.uitypes.ProgressBar" title="ProgressBar" alt="" coords="5,44,88,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="11,5,83,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.ProgressBar">
+<em class="property">class </em><tt class="descname">ProgressBar</tt><a class="headerlink" href="#pymel.core.uitypes.ProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">progressBar</span></tt></p>
+<p>Creates a progress bar control that graphically fills in as its progress value increases.</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.beginProgress">
+<tt class="descname">beginProgress</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.beginProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barShows the main progress bar (normally in the Help Line). This is normally issued through MEL when a length computation is about to occur.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.dragCallback">
+<tt class="descname">dragCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.dragCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when the middle mouse button is pressed.  The MEL version of the callback is of the form: global proc string[] callbackName(string $dragControl, int $x, int $y, int $mods) The proc returns a string array that is transferred to the drop site. By convention the first string in the array describes the user settable message type.  Controls that are application defined drag sources may ignore the callback. $mods allows testing for the key modifiers CTL and SHIFT. Possible values are 0 == No modifiers, 1 == SHIFT, 2 == CTL, 3 == CTL + SHIFT. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def callbackName( dragControl, x, y, modifiers ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, x, y, modifiers.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(x)d %(y)d %(modifiers)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.dropCallback">
+<tt class="descname">dropCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.dropCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when a drag and drop operation is released above the drop site.  The MEL version of the callback is of the form: global proc callbackName(string $dragControl, string $dropControl, string $msgs[], int $x, int $y, int $type) The proc receives a string array that is transferred from the drag source. The first string in the msgs array describes the user defined message type. Controls that are application defined drop sites may ignore the callback. $type can have values of 1 == Move, 2 == Copy, 3 == Link. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def pythonDropTest( dragControl, dropControl, messages, x, y, dragType ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, dropControl, messages, x, y, type.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(dropControl)s %(messages)r %(x)d %(y)d %(type)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.endProgress">
+<tt class="descname">endProgress</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.endProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barHides the progress bar. No other flags can be used at the same time. This is normally issued through MEL in response to the -ic/isCancelled flag being set or if the progress value reaches its maximum.                      Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getAnnotation">
+<tt class="descname">getAnnotation</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getBackgroundColor">
+<tt class="descname">getBackgroundColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getEnable">
+<tt class="descname">getEnable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getEnableBackground">
+<tt class="descname">getEnableBackground</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getFullPathName">
+<tt class="descname">getFullPathName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getFullPathName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the full path name of the widget, which includes all the parents</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getHeight">
+<tt class="descname">getHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getIsCancelled">
+<tt class="descname">getIsCancelled</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getIsCancelled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the user has tried to cancel the operation. Returns false otherwise.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getIsInterruptable">
+<tt class="descname">getIsInterruptable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getIsInterruptable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barReturns true if the isCancelled flag should respond to attempts to cancel the operation. Setting this to true will put make the help line display message to the user    indicating that they can cancel the operation.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getIsMainProgressBar">
+<tt class="descname">getIsMainProgressBar</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getIsMainProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether this progressBar is used to show the progress of all basic operations such as Open/Save file.The main progressBar behaves very differently, in that it only shows itself when there is an ongoing basic operation.Defaults to false, and only one progress bar will be recognized as the mainone.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getIsObscured">
+<tt class="descname">getIsObscured</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getIsObscured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the control can actually be seen by the user. The control will be obscured if its state is invisible, if it is blocked (entirely or partially) by some other control, if it or a parent layout is unmanaged, or if the control&#8217;s window is invisible or iconified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getManage">
+<tt class="descname">getManage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getMaxValue">
+<tt class="descname">getMaxValue</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getMaxValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum or endingvalue of the progress indicator. If the progress value is greater than the -max/maxValue, the progress value will be set to the maximum. Default value is 100.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getMinValue">
+<tt class="descname">getMinValue</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getMinValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum or startingvalue of the progress indicator. If the progress value is less than the -min/minValue, the progress value will be set to the minimum. Default value is 0.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getNumberOfPopupMenus">
+<tt class="descname">getNumberOfPopupMenus</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getNumberOfPopupMenus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getPopupMenuArray">
+<tt class="descname">getPopupMenuArray</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getPopupMenuArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the names of all the popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getPreventOverride">
+<tt class="descname">getPreventOverride</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getProgress">
+<tt class="descname">getProgress</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of progress currently shown on the control. The value will always be between min and max. Default is equal to the minimum when the control is created.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getStatus">
+<tt class="descname">getStatus</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barSets the contents of the helpLine control when the progressBar is showing. Use this instead of setting the helpLine directly because this will force a graphical refresh before returning.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getVisible">
+<tt class="descname">getVisible</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getVisibleChangeCommand">
+<tt class="descname">getVisibleChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.getWidth">
+<tt class="descname">getWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setAnnotation">
+<tt class="descname">setAnnotation</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setBackgroundColor">
+<tt class="descname">setBackgroundColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setEnable">
+<tt class="descname">setEnable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setEnableBackground">
+<tt class="descname">setEnableBackground</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setHeight">
+<tt class="descname">setHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setIsInterruptable">
+<tt class="descname">setIsInterruptable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setIsInterruptable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barReturns true if the isCancelled flag should respond to attempts to cancel the operation. Setting this to true will put make the help line display message to the user    indicating that they can cancel the operation.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setIsMainProgressBar">
+<tt class="descname">setIsMainProgressBar</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setIsMainProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether this progressBar is used to show the progress of all basic operations such as Open/Save file.The main progressBar behaves very differently, in that it only shows itself when there is an ongoing basic operation.Defaults to false, and only one progress bar will be recognized as the mainone.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setManage">
+<tt class="descname">setManage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setMaxValue">
+<tt class="descname">setMaxValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setMaxValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum or endingvalue of the progress indicator. If the progress value is greater than the -max/maxValue, the progress value will be set to the maximum. Default value is 100.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setMinValue">
+<tt class="descname">setMinValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setMinValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum or startingvalue of the progress indicator. If the progress value is less than the -min/minValue, the progress value will be set to the minimum. Default value is 0.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setPreventOverride">
+<tt class="descname">setPreventOverride</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setProgress">
+<tt class="descname">setProgress</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of progress currently shown on the control. The value will always be between min and max. Default is equal to the minimum when the control is created.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setStatus">
+<tt class="descname">setStatus</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only valid for the main progress barSets the contents of the helpLine control when the progressBar is showing. Use this instead of setting the helpLine directly because this will force a graphical refresh before returning.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setVisible">
+<tt class="descname">setVisible</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setVisibleChangeCommand">
+<tt class="descname">setVisibleChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.setWidth">
+<tt class="descname">setWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.ProgressBar.step">
+<tt class="descname">step</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.ProgressBar.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increments the -pr/progress value by the amount specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.progressBar</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.PopupMenu.html"
+                        title="previous chapter">pymel.core.uitypes.PopupMenu</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.PromptDialog.html"
+                        title="next chapter">pymel.core.uitypes.PromptDialog</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.ProgressBar.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.PromptDialog.html" title="pymel.core.uitypes.PromptDialog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.PopupMenu.html" title="pymel.core.uitypes.PopupMenu"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

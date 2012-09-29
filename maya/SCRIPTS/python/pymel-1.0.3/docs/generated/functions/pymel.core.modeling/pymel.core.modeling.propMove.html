@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.modeling.propMove &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.modeling" href="../../pymel.core.modeling.html" />
+    <link rel="next" title="pymel.core.modeling.querySubdiv" href="pymel.core.modeling.querySubdiv.html" />
+    <link rel="prev" title="pymel.core.modeling.projectTangent" href="pymel.core.modeling.projectTangent.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.querySubdiv.html" title="pymel.core.modeling.querySubdiv"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.projectTangent.html" title="pymel.core.modeling.projectTangent"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" accesskey="U">pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-modeling-propmove">
+<h1>pymel.core.modeling.propMove<a class="headerlink" href="#pymel-core-modeling-propmove" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.modeling.propMove">
+<em class="property">static </em><tt class="descclassname">modeling.</tt><tt class="descname">propMove</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.modeling.propMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a proportional translate, scale or rotate operation on any number of objects. The percentages to rotate, scale
+or translate by can be specified using either the -p flags or -px, -py, -pz flags. Each selected object must have a
+corresponding -p or -px, -py, -pz flag. The rotate, scale or translate performed is relative.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>percent (p)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The percentage effect that the specified x,y,z has on an object. This flag must be specified once for each object, ie. if there are 4 objects specified, there
+must be 4 -pflags, (otherwise a percentage of 1.0 will be used).  This flag generally has a range between 0.0 and 1.0, but can be any float value.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>percentX (px)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The percentage effect that the specified x has on an object. This flag is specified one per object. The value ranges between 0.0 and 1.0, but can be any float
+value. If the -p flag has been specified, this flag usage is invalid.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>percentY (py)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The percentage effect that the specified y has on an object. This flag is specified one per object. The value ranges between 0.0 and 1.0, but can be any float
+value. If the -p flag has been specified, this flag usage is invalid.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>percentZ (pz)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The percentage effect that the specified z has on an object. This flag is specified one per object. The value ranges between 0.0 and 1.0, but can be any float
+value. If the -p flag has been specified, this flag usage is invalid.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>pivot (pi)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specify the pivot about which a rotation or scale will occur. The change in pivot lasts only as long as the current &#8216;propMove&#8217; command, and so must be used in
+conjunction with one of the above move flags for any effect to be noticeable.                      Flag can have multiple arguments, passed either as a tuple or a
+list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>rotate (r)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Proportionally rotate each object by the given angles. The rotation values are scaled by the percentage specified by that object&#8217;s corresponding -percentflag. All
+angles are in degrees. The rotation is about the pivot specified by the -pivotflag, or (0, 0, 0) if the -pivotflag is not present.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>scale (s)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Proportionally scale each object by the given amounts. The scale values are scaled by the percentage specified by that object&#8217;s corresponding -percentflag. The
+position and size of each object is measured relative to the pivot specified by the -pivotflag, and defaults to each object&#8217;s individual pivot. In the case of
+control vertices, or some other object component, the default is the parent object&#8217;s pivot.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>translate (t)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Proportionally translate each object by the given amounts. The translation values are scaled by the percentage specified by that object&#8217;s corresponding
+-percentflag. The -pivotflag has no effect on translation.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldSpace (ws)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.propMove</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">propMove</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="s">&#39;surface2&#39;</span><span class="p">,</span> <span class="s">&#39;surface3&#39;</span><span class="p">,</span> <span class="s">&#39;surface4&#39;</span><span class="p">,</span> <span class="s">&#39;surface5&#39;</span><span class="p">,</span> <span class="s">&#39;surface6&#39;</span><span class="p">,</span> <span class="s">&#39;surface7&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">)</span>
+<span class="c"># This performs a proportional translate of (3,6,0) on seven surfaces.</span>
+<span class="c"># Note that there are 7 &quot;-p&quot; flags, one for each surface.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">propMove</span><span class="p">(</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="s">&#39;surface2&#39;</span><span class="p">,</span> <span class="s">&#39;surface3&#39;</span><span class="p">,</span> <span class="s">&#39;surface4&#39;</span><span class="p">,</span> <span class="s">&#39;surface5&#39;</span><span class="p">,</span> <span class="s">&#39;surface6&#39;</span><span class="p">,</span> <span class="s">&#39;surface7&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">pivot</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># This performs a proportional scale of (3,3,3) on seven surfaces.</span>
+<span class="c"># Note that there are 7 &quot;-p&quot; flags, one for each surface. The scale</span>
+<span class="c"># happened about the specified pivot (1,1,1).</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">propMove</span><span class="p">(</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="s">&#39;surface2&#39;</span><span class="p">,</span> <span class="s">&#39;surface3&#39;</span><span class="p">,</span> <span class="s">&#39;surface4&#39;</span><span class="p">,</span> <span class="s">&#39;surface5&#39;</span><span class="p">,</span> <span class="s">&#39;surface6&#39;</span><span class="p">,</span> <span class="s">&#39;surface7&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># This performs a proportional rotate of (30,60,90) on seven surfaces.</span>
+<span class="c"># Note that there are 7 &quot;-p&quot; flags, one for each surface.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">propMove</span><span class="p">(</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="s">&#39;surface2&#39;</span><span class="p">,</span> <span class="s">&#39;surface3&#39;</span><span class="p">,</span> <span class="s">&#39;surface4&#39;</span><span class="p">,</span> <span class="s">&#39;surface5&#39;</span><span class="p">,</span> <span class="s">&#39;surface6&#39;</span><span class="p">,</span> <span class="s">&#39;surface7&#39;</span><span class="p">,</span> <span class="n">px</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># This performs a proportional rotate of (30,60,90) on seven surfaces.</span>
+<span class="c"># The percentages are only applied on the rotation 30 about the X axis. The</span>
+<span class="c"># percentages along Y and Z are  1.0. Note that there are 7 &quot;-px&quot; flags, one</span>
+<span class="c"># for each surface. The surfaces are rotated by 60, 90 in Y and Z.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.projectTangent.html"
+                        title="previous chapter">pymel.core.modeling.projectTangent</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.querySubdiv.html"
+                        title="next chapter">pymel.core.modeling.querySubdiv</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.modeling/pymel.core.modeling.propMove.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.querySubdiv.html" title="pymel.core.modeling.querySubdiv"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.projectTangent.html" title="pymel.core.modeling.projectTangent"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" >pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

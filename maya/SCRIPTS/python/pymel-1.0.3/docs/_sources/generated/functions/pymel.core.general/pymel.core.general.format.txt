@@ -1,0 +1,6 @@
+pymel.core.general.format
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.format

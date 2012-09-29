@@ -1,0 +1,6 @@
+pymel.core.other.itemFilterRenderOld
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.itemFilterRenderOld

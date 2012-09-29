@@ -1,0 +1,6 @@
+pymel.core.runtime.LayoutUV
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.LayoutUV

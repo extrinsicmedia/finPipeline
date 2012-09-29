@@ -1,0 +1,6 @@
+pymel.core.runtime.SaveFluidStateAs
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SaveFluidStateAs

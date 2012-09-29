@@ -1,0 +1,6 @@
+pymel.core.runtime.UndoCanvas
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UndoCanvas

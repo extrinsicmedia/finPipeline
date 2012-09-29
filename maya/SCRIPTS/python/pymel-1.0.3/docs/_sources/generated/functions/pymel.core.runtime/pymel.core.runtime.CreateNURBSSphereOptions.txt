@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateNURBSSphereOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateNURBSSphereOptions

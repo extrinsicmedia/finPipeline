@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayRenderPass
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayRenderPass
+    :parts: 1
+
+.. autoclass:: MentalrayRenderPass
+    :members:
+    :undoc-members:

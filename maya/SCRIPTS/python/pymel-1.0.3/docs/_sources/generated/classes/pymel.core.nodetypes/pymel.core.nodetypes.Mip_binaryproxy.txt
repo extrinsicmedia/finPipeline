@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_binaryproxy
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_binaryproxy
+    :parts: 1
+
+.. autoclass:: Mip_binaryproxy
+    :members:
+    :undoc-members:

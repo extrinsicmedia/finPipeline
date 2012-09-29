@@ -1,0 +1,6 @@
+pymel.core.runtime.HideKinematics
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideKinematics

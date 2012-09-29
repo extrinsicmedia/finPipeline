@@ -1,0 +1,6 @@
+pymel.core.runtime.FourViewLayout
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FourViewLayout

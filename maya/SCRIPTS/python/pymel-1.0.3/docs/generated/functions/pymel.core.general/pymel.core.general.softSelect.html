@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.softSelect &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.spaceLocator" href="pymel.core.general.spaceLocator.html" />
+    <link rel="prev" title="pymel.core.general.snapMode" href="pymel.core.general.snapMode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.spaceLocator.html" title="pymel.core.general.spaceLocator"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.snapMode.html" title="pymel.core.general.snapMode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-softselect">
+<h1>pymel.core.general.softSelect<a class="headerlink" href="#pymel-core-general-softselect" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.softSelect">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">softSelect</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.softSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command allows you to change the soft modelling options. Soft modelling is an option that allows for reflection of
+basic manipulator actions such as move, rotate, and scale. In query mode, return type is based on queried flag.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>compressUndo (cu)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Controls how soft selection settings behave in undo: 0 means all changes undo individually1 means all consecutive changes undo as a group2 means only interactive
+changes undo as a groupWhen queried, returns an int indicating the current undo behaviour.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>enableFalseColor (efc)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set soft select color feedback on or off. When queried, returns an int indicating whether color feedback is currently enabled.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectColorCurve (scc)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the color ramp used to display false color feedback for soft selected components in the viewport. The color curve is encoded as a string of comma separated
+floating point values representing the falloff curve CVs. Each CV is represented by 5 successive values: 3 RGB values (the color to use), an input value (the
+selection weight), and a curve interpolation type. When queried, returns a string containing the encoded CVs of the current color feedback curve.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectCurve (ssc)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the falloff curve used to calculate selection weights for components within the falloff distance. The curve is encoded as a string of comma separated
+floating point values representing the falloff curve CVs. Each CV is represented by 3 successive values: an output value (the selection weight at this point), an
+input value (the normalised falloff distance) and a curve interpolation type. When queried, returns a string containing the encoded CVs of the current falloff
+curve.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectDistance (ssd)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the falloff distance (radius) used for world and object space soft selection. When queried, returns an float indicating the current falloff distance.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectEnabled (sse)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets soft selection based modeling on or off. When queried, returns an int indicating the current state of the option.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectFalloff (ssf)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the falloff mode: 0 for volume based falloff1 for surface based falloff2 for global falloffWhen queried, returns an int indicating the falloff mode.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectReset (ssr)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Resets soft selection to its default settings.                    Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softSelectUVDistance (sud)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the falloff distance (radius) used for UV space soft selection. When queried, returns an float indicating the current falloff distance.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.softSelect</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Enable soft selection</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">softSelect</span><span class="p">(</span><span class="n">sse</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c"># Setup global soft select with radius and curve</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">softSelect</span><span class="p">(</span><span class="n">sse</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ssd</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span><span class="n">ssc</span><span class="o">=</span><span class="s">&#39;0,1,2,1,0,2&#39;</span><span class="p">,</span><span class="n">ssf</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.snapMode.html"
+                        title="previous chapter">pymel.core.general.snapMode</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.spaceLocator.html"
+                        title="next chapter">pymel.core.general.spaceLocator</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.softSelect.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.spaceLocator.html" title="pymel.core.general.spaceLocator"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.snapMode.html" title="pymel.core.general.snapMode"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

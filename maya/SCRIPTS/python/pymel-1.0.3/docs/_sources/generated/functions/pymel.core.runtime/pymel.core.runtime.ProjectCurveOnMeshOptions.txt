@@ -1,0 +1,6 @@
+pymel.core.runtime.ProjectCurveOnMeshOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ProjectCurveOnMeshOptions

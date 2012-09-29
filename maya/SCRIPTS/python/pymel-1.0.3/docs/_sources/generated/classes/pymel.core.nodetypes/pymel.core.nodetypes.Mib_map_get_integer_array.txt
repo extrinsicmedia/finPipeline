@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_map_get_integer_array
+==============================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_map_get_integer_array
+    :parts: 1
+
+.. autoclass:: Mib_map_get_integer_array
+    :members:
+    :undoc-members:

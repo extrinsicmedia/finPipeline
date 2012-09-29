@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleSpline
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleSpline
+    :parts: 1
+
+.. autoclass:: CMuscleSpline
+    :members:
+    :undoc-members:

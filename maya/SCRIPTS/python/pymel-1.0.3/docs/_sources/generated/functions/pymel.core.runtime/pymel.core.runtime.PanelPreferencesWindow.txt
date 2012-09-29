@@ -1,0 +1,6 @@
+pymel.core.runtime.PanelPreferencesWindow
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PanelPreferencesWindow

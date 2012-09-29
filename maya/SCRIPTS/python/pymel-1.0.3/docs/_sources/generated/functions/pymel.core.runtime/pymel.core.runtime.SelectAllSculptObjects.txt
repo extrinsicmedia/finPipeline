@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllSculptObjects
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllSculptObjects

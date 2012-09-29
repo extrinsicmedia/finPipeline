@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableFluids
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableFluids

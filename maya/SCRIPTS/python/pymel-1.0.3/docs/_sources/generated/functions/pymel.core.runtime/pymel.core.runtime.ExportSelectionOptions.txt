@@ -1,0 +1,6 @@
+pymel.core.runtime.ExportSelectionOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExportSelectionOptions

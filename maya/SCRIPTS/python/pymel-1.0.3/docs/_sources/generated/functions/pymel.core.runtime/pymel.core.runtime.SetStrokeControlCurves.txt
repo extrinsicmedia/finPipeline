@@ -1,0 +1,6 @@
+pymel.core.runtime.SetStrokeControlCurves
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetStrokeControlCurves

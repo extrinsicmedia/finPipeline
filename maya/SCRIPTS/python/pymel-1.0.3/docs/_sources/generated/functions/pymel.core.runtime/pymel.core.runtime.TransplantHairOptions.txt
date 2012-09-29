@@ -1,0 +1,6 @@
+pymel.core.runtime.TransplantHairOptions
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TransplantHairOptions

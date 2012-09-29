@@ -1,0 +1,6 @@
+pymel.core.runtime.HIKSelectedMode
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HIKSelectedMode

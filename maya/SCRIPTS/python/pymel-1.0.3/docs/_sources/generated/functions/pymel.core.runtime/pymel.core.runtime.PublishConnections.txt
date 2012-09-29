@@ -1,0 +1,6 @@
+pymel.core.runtime.PublishConnections
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PublishConnections

@@ -1,0 +1,6 @@
+pymel.core.runtime.Triangulate
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Triangulate

@@ -1,0 +1,6 @@
+pymel.core.language.scriptJob
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: language.scriptJob

@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyBrushMarkingMenu
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyBrushMarkingMenu

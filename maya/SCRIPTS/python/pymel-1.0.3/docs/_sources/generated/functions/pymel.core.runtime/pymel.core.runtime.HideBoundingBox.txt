@@ -1,0 +1,6 @@
+pymel.core.runtime.HideBoundingBox
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideBoundingBox

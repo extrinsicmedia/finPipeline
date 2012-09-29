@@ -1,0 +1,6 @@
+pymel.core.effects.radial
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: effects.radial

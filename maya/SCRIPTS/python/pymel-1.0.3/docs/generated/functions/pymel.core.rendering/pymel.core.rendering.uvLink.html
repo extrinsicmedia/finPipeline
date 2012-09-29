@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.rendering.uvLink &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.rendering" href="../../pymel.core.rendering.html" />
+    <link rel="next" title="pymel.core.rendering.viewCamera" href="pymel.core.rendering.viewCamera.html" />
+    <link rel="prev" title="pymel.core.rendering.tumble" href="pymel.core.rendering.tumble.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.viewCamera.html" title="pymel.core.rendering.viewCamera"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.tumble.html" title="pymel.core.rendering.tumble"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" accesskey="U">pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-rendering-uvlink">
+<h1>pymel.core.rendering.uvLink<a class="headerlink" href="#pymel-core-rendering-uvlink" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.rendering.uvLink">
+<em class="property">static </em><tt class="descclassname">rendering.</tt><tt class="descname">uvLink</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.rendering.uvLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command is used to make, break and query UV linking relationships between UV sets on objects and textures that use
+those UV sets. If no make, break or query flag is specified and both uvSet and texture flags are present, the make flag
+is assumed to be specified. If no make, break or query flag is specified and only one of the uvSet and texture flags is
+present, the query flag is assumed to be specified. The term texturein the context of UV linking is a bit of an
+oversimplification. In fact, UV sets can be linked to any node which takes UV coordinates as input. However in most
+cases it will be a texture to which you wish to link a UV set.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>b (b)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The presence of this flag on the command indicates that the command is being invoked to break links between UV sets and textures.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isValid (iv)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is used to verify whether or not a texture or UV set is valid for the purposes of UV linking. It should be used in conjunction with either the -texture
+flag or the -uvSet flag, but not both at the same time.                         Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>make (m)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The presence of this flag on the command indicates that the command is being invoked to make links between UV sets and textures.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>queryObject (qo)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag should only be used in conjunction with a query of a texture. This flag is used to indicate that the results of the query should be limited to UV sets
+of the object specified by this flag.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>texture (t)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The argument to the texture flag specifies the texture to be used by the command in performing the action.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>uvSet (uvs)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The argument to the uvSet flag specifies the UV set to be used by the command in performing the action.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.uvLink</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">uvSet</span><span class="o">=</span><span class="s">&#39;pSphereShape1.uvSet[2].uvSetName&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;checker1&#39;</span> <span class="p">)</span>
+<span class="c"># causes a UV link to be created between uvSet[2] on pSphereShape1</span>
+<span class="c"># and the checker1 texture.</span>
+<span class="c"># Note that no make, break or query flag is specified so make is</span>
+<span class="c"># assumed since both uvSet and texture are specified.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">make</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">uvSet</span><span class="o">=</span><span class="s">&#39;pCubeShape2.uvSet[0].uvSetName&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;file8&#39;</span> <span class="p">)</span>
+<span class="c"># causes a UV link to be created between uvSet[0] of pCubeShape2 and</span>
+<span class="c"># the file8 file texture.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">uvSet</span><span class="o">=</span><span class="s">&#39;pCubeShape2.uvSet[0].uvSetName&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;file8&#39;</span> <span class="p">)</span>
+<span class="c"># causes a UV link to be created between uvSet[0] of pCubeShape2 and</span>
+<span class="c"># the file8 file texture. Note: no make, break or query flag is</span>
+<span class="c"># specified so the make flag is assumed since both uvSet</span>
+<span class="c"># and texture are specified.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">uvSet</span><span class="o">=</span><span class="s">&#39;pCubeShape2.uvSet[0].uvSetName&#39;</span> <span class="p">)</span>
+<span class="c"># will return a string array of textures which use the UV set</span>
+<span class="c"># pCubeShape2.uvSet[0].setName. For example, the return value might</span>
+<span class="c"># be:</span>
+<span class="c"># file8 file9 checker4 slimeMap</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;checker4&#39;</span> <span class="p">)</span>
+<span class="c"># will return a string array of the UV sets that are used by the</span>
+<span class="c"># texture. For example, the return value might be</span>
+<span class="c"># pCubeShape2.uvSet[0].setName pCylinderShape1.uvSet[4].setName</span>
+<span class="c"># pCylinderShape2.uvSet[3].setName</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;checker4&#39;</span> <span class="p">)</span>
+<span class="c"># will return a string array of the UV sets that are used by the</span>
+<span class="c"># texture. For example, the return value might be</span>
+<span class="c"># pCubeShape2.uvSet[0].setName pCylinderShape1.uvSet[4].setName</span>
+<span class="c"># pCylinderShape2.uvSet[3].setName</span>
+<span class="c"># Note that no make, break or query flag is specified, so query is</span>
+<span class="c"># assumed since no uvSet was specified.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">b</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">uvSet</span><span class="o">=</span><span class="s">&#39;pCylinderShape2.uvSet[3].uvSetName&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;checker4&#39;</span> <span class="p">)</span>
+<span class="c"># causes the checker4 texture to no longer use the UV set</span>
+<span class="c"># pCylinderShape2.uvSet[3].setName.</span>
+<span class="c"># The texture will use the default UV set on pCylinderShape2 instead.</span>
+<span class="c"># If checker4 wasn&#39;t using pCylinderShape2.uvSet[3].setName,</span>
+<span class="c"># nothing changes and a warning is produced.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">isValid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s">&#39;myTexture&#39;</span> <span class="p">)</span>
+<span class="c"># Returns true if myTexture is a texture to which a UV set can be</span>
+<span class="c"># linked, or false otherwise.</span>
+
+<span class="n">myPlug</span> <span class="o">=</span> <span class="n">getSomePlugFromSomewhere</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">uvLink</span><span class="p">(</span> <span class="n">isValid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">uvSet</span><span class="o">=</span><span class="n">myPlug</span> <span class="p">)</span>
+<span class="c"># Returns true if $myPlug is a UV set, or false otherwise.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.tumble.html"
+                        title="previous chapter">pymel.core.rendering.tumble</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.viewCamera.html"
+                        title="next chapter">pymel.core.rendering.viewCamera</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.rendering/pymel.core.rendering.uvLink.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.viewCamera.html" title="pymel.core.rendering.viewCamera"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.tumble.html" title="pymel.core.rendering.tumble"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" >pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

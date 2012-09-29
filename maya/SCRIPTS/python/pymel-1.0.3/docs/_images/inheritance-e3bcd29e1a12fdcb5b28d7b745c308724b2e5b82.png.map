@@ -1,0 +1,11 @@
+<map id="inheritancebb96257a21" name="inheritancebb96257a21">
+<area shape="rect" href="#pymel.core.general.MeshVertex" title="MeshVertex" alt="" coords="84,276,164,300"/>
+<area shape="rect" href="pymel.core.general.MItComponent1D.html#pymel.core.general.MItComponent1D" title="MItComponent1D" alt="" coords="67,237,181,261"/>
+<area shape="rect" href="pymel.core.general.Component.html#pymel.core.general.Component" title="Component" alt="" coords="69,82,152,106"/>
+<area shape="rect" href="pymel.core.general.MItComponent.html#pymel.core.general.MItComponent" title="MItComponent" alt="" coords="5,160,104,184"/>
+<area shape="rect" href="pymel.core.general.DimensionedComponent.html#pymel.core.general.DimensionedComponent" title="DimensionedComponent" alt="" coords="97,121,249,145"/>
+<area shape="rect" href="pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="75,44,147,68"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="65,5,156,29"/>
+<area shape="rect" href="pymel.core.general.Component1D.html#pymel.core.general.Component1D" title="Component1D" alt="" coords="117,198,216,222"/>
+<area shape="rect" href="pymel.core.general.DiscreteComponent.html#pymel.core.general.DiscreteComponent" title="DiscreteComponent" alt="" coords="119,160,244,184"/>
+</map>

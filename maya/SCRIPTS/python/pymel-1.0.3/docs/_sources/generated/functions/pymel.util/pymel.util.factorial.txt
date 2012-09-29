@@ -1,0 +1,6 @@
+pymel.util.factorial
+====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.factorial

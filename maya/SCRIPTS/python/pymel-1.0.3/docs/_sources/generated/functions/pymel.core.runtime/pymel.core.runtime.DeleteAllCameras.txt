@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllCameras
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllCameras

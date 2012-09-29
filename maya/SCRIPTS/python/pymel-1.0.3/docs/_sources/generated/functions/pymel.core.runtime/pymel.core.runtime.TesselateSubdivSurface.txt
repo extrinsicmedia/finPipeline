@@ -1,0 +1,6 @@
+pymel.core.runtime.TesselateSubdivSurface
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TesselateSubdivSurface

@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleReflection
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleReflection

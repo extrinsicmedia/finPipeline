@@ -1,0 +1,11 @@
+pymel.core.nodetypes.SubstanceOutput
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: SubstanceOutput
+    :parts: 1
+
+.. autoclass:: SubstanceOutput
+    :members:
+    :undoc-members:

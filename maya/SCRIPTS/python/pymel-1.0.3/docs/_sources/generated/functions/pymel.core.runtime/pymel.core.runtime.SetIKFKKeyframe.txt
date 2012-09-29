@@ -1,0 +1,6 @@
+pymel.core.runtime.SetIKFKKeyframe
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetIKFKKeyframe

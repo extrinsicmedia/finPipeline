@@ -1,0 +1,6 @@
+pymel.util.makeMethod
+=====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.makeMethod

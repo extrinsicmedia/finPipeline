@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.effects.soft &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.effects" href="../../pymel.core.effects.html" />
+    <link rel="next" title="pymel.core.effects.spring" href="pymel.core.effects.spring.html" />
+    <link rel="prev" title="pymel.core.effects.setParticleAttr" href="pymel.core.effects.setParticleAttr.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.spring.html" title="pymel.core.effects.spring"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.setParticleAttr.html" title="pymel.core.effects.setParticleAttr"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" accesskey="U">pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-effects-soft">
+<h1>pymel.core.effects.soft<a class="headerlink" href="#pymel-core-effects-soft" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.effects.soft">
+<em class="property">static </em><tt class="descclassname">effects.</tt><tt class="descname">soft</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.effects.soft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a soft body from the object(s) passed on the command line or in the selection list.  The geometry can be a NURBS,
+polygonal, lattice object.  The resulting soft body is made up of a hierarchy with a particle shape and a geometry
+shape, thus: T    /  T   G /      P        Dynamics are applied to the particle shape and the resulting particle
+positions then drive the locations of the geometry&#8217;s CVs, vertices, or lattice points. With the convert option, the
+particle shape and its transform are simply inserted below the original shape&#8217;s hierarchy. With the duplicate option,
+the original geometry&#8217;s transform and shape are duplicated underneath its parent, and the particle shape is placed under
+the duplicate.  Note that any animation on the hierarchy will affect the particle shape as well.  If you do not want
+then, then reparent the structure outside the hierarchy. When duplicating, the soft portion (the duplicate) is given the
+name copyOf+ original object name.  The particle portion is always given the name original object name+ Particles.None
+of the flags of the soft command can be queried.  The soft -q command is used only to identify when an object is a soft
+body, or when two objects are part of the same soft body. See the examples.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>convert (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This tells the command that you want the original object to be the actual deformed object.  The particle shape portion of the soft body will be inserted in the
+same hierarchy as the original, under the same parent (with one additional intervening transform which is initially the identity).  If no flags are passed, then
+this is assumed.  The combination -c -h 1 is not valid; if you have this in your scripts, remove the -h 1.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>duplicate (d)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This tells the command that you want to make a copy of the original object and use the copy as the deforming geometry. Input connections to the original object
+are duplicated.  You would do this if you wanted to keep the original object in your scene and also have a copy of it that was a soft body. This flag and -dh are
+mutually exclusive.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>duplicateHistory (dh)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This is the same as -d, except that upstream history, is duplicated as well, instead of just input connections. This flag and -d are mutually exclusive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>goal (g)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This is the same as -d, but in addition it tells the command that you want the resulting soft body to try to follow the original geometry, using the set goal
+weight as the value that controls how strongly it is to follow it.  A value of 1.0 will try to follow exactly, and a value of 0.0 will not follow at all. The
+default value is 0.5.  This value must be from 0.0 to 1.0. You could use -d with -g, but it is redundant.  If you want history to be duplicated, you can use -dh
+and -g together.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>hideOriginal (h)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is used only when duplicating (-d, -g, or -dh).  If set to true, whichever of the two objects is NOT the soft object will be hidden. In other words,
+with -d -h true, the original object will be hidden; with -d -c -h 1 the duplicate object will be hidden. You would typically do this if you want to use the non-
+dynamic object as a goal for the soft one (see -g) but you do not want it visible in the scene. The flags -h 1 and -c are mutually exclusive.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is obsolete.  If you wish to give your new soft object a name, use the rename command (or from the UI, use the outliner).                       Flag can
+have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.soft</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="c"># Result: [nt.Transform(u&#39;nurbsSphere1&#39;), nt.MakeNurbSphere(u&#39;makeNurbSphere1&#39;)] #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;nurbsSphere1&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;nurbsSphere1Particle&#39;] #</span>
+
+<span class="c"># Creates a sphere named nurbsSphere1 and converts nurbSphere1 into</span>
+<span class="c"># a soft object.  The particle portion of the soft object will</span>
+<span class="c"># be parented (with its own transform) under nurbsSphere1.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="c"># Result: [nt.Transform(u&#39;nurbsSphere2&#39;), nt.MakeNurbSphere(u&#39;makeNurbSphere2&#39;)] #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;nurbsSphere1&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Same as the previous example, except that the soft command will make</span>
+<span class="c"># a duplicate of nurbsSphereShape1.  The resulting soft body will be</span>
+<span class="c"># completely independent of nurbSphere1 and its children.  Input connections</span>
+<span class="c"># to nurbsSphereShape1 will be duplicated, but not any upstream history</span>
+<span class="c"># (in other words, just plain &quot;duplicate&quot;).</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;nurbsSphere1&#39;</span><span class="p">,</span> <span class="n">dh</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Same as the previous example, except that upstream history on</span>
+<span class="c"># nurbsSphereShape1 will be duplicated as well (equivalent to</span>
+<span class="c"># &quot;duplicate history&quot;).</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;nurbSphere1&#39;</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mf">0.3</span> <span class="p">)</span>
+
+<span class="c"># This will make a duplicate of the shape under nurbSphere1 (as for -d),</span>
+<span class="c"># and  use it as the shape for the newly created soft object.</span>
+<span class="c"># The original nurbsSphereShape1 will be made a goal for the particles of</span>
+<span class="c"># softy, with a goal weight of 0.3.  This will make those particles try to</span>
+<span class="c"># follow nurbSphere1 loosely as it moves around.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;foobar&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Returns true if foobar is a soft object.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">soft</span><span class="p">(</span> <span class="s">&#39;foobar&#39;</span><span class="p">,</span> <span class="s">&#39;foobarParticles&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Returns true if foobar and foobarParticles are parts of the same</span>
+<span class="c"># soft object.  This is useful because when you select a soft body,</span>
+<span class="c"># both the overall transform and the particle transform get put into</span>
+<span class="c"># the selection list.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.effects.setParticleAttr.html"
+                        title="previous chapter">pymel.core.effects.setParticleAttr</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.effects.spring.html"
+                        title="next chapter">pymel.core.effects.spring</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.effects/pymel.core.effects.soft.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.spring.html" title="pymel.core.effects.spring"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.setParticleAttr.html" title="pymel.core.effects.setParticleAttr"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" >pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

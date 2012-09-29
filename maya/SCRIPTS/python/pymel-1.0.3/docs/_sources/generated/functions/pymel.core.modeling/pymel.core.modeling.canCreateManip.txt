@@ -1,0 +1,6 @@
+pymel.core.modeling.canCreateManip
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.canCreateManip

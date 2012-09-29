@@ -1,0 +1,6 @@
+pymel.core.runtime.attachNclothCache
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.attachNclothCache

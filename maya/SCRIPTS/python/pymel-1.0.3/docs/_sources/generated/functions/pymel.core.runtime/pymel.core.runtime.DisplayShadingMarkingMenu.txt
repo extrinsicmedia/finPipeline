@@ -1,0 +1,6 @@
+pymel.core.runtime.DisplayShadingMarkingMenu
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DisplayShadingMarkingMenu

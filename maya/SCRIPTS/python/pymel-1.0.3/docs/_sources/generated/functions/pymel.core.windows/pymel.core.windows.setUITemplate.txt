@@ -1,0 +1,6 @@
+pymel.core.windows.setUITemplate
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.setUITemplate

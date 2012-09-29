@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayUserBuffer
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayUserBuffer
+    :parts: 1
+
+.. autoclass:: MentalrayUserBuffer
+    :members:
+    :undoc-members:

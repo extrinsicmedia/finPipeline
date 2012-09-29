@@ -1,0 +1,6 @@
+pymel.core.runtime.ChannelControlEditor
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ChannelControlEditor

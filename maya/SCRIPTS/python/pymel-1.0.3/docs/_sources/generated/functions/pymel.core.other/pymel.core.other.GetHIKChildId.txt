@@ -1,0 +1,6 @@
+pymel.core.other.GetHIKChildId
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.GetHIKChildId

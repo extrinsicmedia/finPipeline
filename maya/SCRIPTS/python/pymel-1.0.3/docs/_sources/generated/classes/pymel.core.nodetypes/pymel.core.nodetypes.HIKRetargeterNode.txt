@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKRetargeterNode
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKRetargeterNode
+    :parts: 1
+
+.. autoclass:: HIKRetargeterNode
+    :members:
+    :undoc-members:

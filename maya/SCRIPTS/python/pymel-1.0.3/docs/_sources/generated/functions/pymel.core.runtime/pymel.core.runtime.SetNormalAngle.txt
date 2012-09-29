@@ -1,0 +1,6 @@
+pymel.core.runtime.SetNormalAngle
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetNormalAngle

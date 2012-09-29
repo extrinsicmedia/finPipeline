@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.Visor &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.Window" href="pymel.core.uitypes.Window.html" />
+    <link rel="prev" title="pymel.core.uitypes.VectorFieldGrp" href="pymel.core.uitypes.VectorFieldGrp.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.Window.html" title="pymel.core.uitypes.Window"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.VectorFieldGrp.html" title="pymel.core.uitypes.VectorFieldGrp"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-visor">
+<h1>pymel.core.uitypes.Visor<a class="headerlink" href="#pymel-core-uitypes-visor" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-026fc2925712624fc3b502d36dc9de09a989e48e.png" alt="Inheritance diagram of Visor" usemap="#inheritance8852702417" class="inheritance"/>
+<map id="inheritance8852702417" name="inheritance8852702417">
+<area shape="rect" href="#pymel.core.uitypes.Visor" title="Visor" alt="" coords="5,44,77,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="5,5,77,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.Visor">
+<em class="property">class </em><tt class="descname">Visor</tt><a class="headerlink" href="#pymel.core.uitypes.Visor" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">visor</span></tt></p>
+<p>Command for the creation and manipulation of a Visor UI element. The Visor is used to display the contents of a scene (rendering related nodes in particular), as well as files on disk which the user may wish to bring into the scene (shader and texture libraries for example).</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getAddFolder">
+<tt class="descname">getAddFolder</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getAddFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new folder to the current visual browser</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getAddNodes">
+<tt class="descname">getAddNodes</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getAddNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add dependency graph nodes by name to a user defined custom folder.  The argument is a string encolsed in quotes with 1 one more node names seperated by blanks</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getAllowPanningInX">
+<tt class="descname">getAllowPanningInX</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getAllowPanningInX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the user should be able to pan the contents of the visor horizontally. Default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getAllowPanningInY">
+<tt class="descname">getAllowPanningInY</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getAllowPanningInY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the user should be able to pan the contents of the visor vertically. Default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getAllowZooming">
+<tt class="descname">getAllowZooming</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getAllowZooming" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the user should be able to zoom the contents of the visor. Default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getCommand">
+<tt class="descname">getCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mel command which will return a list of nodes to add to a folder</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getDeleteFolder">
+<tt class="descname">getDeleteFolder</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getDeleteFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified folder and all of its children</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getEditFolder">
+<tt class="descname">getEditFolder</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getEditFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit the name and MEL command for an existing folder</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getFolderList">
+<tt class="descname">getFolderList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getFolderList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string array of the folders in the visor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getMenu">
+<tt class="descname">getMenu</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the name of the script to run to get a popup menu</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getName">
+<tt class="descname">getName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the new folder</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getNodeType">
+<tt class="descname">getNodeType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getNodeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>A node type used by folders of type nodeTypeInDAG</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getOpenDirectories">
+<tt class="descname">getOpenDirectories</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getOpenDirectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>When adding a new folder indicate if it sub directories will be show. The default is to not show sub directories.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getOpenFolder">
+<tt class="descname">getOpenFolder</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getOpenFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>When adding a new folder indicate if it will be open or closed by default. The default is closed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getPath">
+<tt class="descname">getPath</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to a file system directory to be displayed in the folder</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getPopupMenuScript">
+<tt class="descname">getPopupMenuScript</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getPopupMenuScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the script to be called when the right mouse button is pressed in the visor. The name of the editor in which the right mouse button was pressed will be appended to the script at the time the script is called.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getRebuild">
+<tt class="descname">getRebuild</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getRebuild" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rebuild the visor after interactively adding a folder</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getRefreshAllSwatches">
+<tt class="descname">getRefreshAllSwatches</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getRefreshAllSwatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh the swatches of all files currently displayed in this visor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getRefreshSelectedSwatches">
+<tt class="descname">getRefreshSelectedSwatches</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getRefreshSelectedSwatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh the swatches of all files currently selected in any visor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getRefreshSwatch">
+<tt class="descname">getRefreshSwatch</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getRefreshSwatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh the swatch of the file with the specified path.                                           Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getReset">
+<tt class="descname">getReset</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getReset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all previously loaded folder descriptions in preperation for building a new visual browser</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getRestrictPanAndZoom">
+<tt class="descname">getRestrictPanAndZoom</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getRestrictPanAndZoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the panning and zooming of the visor should be restricted to keep the contents in the top left corner of the visor when they are smaller than the visible area within the visor. Default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getSaveSwatches">
+<tt class="descname">getSaveSwatches</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getSaveSwatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save swatches to disk for currently displayed image files.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getScrollBar">
+<tt class="descname">getScrollBar</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getScrollBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the name of the scroll bar associated with visor</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getScrollPercent">
+<tt class="descname">getScrollPercent</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getScrollPercent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the percentage value for the scroll bar.  Typicly called from a a scroll bars callback.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getSelectedGadgets">
+<tt class="descname">getSelectedGadgets</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getSelectedGadgets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string array of the currently selected gadgets (files, folders, nodes) in the visor.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getShowDividers">
+<tt class="descname">getShowDividers</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getShowDividers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the visor should show dividers. The default is true. If -showDividers is set to false, dividers will be drawn as folders instead.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getShowFiles">
+<tt class="descname">getShowFiles</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getShowFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the visor should show files. The default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getShowFolders">
+<tt class="descname">getShowFolders</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getShowFolders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the visor should show folders. The default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getShowNodes">
+<tt class="descname">getShowNodes</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getShowNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether or not the visor should show nodes. The default is true.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getStateString">
+<tt class="descname">getStateString</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getStateString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the MEL command string to save the folder setup in visor</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getStyle">
+<tt class="descname">getStyle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set display style for the browser.  Options are:     outliner          A single column with an outliner style icon and a text label     singleColumn          A single column with an image style icon and a text label     multiColumn          A multiple column grid of swatches with the text label below the swatch</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getTransform">
+<tt class="descname">getTransform</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of a transform node used by folders of type nodeTypeInDAG</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Visor.getType">
+<tt class="descname">getType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Visor.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of the new folder.  Options are: command A mel command that will return a list of depend nodes that will          be displayed in the folderconnectedNodes The nodes connected to the specified node name will be displayed          in the folderdefaultNodes A mel command that will generate default node types.  These nodes          will not be part of the scene and are used for drag and drop          creation of new nodes that are in the scene.  The mel command          use with this type is usually listNodetypes.directory A directory name in the file systemdirectoryCommand A mel command that will return a directory name in the file systemfolder An empty folder(the default value).  Empty folders can be used         as user defined folders by dropping dependency graph nodes in to themnodeTypeInDAG List all nodes of a given type under a specified transforms in the                 DAG.  For example list all the shaders for a character by specifying         the top transform of the charactershelfItems A directory containing mel files to use as shelf items</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.visor</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.VectorFieldGrp.html"
+                        title="previous chapter">pymel.core.uitypes.VectorFieldGrp</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.Window.html"
+                        title="next chapter">pymel.core.uitypes.Window</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.Visor.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.Window.html" title="pymel.core.uitypes.Window"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.VectorFieldGrp.html" title="pymel.core.uitypes.VectorFieldGrp"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

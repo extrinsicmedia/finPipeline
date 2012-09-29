@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteFBIKSelectedKeys
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteFBIKSelectedKeys

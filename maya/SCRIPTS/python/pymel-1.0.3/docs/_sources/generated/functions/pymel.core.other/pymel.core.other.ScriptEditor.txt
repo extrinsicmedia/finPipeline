@@ -1,0 +1,6 @@
+pymel.core.other.ScriptEditor
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.ScriptEditor

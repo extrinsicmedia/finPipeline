@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayFramebuffer
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayFramebuffer
+    :parts: 1
+
+.. autoclass:: MentalrayFramebuffer
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.ArtPaintSelectTool
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ArtPaintSelectTool

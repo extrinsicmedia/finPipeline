@@ -1,0 +1,6 @@
+pymel.core.runtime.CommandShell
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CommandShell

@@ -1,0 +1,6 @@
+pymel.util.cos
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.cos

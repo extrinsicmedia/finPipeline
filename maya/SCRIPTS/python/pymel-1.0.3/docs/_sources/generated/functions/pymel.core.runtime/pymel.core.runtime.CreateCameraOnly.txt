@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateCameraOnly
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateCameraOnly

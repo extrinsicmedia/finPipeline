@@ -1,0 +1,6 @@
+pymel.core.runtime.FluidEmitterOptions
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FluidEmitterOptions

@@ -1,0 +1,6 @@
+pymel.util.acos
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.acos

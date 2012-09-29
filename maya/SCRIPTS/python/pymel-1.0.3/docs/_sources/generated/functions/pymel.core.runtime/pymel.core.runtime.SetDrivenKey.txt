@@ -1,0 +1,6 @@
+pymel.core.runtime.SetDrivenKey
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetDrivenKey

@@ -1,0 +1,6 @@
+pymel.core.runtime.PlaybackBackward
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PlaybackBackward

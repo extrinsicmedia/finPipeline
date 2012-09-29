@@ -1,0 +1,6 @@
+pymel.core.rendering.viewClipPlane
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.viewClipPlane

@@ -1,0 +1,6 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+setRenderPassType -defaultDataType -type "CSTLBL" $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "customLabel"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

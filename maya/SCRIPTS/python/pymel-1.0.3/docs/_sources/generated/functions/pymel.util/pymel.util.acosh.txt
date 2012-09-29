@@ -1,0 +1,6 @@
+pymel.util.acosh
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.acosh

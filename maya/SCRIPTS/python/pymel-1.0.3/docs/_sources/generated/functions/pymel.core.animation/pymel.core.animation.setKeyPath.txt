@@ -1,0 +1,6 @@
+pymel.core.animation.setKeyPath
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.setKeyPath

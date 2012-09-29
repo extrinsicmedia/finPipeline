@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_light_spot
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_light_spot
+    :parts: 1
+
+.. autoclass:: Mib_light_spot
+    :members:
+    :undoc-members:

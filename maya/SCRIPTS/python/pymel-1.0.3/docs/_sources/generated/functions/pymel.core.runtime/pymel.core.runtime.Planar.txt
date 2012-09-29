@@ -1,0 +1,6 @@
+pymel.core.runtime.Planar
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Planar

@@ -1,0 +1,6 @@
+pymel.core.runtime.ChangeNormalSize
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ChangeNormalSize

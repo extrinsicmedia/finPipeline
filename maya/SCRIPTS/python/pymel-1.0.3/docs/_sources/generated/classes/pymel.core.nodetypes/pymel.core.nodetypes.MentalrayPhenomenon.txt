@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayPhenomenon
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayPhenomenon
+    :parts: 1
+
+.. autoclass:: MentalrayPhenomenon
+    :members:
+    :undoc-members:

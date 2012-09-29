@@ -1,0 +1,6 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+setRenderPassType -defaultDataType -type "DIRRNS" $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "Illumination"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

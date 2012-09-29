@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKSkeletonGeneratorNode
+=============================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKSkeletonGeneratorNode
+    :parts: 1
+
+.. autoclass:: HIKSkeletonGeneratorNode
+    :members:
+    :undoc-members:

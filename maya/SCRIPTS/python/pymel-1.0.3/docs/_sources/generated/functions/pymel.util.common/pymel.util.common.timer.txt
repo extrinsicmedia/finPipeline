@@ -1,0 +1,6 @@
+pymel.util.common.timer
+=======================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: common.timer

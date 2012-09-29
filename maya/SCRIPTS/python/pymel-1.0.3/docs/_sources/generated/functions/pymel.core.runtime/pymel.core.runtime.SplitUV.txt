@@ -1,0 +1,6 @@
+pymel.core.runtime.SplitUV
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SplitUV

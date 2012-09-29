@@ -1,0 +1,6 @@
+pymel.core.runtime.TemplateObject
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TemplateObject

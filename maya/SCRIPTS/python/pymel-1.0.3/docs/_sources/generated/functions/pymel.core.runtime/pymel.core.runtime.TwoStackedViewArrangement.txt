@@ -1,0 +1,6 @@
+pymel.core.runtime.TwoStackedViewArrangement
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TwoStackedViewArrangement

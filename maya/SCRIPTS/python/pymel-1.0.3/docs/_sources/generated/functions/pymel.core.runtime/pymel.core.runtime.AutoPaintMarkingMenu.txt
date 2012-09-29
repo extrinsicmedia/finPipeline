@@ -1,0 +1,6 @@
+pymel.core.runtime.AutoPaintMarkingMenu
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AutoPaintMarkingMenu

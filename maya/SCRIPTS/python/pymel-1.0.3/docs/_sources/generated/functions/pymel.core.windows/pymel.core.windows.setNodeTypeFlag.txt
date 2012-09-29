@@ -1,0 +1,6 @@
+pymel.core.windows.setNodeTypeFlag
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.setNodeTypeFlag

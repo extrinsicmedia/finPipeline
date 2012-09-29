@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateParticleDiskCache
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateParticleDiskCache

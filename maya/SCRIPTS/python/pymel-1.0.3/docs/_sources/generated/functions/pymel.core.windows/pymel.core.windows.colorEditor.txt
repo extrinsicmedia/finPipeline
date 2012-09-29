@@ -1,0 +1,6 @@
+pymel.core.windows.colorEditor
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.colorEditor

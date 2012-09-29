@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_color_average
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_color_average
+    :parts: 1
+
+.. autoclass:: Mib_color_average
+    :members:
+    :undoc-members:

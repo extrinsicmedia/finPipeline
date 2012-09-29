@@ -1,0 +1,6 @@
+pymel.core.general.validComponentIndexType
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.validComponentIndexType

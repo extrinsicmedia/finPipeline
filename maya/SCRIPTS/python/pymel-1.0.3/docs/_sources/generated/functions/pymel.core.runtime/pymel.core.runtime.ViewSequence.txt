@@ -1,0 +1,6 @@
+pymel.core.runtime.ViewSequence
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ViewSequence

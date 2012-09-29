@@ -1,0 +1,6 @@
+pymel.core.runtime.QuadrangulateOptions
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.QuadrangulateOptions

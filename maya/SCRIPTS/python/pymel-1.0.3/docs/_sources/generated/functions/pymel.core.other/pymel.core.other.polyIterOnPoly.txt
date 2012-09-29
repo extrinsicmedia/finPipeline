@@ -1,0 +1,6 @@
+pymel.core.other.polyIterOnPoly
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.polyIterOnPoly

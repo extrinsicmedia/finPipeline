@@ -1,0 +1,6 @@
+pymel.core.runtime.ArtPaintAttrTool
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ArtPaintAttrTool

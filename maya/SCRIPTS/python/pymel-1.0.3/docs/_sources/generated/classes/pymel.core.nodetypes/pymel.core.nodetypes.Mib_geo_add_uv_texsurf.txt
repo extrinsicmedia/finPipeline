@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_geo_add_uv_texsurf
+===========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_geo_add_uv_texsurf
+    :parts: 1
+
+.. autoclass:: Mib_geo_add_uv_texsurf
+    :members:
+    :undoc-members:

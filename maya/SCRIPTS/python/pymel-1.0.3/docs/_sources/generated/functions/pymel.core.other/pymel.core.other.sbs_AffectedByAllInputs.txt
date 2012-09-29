@@ -1,0 +1,6 @@
+pymel.core.other.sbs_AffectedByAllInputs
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_AffectedByAllInputs

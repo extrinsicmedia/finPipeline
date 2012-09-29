@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_geo_instance_mlist
+===========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_geo_instance_mlist
+    :parts: 1
+
+.. autoclass:: Mib_geo_instance_mlist
+    :members:
+    :undoc-members:

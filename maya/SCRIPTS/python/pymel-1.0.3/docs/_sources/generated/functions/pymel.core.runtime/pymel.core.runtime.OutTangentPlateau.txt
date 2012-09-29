@@ -1,0 +1,6 @@
+pymel.core.runtime.OutTangentPlateau
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.OutTangentPlateau

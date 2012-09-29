@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleStatusLine
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleStatusLine

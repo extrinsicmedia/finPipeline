@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.system &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../index.html" />
+    <link rel="next" title="pymel.core.system.aaf2fcp" href="functions/pymel.core.system/pymel.core.system.aaf2fcp.html" />
+    <link rel="prev" title="pymel.core.runtime.setNClothStartState" href="functions/pymel.core.runtime/pymel.core.runtime.setNClothStartState.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.system/pymel.core.system.aaf2fcp.html" title="pymel.core.system.aaf2fcp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.runtime/pymel.core.runtime.setNClothStartState.html" title="pymel.core.runtime.setNClothStartState"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pymel.core.system">
+<span id="pymel-core-system"></span><h1>pymel.core.system<a class="headerlink" href="#module-pymel.core.system" title="Permalink to this headline">¶</a></h1>
+<p>Functions and classes relating to files, references, and system calls.</p>
+<p>In particular, the system module contains the functionality of maya.cmds.file. The file command should not be imported into
+the default namespace because it conflicts with python&#8217;s builtin file class. Since the file command has so many flags,
+we decided to kill two birds with one stone: by breaking the file command down into multiple functions &#8211; one for each
+primary flag &#8211; the resulting functions are more readable and allow the file command&#8217;s functionality to be used directly
+within the pymel namespace.</p>
+<p>for example, instead of this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span> <span class="s">&#39;test.ma&#39;</span><span class="p">,</span> <span class="n">exportAll</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">preserveReferences</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">&#39;mayaAscii&#39;</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span> 
+</pre></div>
+</div>
+<p>you can do this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">expFile</span> <span class="o">=</span> <span class="n">exportAll</span><span class="p">(</span> <span class="s">&#39;test.ma&#39;</span><span class="p">,</span> <span class="n">preserveReferences</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>some of the new commands were changed slightly from their flag name to avoid name clashes and to add to readability:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">importFile</span><span class="p">(</span> <span class="n">expFile</span> <span class="p">)</span>  <span class="c"># flag was called import, but that&#39;s a python keyword</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ref</span> <span class="o">=</span> <span class="n">createReference</span><span class="p">(</span> <span class="n">expFile</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ref</span> 
+<span class="go">FileReference(u&#39;.../test.ma&#39;, refnode=u&#39;testRN&#39;)</span>
+</pre></div>
+</div>
+<p>Notice that the &#8216;type&#8217; flag is set automatically for you when your path includes a &#8216;.mb&#8217; or &#8216;.ma&#8217; extension.</p>
+<p>Paths returned by these commands are either a <a class="reference internal" href="classes/pymel.core.system/pymel.core.system.Path.html#pymel.core.system.Path" title="pymel.core.system.Path"><tt class="xref py py-obj docutils literal"><span class="pre">Path</span></tt></a> or a <a class="reference internal" href="classes/pymel.core.system/pymel.core.system.FileReference.html#pymel.core.system.FileReference" title="pymel.core.system.FileReference"><tt class="xref py py-obj docutils literal"><span class="pre">FileReference</span></tt></a>, so you can use object-oriented path methods with
+the results:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">expFile</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expFile</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>  <span class="c"># cleanup</span>
+</pre></div>
+</div>
+<p class="rubric">Functions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.aaf2fcp.html#pymel.core.system.aaf2fcp" title="pymel.core.system.aaf2fcp"><tt class="xref py py-obj docutils literal"><span class="pre">aaf2fcp</span></tt></a></td>
+<td>This command is used to convert an aff file to a Final Cut Pro (fcp) xml file The conversion process can take several</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.allNodeTypes.html#pymel.core.system.allNodeTypes" title="pymel.core.system.allNodeTypes"><tt class="xref py py-obj docutils literal"><span class="pre">allNodeTypes</span></tt></a></td>
+<td>This command returns a list containing the type names of every kind of creatable node registered with the system.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.assignInputDevice.html#pymel.core.system.assignInputDevice" title="pymel.core.system.assignInputDevice"><tt class="xref py py-obj docutils literal"><span class="pre">assignInputDevice</span></tt></a></td>
+<td>This command associates a command string (i.e.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.attachDeviceAttr.html#pymel.core.system.attachDeviceAttr" title="pymel.core.system.attachDeviceAttr"><tt class="xref py py-obj docutils literal"><span class="pre">attachDeviceAttr</span></tt></a></td>
+<td>This command associates a device/axis pair with a node/attribute pair.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.attrCompatibility.html#pymel.core.system.attrCompatibility" title="pymel.core.system.attrCompatibility"><tt class="xref py py-obj docutils literal"><span class="pre">attrCompatibility</span></tt></a></td>
+<td>This command is used to handle compatibility issues between file format versions by providing a mechanism to describe differences between two versions.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.audioTrack.html#pymel.core.system.audioTrack" title="pymel.core.system.audioTrack"><tt class="xref py py-obj docutils literal"><span class="pre">audioTrack</span></tt></a></td>
+<td>This command is used for inserting and removing tracks related to the audio clips displayed in the sequencer.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.autoSave.html#pymel.core.system.autoSave" title="pymel.core.system.autoSave"><tt class="xref py py-obj docutils literal"><span class="pre">autoSave</span></tt></a></td>
+<td>Provides an interface to the auto-save mechanism.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.cacheFile.html#pymel.core.system.cacheFile" title="pymel.core.system.cacheFile"><tt class="xref py py-obj docutils literal"><span class="pre">cacheFile</span></tt></a></td>
+<td>Creates one or more cache files on disk to store attribute data for a span of frames.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.cacheFileCombine.html#pymel.core.system.cacheFileCombine" title="pymel.core.system.cacheFileCombine"><tt class="xref py py-obj docutils literal"><span class="pre">cacheFileCombine</span></tt></a></td>
+<td>Creates a cacheBlend node that can be used to combine, layer or blend multiple cacheFiles for a given object.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.cacheFileMerge.html#pymel.core.system.cacheFileMerge" title="pymel.core.system.cacheFileMerge"><tt class="xref py py-obj docutils literal"><span class="pre">cacheFileMerge</span></tt></a></td>
+<td>If selected/specified caches can be successfully merged, will return the start/end frames of the new cache followed by the start/end frames of any gaps in the merged cache for which no data should be written to file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.cacheFileTrack.html#pymel.core.system.cacheFileTrack" title="pymel.core.system.cacheFileTrack"><tt class="xref py py-obj docutils literal"><span class="pre">cacheFileTrack</span></tt></a></td>
+<td>This command is used for inserting and removing tracks related to the caches displayed in the trax editor.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.clearCache.html#pymel.core.system.clearCache" title="pymel.core.system.clearCache"><tt class="xref py py-obj docutils literal"><span class="pre">clearCache</span></tt></a></td>
+<td>Even though dependency graph values are computed or dirty they may still occupy space temporarily within the nodes.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.cmdFileOutput.html#pymel.core.system.cmdFileOutput" title="pymel.core.system.cmdFileOutput"><tt class="xref py py-obj docutils literal"><span class="pre">cmdFileOutput</span></tt></a></td>
+<td>This command will open a text file to receive all of the commands and results that normally get printed to the Script</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.convertUnit.html#pymel.core.system.convertUnit" title="pymel.core.system.convertUnit"><tt class="xref py py-obj docutils literal"><span class="pre">convertUnit</span></tt></a></td>
+<td>This command converts values between different units of measure.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.createReference.html#pymel.core.system.createReference" title="pymel.core.system.createReference"><tt class="xref py py-obj docutils literal"><span class="pre">createReference</span></tt></a></td>
+<td>Create a reference to the specified file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dagObjectCompare.html#pymel.core.system.dagObjectCompare" title="pymel.core.system.dagObjectCompare"><tt class="xref py py-obj docutils literal"><span class="pre">dagObjectCompare</span></tt></a></td>
+<td>dagObjectCompare can be used to compare to compare objects based on: type -  Currently supports transform nodes and</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.date.html#pymel.core.system.date" title="pymel.core.system.date"><tt class="xref py py-obj docutils literal"><span class="pre">date</span></tt></a></td>
+<td>Returns information about current time and date.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dbcount.html#pymel.core.system.dbcount" title="pymel.core.system.dbcount"><tt class="xref py py-obj docutils literal"><span class="pre">dbcount</span></tt></a></td>
+<td>The dbcountcommand is used to print and manage a list of statistics collected for counting operations.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dbmessage.html#pymel.core.system.dbmessage" title="pymel.core.system.dbmessage"><tt class="xref py py-obj docutils literal"><span class="pre">dbmessage</span></tt></a></td>
+<td>The dbmessagecommand is used to install monitors for certain message types, dumping debug information as they are sent so that the flow of messages can be examined.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.decorator.html#pymel.core.system.decorator" title="pymel.core.system.decorator"><tt class="xref py py-obj docutils literal"><span class="pre">decorator</span></tt></a></td>
+<td>Decorator for decorators.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.detachDeviceAttr.html#pymel.core.system.detachDeviceAttr" title="pymel.core.system.detachDeviceAttr"><tt class="xref py py-obj docutils literal"><span class="pre">detachDeviceAttr</span></tt></a></td>
+<td>This command detaches connections between device axes and node attributes.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.deviceEditor.html#pymel.core.system.deviceEditor" title="pymel.core.system.deviceEditor"><tt class="xref py py-obj docutils literal"><span class="pre">deviceEditor</span></tt></a></td>
+<td>This creates an editor for creating/modifying attachments to input devices.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.devicePanel.html#pymel.core.system.devicePanel" title="pymel.core.system.devicePanel"><tt class="xref py py-obj docutils literal"><span class="pre">devicePanel</span></tt></a></td>
+<td>This command is now obsolete.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dgInfo.html#pymel.core.system.dgInfo" title="pymel.core.system.dgInfo"><tt class="xref py py-obj docutils literal"><span class="pre">dgInfo</span></tt></a></td>
+<td>This command prints information about the DG in a text-oriented manner.  The scope of the information printed is the</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dgdirty.html#pymel.core.system.dgdirty" title="pymel.core.system.dgdirty"><tt class="xref py py-obj docutils literal"><span class="pre">dgdirty</span></tt></a></td>
+<td>The dgdirtycommand is used to force a dependency graph dirty message on a node or plug.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dgeval.html#pymel.core.system.dgeval" title="pymel.core.system.dgeval"><tt class="xref py py-obj docutils literal"><span class="pre">dgeval</span></tt></a></td>
+<td>The dgevalcommand is used to force a dependency graph evaluate of a node or plug.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dgmodified.html#pymel.core.system.dgmodified" title="pymel.core.system.dgmodified"><tt class="xref py py-obj docutils literal"><span class="pre">dgmodified</span></tt></a></td>
+<td>The dgmodifiedcommand is used to find out which nodes in the           dependency graph have been modified.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dgtimer.html#pymel.core.system.dgtimer" title="pymel.core.system.dgtimer"><tt class="xref py py-obj docutils literal"><span class="pre">dgtimer</span></tt></a></td>
+<td>This command measures dependency graph node performance by managing timers on a per-node basis.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dirmap.html#pymel.core.system.dirmap" title="pymel.core.system.dirmap"><tt class="xref py py-obj docutils literal"><span class="pre">dirmap</span></tt></a></td>
+<td>Use this command to map a directory to another directory.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.diskCache.html#pymel.core.system.diskCache" title="pymel.core.system.diskCache"><tt class="xref py py-obj docutils literal"><span class="pre">diskCache</span></tt></a></td>
+<td>Command to create, clear, or close disk cache(s).</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.displayError.html#pymel.core.system.displayError" title="pymel.core.system.displayError"><tt class="xref py py-obj docutils literal"><span class="pre">displayError</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.displayInfo.html#pymel.core.system.displayInfo" title="pymel.core.system.displayInfo"><tt class="xref py py-obj docutils literal"><span class="pre">displayInfo</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.displayString.html#pymel.core.system.displayString" title="pymel.core.system.displayString"><tt class="xref py py-obj docutils literal"><span class="pre">displayString</span></tt></a></td>
+<td>Assign a string value to a string identifier.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.displayWarning.html#pymel.core.system.displayWarning" title="pymel.core.system.displayWarning"><tt class="xref py py-obj docutils literal"><span class="pre">displayWarning</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.dynamicLoad.html#pymel.core.system.dynamicLoad" title="pymel.core.system.dynamicLoad"><tt class="xref py py-obj docutils literal"><span class="pre">dynamicLoad</span></tt></a></td>
+<td>Dynamically load the DLL passed as argument.             In query mode, return type is based on queried flag.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.error.html#pymel.core.system.error" title="pymel.core.system.error"><tt class="xref py py-obj docutils literal"><span class="pre">error</span></tt></a></td>
+<td>The error command is provided so that the user can issue error messages from his/her scripts and control execution in the event of runtime errors.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportAll.html#pymel.core.system.exportAll" title="pymel.core.system.exportAll"><tt class="xref py py-obj docutils literal"><span class="pre">exportAll</span></tt></a></td>
+<td>Export everything into a single file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportAnim.html#pymel.core.system.exportAnim" title="pymel.core.system.exportAnim"><tt class="xref py py-obj docutils literal"><span class="pre">exportAnim</span></tt></a></td>
+<td>Export all animation nodes and animation helper nodes from all objects in the scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportAnimFromReference.html#pymel.core.system.exportAnimFromReference" title="pymel.core.system.exportAnimFromReference"><tt class="xref py py-obj docutils literal"><span class="pre">exportAnimFromReference</span></tt></a></td>
+<td>Export the main scene animation nodes and animation helper nodes from all referenced objects.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportAsReference.html#pymel.core.system.exportAsReference" title="pymel.core.system.exportAsReference"><tt class="xref py py-obj docutils literal"><span class="pre">exportAsReference</span></tt></a></td>
+<td>Export the selected objects into a reference file with the given name.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportEdits.html#pymel.core.system.exportEdits" title="pymel.core.system.exportEdits"><tt class="xref py py-obj docutils literal"><span class="pre">exportEdits</span></tt></a></td>
+<td>Use this command to export edits made in the scene to a separate file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportSelected.html#pymel.core.system.exportSelected" title="pymel.core.system.exportSelected"><tt class="xref py py-obj docutils literal"><span class="pre">exportSelected</span></tt></a></td>
+<td>Export the selected items into the specified file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportSelectedAnim.html#pymel.core.system.exportSelectedAnim" title="pymel.core.system.exportSelectedAnim"><tt class="xref py py-obj docutils literal"><span class="pre">exportSelectedAnim</span></tt></a></td>
+<td>Export all animation nodes and animation helper nodes from the selected objects in the scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.exportSelectedAnimFromReference.html#pymel.core.system.exportSelectedAnimFromReference" title="pymel.core.system.exportSelectedAnimFromReference"><tt class="xref py py-obj docutils literal"><span class="pre">exportSelectedAnimFromReference</span></tt></a></td>
+<td>Export the main scene animation nodes and animation helper nodes from the selected referenced objects.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.fcheck.html#pymel.core.system.fcheck" title="pymel.core.system.fcheck"><tt class="xref py py-obj docutils literal"><span class="pre">fcheck</span></tt></a></td>
+<td>Invokes the fcheck program to display images in a separate window.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.feof.html#pymel.core.system.feof" title="pymel.core.system.feof"><tt class="xref py py-obj docutils literal"><span class="pre">feof</span></tt></a></td>
+<td>Reproduces the behavior of the mel command of the same name.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.fileBrowserDialog.html#pymel.core.system.fileBrowserDialog" title="pymel.core.system.fileBrowserDialog"><tt class="xref py py-obj docutils literal"><span class="pre">fileBrowserDialog</span></tt></a></td>
+<td>The fileBrowserDialog and fileDialog commands have now been deprecated. Both commands are still callable, but it is</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.fileDialog.html#pymel.core.system.fileDialog" title="pymel.core.system.fileDialog"><tt class="xref py py-obj docutils literal"><span class="pre">fileDialog</span></tt></a></td>
+<td>The fileBrowserDialog and fileDialog commands have now been deprecated. Both commands are still callable, but it is</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.fileDialog2.html#pymel.core.system.fileDialog2" title="pymel.core.system.fileDialog2"><tt class="xref py py-obj docutils literal"><span class="pre">fileDialog2</span></tt></a></td>
+<td>This command provides a dialog that allows users to select files or directories.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.findType.html#pymel.core.system.findType" title="pymel.core.system.findType"><tt class="xref py py-obj docutils literal"><span class="pre">findType</span></tt></a></td>
+<td>The findTypecommand is used to search upstream through a dependency subgraph on a certain node to find all nodes of the</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.flushUndo.html#pymel.core.system.flushUndo" title="pymel.core.system.flushUndo"><tt class="xref py py-obj docutils literal"><span class="pre">flushUndo</span></tt></a></td>
+<td>Removes everything from the undo queue, freeing up memory.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.fscanf.html#pymel.core.system.fscanf" title="pymel.core.system.fscanf"><tt class="xref py py-obj docutils literal"><span class="pre">fscanf</span></tt></a></td>
+<td>fscanf(inputFile, formatString) -&gt; tuple</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.getFileList.html#pymel.core.system.getFileList" title="pymel.core.system.getFileList"><tt class="xref py py-obj docutils literal"><span class="pre">getFileList</span></tt></a></td>
+<td>Returns a list of files matching an optional wildcard pattern.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.getInputDeviceRange.html#pymel.core.system.getInputDeviceRange" title="pymel.core.system.getInputDeviceRange"><tt class="xref py py-obj docutils literal"><span class="pre">getInputDeviceRange</span></tt></a></td>
+<td>This command lists the minimum and maximum values the device axis can return.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.getModifiers.html#pymel.core.system.getModifiers" title="pymel.core.system.getModifiers"><tt class="xref py py-obj docutils literal"><span class="pre">getModifiers</span></tt></a></td>
+<td>This command returns the current state of the modifier keys.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.getReferences.html#pymel.core.system.getReferences" title="pymel.core.system.getReferences"><tt class="xref py py-obj docutils literal"><span class="pre">getReferences</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.hardware.html#pymel.core.system.hardware" title="pymel.core.system.hardware"><tt class="xref py py-obj docutils literal"><span class="pre">hardware</span></tt></a></td>
+<td>Return description of the hardware available in the machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.hitTest.html#pymel.core.system.hitTest" title="pymel.core.system.hitTest"><tt class="xref py py-obj docutils literal"><span class="pre">hitTest</span></tt></a></td>
+<td>The hitTestcommand hit-tests a point in the named control and returns a list of items underneath the point. The point is</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.imfPlugins.html#pymel.core.system.imfPlugins" title="pymel.core.system.imfPlugins"><tt class="xref py py-obj docutils literal"><span class="pre">imfPlugins</span></tt></a></td>
+<td>This command queries all the available imf plugins for its name, keyword or image file extension.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.importFile.html#pymel.core.system.importFile" title="pymel.core.system.importFile"><tt class="xref py py-obj docutils literal"><span class="pre">importFile</span></tt></a></td>
+<td>Import the specified file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.internalVar.html#pymel.core.system.internalVar" title="pymel.core.system.internalVar"><tt class="xref py py-obj docutils literal"><span class="pre">internalVar</span></tt></a></td>
+<td>This command returns the values of internal variables.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.iterReferences.html#pymel.core.system.iterReferences" title="pymel.core.system.iterReferences"><tt class="xref py py-obj docutils literal"><span class="pre">iterReferences</span></tt></a></td>
+<td>returns references in the scene as a list of value tuples. The values in the tuples can be namespaces, refNodes (as PyNodes),</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.launch.html#pymel.core.system.launch" title="pymel.core.system.launch"><tt class="xref py py-obj docutils literal"><span class="pre">launch</span></tt></a></td>
+<td>Launch the appropriate application to open the document specified.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.launchImageEditor.html#pymel.core.system.launchImageEditor" title="pymel.core.system.launchImageEditor"><tt class="xref py py-obj docutils literal"><span class="pre">launchImageEditor</span></tt></a></td>
+<td>Launch the appropriate application to edit/view the image files specified.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listDeviceAttachments.html#pymel.core.system.listDeviceAttachments" title="pymel.core.system.listDeviceAttachments"><tt class="xref py py-obj docutils literal"><span class="pre">listDeviceAttachments</span></tt></a></td>
+<td>This command lists the current set of device attachments.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listInputDeviceAxes.html#pymel.core.system.listInputDeviceAxes" title="pymel.core.system.listInputDeviceAxes"><tt class="xref py py-obj docutils literal"><span class="pre">listInputDeviceAxes</span></tt></a></td>
+<td>This command lists all of the axes of the specified input device.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listInputDeviceButtons.html#pymel.core.system.listInputDeviceButtons" title="pymel.core.system.listInputDeviceButtons"><tt class="xref py py-obj docutils literal"><span class="pre">listInputDeviceButtons</span></tt></a></td>
+<td>This command lists all of the buttons of the specified input device specified as an argument.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listInputDevices.html#pymel.core.system.listInputDevices" title="pymel.core.system.listInputDevices"><tt class="xref py py-obj docutils literal"><span class="pre">listInputDevices</span></tt></a></td>
+<td>This command lists all input devices that maya knows about.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listNamespaces.html#pymel.core.system.listNamespaces" title="pymel.core.system.listNamespaces"><tt class="xref py py-obj docutils literal"><span class="pre">listNamespaces</span></tt></a></td>
+<td>Returns a list of the namespaces in the scene</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listNamespaces_old.html#pymel.core.system.listNamespaces_old" title="pymel.core.system.listNamespaces_old"><tt class="xref py py-obj docutils literal"><span class="pre">listNamespaces_old</span></tt></a></td>
+<td>Deprecated</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.listReferences.html#pymel.core.system.listReferences" title="pymel.core.system.listReferences"><tt class="xref py py-obj docutils literal"><span class="pre">listReferences</span></tt></a></td>
+<td>Like iterReferences, except returns a list instead of an iterator.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.loadPlugin.html#pymel.core.system.loadPlugin" title="pymel.core.system.loadPlugin"><tt class="xref py py-obj docutils literal"><span class="pre">loadPlugin</span></tt></a></td>
+<td>Load plug-ins into Maya. The parameter(s) to this command are either the names or pathnames of plug-in files.  The</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.loadReference.html#pymel.core.system.loadReference" title="pymel.core.system.loadReference"><tt class="xref py py-obj docutils literal"><span class="pre">loadReference</span></tt></a></td>
+<td>This flag loads a file and associates it with the passed reference node.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.memory.html#pymel.core.system.memory" title="pymel.core.system.memory"><tt class="xref py py-obj docutils literal"><span class="pre">memory</span></tt></a></td>
+<td>Used to query essential statistics on memory availability and usage</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.mouse.html#pymel.core.system.mouse" title="pymel.core.system.mouse"><tt class="xref py py-obj docutils literal"><span class="pre">mouse</span></tt></a></td>
+<td>This command allows to configure mouse.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.namespace.html#pymel.core.system.namespace" title="pymel.core.system.namespace"><tt class="xref py py-obj docutils literal"><span class="pre">namespace</span></tt></a></td>
+<td>This command allows a namespace to be created or set or removed.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.namespaceInfo.html#pymel.core.system.namespaceInfo" title="pymel.core.system.namespaceInfo"><tt class="xref py py-obj docutils literal"><span class="pre">namespaceInfo</span></tt></a></td>
+<td>This command displays information about the current namespace.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.newFile.html#pymel.core.system.newFile" title="pymel.core.system.newFile"><tt class="xref py py-obj docutils literal"><span class="pre">newFile</span></tt></a></td>
+<td>Initialize the scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.ogs.html#pymel.core.system.ogs" title="pymel.core.system.ogs"><tt class="xref py py-obj docutils literal"><span class="pre">ogs</span></tt></a></td>
+<td>OGS is one of the viewport renderers. As there is a lot of effort involved in migrating functionality it will evolve</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.openFile.html#pymel.core.system.openFile" title="pymel.core.system.openFile"><tt class="xref py py-obj docutils literal"><span class="pre">openFile</span></tt></a></td>
+<td>Open the specified file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.openGLExtension.html#pymel.core.system.openGLExtension" title="pymel.core.system.openGLExtension"><tt class="xref py py-obj docutils literal"><span class="pre">openGLExtension</span></tt></a></td>
+<td>Command returns the extension name depending on whether a given OpenGL extension is supported or not. The input is the</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.openMayaPref.html#pymel.core.system.openMayaPref" title="pymel.core.system.openMayaPref"><tt class="xref py py-obj docutils literal"><span class="pre">openMayaPref</span></tt></a></td>
+<td>Set or query API preferences.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.pluginInfo.html#pymel.core.system.pluginInfo" title="pymel.core.system.pluginInfo"><tt class="xref py py-obj docutils literal"><span class="pre">pluginInfo</span></tt></a></td>
+<td>This command provides access to the plugin registry of the application.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.preloadRefEd.html#pymel.core.system.preloadRefEd" title="pymel.core.system.preloadRefEd"><tt class="xref py py-obj docutils literal"><span class="pre">preloadRefEd</span></tt></a></td>
+<td>This creates an editor for managing which references will be read in (loaded) and which deferred (unloaded) upon opening a file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.projFileViewer.html#pymel.core.system.projFileViewer" title="pymel.core.system.projFileViewer"><tt class="xref py py-obj docutils literal"><span class="pre">projFileViewer</span></tt></a></td>
+<td>This command creates a viewer that lists the project files in the current working directory.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.recordAttr.html#pymel.core.system.recordAttr" title="pymel.core.system.recordAttr"><tt class="xref py py-obj docutils literal"><span class="pre">recordAttr</span></tt></a></td>
+<td>This command sets up an attribute to be recorded.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.redo.html#pymel.core.system.redo" title="pymel.core.system.redo"><tt class="xref py py-obj docutils literal"><span class="pre">redo</span></tt></a></td>
+<td>Takes the most recently undone command from the undo list and redoes it.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.reference.html#pymel.core.system.reference" title="pymel.core.system.reference"><tt class="xref py py-obj docutils literal"><span class="pre">reference</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.referenceEdit.html#pymel.core.system.referenceEdit" title="pymel.core.system.referenceEdit"><tt class="xref py py-obj docutils literal"><span class="pre">referenceEdit</span></tt></a></td>
+<td>Use this command to remove and change the modifications which have been applied to references.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.referenceQuery.html#pymel.core.system.referenceQuery" title="pymel.core.system.referenceQuery"><tt class="xref py py-obj docutils literal"><span class="pre">referenceQuery</span></tt></a></td>
+<td>Use this command to find out information about references and referenced nodes.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.rehash.html#pymel.core.system.rehash" title="pymel.core.system.rehash"><tt class="xref py py-obj docutils literal"><span class="pre">rehash</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.rehash</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.reloadImage.html#pymel.core.system.reloadImage" title="pymel.core.system.reloadImage"><tt class="xref py py-obj docutils literal"><span class="pre">reloadImage</span></tt></a></td>
+<td>This command reloads an xpm image from disk.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.renameFile.html#pymel.core.system.renameFile" title="pymel.core.system.renameFile"><tt class="xref py py-obj docutils literal"><span class="pre">renameFile</span></tt></a></td>
+<td>Rename the scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.requires.html#pymel.core.system.requires" title="pymel.core.system.requires"><tt class="xref py py-obj docutils literal"><span class="pre">requires</span></tt></a></td>
+<td>This command is used during file I/O to specify the requirements needed to load the given file.  It defines what file</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.saveAs.html#pymel.core.system.saveAs" title="pymel.core.system.saveAs"><tt class="xref py py-obj docutils literal"><span class="pre">saveAs</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.saveFile.html#pymel.core.system.saveFile" title="pymel.core.system.saveFile"><tt class="xref py py-obj docutils literal"><span class="pre">saveFile</span></tt></a></td>
+<td>Save the specified file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.saveImage.html#pymel.core.system.saveImage" title="pymel.core.system.saveImage"><tt class="xref py py-obj docutils literal"><span class="pre">saveImage</span></tt></a></td>
+<td>This command creates a static image control for non-xpm files used to display a thumbnail image of the scene file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.sceneEditor.html#pymel.core.system.sceneEditor" title="pymel.core.system.sceneEditor"><tt class="xref py py-obj docutils literal"><span class="pre">sceneEditor</span></tt></a></td>
+<td>This creates an editor for managing the files in a scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.sceneName.html#pymel.core.system.sceneName" title="pymel.core.system.sceneName"><tt class="xref py py-obj docutils literal"><span class="pre">sceneName</span></tt></a></td>
+<td>return the name of the current scene.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.sceneUIReplacement.html#pymel.core.system.sceneUIReplacement" title="pymel.core.system.sceneUIReplacement"><tt class="xref py py-obj docutils literal"><span class="pre">sceneUIReplacement</span></tt></a></td>
+<td>This command returns existing scene based UI that can be utilized by the scene that is being loaded. It can also delete</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.scriptNode.html#pymel.core.system.scriptNode" title="pymel.core.system.scriptNode"><tt class="xref py py-obj docutils literal"><span class="pre">scriptNode</span></tt></a></td>
+<td>scriptNodes contain scripts that are executed when a file is loaded or when the script node is deleted. The scriptNode</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.selLoadSettings.html#pymel.core.system.selLoadSettings" title="pymel.core.system.selLoadSettings"><tt class="xref py py-obj docutils literal"><span class="pre">selLoadSettings</span></tt></a></td>
+<td>This command is used to edit and query information about the implicit load settings.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.setAttrMapping.html#pymel.core.system.setAttrMapping" title="pymel.core.system.setAttrMapping"><tt class="xref py py-obj docutils literal"><span class="pre">setAttrMapping</span></tt></a></td>
+<td>This command applies an offset and scale to a specified device attachment.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.setInputDeviceMapping.html#pymel.core.system.setInputDeviceMapping" title="pymel.core.system.setInputDeviceMapping"><tt class="xref py py-obj docutils literal"><span class="pre">setInputDeviceMapping</span></tt></a></td>
+<td>The command sets a scale and offset for all attachments made to a specified device axis.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.shotTrack.html#pymel.core.system.shotTrack" title="pymel.core.system.shotTrack"><tt class="xref py py-obj docutils literal"><span class="pre">shotTrack</span></tt></a></td>
+<td>This command is used for inserting and removing tracks related to the shots displayed in the Sequencer. It can also be</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.showHelp.html#pymel.core.system.showHelp" title="pymel.core.system.showHelp"><tt class="xref py py-obj docutils literal"><span class="pre">showHelp</span></tt></a></td>
+<td>Invokes a web browser to open the on-line documentation and help files.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.sysFile.html#pymel.core.system.sysFile" title="pymel.core.system.sysFile"><tt class="xref py py-obj docutils literal"><span class="pre">sysFile</span></tt></a></td>
+<td>This command provides a system independent way to create a directory or to rename or delete a file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.timer.html#pymel.core.system.timer" title="pymel.core.system.timer"><tt class="xref py py-obj docutils literal"><span class="pre">timer</span></tt></a></td>
+<td>Allow simple timing of scripts and commands.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.timerX.html#pymel.core.system.timerX" title="pymel.core.system.timerX"><tt class="xref py py-obj docutils literal"><span class="pre">timerX</span></tt></a></td>
+<td>Used to calculate elapsed time.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.translator.html#pymel.core.system.translator" title="pymel.core.system.translator"><tt class="xref py py-obj docutils literal"><span class="pre">translator</span></tt></a></td>
+<td>Set or query parameters associated with the file translators specified in as the argument.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.unassignInputDevice.html#pymel.core.system.unassignInputDevice" title="pymel.core.system.unassignInputDevice"><tt class="xref py py-obj docutils literal"><span class="pre">unassignInputDevice</span></tt></a></td>
+<td>This command deletes all command strings associated with this device.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.undo.html#pymel.core.system.undo" title="pymel.core.system.undo"><tt class="xref py py-obj docutils literal"><span class="pre">undo</span></tt></a></td>
+<td>Takes the most recent command from the undo list and undoes it.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.undoInfo.html#pymel.core.system.undoInfo" title="pymel.core.system.undoInfo"><tt class="xref py py-obj docutils literal"><span class="pre">undoInfo</span></tt></a></td>
+<td>This command controls the undo/redo parameters.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.unloadPlugin.html#pymel.core.system.unloadPlugin" title="pymel.core.system.unloadPlugin"><tt class="xref py py-obj docutils literal"><span class="pre">unloadPlugin</span></tt></a></td>
+<td>Unload plug-ins from Maya. After the successful execution of this command, plug-in services will no longer be available.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.untitledFileName.html#pymel.core.system.untitledFileName" title="pymel.core.system.untitledFileName"><tt class="xref py py-obj docutils literal"><span class="pre">untitledFileName</span></tt></a></td>
+<td>Obtain the base filename used for untitled scenes.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.system/pymel.core.system.warning.html#pymel.core.system.warning" title="pymel.core.system.warning"><tt class="xref py py-obj docutils literal"><span class="pre">warning</span></tt></a></td>
+<td>The warning command is provided so that the user can issue warning messages from his/her scripts.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.FileInfo.html#pymel.core.system.FileInfo" title="pymel.core.system.FileInfo"><tt class="xref py py-obj docutils literal"><span class="pre">FileInfo</span></tt></a></td>
+<td>store and get custom data specific to this file:</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.FileReference.html#pymel.core.system.FileReference" title="pymel.core.system.FileReference"><tt class="xref py py-obj docutils literal"><span class="pre">FileReference</span></tt></a></td>
+<td>A class for manipulating references which inherits Path and path.  you can create an</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.Namespace.html#pymel.core.system.Namespace" title="pymel.core.system.Namespace"><tt class="xref py py-obj docutils literal"><span class="pre">Namespace</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.Path.html#pymel.core.system.Path" title="pymel.core.system.Path"><tt class="xref py py-obj docutils literal"><span class="pre">Path</span></tt></a></td>
+<td>A basic Maya file class. it gets most of its power from the path class written by Jason Orendorff.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.ReferenceEdit.html#pymel.core.system.ReferenceEdit" title="pymel.core.system.ReferenceEdit"><tt class="xref py py-obj docutils literal"><span class="pre">ReferenceEdit</span></tt></a></td>
+<td>Parses a reference edit command string into various components based on the edit type.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.Translator.html#pymel.core.system.Translator" title="pymel.core.system.Translator"><tt class="xref py py-obj docutils literal"><span class="pre">Translator</span></tt></a></td>
+<td><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ascii</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s">&#39;mayaAscii&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.Workspace.html#pymel.core.system.Workspace" title="pymel.core.system.Workspace"><tt class="xref py py-obj docutils literal"><span class="pre">Workspace</span></tt></a></td>
+<td>This class is designed to lend more readability to the often confusing workspace command.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.WorkspaceEntryDict.html#pymel.core.system.WorkspaceEntryDict" title="pymel.core.system.WorkspaceEntryDict"><tt class="xref py py-obj docutils literal"><span class="pre">WorkspaceEntryDict</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.system/pymel.core.system.pathClass.html#pymel.core.system.pathClass" title="pymel.core.system.pathClass"><tt class="xref py py-obj docutils literal"><span class="pre">pathClass</span></tt></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="functions/pymel.core.runtime/pymel.core.runtime.setNClothStartState.html"
+                        title="previous chapter">pymel.core.runtime.setNClothStartState</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="functions/pymel.core.system/pymel.core.system.aaf2fcp.html"
+                        title="next chapter">pymel.core.system.aaf2fcp</a></p>
+<h3><a href="../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="##module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/pymel.core.system.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.system/pymel.core.system.aaf2fcp.html" title="pymel.core.system.aaf2fcp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.runtime/pymel.core.runtime.setNClothStartState.html" title="pymel.core.runtime.setNClothStartState"
+             >previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

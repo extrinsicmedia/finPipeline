@@ -1,0 +1,6 @@
+pymel.core.runtime.UnpublishRootTransform
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UnpublishRootTransform

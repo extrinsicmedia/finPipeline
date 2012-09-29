@@ -1,0 +1,6 @@
+pymel.util.linmap
+=================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.linmap

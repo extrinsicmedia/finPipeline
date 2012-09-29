@@ -1,0 +1,6 @@
+pymel.core.runtime.PolygonClearClipboardOptions
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolygonClearClipboardOptions

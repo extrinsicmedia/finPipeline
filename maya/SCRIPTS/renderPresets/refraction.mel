@@ -1,0 +1,12 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+if(`optionVar -exists "beautyPassTypeReflRefrac"` && (`optionVar -q "beautyPassTypeReflRefrac"` != 0))
+{
+setRenderPassType -defaultDataType -type "BEAUTY" $gAEAttrPresetCurrentTarget; 
+    blendAttr "minRefractionLevel" 1;
+}
+else
+    setRenderPassType -defaultDataType -type "REFR" $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "Illumination"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateSubdivSphere
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateSubdivSphere

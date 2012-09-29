@@ -1,0 +1,6 @@
+pymel.core.runtime.Radial
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Radial

@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.NonLinear &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.NormalConstraint" href="pymel.core.nodetypes.NormalConstraint.html" />
+    <link rel="prev" title="pymel.core.nodetypes.NonExtendedLightShapeNode" href="pymel.core.nodetypes.NonExtendedLightShapeNode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NormalConstraint.html" title="pymel.core.nodetypes.NormalConstraint"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonExtendedLightShapeNode.html" title="pymel.core.nodetypes.NonExtendedLightShapeNode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-nonlinear">
+<h1>pymel.core.nodetypes.NonLinear<a class="headerlink" href="#pymel-core-nodetypes-nonlinear" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-2d33c76c8a2f2a2d101d7ef4689fa33577ed80a1.png" alt="Inheritance diagram of NonLinear" usemap="#inheritance4dc0f9daa1" class="inheritance"/>
+<map id="inheritance4dc0f9daa1" name="inheritance4dc0f9daa1">
+<area shape="rect" href="#pymel.core.nodetypes.NonLinear" title="NonLinear" alt="" coords="17,160,92,184"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryFilter.html#pymel.core.nodetypes.GeometryFilter" title="GeometryFilter" alt="" coords="5,121,104,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,82,99,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.NonLinear">
+<em class="property">class </em><tt class="descname">NonLinear</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">nonLinear</span></tt></p>
+<p>This command creates a functional deformer of the specified type that will deform the selected objects.  The deformer consists of three nodes: The deformer driver that gets connected to the history of the selected objects, the deformer handle transform that controls position and orientation of the axis of the deformation and the deformer handle that maintains the deformation parameters. The type of the deformer handle shape created depends on the specified type of the deformer.  The deformer handle will be positioned at the center of the selected objects&#8217; bounding box and oriented to match the orientation of the leading object in the selection list.  The deformer handle transform will be selected when the command is completed. The nonLinear command has some flags which are specific to the nonLinear type specified with the -type flag. The flags correspond to the primary keyable attributes related to the specific type of nonLinear node. For example, if the type is bend, then the flags -curvature, -lowBoundand -highBoundmay be used to initialize, edit or query those attribute values on the bend node. Examples of this are covered in the example section below.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.after">
+<tt class="descname">after</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.after" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the default behavior for insertion/appending into/onto the existing chain is not what you want then you can use this flag to force the command to stick the deformer node after the selected node in the chain even if a new geometry shape has to be created in order to do so. Works in create mode (and edit mode if the deformer has no geometry added yet).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.before">
+<tt class="descname">before</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.before" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the default behavior for insertion/appending into/onto the existing chain is not what you want then you can use this flag to force the command to stick the deformer node before the selected node in the chain even if a new geometry shape has to be created in order to do so. Works in create mode (and edit mode if the deformer has no geometry added yet).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.frontOfChain">
+<tt class="descname">frontOfChain</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.frontOfChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command is used to specify that the new deformer node should be placed ahead (upstream) of existing deformer and skin nodes in the shape&#8217;s history (but not ahead of existing tweak nodes). The input to the deformer will be the upstream shape rather than the visible downstream shape, so the behavior of this flag is the most intuitive if the downstream deformers are in their reset (hasNoEffect) position when the new deformer is added. Works in create mode (and edit mode if the deformer has no geometry added yet).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.getDeformerTools">
+<tt class="descname">getDeformerTools</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.getDeformerTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the deformer tool objects (if any) as string string ...</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.getExclusive">
+<tt class="descname">getExclusive</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.getExclusive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the deformation set in a deform partition.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.getGeometry">
+<tt class="descname">getGeometry</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.getGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>The specified object will be added to the list of objects being deformed by this deformer object, unless the -rm flag is also specified. When queried, this flag returns string string string ...</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.parallel">
+<tt class="descname">parallel</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts the new deformer in a parallel chain to any existing deformers in the history of the object. A blendShape is inserted to blend the parallel results together. Works in create mode (and edit mode if the deformer has no geometry added yet).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.prune">
+<tt class="descname">prune</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.prune" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes any points not being deformed by the deformer in its current configuration from the deformer set.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.remove">
+<tt class="descname">remove</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies that objects listed after the -g flag should be removed from this deformer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonLinear.setGeometry">
+<tt class="descname">setGeometry</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonLinear.setGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>The specified object will be added to the list of objects being deformed by this deformer object, unless the -rm flag is also specified. When queried, this flag returns string string string ...</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nonLinear</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.NonExtendedLightShapeNode.html"
+                        title="previous chapter">pymel.core.nodetypes.NonExtendedLightShapeNode</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.NormalConstraint.html"
+                        title="next chapter">pymel.core.nodetypes.NormalConstraint</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.NonLinear.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NormalConstraint.html" title="pymel.core.nodetypes.NormalConstraint"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonExtendedLightShapeNode.html" title="pymel.core.nodetypes.NonExtendedLightShapeNode"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

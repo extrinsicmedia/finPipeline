@@ -1,0 +1,6 @@
+pymel.core.runtime.ParticleInstancerOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ParticleInstancerOptions

@@ -1,0 +1,6 @@
+pymel.core.datatypes.isNumeric
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.isNumeric

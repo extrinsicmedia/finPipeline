@@ -1,0 +1,6 @@
+pymel.util.mathutils.conjugate
+==============================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: mathutils.conjugate

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lookup_background
+==========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lookup_background
+    :parts: 1
+
+.. autoclass:: Mib_lookup_background
+    :members:
+    :undoc-members:

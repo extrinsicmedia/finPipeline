@@ -1,0 +1,6 @@
+pymel.core.other.addExtension
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.addExtension

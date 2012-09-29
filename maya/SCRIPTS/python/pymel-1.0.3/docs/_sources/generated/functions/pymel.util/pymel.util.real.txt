@@ -1,0 +1,6 @@
+pymel.util.real
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.real

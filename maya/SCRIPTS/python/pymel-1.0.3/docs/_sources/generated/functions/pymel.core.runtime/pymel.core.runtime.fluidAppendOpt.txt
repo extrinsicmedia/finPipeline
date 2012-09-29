@@ -1,0 +1,6 @@
+pymel.core.runtime.fluidAppendOpt
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.fluidAppendOpt

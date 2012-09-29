@@ -1,0 +1,6 @@
+pymel.util.appendEnv
+====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.appendEnv

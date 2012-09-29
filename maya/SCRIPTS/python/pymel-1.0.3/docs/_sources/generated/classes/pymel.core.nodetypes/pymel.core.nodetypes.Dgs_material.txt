@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Dgs_material
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Dgs_material
+    :parts: 1
+
+.. autoclass:: Dgs_material
+    :members:
+    :undoc-members:

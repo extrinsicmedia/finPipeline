@@ -1,0 +1,6 @@
+pymel.core.context.tumbleCtx
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: context.tumbleCtx

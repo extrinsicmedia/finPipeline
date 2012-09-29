@@ -1,0 +1,6 @@
+pymel.core.windows.palettePort
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.palettePort

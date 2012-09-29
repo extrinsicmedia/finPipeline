@@ -1,0 +1,6 @@
+pymel.core.other.pushPinning
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.pushPinning

@@ -1,0 +1,6 @@
+pymel.core.animation.skinCluster
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.skinCluster

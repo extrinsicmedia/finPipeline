@@ -1,0 +1,6 @@
+pymel.util.blend
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.blend

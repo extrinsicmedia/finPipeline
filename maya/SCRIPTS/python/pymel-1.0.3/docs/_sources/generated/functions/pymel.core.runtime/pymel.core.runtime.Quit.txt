@@ -1,0 +1,6 @@
+pymel.core.runtime.Quit
+=======================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Quit

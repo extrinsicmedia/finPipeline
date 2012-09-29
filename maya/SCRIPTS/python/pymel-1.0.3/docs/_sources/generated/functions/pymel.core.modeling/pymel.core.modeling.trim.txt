@@ -1,0 +1,6 @@
+pymel.core.modeling.trim
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.trim

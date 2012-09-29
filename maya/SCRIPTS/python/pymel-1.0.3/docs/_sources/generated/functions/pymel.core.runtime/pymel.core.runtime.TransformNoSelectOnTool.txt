@@ -1,0 +1,6 @@
+pymel.core.runtime.TransformNoSelectOnTool
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TransformNoSelectOnTool

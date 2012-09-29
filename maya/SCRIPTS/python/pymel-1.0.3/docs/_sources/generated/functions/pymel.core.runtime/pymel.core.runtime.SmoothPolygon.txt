@@ -1,0 +1,6 @@
+pymel.core.runtime.SmoothPolygon
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SmoothPolygon

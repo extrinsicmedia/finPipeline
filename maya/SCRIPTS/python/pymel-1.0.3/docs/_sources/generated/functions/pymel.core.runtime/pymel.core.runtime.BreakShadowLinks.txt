@@ -1,0 +1,6 @@
+pymel.core.runtime.BreakShadowLinks
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.BreakShadowLinks

@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectEdgeLoopSp
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectEdgeLoopSp

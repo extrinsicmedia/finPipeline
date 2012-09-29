@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.Menu &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.MenuBarLayout" href="pymel.core.uitypes.MenuBarLayout.html" />
+    <link rel="prev" title="pymel.core.uitypes.MainProgressBar" href="pymel.core.uitypes.MainProgressBar.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.MenuBarLayout.html" title="pymel.core.uitypes.MenuBarLayout"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.MainProgressBar.html" title="pymel.core.uitypes.MainProgressBar"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-menu">
+<h1>pymel.core.uitypes.Menu<a class="headerlink" href="#pymel-core-uitypes-menu" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-a0a6631fa7d2f765985e7bb55eb202e4225597fc.png" alt="Inheritance diagram of Menu" usemap="#inheritance61cdfb792e" class="inheritance"/>
+<map id="inheritance61cdfb792e" name="inheritance61cdfb792e">
+<area shape="rect" href="#pymel.core.uitypes.Menu" title="Menu" alt="" coords="5,44,77,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="5,5,77,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.Menu">
+<em class="property">class </em><tt class="descname">Menu</tt><a class="headerlink" href="#pymel.core.uitypes.Menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">menu</span></tt></p>
+<p>This command creates a new menu and adds it to the default window&#8217;s menubar if no parent is specified.  The menu can be enabled/disabled. Note that this command may also be used on menu objects created using the command menuItem -sm/subMenu true.</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.deleteAllItems">
+<tt class="descname">deleteAllItems</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.deleteAllItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all the items in this menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getAllowOptionBoxes">
+<tt class="descname">getAllowOptionBoxes</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getAllowOptionBoxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecated. All menus now always allow option boxes. Indicate whether the menu will be able to support option box menu items.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a tag to the menu.                       Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getEnable">
+<tt class="descname">getEnable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables/disables the menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getFamilyImage">
+<tt class="descname">getFamilyImage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getFamilyImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filename of the icon associated with the menu. This icon will be used if a menu item does not have an icon image defined.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getHelpMenu">
+<tt class="descname">getHelpMenu</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getHelpMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that this menu is the help menu and will be the right most menu in the menu bar. On Unix systems the help menu is also right justified in the menu bar.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getItemArray">
+<tt class="descname">getItemArray</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getItemArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modified to return pymel instances</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getLabel">
+<tt class="descname">getLabel</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text that is displayed for the menu.  If no label is supplied then the menuName will be used.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getMnemonic">
+<tt class="descname">getMnemonic</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getMnemonic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the Alt key to post that menu.  The character specified must match the case of its corresponding character in the menu item text, but selection from the keyboard is case insensitive.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getNumberOfItems">
+<tt class="descname">getNumberOfItems</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getNumberOfItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of items in the menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.getPostMenuCommandOnce">
+<tt class="descname">getPostMenuCommandOnce</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.getPostMenuCommandOnce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate the -pmc/postMenuCommandshould only be invoked once.  Default value is false, ie. the -pmc/postMenuCommandis invoked every time the menu is shown.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.makeDefault">
+<tt class="descname">makeDefault</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.makeDefault" title="Permalink to this definition">¶</a></dt>
+<dd><p>set this layout as the default parent</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.postMenuCommand">
+<tt class="descname">postMenuCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.postMenuCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify a script to be executed when the menu is about to be shown.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attaches a tag to the menu.                       Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setEnable">
+<tt class="descname">setEnable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables/disables the menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setFamilyImage">
+<tt class="descname">setFamilyImage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setFamilyImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filename of the icon associated with the menu. This icon will be used if a menu item does not have an icon image defined.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setHelpMenu">
+<tt class="descname">setHelpMenu</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setHelpMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that this menu is the help menu and will be the right most menu in the menu bar. On Unix systems the help menu is also right justified in the menu bar.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setLabel">
+<tt class="descname">setLabel</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text that is displayed for the menu.  If no label is supplied then the menuName will be used.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setMnemonic">
+<tt class="descname">setMnemonic</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setMnemonic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the Alt key to post that menu.  The character specified must match the case of its corresponding character in the menu item text, but selection from the keyboard is case insensitive.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.Menu.setPostMenuCommandOnce">
+<tt class="descname">setPostMenuCommandOnce</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.Menu.setPostMenuCommandOnce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate the -pmc/postMenuCommandshould only be invoked once.  Default value is false, ie. the -pmc/postMenuCommandis invoked every time the menu is shown.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.menu</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.MainProgressBar.html"
+                        title="previous chapter">pymel.core.uitypes.MainProgressBar</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.MenuBarLayout.html"
+                        title="next chapter">pymel.core.uitypes.MenuBarLayout</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.Menu.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.MenuBarLayout.html" title="pymel.core.uitypes.MenuBarLayout"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.MainProgressBar.html" title="pymel.core.uitypes.MainProgressBar"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.performanceOptions &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.pickWalk" href="pymel.core.general.pickWalk.html" />
+    <link rel="prev" title="pymel.core.general.pause" href="pymel.core.general.pause.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.pickWalk.html" title="pymel.core.general.pickWalk"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.pause.html" title="pymel.core.general.pause"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-performanceoptions">
+<h1>pymel.core.general.performanceOptions<a class="headerlink" href="#pymel-core-general-performanceoptions" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.performanceOptions">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">performanceOptions</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.performanceOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the global performance options for the application.  The options allow the disabling of features such as stitch
+surfaces or deformers to cut down on computation time in the scene. Performance options that are in effect may be on all
+the time, or they can be turned on only for interaction.  In the latter case, the options will only take effect during
+UI interaction or playback. Note that none of these performance options will affect rendering.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>clusterResolution (cr)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the global cluster resolution.  This value may range between 0.0 (exact calculation) and 10.0 (rough approximation)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>disableStitch (ds)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of stitch surface disablement.  Setting this to onsuppresses the generation of stitch surfaces. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>disableTrimBoundaryDisplay (dtb)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>disableTrimDisplay (dt)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the state of trim drawing disablement.  Setting this to onsuppresses the drawing of surface trims. Valid values are on, off, interactive.
+Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>latticeResolution (lr)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the global lattice resolution.  This value may range between 0.0 (exact calculation) and 1.0 (rough approximation)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughBindSkinAndFlexors (pbf)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of bind skin and all flexors pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughBlendShape (pbs)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of blend shape deformer pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughCluster (pc)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of cluster deformer pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughFlexors (pf)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of flexor pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughLattice (pl)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of lattice deformer pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughPaintEffects (pp)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of paint effects pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughSculpt (ps)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of sculpt deformer pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passThroughWire (pw)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of wire deformer pass through. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useClusterResolution (ucr)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of cluster deformer global resolution.  This allows clusters to be calculated at a lower resolution. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useLatticeResolution (ulr)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the state of lattice deformer global resolution.  This allows lattices to be calculated at a lower resolution. Valid values are on, off, interactive.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.performanceOptions</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Disable the generation of stitch surfaces</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">performanceOptions</span><span class="p">(</span> <span class="n">ds</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span>
+
+<span class="c"># Put sculpt deformers into pass-through mode during interaction/playback</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">performanceOptions</span><span class="p">(</span> <span class="n">ps</span><span class="o">=</span><span class="s">&#39;interactive&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.pause.html"
+                        title="previous chapter">pymel.core.general.pause</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.pickWalk.html"
+                        title="next chapter">pymel.core.general.pickWalk</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.performanceOptions.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.pickWalk.html" title="pymel.core.general.pickWalk"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.pause.html" title="pymel.core.general.pause"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

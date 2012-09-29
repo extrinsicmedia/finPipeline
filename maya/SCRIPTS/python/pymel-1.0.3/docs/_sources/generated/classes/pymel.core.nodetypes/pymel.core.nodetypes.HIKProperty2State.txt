@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKProperty2State
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKProperty2State
+    :parts: 1
+
+.. autoclass:: HIKProperty2State
+    :members:
+    :undoc-members:

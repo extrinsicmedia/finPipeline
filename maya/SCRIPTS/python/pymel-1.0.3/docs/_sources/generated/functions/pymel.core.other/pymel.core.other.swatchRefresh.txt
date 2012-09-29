@@ -1,0 +1,6 @@
+pymel.core.other.swatchRefresh
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.swatchRefresh

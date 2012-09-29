@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.datatypes.VectorN &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.datatypes" href="../../pymel.core.datatypes.html" />
+    <link rel="next" title="pymel.core.datatypes.metaReadOnlyAttr" href="pymel.core.datatypes.metaReadOnlyAttr.html" />
+    <link rel="prev" title="pymel.core.datatypes.Vector" href="pymel.core.datatypes.Vector.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.datatypes.metaReadOnlyAttr.html" title="pymel.core.datatypes.metaReadOnlyAttr"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.datatypes.Vector.html" title="pymel.core.datatypes.Vector"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.datatypes.html" accesskey="U">pymel.core.datatypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-datatypes-vectorn">
+<h1>pymel.core.datatypes.VectorN<a class="headerlink" href="#pymel-core-datatypes-vectorn" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-75cf439dca7d48afc77307c7bf50ebf8354eb4ef.png" alt="Inheritance diagram of VectorN" usemap="#inheritancec3f42b6b11" class="inheritance"/>
+<map id="inheritancec3f42b6b11" name="inheritancec3f42b6b11">
+<area shape="rect" href="../pymel.util.arrays/pymel.util.arrays.VectorN.html#pymel.util.arrays.VectorN" title="VectorN" alt="" coords="5,44,77,68"/>
+<area shape="rect" href="../pymel.util.arrays/pymel.util.arrays.Array.html#pymel.util.arrays.Array" title="Array" alt="" coords="5,5,77,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.datatypes.VectorN">
+<em class="property">class </em><tt class="descname">VectorN</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic size VectorN class derived from Array, basically a 1 dimensional Array.</p>
+<p>Most methods and behavior are herited from Array, with the limitation that a MatrixN must have
+exactly 2 dimensions.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([0, 1, 2])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([0, 1, 2])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="n">MatrixN</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">M</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[0],</span>
+<span class="go"> [1],</span>
+<span class="go"> [2]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([0, 1, 2])</span>
+</pre></div>
+</div>
+<p>The VectorN class has a constant ndim of 1</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">VectorN</span><span class="o">.</span><span class="n">ndim</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">ndim</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">VectorN</span><span class="o">.</span><span class="n">ndim</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">AttributeError</span>: <span class="n">attribute ndim is a read only class attribute and cannot be modified on class VectorN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">ndim</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">AttributeError</span>: <span class="n">&#39;VectorN&#39; object attribute &#39;ndim&#39; is read-only</span>
+</pre></div>
+</div>
+<p>It&#8217;s protected against initialization or resizing to a shape that wouldn&#8217;t be a VectorN anymore</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">cannot initialize a VectorN of shape (4,) from [[0, 1], [2, 3]] of shape (2, 2),</span>
+<span class="go">as it would truncate data or reduce the number of dimensions</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">new shape (2, 2) is not compatible with class VectorN</span>
+</pre></div>
+</div>
+<p>Other Array types can be cast to VectorN, but truncating data or reducing dimensions is not allowed
+to avoid silent loss of data in a conversion, use an explicit resize / trim / sub-array extraction</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([0, 1, 2, 3])</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">cannot cast a Array of shape (2, 2) to a VectorN of shape (4,),</span>
+<span class="go">as it would truncate data or reduce the number of dimensions</span>
+</pre></div>
+</div>
+<p>As for Array, __init__ is a shallow copy, note that as VectorN don&#8217;t have sub-arrays,
+shallow and deep copy amounts to the same thing.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">==</span> <span class="n">A</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="ow">is</span> <span class="n">A</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">isEquivalent</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.angle">
+<tt class="descname">angle</tt><big>(</big><em>other</em>, <em>third=None</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.angle(v) &lt;==&gt; angle(u, v) &#8211;&gt; float</p>
+<p>Returns the angle of rotation between u and v, 3 dimensional Vectors representing 3D vectors.</p>
+<p>Note : this angle is not signed, use axis to know the direction of the rotation</p>
+<p>Alternatively can use the form a.angle(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
+it is then equivalent to angle(b-a, c-a)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.axis">
+<tt class="descname">axis</tt><big>(</big><em>other</em>, <em>third=None</em>, <em>normalize=False</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.axis(v[, normalize=False]) &lt;==&gt; axis(u, v[, normalize=False])</p>
+<p>Returns the axis of rotation from u to v as the vector n = u ^ v, u and v
+being 3 dimensional Vectors representing 3D vectors.
+If the normalize keyword argument is set to True, n is also normalized.</p>
+<p>Alternatively can use the form a.axis(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
+it is then equivalent to axis(b-a, c-a).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.cotan">
+<tt class="descname">cotan</tt><big>(</big><em>other</em>, <em>third=None</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.cotan" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.cotan(v) &lt;==&gt; cotan(u, v)</p>
+<p>Returns the cotangent of the u, v angle, u and v should be 3 dimensional Vectors representing 3D vectors.</p>
+<p>Alternatively can use the form a.cotan(b, c), where a, b, c are 4 dimensional Vectors representing 3D points,
+it is then equivalent to cotan(b-a, c-a)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.cross">
+<tt class="descname">cross</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.cross" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.cross(v) &lt;==&gt; cross(u, v)</p>
+<p>cross product of u and v, u and v should be 3 dimensional vectors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.dot">
+<tt class="descname">dot</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.dot(v) &lt;==&gt; dot(u, v)</p>
+<p>dot product of u and v, u and v should be Vectors of identical size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.isParallel">
+<tt class="descname">isParallel</tt><big>(</big><em>other</em>, <em>tol=9.3132257461547852e-10</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.isParallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.isParallel(v[, tol]) &#8211;&gt; bool</p>
+<p>Returns True if both arguments considered as VectorN are parallel within the specified tolerance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.length">
+<tt class="descname">length</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.length() &#8211;&gt; float</p>
+<p>Returns the length of u, ie sqrt(u.dot(u))</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.normal">
+<tt class="descname">normal</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.normal() &#8211;&gt; VectorN</p>
+<p>Returns a normalized copy of self. Overriden to be consistant with Maya API and MEL unit command,
+does not raise an exception if self if of zero length, instead returns a copy of self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.outer">
+<tt class="descname">outer</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.outer" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.outer(v) &lt;==&gt; outer(u, v)</p>
+<p>Outer product of vectors u and v</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.projectionOnto">
+<tt class="descname">projectionOnto</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.projectionOnto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the projection of this vector onto other vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pymel.core.datatypes.VectorN.shape">
+<tt class="descname">shape</tt><a class="headerlink" href="#pymel.core.datatypes.VectorN.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>v.shape : tuple of one int</p>
+<p>Shape of the VectorN, as Vectors are one-dimensional Arrays: v.shape = (v.size,).</p>
+<p>It can be queried, or set to change the VectorN&#8217;s shape similarly to the resize method,
+as the only way to change a VectorN&#8217;s shape is to resize it.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span> <span class="n">VectorN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([1, 2, 3])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span>
+<span class="go">VectorN([1, 2, 3, 0])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">TypeError</span>: <span class="n">new shape (2, 2) is not compatible with class VectorN</span>
+</pre></div>
+</div>
+<p>Related : see Array.resize method.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pymel.core.datatypes.VectorN.size">
+<tt class="descname">size</tt><a class="headerlink" href="#pymel.core.datatypes.VectorN.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of components in the VectorN</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.sqlength">
+<tt class="descname">sqlength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.sqlength" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.sqlength() &#8211;&gt; float</p>
+<p>Returns the square length of u, ie u.dot(u).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.transformAsNormal">
+<tt class="descname">transformAsNormal</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.transformAsNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.transformAsNormal(m) &#8211;&gt; VectorN</p>
+<p>Equivalent to transforming u by the inverse transpose MatrixN of m, used to transform normals.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.datatypes.VectorN.unit">
+<tt class="descname">unit</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.datatypes.VectorN.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>u.normal() &#8211;&gt; VectorN</p>
+<p>Returns a normalized copy of self. Overriden to be consistant with Maya API and MEL unit command,
+does not raise an exception if self if of zero length, instead returns a copy of self</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.datatypes.Vector.html"
+                        title="previous chapter">pymel.core.datatypes.Vector</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.datatypes.metaReadOnlyAttr.html"
+                        title="next chapter">pymel.core.datatypes.metaReadOnlyAttr</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.datatypes/pymel.core.datatypes.VectorN.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.datatypes.metaReadOnlyAttr.html" title="pymel.core.datatypes.metaReadOnlyAttr"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.datatypes.Vector.html" title="pymel.core.datatypes.Vector"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.datatypes.html" >pymel.core.datatypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

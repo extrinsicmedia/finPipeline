@@ -1,0 +1,11 @@
+pymel.util.Mapping
+==================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Mapping
+    :parts: 1
+
+.. autoclass:: Mapping
+    :members:
+    :undoc-members:

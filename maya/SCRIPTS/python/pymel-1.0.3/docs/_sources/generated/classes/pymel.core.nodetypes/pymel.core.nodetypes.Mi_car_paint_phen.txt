@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mi_car_paint_phen
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mi_car_paint_phen
+    :parts: 1
+
+.. autoclass:: Mi_car_paint_phen
+    :members:
+    :undoc-members:

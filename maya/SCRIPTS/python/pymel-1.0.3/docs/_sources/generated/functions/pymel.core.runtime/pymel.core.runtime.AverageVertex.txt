@@ -1,0 +1,6 @@
+pymel.core.runtime.AverageVertex
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AverageVertex

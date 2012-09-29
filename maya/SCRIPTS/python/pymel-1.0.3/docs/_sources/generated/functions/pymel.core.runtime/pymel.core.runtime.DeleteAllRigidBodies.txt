@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllRigidBodies
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllRigidBodies

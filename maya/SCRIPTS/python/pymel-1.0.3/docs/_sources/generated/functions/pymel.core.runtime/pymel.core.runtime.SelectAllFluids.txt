@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllFluids
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllFluids

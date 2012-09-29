@@ -1,0 +1,11 @@
+pymel.util.RemovedKey
+=====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: RemovedKey
+    :parts: 1
+
+.. autoclass:: RemovedKey
+    :members:
+    :undoc-members:

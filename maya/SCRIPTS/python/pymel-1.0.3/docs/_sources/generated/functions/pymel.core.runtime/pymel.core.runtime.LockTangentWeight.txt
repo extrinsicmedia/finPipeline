@@ -1,0 +1,6 @@
+pymel.core.runtime.LockTangentWeight
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.LockTangentWeight

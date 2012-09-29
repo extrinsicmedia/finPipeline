@@ -1,0 +1,6 @@
+pymel.util.max
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.max

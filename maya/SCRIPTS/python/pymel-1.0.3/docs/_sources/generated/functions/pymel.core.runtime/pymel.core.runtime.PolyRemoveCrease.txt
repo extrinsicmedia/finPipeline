@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyRemoveCrease
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyRemoveCrease

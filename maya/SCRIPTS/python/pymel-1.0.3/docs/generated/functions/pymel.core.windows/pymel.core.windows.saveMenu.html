@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.windows.saveMenu &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.windows" href="../../pymel.core.windows.html" />
+    <link rel="next" title="pymel.core.windows.savePrefObjects" href="pymel.core.windows.savePrefObjects.html" />
+    <link rel="prev" title="pymel.core.windows.saveAllShelves" href="pymel.core.windows.saveAllShelves.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.savePrefObjects.html" title="pymel.core.windows.savePrefObjects"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.saveAllShelves.html" title="pymel.core.windows.saveAllShelves"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" accesskey="U">pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-windows-savemenu">
+<h1>pymel.core.windows.saveMenu<a class="headerlink" href="#pymel-core-windows-savemenu" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.windows.saveMenu">
+<em class="property">static </em><tt class="descclassname">windows.</tt><tt class="descname">saveMenu</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.windows.saveMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command is used for saving the contents of a menu, so that another instance of the menu may be recreated later. The
+command writes out a file which, when run as a script, will rebuild the menuItems contained in the original menu. Note
+that the fileName is relative to the user&#8217;s marking menu preference directory. Note that this command is used solely by
+the Marking Menu Editor and is not intended to be used for general purposes. The first argument is the name of the manu
+to save, the second one is the name of the file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.saveMenu</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Create a window with two frames.</span>
+<span class="c">#</span>
+<span class="n">win</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;saveMenu Example&#39;</span><span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">columnLayout</span><span class="p">()</span>
+<span class="c"># Result: ui.ColumnLayout(&#39;window1|columnLayout11&#39;) #</span>
+<span class="n">frame1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">frameLayout</span><span class="p">(</span> <span class="n">h</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Original Menu (LMB)&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;(click here)&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.Text(&#39;window1|columnLayout11|frameLayout11|text3&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;window1|columnLayout11&#39; #</span>
+<span class="n">frame2</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">frameLayout</span><span class="p">(</span> <span class="n">h</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Copy of Original (LMB)&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;(click here)&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.Text(&#39;window1|columnLayout11|frameLayout12|text4&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;window1|columnLayout11&#39; #</span>
+
+<span class="c"># Create a menu.</span>
+<span class="c">#</span>
+<span class="n">menu1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">popupMenu</span><span class="p">(</span> <span class="n">parent</span><span class="o">=</span><span class="n">frame1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">rp</span><span class="o">=</span><span class="s">&#39;N&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Up&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem377&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">rp</span><span class="o">=</span><span class="s">&#39;S&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Down&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem378&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">rp</span><span class="o">=</span><span class="s">&#39;E&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Right&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem379&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">rp</span><span class="o">=</span><span class="s">&#39;W&#39;</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Left&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem380&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Warm&#39;</span><span class="p">,</span> <span class="n">sm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem381&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Red&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem381|menuItem382&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Orange&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem381|menuItem383&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Yellow&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem381|menuItem384&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;window1|columnLayout11|frameLayout11|popupMenu60&#39; #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Cold&#39;</span><span class="p">,</span> <span class="n">sm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem385&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Green&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem385|menuItem386&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Blue&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem385|menuItem387&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Indigo&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem385|menuItem388&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="s">&#39;Violet&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.SubMenuItem(&#39;window1|columnLayout11|frameLayout11|popupMenu60|menuItem385|menuItem389&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;window1|columnLayout11|frameLayout11|popupMenu60&#39; #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;&#39; #</span>
+
+<span class="c"># Save the menu to a file.</span>
+<span class="c">#</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">saveMenu</span><span class="p">(</span><span class="n">menu1</span><span class="p">,</span> <span class="s">&#39;menu_example&#39;</span><span class="p">)</span>
+
+<span class="c"># Use the file to rebuild another instance of the menu.</span>
+<span class="c">#</span>
+<span class="n">menu1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">popupMenu</span><span class="p">(</span> <span class="n">parent</span><span class="o">=</span><span class="n">frame2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;source </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">pm</span><span class="o">.</span><span class="n">internalVar</span><span class="p">(</span><span class="n">userMarkingMenuDir</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;menu_example.mel</span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;&#39; #</span>
+
+<span class="c"># Finish up.</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&quot;The menu was saved in [&quot;</span> <span class="o">+</span> <span class="n">pm</span><span class="o">.</span><span class="n">internalVar</span><span class="p">(</span><span class="n">userMarkingMenuDir</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">result</span> <span class="o">+</span> <span class="s">&quot;]</span><span class="se">\n</span><span class="s">&quot;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">showWindow</span><span class="p">(</span> <span class="n">win</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.windows.saveAllShelves.html"
+                        title="previous chapter">pymel.core.windows.saveAllShelves</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.windows.savePrefObjects.html"
+                        title="next chapter">pymel.core.windows.savePrefObjects</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.windows/pymel.core.windows.saveMenu.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.savePrefObjects.html" title="pymel.core.windows.savePrefObjects"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.saveAllShelves.html" title="pymel.core.windows.saveAllShelves"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" >pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.modeling.createSubdivRegion
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.createSubdivRegion

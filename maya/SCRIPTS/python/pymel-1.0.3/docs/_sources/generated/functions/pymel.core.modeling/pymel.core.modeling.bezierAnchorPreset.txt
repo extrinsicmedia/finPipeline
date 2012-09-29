@@ -1,0 +1,6 @@
+pymel.core.modeling.bezierAnchorPreset
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.bezierAnchorPreset

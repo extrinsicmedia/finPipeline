@@ -1,0 +1,6 @@
+pymel.core.animation.deviceManager
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.deviceManager

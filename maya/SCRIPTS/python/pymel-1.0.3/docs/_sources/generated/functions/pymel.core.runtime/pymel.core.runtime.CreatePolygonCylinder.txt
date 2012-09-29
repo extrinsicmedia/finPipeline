@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePolygonCylinder
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePolygonCylinder

@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.windows.nodeOutliner &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.windows" href="../../pymel.core.windows.html" />
+    <link rel="next" title="pymel.core.windows.nodeTreeLister" href="pymel.core.windows.nodeTreeLister.html" />
+    <link rel="prev" title="pymel.core.windows.nodeIconButton" href="pymel.core.windows.nodeIconButton.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.nodeTreeLister.html" title="pymel.core.windows.nodeTreeLister"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.nodeIconButton.html" title="pymel.core.windows.nodeIconButton"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" accesskey="U">pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-windows-nodeoutliner">
+<h1>pymel.core.windows.nodeOutliner<a class="headerlink" href="#pymel-core-windows-nodeoutliner" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.windows.nodeOutliner">
+<em class="property">static </em><tt class="descclassname">windows.</tt><tt class="descname">nodeOutliner</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.windows.nodeOutliner" title="Permalink to this definition">¶</a></dt>
+<dd><p>The nodeOutliner command creates, edits and queries an outline control that shows dependency nodes and their attributes.
+Compound attributes are further expandable to show their children. Additional configure flags allow multi selection,
+customizable commands to issue upon selection, and showing connections (and connectability) to a single input attribute.
+There are also the abilities to add/remove/replace nodes through the command line interface, and drag/add. In some
+configurations, dragging a connected attribute of a node will load the node at the other end of the connection. There is
+a right mouse button menu and a flag to attach a command to it. The menu is used to list the specific connections of a
+connected attribute. Clicking over any spot but the row of a connected attribute will show an empty menu. By default,
+there is no command attached to the menu. In query mode, return type is based on queried flag.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>addCommand (ac)</strong></td>
+<td><em>script</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Command executed when the node outliner adds something. String commands use substitution of the term %node for whatever is added, eg, if you want to print the
+object added, the command should be print(%node \n.  Callable python objects are passed the node name.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addObject (a)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>add the given object to the display</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>annotation (ann)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>attrAlphaOrder (aao)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specify how attributes are to be sorted.  Current recognised values are defaultfor no sorting and ascendto sort attributes from &#8216;a&#8217; to &#8216;&#8217;z&#8217; and descendto sort
+from &#8216;z&#8217; to &#8216;a&#8217;. Notes: a) this only applies to top level attributes.                      Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>backgroundColor (bgc)</strong></td>
+<td><em>float, float, float</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>connectivity (c)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Takes an attribute argument (nodeName.attributeName), dims any attributes that can&#8217;t connect to the given, and highlights any attributes already connected</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>currentSelection (cs)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Retruns a string array containing what is currently selected</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>dc (dc)</strong></td>
+<td><em>callable</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>defineTemplate (dt)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>docTag (dtg)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>dragCallback (dgc)</strong></td>
+<td><em>callable</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>dropCallback (dpc)</strong></td>
+<td><em>callable</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>enable (en)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>enableBackground (ebg)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>fullPathName (fpn)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>height (h)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>isObscured (io)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>lastClickedNode (lcn)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>lastMenuChoice (lmc)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns the text of the most recent menu selection.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>longNames (ln)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Controls whether long or short attribute names will be used in the interface.  Note that this flag is ignored if the niceNamesflag is set.  Default is short
+names. Queried, returns a boolean.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>manage (m)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>menuCommand (mc)</strong></td>
+<td><em>script</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Attaches the given command to each item in the popup menu.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>menuMultiOption (mmo)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets whether a menu option labelled next availablewill appear as the first option on any multi-attribute&#8217;s right mouse button menu.  Defaults to True.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>multiSelect (ms)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Allow multiSelect; more than one thing to be selected at a time</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>niceNames (nn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Controls whether the attribute names will be displayed in a more user-friendly, readable way.  When this is on, the longNames flag is ignored.  When this is off,
+attribute names will be displayed either long or short, according to the longNames flag. Default is on. Queried, returns a boolean.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>noConnectivity (nc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Reset the node outliner to not show any connectivity, ie, redraw all rows normally.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>nodesDisplayed (nd)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns a string array containing the list of nodes showing in the node Outliner</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>numberOfPopupMenus (npm)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>parent (p)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>popupMenuArray (pma)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>pressHighlightsUnconnected (phu)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets whether clicking on an unconnected plug will select it or not.  Default is True.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>preventOverride (po)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>redraw (r)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>redrawRow (rr)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>remove (rm)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>remove the given object from the display</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>removeAll (rma)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>remove all objects from the display</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>replace (rpl)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>replace what&#8217;s displayed with the given objects</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>selectCommand (sc)</strong></td>
+<td><em>script</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Command issued by selecting.  Different from the cflag in that this command will only be issued if something is selected.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showConnectedOnly (sco)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show (true) or hide (false) only attributes that are connected matching input/output criteria</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showHidden (sh)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show (true) or hide (false) UI invisible attributes that match the input/output criteria</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showInputs (si)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show only UI visible attributes that can be connected to</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showNonConnectable (snc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show (true) or hide (false) non connectable attributes that match the input/output criteria</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showNonKeyable (snk)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show (true) or hide (false) non keyframeable (animatable) attributes that match the input/output criteria</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showOutputs (so)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show only UI visible attributes that can be connected from</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showPublished (sp)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Show only published attributes for an asset or a member of an asset. This flag is ignored on nodes not related to assets.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>showReadOnly (sro)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>show only read only attributes attributes that can be connected from</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useTemplate (ut)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>visible (vis)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>visibleChangeCommand (vcc)</strong></td>
+<td><em>callable</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>width (w)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.nodeOutliner</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">mywindow</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">window</span><span class="p">()</span>
+<span class="n">myform</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">formLayout</span><span class="p">(</span> <span class="n">numberOfDivisions</span><span class="o">=</span><span class="mi">100</span> <span class="p">)</span>
+
+<span class="c"># Create an outliner that will print the name of</span>
+<span class="c"># every object added to it to history pane of the</span>
+<span class="c"># script editor, then display all available input</span>
+<span class="c"># plugs on the node.</span>
+<span class="k">def</span> <span class="nf">onAddNode</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">name</span>
+<span class="n">myoutliner</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">nodeOutliner</span><span class="p">(</span> <span class="n">showInputs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">addCommand</span><span class="o">=</span><span class="n">onAddNode</span> <span class="p">)</span>
+
+<span class="c"># Attach the nodeOutliner to the layout</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">formLayout</span><span class="p">(</span> <span class="n">myform</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">attachForm</span><span class="o">=</span><span class="p">((</span><span class="n">myoutliner</span><span class="p">,</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="n">myoutliner</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="n">myoutliner</span><span class="p">,</span> <span class="s">&#39;bottom&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="n">myoutliner</span><span class="p">,</span> <span class="s">&#39;right&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="p">)</span>
+<span class="c"># Result: ui.FormLayout(&#39;window1|formLayout65&#39;) #</span>
+
+<span class="c"># Display the window with the node Outliner</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">showWindow</span><span class="p">(</span> <span class="n">mywindow</span> <span class="p">)</span>
+
+<span class="c"># Create a sphere</span>
+<span class="n">objectName</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+
+<span class="c"># Have the outliner display the sphere</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">nodeOutliner</span><span class="p">(</span> <span class="n">myoutliner</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="s">&#39;nurbsSphere1&#39;</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;window1|formLayout65|nodeOutliner1&#39; #</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.windows.nodeIconButton.html"
+                        title="previous chapter">pymel.core.windows.nodeIconButton</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.windows.nodeTreeLister.html"
+                        title="next chapter">pymel.core.windows.nodeTreeLister</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.windows/pymel.core.windows.nodeOutliner.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.nodeTreeLister.html" title="pymel.core.windows.nodeTreeLister"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.nodeIconButton.html" title="pymel.core.windows.nodeIconButton"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" >pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

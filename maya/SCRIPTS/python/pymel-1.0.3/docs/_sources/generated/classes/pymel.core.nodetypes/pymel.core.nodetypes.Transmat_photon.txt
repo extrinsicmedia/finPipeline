@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Transmat_photon
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Transmat_photon
+    :parts: 1
+
+.. autoclass:: Transmat_photon
+    :members:
+    :undoc-members:

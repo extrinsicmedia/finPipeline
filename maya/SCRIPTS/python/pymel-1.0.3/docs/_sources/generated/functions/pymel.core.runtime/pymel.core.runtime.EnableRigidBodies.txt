@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableRigidBodies
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableRigidBodies

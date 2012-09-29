@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectCurveCVsFirst
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectCurveCVsFirst

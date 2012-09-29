@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.setAttr &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.setEnums" href="pymel.core.general.setEnums.html" />
+    <link rel="prev" title="pymel.core.general.selectionConnection" href="pymel.core.general.selectionConnection.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.setEnums.html" title="pymel.core.general.setEnums"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.selectionConnection.html" title="pymel.core.general.selectionConnection"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-setattr">
+<h1>pymel.core.general.setAttr<a class="headerlink" href="#pymel-core-general-setattr" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.setAttr">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">setAttr</tt><big>(</big><em>attr</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.setAttr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of a dependency node attribute.  No value for the the attribute is needed when the -l/-k/-s flags are
+used. The -type flag is only required when setting a non-numeric attribute. The following chart outlines the syntax of
+setAttr for non-numeric data types: TYPEbelow means any number of values of type TYPE, separated by a space[TYPE]means
+that the value of type TYPEis optionalA|Bmeans that either of Aor Bmay appearIn order to run its examples, first execute
+these commands to create the sample attribute types:sphere -n node; addAttr -ln short2Attr -at short2; addAttr -ln
+short2a -p short2Attr -at short; addAttr -ln short2b -p short2Attr -at short; addAttr -ln short3Attr -at short3; addAttr
+-ln short3a -p short3Attr -at short; addAttr -ln short3b -p short3Attr -at short; addAttr -ln short3c -p short3Attr -at
+short; addAttr -ln long2Attr -at long2; addAttr -ln long2a -p long2Attr -at long; addAttr -ln long2b -p long2Attr -at
+long; addAttr -ln long3Attr -at long3; addAttr -ln long3a -p long3Attr -at long; addAttr -ln long3b -p long3Attr -at
+long; addAttr -ln long3c -p long3Attr -at long; addAttr -ln float2Attr -at float2; addAttr -ln float2a -p float2Attr -at
+float; addAttr -ln float2b -p float2Attr -at float; addAttr -ln float3Attr -at float3; addAttr -ln float3a -p float3Attr
+-at float; addAttr -ln float3b -p float3Attr -at float; addAttr -ln float3c -p float3Attr -at float; addAttr -ln
+double2Attr -at double2; addAttr -ln double2a -p double2Attr -at double; addAttr -ln double2b -p double2Attr -at double;
+addAttr -ln double3Attr -at double3; addAttr -ln double3a -p double3Attr -at double; addAttr -ln double3b -p double3Attr
+-at double; addAttr -ln double3c -p double3Attr -at double; addAttr -ln int32ArrayAttr -dt Int32Array; addAttr -ln
+doubleArrayAttr -dt doubleArray; addAttr -ln pointArrayAttr -dt pointArray; addAttr -ln vectorArrayAttr -dt vectorArray;
+addAttr -ln stringArrayAttr -dt stringArray; addAttr -ln stringAttr -dt string; addAttr -ln matrixAttr -dt matrix;
+addAttr -ln sphereAttr -dt sphere; addAttr -ln coneAttr -dt cone; addAttr -ln meshAttr -dt mesh; addAttr -ln latticeAttr
+-dt lattice; addAttr -ln spectrumRGBAttr -dt spectrumRGB; addAttr -ln reflectanceRGBAttr -dt reflectanceRGB; addAttr -ln
+componentListAttr -dt componentList; addAttr -ln attrAliasAttr -dt attributeAlias; addAttr -ln curveAttr -dt nurbsCurve;
+addAttr -ln surfaceAttr -dt nurbsSurface; addAttr -ln trimFaceAttr -dt nurbsTrimface; addAttr -ln polyFaceAttr -dt
+polyFaces; -type short2Array of two short integersValue Syntaxshort shortValue Meaningvalue1 value2ExamplesetAttr
+node.short2Attr -type short2 1 2;-type short3Array of three short integersValue Syntaxshort short shortValue
+Meaningvalue1 value2 value3ExamplesetAttr node.short3Attr -type short3 1 2 3;-type long2Array of two long integersValue
+Syntaxlong longValue Meaningvalue1 value2ExamplesetAttr node.long2Attr -type long2 1000000 2000000;-type long3Array of
+three long integersValue Syntaxlong long longValue Meaningvalue1 value2 value3ExamplesetAttr node.long3Attr -type long3
+1000000 2000000 3000000;-type Int32ArrayVariable length array of long integersValue SyntaxValue MeaningExamplesetAttr
+node.int32ArrayAttr -type Int32Array 2 12 75;-type float2Array of two floatsValue Syntaxfloat floatValue Meaningvalue1
+value2ExamplesetAttr node.float2Attr -type float2 1.1 2.2;-type float3Array of three floatsValue Syntaxfloat float
+floatValue Meaningvalue1 value2 value3ExamplesetAttr node.float3Attr -type float3 1.1 2.2 3.3;-type double2Array of two
+doublesValue Syntaxdouble doubleValue Meaningvalue1 value2ExamplesetAttr node.double2Attr -type double2 1.1 2.2;-type
+double3Array of three doublesValue Syntaxdouble double doubleValue Meaningvalue1 value2 value3ExamplesetAttr
+node.double3Attr -type double3 1.1 2.2 3.3;-type doubleArrayVariable length array of doublesValue SyntaxValue
+MeaningExamplesetAttr node.doubleArrayAttr -type doubleArray 2 3.14159 2.782;-type matrix4x4 matrix of doublesValue
+Syntaxdouble double double doubledouble double double doubledouble double double doubledouble double double doubleValue
+Meaningrow1col1 row1col2 row1col3 row1col4row2col1 row2col2 row2col3 row2col4row3col1 row3col2 row3col3 row3col4row4col1
+row4col2 row4col3 row4col4Alternate Syntaxstring double double doubledouble double doubleintegerdouble double
+doubledouble double doubledouble double doubledouble double doubledouble double doubledouble double doubledouble double
+double doubledouble double double doubledouble double doublebooleanAlternate MeaningxformscaleX scaleY scaleZrotateX
+rotateY rotateZrotationOrder (0=XYZ, 1=YZX, 2=ZXY, 3=XZY, 4=YXZ, 5=ZYX)translateX translateY translateZshearXY shearXZ
+shearYZscalePivotX scalePivotY scalePivotZscaleTranslationX scaleTranslationY scaleTranslationZrotatePivotX rotatePivotY
+rotatePivotZrotateTranslationX rotateTranslationY rotateTranslationZrotateOrientW rotateOrientX rotateOrientY
+rotateOrientZjointOrientW jointOrientX jointOrientY jointOrientZinverseParentScaleX inverseParentScaleY
+inverseParentScaleZcompensateForParentScale ExamplesetAttr node.matrixAttr -type matrix1 0 0 0 0 1 0 0 0 0 1 0 2 3 4
+1;setAttr node.matrixAttr -type matrixxform1 1 1 0 0 0 0 2 3 4 0 0 00 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 1 0 1 1 1 0
+false;-type pointArrayVariable length array of pointsValue SyntaxValue MeaningExamplesetAttr node.pointArrayAttr -type
+pointArray 2 1 1 1 1 2 2 2 1;-type vectorArrayVariable length array of vectorsValue SyntaxValue MeaningExamplesetAttr
+node.vectorArrayAttr -type vectorArray 2 1 1 1 2 2 2;-type stringCharacter stringValue SyntaxstringValue
+MeaningcharacterStringValueExamplesetAttr node.stringAttr -type stringblarg;-type stringArrayVariable length array of
+stringsValue SyntaxValue MeaningExamplesetAttr node.stringArrayAttr -type stringArray 3 abc;-type sphereSphere dataValue
+SyntaxdoubleValue MeaningsphereRadiusExamplesetAttr node.sphereAttr -type sphere 5.0;-type coneCone dataValue
+Syntaxdouble doubleValue MeaningconeAngle coneCapExamplesetAttr node.coneAttr -type cone 45.0 5.0;-type
+reflectanceRGBReflectance dataValue Syntaxdouble double doubleValue MeaningredReflect greenReflect
+blueReflectExamplesetAttr node.reflectanceRGBAttr -type reflectanceRGB 0.5 0.5 0.1;-type spectrumRGBSpectrum dataValue
+Syntaxdouble double doubleValue MeaningredSpectrum greenSpectrum blueSpectrumExamplesetAttr node.spectrumRGBAttr -type
+spectrumRGB 0.5 0.5 0.1;-type componentListVariable length array of componentsValue SyntaxValue MeaningExamplesetAttr
+node.componentListAttr -type componentList 3 cv[1] cv[12] cv[3];-type attributeAliasString alias dataValue Syntaxstring
+stringValue MeaningnewAlias currentNameExamplesetAttr node.attrAliasAttr -type attributeAliasGoUp, translateY, GoLeft,
+translateX;-type nurbsCurveNURBS curve dataValue SyntaxValue MeaningExample// degree is the degree of the curve(range
+1-7)// spans is the number of spans // form is open (0), closed (1), periodic (2)// dimension is 2 or 3, depending on
+the dimension of the curve// isRational is true if the curve CVs contain a rational component // knotCount is the size
+of the knot list//  knotValue is a single entry in the knot list// cvCount is the number of CVs in the curve//
+xCVValue,yCVValue,[zCVValue] [wCVValue] is a single CV.//  zCVValue is only present when dimension is 3.//  wCVValue is
+only present when isRational is true.//setAttr node.curveAttr -type nurbsCurve 3 1 0 no 36 0 0 0 1 1 14 -2 3 0 -2 1 0 -2
+-1 0 -2 -3 0;-type nurbsSurfaceNURBS surface dataValue Syntaxint int int int bool Value MeaninguDegree vDegree uForm
+vForm isRationalTRIM|NOTRIMExample// uDegree is degree of the surface in U direction (range 1-7)// vDegree is degree of
+the surface in V direction (range 1-7)// uForm is open (0), closed (1), periodic (2) in U direction// vForm is open (0),
+closed (1), periodic (2) in V direction// isRational is true if the surface CVs contain a rational component//
+uKnotCount is the size of the U knot list//  uKnotValue is a single entry in the U knot list// vKnotCount is the size of
+the V knot list//  vKnotValue is a single entry in the V knot list// If TRIMis specified then additional trim
+information is expected// If NOTRIMis specified then the surface is not trimmed// cvCount is the number of CVs in the
+surface//  xCVValue,yCVValue,zCVValue [wCVValue]is a single CV.//  zCVValue is only present when dimension is 3.//
+wCVValue is only present when isRational is true//setAttr node.surfaceAttr -type nurbsSurface 3 3 0 0 no 6 0 0 0 1 1 16
+0 0 0 1 1 116 -2 3 0 -2 1 0 -2 -1 0 -2 -3 0-1 3 0 -1 1 0 -1 -1 0 -1 -3 01 3 0 1 1 0 1 -1 0 1 -3 03 3 0 3 1 0 3 -1 0 3 -3
+0;-type nurbsTrimfaceNURBS trim face dataValue SyntaxValue MeaningExample// flipNormal if true turns the surface inside
+out// boundaryCount: number of boundaries// boundaryType: // tedgeCountOnBoundary    : number of edges in a boundary//
+splineCountOnEdge    : number of splines in an edge in// edgeTolerance        : tolerance used to build the 3d edge//
+isEdgeReversed        : if true, the edge is backwards// geometricContinuity    : if true, the edge is tangent
+continuous// splineCountOnPedge    : number of splines in a 2d edge// isMonotone            : if true, curvature is
+monotone// pedgeTolerance        : tolerance for the 2d edge//-type polyFacePolygon face dataValue SyntaxfhmfmhmufcValue
+MeaningfhmfmhmufcExample// This data type (polyFace) is meant to be used in file I/O// after setAttrs have been written
+out for vertex position// arrays, edge connectivity arrays (with corresponding start// and end vertex descriptions),
+texture coordinate arrays and// color arrays.  The reason is that this data type references// all of its data through
+ids created by the former types.//// fspecifies the ids of the edges making up a face -//     negative value if the edge
+is reversed in the face// hspecifies the ids of the edges making up a hole -//     negative value if the edge is
+reversed in the face// mfspecifies the ids of texture coordinates (uvs) for a face.//     This data type is obsolete as
+of version 3.0. It is replaced by mu.// mhspecifies the ids of texture coordinates (uvs) for a hole//     This data type
+is obsolete as of version 3.0. It is replaced by mu.// muThe  first argument refers to the uv set. This is a zero-
+based//     integer number. The second argument refers to the number of vertices (n)//     on the face which have valid
+uv values. The last n values are the uv//     ids of the texture coordinates (uvs) for the face. These indices//     are
+what used to be represented by the mfand mhspecification.//     There may be more than one muspecification, one for each
+unique uv set.// fcspecifies the color index values for a face//setAttr node.polyFaceAttr -type polyFaces f3 1 2 3 fc3 4
+4 6;-type meshPolygonal meshValue SyntaxValue Meaningvvn[vtesmooth|hard]Example// vspecifies the vertices of the
+polygonal mesh// vnspecifies the normal of each vertex// vtis optional and specifies a U,V texture coordinate for each
+vertex// especifies the edge connectivity information between vertices//setAttr node.meshAttr -type mesh v3 0 0 0 0 1 0
+0 0 1vn3 1 0 0 1 0 0 1 0 0vt3 0 0 0 1 1 0e3 0 1 hard1 2 hard2 0 hard;-type latticeLattice dataValue SyntaxValue
+MeaningsDivisionCount tDivisionCount uDivisionCountExample// sDivisionCount is the horizontal lattice division count//
+tDivisionCount is the vertical lattice division count// uDivisionCount is the depth lattice division count// pointCount
+is the total number of lattice points// pointX,pointY,pointZ is one lattice point.  The list is//   specified varying
+first in S, then in T, last in U so the//   first two entries are (S=0,T=0,U=0) (s=1,T=0,U=0)//setAttr node.latticeAttr
+-type lattice 2 5 2 20-2 -2 -2 2 -2 -2 -2 -1 -2 2 -1 -2 -2 0 -22 0 -2 -2 1 -2 2 1 -2 -2 2 -2 2 2 -2-2 -2 2 2 -2 2 -2 -1
+2 2 -1 2 -2 0 22 0 2 -2 1 2 2 1 2 -2 2 2 2 2 2;In query mode, return type is based on queried flag.</p>
+<dl class="docutils">
+<dt>Maya Bug Fix:</dt>
+<dd><ul class="first last simple">
+<li>setAttr did not work with type matrix.</li>
+</ul>
+</dd>
+<dt>Modifications:</dt>
+<dd><ul class="first last">
+<li><p class="first">No need to set type, this will automatically be determined</p>
+</li>
+<li><p class="first">Adds support for passing a list or tuple as the second argument for datatypes such as double3.</p>
+</li>
+<li><p class="first">When setting stringArray datatype, you no longer need to prefix the list with the number of elements - just pass a list or tuple as with other arrays</p>
+</li>
+<li><dl class="first docutils">
+<dt>Added &#8216;force&#8217; kwarg, which causes the attribute to be added if it does not exist.</dt>
+<dd><ul class="first last">
+<li><p class="first">if no type flag is passed, the attribute type is based on type of value being set (if you want a float, be sure to format it as a float, e.g.  3.0 not 3)</p>
+</li>
+<li><p class="first">currently does not support compound attributes</p>
+</li>
+<li><p class="first">currently supported python-to-maya mappings:</p>
+<blockquote>
+<div><p>python type  maya type
+============ ===========
+float        double
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+int          long
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+str          string
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+bool         bool
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+Vector       double3
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+Matrix       matrix
+&#8212;&#8212;&#8212;&#8212; &#8212;&#8212;&#8212;&#8211;
+[str]        stringArray
+============ ===========</p>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">addAttr</span><span class="p">(</span> <span class="s">&#39;persp&#39;</span><span class="p">,</span> <span class="n">longName</span><span class="o">=</span> <span class="s">&#39;testDoubleArray&#39;</span><span class="p">,</span> <span class="n">dataType</span><span class="o">=</span><span class="s">&#39;doubleArray&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;persp.testDoubleArray&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;defaultRenderGlobals.preMel&#39;</span><span class="p">,</span> <span class="s">&#39;sfff&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Added ability to set enum attributes using the string values; this may be
+done either by setting the &#8216;asString&#8217; kwarg to True, or simply supplying
+a string value for an enum attribute.</p>
+</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>alteredValue (av)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The value is only the current value, which may change in the next evalution (if the attribute has an incoming connection). This flag is only used during file I/O,
+so that attributes with incoming connections do not have their data overwritten during the first evaluation after a file is opened.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>caching (ca)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the attribute&#8217;s internal caching on or off. Not all attributes can be defined as caching. Only those attributes that are not defined by default to be cached
+can be made caching.  As well, multi attribute elements cannot be made caching. Caching also affects child attributes for compound attributes.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>channelBox (cb)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the attribute&#8217;s display in the channelBox on or off. Keyable attributes are always display in the channelBox regardless of the channelBox settting.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>clamp (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">For numeric attributes, if the value is outside the range of the attribute, clamp it to the min or max instead of failing                         Flag can have
+multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>keyable (k)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the attribute&#8217;s keyable state on or off.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>lock (l)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the attribute&#8217;s lock state on or off.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>size (s)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Defines the size of a multi-attribute array. This is only a hint, used to help allocate memory as efficiently as possible.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>type (typ)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Identifies the type of data.  If the -type flag is not present, a numeric type is assumed.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.setAttr</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">(</span> <span class="n">n</span><span class="o">=</span><span class="s">&quot;sphere&quot;</span> <span class="p">)</span>
+<span class="c"># Result: [nt.Transform(u&#39;sphere&#39;), nt.MakeNurbSphere(u&#39;makeNurbSphere1&#39;)] #</span>
+
+<span class="c"># Set a simple numeric value</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;sphere.translateX&#39;</span><span class="p">,</span> <span class="mi">5</span> <span class="p">)</span>
+
+<span class="c"># Lock an attribute to prevent further modification</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;sphere.translateX&#39;</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Make an attribute unkeyable</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;sphere.translateZ&#39;</span><span class="p">,</span> <span class="n">keyable</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span>
+
+<span class="c"># Set an entire list of multi-attribute values in one command</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;sphereShape.weights[0:6]&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="c"># Set an attribute with a compound numeric type</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span><span class="s">&#39;sphere.rotate&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">&quot;double3&quot;</span><span class="p">)</span>
+
+<span class="c"># Clamp the value of the attribute to the min/max</span>
+<span class="c"># Useful floating point math leaves the value just</span>
+<span class="c"># a little out of range - here the min is .01</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;anisotropic1.roughness&#39;</span><span class="p">,</span> <span class="mf">0.0099978</span><span class="p">,</span> <span class="n">clamp</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Set a multi-attribute with a compound numeric type</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;sphereShape.controlPoints[0:2]&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s">&quot;double3&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.selectionConnection.html"
+                        title="previous chapter">pymel.core.general.selectionConnection</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.setEnums.html"
+                        title="next chapter">pymel.core.general.setEnums</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.setAttr.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.setEnums.html" title="pymel.core.general.setEnums"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.selectionConnection.html" title="pymel.core.general.selectionConnection"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

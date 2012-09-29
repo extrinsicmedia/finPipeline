@@ -1,0 +1,6 @@
+pymel.util.iterateArgs
+======================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.iterateArgs

@@ -1,0 +1,6 @@
+pymel.core.runtime.NCreateEmitterOptions
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.NCreateEmitterOptions

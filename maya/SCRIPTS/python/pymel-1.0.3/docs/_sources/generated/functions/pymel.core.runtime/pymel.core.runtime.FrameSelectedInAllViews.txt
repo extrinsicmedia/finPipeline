@@ -1,0 +1,6 @@
+pymel.core.runtime.FrameSelectedInAllViews
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FrameSelectedInAllViews

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateWakeOptions
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateWakeOptions

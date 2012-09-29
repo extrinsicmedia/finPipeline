@@ -1,0 +1,6 @@
+pymel.core.runtime.OpenSceneOptions
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.OpenSceneOptions

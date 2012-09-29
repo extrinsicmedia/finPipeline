@@ -1,0 +1,6 @@
+pymel.core.other.SaveScene
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.SaveScene

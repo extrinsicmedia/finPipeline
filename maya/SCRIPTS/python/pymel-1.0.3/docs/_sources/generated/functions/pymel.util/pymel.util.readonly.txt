@@ -1,0 +1,6 @@
+pymel.util.readonly
+===================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.readonly

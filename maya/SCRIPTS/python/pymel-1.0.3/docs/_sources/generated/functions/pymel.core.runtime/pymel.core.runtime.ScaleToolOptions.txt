@@ -1,0 +1,6 @@
+pymel.core.runtime.ScaleToolOptions
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ScaleToolOptions

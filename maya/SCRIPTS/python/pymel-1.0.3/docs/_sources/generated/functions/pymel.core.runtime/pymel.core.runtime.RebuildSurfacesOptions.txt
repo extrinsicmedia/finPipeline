@@ -1,0 +1,6 @@
+pymel.core.runtime.RebuildSurfacesOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RebuildSurfacesOptions

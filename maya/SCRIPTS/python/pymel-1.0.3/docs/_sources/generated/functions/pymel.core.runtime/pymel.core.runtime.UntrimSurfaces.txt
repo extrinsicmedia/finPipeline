@@ -1,0 +1,6 @@
+pymel.core.runtime.UntrimSurfaces
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UntrimSurfaces

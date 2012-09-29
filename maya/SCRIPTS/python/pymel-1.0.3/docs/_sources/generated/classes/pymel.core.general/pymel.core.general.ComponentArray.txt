@@ -1,0 +1,11 @@
+pymel.core.general.ComponentArray
+=================================
+
+.. currentmodule:: pymel.core.general
+
+.. inheritance-diagram:: ComponentArray
+    :parts: 1
+
+.. autoclass:: ComponentArray
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.ProjectTangentOptions
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ProjectTangentOptions

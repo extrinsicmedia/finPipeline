@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.SubdLayoutUV &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.SubdMapCut" href="pymel.core.nodetypes.SubdMapCut.html" />
+    <link rel="prev" title="pymel.core.nodetypes.SubdHierBlind" href="pymel.core.nodetypes.SubdHierBlind.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SubdMapCut.html" title="pymel.core.nodetypes.SubdMapCut"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SubdHierBlind.html" title="pymel.core.nodetypes.SubdHierBlind"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-subdlayoutuv">
+<h1>pymel.core.nodetypes.SubdLayoutUV<a class="headerlink" href="#pymel-core-nodetypes-subdlayoutuv" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-7eb3e8f2f9ace01d00503679cc31162c922af8ae.png" alt="Inheritance diagram of SubdLayoutUV" usemap="#inheritance03cd723330" class="inheritance"/>
+<map id="inheritance03cd723330" name="inheritance03cd723330">
+<area shape="rect" href="#pymel.core.nodetypes.SubdLayoutUV" title="SubdLayoutUV" alt="" coords="16,276,115,300"/>
+<area shape="rect" href="pymel.core.nodetypes.SubdModifierUV.html#pymel.core.nodetypes.SubdModifierUV" title="SubdModifierUV" alt="" coords="12,237,119,261"/>
+<area shape="rect" href="pymel.core.nodetypes.SubdModifierWorld.html#pymel.core.nodetypes.SubdModifierWorld" title="SubdModifierWorld" alt="" coords="5,198,125,222"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="20,5,111,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="29,44,101,68"/>
+<area shape="rect" href="pymel.core.nodetypes.SubdModifier.html#pymel.core.nodetypes.SubdModifier" title="SubdModifier" alt="" coords="20,160,111,184"/>
+<area shape="rect" href="pymel.core.nodetypes.SubdBase.html#pymel.core.nodetypes.SubdBase" title="SubdBase" alt="" coords="28,121,103,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="21,82,109,106"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.SubdLayoutUV">
+<em class="property">class </em><tt class="descname">SubdLayoutUV</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">subdLayoutUV</span></tt></p>
+<p>Move UVs in the texture plane to avoid overlaps.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getFlipReversed">
+<tt class="descname">getFlipReversed</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getFlipReversed" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this flag is turned on, the reversed UV pieces are fliped.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getLayout">
+<tt class="descname">getLayout</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to move the UV pieces, after cuts are applied: 0 No move is applied. 1 Layout the pieces along the U axis. 2 Layout the pieces in a square shape.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getLayoutMethod">
+<tt class="descname">getLayoutMethod</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getLayoutMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which layout method to use: 0 Block Stacking. 1 Shape Stacking.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getPercentageSpace">
+<tt class="descname">getPercentageSpace</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getPercentageSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>When layout is set to square, this value is a percentage of the texture area which is added around each UV piece. It can be used to ensure each UV piece uses different pixels in the texture. Maximum value is 5 percent.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getRotateForBestFit">
+<tt class="descname">getRotateForBestFit</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getRotateForBestFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>0 No rotation is applied. 1 Only allow 90 degree rotations. 2 Allow free rotations.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getScale">
+<tt class="descname">getScale</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to scale the pieces, after move and cuts: 0 No scale is applied. 1 Uniform scale to fit in unit square. 2 Non proportional scale to fit in unit square.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getSeparate">
+<tt class="descname">getSeparate</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getSeparate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which UV edges should be cut: 0 No cuts. 1 Cut only along folds. 2 Make all necessary cuts to avoid all intersections.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.getWorldSpace">
+<tt class="descname">getWorldSpace</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.getWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, performs the operation in world space coordinates as opposed to local space.                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setFlipReversed">
+<tt class="descname">setFlipReversed</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setFlipReversed" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this flag is turned on, the reversed UV pieces are fliped.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setLayout">
+<tt class="descname">setLayout</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to move the UV pieces, after cuts are applied: 0 No move is applied. 1 Layout the pieces along the U axis. 2 Layout the pieces in a square shape.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setLayoutMethod">
+<tt class="descname">setLayoutMethod</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setLayoutMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which layout method to use: 0 Block Stacking. 1 Shape Stacking.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setPercentageSpace">
+<tt class="descname">setPercentageSpace</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setPercentageSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>When layout is set to square, this value is a percentage of the texture area which is added around each UV piece. It can be used to ensure each UV piece uses different pixels in the texture. Maximum value is 5 percent.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setRotateForBestFit">
+<tt class="descname">setRotateForBestFit</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setRotateForBestFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>0 No rotation is applied. 1 Only allow 90 degree rotations. 2 Allow free rotations.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setScale">
+<tt class="descname">setScale</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to scale the pieces, after move and cuts: 0 No scale is applied. 1 Uniform scale to fit in unit square. 2 Non proportional scale to fit in unit square.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setSeparate">
+<tt class="descname">setSeparate</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setSeparate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which UV edges should be cut: 0 No cuts. 1 Cut only along folds. 2 Make all necessary cuts to avoid all intersections.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SubdLayoutUV.setWorldSpace">
+<tt class="descname">setWorldSpace</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SubdLayoutUV.setWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, performs the operation in world space coordinates as opposed to local space.                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.subdLayoutUV</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.SubdHierBlind.html"
+                        title="previous chapter">pymel.core.nodetypes.SubdHierBlind</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.SubdMapCut.html"
+                        title="next chapter">pymel.core.nodetypes.SubdMapCut</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.SubdLayoutUV.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SubdMapCut.html" title="pymel.core.nodetypes.SubdMapCut"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SubdHierBlind.html" title="pymel.core.nodetypes.SubdHierBlind"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

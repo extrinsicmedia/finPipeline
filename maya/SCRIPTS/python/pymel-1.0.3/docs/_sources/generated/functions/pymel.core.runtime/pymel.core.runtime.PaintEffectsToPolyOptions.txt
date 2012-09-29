@@ -1,0 +1,6 @@
+pymel.core.runtime.PaintEffectsToPolyOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PaintEffectsToPolyOptions

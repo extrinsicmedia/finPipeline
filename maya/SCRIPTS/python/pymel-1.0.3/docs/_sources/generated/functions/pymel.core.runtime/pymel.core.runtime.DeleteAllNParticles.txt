@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllNParticles
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllNParticles

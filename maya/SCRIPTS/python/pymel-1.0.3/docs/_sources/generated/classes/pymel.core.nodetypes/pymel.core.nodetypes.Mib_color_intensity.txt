@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_color_intensity
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_color_intensity
+    :parts: 1
+
+.. autoclass:: Mib_color_intensity
+    :members:
+    :undoc-members:

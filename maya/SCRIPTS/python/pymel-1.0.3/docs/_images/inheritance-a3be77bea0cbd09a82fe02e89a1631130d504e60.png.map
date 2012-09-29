@@ -1,0 +1,11 @@
+<map id="inheritanced647b383e7" name="inheritanced647b383e7">
+<area shape="rect" href="#pymel.core.nodetypes.CurveVarGroup" title="CurveVarGroup" alt="" coords="28,315,129,339"/>
+<area shape="rect" href="pymel.core.nodetypes.BaseGeometryVarGroup.html#pymel.core.nodetypes.BaseGeometryVarGroup" title="BaseGeometryVarGroup" alt="" coords="5,276,152,300"/>
+<area shape="rect" href="pymel.core.nodetypes.Transform.html#pymel.core.nodetypes.Transform" title="Transform" alt="" coords="41,237,116,261"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="33,5,124,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="43,44,115,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="35,83,123,107"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="29,121,128,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="43,160,115,184"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="43,199,115,223"/>
+</map>

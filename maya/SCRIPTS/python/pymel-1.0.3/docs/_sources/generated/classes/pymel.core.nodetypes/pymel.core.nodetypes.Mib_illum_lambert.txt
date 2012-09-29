@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_illum_lambert
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_illum_lambert
+    :parts: 1
+
+.. autoclass:: Mib_illum_lambert
+    :members:
+    :undoc-members:

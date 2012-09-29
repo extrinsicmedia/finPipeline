@@ -1,0 +1,6 @@
+pymel.core.modeling.tolerance
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.tolerance

@@ -1,0 +1,6 @@
+pymel.core.general.color
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.color

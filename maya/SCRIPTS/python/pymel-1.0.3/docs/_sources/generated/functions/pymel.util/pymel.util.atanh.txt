@@ -1,0 +1,6 @@
+pymel.util.atanh
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.atanh

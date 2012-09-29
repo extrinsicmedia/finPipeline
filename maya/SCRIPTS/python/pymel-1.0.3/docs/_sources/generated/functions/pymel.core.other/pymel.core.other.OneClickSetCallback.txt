@@ -1,0 +1,6 @@
+pymel.core.other.OneClickSetCallback
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.OneClickSetCallback

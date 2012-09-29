@@ -1,0 +1,6 @@
+pymel.core.runtime.SmoothingLevelDecrease
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SmoothingLevelDecrease

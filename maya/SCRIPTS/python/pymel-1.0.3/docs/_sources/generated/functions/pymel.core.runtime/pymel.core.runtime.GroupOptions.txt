@@ -1,0 +1,6 @@
+pymel.core.runtime.GroupOptions
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.GroupOptions

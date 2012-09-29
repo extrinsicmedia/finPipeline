@@ -1,0 +1,6 @@
+pymel.core.general.listFuture
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.listFuture

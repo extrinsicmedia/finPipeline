@@ -1,0 +1,11 @@
+pymel.util.metaStatic
+=====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: metaStatic
+    :parts: 1
+
+.. autoclass:: metaStatic
+    :members:
+    :undoc-members:

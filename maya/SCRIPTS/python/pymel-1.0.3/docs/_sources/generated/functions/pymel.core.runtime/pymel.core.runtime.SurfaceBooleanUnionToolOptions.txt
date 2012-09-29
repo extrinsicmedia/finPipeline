@@ -1,0 +1,6 @@
+pymel.core.runtime.SurfaceBooleanUnionToolOptions
+=================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SurfaceBooleanUnionToolOptions

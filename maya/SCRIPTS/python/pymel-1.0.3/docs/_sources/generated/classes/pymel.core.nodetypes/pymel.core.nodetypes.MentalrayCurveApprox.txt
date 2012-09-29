@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayCurveApprox
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayCurveApprox
+    :parts: 1
+
+.. autoclass:: MentalrayCurveApprox
+    :members:
+    :undoc-members:

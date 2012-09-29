@@ -1,0 +1,6 @@
+pymel.core.runtime.geometryAppendCacheOpt
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.geometryAppendCacheOpt

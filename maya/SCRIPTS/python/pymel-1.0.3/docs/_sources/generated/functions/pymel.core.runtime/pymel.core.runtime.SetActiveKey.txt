@@ -1,0 +1,6 @@
+pymel.core.runtime.SetActiveKey
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetActiveKey

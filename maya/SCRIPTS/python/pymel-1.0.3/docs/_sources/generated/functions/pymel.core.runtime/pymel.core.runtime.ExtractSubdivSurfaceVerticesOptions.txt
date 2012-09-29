@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtractSubdivSurfaceVerticesOptions
+======================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtractSubdivSurfaceVerticesOptions

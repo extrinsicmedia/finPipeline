@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowFollicles
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowFollicles

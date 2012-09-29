@@ -1,0 +1,6 @@
+pymel.core.other.cMuscleCache
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.cMuscleCache

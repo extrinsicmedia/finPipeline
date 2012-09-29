@@ -1,0 +1,6 @@
+pymel.core.runtime.HideCameraManipulators
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideCameraManipulators

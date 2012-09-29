@@ -1,0 +1,6 @@
+pymel.core.modeling.extendCurve
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.extendCurve

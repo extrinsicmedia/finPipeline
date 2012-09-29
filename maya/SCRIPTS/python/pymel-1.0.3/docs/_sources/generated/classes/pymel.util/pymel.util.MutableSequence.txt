@@ -1,0 +1,11 @@
+pymel.util.MutableSequence
+==========================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: MutableSequence
+    :parts: 1
+
+.. autoclass:: MutableSequence
+    :members:
+    :undoc-members:

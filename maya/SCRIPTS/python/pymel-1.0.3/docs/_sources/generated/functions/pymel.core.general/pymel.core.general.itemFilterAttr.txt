@@ -1,0 +1,6 @@
+pymel.core.general.itemFilterAttr
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.itemFilterAttr

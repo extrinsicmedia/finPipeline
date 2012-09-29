@@ -1,0 +1,6 @@
+pymel.core.runtime.AddAuxEffector
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddAuxEffector

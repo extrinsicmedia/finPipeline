@@ -1,0 +1,6 @@
+pymel.core.animation.jointLattice
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.jointLattice

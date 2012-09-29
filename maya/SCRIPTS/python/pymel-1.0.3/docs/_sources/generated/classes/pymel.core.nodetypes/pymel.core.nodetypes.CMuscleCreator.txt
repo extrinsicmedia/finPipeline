@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleCreator
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleCreator
+    :parts: 1
+
+.. autoclass:: CMuscleCreator
+    :members:
+    :undoc-members:

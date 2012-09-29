@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.pasteKey &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.pathAnimation" href="pymel.core.animation.pathAnimation.html" />
+    <link rel="prev" title="pymel.core.animation.parentConstraint" href="pymel.core.animation.parentConstraint.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.pathAnimation.html" title="pymel.core.animation.pathAnimation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.parentConstraint.html" title="pymel.core.animation.parentConstraint"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-pastekey">
+<h1>pymel.core.animation.pasteKey<a class="headerlink" href="#pymel-core-animation-pastekey" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.pasteKey">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">pasteKey</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.pasteKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pasteKey command pastes curve segment hierarchies from the clipboard onto other objects or curves. If the object
+hierarchy from which the curve segments were copied or cut does not match the object hierarchy being pasted to, pasteKey
+will paste as much as it can match in the hierarchy.  If animation from only one object is on the clipboard, it will be
+pasted to each of the target objects. If animation from more than one object is on the clipboard, selection list order
+determines what animation is pasted to which object. Valid operations include: One attribute to one or more attributes
+(Clipboard animation is pasted onto all target attributes.One attribute to one or more objects (Clipboard animation
+pasted onto target object, when attribute names match.)Many attributes to one or more objectsClipboard animation pasted
+onto targets when attribute names match.TbaseKeySetCmd.h The way the keyset clipboard will be pasted to the specified
+object&#8217;s attributes depends on the paste -optionspecified. Each of these options below will be explained using an
+example. For all the explanations, let us assume that there is a curve segment with 20 frames of animation on the keyset
+clipboard (you can put curve segments onto the clipboard using the cutKeyor copyKeycommands). We will call the animation
+curve that we are pasting to the target curve: pasteKey -time 5 -option insert1. Shift all keyframes on the target curve
+after time 5 to the right by 20 frames (to make room for the 20-frame clipboard segment). 2. Paste the 20-frame
+clipboard segment starting at time 5. pasteKey -time 5:25-option replace1. Remove all keys on the target curve from 5 to
+25. 2. Paste the 20-frame clipboard curve at time 5. pasteKey -option replaceCompletely1. Remove all keys on the target
+curve. 2. Paste the 20-frame clipboard curve, preserving the clipboard curve&#8217;s original keyframe times. pasteKey -time 5
+-option merge1.The clipboard curve segment will be pasted starting at time 5 for its full 20-frame range until frame 25.
+2. If a keyframe on the target curve has the same time as a keyframe on the clipboard curve, it is overwritten.
+Otherwise, any keys that existed in the 5:25 range before the paste, will remain untouched pasteKey -time 3:10-option
+scaleInsert1. Shift all keyframes on the target curve after time 3 to the right by 7 frames (to clear the range 3:10 to
+paste in) 2. The clipboard curve segment will be scaled to fit the specified time range (i.e. the 20 frames on the
+clipboard will be scaled to fit into 7 frames), and then pasted into the range 3:10. pasteKey -time 3:10-option
+scaleReplace1. Any existing keyframes in the target curve in the range 3:10 are removed. 2. The clipboard curve segment
+will be scaled to fit the specified time range (i.e. the 20 frames on the clipboard will be scaled to fit into 7
+frames), and then pasted into the range 3:10. pasteKey -time 3:10-option scaleMerge1. The clipboard curve segment will
+be scaled to fit the specified time range (i.e. the 20 frames on the clipboard will be scaled to fit into 7 frames). 2.
+If there are keys on the target curve at the same time as keys on the clipboard curve, they are overwritten. Otherwise,
+keyframes on the target curve that existed in the 3:10 range before the paste, will remain untouched. pasteKey -time
+3:10-option fitInsert1. Shift all the keyframes on the target curve after time 3 to the right by 7 frames (to clear the
+range 3:10 to paste in) 2. The first 7 frames of the clipboard curve segment will be pasted into the range 3:10.
+pasteKey -time 3:10-option fitReplace1. Any existing frames in the target curve in the range 3:10 are removed. 2. The
+first 7 frames of the clipboard curve segment will be pasted into the range 3:10. pasteKey -time 3:10-option fitMerge1.
+The first 7 frames of the clipboard curve segment will be pasted into the range 3:10. 2. If there are keys on the target
+curve at the same time as keys on the clipboard curve, they are overwritten. Otherwise, keyframes on the target curve
+that existed in the 3:10 range before the paste, will remain untouched.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>animation (an)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Where this command should get the animation to act on.  Valid values are objects,keys,and keysOrObjectsDefault: keysOrObjects.(See Description for details.)
+Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>attribute (at)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List of attributes to select</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>clipboard (cb)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies the clipboard from which animation is pasted. Valid clipboards are apiand anim.  The default clipboard is: anim</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>connect (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">When true, connect the source curve with the destination curve&#8217;s value at the paste time. (This has the effect of shifting the clipboard curve in value to connect
+with the destination curve.) False preserves the source curve&#8217;s original keyframe values. Default is false.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>copies (cp)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The number of times to paste the source curve.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>float (f)</strong></td>
+<td><em>floatrange</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">value uniquely representing a non-time-based key (or key range) on a time-based animCurve.  Valid floatRange include single values (-f 10) or a string with a
+lower and upper bound, separated by a colon (-f 10:20</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>floatOffset (fo)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much to offset the pasted keys in time (for non-time-input animation curves).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>includeUpperBound (iub)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">When the -t/time or -f/float flags represent a range of keys, this flag determines whether the keys at the upper bound of the range are included in the keyset.
+Default value: true.  This flag is only valid when the argument to the -t/time flag is a time range with a lower and upper bound.  (When used with the
+pasteKeycommand, this flag refers only to the time range of the target curve that is replaced, when using options such as replace,fitReplace,or scaleReplace.This
+flag has no effect on the curve pasted from the clipboard.)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>index (index)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>index of a key on an animCurve</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>option (o)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Valid values are insert, replace, replaceCompletely, merge, scaleInsert,scaleReplace, scaleMerge, fitInsert, fitReplace, and fitMerge. The default paste option
+is: insert.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>time (t)</strong></td>
+<td><em>timerange</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">time uniquely representing a key (or key range) on a time-based animCurve.  Valid timeRanges include single values (-t 10) or a string with a lower and upper
+bound, separated by a colon (-t 10:20</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>timeOffset (to)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much to offset the pasted keys in time (for time-input animation curves).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>valueOffset (vo)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much to offset the pasted keys in value.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.pasteKey</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Paste keyframes onto nurbsSphere1&#39;s translateX attribute at time 10</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">pasteKey</span><span class="p">(</span> <span class="s">&#39;nurbsSphere1&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">attribute</span><span class="o">=</span><span class="s">&#39;translateX&#39;</span> <span class="p">)</span>
+
+<span class="c"># Paste to all active objects, preserving the timing from the clipboard.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">pasteKey</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.parentConstraint.html"
+                        title="previous chapter">pymel.core.animation.parentConstraint</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.pathAnimation.html"
+                        title="next chapter">pymel.core.animation.pathAnimation</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.pasteKey.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.pathAnimation.html" title="pymel.core.animation.pathAnimation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.parentConstraint.html" title="pymel.core.animation.parentConstraint"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

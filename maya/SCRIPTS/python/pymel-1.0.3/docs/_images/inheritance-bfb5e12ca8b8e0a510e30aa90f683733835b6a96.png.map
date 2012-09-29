@@ -1,0 +1,9 @@
+<map id="inheritanceba77712f08" name="inheritanceba77712f08">
+<area shape="rect" href="#pymel.core.nodetypes.PolyPlatonicSolid" title="PolyPlatonicSolid" alt="" coords="5,238,115,262"/>
+<area shape="rect" href="pymel.core.nodetypes.PolyPrimitive.html#pymel.core.nodetypes.PolyPrimitive" title="PolyPrimitive" alt="" coords="16,199,104,223"/>
+<area shape="rect" href="pymel.core.nodetypes.PolyCreator.html#pymel.core.nodetypes.PolyCreator" title="PolyCreator" alt="" coords="20,160,100,184"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="15,6,105,30"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="24,44,96,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="16,83,104,107"/>
+<area shape="rect" href="pymel.core.nodetypes.PolyBase.html#pymel.core.nodetypes.PolyBase" title="PolyBase" alt="" coords="24,122,96,146"/>
+</map>

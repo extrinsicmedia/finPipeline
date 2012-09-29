@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.TransferAttributes &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.Transform" href="pymel.core.nodetypes.Transform.html" />
+    <link rel="prev" title="pymel.core.nodetypes.ToonLineAttributes" href="pymel.core.nodetypes.ToonLineAttributes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Transform.html" title="pymel.core.nodetypes.Transform"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.ToonLineAttributes.html" title="pymel.core.nodetypes.ToonLineAttributes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-transferattributes">
+<h1>pymel.core.nodetypes.TransferAttributes<a class="headerlink" href="#pymel-core-nodetypes-transferattributes" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-f8b37a78b3697fa833f873e638189891e5e25cd4.png" alt="Inheritance diagram of TransferAttributes" usemap="#inheritance736817ca6c" class="inheritance"/>
+<map id="inheritance736817ca6c" name="inheritance736817ca6c">
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="28,5,119,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="37,44,109,68"/>
+<area shape="rect" href="pymel.core.nodetypes.WeightGeometryFilter.html#pymel.core.nodetypes.WeightGeometryFilter" title="WeightGeometryFilter" alt="" coords="5,160,141,184"/>
+<area shape="rect" href="#pymel.core.nodetypes.TransferAttributes" title="TransferAttributes" alt="" coords="16,199,131,223"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryFilter.html#pymel.core.nodetypes.GeometryFilter" title="GeometryFilter" alt="" coords="24,121,123,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="29,83,117,107"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.TransferAttributes">
+<em class="property">class </em><tt class="descname">TransferAttributes</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">transferAttributes</span></tt></p>
+<p>Samples the attributes of a source surface (first argument) and transfers them onto a target surface (second argument).</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.colorBorders">
+<tt class="descname">colorBorders</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.colorBorders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls whether color borders are preserved when transferring color data. If this is non-zero, any color borders will be mapped onto the nearest edge on the target geometry. 0 means any color borders will be smoothly blended onto the vertices of the target geometry.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.flipUVs">
+<tt class="descname">flipUVs</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.flipUVs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls how sampled UV data is flipped before being transferred to the target. 0 means no flipping; 1 means UV data is flipped in the U direction; 2 means UV data is flipped in the V direction; and 3 means it is flipped in both directions. In conjunction with mirroring, this allows the creation of symmetric UV mappings (e.g. the left hand side of the character on one side of the UV map, the right hand side on the other).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.matchChoice">
+<tt class="descname">matchChoice</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.matchChoice" title="Permalink to this definition">¶</a></dt>
+<dd><p>When using topological component matching, selects between possible matches. If the meshes involved in the transfer operation have symmetries in their topologies, there may be more than one possible topological match. Maya scores the possible matches (by comparing the shapes of the meshes) and assigns them an index, starting at zero. Match zero, the default, is considered the best, but in the event that Maya chooses the wrong one, changing this value will allow the user to explore the other matches.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.sampleSpace">
+<tt class="descname">sampleSpace</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.sampleSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects which space the attribute transfer is performed in. 0 is world space, 1 is model space, 4 is component-based, 5 is topology-based. The default is world space.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.searchMethod">
+<tt class="descname">searchMethod</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.searchMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which search method to use when correlating points. 0 is closest along normal, 3 is closest to point. The default is closest to point.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.searchScaleX">
+<tt class="descname">searchScaleX</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.searchScaleX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies an optional scale that should be applied to the x-axis of the target model before transferring data. A value of 1.0 (the default) means no scaling; a value of -1.0 would indicate mirroring along the x-axis.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.searchScaleY">
+<tt class="descname">searchScaleY</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.searchScaleY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies an optional scale that should be applied to the y-axis of the target model before transferring data. A value of 1.0 (the default) means no scaling; a value of -1.0 would indicate mirroring along the y-axis.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.searchScaleZ">
+<tt class="descname">searchScaleZ</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.searchScaleZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies an optional scale that should be applied to the z-axis of the target model before transferring data. A value of 1.0 (the default) means no scaling; a value of -1.0 would indicate mirroring along the z-axis.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.transferColors">
+<tt class="descname">transferColors</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.transferColors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls color set transfer. 0 means no color sets are transferred, 1 means that a single color set (specified by sourceColorSet and targetColorSet) is transferred, and 2 means that all color sets are transferred.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.transferNormals">
+<tt class="descname">transferNormals</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.transferNormals" title="Permalink to this definition">¶</a></dt>
+<dd><p>A non-zero value indicates vertex normals should be sampled and written into user normals on the target surface.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.transferPositions">
+<tt class="descname">transferPositions</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.transferPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A non-zero value indicates vertex position should be sampled, causing the target surface to wrapto the source surface(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.TransferAttributes.transferUVs">
+<tt class="descname">transferUVs</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.TransferAttributes.transferUVs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls UV set transfer. 0 means no UV sets are transferred, 1 means that a single UV set (specified by sourceUVSet and targetUVSet) is transferred, and 2 means that all UV sets are transferred.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.transferAttributes</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.ToonLineAttributes.html"
+                        title="previous chapter">pymel.core.nodetypes.ToonLineAttributes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Transform.html"
+                        title="next chapter">pymel.core.nodetypes.Transform</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.TransferAttributes.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Transform.html" title="pymel.core.nodetypes.Transform"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.ToonLineAttributes.html" title="pymel.core.nodetypes.ToonLineAttributes"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateAmbientLightOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateAmbientLightOptions

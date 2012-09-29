@@ -1,0 +1,11 @@
+pymel.util.ItemsView
+====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: ItemsView
+    :parts: 1
+
+.. autoclass:: ItemsView
+    :members:
+    :undoc-members:

@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.modeling.projectTangent &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.modeling" href="../../pymel.core.modeling.html" />
+    <link rel="next" title="pymel.core.modeling.propMove" href="pymel.core.modeling.propMove.html" />
+    <link rel="prev" title="pymel.core.modeling.projectCurve" href="pymel.core.modeling.projectCurve.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.propMove.html" title="pymel.core.modeling.propMove"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.projectCurve.html" title="pymel.core.modeling.projectCurve"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" accesskey="U">pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-modeling-projecttangent">
+<h1>pymel.core.modeling.projectTangent<a class="headerlink" href="#pymel-core-modeling-projecttangent" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.modeling.projectTangent">
+<em class="property">static </em><tt class="descclassname">modeling.</tt><tt class="descname">projectTangent</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.modeling.projectTangent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project tangent command is used to align (for tangents) a curve to two other curves or a surface. A surface isoparm
+may be selected to define the direction (U or V) to align to. The end of the curve must intersect with these other
+objects. Curvature continuity may also be applied if required. Tangent continuity means the end of the curve is modified
+to be tangent at the point it meets the other objects. Curvature continuity means the end of the curve is modified to be
+curvature continuous as well as tangent. If the normal tangent direction is used, the curvature continuity and rotation
+do not apply. Also, curvature continuity is only available if align to a surface (not with 2 curves).</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>caching (cch)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Modifies the node caching mode. See the node documentation for more information. Note:For advanced users only.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>constructionHistory (ch)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Turn the construction history on or off</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>curvature (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Curvature continuity is on if true and off otherwise. Default:false</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>curvatureScale (cs)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Curvature scale applied to curvature of curve to align. Available if curvature option is true. Default:0.0</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>ignoreEdges (ie)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">If false, use the tangents of the trim edge curves if the surface is trimmed. If true, use the tangents of the underlying surface in the U/V directions.
+Default:false                    Advanced flags</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Name the resulting object</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>nodeState (nds)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Modifies the node state. See the node documentation for more information. Note:For advanced users only.                   Common flags</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>object (o)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Create the result, or just the dependency node</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>replaceOriginal (rpo)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Create in place(i.e., replace)                    Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>reverseTangent (rt)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Reverse the tangent direction if true and leave it the way it is if false. Default:false</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>rotate (ro)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Amount by which the tangent of the curve to align will be rotated. Available only if the normal direction (3) is not used for tangentDirection. Default:0.0</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>tangentDirection (td)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Tangent align direction type legal values: 1=u direction (of surface or use first curve), 2=v direction (of surface or use second curve), 3=normal direction (at
+point of intersection). Default:1</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>tangentScale (ts)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Tangent scale applied to tangent of curve to align. Default:1.0</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.projectTangent</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Do project tangent with curvature continuity between a curve and a</span>
+<span class="c"># nurbs plane surface</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">projectTangent</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="s">&#39;nurbsPlane1&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Do project tangent between the 3 curves and tangent align the curve</span>
+<span class="c"># with the reverse tangent of the second of the other 2 curves</span>
+<span class="c"># (i.e. with curve3)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">projectTangent</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="s">&#39;curve2&#39;</span><span class="p">,</span> <span class="s">&#39;curve3&#39;</span><span class="p">,</span> <span class="n">td</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rt</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.projectCurve.html"
+                        title="previous chapter">pymel.core.modeling.projectCurve</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.propMove.html"
+                        title="next chapter">pymel.core.modeling.propMove</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.modeling/pymel.core.modeling.projectTangent.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.propMove.html" title="pymel.core.modeling.propMove"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.projectCurve.html" title="pymel.core.modeling.projectCurve"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" >pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

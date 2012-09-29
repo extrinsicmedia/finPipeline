@@ -1,0 +1,6 @@
+pymel.core.runtime.MinimizeApplication
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MinimizeApplication

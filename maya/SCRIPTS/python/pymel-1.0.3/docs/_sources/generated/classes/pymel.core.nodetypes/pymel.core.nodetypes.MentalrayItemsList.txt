@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayItemsList
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayItemsList
+    :parts: 1
+
+.. autoclass:: MentalrayItemsList
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.uitypes.toQtMenuItem
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: uitypes.toQtMenuItem

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateVolumeLightOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateVolumeLightOptions

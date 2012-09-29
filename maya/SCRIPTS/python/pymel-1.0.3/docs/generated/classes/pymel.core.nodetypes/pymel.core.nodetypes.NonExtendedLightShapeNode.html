@@ -1,0 +1,501 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.NonExtendedLightShapeNode &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.NonLinear" href="pymel.core.nodetypes.NonLinear.html" />
+    <link rel="prev" title="pymel.core.nodetypes.NonAmbientLightShapeNode" href="pymel.core.nodetypes.NonAmbientLightShapeNode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonLinear.html" title="pymel.core.nodetypes.NonLinear"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonAmbientLightShapeNode.html" title="pymel.core.nodetypes.NonAmbientLightShapeNode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-nonextendedlightshapenode">
+<h1>pymel.core.nodetypes.NonExtendedLightShapeNode<a class="headerlink" href="#pymel-core-nodetypes-nonextendedlightshapenode" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-7dc76ececb55fac6c54ebf4af3336bac00044525.png" alt="Inheritance diagram of NonExtendedLightShapeNode" usemap="#inheritancec4ef015caf" class="inheritance"/>
+<map id="inheritancec4ef015caf" name="inheritancec4ef015caf">
+<area shape="rect" href="#pymel.core.nodetypes.NonExtendedLightShapeNode" title="NonExtendedLightShapeNode" alt="" coords="5,392,184,416"/>
+<area shape="rect" href="pymel.core.nodetypes.NonAmbientLightShapeNode.html#pymel.core.nodetypes.NonAmbientLightShapeNode" title="NonAmbientLightShapeNode" alt="" coords="7,353,183,377"/>
+<area shape="rect" href="pymel.core.nodetypes.RenderLight.html#pymel.core.nodetypes.RenderLight" title="RenderLight" alt="" coords="52,314,137,338"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="49,5,140,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="59,44,131,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="51,82,139,106"/>
+<area shape="rect" href="pymel.core.nodetypes.Shape.html#pymel.core.nodetypes.Shape" title="Shape" alt="" coords="59,237,131,261"/>
+<area shape="rect" href="pymel.core.nodetypes.Light.html#pymel.core.nodetypes.Light" title="Light" alt="" coords="59,276,131,300"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="59,198,131,222"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="45,121,144,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="59,160,131,184"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode">
+<em class="property">class </em><tt class="descname">NonExtendedLightShapeNode</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getCastSoftShadows">
+<tt class="descname">getCastSoftShadows</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getCastSoftShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;castSoftShadows&#8221; attribute of a non-extended light node. This attribute determines whether or not the light casts soft shadows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.castSoftShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapBias">
+<tt class="descname">getDepthMapBias</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;depthMapBias&#8221; attribute of a light node. This attribute represents the depth bias applied in depth map shadow computations to prevent self-shadowing artifacts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.depthMapBias</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapFilterSize">
+<tt class="descname">getDepthMapFilterSize</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapFilterSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;depthMapFilterSize&#8221; attribute of a light node. This attribute determines the size of the filter used in depth map shadow computations for the light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.depthMapFilterSize</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapFocus">
+<tt class="descname">getDepthMapFocus</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;depthMapFocus&#8221; attribute of a light node. This attribute represents the depth map&#8217;s field of view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.depthMapFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapResolution">
+<tt class="descname">getDepthMapResolution</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapResolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;depthMapResolution&#8221; attribute of a light node. This attribute determines the resolution of the depth map for this light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.depthMapResolution</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapWidthFocus">
+<tt class="descname">getDepthMapWidthFocus</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getDepthMapWidthFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;depthMapWidthFocus&#8221; attribute of a light node. This attribute is used to scale the depth map within the area of the light&#8217;s illumination.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.depthMapWidthFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getShadowRadius">
+<tt class="descname">getShadowRadius</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getShadowRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;shadowRadius&#8221; attribute of a non-extended light node. This attribute represents the radius of the light used when computing soft shadows. Higher radius values result in more extended soft shadows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.shadowRadius</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getUseDepthMapAutoFocus">
+<tt class="descname">getUseDepthMapAutoFocus</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getUseDepthMapAutoFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;useDepthMapAutoFocus&#8221; attribute of a non-extended light node. This attribute determines whether to automatically scale the depth map so that it only fills the area of the light&#8217;s illumination that contains shadow casting objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.useDepthMapAutoFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.getUseDepthMapShadows">
+<tt class="descname">getUseDepthMapShadows</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.getUseDepthMapShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;useDepthMapShadows&#8221; attribute of a non-extended light node. This attribute determines whether or not a depth map will be used in shadow computations for this light.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.useDepthMapShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setCastSoftShadows">
+<tt class="descname">setCastSoftShadows</tt><big>(</big><em>cast_soft_shadows</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setCastSoftShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;castSoftShadows&#8221; attribute of a non-extended light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>cast_soft_shadows <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setCastSoftShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapBias">
+<tt class="descname">setDepthMapBias</tt><big>(</big><em>depth_map_bias</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapBias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;depthMapBias&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>depth_map_bias <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setDepthMapBias</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapFilterSize">
+<tt class="descname">setDepthMapFilterSize</tt><big>(</big><em>depth_map_filter_size</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapFilterSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;depthMapFilterSize&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>depth_map_filter_size <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setDepthMapFilterSize</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapFocus">
+<tt class="descname">setDepthMapFocus</tt><big>(</big><em>depth_map_focus</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;depthMapFocus&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>depth_map_focus <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setDepthMapFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapResolution">
+<tt class="descname">setDepthMapResolution</tt><big>(</big><em>depth_map_resolution</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapResolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;depthMapResolution&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>depth_map_resolution <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setDepthMapResolution</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapWidthFocus">
+<tt class="descname">setDepthMapWidthFocus</tt><big>(</big><em>depth_map_width_focus</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setDepthMapWidthFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;depthMapWidthFocus&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>depth_map_width_focus <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setDepthMapWidthFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setShadowRadius">
+<tt class="descname">setShadowRadius</tt><big>(</big><em>shadow_radius</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setShadowRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;shadowRadius&#8221; attribute of a non-extended light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>shadow_radius <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setShadowRadius</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setUseDepthMapAutoFocus">
+<tt class="descname">setUseDepthMapAutoFocus</tt><big>(</big><em>use_depth_map_auto_focus</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setUseDepthMapAutoFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;useDepthMapAutoFocus&#8221; attribute of a non-extended light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>use_depth_map_auto_focus <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setUseDepthMapAutoFocus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NonExtendedLightShapeNode.setUseDepthMapShadows">
+<tt class="descname">setUseDepthMapShadows</tt><big>(</big><em>use_depth_map</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NonExtendedLightShapeNode.setUseDepthMapShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;useDepthMapShadows&#8221; attribute of a non-extended light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>use_depth_map <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNonExtendedLight.setUseDepthMapShadows</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.NonAmbientLightShapeNode.html"
+                        title="previous chapter">pymel.core.nodetypes.NonAmbientLightShapeNode</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.NonLinear.html"
+                        title="next chapter">pymel.core.nodetypes.NonLinear</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.NonExtendedLightShapeNode.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonLinear.html" title="pymel.core.nodetypes.NonLinear"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NonAmbientLightShapeNode.html" title="pymel.core.nodetypes.NonAmbientLightShapeNode"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

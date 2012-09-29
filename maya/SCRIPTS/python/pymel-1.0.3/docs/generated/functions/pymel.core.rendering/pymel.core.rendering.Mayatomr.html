@@ -1,0 +1,866 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.rendering.Mayatomr &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.rendering" href="../../pymel.core.rendering.html" />
+    <link rel="next" title="pymel.core.rendering.ambientLight" href="pymel.core.rendering.ambientLight.html" />
+    <link rel="prev" title="pymel.core.rendering.viewSet" href="pymel.core.rendering.viewSet.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.ambientLight.html" title="pymel.core.rendering.ambientLight"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.viewSet.html" title="pymel.core.rendering.viewSet"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" accesskey="U">pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-rendering-mayatomr">
+<h1>pymel.core.rendering.Mayatomr<a class="headerlink" href="#pymel-core-rendering-mayatomr" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.rendering.Mayatomr">
+<em class="property">static </em><tt class="descclassname">rendering.</tt><tt class="descname">Mayatomr</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.rendering.Mayatomr" title="Permalink to this definition">¶</a></dt>
+<dd><p>This mel command provides access to most functionalities of mental ray for maya plugin including .mi file export,
+preview and batch rendering, network rendering and shader management.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>active (a)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Translate active scene elements only to create the final scene. This includes just selected geometry, together with all shading nodes that these objects
+reference, all lights and render camera(s). This ensures that always a renderable scene is generated. This mode can be combined with the export filter. Default:
+translate whole scene</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addHosts (ah)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Add the given machine name to the host list. (Attach the given host.) Must be used after mental ray is properly initialized; after an image is rendered for
+example. For internal use only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addIncludes (ai)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Include the specified .mi file interactively. Must be used after mental ray is properly initialized; after an image is rendered for example. For internal use
+only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addLinks (al)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Links the specified shader library interactively. Must be used after mental ray is properly initialized; after an image is rendered for example. For internal use
+only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>assembly (assembly)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>assemblyRootName (asn)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>binary (bin)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Export binary .mi format (write binary vectors in object definitions). Default: off, write ascii format</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>camera (cam)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use this camera as the render camera for preview rendering. Camera shape name is expected. Default: render globals camera</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>cancel (cc)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>compression (cp)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>directory (dir)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>displayTessellation (dt)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>echo (e)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Export scene to .mi file by sending scene data to builtin mental ray and executing its echo command. Default: off</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exportFilter (xf)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This allows to remove certain types of mental ray entities from exported .mi files. The integer argument is a bit set where each bit represents a single filter
+entry. This is the complete list:valueposvalueFilterLink01FilterInclude12FilterVersion24FilterTextures38FilterObject416FilterGroup532FilterLight664FilterCamera712
+8FilterMaterial8256FilterOptions9512FilterFunction101024FilterFuncDecl112048FilterPhenDecl124096FilterUserData138192FilterInstObject1416384FilterInstGroup1532768F
+ilterInstLight1665536FilterInstCamera17131072FilterInstFunction18262144FilterRender19524288FilterCustomText201048576FilterCustomShader212097152FilterCustomPhen224
+194304The integer values in this list determine the bit position in the pattern. MEL has no bit shift operation, but instead the command: pow 2 poscan be used to
+compute the final integer value. Any combination of filter entries is supported, the final filter integer is the sum of the individual values. Example: to not
+write (cut out) &#8216;link&#8217; and &#8216;include&#8217; statements you would give Mayatomr -mi -file fileName -exportFilter 3 A convenient MEL function miExportFilterValue(string
+$entries[]) is available which calculates the final integer argument based on supplied descriptive type names, like link, include, and so on. The list of
+supported type names can be found in the file mentalrayUI.mel. Default: no filter</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exportFilterString (xfs)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the export filter using a string argument where every character in the string marks the corresponding bit position in the above pattern. Default: no filter</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exportPathNames (xp)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Export option for the file references such as : link library, include mi file, texture file, lightmap, etc. All file references can be forced to be the same with
+valuesabs-absolute rel-relative non-nopathAlternatively, the string can specify each individual file reference, with each character in the string representing a
+single file reference entry, with meaning 0-nochange 1-absolute 2-relative 3-nopath, or 0-nochange a-absolute r-relative n-nopath. The file reference entry is
+specified in this order : link library, include mi file, texture file, lightmap, light profile, output image, shadow map, finalgather map, photon map, demand load
+object mi file. Default: nochangeFor example, -xp aarrararrawill use absolute path for link libray, include file, light profile, shadow map, demand load object mi
+file, and relative path for texture file, lightmap, output image, finalgather map, photon map If the individual file reference string is not fully specified, the
+last character will be assumed for all remaining file references. So, for example, -xp aarrais equivalent to -xp aarraaaaaaFlag can have multiple arguments,
+passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exportStartFile (xsf)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Include the currently used startup file maya.rayrc into the exported .mi file. Startup file statements need not be given again from within the scene file (via
+custom text) in this case Default: off</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>file (f)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the file name and path for .mi export or .mi echo. Default: untitled</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fragmentChildDag (fcd)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">In fragment mode, additionally translate any child DAG graph of transform nodes found in the current selection. Default: translate just the selected
+object/instance</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fragmentExport (fe)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Enable fragment .mi file export. This just translates the selected nodes of any supported type. Further options allow to extend the translation to consider
+related or connected nodes as well, see below. This mode allows to create .mi files that only contain the intended piece of information, which usually results in
+non-renderable .mi files. Note, for a geometric object, the export will always contain both the object and its instance, regardless if just the shape node or its
+parent transform is selected. Default: translate whole scene</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fragmentIncomingShdrs (fis)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>In fragment mode, additionally translate shading nodes which are connected to nodes found in the current selection (driving nodes). Default: ignore connections</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fragmentMaterialAssignments (fma)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>fragmentMaterials (fem)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>In fragment mode, additionally translate attached materials for shape/transform nodes found in the current selection. Default: ignore attached materials</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>help (h)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>imageFormat (imageFormat)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>imageType (it)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>immediateModeRender (imr)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Interactive rendering only. Begins/stops mental ray immediate mode render (IPR). Can be followed by pt/pauseTuning, rg/region, rr/regionRect. If comes with query
+flag q/query, returns true if mental ray IPR is running, false otherwise. Only a subset of options will be accepted if mental ray IPR is turned on.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>init (ini)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Perform the initialization steps again for the integrated renderer, including loading startup files and redoing custom link and include commands. For internal use
+only.                          Rendering flags</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>layer (l)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Render the specified render layer. Only this render layer will be rendered, regardless of the renderable attribute value of the render layer. The layer name will
+be appended to the output image file name. The specified render layer becomes the current render layer before rendering, and remains as current render layer after
+the rendering.                       Network Rendering flags, used with other rendering flags</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>license (lic)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Obsolete flag.                    mental ray IPR flags</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>lightMap (lm)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>listDB (ldb)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>listHosts (lh)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List machine names in the host list. Must be used after mental ray is properly initialized; after an image is rendered for example. For internal use only.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listLinks (ll)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List shader libraries currently linked. Must be used after mental ray is properly initialized; after an image is rendered for example. For internal use only.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>logFile (log)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Write mental ray render messages to a file called &#8216;mentalray.log&#8217; located in the current directory. Additionally, these messages are still written to the output
+or parent shell window.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>miStream (mi)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Export scene to .mi file. Default: off</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>node (n)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>outputDir (out)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>padframe (pad)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set frame number padding (fixed field width) used to generate file name extensions during per-frame .mi file export of animations. Default: 0, no padding</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>passContributionMaps (pcm)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>passUserData (pud)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>pauseTuning (pt)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Used with imr/immediateModeRender. Pause/resume mental ray IPR. If paused, attribute changes still update the internal database.                          Export
+flags</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>perframe (pf)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Controls per-frame .mi file export of animations. Supported values are: 0 (single .mi file containing the whole animation, exploiting incremental changes), values
+greater 0 export one .mi file per frame not using incremental changes, with different naming scheme: 1 (name.ext.#), 2 (name.#.ext), 3 (name.#). Default: 0</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>phmapDir (phm)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>preview (pv)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Perform preview rendering with integrated mental ray. Only for interactive rendering. (Not for batch rendering) Cannot be specified with r/render. Default: off</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>previousView (prv)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Use render camera from a previous run for preview rendering, if no explicit camera has been given on the same command line. Default: first renderable camera found
+in the scene</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>project (prj)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the project root directory to be used by the plug-in. Affects the default output directory as well as handling of file references in project subdirectories
+not addressed with full file path, like textures. Default: none for file export, default project directory for preview</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>region (rg)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Preview render only the current region rectangle of the Maya render window. Default: render whole image</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>regionRect (rr)</strong></td>
+<td><em>int, int, int, int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">If region is enabled this sets a custom rectangular region for preview rendering. The four integer values specify the left, bottom, right, and top bounds, in this
+order. Default: render window region</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>removeHosts (rh)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Remove the given machine name from the host list. (Detach the given host.) Must be used after mental ray is properly initialized; after an image is rendered for
+example. For internal use only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>removeLinks (rl)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Unlink the specified shader library interactively. Must be used after mental ray is properly initialized; after an image is rendered for example. For internal use
+only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>render (r)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Performs rendering in batch mode with integrated mental ray. Only for batch rendering. (Not for interactive rendering) Cannot be specified with pv/preview.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>renderNoMaster (rnm)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If given it allows to render almost everything on slave machines, thus reducing the workload on the master machine (where Maya is running).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>renderNoSlaves (rns)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If given it allows to render almost everything on the master machine (where Maya is running), thus reducing the workload on the slave machines.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>renderTarget (rtg)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>renderThreads (rt)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>It allows to reduce the number of render threads used in mental ray for the current rendering. Accepts values from 1 to 4. Default: 4</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>renderVerbosity (rv)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the mental ray message verbosity level. The value can range from 0 to 6, setting the verbosity to none, fatal, error, warning, info, progress, and details,
+respectively. Default: render globals settings (warning level)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>shmapDir (shm)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>source (s)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>tabstop (tab)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the number of space characters used to indent lines in the .mi files. Default: 4</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>textureDir (tex)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>updateHosts (uh)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Reload the maya.rayhosts file and update the list of host machines (slave machines) accordingly. Must be used after mental ray is properly initialized; after an
+image is rendered for example. For internal use only.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>updateRayrc (ur)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Reload maya.rayrc file to reinitialize mental ray. For internal use only.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useLensBake (ulb)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>verbosity (v)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the plug-in message verbosity level. The value can range from 0 to 6, setting the verbosity to none, fatal, error, warning, info, progress, and details,
+respectively. Default: render globals settings (warning level)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>vertexMode (vm)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>xResolution (x)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the output image x resolution for preview rendering. Default: render globals image width</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>yResolution (y)</strong></td>
+<td><em>int</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the output image y resolution for preview rendering. Default: render globals image height</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.Mayatomr</span></tt></p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.viewSet.html"
+                        title="previous chapter">pymel.core.rendering.viewSet</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.ambientLight.html"
+                        title="next chapter">pymel.core.rendering.ambientLight</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.rendering/pymel.core.rendering.Mayatomr.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.ambientLight.html" title="pymel.core.rendering.ambientLight"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.viewSet.html" title="pymel.core.rendering.viewSet"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" >pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

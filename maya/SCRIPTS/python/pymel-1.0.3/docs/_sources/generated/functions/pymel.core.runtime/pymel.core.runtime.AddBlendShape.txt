@@ -1,0 +1,6 @@
+pymel.core.runtime.AddBlendShape
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddBlendShape

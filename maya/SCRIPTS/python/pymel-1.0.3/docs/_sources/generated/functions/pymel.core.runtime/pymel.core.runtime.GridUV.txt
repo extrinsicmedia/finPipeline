@@ -1,0 +1,6 @@
+pymel.core.runtime.GridUV
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.GridUV

@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.JointCluster &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.JointFfd" href="pymel.core.nodetypes.JointFfd.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Joint" href="pymel.core.nodetypes.Joint.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.JointFfd.html" title="pymel.core.nodetypes.JointFfd"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Joint.html" title="pymel.core.nodetypes.Joint"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-jointcluster">
+<h1>pymel.core.nodetypes.JointCluster<a class="headerlink" href="#pymel-core-nodetypes-jointcluster" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-627efb9c3e512fe302a806c53d54d8332e580844.png" alt="Inheritance diagram of JointCluster" usemap="#inheritancee5905ec5e0" class="inheritance"/>
+<map id="inheritancee5905ec5e0" name="inheritancee5905ec5e0">
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="29,83,117,107"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryFilter.html#pymel.core.nodetypes.GeometryFilter" title="GeometryFilter" alt="" coords="24,122,123,146"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="37,44,109,68"/>
+<area shape="rect" href="pymel.core.nodetypes.Cluster.html#pymel.core.nodetypes.Cluster" title="Cluster" alt="" coords="37,199,109,223"/>
+<area shape="rect" href="#pymel.core.nodetypes.JointCluster" title="JointCluster" alt="" coords="33,238,113,262"/>
+<area shape="rect" href="pymel.core.nodetypes.WeightGeometryFilter.html#pymel.core.nodetypes.WeightGeometryFilter" title="WeightGeometryFilter" alt="" coords="5,160,141,184"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="28,6,119,30"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.JointCluster">
+<em class="property">class </em><tt class="descname">JointCluster</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">jointCluster</span></tt></p>
+<p>The joint cluster command adds high-level controls to manage the cluster percentage values on a bound skin around a joint. JointClusters are one way to create smooth bending behaviour on skin when joints rotate. .                a &#8212;- aboveBound .    ____________a_________ .                a         .     Joint1     a       Joint2 .   _____________a_______    .                a              b  &#8212; belowBound .                a            b .                             b .                           b  .                           b   .                         b   Joint3 CVs/vertices between Joint1 and aaaaa (aboveBound) receive only translation/rotation/scale from Joint1. CVs vertices between aaaa and bbbb transition between translation/rotatation/scale from Joint1 and Joint2. CV2 beyand bbbbb (below bound) receive only translation/ rotation scale from Joint3.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getAboveBound">
+<tt class="descname">getAboveBound</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getAboveBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the where the drop-off begins in the direction of the bone above the joint. A value of 100 indicates the entire length of the bone. The default value is 10.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getAboveCluster">
+<tt class="descname">getAboveCluster</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getAboveCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the cluster associated with the bone above this joint.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getAboveDropoffType">
+<tt class="descname">getAboveDropoffType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getAboveDropoffType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of percentage drop-off in the direction of the bone above this joint. Valid values are linear, exponential, sineand none. Default is linear.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getAboveValue">
+<tt class="descname">getAboveValue</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getAboveValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the drop-off percentage of the joint cluster in the direction of the bone above the cluster. A value of 100 indicates the entire length of the bone. The default value is 50.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getBelowBound">
+<tt class="descname">getBelowBound</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getBelowBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies where the drop-off ends in the direction of the bone below the joint. A value of 100 indicates the entire length of the bone. The default value is 10.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getBelowCluster">
+<tt class="descname">getBelowCluster</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getBelowCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the cluster associated with this joint.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getBelowDropoffType">
+<tt class="descname">getBelowDropoffType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getBelowDropoffType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of type of percentage drop-off in the direction of the bone below this joint. Valid values are linear, exponential, sineand none. Default is linear.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getBelowValue">
+<tt class="descname">getBelowValue</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getBelowValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the drop-off percentage of the joint cluster in the direction of the joint below the cluster. A value of 100 indicates the entire length of the bone. The default value is 50.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.getDeformerTools">
+<tt class="descname">getDeformerTools</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.getDeformerTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to query for the helper nodes associated with the jointCluster.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setAboveBound">
+<tt class="descname">setAboveBound</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setAboveBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the where the drop-off begins in the direction of the bone above the joint. A value of 100 indicates the entire length of the bone. The default value is 10.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setAboveDropoffType">
+<tt class="descname">setAboveDropoffType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setAboveDropoffType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of percentage drop-off in the direction of the bone above this joint. Valid values are linear, exponential, sineand none. Default is linear.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setAboveValue">
+<tt class="descname">setAboveValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setAboveValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the drop-off percentage of the joint cluster in the direction of the bone above the cluster. A value of 100 indicates the entire length of the bone. The default value is 50.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setBelowBound">
+<tt class="descname">setBelowBound</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setBelowBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies where the drop-off ends in the direction of the bone below the joint. A value of 100 indicates the entire length of the bone. The default value is 10.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setBelowDropoffType">
+<tt class="descname">setBelowDropoffType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setBelowDropoffType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of type of percentage drop-off in the direction of the bone below this joint. Valid values are linear, exponential, sineand none. Default is linear.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.JointCluster.setBelowValue">
+<tt class="descname">setBelowValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.JointCluster.setBelowValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the drop-off percentage of the joint cluster in the direction of the joint below the cluster. A value of 100 indicates the entire length of the bone. The default value is 50.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.jointCluster</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Joint.html"
+                        title="previous chapter">pymel.core.nodetypes.Joint</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.JointFfd.html"
+                        title="next chapter">pymel.core.nodetypes.JointFfd</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.JointCluster.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.JointFfd.html" title="pymel.core.nodetypes.JointFfd"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Joint.html" title="pymel.core.nodetypes.Joint"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.runtime.HIKSetSelectionKey
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HIKSetSelectionKey

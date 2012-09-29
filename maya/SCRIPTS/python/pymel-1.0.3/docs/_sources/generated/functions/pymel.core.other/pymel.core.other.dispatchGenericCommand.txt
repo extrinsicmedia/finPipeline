@@ -1,0 +1,6 @@
+pymel.core.other.dispatchGenericCommand
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.dispatchGenericCommand

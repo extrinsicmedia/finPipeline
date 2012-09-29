@@ -1,0 +1,6 @@
+pymel.util.imag
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.imag

@@ -1,0 +1,6 @@
+pymel.core.runtime.CancelBatchRender
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CancelBatchRender

@@ -1,0 +1,6 @@
+pymel.util.round
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.round

@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.modeling.surface &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.modeling" href="../../pymel.core.modeling.html" />
+    <link rel="next" title="pymel.core.modeling.textCurves" href="pymel.core.modeling.textCurves.html" />
+    <link rel="prev" title="pymel.core.modeling.subdivDisplaySmoothness" href="pymel.core.modeling.subdivDisplaySmoothness.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.textCurves.html" title="pymel.core.modeling.textCurves"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.subdivDisplaySmoothness.html" title="pymel.core.modeling.subdivDisplaySmoothness"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" accesskey="U">pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-modeling-surface">
+<h1>pymel.core.modeling.surface<a class="headerlink" href="#pymel-core-modeling-surface" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.modeling.surface">
+<em class="property">static </em><tt class="descclassname">modeling.</tt><tt class="descname">surface</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.modeling.surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cmd creates a NURBS spline surface (rational or non rational). The surface is created by specifying control vertices
+(CV&#8217;s) and knot sequences in the U and V direction.  You cannot query the properties of the surface using this command.
+See examples below.</p>
+<dl class="docutils">
+<dt>Maya Bug Fix:</dt>
+<dd><ul class="first last simple">
+<li>name parameter only applied to transform. now applies to shape as well</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>degreeU (du)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Degree in surface U direction.  Default is degree 3.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>degreeV (dv)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Degree in surface V direction.  Default is degree 3.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>formU (fu)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The string for open is open, for closed is closedor for periodic is periodicin U.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>formV (fv)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The string for open is open, for closed is closedor for periodic is periodicin V.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>knotU (ku)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Knot value(s) in U direction.  One flag per knot value. There must be (numberOfPointsInU + degreeInU - 1) knots and the knot vector must be non-decreasing.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>knotV (kv)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Knot value(s) in V direction.  One flag per knot value. There must be (numberOfPointsInV + degreeInV - 1) knots and the knot vector must be non-decreasing.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>objectSpace (ob)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>point (p)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">To specify non rational CV with (x, y, z) values.  linearmeans that this flag can take values with units.  Note that you must specify (degree+1) surface points in
+any direction to create a visible surface span.  eg.  if the surface is degree 3 in the U direction, you must specify 4 CVs in the U direction. Points are
+specified in rows of U and columns of V.  If you want to incorporate units, add the unit name to the value, eg. -p 3.3in 5.5ft 6.6yd</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>pointWeight (pw)</strong></td>
+<td><em>float, float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">To specify rational CV with (x, y, z, w) values.  linearmeans that this flag can take values with units.  Note that you must specify (degree+1) surface points in
+any direction to create a visible surface span.  eg.  if the surface is degree 3 in the U direction, you must specify 4 CVs in the U direction. Points are
+specified in rows of U and columns of V.                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldSpace (ws)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.surface</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># This following command produces a flat, rectangular surface that is degree 3</span>
+<span class="c"># in both directions.  This means that there must be at least 4 x 4</span>
+<span class="c"># points to define the surface, since 4 is the (degree + 1).  There</span>
+<span class="c"># must be 6 knots in each direction, because the knot vector must</span>
+<span class="c"># be (number of points + degree - 1), ie. (4 points + degree 3 - 1).</span>
+<span class="c"># The CVs are specified in rows of U and columns of V, as you</span>
+<span class="c"># would read a book from left to right, up to down. ie. in this order:</span>
+<span class="c"># surface.cv[0][0] surface.cv[0][1] surface.cv[0][2] surface.cv[0][3]</span>
+<span class="c"># surface.cv[1][0] surface.cv[1][1] surface.cv[1][2] surface.cv[1][3]</span>
+<span class="c"># surface.cv[2][0] surface.cv[2][1] surface.cv[2][2] surface.cv[2][3]</span>
+<span class="c"># surface.cv[3][0] surface.cv[3][1] surface.cv[3][2] surface.cv[3][3]</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span> <span class="n">du</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ku</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">kv</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="p">((</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.16</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">))</span> <span class="p">)</span>
+<span class="c"># Result: nt.NurbsSurface(u&#39;surfaceShape1&#39;) #</span>
+
+<span class="c"># This following command produces a surface that is degree 3 and periodic in</span>
+<span class="c"># the U direction, and degree 1 in the V direction.  Notice that</span>
+<span class="c"># the first 3 pairs of points match the last 3 pairs of</span>
+<span class="c"># points, which is required for a degree 3 periodic surface.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span> <span class="n">du</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="s">&#39;periodic&#39;</span><span class="p">,</span> <span class="n">fv</span><span class="o">=</span><span class="s">&#39;open&#39;</span><span class="p">,</span> <span class="n">ku</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">kv</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">pw</span><span class="o">=</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="p">)</span>
+<span class="c"># Result: nt.NurbsSurface(u&#39;surfaceShape2&#39;) #</span>
+
+<span class="c"># This following command produces a surface that is degree 5 in both directions.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span> <span class="n">du</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">fu</span><span class="o">=</span><span class="s">&#39;open&#39;</span><span class="p">,</span> <span class="n">fv</span><span class="o">=</span><span class="s">&#39;open&#39;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">((</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span> <span class="n">ku</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">kv</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.NurbsSurface(u&#39;surfaceShape3&#39;) #</span>
+
+
+<span class="c"># How to query surface properties:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.degreeU&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 3 #</span>
+<span class="c"># Returns an integer that is the surface degree in U</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.degreeV&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 3 #</span>
+<span class="c"># Returns an integer that is the surface degree in V</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.spansU&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="c"># Returns an integer that is the # spans in U</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.spansV&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="c"># Returns an integer that is the # spans in V</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.formU&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0 #</span>
+<span class="c"># Return 0 = open, 1 = closed, 2 = periodic</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.formV&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0 #</span>
+<span class="c"># Returns 0 = open, 1 = closed, 2 = periodic</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.minValueU&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.maxValueU&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.minValueV&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.maxValueV&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1.0 #</span>
+<span class="c"># These return the minimum and maximum parameter ranges in each direction.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.cv[0][0]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: dt.Vector([-0.5, 0.0, 0.5]) #</span>
+<span class="c"># Returns the position of a CV of surface1 in local space.  If the</span>
+<span class="c"># surface is a result of construction history, use a surface info</span>
+<span class="c"># node instead to get the CV position.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surface1.cv[*][0]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: (-0.5, 0.0, 0.5) #</span>
+<span class="c"># Returns the positions of a row of CVs of surface1 in local space.</span>
+<span class="c"># If the surface is a result of construction history, use a surface info</span>
+<span class="c"># node instead to get the CV positions.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span> <span class="s">&#39;surfaceInfo&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.SurfaceInfo(u&#39;surfaceInfo1&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectAttr</span><span class="p">(</span> <span class="s">&#39;surfaceShape1.worldSpace&#39;</span><span class="p">,</span> <span class="s">&#39;surfaceInfo1.inputSurface&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;surfaceInfo1.controlPoints[*]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: (-0.5, 0.0, 0.5) #</span>
+<span class="c"># Returns the surface CVs in world space.   A surface info node can</span>
+<span class="c"># also be used to query the surface knot vectors.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.subdivDisplaySmoothness.html"
+                        title="previous chapter">pymel.core.modeling.subdivDisplaySmoothness</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.textCurves.html"
+                        title="next chapter">pymel.core.modeling.textCurves</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.modeling/pymel.core.modeling.surface.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.textCurves.html" title="pymel.core.modeling.textCurves"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.subdivDisplaySmoothness.html" title="pymel.core.modeling.subdivDisplaySmoothness"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" >pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

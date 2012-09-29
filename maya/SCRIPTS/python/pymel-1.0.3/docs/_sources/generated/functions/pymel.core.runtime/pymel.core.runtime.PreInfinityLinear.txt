@@ -1,0 +1,6 @@
+pymel.core.runtime.PreInfinityLinear
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PreInfinityLinear

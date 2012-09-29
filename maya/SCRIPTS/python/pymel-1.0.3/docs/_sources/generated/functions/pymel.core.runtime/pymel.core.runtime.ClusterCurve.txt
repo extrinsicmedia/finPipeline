@@ -1,0 +1,6 @@
+pymel.core.runtime.ClusterCurve
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ClusterCurve

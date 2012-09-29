@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateNURBSSphere
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateNURBSSphere

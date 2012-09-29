@@ -1,0 +1,6 @@
+pymel.util.sinh
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.sinh

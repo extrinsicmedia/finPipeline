@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayOptions
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayOptions
+    :parts: 1
+
+.. autoclass:: MentalrayOptions
+    :members:
+    :undoc-members:

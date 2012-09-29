@@ -1,0 +1,6 @@
+pymel.core.runtime.ColorPreferencesWindow
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ColorPreferencesWindow

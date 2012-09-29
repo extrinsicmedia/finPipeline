@@ -1,0 +1,6 @@
+pymel.core.runtime.GraphCut
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.GraphCut

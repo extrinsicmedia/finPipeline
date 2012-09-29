@@ -1,0 +1,6 @@
+pymel.core.runtime.SubdivSurfaceCleanTopology
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SubdivSurfaceCleanTopology

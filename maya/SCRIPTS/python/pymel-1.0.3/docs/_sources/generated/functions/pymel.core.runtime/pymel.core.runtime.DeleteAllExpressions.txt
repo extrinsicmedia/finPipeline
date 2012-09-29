@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllExpressions
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllExpressions

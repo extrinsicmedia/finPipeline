@@ -1,0 +1,6 @@
+pymel.versions.fullName
+=======================
+
+.. currentmodule:: pymel
+
+.. automethod:: versions.fullName

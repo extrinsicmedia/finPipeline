@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.keyframe &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.keyframeOutliner" href="pymel.core.animation.keyframeOutliner.html" />
+    <link rel="prev" title="pymel.core.animation.keyTangent" href="pymel.core.animation.keyTangent.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.keyframeOutliner.html" title="pymel.core.animation.keyframeOutliner"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.keyTangent.html" title="pymel.core.animation.keyTangent"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-keyframe">
+<h1>pymel.core.animation.keyframe<a class="headerlink" href="#pymel-core-animation-keyframe" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.keyframe">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">keyframe</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.keyframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command operates on a keyset.  A keyset is defined as a group of keys within a specified time range on one or more
+animation curves. The animation curves comprising a keyset depend on the value of the -animationflag: keysOrObjects: Any
+active keys, when no target objects or -attribute flags appear on the command line, orAll animation curves connected to
+all keyframable attributes of objects specified as the command line&#8217;s targetList, when there are no active keys.keys:
+Only act on active keys or tangents. If there are no active keys or tangents, don&#8217;t do anything. objects: Only act on
+specified objects.  If there are no objects specified, don&#8217;t do anything. Note that the -animationflag can be used to
+override the curves uniquely identified by the multi-use -attributeflag, which takes an argument of the form
+attributeName, such as translateX. Keys on animation curves are identified by either their time values or their indices.
+Times and indices can be given individually or as part of a list or range. -time 10palmeans the key at frame 10 (PAL
+format).-time 1.0sec -time 15ntsc -time 20means the keys at time 1.0 second, frame 15 (in NTSC format), and time 20 (in
+the currently defined global time unit).-time 10:20means all keys in the range from 10 to 20, inclusive, in the current
+time unit.Omitting one end of a range means go to infinity, as in the following examples: -time 10:means all keys from
+time 10 (in the current time unit) onwards.-time :10means all keys up to (and including) time 10 (in the current time
+unit).-time :is a short form to specify all keys.-index 0means the first key of each animation curve. (Indices are
+0-based.)-index 2 -index 5 -index 7means the 3rd, 6th, and 8th keys.-index 1:5means the 2nd, 3rd, 4th, 5th, and 6th keys
+of each animation curve.This command edits the time and/or value of keys of specified objects and/or parameter curves
+Unless otherwise specified by the -query flag, the command defaults to editing keyframes.</p>
+<dl class="docutils">
+<dt>Modifications:</dt>
+<dd><ul class="first last simple">
+<li>returns an empty list when the result is None</li>
+<li>if both valueChange and timeChange are queried, the result will be a list of (time,value) pairs</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>absolute (a)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Move amounts are absolute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>adjustBreakdown (abd)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>When false, moving keys will not preserve breakdown timing, when true (the default) breakdowns will be adjusted to preserve their timing relationship.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>animation (an)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Where this command should get the animation to act on.  Valid values are objects,keys,and keysOrObjectsDefault: keysOrObjects.(See Description for details.)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>attribute (at)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>List of attributes to select</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>breakdown (bd)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the breakdown state for the key.  Returns an integer.  Default is false.  The breakdown state of a key cannot be set in the same command as it is moved
+(i.e., via the -tc or -fc flags).</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>controlPoints (cp)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag explicitly specifies whether or not to include the control points of a shape (see -sflag) in the list of attributes. Default: false.  (Not valid for
+pasteKeycmd.)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>eval (ev)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Returns the value(s) of the animCurves when evaluated (without regard to input connections) at the times given by the -t/time or -f/float flags.  Cannot be used
+in combination with other query flags, and cannot be used with time ranges (-t 5:10). When no -t or -f flags appear on the command line, the evals are queried at
+the current time.  Query returns a float[].</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>float (f)</strong></td>
+<td><em>floatrange</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">value uniquely representing a non-time-based key (or key range) on a time-based animCurve.  Valid floatRange include single values (-f 10) or a string with a
+lower and upper bound, separated by a colon (-f 10:20</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>floatChange (fc)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much (with -relative) or where (with -absolute) to move keys (on non-time-input animation curves) along the x (float) axis. Returns float[] when queried.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>hierarchy (hi)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Hierarchy expansion options.  Valid values are above,below,both,and none.(Not valid for pasteKeycmd.)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>includeUpperBound (iub)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">When the -t/time or -f/float flags represent a range of keys, this flag determines whether the keys at the upper bound of the range are included in the keyset.
+Default value: true.  This flag is only valid when the argument to the -t/time flag is a time range with a lower and upper bound.  (When used with the
+pasteKeycommand, this flag refers only to the time range of the target curve that is replaced, when using options such as replace,fitReplace,or scaleReplace.This
+flag has no effect on the curve pasted from the clipboard.)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>index (index)</strong></td>
+<td><em>timeRange</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>index of a key on an animCurve</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>indexValue (iv)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Query-only flag that returns an int for the key&#8217;s index.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>keyframeCount (kc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns an int for the number of keys found for the targets.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>lastSelected (lsl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">When used in queries, this flag returns requested values for the last selected key.                       Flag can have multiple arguments, passed either as a
+tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns the names of animCurves of specified nodes, attributes or keys.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>option (o)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Valid values are move,insert,over,and segmentOver.When you movea key, the key will not cross over (in time) any keys before or after it. When you inserta key, all
+keys before or after (depending upon the -timeChange value) will be moved an equivalent amount. When you overa key, the key is allowed to move to any time (as
+long as a key is not there already). When you segmentOvera set of keys (this option only has a noticeable effect when more than one key is being moved) the first
+key (in time) and last key define a segment (unless you specify a time range). That segment is then allowed to move over other keys, and keys will be moved to
+make room for the segment.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>relative (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Move amounts are relative to a key&#8217;s current position.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>selected (sl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>When used in queries, this flag returns requested values for any active keys.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>shape (s)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Consider attributes of shapes below transforms as well, except controlPoints.  Default: true.  (Not valid for pasteKeycmd.)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>tickDrawSpecial (tds)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the special drawing state for this key when it is drawn as a tick in the timeline.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>time (t)</strong></td>
+<td><em>timerange</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">time uniquely representing a key (or key range) on a time-based animCurve.  Valid timeRanges include single values (-t 10) or a string with a lower and upper
+bound, separated by a colon (-t 10:20</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>timeChange (tc)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much (with -relative) or where (with -absolute) to move keys (on time-input animation curves) along the x (time) axis.  Returns float[] when queried.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>valueChange (vc)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>How much (with -relative) or where (with -absolute) to move keys along the y (value) axis. Returns float[] when queried.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.keyframe</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Two ways to find out how many keys there are on the</span>
+<span class="c"># paramCurve connected to surface1.translateX;</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="n">attribute</span><span class="o">=</span><span class="s">&#39;translateX&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">keyframeCount</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="s">&#39;surface1.translateX&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">keyframeCount</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Query all keyframes of object &quot;surface1&quot; within the time range 0 to 20.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">valueChange</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">timeChange</span><span class="o">=</span><span class="bp">True</span><span class="p">);</span>
+
+<span class="c"># Query just the time of the first key in the</span>
+<span class="c"># &quot;Translate X&quot; parameter curve.  Note that the indices are 0-based.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="s">&#39;surface1.translateX&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">);</span>
+
+<span class="c"># Shift all the active object&#39;s keys in the range 10-20</span>
+<span class="c"># by one (current) time unit (frame, second, etc.)</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">relative</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">timeChange</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="c"># Two ways to move all keys at time 10 of</span>
+<span class="c"># the active object to time 12.  Note that &quot;-absolute&quot;</span>
+<span class="c"># is the default.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">timeChange</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">absolute</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">timeChange</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c"># Set the 2nd keyframe of cube1&#39;s Translate X parameter</span>
+<span class="c"># curve to be 10.25 at time 1.5 seconds.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="s">&#39;surface1.translateX&#39;</span><span class="p">,</span><span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">timeChange</span><span class="o">=</span><span class="s">&#39;1.5sec&#39;</span><span class="p">,</span><span class="n">valueChange</span><span class="o">=</span><span class="mf">10.25</span><span class="p">)</span>
+
+<span class="c"># Evaluate the animCurve feeding into nurbsCone1&#39;s translateX attribute at time 3</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="s">&#39;nurbsCone1&#39;</span><span class="p">,</span><span class="n">at</span><span class="o">=</span><span class="s">&#39;tx&#39;</span><span class="p">,</span><span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="nb">eval</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c"># Query the times of the active keys on attribute translateX of nurbsCone1</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="s">&#39;nurbsCone1&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;tx&#39;</span><span class="p">,</span> <span class="n">sl</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tc</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># How many keys are selected on nurbsCone1?</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="s">&#39;nurbsCone1&#39;</span><span class="p">,</span> <span class="n">sl</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">kc</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Here&#39;s a script to print out all a cone&#39;s animCurves that have</span>
+<span class="c"># keys selected.  Each animCurve is followed by a list of times</span>
+<span class="c"># for the selected keys.  The result of this script is:</span>
+<span class="c">#     nurbsCone1_translateX: 5</span>
+<span class="c">#     nurbsCone1_translateY: 12</span>
+<span class="c">#     nurbsCone1_translateZ: 4 14</span>
+<span class="c">#</span>
+<span class="n">myCone</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">cone</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="n">myCone</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;tx&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">5</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="n">myCone</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;ty&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">10</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="n">myCone</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">14</span><span class="p">],</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;tz&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">15</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">selectKey</span><span class="p">(</span> <span class="n">t</span><span class="o">=</span><span class="p">[(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)]</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">selectKey</span><span class="p">(</span> <span class="n">animation</span><span class="o">=</span><span class="s">&#39;objects&#39;</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">nodes</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="n">myCone</span><span class="p">,</span><span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+   <span class="n">keyTimes</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="n">sl</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">tc</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+   <span class="k">print</span> <span class="s">&quot;Node: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">node</span>
+   <span class="k">print</span> <span class="n">keyTimes</span>
+
+<span class="c"># For the above sample script, the last selected key is</span>
+<span class="c"># nurbsCone1_translateZ: 14.  The following may be used to query</span>
+<span class="c"># the values for that key</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lastSelected</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lastSelected</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">timeChange</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">keyframe</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lastSelected</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">valueChange</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.keyTangent.html"
+                        title="previous chapter">pymel.core.animation.keyTangent</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.keyframeOutliner.html"
+                        title="next chapter">pymel.core.animation.keyframeOutliner</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.keyframe.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.keyframeOutliner.html" title="pymel.core.animation.keyframeOutliner"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.keyTangent.html" title="pymel.core.animation.keyTangent"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.util.arrays.inv
+=====================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arrays.inv

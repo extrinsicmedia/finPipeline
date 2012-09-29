@@ -1,0 +1,6 @@
+pymel.core.runtime.PolygonSoftenHarden
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolygonSoftenHarden

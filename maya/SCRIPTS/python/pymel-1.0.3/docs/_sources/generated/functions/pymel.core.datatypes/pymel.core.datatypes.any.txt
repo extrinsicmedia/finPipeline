@@ -1,0 +1,6 @@
+pymel.core.datatypes.any
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.any

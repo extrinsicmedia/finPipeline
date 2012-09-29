@@ -1,0 +1,6 @@
+pymel.core.runtime.DecreaseManipulatorSize
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DecreaseManipulatorSize

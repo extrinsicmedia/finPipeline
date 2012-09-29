@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectSharedColorInstances
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectSharedColorInstances

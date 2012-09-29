@@ -1,0 +1,6 @@
+pymel.core.other.repeatLast
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.repeatLast

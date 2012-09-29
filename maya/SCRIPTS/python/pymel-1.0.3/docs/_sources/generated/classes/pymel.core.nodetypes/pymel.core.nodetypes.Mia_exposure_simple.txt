@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mia_exposure_simple
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mia_exposure_simple
+    :parts: 1
+
+.. autoclass:: Mia_exposure_simple
+    :members:
+    :undoc-members:

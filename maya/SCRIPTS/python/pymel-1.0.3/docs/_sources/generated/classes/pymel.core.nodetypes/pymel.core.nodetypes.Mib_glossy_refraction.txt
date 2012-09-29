@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_glossy_refraction
+==========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_glossy_refraction
+    :parts: 1
+
+.. autoclass:: Mib_glossy_refraction
+    :members:
+    :undoc-members:

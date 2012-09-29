@@ -1,0 +1,6 @@
+pymel.util.arguments.isSequence
+===============================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arguments.isSequence

@@ -1,0 +1,6 @@
+pymel.util.decorator
+====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.decorator

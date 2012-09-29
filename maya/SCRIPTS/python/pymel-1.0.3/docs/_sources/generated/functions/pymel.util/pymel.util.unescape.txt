@@ -1,0 +1,6 @@
+pymel.util.unescape
+===================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.unescape

@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleCompIDs
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleCompIDs

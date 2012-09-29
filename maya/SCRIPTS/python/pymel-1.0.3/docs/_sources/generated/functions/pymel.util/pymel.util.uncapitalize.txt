@@ -1,0 +1,6 @@
+pymel.util.uncapitalize
+=======================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.uncapitalize

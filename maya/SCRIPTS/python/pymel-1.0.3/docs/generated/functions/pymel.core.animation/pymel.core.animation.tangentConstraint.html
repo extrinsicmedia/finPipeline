@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.tangentConstraint &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.volumeBind" href="pymel.core.animation.volumeBind.html" />
+    <link rel="prev" title="pymel.core.animation.substituteGeometry" href="pymel.core.animation.substituteGeometry.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.volumeBind.html" title="pymel.core.animation.volumeBind"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.substituteGeometry.html" title="pymel.core.animation.substituteGeometry"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-tangentconstraint">
+<h1>pymel.core.animation.tangentConstraint<a class="headerlink" href="#pymel-core-animation-tangentconstraint" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.tangentConstraint">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">tangentConstraint</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.tangentConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrain an object&#8217;s orientation based on the tangent of the target curve[s] at the closest point[s] to the object. A
+tangentConstraint takes as input one or more NURBS curves (the targets) and a DAG transform node (the object).  The
+tangentConstraint orients the constrained object such that the aimVector (in the object&#8217;s local coordinate system)
+aligns in world space to combined tangent vector.  The upVector (again the the object&#8217;s local coordinate system) is
+aligned in world space with the worldUpVector.  The combined tangent vector is a weighted average of the tangent vector
+for each target curve at the point closest to the constrained object.</p>
+<dl class="docutils">
+<dt>Maya Bug Fix:</dt>
+<dd><ul class="first last simple">
+<li>when queried, angle offsets would be returned in radians, not current angle unit</li>
+</ul>
+</dd>
+<dt>Modifications:</dt>
+<dd><ul class="first last">
+<li><p class="first">added new syntax for querying the weight of a target object, by passing the constraint first:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">aimConstraint</span><span class="p">(</span> <span class="s">&#39;pCube1_aimConstraint1&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span><span class="s">&#39;pSphere1&#39;</span> <span class="p">)</span>
+<span class="n">aimConstraint</span><span class="p">(</span> <span class="s">&#39;pCube1_aimConstraint1&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span><span class="p">[</span><span class="s">&#39;pSphere1&#39;</span><span class="p">,</span> <span class="s">&#39;pCylinder1&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">aimConstraint</span><span class="p">(</span> <span class="s">&#39;pCube1_aimConstraint1&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span><span class="p">[]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>aimVector (aim)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the aim vector.  This is the vector in local coordinates that points at the target.  If not given at creation time, the default value of (1.0, 0.0, 0.0) is
+used.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>layer (l)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify the name of the animation layer where the constraint should be added.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the name of the constraint node to the specified name.  Default name is constrainedObjectName_constraintType</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>remove (rm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>removes the listed target(s) from the constraint.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>targetList (tl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the list of target objects.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>upVector (u)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set local up vector.  This is the vector in local coordinates that aligns with the world up vector.  If not given at creation time, the default value of (0.0,
+1.0, 0.0) is used.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>weight (w)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the weight value for the specified target(s). If not given at creation time, the default value of 1.0 is used.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>weightAliasList (wal)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Returns the names of the attributes that control the weight of the target objects. Aliases are returned in the same order as the targets are returned by the
+targetList flag</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpObject (wuo)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the DAG object use for worldUpType objectand objectrotation. See worldUpType for greater detail. The default value is no up object, which is interpreted as
+world space.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpType (wut)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the type of the world up vector computation. The worldUpType can have one of 5 values: scene, object, objectrotation, vector, or none. If the value is scene,
+the upVector is aligned with the up axis of the scene and worldUpVector and worldUpObject are ignored. If the value is object, the upVector is aimed as closely as
+possible to the origin of the space of the worldUpObject and the worldUpVector is ignored. If the value is objectrotationthen the worldUpVector is interpreted as
+being in the coordinate space of the worldUpObject, transformed into world space and the upVector is aligned as closely as possible to the result. If the value is
+vector, the upVector is aligned with worldUpVector as closely as possible and worldUpMatrix is ignored. Finally, if the value is noneno twist calculation is
+performed by the constraint, with the resulting upVectororientation based previous orientation of the constrained object, and the great circlerotation needed to
+align the aim vector with its constraint. The default worldUpType is vector.                      Flag can have multiple arguments, passed either as a tuple or a
+list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpVector (wu)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set world up vector.  This is the vector in world coordinates that up vector should align with. See -wut/worldUpType (below)for greater detail. If not given at
+creation time, the default value of (0.0, 1.0, 0.0) is used.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.tangentConstraint</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># orients the aim vector of cube1 in it&#39;s local coordinate space,</span>
+<span class="c"># to the tangent vector of curve1 at the closest point to  cube1.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">tangentConstraint</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="s">&#39;cube1&#39;</span> <span class="p">)</span>
+
+<span class="c"># uses the average of the tangents from curve1 and curve2.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">tangentConstraint</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="s">&#39;curve2&#39;</span><span class="p">,</span> <span class="s">&#39;cube2&#39;</span><span class="p">,</span> <span class="n">w</span><span class="o">=.</span><span class="mi">1</span> <span class="p">)</span>
+
+<span class="c"># sets the weight for curve1&#39;s effect on cube2 to 10.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">tangentConstraint</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="s">&#39;cube2&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mf">10.</span> <span class="p">)</span>
+
+<span class="c"># removes curve2 from cube2&#39;s tangentConstraint</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">tangentConstraint</span><span class="p">(</span> <span class="s">&#39;curve2&#39;</span><span class="p">,</span> <span class="s">&#39;cube2&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># adds curve3 to cube2&#39;s tangent constraint with the default weight</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">tangentConstraint</span><span class="p">(</span> <span class="s">&#39;curve3&#39;</span><span class="p">,</span> <span class="s">&#39;cube2&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.substituteGeometry.html"
+                        title="previous chapter">pymel.core.animation.substituteGeometry</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.volumeBind.html"
+                        title="next chapter">pymel.core.animation.volumeBind</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.tangentConstraint.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.volumeBind.html" title="pymel.core.animation.volumeBind"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.substituteGeometry.html" title="pymel.core.animation.substituteGeometry"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

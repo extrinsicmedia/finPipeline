@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableSnapshots
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableSnapshots

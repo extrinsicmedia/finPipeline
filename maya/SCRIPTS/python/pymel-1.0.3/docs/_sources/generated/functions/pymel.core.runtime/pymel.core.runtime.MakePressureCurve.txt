@@ -1,0 +1,6 @@
+pymel.core.runtime.MakePressureCurve
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakePressureCurve

@@ -1,0 +1,11 @@
+<map id="inheritance85ab1b9335" name="inheritance85ab1b9335">
+<area shape="rect" href="pymel.core.nodetypes.Transform.html#pymel.core.nodetypes.Transform" title="Transform" alt="" coords="28,237,103,261"/>
+<area shape="rect" href="pymel.core.nodetypes.Constraint.html#pymel.core.nodetypes.Constraint" title="Constraint" alt="" coords="28,276,103,300"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="29,199,101,223"/>
+<area shape="rect" href="#pymel.core.nodetypes.TangentConstraint" title="TangentConstraint" alt="" coords="5,315,125,339"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="20,5,111,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="29,44,101,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="21,83,109,107"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="16,121,115,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="29,160,101,184"/>
+</map>

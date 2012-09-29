@@ -1,0 +1,6 @@
+pymel.core.context.rollCtx
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: context.rollCtx

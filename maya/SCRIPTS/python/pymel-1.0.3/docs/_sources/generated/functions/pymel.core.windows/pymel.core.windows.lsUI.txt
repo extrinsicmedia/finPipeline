@@ -1,0 +1,6 @@
+pymel.core.windows.lsUI
+=======================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.lsUI

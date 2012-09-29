@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateExpressionClipOptions
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateExpressionClipOptions

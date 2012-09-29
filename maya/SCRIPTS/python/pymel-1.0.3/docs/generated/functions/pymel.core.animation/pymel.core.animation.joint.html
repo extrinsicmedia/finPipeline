@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.joint &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.jointCluster" href="pymel.core.animation.jointCluster.html" />
+    <link rel="prev" title="pymel.core.animation.insertJoint" href="pymel.core.animation.insertJoint.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.jointCluster.html" title="pymel.core.animation.jointCluster"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.insertJoint.html" title="pymel.core.animation.insertJoint"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-joint">
+<h1>pymel.core.animation.joint<a class="headerlink" href="#pymel-core-animation-joint" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.joint">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">joint</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.joint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The joint command is used to create, edit, and query, joints within Maya. (The standard edit(-e) and query(-q) flags are
+used for edit and query functions). If the object is not specified, the currently selected object (dag object) will be
+used. Multiple objects are allowed only for the edit mode. The same edit flags will be applied on all the joints
+selected, except for -p without -r (set joint position in the world space). An ik handle in the object list is
+equivalent to the list of joints the ik handle commands. When -ch/children is present, all the child joints of the
+specified joints, including the joints implied by possible ik handles, will also be included. In the creation mode, a
+new joint will be created as a child of a selected transform or starts a hierarchy by itself if no transform is
+selected. An ik handle will be treated as a transform in the creation mode. The default values of the arguments are:
+-degreeOfFreedom xyz -name Joint#-position 0 0 0 -absolute -dof xyz-scale 1.0 1.0 1.0 -scaleCompensate true -orientation
+0.0 0.0 0.0 -scaleOrientation 0.0 0.0 0.0 -limitX -360 360 -limitY -360 360 -limitZ -360 360 -angleX 0.0 -angleY 0.0
+-angleZ 0.0 -stiffnessX 0.0 -stiffnessY 0.0 -stiffnessZ 0.0 -limitSwitchX no -limitSwitchY no -limitSwitchZ no
+-rotationOrder xyz Those arguments can be specified in the creation mode, editied in the edit mode (-e), or queried in
+the query mode (-q).</p>
+<dl class="docutils">
+<dt>Maya Bug Fix:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>when queried, limitSwitch*, stiffness*, and angle* flags returned lists, each with one value, instead</dt>
+<dd><p class="first last">of single values. Values are now properly unpacked</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>absolute (a)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The joint center position is in absolute world coordinates. (This is the default.)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>angleX (ax)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the x-axis angle. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>angleY (ay)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the y-axis angle. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>angleZ (az)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the z-axis angle. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>assumePreferredAngles (apa)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Meaningful only in the edit mode. It sets the joint angles to the corresponding preferred angles.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>automaticLimits (al)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Meaningful only in edit mode. It sets the joint to appropriate hinge joint with joint limits. It modifies the joint only if (a) it connects exactly to two joints
+(one parent, one child), (b) it does not lie on the line drawn between the two connected joints, and the plane it forms with the two connected joints is
+perpendicular to one of its rotation axes.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>children (ch)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>It tells the command to apply all the edit options not only to the selected joints, but also to their descendent joints in the DAG.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>component (co)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Use with the -position switch to position the joint relative to its parent (like -relative) but to compute new positions for all children joints so their world
+coordinate positions do not change.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>degreeOfFreedom (dof)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specifies the degrees of freedom for the IK. Valid strings consist of non-duplicate letters from x, y, and z. The letters in the string indicate what rotations
+are to be used by IK. The order a letter appear in the string does not matter. Examples are x, yz, xyz. When queried, this flag returns a string. Modifying dof
+will change the locking state of the corresponding rotation attributes. The rule is: if an rotation is turned into a dof, it will be unlocked if it is currently
+locked. When it is turned into a non-dof, it will be locked if it is not currently locked.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Does the named joint exist? When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitSwitchX (lsx)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use the limit the x-axis rotation? When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitSwitchY (lsy)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use the limit the y-axis rotation? When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitSwitchZ (lsz)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use the Limit the z-axis rotation? When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitX (lx)</strong></td>
+<td><em>float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set lower and upper limits on the x-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitY (ly)</strong></td>
+<td><em>float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set lower and upper limits on the y-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>limitZ (lz)</strong></td>
+<td><em>float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set lower and upper limits on the z-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies the name of the joint. When queried, this flag returns a string.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>orientJoint (oj)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The argument can be one of the following strings: xyz, yzx, zxy, zyx, yxz, xzy, none. It modifies the joint orientation and scale orientation so that the axis
+indicated by the first letter in the argument will be aligned with the vector from this joint to its first child joint. For example, if the argument is xyz, the
+x-axis will point towards the child joint. The alignment of the remaining two joint orient axes are dependent on whether or not the -sao/-secondaryAxisOrient flag
+is used. If the -sao flag is used, see the documentation for that flag for how the remaining axes are aligned. In the absence of a user specification for the
+secondary axis orientation, the rotation axis indicated by the last letter in the argument will be aligned with the vector perpendicular to first axis and the
+vector from this joint to its parent joint. The remaining axis is aligned according the right hand rule. If the argument is none, the joint orientation will be
+set to zero and its effect to the hierarchy below will be offset by modifying the scale orientation. The flag will be ignored if: A. the joint has non-zero
+rotations when the argument is not none. B. the joint does not have child joint, or the distance to the child joint is zero when the argument is not none. C.
+either flag -o or -so is set.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>orientation (o)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The joint orientation. When queried, this flag returns 3 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>position (p)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specifies the position of the center of the joint. This position may be relative to the joint&#8217;s parent or in absolute world coordinates (see -r and -a below).
+When queried, this flag returns 3 floats.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>radius (rad)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies the joint radius.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>relative (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The joint center position is relative to the joint&#8217;s parent.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>rotationOrder (roo)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The rotation order of the joint. The argument can be one of the following strings: xyz, yzx, zxy, zyx, yxz, xzy.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>scale (s)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Scale of the joint. When queried, this flag returns 3 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>scaleCompensate (sc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">It sets the scaleCompenstate attribute of the joint to the given argument. When this is true, the scale of the parent joint will be compensated before any
+rotation of this joint is applied, so that the bone to the joint is scaled but not the bones to its child joints. When queried, this flag returns an boolean.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>scaleOrientation (so)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the orientation of the coordinate axes for scaling. When queried, this flag returns 3 floats.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>secondaryAxisOrient (sao)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The argument can be one of the following strings: xup, xdown, yup, ydown, zup, zdown, none. This flag is used in conjunction with the -oj/orientJoint flag. It
+specifies the scene axis that the second axis should align with. For example, a flag combination of -oj yzx -sao yupwould result in the y-axis pointing down the
+bone, the z-axis oriented with the scene&#8217;s positive y-axis, and the x-axis oriented according to the right hand rule.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>setPreferredAngles (spa)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Meaningful only in the edit mode. It sets the preferred angles to the current joint angles.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>stiffnessX (stx)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the stiffness (from 0 to 100.0) for x-axis. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>stiffnessY (sty)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the stiffness (from 0 to 100.0) for y-axis. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>stiffnessZ (stz)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Set the stiffness (from 0 to 100.0) for z-axis. When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>zeroScaleOrient (zso)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">It sets the scale orientation to zero and compensate the change by modifing the translation and joint orientation for joint or rotation for general transform of
+all its child transformations. The flag will be ignored if the flag -so is set.                          Flag can have multiple arguments, passed either as a
+tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Create a 3-joint chain</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint1&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint2&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="s">&#39;joint1&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">zso</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oj</span><span class="o">=</span><span class="s">&#39;xyz&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint2&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint3&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="s">&#39;joint2&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">zso</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oj</span><span class="o">=</span><span class="s">&#39;xyz&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint3&#39;) #</span>
+
+<span class="c"># Create a fourth joint with z joint limits of -90 deg for</span>
+<span class="c"># the lower limit and 90 deg for the upper limit.  The</span>
+<span class="c"># joint will be positioned at (0, 0, 4) in world</span>
+<span class="c"># coordinates.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">lz</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;-90deg&#39;</span><span class="p">,</span> <span class="s">&#39;90deg&#39;</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint4&#39;) #</span>
+
+<span class="c"># Set the joint limits but leave them disabled.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lz</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;-90deg&#39;</span><span class="p">,</span> <span class="s">&#39;90deg&#39;</span><span class="p">),</span> <span class="n">lsz</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint4&#39;) #</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.insertJoint.html"
+                        title="previous chapter">pymel.core.animation.insertJoint</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.jointCluster.html"
+                        title="next chapter">pymel.core.animation.jointCluster</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.joint.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.jointCluster.html" title="pymel.core.animation.jointCluster"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.insertJoint.html" title="pymel.core.animation.insertJoint"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

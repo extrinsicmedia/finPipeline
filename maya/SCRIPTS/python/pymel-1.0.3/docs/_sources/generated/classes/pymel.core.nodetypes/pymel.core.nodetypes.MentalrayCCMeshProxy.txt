@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayCCMeshProxy
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayCCMeshProxy
+    :parts: 1
+
+.. autoclass:: MentalrayCCMeshProxy
+    :members:
+    :undoc-members:

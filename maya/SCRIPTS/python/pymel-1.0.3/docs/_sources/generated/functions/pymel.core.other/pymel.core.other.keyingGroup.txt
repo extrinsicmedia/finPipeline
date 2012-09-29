@@ -1,0 +1,6 @@
+pymel.core.other.keyingGroup
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.keyingGroup

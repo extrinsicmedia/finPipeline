@@ -1,0 +1,6 @@
+pymel.core.runtime.PreviousViewArrangement
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PreviousViewArrangement

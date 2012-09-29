@@ -1,0 +1,6 @@
+pymel.core.modeling.polyDuplicateEdge
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.polyDuplicateEdge

@@ -1,0 +1,6 @@
+pymel.core.runtime.PickWalkRight
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PickWalkRight

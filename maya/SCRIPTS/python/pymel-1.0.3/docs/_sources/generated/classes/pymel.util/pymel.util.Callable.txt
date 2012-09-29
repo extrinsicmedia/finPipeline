@@ -1,0 +1,11 @@
+pymel.util.Callable
+===================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Callable
+    :parts: 1
+
+.. autoclass:: Callable
+    :members:
+    :undoc-members:

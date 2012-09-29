@@ -1,0 +1,6 @@
+pymel.core.runtime.CopyFlexor
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CopyFlexor

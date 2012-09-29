@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePointLightOptions
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePointLightOptions

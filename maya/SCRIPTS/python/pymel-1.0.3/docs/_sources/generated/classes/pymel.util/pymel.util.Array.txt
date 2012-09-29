@@ -1,0 +1,11 @@
+pymel.util.Array
+================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Array
+    :parts: 1
+
+.. autoclass:: Array
+    :members:
+    :undoc-members:

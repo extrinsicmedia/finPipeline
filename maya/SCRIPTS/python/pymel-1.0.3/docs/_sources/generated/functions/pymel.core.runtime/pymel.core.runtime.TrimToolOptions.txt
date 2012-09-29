@@ -1,0 +1,6 @@
+pymel.core.runtime.TrimToolOptions
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TrimToolOptions

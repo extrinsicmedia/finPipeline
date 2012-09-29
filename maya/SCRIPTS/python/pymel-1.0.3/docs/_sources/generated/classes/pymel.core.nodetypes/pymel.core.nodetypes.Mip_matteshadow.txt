@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_matteshadow
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_matteshadow
+    :parts: 1
+
+.. autoclass:: Mip_matteshadow
+    :members:
+    :undoc-members:

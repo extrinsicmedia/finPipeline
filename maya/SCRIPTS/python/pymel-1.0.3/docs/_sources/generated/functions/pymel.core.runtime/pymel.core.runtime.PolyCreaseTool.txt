@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyCreaseTool
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyCreaseTool

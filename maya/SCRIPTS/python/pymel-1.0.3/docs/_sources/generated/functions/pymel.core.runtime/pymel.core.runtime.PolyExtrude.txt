@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyExtrude
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyExtrude

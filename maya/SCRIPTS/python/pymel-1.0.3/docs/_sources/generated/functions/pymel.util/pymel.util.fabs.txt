@@ -1,0 +1,6 @@
+pymel.util.fabs
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.fabs

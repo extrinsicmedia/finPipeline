@@ -1,0 +1,6 @@
+pymel.tools.mel2py.fileOnMelPath
+================================
+
+.. currentmodule:: pymel.tools
+
+.. automethod:: mel2py.fileOnMelPath

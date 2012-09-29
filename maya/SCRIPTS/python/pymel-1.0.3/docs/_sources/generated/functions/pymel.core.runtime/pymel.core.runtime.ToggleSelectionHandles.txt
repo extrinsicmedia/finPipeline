@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleSelectionHandles
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleSelectionHandles

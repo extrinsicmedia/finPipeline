@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllSounds
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllSounds

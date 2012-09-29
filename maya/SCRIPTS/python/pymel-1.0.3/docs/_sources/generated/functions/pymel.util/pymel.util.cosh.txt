@@ -1,0 +1,6 @@
+pymel.util.cosh
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.cosh

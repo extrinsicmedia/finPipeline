@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.modeling.grid &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.modeling" href="../../pymel.core.modeling.html" />
+    <link rel="next" title="pymel.core.modeling.hardenPointCurve" href="pymel.core.modeling.hardenPointCurve.html" />
+    <link rel="prev" title="pymel.core.modeling.globalStitch" href="pymel.core.modeling.globalStitch.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.hardenPointCurve.html" title="pymel.core.modeling.hardenPointCurve"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.globalStitch.html" title="pymel.core.modeling.globalStitch"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" accesskey="U">pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-modeling-grid">
+<h1>pymel.core.modeling.grid<a class="headerlink" href="#pymel-core-modeling-grid" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.modeling.grid">
+<em class="property">static </em><tt class="descclassname">modeling.</tt><tt class="descname">grid</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.modeling.grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command changes the size and spacing of lines on the ground plane displayed in the perspective and orthographic
+views. This command lets you reset the ground plane, change its size and grid line spacing, grid subdivisions and
+display options. In query mode, return type is based on queried flag.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>default (df)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Used to specify/query default values.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayAxes (da)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to display the grid axes.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayAxesBold (dab)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to accent the grid axes by drawing them with a thicker line.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayDivisionLines (ddl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to display the subdivision lines between grid lines.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayGridLines (dgl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to display the grid lines.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayOrthographicLabels (dol)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to display the grid line numeric labels in the orthographic views.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>displayPerspectiveLabels (dpl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify true to display the grid line numeric labels in the perspective view.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>divisions (d)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets the number of subdivisions between major grid lines. The default is 5. If the spacing is 5 units, setting divisions to 5 will cause division lines to appear
+1 unit apart.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>orthographicLabelPosition (olp)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The position of the grid&#8217;s numeric labels in orthographic views. Valid values are    axisand edge.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>perspectiveLabelPosition (plp)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The position of the grid&#8217;s numeric labels in perspective views. Valid values are    axisand edge.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>reset (r)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Resets the ground plane to its default values</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>size (s)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the size of the grid in linear units.  The default is 12 units.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>spacing (sp)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Sets the spacing between major grid lines in linear units. The default is 5 units.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>style (st)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is obsolete and should not be used.                     Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>toggle (tgl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Turns the ground plane display off in all windows, including orthographic windows.  Default is true.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.grid</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c">#To toggle the grid display of the grid (in all views):</span>
+<span class="n">currState</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">toggle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">toggle</span><span class="o">=</span><span class="p">(</span><span class="n">currState</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c"># To reset the grid to default values:</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># To change the grid spacing and subdivisions:</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">10</span> <span class="p">)</span>
+
+<span class="c"># To set the defaults for inches</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="s">&#39;1in&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s">&#39;1ft&#39;</span><span class="p">,</span> <span class="n">divisions</span><span class="o">=</span><span class="mi">4</span> <span class="p">)</span>
+
+<span class="c"># To change the size of the grid to 20x20, extending 10 units</span>
+<span class="c"># in each direction:</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">10</span> <span class="p">)</span>
+
+<span class="c"># To query the current size of the grid:</span>
+<span class="c"># returns a size in the current linear unit.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: 12.0 #</span>
+
+<span class="c"># A typical grid would be a grid size of 20x20, with</span>
+<span class="c"># major grid lines every 5 units, with 5 divisions between</span>
+<span class="c"># major grid lines. This be done with the following command.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">size</span><span class="o">=</span><span class="s">&#39;10cm&#39;</span><span class="p">,</span> <span class="n">sp</span><span class="o">=</span><span class="s">&#39;5.0cm&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">5</span> <span class="p">)</span>
+
+<span class="c"># Turn on numeric grid labels.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">displayPerspectiveLabels</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Display grid labels along the axes.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span> <span class="n">perspectiveLabelPosition</span><span class="o">=</span><span class="s">&#39;axis&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.globalStitch.html"
+                        title="previous chapter">pymel.core.modeling.globalStitch</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.hardenPointCurve.html"
+                        title="next chapter">pymel.core.modeling.hardenPointCurve</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.modeling/pymel.core.modeling.grid.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.hardenPointCurve.html" title="pymel.core.modeling.hardenPointCurve"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.globalStitch.html" title="pymel.core.modeling.globalStitch"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" >pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

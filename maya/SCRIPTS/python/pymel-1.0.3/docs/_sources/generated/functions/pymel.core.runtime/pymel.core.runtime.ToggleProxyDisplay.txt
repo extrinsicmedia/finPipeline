@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleProxyDisplay
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleProxyDisplay

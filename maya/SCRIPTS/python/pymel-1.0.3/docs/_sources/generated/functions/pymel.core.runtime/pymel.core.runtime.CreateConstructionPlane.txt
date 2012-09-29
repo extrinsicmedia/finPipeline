@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateConstructionPlane
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateConstructionPlane

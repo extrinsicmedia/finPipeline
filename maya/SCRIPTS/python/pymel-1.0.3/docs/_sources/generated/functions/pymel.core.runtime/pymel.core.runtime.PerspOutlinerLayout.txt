@@ -1,0 +1,6 @@
+pymel.core.runtime.PerspOutlinerLayout
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PerspOutlinerLayout

@@ -1,0 +1,6 @@
+pymel.core.animation.choice
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.choice

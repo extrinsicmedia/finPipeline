@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_refract
+================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_refract
+    :parts: 1
+
+.. autoclass:: Mib_refract
+    :members:
+    :undoc-members:

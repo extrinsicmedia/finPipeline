@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleCreaseEdges
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleCreaseEdges

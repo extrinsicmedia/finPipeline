@@ -1,0 +1,6 @@
+pymel.core.runtime.attachFluidCache
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.attachFluidCache

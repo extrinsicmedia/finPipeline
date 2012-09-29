@@ -1,0 +1,11 @@
+pymel.util.ModuleInterceptor
+============================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: ModuleInterceptor
+    :parts: 1
+
+.. autoclass:: ModuleInterceptor
+    :members:
+    :undoc-members:

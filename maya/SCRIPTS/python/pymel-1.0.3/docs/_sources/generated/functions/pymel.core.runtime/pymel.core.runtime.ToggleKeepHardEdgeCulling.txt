@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleKeepHardEdgeCulling
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleKeepHardEdgeCulling

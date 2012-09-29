@@ -1,0 +1,6 @@
+pymel.core.other.SaveHIKCharacterDefinition
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.SaveHIKCharacterDefinition

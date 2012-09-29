@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleEditPoints
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleEditPoints

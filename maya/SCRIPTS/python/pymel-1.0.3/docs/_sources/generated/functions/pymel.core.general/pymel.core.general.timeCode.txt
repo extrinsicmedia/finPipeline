@@ -1,0 +1,6 @@
+pymel.core.general.timeCode
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.timeCode

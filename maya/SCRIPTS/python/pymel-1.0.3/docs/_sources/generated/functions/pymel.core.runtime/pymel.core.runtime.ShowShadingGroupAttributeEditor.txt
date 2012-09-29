@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowShadingGroupAttributeEditor
+==================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowShadingGroupAttributeEditor

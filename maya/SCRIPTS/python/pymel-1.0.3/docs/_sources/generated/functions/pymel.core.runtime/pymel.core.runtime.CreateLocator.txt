@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateLocator
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateLocator

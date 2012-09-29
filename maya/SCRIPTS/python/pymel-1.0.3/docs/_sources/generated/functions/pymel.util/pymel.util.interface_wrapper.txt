@@ -1,0 +1,6 @@
+pymel.util.interface_wrapper
+============================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.interface_wrapper

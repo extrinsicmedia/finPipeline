@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.language.Mel &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.language" href="../../pymel.core.language.html" />
+    <link rel="next" title="pymel.core.language.MelGlobals" href="pymel.core.language.MelGlobals.html" />
+    <link rel="prev" title="pymel.core.language.Env" href="pymel.core.language.Env.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.language.MelGlobals.html" title="pymel.core.language.MelGlobals"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.language.Env.html" title="pymel.core.language.Env"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.language.html" accesskey="U">pymel.core.language</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-language-mel">
+<h1>pymel.core.language.Mel<a class="headerlink" href="#pymel-core-language-mel" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-fd2e43a805420d8269ce3be7c1a0b396ad479404.png" alt="Inheritance diagram of Mel" usemap="#inheritance174a1e0d6e" class="inheritance"/>
+<map id="inheritance174a1e0d6e" name="inheritance174a1e0d6e">
+<area shape="rect" href="#pymel.core.language.Mel" title="Mel" alt="" coords="5,6,77,30"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.language.Mel">
+<em class="property">class </em><tt class="descname">Mel</tt><a class="headerlink" href="#pymel.core.language.Mel" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class is a convenience for calling mel scripts from python, but if you are like me, you&#8217;ll quickly find that it
+is a necessity. It allows mel scripts to be called as if they were python functions: it automatically formats python
+arguments into a command string which is executed via maya.mel.eval.  An instance of this class is already created for you
+when importing pymel and is called <tt class="xref py py-obj docutils literal"><span class="pre">mel</span></tt>.</p>
+<dl class="docutils">
+<dt>default:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">maya.mel</span> <span class="kn">as</span> <span class="nn">mel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># create the proc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;global proc myScript( string $stringArg, float $floatArray[] ){}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># run the script</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;myScript(&quot;firstArg&quot;, {1.0, 2.0, 3.0})&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>pymel:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymel.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># create the proc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;global proc myScript( string $stringArg, float $floatArray[] ){}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># run the script</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">myScript</span><span class="p">(</span><span class="s">&quot;firstArg&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The above is a very simplistic example. The advantages of pymel.mel over maya.mel.eval are more readily
+apparent when we want to pass a python object to our mel procedure:</p>
+<dl class="docutils">
+<dt>default:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="kn">as</span> <span class="nn">cmds</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span> <span class="o">=</span> <span class="s">&quot;lambert1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="n">node</span> <span class="o">+</span> <span class="s">&quot;.color&quot;</span> <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s">&#39;myScript(&quot;</span><span class="si">%s</span><span class="s">&quot;,{</span><span class="si">%f</span><span class="s">,</span><span class="si">%f</span><span class="s">,</span><span class="si">%f</span><span class="s">})&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">cmds</span><span class="o">.</span><span class="n">nodeType</span><span class="p">(</span><span class="n">node</span><span class="p">),</span> <span class="n">color</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>   <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>pymel:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymel.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span> <span class="o">=</span> <span class="n">PyNode</span><span class="p">(</span><span class="s">&quot;lambert1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">myScript</span><span class="p">(</span> <span class="n">node</span><span class="o">.</span><span class="n">type</span><span class="p">(),</span> <span class="n">node</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>In this you can see how <tt class="xref py py-obj docutils literal"><span class="pre">pymel.core.mel</span></tt> allows you to pass any python object directly to your mel script as if
+it were a python function, with no need for formatting arguments.  The resulting code is much more readable.</p>
+<p>Another advantage of this class over maya.mel.eval is its handling of mel errors.  If a mel procedure fails to
+execute, you will get the specific mel error message in the python traceback, and, if they are enabled, line numbers!</p>
+<p>For example, in the example below we redeclare the myScript procedure with a line that will result in an error:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">commandEcho</span><span class="p">(</span><span class="n">lineNumbers</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># turn line numbers on</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s">global proc myScript( string $stringArg, float $floatArray[] ){</span>
+<span class="gp">... </span><span class="s">    float $donuts = `ls -type camera`;}</span>
+<span class="gp">... </span><span class="s">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">myScript</span><span class="p">(</span> <span class="s">&#39;foo&#39;</span><span class="p">,</span> <span class="p">[]</span> <span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">MelConversionError: Error during execution of MEL script: line 2</span>: <span class="n">,Cannot convert data of type string[] to type float.,</span>
+<span class="go">Calling Procedure: myScript, in Mel procedure entered interactively.</span>
+<span class="go">  myScript(&quot;foo&quot;,{})</span>
+</pre></div>
+</div>
+<p>Notice that the error raised is a <tt class="xref py py-obj docutils literal"><span class="pre">MelConversionError</span></tt>.  There are several MEL exceptions that may be raised,
+depending on the type of error encountered: <tt class="xref py py-obj docutils literal"><span class="pre">MelError</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">MelConversionError</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">MelArgumentError</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">MelSyntaxError</span></tt>, and <tt class="xref py py-obj docutils literal"><span class="pre">MelUnknownProcedureError</span></tt>.</p>
+<p>Here&#8217;s an example showing a <tt class="xref py py-obj docutils literal"><span class="pre">MelArgumentError</span></tt>, which also demonstrates the additional traceback
+information that is provided for you, including the file of the calling script.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">&#39;bar&#39;</span><span class="p">)</span> 
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">MelArgumentError: Error during execution of MEL script: Line 1.18</span>: <span class="n">,Wrong number of arguments on call to startsWith.,</span>
+<span class="go">Calling Procedure: startsWith, in file &quot;...&quot;</span>
+<span class="go">  startsWith(&quot;bar&quot;)</span>
+</pre></div>
+</div>
+<p>Lastly, an example of <tt class="xref py py-obj docutils literal"><span class="pre">MelUnknownProcedureError</span></tt></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">poop</span><span class="p">()</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">MelUnknownProcedureError: Error during execution of MEL script: line 1</span>: <span class="n">,Cannot find procedure &quot;poop&quot;.,</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To remain backward compatible with maya.cmds, all MEL exceptions inherit from <tt class="xref py py-obj docutils literal"><span class="pre">MelError</span></tt>, which in turn inherits from <tt class="xref py py-obj docutils literal"><span class="pre">RuntimeError</span></tt>.</p>
+</div>
+<dl class="staticmethod">
+<dt id="pymel.core.language.Mel.error">
+<em class="property">static </em><tt class="descname">error</tt><big>(</big><em>msg</em>, <em>showLineNumber=False</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.language.Mel.eval">
+<em class="property">classmethod </em><tt class="descname">eval</tt><big>(</big><em>cmd</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>evaluate a string as a mel command and return the result.</p>
+<dl class="docutils">
+<dt>Behaves like maya.mel.eval, with several improvements:</dt>
+<dd><ul class="first last simple">
+<li>returns pymel <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> and <tt class="xref py py-obj docutils literal"><span class="pre">Matrix</span></tt> classes</li>
+<li>when an error is encountered a <tt class="xref py py-obj docutils literal"><span class="pre">MelError</span></tt> exception is raised, along with the line number (if enabled) and exact mel error.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;attributeExists(&quot;persp&quot;, &quot;translate&quot;)&#39;</span> <span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span> <span class="s">&#39;interToUI( &quot;fooBarSpangle&quot; )&#39;</span> <span class="p">)</span>
+<span class="go">u&#39;Foo Bar Spangle&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.language.Mel.mprint">
+<em class="property">classmethod </em><tt class="descname">mprint</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.mprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>mel print command in case the python print command doesn&#8217;t cut it. i have noticed that python print does not appear
+in certain output, such as the rush render-queue manager.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.language.Mel.source">
+<em class="property">classmethod </em><tt class="descname">source</tt><big>(</big><em>script</em>, <em>language='mel'</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>use this to source mel or python scripts.
+language : &#8216;mel&#8217;, &#8216;python&#8217;</p>
+<blockquote>
+<div>When set to &#8216;python&#8217;, the source command will look for the python equivalent of this mel file, if
+it exists, and attempt to import it. This is particularly useful when transitioning from mel to python
+via mel2py, with this simple switch you can change back and forth from sourcing mel to importing python.</div></blockquote>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pymel.core.language.Mel.tokenize">
+<em class="property">static </em><tt class="descname">tokenize</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pymel.core.language.Mel.trace">
+<em class="property">static </em><tt class="descname">trace</tt><big>(</big><em>msg</em>, <em>showLineNumber=False</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pymel.core.language.Mel.warning">
+<em class="property">static </em><tt class="descname">warning</tt><big>(</big><em>msg</em>, <em>showLineNumber=False</em><big>)</big><a class="headerlink" href="#pymel.core.language.Mel.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.language.Env.html"
+                        title="previous chapter">pymel.core.language.Env</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.language.MelGlobals.html"
+                        title="next chapter">pymel.core.language.MelGlobals</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.language/pymel.core.language.Mel.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.language.MelGlobals.html" title="pymel.core.language.MelGlobals"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.language.Env.html" title="pymel.core.language.Env"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.language.html" >pymel.core.language</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

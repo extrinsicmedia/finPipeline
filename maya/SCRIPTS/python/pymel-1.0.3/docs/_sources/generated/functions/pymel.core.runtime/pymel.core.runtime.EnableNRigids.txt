@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableNRigids
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableNRigids

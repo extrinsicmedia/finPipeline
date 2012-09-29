@@ -1,0 +1,6 @@
+pymel.core.rendering.hwRender
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.hwRender

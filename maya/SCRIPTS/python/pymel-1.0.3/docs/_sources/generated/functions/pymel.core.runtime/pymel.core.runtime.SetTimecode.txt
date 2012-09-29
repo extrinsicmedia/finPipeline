@@ -1,0 +1,6 @@
+pymel.core.runtime.SetTimecode
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetTimecode

@@ -1,0 +1,644 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.SpotLight &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.Spring" href="pymel.core.nodetypes.Spring.html" />
+    <link rel="prev" title="pymel.core.nodetypes.SphericalLightLocator" href="pymel.core.nodetypes.SphericalLightLocator.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Spring.html" title="pymel.core.nodetypes.Spring"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SphericalLightLocator.html" title="pymel.core.nodetypes.SphericalLightLocator"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-spotlight">
+<h1>pymel.core.nodetypes.SpotLight<a class="headerlink" href="#pymel-core-nodetypes-spotlight" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-0066341fa733ad47b294b77a4d9cc3c14c9fcd49.png" alt="Inheritance diagram of SpotLight" usemap="#inheritance7bab82b14b" class="inheritance"/>
+<map id="inheritance7bab82b14b" name="inheritance7bab82b14b">
+<area shape="rect" href="#pymel.core.nodetypes.SpotLight" title="SpotLight" alt="" coords="59,431,131,455"/>
+<area shape="rect" href="pymel.core.nodetypes.NonExtendedLightShapeNode.html#pymel.core.nodetypes.NonExtendedLightShapeNode" title="NonExtendedLightShapeNode" alt="" coords="5,392,184,416"/>
+<area shape="rect" href="pymel.core.nodetypes.NonAmbientLightShapeNode.html#pymel.core.nodetypes.NonAmbientLightShapeNode" title="NonAmbientLightShapeNode" alt="" coords="7,353,183,377"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="49,5,140,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="59,44,131,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="51,83,139,107"/>
+<area shape="rect" href="pymel.core.nodetypes.Shape.html#pymel.core.nodetypes.Shape" title="Shape" alt="" coords="59,237,131,261"/>
+<area shape="rect" href="pymel.core.nodetypes.Light.html#pymel.core.nodetypes.Light" title="Light" alt="" coords="59,276,131,300"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="59,199,131,223"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="45,121,144,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="59,160,131,184"/>
+<area shape="rect" href="pymel.core.nodetypes.RenderLight.html#pymel.core.nodetypes.RenderLight" title="RenderLight" alt="" coords="52,315,137,339"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.SpotLight">
+<em class="property">class </em><tt class="descname">SpotLight</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">spotLight</span></tt></p>
+<p>The spotLight command is used to edit the parameters of existing spotLights, or to create new ones. The default behaviour is to create a new spotlight.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getBarnDoorAngle">
+<tt class="descname">getBarnDoorAngle</tt><big>(</big><em>which_door</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the barn door angle for the specified barn door. The barn door angles are represented by the &#8220;leftBarnDoor&#8221;, &#8220;rightBarnDoor&#8221;, &#8220;topBarnDoor&#8221;, and &#8220;bottomBarnDoor&#8221; attributes. This function retrieves the value of the appropriate attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>which_door <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MBarnDoor</span></tt></span></dt>
+<dd><p class="first">which barn door to return.</p>
+<p class="last">values: &#8216;left&#8217;, &#8216;right&#8217;, &#8216;top&#8217;, &#8216;bottom&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.barnDoorAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getBarnDoors">
+<tt class="descname">getBarnDoors</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getBarnDoors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;barnDoors&#8221; attribute of a light node. This attribute determines whether or not the light uses barn doors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.barnDoors</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getBottomBarnDoorAngle">
+<tt class="descname">getBottomBarnDoorAngle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getBottomBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getConeAngle">
+<tt class="descname">getConeAngle</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getConeAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;coneAngle&#8221; attribute of a light node. This attribute represents the angle that the spotlight cone makes with the spotlight direction vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.coneAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getDiscRadius">
+<tt class="descname">getDiscRadius</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getDiscRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>radius of the disc around the light</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getDropOff">
+<tt class="descname">getDropOff</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getDropOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;dropOff&#8221; attribute of a light node. This attribute represents the degree to which intensity of the light decreases with increasing angular distance from the light direction vector. Higher values represent more rapid intensity dropoff.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.dropOff</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getEndDistance">
+<tt class="descname">getEndDistance</tt><big>(</big><em>which_region</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getEndDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the end distance for the specified decay regions. The end distances for the spotlight&#8217;s 3 decay regions are represented by the &#8220;endDistance1&#8221;, &#8220;endDistance2&#8221;, and &#8220;endDistance3&#8221; attributes. This function retrieves the value of the appropriate attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>which_region <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MDecayRegion</span></tt></span></dt>
+<dd><p class="first">the decay region whose endDistance attribute is to be retrieved.</p>
+<p class="last">values: &#8216;first&#8217;, &#8216;second&#8217;, &#8216;third&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.endDistance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getExclusive">
+<tt class="descname">getExclusive</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getExclusive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getLeftBarnDoorAngle">
+<tt class="descname">getLeftBarnDoorAngle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getLeftBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getPenumbra">
+<tt class="descname">getPenumbra</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getPenumbra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;penumbraAngle&#8221; attribute of a light node. This attribute represents the extra angle beyond the cone angle used in soft shadow computations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.penumbraAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getRgb">
+<tt class="descname">getRgb</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getRgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>color of the light (0-1)</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getRightBarnDoorAngle">
+<tt class="descname">getRightBarnDoorAngle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getRightBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getShadowDither">
+<tt class="descname">getShadowDither</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getShadowDither" title="Permalink to this definition">¶</a></dt>
+<dd><p>dither the shadow                         Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getShadowSamples">
+<tt class="descname">getShadowSamples</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getShadowSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of shadow samples.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getSoftShadow">
+<tt class="descname">getSoftShadow</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getSoftShadow" title="Permalink to this definition">¶</a></dt>
+<dd><p>soft shadow</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getStartDistance">
+<tt class="descname">getStartDistance</tt><big>(</big><em>which_region</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getStartDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the start distance for the specified decay regions. The start distances for the spotlight&#8217;s 3 decay regions are represented by the &#8220;startDistance1&#8221;, &#8220;startDistance2&#8221;, and &#8220;startDistance3&#8221; attributes. This function retrieves the value of the appropriate attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>which_region <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MDecayRegion</span></tt></span></dt>
+<dd><p class="first">the decay region whose startDistance attribute is to be retrieved.</p>
+<p class="last">values: &#8216;first&#8217;, &#8216;second&#8217;, &#8216;third&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.startDistance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getTopBarnDoorAngle">
+<tt class="descname">getTopBarnDoorAngle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getTopBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.getUseDecayRegions">
+<tt class="descname">getUseDecayRegions</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.getUseDecayRegions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;useDecayRegions&#8221; attribute of a light node. This attribute determines whether or not the light uses decay regions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.useDecayRegions</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setBarnDoorAngle">
+<tt class="descname">setBarnDoorAngle</tt><big>(</big><em>which_door</em>, <em>barn_door_angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the appropriate barn door angle attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>which_door <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MBarnDoor</span></tt></span></dt>
+<dd><p class="first">Which barn door to return.</p>
+<p class="last">values: &#8216;left&#8217;, &#8216;right&#8217;, &#8216;top&#8217;, &#8216;bottom&#8217;</p>
+</dd>
+<dt>barn_door_angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">New value for the barn door.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setBarnDoorAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setBarnDoors">
+<tt class="descname">setBarnDoors</tt><big>(</big><em>barn_doors</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setBarnDoors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;barnDoors&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>barn_doors <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setBarnDoors</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setBottomBarnDoorAngle">
+<tt class="descname">setBottomBarnDoorAngle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setBottomBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setConeAngle">
+<tt class="descname">setConeAngle</tt><big>(</big><em>cone_angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setConeAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;coneAngle&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>cone_angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setConeAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setDiscRadius">
+<tt class="descname">setDiscRadius</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setDiscRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>radius of the disc around the light</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setDropOff">
+<tt class="descname">setDropOff</tt><big>(</big><em>drop_off</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setDropOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;dropOff&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>drop_off <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setDropOff</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setEndDistance">
+<tt class="descname">setEndDistance</tt><big>(</big><em>which_region</em>, <em>end_distance</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setEndDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the appropriate decay region end distance attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>which_region <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MDecayRegion</span></tt></span></dt>
+<dd><p class="first">the decay region whose end distance is to be set.</p>
+<p class="last">values: &#8216;first&#8217;, &#8216;second&#8217;, &#8216;third&#8217;</p>
+</dd>
+<dt>end_distance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setEndDistance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setExclusive">
+<tt class="descname">setExclusive</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setExclusive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setLeftBarnDoorAngle">
+<tt class="descname">setLeftBarnDoorAngle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setLeftBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setPenumbra">
+<tt class="descname">setPenumbra</tt><big>(</big><em>penumbra_angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setPenumbra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;penumbraAngle&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>penumbra_angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setPenumbraAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setRgb">
+<tt class="descname">setRgb</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setRgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>color of the light (0-1)</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setRightBarnDoorAngle">
+<tt class="descname">setRightBarnDoorAngle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setRightBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setRotation">
+<tt class="descname">setRotation</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setShadowDither">
+<tt class="descname">setShadowDither</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setShadowDither" title="Permalink to this definition">¶</a></dt>
+<dd><p>dither the shadow                         Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setShadowSamples">
+<tt class="descname">setShadowSamples</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setShadowSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of shadow samples.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setSoftShadow">
+<tt class="descname">setSoftShadow</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setSoftShadow" title="Permalink to this definition">¶</a></dt>
+<dd><p>soft shadow</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setStartDistance">
+<tt class="descname">setStartDistance</tt><big>(</big><em>which_region</em>, <em>start_distance</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setStartDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the appropriate decay region start distance attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>which_region <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">SpotLight.MDecayRegion</span></tt></span></dt>
+<dd><p class="first">the decay region whose start distance is to be set.</p>
+<p class="last">values: &#8216;first&#8217;, &#8216;second&#8217;, &#8216;third&#8217;</p>
+</dd>
+<dt>start_distance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setStartDistance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setTopBarnDoorAngle">
+<tt class="descname">setTopBarnDoorAngle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setTopBarnDoorAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.spotLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.SpotLight.setUseDecayRegions">
+<tt class="descname">setUseDecayRegions</tt><big>(</big><em>use_decay_regions</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.SpotLight.setUseDecayRegions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;useDecayRegions&#8221; attribute of a light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>use_decay_regions <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnSpotLight.setUseDecayRegions</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.SphericalLightLocator.html"
+                        title="previous chapter">pymel.core.nodetypes.SphericalLightLocator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Spring.html"
+                        title="next chapter">pymel.core.nodetypes.Spring</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.SpotLight.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Spring.html" title="pymel.core.nodetypes.Spring"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.SphericalLightLocator.html" title="pymel.core.nodetypes.SphericalLightLocator"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

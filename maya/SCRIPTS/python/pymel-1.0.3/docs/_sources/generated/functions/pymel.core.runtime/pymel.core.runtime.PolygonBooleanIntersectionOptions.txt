@@ -1,0 +1,6 @@
+pymel.core.runtime.PolygonBooleanIntersectionOptions
+====================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolygonBooleanIntersectionOptions

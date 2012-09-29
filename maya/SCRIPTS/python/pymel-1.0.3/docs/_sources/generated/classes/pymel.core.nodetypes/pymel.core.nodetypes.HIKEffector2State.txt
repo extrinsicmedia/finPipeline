@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKEffector2State
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKEffector2State
+    :parts: 1
+
+.. autoclass:: HIKEffector2State
+    :members:
+    :undoc-members:

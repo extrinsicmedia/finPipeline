@@ -1,0 +1,6 @@
+pymel.core.modeling.cylinder
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.cylinder

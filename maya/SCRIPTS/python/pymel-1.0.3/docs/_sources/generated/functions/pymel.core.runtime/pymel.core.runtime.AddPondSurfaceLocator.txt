@@ -1,0 +1,6 @@
+pymel.core.runtime.AddPondSurfaceLocator
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddPondSurfaceLocator

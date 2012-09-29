@@ -1,0 +1,6 @@
+pymel.core.runtime.AddAnimationOffsetOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddAnimationOffsetOptions

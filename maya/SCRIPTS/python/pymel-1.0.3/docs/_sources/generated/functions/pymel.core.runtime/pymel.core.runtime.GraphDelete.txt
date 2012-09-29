@@ -1,0 +1,6 @@
+pymel.core.runtime.GraphDelete
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.GraphDelete

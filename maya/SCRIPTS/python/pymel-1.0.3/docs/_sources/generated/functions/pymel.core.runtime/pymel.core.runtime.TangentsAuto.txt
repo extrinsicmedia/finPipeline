@@ -1,0 +1,6 @@
+pymel.core.runtime.TangentsAuto
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TangentsAuto

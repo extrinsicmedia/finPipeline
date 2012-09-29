@@ -1,0 +1,6 @@
+pymel.core.runtime.PickWalkLeft
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PickWalkLeft

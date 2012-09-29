@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowRenderingUI
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowRenderingUI

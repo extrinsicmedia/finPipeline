@@ -1,0 +1,6 @@
+pymel.core.animation.marker
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.marker

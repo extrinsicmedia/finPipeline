@@ -1,0 +1,6 @@
+pymel.core.windows.saveMenu
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.saveMenu

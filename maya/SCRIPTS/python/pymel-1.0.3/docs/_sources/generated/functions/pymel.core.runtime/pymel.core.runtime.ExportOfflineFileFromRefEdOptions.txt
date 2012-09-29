@@ -1,0 +1,6 @@
+pymel.core.runtime.ExportOfflineFileFromRefEdOptions
+====================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExportOfflineFileFromRefEdOptions

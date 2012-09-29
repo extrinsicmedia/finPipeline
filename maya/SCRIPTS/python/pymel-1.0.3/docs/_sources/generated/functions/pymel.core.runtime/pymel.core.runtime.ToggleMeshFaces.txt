@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleMeshFaces
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleMeshFaces

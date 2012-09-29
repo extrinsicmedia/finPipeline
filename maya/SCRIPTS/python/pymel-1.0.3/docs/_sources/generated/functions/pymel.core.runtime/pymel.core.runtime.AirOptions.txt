@@ -1,0 +1,6 @@
+pymel.core.runtime.AirOptions
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AirOptions

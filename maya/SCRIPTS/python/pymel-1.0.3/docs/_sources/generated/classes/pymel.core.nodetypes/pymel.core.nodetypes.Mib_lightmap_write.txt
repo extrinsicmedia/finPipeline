@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lightmap_write
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lightmap_write
+    :parts: 1
+
+.. autoclass:: Mib_lightmap_write
+    :members:
+    :undoc-members:

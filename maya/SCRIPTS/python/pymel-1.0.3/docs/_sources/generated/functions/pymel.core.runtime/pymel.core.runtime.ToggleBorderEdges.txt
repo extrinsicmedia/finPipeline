@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleBorderEdges
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleBorderEdges

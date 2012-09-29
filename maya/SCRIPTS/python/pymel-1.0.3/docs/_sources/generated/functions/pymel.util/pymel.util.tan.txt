@@ -1,0 +1,6 @@
+pymel.util.tan
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.tan

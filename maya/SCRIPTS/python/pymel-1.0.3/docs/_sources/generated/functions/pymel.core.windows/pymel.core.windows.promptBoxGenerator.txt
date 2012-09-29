@@ -1,0 +1,6 @@
+pymel.core.windows.promptBoxGenerator
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.promptBoxGenerator

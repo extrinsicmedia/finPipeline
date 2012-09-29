@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Dielectric_material
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Dielectric_material
+    :parts: 1
+
+.. autoclass:: Dielectric_material
+    :members:
+    :undoc-members:

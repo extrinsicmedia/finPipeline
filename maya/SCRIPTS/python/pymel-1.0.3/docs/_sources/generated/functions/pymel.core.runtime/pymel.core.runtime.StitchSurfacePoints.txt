@@ -1,0 +1,6 @@
+pymel.core.runtime.StitchSurfacePoints
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.StitchSurfacePoints

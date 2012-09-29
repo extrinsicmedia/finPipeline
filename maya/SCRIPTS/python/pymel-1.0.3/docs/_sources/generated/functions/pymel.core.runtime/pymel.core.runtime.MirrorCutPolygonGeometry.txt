@@ -1,0 +1,6 @@
+pymel.core.runtime.MirrorCutPolygonGeometry
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MirrorCutPolygonGeometry

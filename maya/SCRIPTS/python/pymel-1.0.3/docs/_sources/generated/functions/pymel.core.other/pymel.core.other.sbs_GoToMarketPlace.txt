@@ -1,0 +1,6 @@
+pymel.core.other.sbs_GoToMarketPlace
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_GoToMarketPlace

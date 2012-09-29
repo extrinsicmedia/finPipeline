@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateSubdivSurfaceOptions
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateSubdivSurfaceOptions

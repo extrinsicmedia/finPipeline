@@ -1,0 +1,6 @@
+pymel.core.runtime.SwapBufferCurve
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SwapBufferCurve

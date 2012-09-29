@@ -1,0 +1,6 @@
+pymel.core.general.containerProxy
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.containerProxy

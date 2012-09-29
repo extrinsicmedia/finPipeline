@@ -1,0 +1,6 @@
+pymel.core.runtime.MergeEdgeToolOptions
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MergeEdgeToolOptions

@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllNCloths
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllNCloths

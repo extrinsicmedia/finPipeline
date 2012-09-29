@@ -1,0 +1,7 @@
+import maya.cmds as cmds
+import maya
+import maya.OpenMaya as om
+
+def assembleCmd():
+    pass
+

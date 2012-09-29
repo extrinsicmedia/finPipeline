@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.NurbsCurveCV &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.NurbsCurveEP" href="pymel.core.general.NurbsCurveEP.html" />
+    <link rel="prev" title="pymel.core.general.MeshVertexFace" href="pymel.core.general.MeshVertexFace.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.NurbsCurveEP.html" title="pymel.core.general.NurbsCurveEP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.MeshVertexFace.html" title="pymel.core.general.MeshVertexFace"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-nurbscurvecv">
+<h1>pymel.core.general.NurbsCurveCV<a class="headerlink" href="#pymel-core-general-nurbscurvecv" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-dbaf8533ca2b876afb88580a8bb7edb1403a2d08.png" alt="Inheritance diagram of NurbsCurveCV" usemap="#inheritance92629e6bff" class="inheritance"/>
+<map id="inheritance92629e6bff" name="inheritance92629e6bff">
+<area shape="rect" href="pymel.core.general.Component.html#pymel.core.general.Component" title="Component" alt="" coords="69,82,152,106"/>
+<area shape="rect" href="pymel.core.general.MItComponent.html#pymel.core.general.MItComponent" title="MItComponent" alt="" coords="5,160,104,184"/>
+<area shape="rect" href="pymel.core.general.DimensionedComponent.html#pymel.core.general.DimensionedComponent" title="DimensionedComponent" alt="" coords="97,121,249,145"/>
+<area shape="rect" href="pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="75,44,147,68"/>
+<area shape="rect" href="pymel.core.general.MItComponent1D.html#pymel.core.general.MItComponent1D" title="MItComponent1D" alt="" coords="67,237,181,261"/>
+<area shape="rect" href="#pymel.core.general.NurbsCurveCV" title="NurbsCurveCV" alt="" coords="75,276,173,300"/>
+<area shape="rect" href="pymel.core.general.Component1D.html#pymel.core.general.Component1D" title="Component1D" alt="" coords="117,198,216,222"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="65,5,156,29"/>
+<area shape="rect" href="pymel.core.general.DiscreteComponent.html#pymel.core.general.DiscreteComponent" title="DiscreteComponent" alt="" coords="119,160,244,184"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.general.NurbsCurveCV">
+<em class="property">class </em><tt class="descname">NurbsCurveCV</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.getPosition">
+<tt class="descname">getPosition</tt><big>(</big><em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.getPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the position of the current CV.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">the co-oordinate system for the returned point</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.position</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.hasHistoryOnCreate">
+<tt class="descname">hasHistoryOnCreate</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.hasHistoryOnCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines if the shape was created with history.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MItCurveCV.hasHistoryOnCreate</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.isDone">
+<tt class="descname">isDone</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.isDone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns  true  if the iteration is finished, i.e. there are no more CVs to iterate on.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MItCurveCV.isDone</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.setPosition">
+<tt class="descname">setPosition</tt><big>(</big><em>pt</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.setPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the current CV to the specified point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first">pt : <tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></p>
+<p>space : <tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></p>
+<blockquote class="last">
+<div><p>values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.setPosition</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.translateBy">
+<tt class="descname">translateBy</tt><big>(</big><em>vec</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.translateBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates the current CV by the amount sepcified in  vec .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first">vec : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt></p>
+<p>space : <tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></p>
+<blockquote class="last">
+<div><p>values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.translateBy</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.NurbsCurveCV.updateCurve">
+<tt class="descname">updateCurve</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.NurbsCurveCV.updateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to signal the curve that it has been changed and needs to redraw itself.
+Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MItCurveCV.updateCurve</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.MeshVertexFace.html"
+                        title="previous chapter">pymel.core.general.MeshVertexFace</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.NurbsCurveEP.html"
+                        title="next chapter">pymel.core.general.NurbsCurveEP</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.general/pymel.core.general.NurbsCurveCV.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.NurbsCurveEP.html" title="pymel.core.general.NurbsCurveEP"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.MeshVertexFace.html" title="pymel.core.general.MeshVertexFace"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.windows.grabColor
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.grabColor

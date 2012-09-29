@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectLightsIlluminatingObject
+=================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectLightsIlluminatingObject

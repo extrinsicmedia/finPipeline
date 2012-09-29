@@ -1,0 +1,6 @@
+pymel.core.windows.control
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.control

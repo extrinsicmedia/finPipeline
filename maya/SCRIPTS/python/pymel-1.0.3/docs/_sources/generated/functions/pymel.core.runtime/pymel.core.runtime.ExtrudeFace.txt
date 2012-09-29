@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtrudeFace
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtrudeFace

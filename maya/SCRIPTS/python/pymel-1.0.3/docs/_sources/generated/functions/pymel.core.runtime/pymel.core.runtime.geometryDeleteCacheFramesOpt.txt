@@ -1,0 +1,6 @@
+pymel.core.runtime.geometryDeleteCacheFramesOpt
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.geometryDeleteCacheFramesOpt

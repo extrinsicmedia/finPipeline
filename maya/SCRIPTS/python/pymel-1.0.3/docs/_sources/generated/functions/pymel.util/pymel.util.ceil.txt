@@ -1,0 +1,6 @@
+pymel.util.ceil
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.ceil

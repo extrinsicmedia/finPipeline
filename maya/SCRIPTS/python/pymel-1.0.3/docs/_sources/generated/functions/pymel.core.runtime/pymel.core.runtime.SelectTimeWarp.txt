@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectTimeWarp
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectTimeWarp

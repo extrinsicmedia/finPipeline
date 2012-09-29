@@ -1,0 +1,6 @@
+pymel.core.runtime.geometryMergeCacheOpt
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.geometryMergeCacheOpt

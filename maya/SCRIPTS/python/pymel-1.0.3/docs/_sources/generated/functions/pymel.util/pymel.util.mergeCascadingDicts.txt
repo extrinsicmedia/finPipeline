@@ -1,0 +1,6 @@
+pymel.util.mergeCascadingDicts
+==============================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.mergeCascadingDicts

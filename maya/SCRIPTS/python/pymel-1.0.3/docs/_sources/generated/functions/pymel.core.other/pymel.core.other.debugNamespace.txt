@@ -1,0 +1,6 @@
+pymel.core.other.debugNamespace
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.debugNamespace

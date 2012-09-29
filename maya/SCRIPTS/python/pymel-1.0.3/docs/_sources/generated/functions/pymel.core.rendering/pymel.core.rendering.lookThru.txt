@@ -1,0 +1,6 @@
+pymel.core.rendering.lookThru
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.lookThru

@@ -1,0 +1,6 @@
+pymel.core.runtime.SmoothTangent
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SmoothTangent

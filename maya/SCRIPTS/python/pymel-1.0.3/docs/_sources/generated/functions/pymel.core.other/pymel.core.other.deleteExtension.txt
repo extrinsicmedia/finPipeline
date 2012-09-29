@@ -1,0 +1,6 @@
+pymel.core.other.deleteExtension
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.deleteExtension

@@ -1,0 +1,11 @@
+pymel.util.ArrayIter
+====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: ArrayIter
+    :parts: 1
+
+.. autoclass:: ArrayIter
+    :members:
+    :undoc-members:

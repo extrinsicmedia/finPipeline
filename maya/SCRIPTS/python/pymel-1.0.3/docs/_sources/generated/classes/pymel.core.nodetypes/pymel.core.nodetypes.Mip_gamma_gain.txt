@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_gamma_gain
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_gamma_gain
+    :parts: 1
+
+.. autoclass:: Mip_gamma_gain
+    :members:
+    :undoc-members:

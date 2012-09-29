@@ -1,0 +1,6 @@
+pymel.core.runtime.PickWalkIn
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PickWalkIn

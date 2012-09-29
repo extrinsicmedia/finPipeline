@@ -1,0 +1,6 @@
+pymel.core.runtime.SmokeOptions
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SmokeOptions

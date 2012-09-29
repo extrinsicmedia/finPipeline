@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleMultiCollide
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleMultiCollide
+    :parts: 1
+
+.. autoclass:: CMuscleMultiCollide
+    :members:
+    :undoc-members:

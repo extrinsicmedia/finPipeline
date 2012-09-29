@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Oversampling_lens
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Oversampling_lens
+    :parts: 1
+
+.. autoclass:: Oversampling_lens
+    :members:
+    :undoc-members:

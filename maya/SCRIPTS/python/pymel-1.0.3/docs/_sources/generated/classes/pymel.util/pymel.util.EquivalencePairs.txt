@@ -1,0 +1,11 @@
+pymel.util.EquivalencePairs
+===========================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: EquivalencePairs
+    :parts: 1
+
+.. autoclass:: EquivalencePairs
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.language.setMelGlobal
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: language.setMelGlobal

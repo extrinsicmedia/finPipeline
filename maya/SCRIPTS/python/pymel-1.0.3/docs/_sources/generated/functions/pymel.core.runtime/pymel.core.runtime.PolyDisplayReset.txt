@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyDisplayReset
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyDisplayReset

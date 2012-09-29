@@ -1,0 +1,6 @@
+pymel.core.runtime.MoveInfluence
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MoveInfluence

@@ -1,0 +1,6 @@
+pymel.core.windows.treeLister
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.treeLister

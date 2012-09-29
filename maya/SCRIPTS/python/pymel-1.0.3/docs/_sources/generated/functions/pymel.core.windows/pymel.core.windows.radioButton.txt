@@ -1,0 +1,6 @@
+pymel.core.windows.radioButton
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.radioButton

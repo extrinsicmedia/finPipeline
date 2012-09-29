@@ -1,0 +1,6 @@
+pymel.core.runtime.SoftModTool
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SoftModTool

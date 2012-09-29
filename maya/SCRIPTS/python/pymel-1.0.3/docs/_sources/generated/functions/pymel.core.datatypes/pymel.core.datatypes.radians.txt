@@ -1,0 +1,6 @@
+pymel.core.datatypes.radians
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.radians

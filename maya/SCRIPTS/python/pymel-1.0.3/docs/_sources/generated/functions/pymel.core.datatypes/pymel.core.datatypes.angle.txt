@@ -1,0 +1,6 @@
+pymel.core.datatypes.angle
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.angle

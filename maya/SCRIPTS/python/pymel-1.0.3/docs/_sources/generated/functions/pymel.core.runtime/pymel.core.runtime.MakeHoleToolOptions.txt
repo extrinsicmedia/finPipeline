@@ -1,0 +1,6 @@
+pymel.core.runtime.MakeHoleToolOptions
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakeHoleToolOptions

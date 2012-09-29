@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.VolumeLight &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.VolumeNoise" href="pymel.core.nodetypes.VolumeNoise.html" />
+    <link rel="prev" title="pymel.core.nodetypes.VolumeFog" href="pymel.core.nodetypes.VolumeFog.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.VolumeNoise.html" title="pymel.core.nodetypes.VolumeNoise"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.VolumeFog.html" title="pymel.core.nodetypes.VolumeFog"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-volumelight">
+<h1>pymel.core.nodetypes.VolumeLight<a class="headerlink" href="#pymel-core-nodetypes-volumelight" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-1de1f9d66d8dd6391b393a03e57be40851bc1f72.png" alt="Inheritance diagram of VolumeLight" usemap="#inheritancebe7d3e393d" class="inheritance"/>
+<map id="inheritancebe7d3e393d" name="inheritancebe7d3e393d">
+<area shape="rect" href="#pymel.core.nodetypes.VolumeLight" title="VolumeLight" alt="" coords="51,470,139,494"/>
+<area shape="rect" href="pymel.core.nodetypes.PointLight.html#pymel.core.nodetypes.PointLight" title="PointLight" alt="" coords="57,431,132,455"/>
+<area shape="rect" href="pymel.core.nodetypes.RenderLight.html#pymel.core.nodetypes.RenderLight" title="RenderLight" alt="" coords="52,315,137,339"/>
+<area shape="rect" href="pymel.core.nodetypes.NonAmbientLightShapeNode.html#pymel.core.nodetypes.NonAmbientLightShapeNode" title="NonAmbientLightShapeNode" alt="" coords="7,354,183,378"/>
+<area shape="rect" href="pymel.core.nodetypes.Light.html#pymel.core.nodetypes.Light" title="Light" alt="" coords="59,276,131,300"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="49,6,140,30"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="59,44,131,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="51,83,139,107"/>
+<area shape="rect" href="pymel.core.nodetypes.Shape.html#pymel.core.nodetypes.Shape" title="Shape" alt="" coords="59,238,131,262"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="59,199,131,223"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="45,122,144,146"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="59,160,131,184"/>
+<area shape="rect" href="pymel.core.nodetypes.NonExtendedLightShapeNode.html#pymel.core.nodetypes.NonExtendedLightShapeNode" title="NonExtendedLightShapeNode" alt="" coords="5,392,184,416"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.VolumeLight">
+<em class="property">class </em><tt class="descname">VolumeLight</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getArc">
+<tt class="descname">getArc</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getArc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;arc&#8221; attribute. The arc is an angular slice of the light about the y axis. The value can range from 0 to 360 degrees.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.arc</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getConeEndRadius">
+<tt class="descname">getConeEndRadius</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getConeEndRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;coneEndRadius&#8221; attribute. The coneEndRadius attribute determines the relative size of the one end of the cone. At a value of 1.0 it is a cylinder, while at 0 it is a cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.coneEndRadius</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getEmitAmbient">
+<tt class="descname">getEmitAmbient</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getEmitAmbient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;emitAmbient&#8221; attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.emitAmbient</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getLightShape">
+<tt class="descname">getLightShape</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getLightShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the &#8220;lightShape&#8221; attribute of the light. The shape can be one of the following.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">VolumeLight.MLightShape</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.lightShape</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getShadowAngle">
+<tt class="descname">getShadowAngle</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getShadowAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;shadowAngle&#8221; attribute of a volume light node. This attribute represents an angular divergence from the direction vector of the light used to calculate soft shadows. It&#8217;s enabled only if the volume light direction is kDownAxis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.shadowAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.getVolumeLightDirection">
+<tt class="descname">getVolumeLightDirection</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.getVolumeLightDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the value of the &#8220;volumeLightDirection&#8221; attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">VolumeLight.MLightDirection</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.volumeLightDirection</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setArc">
+<tt class="descname">setArc</tt><big>(</big><em>arc</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setArc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;arc&#8221; attribute of a volume light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>arc <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setArc</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setConeEndRadius">
+<tt class="descname">setConeEndRadius</tt><big>(</big><em>cone_end_radius</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setConeEndRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;coneEndRadius&#8221; attribute of a volume light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>cone_end_radius <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setConeEndRadius</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setEmitAmbient">
+<tt class="descname">setEmitAmbient</tt><big>(</big><em>emit_ambient</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setEmitAmbient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;emitAmbient&#8221; attribute of a volume light node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>emit_ambient <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setEmitAmbient</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setLightShape">
+<tt class="descname">setLightShape</tt><big>(</big><em>light_shape</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setLightShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;lightShape&#8221; attribute of a volume light node. The shape can be one of the following:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>light_shape <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">VolumeLight.MLightShape</span></tt></span></dt>
+<dd><p class="first">value to which the attribute will be set.</p>
+<p class="last">values: &#8216;boxVolume&#8217;, &#8216;sphereVolume&#8217;, &#8216;cylinderVolume&#8217;, &#8216;coneVolume&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setLightShape</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setShadowAngle">
+<tt class="descname">setShadowAngle</tt><big>(</big><em>shadow_angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setShadowAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;shadowAngle&#8221; attribute of a volume light node. It&#8217;s enabled only if the volume light direction is kDownAxis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>shadow_angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">value to which the attribute will be set.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setShadowAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.VolumeLight.setVolumeLightDirection">
+<tt class="descname">setVolumeLightDirection</tt><big>(</big><em>volume_light_direction</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.VolumeLight.setVolumeLightDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of the &#8220;volumeLightDirection&#8221; attribute of a volume light node. The shape can be one of the following.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>volume_light_direction <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">VolumeLight.MLightDirection</span></tt></span></dt>
+<dd><p class="first">value to which the attribute will be set.</p>
+<p class="last">values: &#8216;outward&#8217;, &#8216;inward&#8217;, &#8216;downAxis&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnVolumeLight.setVolumeLightDirection</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.VolumeFog.html"
+                        title="previous chapter">pymel.core.nodetypes.VolumeFog</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.VolumeNoise.html"
+                        title="next chapter">pymel.core.nodetypes.VolumeNoise</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.VolumeLight.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.VolumeNoise.html" title="pymel.core.nodetypes.VolumeNoise"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.VolumeFog.html" title="pymel.core.nodetypes.VolumeFog"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

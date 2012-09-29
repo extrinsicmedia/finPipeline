@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_geo_cube
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_geo_cube
+    :parts: 1
+
+.. autoclass:: Mib_geo_cube
+    :members:
+    :undoc-members:

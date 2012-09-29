@@ -1,0 +1,11 @@
+pymel.util.Sized
+================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Sized
+    :parts: 1
+
+.. autoclass:: Sized
+    :members:
+    :undoc-members:

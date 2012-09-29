@@ -1,0 +1,6 @@
+pymel.core.runtime.StraightenUVBorder
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.StraightenUVBorder

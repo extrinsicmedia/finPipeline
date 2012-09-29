@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectSharedUVInstances
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectSharedUVInstances

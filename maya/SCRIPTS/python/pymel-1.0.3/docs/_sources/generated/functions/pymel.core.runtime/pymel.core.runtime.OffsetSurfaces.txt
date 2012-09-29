@@ -1,0 +1,6 @@
+pymel.core.runtime.OffsetSurfaces
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.OffsetSurfaces

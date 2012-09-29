@@ -1,0 +1,6 @@
+pymel.core.windows.rowLayout
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.rowLayout

@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.tools.mel2py &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../index.html" />
+    <link rel="next" title="pymel.tools.mel2py.fileOnMelPath" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.fileOnMelPath.html" />
+    <link rel="prev" title="pymel.util.utilitytypes.metaStatic" href="classes/pymel.util.utilitytypes/pymel.util.utilitytypes.metaStatic.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.tools.mel2py/pymel.tools.mel2py.fileOnMelPath.html" title="pymel.tools.mel2py.fileOnMelPath"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classes/pymel.util.utilitytypes/pymel.util.utilitytypes.metaStatic.html" title="pymel.util.utilitytypes.metaStatic"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pymel.tools.mel2py">
+<span id="pymel-tools-mel2py"></span><h1>pymel.tools.mel2py<a class="headerlink" href="#module-pymel.tools.mel2py" title="Permalink to this headline">¶</a></h1>
+<p>Convert mel scripts into python scripts.</p>
+<div class="section" id="mel-to-python-translator">
+<h2>Mel To Python Translator<a class="headerlink" href="#mel-to-python-translator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="known-limitations">
+<h3>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="array-index-assignment">
+<h4>array index assignment<a class="headerlink" href="#array-index-assignment" title="Permalink to this headline">¶</a></h4>
+<p>In mel, you can directly assign the value of any element in an array, and all intermediate elements will be
+automatically filled. This is not the case in python: if the list index is out of range an IndexError will be
+raised. I&#8217;ve added fixes for several common array assignment conventions:</p>
+<div class="section" id="append-new-element">
+<h5>append new element<a class="headerlink" href="#append-new-element" title="Permalink to this headline">¶</a></h5>
+<p><strong>MEL</strong></p>
+<p>Python</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">strArray</span> <span class="o">=</span> <span class="p">[]</span>                
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strArray</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">)</span>       
+</pre></div>
+</div>
+</div>
+<div class="section" id="assignment-relative-to-end-of-array">
+<h5>assignment relative to end of array<a class="headerlink" href="#assignment-relative-to-end-of-array" title="Permalink to this headline">¶</a></h5>
+<p><strong>MEL</strong></p>
+<p>Python</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">strArray</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span>        
+</pre></div>
+</div>
+<p>However, since the translator does not track values of variables, it does not know if any given index is out of
+range or not. so, the following would raise a &#8216;list assignment index out of range&#8217; error when converted to
+python and would need to be manually fixed:</p>
+</div>
+</div>
+<div class="section" id="for-init-condition-update">
+<h4>for(init; condition; update)<a class="headerlink" href="#for-init-condition-update" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>the closest equivalent to this in python is something akin to:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>    
+</pre></div>
+</div>
+<p>in order for this type of for loop to be translated into a python for loop it must meet several requirements:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">the initialization, condition, and update expressions must not be empty.</p>
+<blockquote>
+<div><p>not translatable:</p>
+</div></blockquote>
+</li>
+<li><p class="first">there can be only one conditional expression.</p>
+<blockquote>
+<div><p>not translatable:</p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>the variable which is being updated and tested in the condition (aka, the iterator) must exist alone on one</dt>
+<dd><p class="first">side of the    conditional expression. this one is easy enough to fix, just do some algebra:</p>
+<p>not translatable:</p>
+<p class="last">translatable:</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">the iterator can appear only once in the update expression:</p>
+<blockquote>
+<div><p>not translatable:</p>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>if these conditions are not met, the for loop will be converted into a while loop:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>                        
+<span class="gp">... </span>    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10</span> <span class="p">):</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="n">i</span>
+<span class="gp">... </span>    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="inconveniences">
+<h3>Inconveniences<a class="headerlink" href="#inconveniences" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="switch-statements">
+<h4>Switch Statements<a class="headerlink" href="#switch-statements" title="Permalink to this headline">¶</a></h4>
+<p>Alas, switch statements are not supported by python. the translator will convert them into an if/elif/else statement.</p>
+</div>
+<div class="section" id="global-variables">
+<h4>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h4>
+<p>Global variables are not shared between mel and python.  two functions have been added to pymel for this purpose:
+<tt class="xref py py-obj docutils literal"><span class="pre">getMelGlobal</span></tt> and <tt class="xref py py-obj docutils literal"><span class="pre">setMelGlobal</span></tt>. by default, the translator will convert mel global variables into python global
+variables AND intialize them to the value of their corresponding mel global variable using getMelGlobal(). if your
+python global variable does not need to be shared with other mel scripts, you can remove the get- and
+setMelGlobals lines (for how to filter global variables, see below). however, if it does need to be shared, it is very
+important that you manually add setMelGlobal() to update the variable in the mel environment before calling any mel
+procedures that will use the global variable.</p>
+<p>In order to hone the accuracy of the translation of global variables, you will find two dictionary parameters below &#8211;
+<tt class="xref py py-obj docutils literal"><span class="pre">global_var_include_regex</span></tt> and <tt class="xref py py-obj docutils literal"><span class="pre">global_var_exclude_regex</span></tt> &#8211; which you can use to set a regular expression string
+to tell the translator which global variables to share with the mel environment (i.e. which will use the get and set
+methods described above) and which to not.  for instance, in my case, it is desirable for all of maya&#8217;s global
+variables to be initialized from their mel value but for our in-house variables not to be, since the latter are often
+used to pass values within a single script. see below for the actual regular expressions used to accomplish this.</p>
+</div>
+<div class="section" id="comments">
+<h4>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h4>
+<p>Rules on where comments may be placed is more strict in python, so expect your comments to be shifted around a bit
+after translation.</p>
+</div>
+<div class="section" id="formatting">
+<h4>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">¶</a></h4>
+<p>Much of the formatting of your original script will be lost. I apologize for this, but python is much more strict
+about formatting than mel, so the conversion is infinitely simpler when the formatting is largely discarded
+and reconstructed based on pythonic rules.</p>
+</div>
+</div>
+<div class="section" id="solutions-and-caveats">
+<h3>Solutions and Caveats<a class="headerlink" href="#solutions-and-caveats" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="catch-and-catchquiet">
+<h4>catch and catchQuiet<a class="headerlink" href="#catch-and-catchquiet" title="Permalink to this headline">¶</a></h4>
+<p>There is no direct equivalent in python to the catch and catchQuiet command and it does not exist in maya.cmds so i wrote two
+python commands of the same name and put them into pymel. these are provided primarily for compatibility with
+automatically translated scripts. try/except statements should be used instead of catch or catchQuiet if coding
+from scratch.</p>
+</div>
+<div class="section" id="for-elem-in-list">
+<h4>for( $elem in $list )<a class="headerlink" href="#for-elem-in-list" title="Permalink to this headline">¶</a></h4>
+<p>This variety of for loop has a direct syntactical equivalent in python.  the only catch here is that maya.cmds
+functions which are supposed to return lists, return None when there are no matches. life would be much simpler
+if they returned empty lists instead.  the solution currently lies in pymel, where i have begun
+correcting all of these command to return proper results.  i&#8217;ve started with the obvious ones, but there
+are many more that i need to fix.  you&#8217;ll know you hit the problem when you get this error: &#8216;TypeError: iteration
+over non-sequence&#8217;. just email me with commands that are giving you problems and i&#8217;ll fix them as
+quickly as i can.</p>
+<p class="rubric">Functions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.fileOnMelPath.html#pymel.tools.mel2py.fileOnMelPath" title="pymel.tools.mel2py.fileOnMelPath"><tt class="xref py py-obj docutils literal"><span class="pre">fileOnMelPath</span></tt></a></td>
+<td>Return True if this file is on the mel path.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.findMelOnlyCommands.html#pymel.tools.mel2py.findMelOnlyCommands" title="pymel.tools.mel2py.findMelOnlyCommands"><tt class="xref py py-obj docutils literal"><span class="pre">findMelOnlyCommands</span></tt></a></td>
+<td>Using maya&#8217;s documentation, find commands which were not ported to python.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.mel2py.html#pymel.tools.mel2py.mel2py" title="pymel.tools.mel2py.mel2py"><tt class="xref py py-obj docutils literal"><span class="pre">mel2py</span></tt></a></td>
+<td>Batch convert an entire directory</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.mel2pyStr.html#pymel.tools.mel2py.mel2pyStr" title="pymel.tools.mel2py.mel2pyStr"><tt class="xref py py-obj docutils literal"><span class="pre">mel2pyStr</span></tt></a></td>
+<td>convert a string representing mel code into a string representing python code</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.melInfo.html#pymel.tools.mel2py.melInfo" title="pymel.tools.mel2py.melInfo"><tt class="xref py py-obj docutils literal"><span class="pre">melInfo</span></tt></a></td>
+<td>Get information about procedures in a mel file.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.tools.mel2py/pymel.tools.mel2py.resolvePath.html#pymel.tools.mel2py.resolvePath" title="pymel.tools.mel2py.resolvePath"><tt class="xref py py-obj docutils literal"><span class="pre">resolvePath</span></tt></a></td>
+<td>if passed a directory, get all mel files in the directory</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">LexError</span></tt>(message,&nbsp;s)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pymel.tools.mel2py</a><ul>
+<li><a class="reference internal" href="#mel-to-python-translator">Mel To Python Translator</a><ul>
+<li><a class="reference internal" href="#known-limitations">Known Limitations</a><ul>
+<li><a class="reference internal" href="#array-index-assignment">array index assignment</a><ul>
+<li><a class="reference internal" href="#append-new-element">append new element</a></li>
+<li><a class="reference internal" href="#assignment-relative-to-end-of-array">assignment relative to end of array</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-init-condition-update">for(init; condition; update)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inconveniences">Inconveniences</a><ul>
+<li><a class="reference internal" href="#switch-statements">Switch Statements</a></li>
+<li><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#formatting">Formatting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#solutions-and-caveats">Solutions and Caveats</a><ul>
+<li><a class="reference internal" href="#catch-and-catchquiet">catch and catchQuiet</a></li>
+<li><a class="reference internal" href="#for-elem-in-list">for( $elem in $list )</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="classes/pymel.util.utilitytypes/pymel.util.utilitytypes.metaStatic.html"
+                        title="previous chapter">pymel.util.utilitytypes.metaStatic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="functions/pymel.tools.mel2py/pymel.tools.mel2py.fileOnMelPath.html"
+                        title="next chapter">pymel.tools.mel2py.fileOnMelPath</a></p>
+<h3><a href="../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/pymel.tools.mel2py.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.tools.mel2py/pymel.tools.mel2py.fileOnMelPath.html" title="pymel.tools.mel2py.fileOnMelPath"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classes/pymel.util.utilitytypes/pymel.util.utilitytypes.metaStatic.html" title="pymel.util.utilitytypes.metaStatic"
+             >previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

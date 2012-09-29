@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKControlSetNode
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKControlSetNode
+    :parts: 1
+
+.. autoclass:: HIKControlSetNode
+    :members:
+    :undoc-members:

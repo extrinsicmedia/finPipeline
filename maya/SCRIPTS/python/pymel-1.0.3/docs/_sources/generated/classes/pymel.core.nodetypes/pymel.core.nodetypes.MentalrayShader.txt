@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayShader
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayShader
+    :parts: 1
+
+.. autoclass:: MentalrayShader
+    :members:
+    :undoc-members:

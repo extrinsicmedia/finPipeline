@@ -1,0 +1,6 @@
+pymel.core.runtime.WeightedTangents
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.WeightedTangents

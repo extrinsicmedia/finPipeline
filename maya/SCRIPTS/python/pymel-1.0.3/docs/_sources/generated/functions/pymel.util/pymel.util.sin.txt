@@ -1,0 +1,6 @@
+pymel.util.sin
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.sin

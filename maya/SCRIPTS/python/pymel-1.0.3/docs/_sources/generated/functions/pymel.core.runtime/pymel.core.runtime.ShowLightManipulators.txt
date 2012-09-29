@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowLightManipulators
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowLightManipulators

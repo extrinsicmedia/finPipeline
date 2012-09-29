@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.util.ArrayIter &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.util" href="../../pymel.util.html" />
+    <link rel="next" title="pymel.util.Callable" href="pymel.util.Callable.html" />
+    <link rel="prev" title="pymel.util.Array" href="pymel.util.Array.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.util.Callable.html" title="pymel.util.Callable"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.util.Array.html" title="pymel.util.Array"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.util.html" accesskey="U">pymel.util</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-util-arrayiter">
+<h1>pymel.util.ArrayIter<a class="headerlink" href="#pymel-util-arrayiter" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-bfe6c7573c2c5a8cf0ed123f800d98901b05e60d.png" alt="Inheritance diagram of ArrayIter" usemap="#inheritance195695a6db" class="inheritance"/>
+<map id="inheritance195695a6db" name="inheritance195695a6db">
+<area shape="rect" href="../pymel.util.arrays/pymel.util.arrays.ArrayIter.html#pymel.util.arrays.ArrayIter" title="ArrayIter" alt="" coords="5,6,77,30"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.util.ArrayIter">
+<em class="property">class </em><tt class="descname">ArrayIter</tt><big>(</big><em>data</em>, <em>*args</em><big>)</big><a class="headerlink" href="#pymel.util.ArrayIter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A general purpose iterator on Arrays.</p>
+<p>ArrayIter allows to iterate on one or more specified axis of an Array, in any order.</p>
+<p>For an Array of n dimensions, iterator on p axis will yield sub-arrays of n-p dimensions,
+numerical components if n-p is 0.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[[1, 2, 3],</span>
+<span class="go">  [4, 5, 6],</span>
+<span class="go">  [7, 8, 9]],</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
+<span class="go"> [[10, 11, 12],</span>
+<span class="go">  [13, 14, 15],</span>
+<span class="go">  [16, 17, 18]],</span>
+<span class="go">&lt;BLANKLINE&gt;</span>
+<span class="go"> [[19, 20, 21],</span>
+<span class="go">  [22, 23, 24],</span>
+<span class="go">  [25, 26, 27]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
+<span class="go">[Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="go">[Array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), Array([[10, 11, 12], [13, 14, 15], [16, 17, 18]]), Array([[19, 20, 21], [22, 23, 24], [25, 26, 27]])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[Array([[1, 2, 3], [10, 11, 12], [19, 20, 21]]), Array([[4, 5, 6], [13, 14, 15], [22, 23, 24]]), Array([[7, 8, 9], [16, 17, 18], [25, 26, 27]])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="go">[Array([[1, 4, 7], [10, 13, 16], [19, 22, 25]]), Array([[2, 5, 8], [11, 14, 17], [20, 23, 26]]), Array([[3, 6, 9], [12, 15, 18], [21, 24, 27]])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[Array([1, 2, 3]), Array([4, 5, 6]), Array([7, 8, 9]), Array([10, 11, 12]), Array([13, 14, 15]), Array([16, 17, 18]), Array([19, 20, 21]), Array([22, 23, 24]), Array([25, 26, 27])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="go">[Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9]), Array([10, 13, 16]), Array([11, 14, 17]), Array([12, 15, 18]), Array([19, 22, 25]), Array([20, 23, 26]), Array([21, 24, 27])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[1, 4, 7, 2, 5, 8, 3, 6, 9, 10, 13, 16, 11, 14, 17, 12, 15, 18, 19, 22, 25, 20, 23, 26, 21, 24, 27]</span>
+</pre></div>
+</div>
+<p>ArrayIter iterators support __len__, __getitem__,  __setitem__ and __delitem__ methods, it can be used
+to set whole sub-arrays in any order (for instance rows or columns in MatrixN)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[1, 2, 3],</span>
+<span class="go"> [4, 5, 6],</span>
+<span class="go"> [7, 8, 9]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">5</span><span class="p">:</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[1, 2, 3],</span>
+<span class="go"> [4, 5, 4],</span>
+<span class="go"> [3, 2, 1]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[Array([1, 4, 3]), Array([2, 5, 2]), Array([3, 4, 1])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[1, 7, 3],</span>
+<span class="go"> [4, 8, 4],</span>
+<span class="go"> [3, 9, 1]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[1, 7, 3],</span>
+<span class="go"> [0, 0, 0],</span>
+<span class="go"> [3, 9, 1]]</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="pymel.util.ArrayIter.next">
+<tt class="descname">next</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.util.ArrayIter.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>it.next() -&gt; the next value, or raise StopIteration</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.util.ArrayIter.toArrayCoords">
+<tt class="descname">toArrayCoords</tt><big>(</big><em>index</em>, <em>default=None</em><big>)</big><a class="headerlink" href="#pymel.util.ArrayIter.toArrayCoords" title="Permalink to this definition">¶</a></dt>
+<dd><p>it.toArrayCoords(index, default=None) &#8211;&gt; list or tuple</p>
+<p>Converts an iterator item index (item of number index in the iterator) for that Array iterator to a tuple of axis coordinates for that Array,
+returns a single coordinates tuple or a list of coordinate tuples if index was a slice.
+If index is a multi-index (a tuple), the first element if index is checked against the iterator and the remaining elements are considered
+indices on the iterated sub-array (s).</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">formated</span><span class="p">()</span>
+<span class="go">[[1, 2, 3],</span>
+<span class="go"> [4, 5, 6],</span>
+<span class="go"> [7, 8, 9]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">toArrayCoords</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">(1, 1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">Array([2, 3, 4])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">toArrayCoords</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">[(0, 1), (0, 2), (1, 0)]</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="go">[Array([1, 4, 7]), Array([2, 5, 8]), Array([3, 6, 9])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span> <span class="o">=</span> <span class="n">ArrayIter</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">Array([1, 4, 7])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">toArrayCoords</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">(None, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">toArrayCoords</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="bp">None</span><span class="p">))</span>
+<span class="go">(slice(None, None, None), 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">Array([1, 4, 7])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="o">.</span><span class="n">toArrayCoords</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.util.Array.html"
+                        title="previous chapter">pymel.util.Array</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.util.Callable.html"
+                        title="next chapter">pymel.util.Callable</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.util/pymel.util.ArrayIter.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.util.Callable.html" title="pymel.util.Callable"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.util.Array.html" title="pymel.util.Array"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.util.html" >pymel.util</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

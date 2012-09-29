@@ -1,0 +1,6 @@
+pymel.core.context.createPolyPrismCtx
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: context.createPolyPrismCtx

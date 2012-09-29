@@ -1,0 +1,6 @@
+pymel.core.runtime.PaintEffectsToPoly
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PaintEffectsToPoly

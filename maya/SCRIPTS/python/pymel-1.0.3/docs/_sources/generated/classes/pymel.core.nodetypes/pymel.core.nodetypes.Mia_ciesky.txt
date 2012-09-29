@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mia_ciesky
+===============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mia_ciesky
+    :parts: 1
+
+.. autoclass:: Mia_ciesky
+    :members:
+    :undoc-members:

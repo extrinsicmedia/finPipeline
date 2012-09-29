@@ -1,0 +1,6 @@
+pymel.core.runtime.VortexOptions
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.VortexOptions

@@ -1,0 +1,6 @@
+pymel.core.runtime.AlignCurveOptions
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AlignCurveOptions

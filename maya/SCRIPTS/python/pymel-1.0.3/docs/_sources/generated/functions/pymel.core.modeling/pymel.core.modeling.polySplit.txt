@@ -1,0 +1,6 @@
+pymel.core.modeling.polySplit
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.polySplit

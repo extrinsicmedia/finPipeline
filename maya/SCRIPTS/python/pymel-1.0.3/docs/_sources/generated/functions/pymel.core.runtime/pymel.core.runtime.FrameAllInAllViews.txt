@@ -1,0 +1,6 @@
+pymel.core.runtime.FrameAllInAllViews
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FrameAllInAllViews

@@ -1,0 +1,6 @@
+pymel.core.runtime.SetDrivenKeyOptions
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetDrivenKeyOptions

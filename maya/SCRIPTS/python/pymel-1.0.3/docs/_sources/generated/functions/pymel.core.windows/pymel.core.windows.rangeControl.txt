@@ -1,0 +1,6 @@
+pymel.core.windows.rangeControl
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.rangeControl

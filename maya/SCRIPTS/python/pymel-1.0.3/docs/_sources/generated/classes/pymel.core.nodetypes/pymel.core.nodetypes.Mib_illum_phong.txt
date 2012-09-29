@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_illum_phong
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_illum_phong
+    :parts: 1
+
+.. autoclass:: Mib_illum_phong
+    :members:
+    :undoc-members:

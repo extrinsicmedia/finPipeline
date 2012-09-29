@@ -1,0 +1,6 @@
+pymel.util.fsum
+===============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.fsum

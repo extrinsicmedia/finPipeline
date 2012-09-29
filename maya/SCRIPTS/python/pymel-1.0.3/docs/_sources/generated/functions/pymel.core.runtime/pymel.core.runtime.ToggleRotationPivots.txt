@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleRotationPivots
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleRotationPivots

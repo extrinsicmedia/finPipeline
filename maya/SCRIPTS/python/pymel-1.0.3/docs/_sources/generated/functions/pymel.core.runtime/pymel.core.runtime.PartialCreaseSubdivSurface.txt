@@ -1,0 +1,6 @@
+pymel.core.runtime.PartialCreaseSubdivSurface
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PartialCreaseSubdivSurface

@@ -1,0 +1,6 @@
+pymel.core.other.dgPerformance
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.dgPerformance

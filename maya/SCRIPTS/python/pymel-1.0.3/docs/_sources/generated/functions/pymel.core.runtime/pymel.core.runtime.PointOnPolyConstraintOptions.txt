@@ -1,0 +1,6 @@
+pymel.core.runtime.PointOnPolyConstraintOptions
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PointOnPolyConstraintOptions

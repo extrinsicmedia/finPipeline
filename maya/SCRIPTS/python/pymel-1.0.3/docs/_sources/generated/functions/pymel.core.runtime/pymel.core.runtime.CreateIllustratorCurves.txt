@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateIllustratorCurves
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateIllustratorCurves

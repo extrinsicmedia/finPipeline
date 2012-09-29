@@ -1,0 +1,6 @@
+pymel.core.runtime.AttachSubdivSurface
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AttachSubdivSurface

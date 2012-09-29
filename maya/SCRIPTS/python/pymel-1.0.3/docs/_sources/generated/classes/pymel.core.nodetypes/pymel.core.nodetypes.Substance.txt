@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Substance
+==============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Substance
+    :parts: 1
+
+.. autoclass:: Substance
+    :members:
+    :undoc-members:

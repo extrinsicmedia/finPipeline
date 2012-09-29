@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Non-Existent Objects &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="index.html" />
+    <link rel="next" title="Building User Interfaces" href="ui.html" />
+    <link rel="prev" title="Attributes" href="attributes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ui.html" title="Building User Interfaces"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="attributes.html" title="Attributes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="non-existent-objects">
+<h1>Non-Existent Objects<a class="headerlink" href="#non-existent-objects" title="Permalink to this headline">¶</a></h1>
+<p>An exception will be raised if the passed name does not represent an object in the scene. This has several advantages:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>you will never unwittingly attempt to use a node or attribute that does not exist, either due to a typo or unexpected context</li>
+<li>it brings PyMEL&#8217;s attribute handling more in line with pythonic rules, where attributes must exist before accessing them</li>
+<li>it prevents the awkward situation of having a python object for which only a handful of methods will actually work</li>
+</ol>
+</div></blockquote>
+<div class="section" id="pymel-exceptions">
+<h2>PyMEL Exceptions<a class="headerlink" href="#pymel-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>PyMEL has three exceptions which can be used to test for existence errors when creating new PyNodes: <tt class="xref py py-obj docutils literal"><span class="pre">MayaObjectError</span></tt>,
+<tt class="xref py py-obj docutils literal"><span class="pre">MayaNodeError</span></tt>, and <tt class="xref py py-obj docutils literal"><span class="pre">MayaAttributeError</span></tt>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span> <span class="s">&#39;fooBar.spangle&#39;</span><span class="p">,</span> <span class="s">&#39;superMonk&#39;</span> <span class="p">]</span> <span class="p">:</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">PyNode</span><span class="p">(</span> <span class="n">x</span> <span class="p">)</span>
+<span class="gp">... </span>        <span class="k">print</span> <span class="s">&quot;It Exists&quot;</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="n">MayaNodeError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">print</span> <span class="s">&quot;The Node Doesn&#39;t Exist:&quot;</span><span class="p">,</span> <span class="n">x</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="n">MayaAttributeError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">print</span> <span class="s">&quot;The Attribute Doesn&#39;t Exist:&quot;</span><span class="p">,</span> <span class="n">x</span>
+<span class="gp">...</span>
+<span class="go">The Attribute Doesn&#39;t Exist: fooBar.spangle</span>
+<span class="go">The Node Doesn&#39;t Exist: superMonk</span>
+</pre></div>
+</div>
+<p>Both exceptions can be caught by using the parent exception <tt class="xref py py-obj docutils literal"><span class="pre">MayaObjectError</span></tt>. In addition <tt class="xref py py-obj docutils literal"><span class="pre">MayaAttributeError</span></tt> can also be caught
+with the builtin exception <tt class="xref py py-obj docutils literal"><span class="pre">AttributeError</span></tt>.</p>
+<p>Note that you will get different exceptions depending on how you access the attribute. This is because the shorthand notation can also
+be used to access functions, in which case the <tt class="xref py py-obj docutils literal"><span class="pre">MayaAttributeError</span></tt> does not make sense to raise.  As mentioned above, you can always
+use <tt class="xref py py-obj docutils literal"><span class="pre">AttributeError</span></tt> to catch both.</p>
+<dl class="docutils">
+<dt>Explicit notation:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">polySphere</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;earth&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s">&#39;myAttr&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">MayaAttributeError: Maya Attribute does not exist</span>: <span class="n">u&#39;earth.myAttr&#39;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Shorthand notation:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">polySphere</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;moon&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">myAttr</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">AttributeError</span>: <span class="n">Transform(u&#39;moon&#39;) has no attribute or method named &#39;myAttr&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="testing-node-existence">
+<h2>Testing Node Existence<a class="headerlink" href="#testing-node-existence" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Still supported:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">objExists</span><span class="p">(</span> <span class="s">&#39;fooBar&#39;</span> <span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;It Exists&quot;</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;It Doesn&#39;t Exist&quot;</span>
+<span class="go">It Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+<dt>PyMEL construct:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">PyNode</span><span class="p">(</span> <span class="s">&#39;fooBar&#39;</span> <span class="p">)</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;It Exists&quot;</span>
+<span class="gp">... </span><span class="k">except</span> <span class="n">MayaObjectError</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;It Doesn&#39;t Exist&quot;</span>
+<span class="go">It Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="testing-attribute-existence">
+<h2>Testing Attribute Existence<a class="headerlink" href="#testing-attribute-existence" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Still supported:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">objExists</span><span class="p">(</span> <span class="s">&#39;persp.spangle&#39;</span> <span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Exists&quot;</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Doesn&#39;t Exist&quot;</span>
+<span class="go">Attribute Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+<dt>PyMEL construct:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;persp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">hasAttr</span><span class="p">(</span><span class="s">&#39;spangle&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Exists&quot;</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Doesn&#39;t Exist&quot;</span>
+<span class="go">Attribute Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+<dt>PyMEL construct:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">PyNode</span><span class="p">(</span> <span class="s">&#39;persp.spangle&#39;</span> <span class="p">)</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Exists&quot;</span>
+<span class="gp">... </span><span class="k">except</span> <span class="n">MayaAttributeError</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Doesn&#39;t Exist&quot;</span>
+<span class="go">Attribute Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+<dt>PyMEL construct:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;persp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">x</span><span class="o">.</span><span class="n">spangle</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Exists&quot;</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="s">&quot;Attribute Doesn&#39;t Exist&quot;</span>
+<span class="go">Attribute Doesn&#39;t Exist</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="other-pymel-idioms">
+<h2>Other PyMEL Idioms<a class="headerlink" href="#other-pymel-idioms" title="Permalink to this headline">¶</a></h2>
+<p>Two other PyMEL idioms have been removed as a result of this change. <tt class="xref py py-obj docutils literal"><span class="pre">Attribute.add</span></tt> has been removed because the attribute has to exist
+in order to successfully get an Attribute instance.  Instead, you should use the <tt class="docutils literal"><span class="pre">addAttr</span></tt> method on the node:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;persp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span> <span class="s">&#39;myNewFloatAttr&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="nb">float</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Similarly, the <tt class="docutils literal"><span class="pre">force</span></tt> flag for setAttr functions, which creates the attribute before setting if it does not exist, can only be safely used from the node class
+and not the attribute class:</p>
+<p>Still supported:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;persp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;myNewIntAttr&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>New construct:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;persp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setDynamicAttr</span><span class="p">(</span> <span class="s">&#39;myNewIntAttr&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="manipulating-names-of-non-existent-objects">
+<h2>Manipulating Names of Non-Existent Objects<a class="headerlink" href="#manipulating-names-of-non-existent-objects" title="Permalink to this headline">¶</a></h2>
+<p>One advantage of the old way of dealing with non-existent objects was that you could use the name parsing methods of the PyNode
+classes to manipulate the object&#8217;s name until you found what you were looking for.  To allow for this, we&#8217;ve added
+several classes which operate on non-existent nodes and contain only methods for string parsing and existence testing.
+These nodes can be found in the <tt class="xref py py-obj docutils literal"><span class="pre">other</span></tt> module and are named <tt class="xref py py-obj docutils literal"><span class="pre">other.NameParser</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">other.AttributeName</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">other.DependNodeName</span></tt>,
+and <tt class="xref py py-obj docutils literal"><span class="pre">other.DagNodeName</span></tt>.</p>
+</div>
+<div class="section" id="asserting-proper-type">
+<h2>Asserting Proper Type<a class="headerlink" href="#asserting-proper-type" title="Permalink to this headline">¶</a></h2>
+<p>While <tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> serves to easily cast any string to its proper class in the node hierarchy, other nodes in the hierarchy can achieve the
+same effect:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">PyNode</span><span class="p">(</span><span class="s">&#39;lambert1&#39;</span><span class="p">)</span>
+<span class="go">nt.Lambert(u&#39;lambert1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DependNode</span><span class="p">(</span><span class="s">&#39;lambert1&#39;</span><span class="p">)</span>
+<span class="go">nt.Lambert(u&#39;lambert1&#39;)</span>
+</pre></div>
+</div>
+<p>If the determined type does not match the requested type, an error will be raised.  For example, a lambert node is not
+a DAG node:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">nt</span><span class="o">.</span><span class="n">DagNode</span><span class="p">(</span> <span class="s">&#39;lambert1&#39;</span> <span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">TypeError</span>: <span class="n">Determined type is Lambert, which is not a subclass of desired type DagNode</span>
+</pre></div>
+</div>
+<p>This is useful because it can be used as a quick way to assert that a given node is of the desire type.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">select</span><span class="p">(</span> <span class="s">&#39;lambert1&#39;</span> <span class="p">)</span> <span class="c"># this line represents user action</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="n">nt</span><span class="o">.</span><span class="n">DagNode</span><span class="p">(</span> <span class="n">selected</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span> <span class="s">&quot;Please select a DAG node&quot;</span>
+<span class="go">Please select a DAG node</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Non-Existent Objects</a><ul>
+<li><a class="reference internal" href="#pymel-exceptions">PyMEL Exceptions</a></li>
+<li><a class="reference internal" href="#testing-node-existence">Testing Node Existence</a></li>
+<li><a class="reference internal" href="#testing-attribute-existence">Testing Attribute Existence</a></li>
+<li><a class="reference internal" href="#other-pymel-idioms">Other PyMEL Idioms</a></li>
+<li><a class="reference internal" href="#manipulating-names-of-non-existent-objects">Manipulating Names of Non-Existent Objects</a></li>
+<li><a class="reference internal" href="#asserting-proper-type">Asserting Proper Type</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="attributes.html"
+                        title="previous chapter">Attributes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ui.html"
+                        title="next chapter">Building User Interfaces</a></p>
+<h3><a href="modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="generated/pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="generated/pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="generated/pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="generated/pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="generated/pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="generated/pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="generated/pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="generated/pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="generated/pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/non_existent_objs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ui.html" title="Building User Interfaces"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="attributes.html" title="Attributes"
+             >previous</a> |</li>
+        <li><a href="index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

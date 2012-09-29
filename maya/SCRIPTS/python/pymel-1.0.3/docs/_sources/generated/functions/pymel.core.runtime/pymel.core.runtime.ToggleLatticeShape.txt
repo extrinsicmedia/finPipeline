@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleLatticeShape
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleLatticeShape

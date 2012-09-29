@@ -1,0 +1,6 @@
+pymel.util.log10
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.log10

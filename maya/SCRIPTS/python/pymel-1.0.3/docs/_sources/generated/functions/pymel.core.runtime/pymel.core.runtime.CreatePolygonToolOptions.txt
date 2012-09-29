@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePolygonToolOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePolygonToolOptions

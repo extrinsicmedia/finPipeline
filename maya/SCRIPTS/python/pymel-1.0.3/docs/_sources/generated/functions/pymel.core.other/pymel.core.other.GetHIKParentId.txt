@@ -1,0 +1,6 @@
+pymel.core.other.GetHIKParentId
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.GetHIKParentId

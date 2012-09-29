@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.other &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../index.html" />
+    <link rel="next" title="pymel.core.other.AttributeEditor" href="functions/pymel.core.other/pymel.core.other.AttributeEditor.html" />
+    <link rel="prev" title="pymel.core.modeling.uvSnapshot" href="functions/pymel.core.modeling/pymel.core.modeling.uvSnapshot.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.other/pymel.core.other.AttributeEditor.html" title="pymel.core.other.AttributeEditor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.modeling/pymel.core.modeling.uvSnapshot.html" title="pymel.core.modeling.uvSnapshot"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pymel.core.other">
+<span id="pymel-core-other"></span><h1>pymel.core.other<a class="headerlink" href="#module-pymel.core.other" title="Permalink to this headline">¶</a></h1>
+<p>Functions which are not listed in the maya documentation, such as commands created by plugins,
+as well as the name parsing classes <a class="reference internal" href="classes/pymel.core.other/pymel.core.other.DependNodeName.html#pymel.core.other.DependNodeName" title="pymel.core.other.DependNodeName"><tt class="xref py py-obj docutils literal"><span class="pre">DependNodeName</span></tt></a>, <a class="reference internal" href="classes/pymel.core.other/pymel.core.other.DagNodeName.html#pymel.core.other.DagNodeName" title="pymel.core.other.DagNodeName"><tt class="xref py py-obj docutils literal"><span class="pre">DagNodeName</span></tt></a>, and <a class="reference internal" href="classes/pymel.core.other/pymel.core.other.AttributeName.html#pymel.core.other.AttributeName" title="pymel.core.other.AttributeName"><tt class="xref py py-obj docutils literal"><span class="pre">AttributeName</span></tt></a>.</p>
+<p class="rubric">Functions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.AttributeEditor.html#pymel.core.other.AttributeEditor" title="pymel.core.other.AttributeEditor"><tt class="xref py py-obj docutils literal"><span class="pre">AttributeEditor</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.AttributeEditor</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.CenterPivot.html#pymel.core.other.CenterPivot" title="pymel.core.other.CenterPivot"><tt class="xref py py-obj docutils literal"><span class="pre">CenterPivot</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.CenterPivot</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.CommandWindow.html#pymel.core.other.CommandWindow" title="pymel.core.other.CommandWindow"><tt class="xref py py-obj docutils literal"><span class="pre">CommandWindow</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.CommandWindow</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ConvertSelectionToUVs.html#pymel.core.other.ConvertSelectionToUVs" title="pymel.core.other.ConvertSelectionToUVs"><tt class="xref py py-obj docutils literal"><span class="pre">ConvertSelectionToUVs</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ConvertSelectionToUVs</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.CreateContainer.html#pymel.core.other.CreateContainer" title="pymel.core.other.CreateContainer"><tt class="xref py py-obj docutils literal"><span class="pre">CreateContainer</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.CreateContainer</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.DisplaySmoothShaded.html#pymel.core.other.DisplaySmoothShaded" title="pymel.core.other.DisplaySmoothShaded"><tt class="xref py py-obj docutils literal"><span class="pre">DisplaySmoothShaded</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.DisplaySmoothShaded</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.EditTexture.html#pymel.core.other.EditTexture" title="pymel.core.other.EditTexture"><tt class="xref py py-obj docutils literal"><span class="pre">EditTexture</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.EditTexture</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.FrameAll.html#pymel.core.other.FrameAll" title="pymel.core.other.FrameAll"><tt class="xref py py-obj docutils literal"><span class="pre">FrameAll</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.FrameAll</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetFKIdFromEffectorId.html#pymel.core.other.GetFKIdFromEffectorId" title="pymel.core.other.GetFKIdFromEffectorId"><tt class="xref py py-obj docutils literal"><span class="pre">GetFKIdFromEffectorId</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetFKIdFromEffectorId</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKChildCount.html#pymel.core.other.GetHIKChildCount" title="pymel.core.other.GetHIKChildCount"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKChildCount</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKChildId.html#pymel.core.other.GetHIKChildId" title="pymel.core.other.GetHIKChildId"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKChildId</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKEffectorCount.html#pymel.core.other.GetHIKEffectorCount" title="pymel.core.other.GetHIKEffectorCount"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKEffectorCount</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKEffectorCount</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKEffectorIdFromName.html#pymel.core.other.GetHIKEffectorIdFromName" title="pymel.core.other.GetHIKEffectorIdFromName"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKEffectorIdFromName</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKEffectorIdFromName</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKEffectorName.html#pymel.core.other.GetHIKEffectorName" title="pymel.core.other.GetHIKEffectorName"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKEffectorName</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKEffectorName</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKMatrixDecomposition.html#pymel.core.other.GetHIKMatrixDecomposition" title="pymel.core.other.GetHIKMatrixDecomposition"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKMatrixDecomposition</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKMatrixDecomposition</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKNode.html#pymel.core.other.GetHIKNode" title="pymel.core.other.GetHIKNode"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKNodeCount.html#pymel.core.other.GetHIKNodeCount" title="pymel.core.other.GetHIKNodeCount"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKNodeCount</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKNodeCount</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKNodeIdFromName.html#pymel.core.other.GetHIKNodeIdFromName" title="pymel.core.other.GetHIKNodeIdFromName"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKNodeIdFromName</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKNodeIdFromName</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKNodeName.html#pymel.core.other.GetHIKNodeName" title="pymel.core.other.GetHIKNodeName"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKNodeName</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.GetHIKNodeName</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetHIKParentId.html#pymel.core.other.GetHIKParentId" title="pymel.core.other.GetHIKParentId"><tt class="xref py py-obj docutils literal"><span class="pre">GetHIKParentId</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.GetProperty2StateAttrNameFromHIKEffectorId.html#pymel.core.other.GetProperty2StateAttrNameFromHIKEffectorId" title="pymel.core.other.GetProperty2StateAttrNameFromHIKEffectorId"><tt class="xref py py-obj docutils literal"><span class="pre">GetProperty2StateAttrNameFromHIKEffectorId</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.HIKUiControl.html#pymel.core.other.HIKUiControl" title="pymel.core.other.HIKUiControl"><tt class="xref py py-obj docutils literal"><span class="pre">HIKUiControl</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.Import.html#pymel.core.other.Import" title="pymel.core.other.Import"><tt class="xref py py-obj docutils literal"><span class="pre">Import</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.Import</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.LoadHIKCharacterDefinition.html#pymel.core.other.LoadHIKCharacterDefinition" title="pymel.core.other.LoadHIKCharacterDefinition"><tt class="xref py py-obj docutils literal"><span class="pre">LoadHIKCharacterDefinition</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.LoadHIKCharacterDefinition</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.LoadHIKCharacterState.html#pymel.core.other.LoadHIKCharacterState" title="pymel.core.other.LoadHIKCharacterState"><tt class="xref py py-obj docutils literal"><span class="pre">LoadHIKCharacterState</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.LoadHIKCharacterState</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.LoadHIKEffectorSetState.html#pymel.core.other.LoadHIKEffectorSetState" title="pymel.core.other.LoadHIKEffectorSetState"><tt class="xref py py-obj docutils literal"><span class="pre">LoadHIKEffectorSetState</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.LoadHIKEffectorSetState</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.LoadHIKPropertySetState.html#pymel.core.other.LoadHIKPropertySetState" title="pymel.core.other.LoadHIKPropertySetState"><tt class="xref py py-obj docutils literal"><span class="pre">LoadHIKPropertySetState</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.LoadHIKPropertySetState</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.MayatomrJob.html#pymel.core.other.MayatomrJob" title="pymel.core.other.MayatomrJob"><tt class="xref py py-obj docutils literal"><span class="pre">MayatomrJob</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.OneClickDispatch.html#pymel.core.other.OneClickDispatch" title="pymel.core.other.OneClickDispatch"><tt class="xref py py-obj docutils literal"><span class="pre">OneClickDispatch</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.OneClickDispatch</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.OneClickExecute.html#pymel.core.other.OneClickExecute" title="pymel.core.other.OneClickExecute"><tt class="xref py py-obj docutils literal"><span class="pre">OneClickExecute</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.OneClickExecute</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.OneClickGetState.html#pymel.core.other.OneClickGetState" title="pymel.core.other.OneClickGetState"><tt class="xref py py-obj docutils literal"><span class="pre">OneClickGetState</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.OneClickGetState</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.OneClickMenuExecute.html#pymel.core.other.OneClickMenuExecute" title="pymel.core.other.OneClickMenuExecute"><tt class="xref py py-obj docutils literal"><span class="pre">OneClickMenuExecute</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.OneClickMenuExecute</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.OneClickSetCallback.html#pymel.core.other.OneClickSetCallback" title="pymel.core.other.OneClickSetCallback"><tt class="xref py py-obj docutils literal"><span class="pre">OneClickSetCallback</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.OneClickSetCallback</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ResetProperty2State.html#pymel.core.other.ResetProperty2State" title="pymel.core.other.ResetProperty2State"><tt class="xref py py-obj docutils literal"><span class="pre">ResetProperty2State</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ResetProperty2State</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.SaveHIKCharacterDefinition.html#pymel.core.other.SaveHIKCharacterDefinition" title="pymel.core.other.SaveHIKCharacterDefinition"><tt class="xref py py-obj docutils literal"><span class="pre">SaveHIKCharacterDefinition</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.SaveHIKCharacterDefinition</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.SaveScene.html#pymel.core.other.SaveScene" title="pymel.core.other.SaveScene"><tt class="xref py py-obj docutils literal"><span class="pre">SaveScene</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.SaveScene</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ScriptEditor.html#pymel.core.other.ScriptEditor" title="pymel.core.other.ScriptEditor"><tt class="xref py py-obj docutils literal"><span class="pre">ScriptEditor</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ScriptEditor</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ScriptPaintTool.html#pymel.core.other.ScriptPaintTool" title="pymel.core.other.ScriptPaintTool"><tt class="xref py py-obj docutils literal"><span class="pre">ScriptPaintTool</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ScriptPaintTool</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.TanimLayer.html#pymel.core.other.TanimLayer" title="pymel.core.other.TanimLayer"><tt class="xref py py-obj docutils literal"><span class="pre">TanimLayer</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.addExtension.html#pymel.core.other.addExtension" title="pymel.core.other.addExtension"><tt class="xref py py-obj docutils literal"><span class="pre">addExtension</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.addIK2BsolverCallbacks.html#pymel.core.other.addIK2BsolverCallbacks" title="pymel.core.other.addIK2BsolverCallbacks"><tt class="xref py py-obj docutils literal"><span class="pre">addIK2BsolverCallbacks</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.addIK2BsolverCallbacks</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.adskAsset.html#pymel.core.other.adskAsset" title="pymel.core.other.adskAsset"><tt class="xref py py-obj docutils literal"><span class="pre">adskAsset</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.adskAssetLibrary.html#pymel.core.other.adskAssetLibrary" title="pymel.core.other.adskAssetLibrary"><tt class="xref py py-obj docutils literal"><span class="pre">adskAssetLibrary</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.adskAssetList.html#pymel.core.other.adskAssetList" title="pymel.core.other.adskAssetList"><tt class="xref py py-obj docutils literal"><span class="pre">adskAssetList</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.adskAssetListUI.html#pymel.core.other.adskAssetListUI" title="pymel.core.other.adskAssetListUI"><tt class="xref py py-obj docutils literal"><span class="pre">adskAssetListUI</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.agFormatIn.html#pymel.core.other.agFormatIn" title="pymel.core.other.agFormatIn"><tt class="xref py py-obj docutils literal"><span class="pre">agFormatIn</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.agFormatOut.html#pymel.core.other.agFormatOut" title="pymel.core.other.agFormatOut"><tt class="xref py py-obj docutils literal"><span class="pre">agFormatOut</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.artAttr.html#pymel.core.other.artAttr" title="pymel.core.other.artAttr"><tt class="xref py py-obj docutils literal"><span class="pre">artAttr</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.artAttr</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.artFluidAttr.html#pymel.core.other.artFluidAttr" title="pymel.core.other.artFluidAttr"><tt class="xref py py-obj docutils literal"><span class="pre">artFluidAttr</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.artFluidAttr</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.artSelect.html#pymel.core.other.artSelect" title="pymel.core.other.artSelect"><tt class="xref py py-obj docutils literal"><span class="pre">artSelect</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.artSelect</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.artSetPaint.html#pymel.core.other.artSetPaint" title="pymel.core.other.artSetPaint"><tt class="xref py py-obj docutils literal"><span class="pre">artSetPaint</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.artSetPaint</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.blend.html#pymel.core.other.blend" title="pymel.core.other.blend"><tt class="xref py py-obj docutils literal"><span class="pre">blend</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleAbout.html#pymel.core.other.cMuscleAbout" title="pymel.core.other.cMuscleAbout"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleAbout</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleBindSticky.html#pymel.core.other.cMuscleBindSticky" title="pymel.core.other.cMuscleBindSticky"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleBindSticky</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleCache.html#pymel.core.other.cMuscleCache" title="pymel.core.other.cMuscleCache"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleCache</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleCompIndex.html#pymel.core.other.cMuscleCompIndex" title="pymel.core.other.cMuscleCompIndex"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleCompIndex</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleQuery.html#pymel.core.other.cMuscleQuery" title="pymel.core.other.cMuscleQuery"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleQuery</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleRayIntersect.html#pymel.core.other.cMuscleRayIntersect" title="pymel.core.other.cMuscleRayIntersect"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleRayIntersect</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleRelaxSetup.html#pymel.core.other.cMuscleRelaxSetup" title="pymel.core.other.cMuscleRelaxSetup"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleRelaxSetup</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleSimulate.html#pymel.core.other.cMuscleSimulate" title="pymel.core.other.cMuscleSimulate"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleSimulate</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleSplineBind.html#pymel.core.other.cMuscleSplineBind" title="pymel.core.other.cMuscleSplineBind"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleSplineBind</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleWeight.html#pymel.core.other.cMuscleWeight" title="pymel.core.other.cMuscleWeight"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleWeight</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleWeightDefault.html#pymel.core.other.cMuscleWeightDefault" title="pymel.core.other.cMuscleWeightDefault"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleWeightDefault</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleWeightMirror.html#pymel.core.other.cMuscleWeightMirror" title="pymel.core.other.cMuscleWeightMirror"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleWeightMirror</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleWeightPrune.html#pymel.core.other.cMuscleWeightPrune" title="pymel.core.other.cMuscleWeightPrune"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleWeightPrune</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.cMuscleWeightSave.html#pymel.core.other.cMuscleWeightSave" title="pymel.core.other.cMuscleWeightSave"><tt class="xref py py-obj docutils literal"><span class="pre">cMuscleWeightSave</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.clearShear.html#pymel.core.other.clearShear" title="pymel.core.other.clearShear"><tt class="xref py py-obj docutils literal"><span class="pre">clearShear</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.clearShear</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.convertLightmapSetup.html#pymel.core.other.convertLightmapSetup" title="pymel.core.other.convertLightmapSetup"><tt class="xref py py-obj docutils literal"><span class="pre">convertLightmapSetup</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.copyNode.html#pymel.core.other.copyNode" title="pymel.core.other.copyNode"><tt class="xref py py-obj docutils literal"><span class="pre">copyNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.copyNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dagObjectHit.html#pymel.core.other.dagObjectHit" title="pymel.core.other.dagObjectHit"><tt class="xref py py-obj docutils literal"><span class="pre">dagObjectHit</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dbtrace.html#pymel.core.other.dbtrace" title="pymel.core.other.dbtrace"><tt class="xref py py-obj docutils literal"><span class="pre">dbtrace</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.debug.html#pymel.core.other.debug" title="pymel.core.other.debug"><tt class="xref py py-obj docutils literal"><span class="pre">debug</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.debugNamespace.html#pymel.core.other.debugNamespace" title="pymel.core.other.debugNamespace"><tt class="xref py py-obj docutils literal"><span class="pre">debugNamespace</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.debugVar.html#pymel.core.other.debugVar" title="pymel.core.other.debugVar"><tt class="xref py py-obj docutils literal"><span class="pre">debugVar</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.deleteExtension.html#pymel.core.other.deleteExtension" title="pymel.core.other.deleteExtension"><tt class="xref py py-obj docutils literal"><span class="pre">deleteExtension</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgControl.html#pymel.core.other.dgControl" title="pymel.core.other.dgControl"><tt class="xref py py-obj docutils literal"><span class="pre">dgControl</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgPerformance.html#pymel.core.other.dgPerformance" title="pymel.core.other.dgPerformance"><tt class="xref py py-obj docutils literal"><span class="pre">dgPerformance</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgcontrol.html#pymel.core.other.dgcontrol" title="pymel.core.other.dgcontrol"><tt class="xref py py-obj docutils literal"><span class="pre">dgcontrol</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgdebug.html#pymel.core.other.dgdebug" title="pymel.core.other.dgdebug"><tt class="xref py py-obj docutils literal"><span class="pre">dgdebug</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgfilter.html#pymel.core.other.dgfilter" title="pymel.core.other.dgfilter"><tt class="xref py py-obj docutils literal"><span class="pre">dgfilter</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgfootprint.html#pymel.core.other.dgfootprint" title="pymel.core.other.dgfootprint"><tt class="xref py py-obj docutils literal"><span class="pre">dgfootprint</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dgstats.html#pymel.core.other.dgstats" title="pymel.core.other.dgstats"><tt class="xref py py-obj docutils literal"><span class="pre">dgstats</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.directConnectPath.html#pymel.core.other.directConnectPath" title="pymel.core.other.directConnectPath"><tt class="xref py py-obj docutils literal"><span class="pre">directConnectPath</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.directConnectPath</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dispatchGenericCommand.html#pymel.core.other.dispatchGenericCommand" title="pymel.core.other.dispatchGenericCommand"><tt class="xref py py-obj docutils literal"><span class="pre">dispatchGenericCommand</span></tt></a></td>
+<td>generic command dispatch function used for API commands</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.dynTestData.html#pymel.core.other.dynTestData" title="pymel.core.other.dynTestData"><tt class="xref py py-obj docutils literal"><span class="pre">dynTestData</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.evalContinue.html#pymel.core.other.evalContinue" title="pymel.core.other.evalContinue"><tt class="xref py py-obj docutils literal"><span class="pre">evalContinue</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.evalContinue</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.extendFluid.html#pymel.core.other.extendFluid" title="pymel.core.other.extendFluid"><tt class="xref py py-obj docutils literal"><span class="pre">extendFluid</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.flagTest.html#pymel.core.other.flagTest" title="pymel.core.other.flagTest"><tt class="xref py py-obj docutils literal"><span class="pre">flagTest</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.flushIdleQueue.html#pymel.core.other.flushIdleQueue" title="pymel.core.other.flushIdleQueue"><tt class="xref py py-obj docutils literal"><span class="pre">flushIdleQueue</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.flushThumbnailCache.html#pymel.core.other.flushThumbnailCache" title="pymel.core.other.flushThumbnailCache"><tt class="xref py py-obj docutils literal"><span class="pre">flushThumbnailCache</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.flushThumbnailCache</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.fontAttributes.html#pymel.core.other.fontAttributes" title="pymel.core.other.fontAttributes"><tt class="xref py py-obj docutils literal"><span class="pre">fontAttributes</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.getRenderDependencies.html#pymel.core.other.getRenderDependencies" title="pymel.core.other.getRenderDependencies"><tt class="xref py py-obj docutils literal"><span class="pre">getRenderDependencies</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.getRenderDependencies</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.getRenderTasks.html#pymel.core.other.getRenderTasks" title="pymel.core.other.getRenderTasks"><tt class="xref py py-obj docutils literal"><span class="pre">getRenderTasks</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.groupParts.html#pymel.core.other.groupParts" title="pymel.core.other.groupParts"><tt class="xref py py-obj docutils literal"><span class="pre">groupParts</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.groupParts</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.hikCharacterToolWidget.html#pymel.core.other.hikCharacterToolWidget" title="pymel.core.other.hikCharacterToolWidget"><tt class="xref py py-obj docutils literal"><span class="pre">hikCharacterToolWidget</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.hikGlobals.html#pymel.core.other.hikGlobals" title="pymel.core.other.hikGlobals"><tt class="xref py py-obj docutils literal"><span class="pre">hikGlobals</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ikSpringSolverCallbacks.html#pymel.core.other.ikSpringSolverCallbacks" title="pymel.core.other.ikSpringSolverCallbacks"><tt class="xref py py-obj docutils literal"><span class="pre">ikSpringSolverCallbacks</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ikSpringSolverCallbacks</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ikSpringSolverRestPose.html#pymel.core.other.ikSpringSolverRestPose" title="pymel.core.other.ikSpringSolverRestPose"><tt class="xref py py-obj docutils literal"><span class="pre">ikSpringSolverRestPose</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ikSpringSolverRestPose</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.imageWindowEditor.html#pymel.core.other.imageWindowEditor" title="pymel.core.other.imageWindowEditor"><tt class="xref py py-obj docutils literal"><span class="pre">imageWindowEditor</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.interactionStyle.html#pymel.core.other.interactionStyle" title="pymel.core.other.interactionStyle"><tt class="xref py py-obj docutils literal"><span class="pre">interactionStyle</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.isDescendentPulling.html#pymel.core.other.isDescendentPulling" title="pymel.core.other.isDescendentPulling"><tt class="xref py py-obj docutils literal"><span class="pre">isDescendentPulling</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.itemFilterAttrOld.html#pymel.core.other.itemFilterAttrOld" title="pymel.core.other.itemFilterAttrOld"><tt class="xref py py-obj docutils literal"><span class="pre">itemFilterAttrOld</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.itemFilterOld.html#pymel.core.other.itemFilterOld" title="pymel.core.other.itemFilterOld"><tt class="xref py py-obj docutils literal"><span class="pre">itemFilterOld</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.itemFilterRenderOld.html#pymel.core.other.itemFilterRenderOld" title="pymel.core.other.itemFilterRenderOld"><tt class="xref py py-obj docutils literal"><span class="pre">itemFilterRenderOld</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.itemFilterTypeOld.html#pymel.core.other.itemFilterTypeOld" title="pymel.core.other.itemFilterTypeOld"><tt class="xref py py-obj docutils literal"><span class="pre">itemFilterTypeOld</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.iterOnNurbs.html#pymel.core.other.iterOnNurbs" title="pymel.core.other.iterOnNurbs"><tt class="xref py py-obj docutils literal"><span class="pre">iterOnNurbs</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.journal.html#pymel.core.other.journal" title="pymel.core.other.journal"><tt class="xref py py-obj docutils literal"><span class="pre">journal</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.keyingGroup.html#pymel.core.other.keyingGroup" title="pymel.core.other.keyingGroup"><tt class="xref py py-obj docutils literal"><span class="pre">keyingGroup</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.licenseCheck.html#pymel.core.other.licenseCheck" title="pymel.core.other.licenseCheck"><tt class="xref py py-obj docutils literal"><span class="pre">licenseCheck</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.melInfo.html#pymel.core.other.melInfo" title="pymel.core.other.melInfo"><tt class="xref py py-obj docutils literal"><span class="pre">melInfo</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.melInfo</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.meshIntersectTest.html#pymel.core.other.meshIntersectTest" title="pymel.core.other.meshIntersectTest"><tt class="xref py py-obj docutils literal"><span class="pre">meshIntersectTest</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.mouldMesh.html#pymel.core.other.mouldMesh" title="pymel.core.other.mouldMesh"><tt class="xref py py-obj docutils literal"><span class="pre">mouldMesh</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.mouldMesh</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.mouldSrf.html#pymel.core.other.mouldSrf" title="pymel.core.other.mouldSrf"><tt class="xref py py-obj docutils literal"><span class="pre">mouldSrf</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.mouldSrf</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.mouldSubdiv.html#pymel.core.other.mouldSubdiv" title="pymel.core.other.mouldSubdiv"><tt class="xref py py-obj docutils literal"><span class="pre">mouldSubdiv</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.mouldSubdiv</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.movieCompressor.html#pymel.core.other.movieCompressor" title="pymel.core.other.movieCompressor"><tt class="xref py py-obj docutils literal"><span class="pre">movieCompressor</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.mrFactory.html#pymel.core.other.mrFactory" title="pymel.core.other.mrFactory"><tt class="xref py py-obj docutils literal"><span class="pre">mrFactory</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.mrProgress.html#pymel.core.other.mrProgress" title="pymel.core.other.mrProgress"><tt class="xref py py-obj docutils literal"><span class="pre">mrProgress</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.myTestCmd.html#pymel.core.other.myTestCmd" title="pymel.core.other.myTestCmd"><tt class="xref py py-obj docutils literal"><span class="pre">myTestCmd</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.nop.html#pymel.core.other.nop" title="pymel.core.other.nop"><tt class="xref py py-obj docutils literal"><span class="pre">nop</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.nurbsCurveRebuildPref.html#pymel.core.other.nurbsCurveRebuildPref" title="pymel.core.other.nurbsCurveRebuildPref"><tt class="xref py py-obj docutils literal"><span class="pre">nurbsCurveRebuildPref</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.objstats.html#pymel.core.other.objstats" title="pymel.core.other.objstats"><tt class="xref py py-obj docutils literal"><span class="pre">objstats</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ogsdebug.html#pymel.core.other.ogsdebug" title="pymel.core.other.ogsdebug"><tt class="xref py py-obj docutils literal"><span class="pre">ogsdebug</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.paint3d.html#pymel.core.other.paint3d" title="pymel.core.other.paint3d"><tt class="xref py py-obj docutils literal"><span class="pre">paint3d</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.paint3d</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyIterOnPoly.html#pymel.core.other.polyIterOnPoly" title="pymel.core.other.polyIterOnPoly"><tt class="xref py py-obj docutils literal"><span class="pre">polyIterOnPoly</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyPrimitiveMisc.html#pymel.core.other.polyPrimitiveMisc" title="pymel.core.other.polyPrimitiveMisc"><tt class="xref py py-obj docutils literal"><span class="pre">polyPrimitiveMisc</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyProjectCurve.html#pymel.core.other.polyProjectCurve" title="pymel.core.other.polyProjectCurve"><tt class="xref py py-obj docutils literal"><span class="pre">polyProjectCurve</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polySelectEditCtxDataCmd.html#pymel.core.other.polySelectEditCtxDataCmd" title="pymel.core.other.polySelectEditCtxDataCmd"><tt class="xref py py-obj docutils literal"><span class="pre">polySelectEditCtxDataCmd</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polySelectSp.html#pymel.core.other.polySelectSp" title="pymel.core.other.polySelectSp"><tt class="xref py py-obj docutils literal"><span class="pre">polySelectSp</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polySetVertices.html#pymel.core.other.polySetVertices" title="pymel.core.other.polySetVertices"><tt class="xref py py-obj docutils literal"><span class="pre">polySetVertices</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.polySetVertices</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polySpinEdge.html#pymel.core.other.polySpinEdge" title="pymel.core.other.polySpinEdge"><tt class="xref py py-obj docutils literal"><span class="pre">polySpinEdge</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polySplitCtx2.html#pymel.core.other.polySplitCtx2" title="pymel.core.other.polySplitCtx2"><tt class="xref py py-obj docutils literal"><span class="pre">polySplitCtx2</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyTestPop.html#pymel.core.other.polyTestPop" title="pymel.core.other.polyTestPop"><tt class="xref py py-obj docutils literal"><span class="pre">polyTestPop</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyToCurve.html#pymel.core.other.polyToCurve" title="pymel.core.other.polyToCurve"><tt class="xref py py-obj docutils literal"><span class="pre">polyToCurve</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.polyWarpImage.html#pymel.core.other.polyWarpImage" title="pymel.core.other.polyWarpImage"><tt class="xref py py-obj docutils literal"><span class="pre">polyWarpImage</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.popPinning.html#pymel.core.other.popPinning" title="pymel.core.other.popPinning"><tt class="xref py py-obj docutils literal"><span class="pre">popPinning</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.popPinning</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.psdConvSolidTxOptions.html#pymel.core.other.psdConvSolidTxOptions" title="pymel.core.other.psdConvSolidTxOptions"><tt class="xref py py-obj docutils literal"><span class="pre">psdConvSolidTxOptions</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.pushPinning.html#pymel.core.other.pushPinning" title="pymel.core.other.pushPinning"><tt class="xref py py-obj docutils literal"><span class="pre">pushPinning</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.pushPinning</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.rampWidget.html#pymel.core.other.rampWidget" title="pymel.core.other.rampWidget"><tt class="xref py py-obj docutils literal"><span class="pre">rampWidget</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.rampWidgetAttrless.html#pymel.core.other.rampWidgetAttrless" title="pymel.core.other.rampWidgetAttrless"><tt class="xref py py-obj docutils literal"><span class="pre">rampWidgetAttrless</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.readPDC.html#pymel.core.other.readPDC" title="pymel.core.other.readPDC"><tt class="xref py py-obj docutils literal"><span class="pre">readPDC</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.refreshEditorTemplates.html#pymel.core.other.refreshEditorTemplates" title="pymel.core.other.refreshEditorTemplates"><tt class="xref py py-obj docutils literal"><span class="pre">refreshEditorTemplates</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.refreshEditorTemplates</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.repeatLast.html#pymel.core.other.repeatLast" title="pymel.core.other.repeatLast"><tt class="xref py py-obj docutils literal"><span class="pre">repeatLast</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_AffectTheseAttributes.html#pymel.core.other.sbs_AffectTheseAttributes" title="pymel.core.other.sbs_AffectTheseAttributes"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_AffectTheseAttributes</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_AffectTheseAttributes</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_AffectedByAllInputs.html#pymel.core.other.sbs_AffectedByAllInputs" title="pymel.core.other.sbs_AffectedByAllInputs"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_AffectedByAllInputs</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_AffectedByAllInputs</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_EditSubstance.html#pymel.core.other.sbs_EditSubstance" title="pymel.core.other.sbs_EditSubstance"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_EditSubstance</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_EditSubstance</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetAllInputsFromSubstanceNode.html#pymel.core.other.sbs_GetAllInputsFromSubstanceNode" title="pymel.core.other.sbs_GetAllInputsFromSubstanceNode"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetAllInputsFromSubstanceNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetAllInputsFromSubstanceNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetChannelsNamesFromSubstanceNode.html#pymel.core.other.sbs_GetChannelsNamesFromSubstanceNode" title="pymel.core.other.sbs_GetChannelsNamesFromSubstanceNode"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetChannelsNamesFromSubstanceNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetChannelsNamesFromSubstanceNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetEditionModeScale.html#pymel.core.other.sbs_GetEditionModeScale" title="pymel.core.other.sbs_GetEditionModeScale"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetEditionModeScale</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetEditionModeScale</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetEngine.html#pymel.core.other.sbs_GetEngine" title="pymel.core.other.sbs_GetEngine"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetEngine</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetEngine</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetGlobalTextureHeight.html#pymel.core.other.sbs_GetGlobalTextureHeight" title="pymel.core.other.sbs_GetGlobalTextureHeight"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetGlobalTextureHeight</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetGlobalTextureHeight</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetGlobalTextureWidth.html#pymel.core.other.sbs_GetGlobalTextureWidth" title="pymel.core.other.sbs_GetGlobalTextureWidth"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetGlobalTextureWidth</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetGlobalTextureWidth</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetGraphsNamesFromSubstanceNode.html#pymel.core.other.sbs_GetGraphsNamesFromSubstanceNode" title="pymel.core.other.sbs_GetGraphsNamesFromSubstanceNode"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetGraphsNamesFromSubstanceNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetGraphsNamesFromSubstanceNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetPackageFullPathNameFromSubstanceNode.html#pymel.core.other.sbs_GetPackageFullPathNameFromSubstanceNode" title="pymel.core.other.sbs_GetPackageFullPathNameFromSubstanceNode"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetPackageFullPathNameFromSubstanceNode</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetPackageFullPathNameFromSubstanceNode</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GetSubstanceBuildVersion.html#pymel.core.other.sbs_GetSubstanceBuildVersion" title="pymel.core.other.sbs_GetSubstanceBuildVersion"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GetSubstanceBuildVersion</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GetSubstanceBuildVersion</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_GoToMarketPlace.html#pymel.core.other.sbs_GoToMarketPlace" title="pymel.core.other.sbs_GoToMarketPlace"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_GoToMarketPlace</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_GoToMarketPlace</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_IsSubstanceRelocalized.html#pymel.core.other.sbs_IsSubstanceRelocalized" title="pymel.core.other.sbs_IsSubstanceRelocalized"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_IsSubstanceRelocalized</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_IsSubstanceRelocalized</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_SetEditionModeScale.html#pymel.core.other.sbs_SetEditionModeScale" title="pymel.core.other.sbs_SetEditionModeScale"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_SetEditionModeScale</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_SetEditionModeScale</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_SetEngine.html#pymel.core.other.sbs_SetEngine" title="pymel.core.other.sbs_SetEngine"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_SetEngine</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_SetEngine</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_SetGlobalTextureHeight.html#pymel.core.other.sbs_SetGlobalTextureHeight" title="pymel.core.other.sbs_SetGlobalTextureHeight"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_SetGlobalTextureHeight</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_SetGlobalTextureHeight</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.sbs_SetGlobalTextureWidth.html#pymel.core.other.sbs_SetGlobalTextureWidth" title="pymel.core.other.sbs_SetGlobalTextureWidth"><tt class="xref py py-obj docutils literal"><span class="pre">sbs_SetGlobalTextureWidth</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.sbs_SetGlobalTextureWidth</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.selectKeyframe.html#pymel.core.other.selectKeyframe" title="pymel.core.other.selectKeyframe"><tt class="xref py py-obj docutils literal"><span class="pre">selectKeyframe</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.subdDisplayMode.html#pymel.core.other.subdDisplayMode" title="pymel.core.other.subdDisplayMode"><tt class="xref py py-obj docutils literal"><span class="pre">subdDisplayMode</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.subdToNurbs.html#pymel.core.other.subdToNurbs" title="pymel.core.other.subdToNurbs"><tt class="xref py py-obj docutils literal"><span class="pre">subdToNurbs</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.subgraph.html#pymel.core.other.subgraph" title="pymel.core.other.subgraph"><tt class="xref py py-obj docutils literal"><span class="pre">subgraph</span></tt></a></td>
+<td>Dynamic library stub function</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.swatchRefresh.html#pymel.core.other.swatchRefresh" title="pymel.core.other.swatchRefresh"><tt class="xref py py-obj docutils literal"><span class="pre">swatchRefresh</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.swatchRefresh</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.testPa.html#pymel.core.other.testPa" title="pymel.core.other.testPa"><tt class="xref py py-obj docutils literal"><span class="pre">testPa</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.testPa</span></tt></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.testPassContribution.html#pymel.core.other.testPassContribution" title="pymel.core.other.testPassContribution"><tt class="xref py py-obj docutils literal"><span class="pre">testPassContribution</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.transferShadingSets.html#pymel.core.other.transferShadingSets" title="pymel.core.other.transferShadingSets"><tt class="xref py py-obj docutils literal"><span class="pre">transferShadingSets</span></tt></a></td>
+<td>Flags:</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.core.other/pymel.core.other.ubercam.html#pymel.core.other.ubercam" title="pymel.core.other.ubercam"><tt class="xref py py-obj docutils literal"><span class="pre">ubercam</span></tt></a></td>
+<td>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.ubercam</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="classes/pymel.core.other/pymel.core.other.AttributeName.html#pymel.core.other.AttributeName" title="pymel.core.other.AttributeName"><tt class="xref py py-obj docutils literal"><span class="pre">AttributeName</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.other/pymel.core.other.DagNodeName.html#pymel.core.other.DagNodeName" title="pymel.core.other.DagNodeName"><tt class="xref py py-obj docutils literal"><span class="pre">DagNodeName</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.other/pymel.core.other.DependNodeName.html#pymel.core.other.DependNodeName" title="pymel.core.other.DependNodeName"><tt class="xref py py-obj docutils literal"><span class="pre">DependNodeName</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.core.other/pymel.core.other.NameParser.html#pymel.core.other.NameParser" title="pymel.core.other.NameParser"><tt class="xref py py-obj docutils literal"><span class="pre">NameParser</span></tt></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="functions/pymel.core.modeling/pymel.core.modeling.uvSnapshot.html"
+                        title="previous chapter">pymel.core.modeling.uvSnapshot</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="functions/pymel.core.other/pymel.core.other.AttributeEditor.html"
+                        title="next chapter">pymel.core.other.AttributeEditor</a></p>
+<h3><a href="../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/pymel.core.other.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.other/pymel.core.other.AttributeEditor.html" title="pymel.core.other.AttributeEditor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.core.modeling/pymel.core.modeling.uvSnapshot.html" title="pymel.core.modeling.uvSnapshot"
+             >previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

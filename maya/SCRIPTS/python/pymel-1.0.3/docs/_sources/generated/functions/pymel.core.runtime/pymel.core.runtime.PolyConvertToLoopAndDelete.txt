@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyConvertToLoopAndDelete
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyConvertToLoopAndDelete

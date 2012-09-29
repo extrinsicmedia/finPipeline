@@ -1,0 +1,6 @@
+pymel.core.runtime.ActivateGlobalScreenSlider
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ActivateGlobalScreenSlider

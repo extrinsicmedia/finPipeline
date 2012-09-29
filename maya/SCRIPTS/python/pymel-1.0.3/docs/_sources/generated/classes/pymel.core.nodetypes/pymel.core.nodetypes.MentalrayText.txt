@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayText
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayText
+    :parts: 1
+
+.. autoclass:: MentalrayText
+    :members:
+    :undoc-members:

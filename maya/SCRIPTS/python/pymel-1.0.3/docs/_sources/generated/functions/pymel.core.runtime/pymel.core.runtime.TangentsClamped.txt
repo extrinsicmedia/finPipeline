@@ -1,0 +1,6 @@
+pymel.core.runtime.TangentsClamped
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TangentsClamped

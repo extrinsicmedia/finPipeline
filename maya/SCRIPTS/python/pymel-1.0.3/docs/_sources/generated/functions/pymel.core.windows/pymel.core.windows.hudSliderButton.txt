@@ -1,0 +1,6 @@
+pymel.core.windows.hudSliderButton
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.hudSliderButton

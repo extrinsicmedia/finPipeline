@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lookup_cube1
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lookup_cube1
+    :parts: 1
+
+.. autoclass:: Mib_lookup_cube1
+    :members:
+    :undoc-members:

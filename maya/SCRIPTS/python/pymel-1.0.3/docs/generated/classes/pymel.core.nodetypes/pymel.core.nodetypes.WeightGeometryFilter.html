@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.WeightGeometryFilter &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.Wire" href="pymel.core.nodetypes.Wire.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Water" href="pymel.core.nodetypes.Water.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Wire.html" title="pymel.core.nodetypes.Wire"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Water.html" title="pymel.core.nodetypes.Water"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-weightgeometryfilter">
+<h1>pymel.core.nodetypes.WeightGeometryFilter<a class="headerlink" href="#pymel-core-nodetypes-weightgeometryfilter" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-1e4d81cb982478e666843480dc0b0f6cf80ad5e0.png" alt="Inheritance diagram of WeightGeometryFilter" usemap="#inheritanced39f2c6a12" class="inheritance"/>
+<map id="inheritanced39f2c6a12" name="inheritanced39f2c6a12">
+<area shape="rect" href="#pymel.core.nodetypes.WeightGeometryFilter" title="WeightGeometryFilter" alt="" coords="5,160,141,184"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryFilter.html#pymel.core.nodetypes.GeometryFilter" title="GeometryFilter" alt="" coords="24,121,123,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="29,82,117,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="28,5,119,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="37,44,109,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.WeightGeometryFilter">
+<em class="property">class </em><tt class="descname">WeightGeometryFilter</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.WeightGeometryFilter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.nodetypes.WeightGeometryFilter.getWeightPlugStrings">
+<tt class="descname">getWeightPlugStrings</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.WeightGeometryFilter.getWeightPlugStrings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the plugStringArray argument to contain the names of the plugs on this node that correspond to the components in the selection list. The operation will fail if none of the items in the selection list correspond to components weighted by this cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>list <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="pymel.core.nodetypes.SelectionSet.html#pymel.core.nodetypes.SelectionSet" title="pymel.core.nodetypes.SelectionSet"><tt class="xref py py-obj docutils literal"><span class="pre">SelectionSet</span></tt></a></span></dt>
+<dd><p class="first last">selection list that contains components</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">list</span></tt> list</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnWeightGeometryFilter.getWeightPlugStrings</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.WeightGeometryFilter.getWeights">
+<tt class="descname">getWeights</tt><big>(</big><em>index</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.WeightGeometryFilter.getWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the weights of the components that correspond to the geometry at the specified plug index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the plug index corresponding to the shape that has the components</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(<tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnWeightGeometryFilter.getWeights</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.WeightGeometryFilter.setWeight">
+<tt class="descname">setWeight</tt><big>(</big><em>path</em>, <em>index</em>, <em>components</em>, <em>weight</em>, <em>oldValues=None</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.WeightGeometryFilter.setWeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the weights of the specified components of the object whose DAG path is specified.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>path <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">the DAG path for the object whose components&#8217; weights are being set</p>
+</dd>
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the plug index for the specified shape</p>
+</dd>
+<dt>components <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">the components of the object</p>
+</dd>
+<dt>weight <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">weight value for the components</p>
+</dd>
+<dt>oldValues <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</span></dt>
+<dd><p class="first last">an array of old values for the components</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnWeightGeometryFilter.setWeight</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.WeightGeometryFilter.weightPlugStrings">
+<tt class="descname">weightPlugStrings</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.WeightGeometryFilter.weightPlugStrings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the plugStrings argument to be a string (separated by spaces) containing the names of the plugs on this node that correspond to the components in the selection list. The method can be useful in conjunction with setting keys on a number of plugs. The operation will fail if none of the items in the selection list correspond to components weighted by this cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>list <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="pymel.core.nodetypes.SelectionSet.html#pymel.core.nodetypes.SelectionSet" title="pymel.core.nodetypes.SelectionSet"><tt class="xref py py-obj docutils literal"><span class="pre">SelectionSet</span></tt></a></span></dt>
+<dd><p class="first last">selection list that contains components</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnWeightGeometryFilter.weightPlugStrings</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Water.html"
+                        title="previous chapter">pymel.core.nodetypes.Water</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Wire.html"
+                        title="next chapter">pymel.core.nodetypes.Wire</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.WeightGeometryFilter.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Wire.html" title="pymel.core.nodetypes.Wire"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Water.html" title="pymel.core.nodetypes.Water"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

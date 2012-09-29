@@ -1,0 +1,6 @@
+pymel.core.runtime.SmoothBindSkin
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SmoothBindSkin

@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleVertIDs
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleVertIDs

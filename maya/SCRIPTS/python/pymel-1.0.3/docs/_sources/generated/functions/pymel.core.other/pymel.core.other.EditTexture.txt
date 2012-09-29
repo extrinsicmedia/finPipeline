@@ -1,0 +1,6 @@
+pymel.core.other.EditTexture
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.EditTexture

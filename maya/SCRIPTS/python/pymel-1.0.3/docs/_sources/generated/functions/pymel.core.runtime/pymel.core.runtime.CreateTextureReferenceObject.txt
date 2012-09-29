@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateTextureReferenceObject
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateTextureReferenceObject

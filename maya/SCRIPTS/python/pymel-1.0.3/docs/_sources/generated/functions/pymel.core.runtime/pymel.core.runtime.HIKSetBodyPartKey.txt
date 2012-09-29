@@ -1,0 +1,6 @@
+pymel.core.runtime.HIKSetBodyPartKey
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HIKSetBodyPartKey

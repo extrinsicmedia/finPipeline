@@ -1,0 +1,6 @@
+pymel.core.runtime.ResetTemplateBrush
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ResetTemplateBrush

@@ -1,0 +1,6 @@
+pymel.core.runtime.DetachCurveOptions
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DetachCurveOptions

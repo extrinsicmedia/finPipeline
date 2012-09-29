@@ -1,0 +1,6 @@
+pymel.core.other.convertLightmapSetup
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.convertLightmapSetup

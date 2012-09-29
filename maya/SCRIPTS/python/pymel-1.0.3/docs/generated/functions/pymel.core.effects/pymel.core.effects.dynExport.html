@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.effects.dynExport &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.effects" href="../../pymel.core.effects.html" />
+    <link rel="next" title="pymel.core.effects.dynExpression" href="pymel.core.effects.dynExpression.html" />
+    <link rel="prev" title="pymel.core.effects.dynControl" href="pymel.core.effects.dynControl.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.dynExpression.html" title="pymel.core.effects.dynExpression"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.dynControl.html" title="pymel.core.effects.dynControl"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" accesskey="U">pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-effects-dynexport">
+<h1>pymel.core.effects.dynExport<a class="headerlink" href="#pymel-core-effects-dynexport" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.effects.dynExport">
+<em class="property">static </em><tt class="descclassname">effects.</tt><tt class="descname">dynExport</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.effects.dynExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export particle data to disk files. For cache export (-format cache), dynExport also sets three attributes of the
+current dynGlobals node.  It sets the useParticleRenderCache attribute to true, and the
+min/maxFrameOfLastParticleRenderCache attributes to correspond to the min and max frames. Exported .pda or .pdb files
+are assigned a name of form object name.frame.extension, where extensionis pdaor pdb.The naming convention for .pdc
+files is similar but does not use frame numbers, it uses a more precise representation of the time instead. By default,
+the pda and pdb formats export all per-particle attributes, and all integer or float type attributes except those which
+are hidden or not storable. (Exception: level of detail is not exported, by default) The pdc format exports all
+attributes which the particle object needs for its state cache. To specify only selected attributes, use the -atr flag
+(which is multi-use).  In general, it is recommended not to use this flag with pdc type, since you need all the
+attributes in order for the cache to be useful. dynExport exports data for the current frame, or for a range of frames
+specified with -mnf and -mxf. If you are not already at the start frame, dynExport will run up the scene for you. VERY
+VERY IMPORTANT NOTE:If you use dynExport in -prompt mode, it does NOT automatically force evaluation of your objects.
+You must do this yourself from your script.  The easiest way is to request each particle object&#8217;s countattribute each
+frame.  You must request the count attribute for each object you want to export, because their solvers run independently
+of one another.  In interactive mode, objects WILL get evaluated automatically and you don&#8217;t have to worry about any of
+this. When exporting a particle object whose particles are created from collisions involving particles in another
+particle object(s), you must make sure you simultaneously export all the particle objects involved in the dependency
+chain otherwise you will get an empty cache file. For non-per-particle attributes, pda and pdb formats write the
+identical value once for each particle.  The following types of non-per-particle attributes can be exported: float,
+double, doubleLinear, doubleAngle, byte, short, long, enum.  The first four are exported as Real(in PDB parlance), and
+the last four as Integer.In the pda and pdb formats, particleIdand particleId0are exported as Integer, and are exported
+under the names idand id0respectively.  All other attributes are exported under their long names.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>allObjects (all)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Ignore the selection list and export all particle objects. If you also specify an object name, the -all flag will be ignored.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>attribute (atr)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Name of attribute to be exported. If any specified object does not have one of the specified attributes, dynExport will issue an error and not do the export.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>format (f)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Desired format: binarypdb), asciipda), or cachepdc). The pdc format is for use by the Maya particle system to cache particle data.  The pda and pdb format options
+are intended for pipelines involving other software (for example, sending the data to some program written in-house); Maya cannot read pda or pdb files. There is
+no formal description of the PDB format, but the ExploreMe/particles/readpdb directory contains the source and Makefile for a small, simple C program called
+readpdbwhich reads it. Note that you must compile and run reapdb on the platform which you exported the files on.                       Flag can have multiple
+arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>maxFrame (mxf)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Ending frame to be exported.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>minFrame (mnf)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Starting frame to be exported. The export operation will play the scene through from min frame to max frame as it exports.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>onlyUpdateParticles (oup)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>overSampling (os)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>OverSampling to be used during export.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>path (p)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This option allows you to specify a subdirectory of the workspace particlesdirectory where you want the exported files to be stored. By default, files are stored
+in the workspace particles directory, i.e., -path is relative to that directory. Please Read This: This is a change from previous versions of Maya in which the
+path was relative to the workspace root directory.) You can set the particlesdirectory anywhere you want using the project window or workspace -fr command. (In
+this way, you can use an absolute path for export). The -path flag cannot handle strings which include /or , in other words, it lets you go down only one level
+in the directory hierarchy. If you specify a path which doesn&#8217;t exist, the action will create it if possible; if it can&#8217;t create the path it will warn you and
+fail. If you are using a project for which a particle data directory is not defined, dynExport will create a default one called particlesand add it to your
+workspace.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dynExport</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">dynExport</span><span class="p">(</span> <span class="s">&#39;particle1&#39;</span><span class="p">,</span> <span class="n">mnf</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">mxf</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">atr</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;position&#39;</span><span class="p">,</span> <span class="s">&#39;velocity&#39;</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="s">&#39;PDB&#39;</span> <span class="p">)</span>
+
+<span class="c"># Export position and velocity attributes for particle1</span>
+<span class="c"># for frames 5 through 10 at every half frame interval,</span>
+<span class="c"># to files in subdirectory &quot;PDB&quot; of the workspace root</span>
+<span class="c"># directory. The default format (binary) will be used.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.effects.dynControl.html"
+                        title="previous chapter">pymel.core.effects.dynControl</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.effects.dynExpression.html"
+                        title="next chapter">pymel.core.effects.dynExpression</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.effects/pymel.core.effects.dynExport.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.dynExpression.html" title="pymel.core.effects.dynExpression"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.dynControl.html" title="pymel.core.effects.dynControl"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" >pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.runtime.SoftModDeformer
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SoftModDeformer

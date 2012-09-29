@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleChannelsLayers
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleChannelsLayers

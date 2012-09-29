@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleObject
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleObject
+    :parts: 1
+
+.. autoclass:: CMuscleObject
+    :members:
+    :undoc-members:

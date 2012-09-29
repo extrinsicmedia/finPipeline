@@ -1,0 +1,11 @@
+pymel.tools.py2mel.VectorN
+==========================
+
+.. currentmodule:: pymel.tools.py2mel
+
+.. inheritance-diagram:: VectorN
+    :parts: 1
+
+.. autoclass:: VectorN
+    :members:
+    :undoc-members:

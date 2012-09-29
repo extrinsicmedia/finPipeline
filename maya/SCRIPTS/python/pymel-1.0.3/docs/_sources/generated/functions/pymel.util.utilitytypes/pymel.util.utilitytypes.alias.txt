@@ -1,0 +1,6 @@
+pymel.util.utilitytypes.alias
+=============================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: utilitytypes.alias

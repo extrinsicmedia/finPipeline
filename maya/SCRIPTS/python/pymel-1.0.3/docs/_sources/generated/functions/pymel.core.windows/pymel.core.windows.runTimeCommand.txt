@@ -1,0 +1,6 @@
+pymel.core.windows.runTimeCommand
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.runTimeCommand

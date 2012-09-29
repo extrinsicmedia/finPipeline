@@ -1,0 +1,6 @@
+pymel.util.izip_longest
+=======================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.izip_longest

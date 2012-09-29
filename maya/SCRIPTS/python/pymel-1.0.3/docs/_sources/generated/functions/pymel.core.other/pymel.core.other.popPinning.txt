@@ -1,0 +1,6 @@
+pymel.core.other.popPinning
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.popPinning

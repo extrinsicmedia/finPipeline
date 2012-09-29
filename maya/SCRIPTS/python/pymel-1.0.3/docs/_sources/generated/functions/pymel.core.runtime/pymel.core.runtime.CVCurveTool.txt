@@ -1,0 +1,6 @@
+pymel.core.runtime.CVCurveTool
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CVCurveTool

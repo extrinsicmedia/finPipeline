@@ -1,0 +1,11 @@
+pymel.core.nodetypes.ComputeGlobal
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: ComputeGlobal
+    :parts: 1
+
+.. autoclass:: ComputeGlobal
+    :members:
+    :undoc-members:

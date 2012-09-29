@@ -1,0 +1,6 @@
+pymel.core.runtime.nucleusDisplayTransformNodes
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.nucleusDisplayTransformNodes

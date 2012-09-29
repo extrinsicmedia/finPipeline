@@ -1,0 +1,6 @@
+pymel.core.runtime.SlideEdgeTool
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SlideEdgeTool

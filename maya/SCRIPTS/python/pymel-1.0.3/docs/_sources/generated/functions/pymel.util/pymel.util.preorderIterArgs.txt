@@ -1,0 +1,6 @@
+pymel.util.preorderIterArgs
+===========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.preorderIterArgs

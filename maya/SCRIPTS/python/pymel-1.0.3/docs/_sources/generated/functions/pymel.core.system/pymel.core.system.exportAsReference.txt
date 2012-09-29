@@ -1,0 +1,6 @@
+pymel.core.system.exportAsReference
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.exportAsReference

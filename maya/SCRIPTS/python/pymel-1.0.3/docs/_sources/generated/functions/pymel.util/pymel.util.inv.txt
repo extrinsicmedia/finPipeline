@@ -1,0 +1,6 @@
+pymel.util.inv
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.inv

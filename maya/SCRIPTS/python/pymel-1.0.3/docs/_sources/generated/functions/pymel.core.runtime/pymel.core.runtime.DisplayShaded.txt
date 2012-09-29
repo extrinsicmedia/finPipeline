@@ -1,0 +1,6 @@
+pymel.core.runtime.DisplayShaded
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DisplayShaded

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Misss_fast_simple_maya
+===========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Misss_fast_simple_maya
+    :parts: 1
+
+.. autoclass:: Misss_fast_simple_maya
+    :members:
+    :undoc-members:

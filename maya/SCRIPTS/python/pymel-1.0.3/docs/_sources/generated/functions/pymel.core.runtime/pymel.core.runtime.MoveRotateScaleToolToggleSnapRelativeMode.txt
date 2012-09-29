@@ -1,0 +1,6 @@
+pymel.core.runtime.MoveRotateScaleToolToggleSnapRelativeMode
+============================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MoveRotateScaleToolToggleSnapRelativeMode

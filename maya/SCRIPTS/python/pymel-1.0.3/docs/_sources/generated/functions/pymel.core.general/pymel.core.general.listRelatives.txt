@@ -1,0 +1,6 @@
+pymel.core.general.listRelatives
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.listRelatives

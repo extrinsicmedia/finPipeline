@@ -1,0 +1,6 @@
+pymel.util.refreshEnviron
+=========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.refreshEnviron

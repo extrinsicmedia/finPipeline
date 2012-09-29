@@ -1,0 +1,6 @@
+pymel.util.cacheProperty
+========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.cacheProperty

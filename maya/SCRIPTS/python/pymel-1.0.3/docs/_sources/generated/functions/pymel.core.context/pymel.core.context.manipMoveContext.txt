@@ -1,0 +1,6 @@
+pymel.core.context.manipMoveContext
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: context.manipMoveContext

@@ -1,0 +1,6 @@
+pymel.core.other.sbs_GetChannelsNamesFromSubstanceNode
+======================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_GetChannelsNamesFromSubstanceNode

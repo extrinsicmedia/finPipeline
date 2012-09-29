@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.clip &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.clipEditor" href="pymel.core.animation.clipEditor.html" />
+    <link rel="prev" title="pymel.core.animation.choice" href="pymel.core.animation.choice.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.clipEditor.html" title="pymel.core.animation.clipEditor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.choice.html" title="pymel.core.animation.choice"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-clip">
+<h1>pymel.core.animation.clip<a class="headerlink" href="#pymel-core-animation-clip" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.clip">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">clip</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.clip" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command is used to create, edit and query character clips.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>absolute (abs)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is now deprecated.  Use aa/allAbsolute, ar/allRelative, ra/rotationsAbsolute, or da/defaultAbsolute instead.  This flag controls whether the clip
+follows its keyframe values or whether they are offset by a value to maintain a smooth path. Default is true.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>absoluteRotations (abr)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is now deprecated.  Use aa/allAbsolute, ar/allRelative, ra/rotationsAbsolute, or da/defaultAbsolute instead. If true, this overrides the -absolute flag
+so that rotation channels are always calculated with absolute offsets. This allows you to have absolute offsets on rotations and relative offsets on all other
+channels.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>active (a)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Query or edit the active clip. This flag is not valid in create mode. Making a clip active causes its animCurves to be hooked directly to the character attributes
+in addition to being attached to the clip library node. This makes it easier to access the animCurves if you want to edit, delete or add additional animCruves to
+the clip.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addTrack (at)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is now obsolete. Use the insertTrack flag on the clipSchedule command instead.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>allAbsolute (aa)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set all channels to be calculated with absolute offsets.  This flag cannot be used in conjunction with the ar/allRelative, ra/rotationsAbsolute or
+da/defaultAbsolute flags.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>allClips (ac)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is used to query all the clips in the scene. Nodes of type animClipthat are storing poses, are not returned by this command.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>allRelative (ar)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set all channels to be calculated with relative offsets.  This flag cannot be used in conjunction with the aa/allAbsolute, ra/rotationsAbsolute or
+da/defaultAbsolute flags.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>allSourceClips (asc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is used to query all the source clips in the scene. Nodes of type animClipthat are storing poses or clip instances, are not returned by this command.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>animCurveRange (acr)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag can be used at the time you create the clip instead of the startTime and endTime flags. It specifies that you want the range of the clip to span the
+range of keys in the clips associated animCurves.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>character (ch)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This is a query only flag which operates on the specified clip. It returns the names of any characters that a clip is associated with.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>constraint (cn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This creates a clip out of any constraints on the character. The constraint will be moved off of the character and into the clip, so that it is only active for
+the duration of the clip, and its value can be scaled/offset/cycled according to the clip attributes.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>copy (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is used to copy a clip or clips to the clipboard. It should be used in conjunction with the name flag to copy the named clips on the specified character
+and its subcharacters. In query mode, this flag allows you to query what, if anything, has been copied into the clip clipboard.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>defaultAbsolute (da)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Sets all top-level channels except rotations in the clip to relative, and the remaining channels to absolute. This is the default during clip creation if no
+offset flag is specified.  This flag cannot be used in conjunction with the aa/allAbsolute, ar/allRelative, or ra/rotationsAbsolute flags.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>duplicate (d)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Duplicate the clip specified by the name flag. The start time of the new clip should be specified with the startTime flag.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>endTime (end)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify the clip end</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>expression (ex)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This creates a clip out of any expressions on the character. The expression will be moved off of the character and into the clip, so that it is only active for
+the duration of the clip, and its value can be scaled/offset/cycled according to the clip attributes.                                     Flag can have multiple
+arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>ignoreSubcharacters (ignoreSubcharacters)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">During clip creation, duplication and isolation, subcharacters are included by default. If you want to create a clip on the top level character only, or you want
+to duplicate the clip on the top level character without including subCharacters, use the ignoreSubcharacters flag.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isolate (i)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag should be used in conjunction with the name flag to specify that a clip or clips should be copied to a new clip library. The most common use of this
+flag is for export, when you want to only export certain clips from the character, without exporting all of the clips.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>leaveOriginal (lo)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is used when creating a clip to specify that the animation curves should be copied to the clip library, and left on the character.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>mapMethod (mm)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This is is valid with the paste and pasteInstance flags only. It specifies how the mapping should be done. Valid options are: byNodeName, byAttrName,
+byCharacterMap, byAttrOrder, byMapOrAttrNameand byMapOrNodeName. byAttrNameis the default. The flags mean the following: byAttrOrdermaps using the order that the
+character stores the attributes internally, byAttrNameuses the attribute name to find a correspondence, byNodeNameuses the node name *and* the attribute name to
+find a correspondence, byCharacterMapuses the existing characterMap node to do the mapping. byMapOrAttrNameuses a character map if one exists, otherwise uses the
+attribute name. byMapOrNodeNameuses a character map if one exists, otherwise uses the attribute name.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">In create mode, specify the clip name. In query mode, return a list of all the clips. In duplicate mode, specify the clip to be duplicated. In copy mode, specify
+the clip to be copied. This flag is multi-use, but multiple use is only supported with the copy flag. For use during create and with all other flags, only the
+first instance of the name flag will be utilized. In query mode, this flag can accept a value.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>newName (nn)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Rename a clip. Must be used in conjunction with the clip name flag, which is used to specify the clip to be renamed.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>paste (p)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is used to paste a clip or clips from the clipboard to a character. Clips are added to the clipboard using the c/copy flag.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>pasteInstance (pi)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is used to paste an instance of a clip or clips from the clipboard to a character. Unlike the p/paste flag, which duplicates the animCurves from the
+original source clip, the pi/pasteInstance flag shares the animCurves from the source clip.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>remove (rm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Remove the clip specified by the name flag. The clip will be permanently removed from the library and deleted from any times where it has been scheduled.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>removeTrack (rt)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is now obsolete. Use removeTrack flag on the clipSchedule command instead.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>rotationsAbsolute (ra)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set all channels except rotations to be calculated with relative offsets.  Rotation channels will be calculated with absolute offsets.  This flag cannot be used
+in conjunction with the aa/allAbsolute, ar/allRelative or da/defaultAbsolute flags.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>scheduleClip (sc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag is used when creating a clip to specify whether or not the clip should immediately be scheduled at the current time. If the clip is not scheduled, the
+clip will be placed in the library for future use, but will not be placed on the timeline. This flag is for use only when creating a new clip or duplicating an
+existing. The default is true.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>sourceClipName (scn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is for query only. It returns the name of the source clip that controls an instanced clip.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>split (sp)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Split an existing clip into two clips. The split occurs around the specified time.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>startTime (s)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify the clip start</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useChannel (uc)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specify which channels should be acted on. This flag is valid only in conjunction with clip creation, and the isolate flag. The specified channels must be members
+of the character.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.clip</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># First, create a character to hold the clips. The character will be</span>
+<span class="c"># a 3-bone skeleton named &quot;arm&quot;.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint1&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint2&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="s">&#39;joint1&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">zso</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oj</span><span class="o">=</span><span class="s">&#39;xyz&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint2&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint3&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="s">&#39;joint2&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">zso</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oj</span><span class="o">=</span><span class="s">&#39;xyz&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint3&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint4&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="s">&#39;joint3&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">zso</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">oj</span><span class="o">=</span><span class="s">&#39;xyz&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Joint(u&#39;joint4&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="s">&#39;joint1&#39;</span><span class="p">,</span> <span class="s">&#39;joint2&#39;</span><span class="p">,</span> <span class="s">&#39;joint3&#39;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">character</span><span class="p">(</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;arm&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Character(u&#39;arm&#39;) #</span>
+<span class="c"># Create some animation for the character. For this example the animation will</span>
+<span class="c"># be quite trivial.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="s">&#39;joint3&#39;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span>
+<span class="c"># Result: 0.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint3.rx&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="c"># Result: 10.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint3.rx&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">90</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">20</span> <span class="p">)</span>
+<span class="c"># Result: 20.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint3.rx&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="c"># Create a clip for the current animation named &quot;handWave&quot;</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">startTime</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">endTime</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;handWave&#39;</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;handWave&#39;] #</span>
+<span class="c"># Create a 2nd animation for the character.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="s">&#39;joint2&#39;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span>
+<span class="c"># Result: 0.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.rx&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.ry&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">20</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="c"># Result: 10.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.rx&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">45</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.ry&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=-</span><span class="mi">20</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span> <span class="mi">20</span> <span class="p">)</span>
+<span class="c"># Result: 20.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.rx&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span> <span class="s">&#39;joint2.ry&#39;</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="mi">20</span> <span class="p">)</span>
+<span class="c"># Result: 1 #</span>
+<span class="c"># Create a clip for the current animation named &quot;elbowWave&quot;</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">startTime</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">endTime</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;elbowWave&#39;</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;elbowWave&#39;] #</span>
+<span class="c"># Query the existing source clips</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;handWaveSource&#39;, u&#39;elbowWaveSource&#39;] #</span>
+<span class="c"># Query the active clip. Note that the default clip is always active unless</span>
+<span class="c"># another clip has been specified as active. This means that new keyframes</span>
+<span class="c"># always go into the default clip unless you make another clip active.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;default&#39; #</span>
+<span class="c"># Duplicate the clip named &quot;elbowWaveSource&quot; on the character named &quot;arm&quot; and</span>
+<span class="c"># place the duplicate in the schedule at a start time of 50</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">duplicate</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;elbowWaveSource&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;elbowWave1&#39; #</span>
+<span class="c"># Duplicate the clip named &quot;wiggle&quot; on the character named &quot;arm&quot; and</span>
+<span class="c"># do not place the duplicate in the schedule</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">duplicate</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sc</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;wiggle&#39;</span> <span class="p">)</span>
+<span class="c"># Remove the clip from the character altogether. All instances of the clip will be</span>
+<span class="c"># removed from the schedule and deleted from the library.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">rm</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;elbowWaveSource&#39;</span><span class="p">)</span>
+<span class="c"># Make the handWave clip active. This means that any new keyframes get</span>
+<span class="c"># placed in the handWave clip, and modifications to existing handWave</span>
+<span class="c"># keyframes can be made.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="s">&#39;handWave&#39;</span> <span class="p">)</span>
+<span class="c"># Split the clip named &quot;handWave&quot; into two clips at time 10</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;handWave&#39;</span> <span class="p">)</span>
+<span class="c"># Query the startTime of a clip. This is the start frame of the animation</span>
+<span class="c"># curve range of the clip, and may differ from the scheduled time of the clip,</span>
+<span class="c"># which is accessed using the clipSchedule command.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span> <span class="s">&#39;arm&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;handWave&#39;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.choice.html"
+                        title="previous chapter">pymel.core.animation.choice</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.clipEditor.html"
+                        title="next chapter">pymel.core.animation.clipEditor</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.clip.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.clipEditor.html" title="pymel.core.animation.clipEditor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.choice.html" title="pymel.core.animation.choice"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

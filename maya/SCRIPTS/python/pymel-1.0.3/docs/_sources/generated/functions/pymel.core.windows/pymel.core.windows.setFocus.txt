@@ -1,0 +1,6 @@
+pymel.core.windows.setFocus
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.setFocus

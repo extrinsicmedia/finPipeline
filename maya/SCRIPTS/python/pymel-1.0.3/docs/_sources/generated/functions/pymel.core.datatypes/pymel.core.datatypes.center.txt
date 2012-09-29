@@ -1,0 +1,6 @@
+pymel.core.datatypes.center
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.center

@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleMeshPoints
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleMeshPoints

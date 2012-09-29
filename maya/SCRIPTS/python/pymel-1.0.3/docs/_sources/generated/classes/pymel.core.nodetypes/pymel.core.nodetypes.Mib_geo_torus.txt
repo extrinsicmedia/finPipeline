@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_geo_torus
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_geo_torus
+    :parts: 1
+
+.. autoclass:: Mib_geo_torus
+    :members:
+    :undoc-members:

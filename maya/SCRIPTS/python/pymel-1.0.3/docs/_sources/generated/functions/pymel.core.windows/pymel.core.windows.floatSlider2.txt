@@ -1,0 +1,6 @@
+pymel.core.windows.floatSlider2
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.floatSlider2

@@ -1,0 +1,6 @@
+pymel.core.runtime.FilletBlendToolOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FilletBlendToolOptions

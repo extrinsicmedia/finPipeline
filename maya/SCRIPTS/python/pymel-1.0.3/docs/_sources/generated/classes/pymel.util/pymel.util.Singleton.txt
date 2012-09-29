@@ -1,0 +1,11 @@
+pymel.util.Singleton
+====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Singleton
+    :parts: 1
+
+.. autoclass:: Singleton
+    :members:
+    :undoc-members:

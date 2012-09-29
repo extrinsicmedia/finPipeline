@@ -1,0 +1,6 @@
+pymel.core.other.transferShadingSets
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.transferShadingSets

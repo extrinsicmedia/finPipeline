@@ -1,0 +1,6 @@
+pymel.core.other.mrProgress
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.mrProgress

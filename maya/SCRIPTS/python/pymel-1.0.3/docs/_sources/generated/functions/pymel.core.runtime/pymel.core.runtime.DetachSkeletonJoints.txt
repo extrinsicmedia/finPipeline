@@ -1,0 +1,6 @@
+pymel.core.runtime.DetachSkeletonJoints
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DetachSkeletonJoints

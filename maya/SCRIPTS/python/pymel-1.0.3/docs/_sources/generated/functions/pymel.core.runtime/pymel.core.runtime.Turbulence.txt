@@ -1,0 +1,6 @@
+pymel.core.runtime.Turbulence
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Turbulence

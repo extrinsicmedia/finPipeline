@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.CacheFile &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.Camera" href="pymel.core.nodetypes.Camera.html" />
+    <link rel="prev" title="pymel.core.nodetypes.CacheBlend" href="pymel.core.nodetypes.CacheBlend.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Camera.html" title="pymel.core.nodetypes.Camera"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.CacheBlend.html" title="pymel.core.nodetypes.CacheBlend"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-cachefile">
+<h1>pymel.core.nodetypes.CacheFile<a class="headerlink" href="#pymel-core-nodetypes-cachefile" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-17fcc6c9cb201cc7d41a83612d8e6e414568b068.png" alt="Inheritance diagram of CacheFile" usemap="#inheritance24ab19ee81" class="inheritance"/>
+<map id="inheritance24ab19ee81" name="inheritance24ab19ee81">
+<area shape="rect" href="#pymel.core.nodetypes.CacheFile" title="CacheFile" alt="" coords="15,160,87,184"/>
+<area shape="rect" href="pymel.core.nodetypes.CacheBase.html#pymel.core.nodetypes.CacheBase" title="CacheBase" alt="" coords="11,121,91,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="7,82,95,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="5,5,96,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="15,44,87,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.CacheFile">
+<em class="property">class </em><tt class="descname">CacheFile</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">cacheFile</span></tt></p>
+<p>Creates one or more cache files on disk to store attribute data for a span of frames. The caches can be created for either points on a geometry (using the pts/points flag) or for vectorArray output data (using the oa/outAttr flag). When the ia/inAttr flag is used, connects a cacheFile node that associates the data file on disk with the attribute. Frames can be replaced/appended to an existing cache with the rcf/replaceCachedFrame and apf/appendFrame flag.  Replaced frames are never deleted. They are stored in the same directory as the original cache files with the name provided by the f/fileName flag. If no file name is provided, the cacheFile name is prefixed with backupfollowed by a unique number. Single file caches are backed up in their entirety. To revert to an older version, simply attach to this cache. One file per frame caches only backup the description file and the frames that were replaced. To recover these types of caches, the user must rename these files to the original name.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getCacheFormat">
+<tt class="descname">getCacheFormat</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getCacheFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cache file format, default is Maya&#8217;s .mcc format, but others available via plugin                                         Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getCacheInfo">
+<tt class="descname">getCacheInfo</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getCacheInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>In create mode, used to specify a mel script returning a string array. When creating the cache, this mel script will be executed and the returned strings will be written to the .xml description file of the cache. In query mode, returns descriptive info stored in the cacheFile such as the user name, Maya scene name and maya version number.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getCacheableAttrs">
+<tt class="descname">getCacheableAttrs</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getCacheableAttrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of cacheable attributes defined on the accompanying cache node. This argument requires the use of the cacheableNode flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getChannelIndex">
+<tt class="descname">getChannelIndex</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getChannelIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>A query-only flag which returns the channel index for the selected geometry for the cacheFile node specified using the cacheFileNode flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getChannelName">
+<tt class="descname">getChannelName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getChannelName" title="Permalink to this definition">¶</a></dt>
+<dd><p>When attachFile is used, used to indicate the channel in the file that should be attached to inAttr.  If not specified, the first channel in the file is used. In query mode, allows user to query the channels associated with a description file.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getDataSize">
+<tt class="descname">getDataSize</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getDataSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a query-only flag that returns the size of the data being cached per frame. This flag is to be used in conjunction with the cacheableNode, points, and outAttr flags.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getDescriptionFileName">
+<tt class="descname">getDescriptionFileName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getDescriptionFileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a query-only flag that returns the name of the description file for an existing cacheFile node. Or if no cacheFile node is specified, it returns the description file name that would be created based on the other flags specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getDirectory">
+<tt class="descname">getDirectory</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the directory where the cache files will be located. If the directory flag is not specified, the cache files will be placed in the project data directory.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getFileName">
+<tt class="descname">getFileName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getFileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the base file name for the cache files. If more than one object is being cached and the format is OneFilePerFrame, each cache file will be prefixed with this base file name. In query mode, returns the files associated with the specified cacheFile node. When used with rpf/replaceCachedFrame or apf/appendFrame specifies the name of the backup files. If not specified, replaced frames will be stored with a default name. In query mode, this flag can accept a value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getGeometry">
+<tt class="descname">getGeometry</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>A query flag which returns the geometry controlled by the specified cache node</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getPointCount">
+<tt class="descname">getPointCount</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getPointCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>A query flag which returns the number of points stored in the cache file. The channelName flag should be used to specify the channel to be queried.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getRunupFrames">
+<tt class="descname">getRunupFrames</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getRunupFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the number of frames of runup to simulate ahead of the starting frame. The value must be greater than or equal to 0.  The default is 2.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getSampleMultiplier">
+<tt class="descname">getSampleMultiplier</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getSampleMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the sample rate when caches are being created as a multiple of simulation Rate. If the value is 1, then a sample will be cached everytime the time is advanced.  If the value is 2, then every other sample will be cached, and so on.  The default is 1.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getSimulationRate">
+<tt class="descname">getSimulationRate</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getSimulationRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the simulation rate when caches are being created.  During cache creation, the time will be advanced by the simulation rate, until the end time of the cache is reached or surpassed.  The value is given in frames. The default value is 1 frame.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.getStaticCache">
+<tt class="descname">getStaticCache</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.getStaticCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>If false, during cache creation, do not save a cache for the object if it appears to have no animation or deformation. If true, save a cache even if the object appears to have no animation or deformation. Default is true. In query mode, when supplied a shape, the flag returns true if the shape appears to have no animation or deformation.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.replaceWithoutSimulating">
+<tt class="descname">replaceWithoutSimulating</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.replaceWithoutSimulating" title="Permalink to this definition">¶</a></dt>
+<dd><p>When replacing cached frames, this flag specifies whether the replacement should come from the cached node without simulating or from advancing time and letting the simulation run.  This flag is valid only when neither the startTime nor endTime flags are used or when both the startTime and endTime flags specify the same time value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.setRunupFrames">
+<tt class="descname">setRunupFrames</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.setRunupFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the number of frames of runup to simulate ahead of the starting frame. The value must be greater than or equal to 0.  The default is 2.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.setSampleMultiplier">
+<tt class="descname">setSampleMultiplier</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.setSampleMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the sample rate when caches are being created as a multiple of simulation Rate. If the value is 1, then a sample will be cached everytime the time is advanced.  If the value is 2, then every other sample will be cached, and so on.  The default is 1.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.CacheFile.setSimulationRate">
+<tt class="descname">setSimulationRate</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.CacheFile.setSimulationRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the simulation rate when caches are being created.  During cache creation, the time will be advanced by the simulation rate, until the end time of the cache is reached or surpassed.  The value is given in frames. The default value is 1 frame.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.cacheFile</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.CacheBlend.html"
+                        title="previous chapter">pymel.core.nodetypes.CacheBlend</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Camera.html"
+                        title="next chapter">pymel.core.nodetypes.Camera</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.CacheFile.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Camera.html" title="pymel.core.nodetypes.Camera"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.CacheBlend.html" title="pymel.core.nodetypes.CacheBlend"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

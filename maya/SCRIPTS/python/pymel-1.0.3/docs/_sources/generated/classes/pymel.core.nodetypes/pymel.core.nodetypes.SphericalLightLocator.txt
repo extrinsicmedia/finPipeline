@@ -1,0 +1,11 @@
+pymel.core.nodetypes.SphericalLightLocator
+==========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: SphericalLightLocator
+    :parts: 1
+
+.. autoclass:: SphericalLightLocator
+    :members:
+    :undoc-members:

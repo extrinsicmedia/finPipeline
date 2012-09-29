@@ -1,0 +1,6 @@
+pymel.core.other.getRenderTasks
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.getRenderTasks

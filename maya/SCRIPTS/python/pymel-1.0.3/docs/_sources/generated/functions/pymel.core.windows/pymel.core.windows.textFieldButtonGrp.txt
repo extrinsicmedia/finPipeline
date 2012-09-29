@@ -1,0 +1,6 @@
+pymel.core.windows.textFieldButtonGrp
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.textFieldButtonGrp

@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteTimeWarp
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteTimeWarp

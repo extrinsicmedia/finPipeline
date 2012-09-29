@@ -1,0 +1,6 @@
+pymel.core.runtime.AutoPaintMarkingMenuPopDown
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AutoPaintMarkingMenuPopDown

@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.rendering.dolly &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.rendering" href="../../pymel.core.rendering.html" />
+    <link rel="next" title="pymel.core.rendering.editRenderLayerAdjustment" href="pymel.core.rendering.editRenderLayerAdjustment.html" />
+    <link rel="prev" title="pymel.core.rendering.doBlur" href="pymel.core.rendering.doBlur.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.editRenderLayerAdjustment.html" title="pymel.core.rendering.editRenderLayerAdjustment"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.doBlur.html" title="pymel.core.rendering.doBlur"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" accesskey="U">pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-rendering-dolly">
+<h1>pymel.core.rendering.dolly<a class="headerlink" href="#pymel-core-rendering-dolly" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.rendering.dolly">
+<em class="property">static </em><tt class="descclassname">rendering.</tt><tt class="descname">dolly</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.rendering.dolly" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dolly command moves a camera along the viewing direction in the world space. The viewing-direction and up-direction
+of the camera are not altered. There are two modes of operation: Relative mode: for a perspective camera, the camera is
+moved along its viewing direction, and the distance of travel is computed with respect to the current position of the
+camera in the world space. In relative mode, when the camera is moved, its COI is moved along with it, and is kept at
+the same distance, in front of the camera, as before applying the dolly operation. For orthographic camera, the viewing
+width of the camera is changed by scaling its ortho width by the new value specified on the command line. Absolute mode:
+for a perspective camera, the camera is moved along its viewing direction, to the distance that is computed with respect
+to the current position of the world center of interest (COI) of the camera. In the absolute mode, when the camera is
+moved, the COI of the camera is not moved with the camera, but it is fixed at its current location in space. For
+orthographic camera, the viewing width of the camera is changed by replacing its ortho width with the new value
+specified on the command line. This command may be applied to more than one cameras; objects that are not cameras are
+ignored. When no camera name supplied on the command line, this command is applied to all currently active cameras. The
+dolly command can be applied to either a perspective or an orthographic camera.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>absolute (abs)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag modifies the behavior of the distance and orthoScale flags. When used in conjunction with the distance flag, the distance argument specifies how far the
+camera&#8217;s eye point should be set from the camera&#8217;s center of interest. When used with the orthoScale flag, the orthoScale argument specifies the camera&#8217;s new
+ortho width.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>distance (d)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Unit distance to dolly a perspective camera.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>dollyTowardsCenter (dtc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag controls whether the dolly is performed towards the center of the view (if true), or towards the point where the user clicks (if false). By default,
+dollyTowardsCenter is on.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>orthoScale (os)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Scale to change the ortho width of an orthographic camera.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>relative (rel)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag modifies the behavior of the distance and orthoScale flags. When used in conjunction with the distance flag, the camera eye and center of interest are
+both moved by the amount specified by the distance flag&#8217;s argument. When used with the orthoScale flag, the orthoScale argument is used multiply the camera&#8217;s
+ortho width.By default the relative flag is always on.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.dolly</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="c"># Result: [nt.Transform(u&#39;camera1&#39;), nt.Camera(u&#39;cameraShape1&#39;)] #</span>
+
+<span class="c"># Moves the persp camera forward through its center of interest</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">dolly</span><span class="p">(</span> <span class="s">&#39;persp&#39;</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">3</span> <span class="p">)</span>
+
+<span class="c"># Move the persp camera and its center of interest.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">dolly</span><span class="p">(</span> <span class="s">&#39;persp&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=-</span><span class="mi">3</span> <span class="p">)</span>
+
+<span class="c"># Changes the ortho-width of the top camera to 7.5</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">dolly</span><span class="p">(</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="nb">abs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="mf">7.5</span> <span class="p">)</span>
+
+<span class="c"># Scale the ortho-width of the top camera by a quarter from its current value.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">dolly</span><span class="p">(</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="mf">0.25</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.doBlur.html"
+                        title="previous chapter">pymel.core.rendering.doBlur</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.rendering.editRenderLayerAdjustment.html"
+                        title="next chapter">pymel.core.rendering.editRenderLayerAdjustment</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.rendering/pymel.core.rendering.dolly.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.editRenderLayerAdjustment.html" title="pymel.core.rendering.editRenderLayerAdjustment"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.rendering.doBlur.html" title="pymel.core.rendering.doBlur"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.rendering.html" >pymel.core.rendering</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

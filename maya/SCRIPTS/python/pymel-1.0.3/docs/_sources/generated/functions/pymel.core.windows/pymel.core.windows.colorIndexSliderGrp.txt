@@ -1,0 +1,6 @@
+pymel.core.windows.colorIndexSliderGrp
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.colorIndexSliderGrp

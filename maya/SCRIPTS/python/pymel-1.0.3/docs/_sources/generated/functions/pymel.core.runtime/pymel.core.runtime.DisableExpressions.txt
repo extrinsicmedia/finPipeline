@@ -1,0 +1,6 @@
+pymel.core.runtime.DisableExpressions
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DisableExpressions

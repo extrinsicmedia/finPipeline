@@ -1,0 +1,6 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+setRenderPassType -defaultDataType -type "CSTVCT" $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "customVector"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

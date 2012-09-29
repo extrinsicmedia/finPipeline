@@ -1,0 +1,203 @@
+pymel.core.other
+================
+
+.. automodule:: pymel.core.other
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+    :toctree: functions/pymel.core.other
+    :nosignatures:
+   
+      AttributeEditor
+      CenterPivot
+      CommandWindow
+      ConvertSelectionToUVs
+      CreateContainer
+      DisplaySmoothShaded
+      EditTexture
+      FrameAll
+      GetFKIdFromEffectorId
+      GetHIKChildCount
+      GetHIKChildId
+      GetHIKEffectorCount
+      GetHIKEffectorIdFromName
+      GetHIKEffectorName
+      GetHIKMatrixDecomposition
+      GetHIKNode
+      GetHIKNodeCount
+      GetHIKNodeIdFromName
+      GetHIKNodeName
+      GetHIKParentId
+      GetProperty2StateAttrNameFromHIKEffectorId
+      HIKUiControl
+      Import
+      LoadHIKCharacterDefinition
+      LoadHIKCharacterState
+      LoadHIKEffectorSetState
+      LoadHIKPropertySetState
+      MayatomrJob
+      OneClickDispatch
+      OneClickExecute
+      OneClickGetState
+      OneClickMenuExecute
+      OneClickSetCallback
+      ResetProperty2State
+      SaveHIKCharacterDefinition
+      SaveScene
+      ScriptEditor
+      ScriptPaintTool
+      TanimLayer
+      addExtension
+      addIK2BsolverCallbacks
+      adskAsset
+      adskAssetLibrary
+      adskAssetList
+      adskAssetListUI
+      agFormatIn
+      agFormatOut
+      artAttr
+      artFluidAttr
+      artSelect
+      artSetPaint
+      blend
+      cMuscleAbout
+      cMuscleBindSticky
+      cMuscleCache
+      cMuscleCompIndex
+      cMuscleQuery
+      cMuscleRayIntersect
+      cMuscleRelaxSetup
+      cMuscleSimulate
+      cMuscleSplineBind
+      cMuscleWeight
+      cMuscleWeightDefault
+      cMuscleWeightMirror
+      cMuscleWeightPrune
+      cMuscleWeightSave
+      clearShear
+      convertLightmapSetup
+      copyNode
+      dagObjectHit
+      dbtrace
+      debug
+      debugNamespace
+      debugVar
+      deleteExtension
+      dgControl
+      dgPerformance
+      dgcontrol
+      dgdebug
+      dgfilter
+      dgfootprint
+      dgstats
+      directConnectPath
+      dispatchGenericCommand
+      dynTestData
+      evalContinue
+      extendFluid
+      flagTest
+      flushIdleQueue
+      flushThumbnailCache
+      fontAttributes
+      getRenderDependencies
+      getRenderTasks
+      groupParts
+      hikCharacterToolWidget
+      hikGlobals
+      ikSpringSolverCallbacks
+      ikSpringSolverRestPose
+      imageWindowEditor
+      interactionStyle
+      isDescendentPulling
+      itemFilterAttrOld
+      itemFilterOld
+      itemFilterRenderOld
+      itemFilterTypeOld
+      iterOnNurbs
+      journal
+      keyingGroup
+      licenseCheck
+      melInfo
+      meshIntersectTest
+      mouldMesh
+      mouldSrf
+      mouldSubdiv
+      movieCompressor
+      mrFactory
+      mrProgress
+      myTestCmd
+      nop
+      nurbsCurveRebuildPref
+      objstats
+      ogsdebug
+      paint3d
+      polyIterOnPoly
+      polyPrimitiveMisc
+      polyProjectCurve
+      polySelectEditCtxDataCmd
+      polySelectSp
+      polySetVertices
+      polySpinEdge
+      polySplitCtx2
+      polyTestPop
+      polyToCurve
+      polyWarpImage
+      popPinning
+      psdConvSolidTxOptions
+      pushPinning
+      rampWidget
+      rampWidgetAttrless
+      readPDC
+      refreshEditorTemplates
+      repeatLast
+      sbs_AffectTheseAttributes
+      sbs_AffectedByAllInputs
+      sbs_EditSubstance
+      sbs_GetAllInputsFromSubstanceNode
+      sbs_GetChannelsNamesFromSubstanceNode
+      sbs_GetEditionModeScale
+      sbs_GetEngine
+      sbs_GetGlobalTextureHeight
+      sbs_GetGlobalTextureWidth
+      sbs_GetGraphsNamesFromSubstanceNode
+      sbs_GetPackageFullPathNameFromSubstanceNode
+      sbs_GetSubstanceBuildVersion
+      sbs_GoToMarketPlace
+      sbs_IsSubstanceRelocalized
+      sbs_SetEditionModeScale
+      sbs_SetEngine
+      sbs_SetGlobalTextureHeight
+      sbs_SetGlobalTextureWidth
+      selectKeyframe
+      subdDisplayMode
+      subdToNurbs
+      subgraph
+      swatchRefresh
+      testPa
+      testPassContribution
+      transferShadingSets
+      ubercam
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+    :toctree: classes/pymel.core.other
+    :nosignatures:
+   
+      AttributeName
+      DagNodeName
+      DependNodeName
+      NameParser
+   
+   
+
+   
+   
+   

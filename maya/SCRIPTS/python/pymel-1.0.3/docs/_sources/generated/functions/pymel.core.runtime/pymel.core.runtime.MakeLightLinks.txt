@@ -1,0 +1,6 @@
+pymel.core.runtime.MakeLightLinks
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakeLightLinks

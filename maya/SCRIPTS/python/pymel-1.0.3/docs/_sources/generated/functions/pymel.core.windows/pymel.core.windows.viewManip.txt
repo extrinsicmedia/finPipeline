@@ -1,0 +1,6 @@
+pymel.core.windows.viewManip
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.viewManip

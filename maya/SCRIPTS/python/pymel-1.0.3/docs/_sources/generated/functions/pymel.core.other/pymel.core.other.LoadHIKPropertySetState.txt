@@ -1,0 +1,6 @@
+pymel.core.other.LoadHIKPropertySetState
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.LoadHIKPropertySetState

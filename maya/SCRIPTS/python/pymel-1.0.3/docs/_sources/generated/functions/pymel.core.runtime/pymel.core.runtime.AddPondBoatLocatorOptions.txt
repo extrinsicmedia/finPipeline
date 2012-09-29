@@ -1,0 +1,6 @@
+pymel.core.runtime.AddPondBoatLocatorOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddPondBoatLocatorOptions

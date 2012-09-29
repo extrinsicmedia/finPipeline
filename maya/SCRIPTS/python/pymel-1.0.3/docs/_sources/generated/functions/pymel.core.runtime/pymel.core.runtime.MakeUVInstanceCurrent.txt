@@ -1,0 +1,6 @@
+pymel.core.runtime.MakeUVInstanceCurrent
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakeUVInstanceCurrent

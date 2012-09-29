@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mi_bump_flakes
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mi_bump_flakes
+    :parts: 1
+
+.. autoclass:: Mi_bump_flakes
+    :members:
+    :undoc-members:

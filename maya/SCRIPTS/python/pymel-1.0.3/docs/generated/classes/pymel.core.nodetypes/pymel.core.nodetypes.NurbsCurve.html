@@ -1,0 +1,1054 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.NurbsCurve &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.NurbsCurveToBezier" href="pymel.core.nodetypes.NurbsCurveToBezier.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Nucleus" href="pymel.core.nodetypes.Nucleus.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NurbsCurveToBezier.html" title="pymel.core.nodetypes.NurbsCurveToBezier"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Nucleus.html" title="pymel.core.nodetypes.Nucleus"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-nurbscurve">
+<h1>pymel.core.nodetypes.NurbsCurve<a class="headerlink" href="#pymel-core-nodetypes-nurbscurve" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-c73363b77b95c94733f55dcb6d0e3f02e6a2fc4f.png" alt="Inheritance diagram of NurbsCurve" usemap="#inheritance936a4ce2dc" class="inheritance"/>
+<map id="inheritance936a4ce2dc" name="inheritance936a4ce2dc">
+<area shape="rect" href="#pymel.core.nodetypes.NurbsCurve" title="NurbsCurve" alt="" coords="23,354,105,378"/>
+<area shape="rect" href="pymel.core.nodetypes.CurveShape.html#pymel.core.nodetypes.CurveShape" title="CurveShape" alt="" coords="21,315,107,339"/>
+<area shape="rect" href="pymel.core.nodetypes.DeformableShape.html#pymel.core.nodetypes.DeformableShape" title="DeformableShape" alt="" coords="5,276,123,300"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryShape.html#pymel.core.nodetypes.GeometryShape" title="GeometryShape" alt="" coords="11,238,117,262"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="19,6,109,30"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="28,44,100,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="20,83,108,107"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="15,122,113,146"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="28,160,100,184"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="28,199,100,223"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.NurbsCurve">
+<em class="property">class </em><tt class="descname">NurbsCurve</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">curve</span></tt></p>
+<p>The curve command creates a new curve from a list of control vertices (CVs).  A string is returned containing the pathname to the newly created curve.  You can create a curve from points either in world space or object (local) space, either with weights or without. You can replace an existing curve by using the -r/replaceflag.  You can append a point to an existing curve by using the -a/appendflag. To create a curve-on-surface, use the curveOnSurface command. To change the degree of a curve, use the rebuildCurve command. To change the of parameter range curve, use the rebuildCurve command.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.area">
+<tt class="descname">area</tt><big>(</big><em>tolerance=0.001</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the area bounded by this curve. The curve must be closed and planar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>tolerance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The amount of error (epsilon value) in the calculation</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.area</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.closestPoint">
+<tt class="descname">closestPoint</tt><big>(</big><em>toThisPoint</em>, <em>param=None</em>, <em>tolerance=0.001</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.closestPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines the closest point on the curve to the given point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>toThisPoint <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></span></dt>
+<dd><p class="first last">The point to test</p>
+</dd>
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">pointer to a double. If non-null, on successful returns this will contain the parameter value of the returned point.</p>
+</dd>
+<dt>tolerance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The amount of error (epsilon value) in the calculation</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.closestPoint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.copy">
+<tt class="descname">copy</tt><big>(</big><em>source</em>, <em>parentOrOwner=u'MObject::kNullObj'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method creates a copy of a nurbs curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>source <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">the curve to be copied</p>
+</dd>
+<dt>parentOrOwner <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">the DAG parent or kNurbsCurveData the new curve will belong to</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.copy</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.createWithEditPoints">
+<tt class="descname">createWithEditPoints</tt><big>(</big><em>editPoints</em>, <em>degree</em>, <em>form</em>, <em>create2D</em>, <em>createRational</em>, <em>uniformParam</em>, <em>parentOrOwner=u'MObject::kNullObj'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.createWithEditPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method creates a nurbs curve from the given edit points and sets this function set to operate on the new curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>editPoints <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt> list</span></dt>
+<dd><p class="first last">an array of edit points</p>
+</dd>
+<dt>degree <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the degree to create the curve with</p>
+</dd>
+<dt>form <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">BezierCurve.Form</span></tt></span></dt>
+<dd><p class="first">either kOpen, kClosed, kPeriodic</p>
+<p class="last">values: &#8216;open&#8217;, &#8216;closed&#8217;, &#8216;periodic&#8217;</p>
+</dd>
+<dt>create2D <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">indictates whether to create 2D or 3D curve</p>
+</dd>
+<dt>createRational <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">true means curve being created will be rational</p>
+</dd>
+<dt>uniformParam <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">true means curve being created will have uniform parameterization, false means chord length</p>
+</dd>
+<dt>parentOrOwner <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">the DAG parent or kNurbsCurveData the new curve will belong to</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.createWithEditPoints</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.cvs">
+<tt class="descname">cvs</tt><big>(</big><em>startIndex</em>, <em>endIndex</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.cvs" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to directly access a contiguous group of CVs. The returned group can be accessed via the  MItCurveCV  class. Any modifications to these CVs will affect this curve.  updateCurve  should be called to cause the curve to redraw itself.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>startIndex <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the start index for the CVs to return</p>
+</dd>
+<dt>endIndex <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the end index for the CVs to return</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.cvs</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.degree">
+<tt class="descname">degree</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the degree of this curve. If the degree cannot be determined then 0 is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.degree</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.distanceToPoint">
+<tt class="descname">distanceToPoint</tt><big>(</big><em>pt</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.distanceToPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines the distance from the given point to closest point on the curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>pt <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></span></dt>
+<dd><p class="first last">The point to calculate the distance to</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.distanceToPoint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.findParamFromLength">
+<tt class="descname">findParamFromLength</tt><big>(</big><em>partLength</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.findParamFromLength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the length along the curve, find the parameter value that corresponds to it. If the parameter value cannot be found for the given length then ReturnStatus is set to kInvalidParameter and the parameter for the end point of the curve is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>partLength <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">Length along the curve to find parameter value at</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.findParamFromLength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.form">
+<tt class="descname">form</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.form" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the form of the curve. The curve can be open, closed, or periodic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">BezierCurve.Form</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.form</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getCV">
+<tt class="descname">getCV</tt><big>(</big><em>index</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getCV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the CV at the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">The index of the CV that will be retrieved</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.getCV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getCVs">
+<tt class="descname">getCVs</tt><big>(</big><em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getCVs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the positions of the CVs of this curve. The returned group can be accessed via the  MPointArray  class. Any modifications to these CVs will not affect this curve.  setCVs  should be called to modify the original curve.  updateCurve  should be called to cause the curve to redraw itself.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt> list</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.getCVs</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getDerivativesAtParm">
+<tt class="descname">getDerivativesAtParm</tt><big>(</big><em>param</em>, <em>space</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getDerivativesAtParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the surface at the given parameter returning the position, first derivative and optionally the seecond derivative. Derivatives are not normalized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">U parameter value to evaluate</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Coordinate space for the returned vectors</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(<tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.getDerivativesAtParm</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getKnot">
+<tt class="descname">getKnot</tt><big>(</big><em>index</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getKnot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parameter value of the specified knot for this curve. Knot indices range from  0  to  numKnots()  - 1</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">The knot index</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.knot</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getKnotDomain">
+<tt class="descname">getKnotDomain</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getKnotDomain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the range corresponding to the maximum and minimum parameter values for this curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.getKnotDomain</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getKnots">
+<tt class="descname">getKnots</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getKnots" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method retrieves a copy of the knot array for this curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.getKnots</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getParamAtPoint">
+<tt class="descname">getParamAtPoint</tt><big>(</big><em>atThisPoint</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getParamAtPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method retrieves the parameter value corresponding to the given point on the curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>atThisPoint <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></span></dt>
+<dd><p class="first last">Point to check</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.getParamAtPoint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.getPointAtParam">
+<tt class="descname">getPointAtParam</tt><big>(</big><em>param</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.getPointAtParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the point in space that is at the given parameter value of the curve. If the parameter value does not give a valid point on the curve, then  MS::kInvalidParameter  is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The parameter value that we are examining</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.getPointAtParam</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.hasHistoryOnCreate">
+<tt class="descname">hasHistoryOnCreate</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.hasHistoryOnCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines if the shape was created with history.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.hasHistoryOnCreate</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.isParamOnCurve">
+<tt class="descname">isParamOnCurve</tt><big>(</big><em>param</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.isParamOnCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the specified parameter value is within the bounds of the knot vector of this curve</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The parameter value to check</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.isParamOnCurve</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.isPlanar">
+<tt class="descname">isPlanar</tt><big>(</big><em>planeNormal=None</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.isPlanar" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines if this curve is a planar curve. If planeNormal is non-NULL then the normal to the plane containing this curve is returned in this location.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>planeNormal <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt></span></dt>
+<dd><p class="first last">Normal to the plane containing this curve</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.isPlanar</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.isPointOnCurve">
+<tt class="descname">isPointOnCurve</tt><big>(</big><em>point</em>, <em>tolerance=0.001</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.isPointOnCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the given point is on this curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>point <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></span></dt>
+<dd><p class="first last">The point to test</p>
+</dd>
+<dt>tolerance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The amount of error (epsilon value) in the calculation</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.isPointOnCurve</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.length">
+<tt class="descname">length</tt><big>(</big><em>tolerance=0.001</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the arc length of this curve or 0.0 if it cannot be computed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>tolerance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The amount of error (epsilon value) in the calculation</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.length</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.makeMultipleEndKnots">
+<tt class="descname">makeMultipleEndKnots</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.makeMultipleEndKnots" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method gives end knots full multiplicity. This ensures the end points of the curve interpolate the first and last CVs. It can also be used to convert a periodic curve to a closed curve.
+Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.makeMultipleEndKnots</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.normal">
+<tt class="descname">normal</tt><big>(</big><em>param</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the normal at the given parameter value on the curve. For degree 1 curves the normal is the vector at right angles to the curve that lies in the average plane of the curve. For higher degrees the normal is defined by the local curvature at param.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The parameter of the point on the curve from which to get the normal</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.normal</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.numCVs">
+<tt class="descname">numCVs</tt><big>(</big><em>editableOnly=True</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.numCVs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of CVs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>editableOnly <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first">If editableOnly evaluates to True (default), then this will return
+the number of cvs that can be actually edited (and also the highest
+index that may be used for cv&#8217;s - ie, if</p>
+<blockquote>
+<div>myCurve.numCVs(editableOnly=True) == 4</div></blockquote>
+<dl class="docutils">
+<dt>then allowable cv indices go from</dt>
+<dd>myCurve.cv[0] to mySurf.cv[3]</dd>
+</dl>
+<p>If editablyOnly is False, then this will return the underlying
+number of cvs used to define the mathematical curve -
+degree + numSpans.</p>
+<p class="last">These will only differ if the form is &#8216;periodic&#8217;, in which
+case the editable number will be numSpans (as the last &#8216;degree&#8217;
+cv&#8217;s are &#8216;locked&#8217; to be the same as the first &#8216;degree&#8217; cvs).
+In all other cases, the number of cvs will be degree + numSpans.</p>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Examples :</th><td class="field-body"><div class="first highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymel.core</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># a periodic curve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span> <span class="o">=</span> <span class="n">curve</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;periodicCurve1&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">pw</span><span class="o">=</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">cv</span>
+<span class="go">NurbsCurveCV(u&#39;periodicCurveShape1.cv[0:7]&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numCVs</span><span class="p">()</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numCVs</span><span class="p">(</span><span class="n">editableOnly</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="go">11</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># an open curve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span> <span class="o">=</span> <span class="n">curve</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;openCurve1&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">pw</span><span class="o">=</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">cv</span>
+<span class="go">NurbsCurveCV(u&#39;openCurveShape1.cv[0:10]&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numCVs</span><span class="p">()</span>
+<span class="go">11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numCVs</span><span class="p">(</span><span class="n">editableOnly</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.numEPs">
+<tt class="descname">numEPs</tt><big>(</big><em>editableOnly=True</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.numEPs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of EPs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Examples :</th><td class="field-body"><div class="first highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymel.core</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># a periodic curve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span> <span class="o">=</span> <span class="n">curve</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;periodicCurve2&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">pw</span><span class="o">=</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">ep</span>
+<span class="go">NurbsCurveEP(u&#39;periodicCurveShape2.ep[0:7]&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numEPs</span><span class="p">()</span>
+<span class="go">8</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># an open curve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span> <span class="o">=</span> <span class="n">curve</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#39;openCurve2&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">pw</span><span class="o">=</span><span class="p">[(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">ep</span>
+<span class="go">NurbsCurveEP(u&#39;openCurveShape2.ep[0:8]&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myCurve</span><span class="o">.</span><span class="n">numEPs</span><span class="p">()</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.numKnots">
+<tt class="descname">numKnots</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.numKnots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of knots for this curve. If the number of knots cannot be determined then 0 is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.numKnots</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.numSpans">
+<tt class="descname">numSpans</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.numSpans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of spans for this curve. If the number of spans cannot be determined then 0 is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.numSpans</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.removeKnot">
+<tt class="descname">removeKnot</tt><big>(</big><em>atThisParam</em>, <em>removeAll=False</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.removeKnot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove knot(s) from this curve. If  removeAll  is  true  then all of the knots except for the knot at the given parameter value will be removed. If  removeAll  is  false  then only the knot at the given parameter value will be removed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>atThisParam <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">Status code</p>
+</dd>
+<dt>removeAll <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">Determines whether we remove all knots, or all but one</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.removeKnot</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.reverse">
+<tt class="descname">reverse</tt><big>(</big><em>constructionHistory=False</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method reverse the curve direction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">constructionHistory : <tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.reverse</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.setCV">
+<tt class="descname">setCV</tt><big>(</big><em>index</em>, <em>pt</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.setCV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the CV at the given index to the given point. The method  updateCurve  should be called to trigger changes in the curve.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">The index of the CV that will be changed</p>
+</dd>
+<dt>pt <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></span></dt>
+<dd><p class="first last">The new value that the CV will take</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.setCV</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.setCVs">
+<tt class="descname">setCVs</tt><big>(</big><em>array</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.setCVs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the CVs for this curve to the given points.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>array <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt> list</span></dt>
+<dd><p class="first last">The array of point values for the CVs</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.setCVs</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.setKnot">
+<tt class="descname">setKnot</tt><big>(</big><em>index</em>, <em>param</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.setKnot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the given knot&#8217;s parameter value. Knot indices range from  0  to  numKnots()  - 1 .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>index <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">Index of the knot to be set</p>
+</dd>
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The parameter value that the knot will take</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.setKnot</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.setKnots">
+<tt class="descname">setKnots</tt><big>(</big><em>array</em>, <em>startIndex</em>, <em>endIndex</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.setKnots" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to set the values of a contiguous group of knots of the curve. The range of knots to set is specified using the start and end index. The knots of index startIndex to endIndex inclusive will be set using the value in the double array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>array <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</span></dt>
+<dd><p class="first last">a double array of knot points</p>
+</dd>
+<dt>startIndex <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the starting index of the knots to be altered.</p>
+</dd>
+<dt>endIndex <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">the ending index of the knots to be altered.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.setKnots</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.tangent">
+<tt class="descname">tangent</tt><big>(</big><em>param</em>, <em>space='preTransform'</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.tangent" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the tangent at the given parameter value on the curve. The resulting tangent vector is normalized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>param <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The parameter of the point on the curve from which to get the tangent</p>
+</dd>
+<dt>space <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Space.Space</span></tt></span></dt>
+<dd><p class="first">Specifies the coordinate system for this operation</p>
+<p class="last">values: &#8216;transform&#8217;, &#8216;preTransform&#8217;, &#8216;object&#8217;, &#8216;world&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MSpace.tangent</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.NurbsCurve.updateCurve">
+<tt class="descname">updateCurve</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.NurbsCurve.updateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method signals that this curve has changed and needs to be recalculated.
+Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnNurbsCurve.updateCurve</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Nucleus.html"
+                        title="previous chapter">pymel.core.nodetypes.Nucleus</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.NurbsCurveToBezier.html"
+                        title="next chapter">pymel.core.nodetypes.NurbsCurveToBezier</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.NurbsCurve.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.NurbsCurveToBezier.html" title="pymel.core.nodetypes.NurbsCurveToBezier"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Nucleus.html" title="pymel.core.nodetypes.Nucleus"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

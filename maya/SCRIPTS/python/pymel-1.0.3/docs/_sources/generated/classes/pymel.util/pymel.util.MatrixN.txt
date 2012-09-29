@@ -1,0 +1,11 @@
+pymel.util.MatrixN
+==================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: MatrixN
+    :parts: 1
+
+.. autoclass:: MatrixN
+    :members:
+    :undoc-members:

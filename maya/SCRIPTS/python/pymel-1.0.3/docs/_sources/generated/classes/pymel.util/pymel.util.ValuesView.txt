@@ -1,0 +1,11 @@
+pymel.util.ValuesView
+=====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: ValuesView
+    :parts: 1
+
+.. autoclass:: ValuesView
+    :members:
+    :undoc-members:

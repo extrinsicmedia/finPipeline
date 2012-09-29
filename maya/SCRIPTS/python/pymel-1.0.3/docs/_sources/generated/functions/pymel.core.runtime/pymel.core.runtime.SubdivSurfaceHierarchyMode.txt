@@ -1,0 +1,6 @@
+pymel.core.runtime.SubdivSurfaceHierarchyMode
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SubdivSurfaceHierarchyMode

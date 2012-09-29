@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.BevelPlus &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.BezierCurve" href="pymel.core.nodetypes.BezierCurve.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Bevel" href="pymel.core.nodetypes.Bevel.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BezierCurve.html" title="pymel.core.nodetypes.BezierCurve"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Bevel.html" title="pymel.core.nodetypes.Bevel"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-bevelplus">
+<h1>pymel.core.nodetypes.BevelPlus<a class="headerlink" href="#pymel-core-nodetypes-bevelplus" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-e9fc71e1a662038d49b2b1847687bedd1ab1901a.png" alt="Inheritance diagram of BevelPlus" usemap="#inheritance60a2aa1669" class="inheritance"/>
+<map id="inheritance60a2aa1669" name="inheritance60a2aa1669">
+<area shape="rect" href="#pymel.core.nodetypes.BevelPlus" title="BevelPlus" alt="" coords="32,160,104,184"/>
+<area shape="rect" href="pymel.core.nodetypes.AbstractBaseCreate.html#pymel.core.nodetypes.AbstractBaseCreate" title="AbstractBaseCreate" alt="" coords="5,121,131,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="24,82,112,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="23,5,113,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="32,44,104,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.BevelPlus">
+<em class="property">class </em><tt class="descname">BevelPlus</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">bevelPlus</span></tt></p>
+<p>The bevelPlus command creates a new bevel surface for the specified curves using a given style curve. The first curve should be the outsidecurve, and the (optional) rest of them should be inside of the first one. For predictable results, the curves should be planar and all in the same plane.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getCapSides">
+<tt class="descname">getCapSides</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getCapSides" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to cap the bevel. 1 - no caps2 - cap at start only3 - cap at end only4 - cap at start and endDefault:4</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getDepth">
+<tt class="descname">getDepth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The depth for the bevel. Default:0.5</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getExtrudeDepth">
+<tt class="descname">getExtrudeDepth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getExtrudeDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The extrude distance (depth) for bevel. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getInnerStyle">
+<tt class="descname">getInnerStyle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getInnerStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to outerStyle, this style is applied to all but the first (outer) curve specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getJoinSurfaces">
+<tt class="descname">getJoinSurfaces</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getJoinSurfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach bevelled surfaces into one surface for each input curve. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getNormalsOutwards">
+<tt class="descname">getNormalsOutwards</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getNormalsOutwards" title="Permalink to this definition">¶</a></dt>
+<dd><p>If enabled, the normals point outwards on the resulting NURBS or poly surface.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getNumberOfSides">
+<tt class="descname">getNumberOfSides</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getNumberOfSides" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to apply the bevel. 1 - no bevels2 - bevel at start only3 - bevel at end only4 - bevel at start and endDefault:4</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getOuterStyle">
+<tt class="descname">getOuterStyle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getOuterStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose a style to use for the bevel of the first (outer) curve.  There are 15 predefined styles (values 0 to 14 can be used to select them). For those experienced with MEL, you can, after the fact, specify a custom curve and use it for the style curve. See the documentation for styleCurve node to see what requirements a style curve must satisfy.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutChordHeight">
+<tt class="descname">getPolyOutChordHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutChordHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chord height is the absolute distance in object space which the center of a polygon edge can deviate from the actual center of the surface span. Only used if Method is Sampling and if polyOutseChordHeight is true. Default:0.1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutChordHeightRatio">
+<tt class="descname">getPolyOutChordHeightRatio</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutChordHeightRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chord height ratio is the ratio of the chord length of a surface span to the chord height.  (This is a length to height ratio). 0 is a very loose fit. 1 is a very tight fit.  This applies to the polygonal output type only. (See also description of chord height.) Used if Method is Sampling and polyOutUseChordHeightRatio is true. Default:0.1                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutCount">
+<tt class="descname">getPolyOutCount</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of polygons to produce when the polygon is requested.  Only used if Method is face count (0). Default:200</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutCurveSamples">
+<tt class="descname">getPolyOutCurveSamples</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutCurveSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial number of samples in the curve direction. Only used if Method is Sampling. Default:6</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutCurveType">
+<tt class="descname">getPolyOutCurveType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutCurveType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial tessellation criteria along the curve.  Only used if Method is Sampling. 2 - Complete Curve.  This type places a specific number of sample points along the curve, equally spaced in parameter space.3 - Curve Span.  This type places a specific number of sample points across each curve span, equally spaced in parameter space.Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutExtrusionSamples">
+<tt class="descname">getPolyOutExtrusionSamples</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutExtrusionSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial number of samples along the extrusion. Only used if Method is Sampling. Default:2</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutExtrusionType">
+<tt class="descname">getPolyOutExtrusionType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutExtrusionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial type tessellation criteria along the extrude direction.  Used only if Method is Sampling. 2 - Complete Extrusion.  This type places a specific number of lines across the surface, equally spaced in parameter space.3 - Extrusion Section.  This type places a specific number of lines across each surface span, equally spaced in parameter space.Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutMethod">
+<tt class="descname">getPolyOutMethod</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for the polygonal output: 0 - Face Count, 2 - Sampling Default:2</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutUseChordHeight">
+<tt class="descname">getPolyOutUseChordHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutUseChordHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>True means use chord height.  This is a secondary criteria that refines the tessellation produced using the sampling value.  Only used if Method is Sampling. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getPolyOutUseChordHeightRatio">
+<tt class="descname">getPolyOutUseChordHeightRatio</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getPolyOutUseChordHeightRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>True means use chord height ratio.  This is a secondary criteria that refines the tessellation produced using the sampling value.  Only used if Method is Sampling. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getTolerance">
+<tt class="descname">getTolerance</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getTolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tolerance for creating NURBS caps. Default:0.01</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.getWidth">
+<tt class="descname">getWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width for the bevel. Default:0.5</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setDepth">
+<tt class="descname">setDepth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The depth for the bevel. Default:0.5</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setExtrudeDepth">
+<tt class="descname">setExtrudeDepth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setExtrudeDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The extrude distance (depth) for bevel. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setInnerStyle">
+<tt class="descname">setInnerStyle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setInnerStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to outerStyle, this style is applied to all but the first (outer) curve specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setJoinSurfaces">
+<tt class="descname">setJoinSurfaces</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setJoinSurfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach bevelled surfaces into one surface for each input curve. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setNormalsOutwards">
+<tt class="descname">setNormalsOutwards</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setNormalsOutwards" title="Permalink to this definition">¶</a></dt>
+<dd><p>If enabled, the normals point outwards on the resulting NURBS or poly surface.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setNumberOfSides">
+<tt class="descname">setNumberOfSides</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setNumberOfSides" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to apply the bevel. 1 - no bevels2 - bevel at start only3 - bevel at end only4 - bevel at start and endDefault:4</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setOuterStyle">
+<tt class="descname">setOuterStyle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setOuterStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose a style to use for the bevel of the first (outer) curve.  There are 15 predefined styles (values 0 to 14 can be used to select them). For those experienced with MEL, you can, after the fact, specify a custom curve and use it for the style curve. See the documentation for styleCurve node to see what requirements a style curve must satisfy.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutChordHeight">
+<tt class="descname">setPolyOutChordHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutChordHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chord height is the absolute distance in object space which the center of a polygon edge can deviate from the actual center of the surface span. Only used if Method is Sampling and if polyOutseChordHeight is true. Default:0.1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutChordHeightRatio">
+<tt class="descname">setPolyOutChordHeightRatio</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutChordHeightRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chord height ratio is the ratio of the chord length of a surface span to the chord height.  (This is a length to height ratio). 0 is a very loose fit. 1 is a very tight fit.  This applies to the polygonal output type only. (See also description of chord height.) Used if Method is Sampling and polyOutUseChordHeightRatio is true. Default:0.1                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutCount">
+<tt class="descname">setPolyOutCount</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of polygons to produce when the polygon is requested.  Only used if Method is face count (0). Default:200</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutCurveSamples">
+<tt class="descname">setPolyOutCurveSamples</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutCurveSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial number of samples in the curve direction. Only used if Method is Sampling. Default:6</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutCurveType">
+<tt class="descname">setPolyOutCurveType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutCurveType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial tessellation criteria along the curve.  Only used if Method is Sampling. 2 - Complete Curve.  This type places a specific number of sample points along the curve, equally spaced in parameter space.3 - Curve Span.  This type places a specific number of sample points across each curve span, equally spaced in parameter space.Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutExtrusionSamples">
+<tt class="descname">setPolyOutExtrusionSamples</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutExtrusionSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial number of samples along the extrusion. Only used if Method is Sampling. Default:2</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutExtrusionType">
+<tt class="descname">setPolyOutExtrusionType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutExtrusionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial type tessellation criteria along the extrude direction.  Used only if Method is Sampling. 2 - Complete Extrusion.  This type places a specific number of lines across the surface, equally spaced in parameter space.3 - Extrusion Section.  This type places a specific number of lines across each surface span, equally spaced in parameter space.Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutMethod">
+<tt class="descname">setPolyOutMethod</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for the polygonal output: 0 - Face Count, 2 - Sampling Default:2</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutUseChordHeight">
+<tt class="descname">setPolyOutUseChordHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutUseChordHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>True means use chord height.  This is a secondary criteria that refines the tessellation produced using the sampling value.  Only used if Method is Sampling. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setPolyOutUseChordHeightRatio">
+<tt class="descname">setPolyOutUseChordHeightRatio</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setPolyOutUseChordHeightRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>True means use chord height ratio.  This is a secondary criteria that refines the tessellation produced using the sampling value.  Only used if Method is Sampling. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setTolerance">
+<tt class="descname">setTolerance</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setTolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tolerance for creating NURBS caps. Default:0.01</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BevelPlus.setWidth">
+<tt class="descname">setWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BevelPlus.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width for the bevel. Default:0.5</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.bevelPlus</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Bevel.html"
+                        title="previous chapter">pymel.core.nodetypes.Bevel</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.BezierCurve.html"
+                        title="next chapter">pymel.core.nodetypes.BezierCurve</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.BevelPlus.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BezierCurve.html" title="pymel.core.nodetypes.BezierCurve"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Bevel.html" title="pymel.core.nodetypes.Bevel"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

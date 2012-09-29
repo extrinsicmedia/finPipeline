@@ -1,0 +1,6 @@
+pymel.core.runtime.DisplayLight
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DisplayLight

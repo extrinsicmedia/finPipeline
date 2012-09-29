@@ -1,0 +1,6 @@
+pymel.core.animation.jointCluster
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.jointCluster

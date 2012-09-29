@@ -1,0 +1,6 @@
+pymel.core.windows.dimWhen
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.dimWhen

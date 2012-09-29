@@ -1,0 +1,6 @@
+pymel.util.expandArgs
+=====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.expandArgs

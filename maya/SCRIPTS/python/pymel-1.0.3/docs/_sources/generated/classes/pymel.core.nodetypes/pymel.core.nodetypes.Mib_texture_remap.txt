@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_texture_remap
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_texture_remap
+    :parts: 1
+
+.. autoclass:: Mib_texture_remap
+    :members:
+    :undoc-members:

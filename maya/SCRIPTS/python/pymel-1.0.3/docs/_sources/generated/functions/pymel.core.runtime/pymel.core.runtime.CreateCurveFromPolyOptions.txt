@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateCurveFromPolyOptions
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateCurveFromPolyOptions

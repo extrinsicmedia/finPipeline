@@ -1,0 +1,6 @@
+pymel.core.runtime.HIKSetFullBodyKey
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HIKSetFullBodyKey

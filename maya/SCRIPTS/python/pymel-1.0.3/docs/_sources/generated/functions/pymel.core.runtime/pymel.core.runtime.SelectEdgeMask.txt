@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectEdgeMask
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectEdgeMask

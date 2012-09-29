@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_texture_lookup
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_texture_lookup
+    :parts: 1
+
+.. autoclass:: Mib_texture_lookup
+    :members:
+    :undoc-members:

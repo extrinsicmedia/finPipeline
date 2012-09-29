@@ -1,0 +1,6 @@
+pymel.core.runtime.Create3DContainerEmitterOptions
+==================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Create3DContainerEmitterOptions

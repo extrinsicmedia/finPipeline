@@ -1,0 +1,6 @@
+pymel.core.runtime.PaintOperationMarkingMenuRelease
+===================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PaintOperationMarkingMenuRelease

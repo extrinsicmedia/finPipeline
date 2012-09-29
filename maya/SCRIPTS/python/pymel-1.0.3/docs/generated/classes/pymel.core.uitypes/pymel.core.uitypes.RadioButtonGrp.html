@@ -1,0 +1,926 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.RadioButtonGrp &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.RadioCollection" href="pymel.core.uitypes.RadioCollection.html" />
+    <link rel="prev" title="pymel.core.uitypes.RadioButton" href="pymel.core.uitypes.RadioButton.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.RadioCollection.html" title="pymel.core.uitypes.RadioCollection"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.RadioButton.html" title="pymel.core.uitypes.RadioButton"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-radiobuttongrp">
+<h1>pymel.core.uitypes.RadioButtonGrp<a class="headerlink" href="#pymel-core-uitypes-radiobuttongrp" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-0d1b141a47c10b619ab297fe919a67dd902eb30a.png" alt="Inheritance diagram of RadioButtonGrp" usemap="#inheritancee91ab2be8c" class="inheritance"/>
+<map id="inheritancee91ab2be8c" name="inheritancee91ab2be8c">
+<area shape="rect" href="#pymel.core.uitypes.RadioButtonGrp" title="RadioButtonGrp" alt="" coords="5,83,112,107"/>
+<area shape="rect" href="pymel.core.uitypes.Layout.html#pymel.core.uitypes.Layout" title="Layout" alt="" coords="23,44,95,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="23,5,95,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.RadioButtonGrp">
+<em class="property">class </em><tt class="descname">RadioButtonGrp</tt><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">radioButtonGrp</span></tt></p>
+<p>All of the group commands position their individual controls in columns starting at column 1.  The layout of each control (ie. column) can be customized using the -cw/columnWidth, -co/columnOffset, -cat/columnAttach, -cal/columnAlign, and -adj/adjustableColumnflags.  By default, columns are left aligned with no offset and are 100 pixels wide.  Only one column in any group can be adjustable. This command creates from one to four radio buttons in a single row. By default the radio buttons will share a single collection, but they can also share the collection of another radio button group.  The buttons can also have an optional text label. TelfBaseGrpCmd.cpp</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn">
+<tt class="descname">adjustableColumn</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which column has an adjustable size that changes with the sizing of the layout.  The column value is a 1-based index.  You may also specify 0 to turn off the previous adjustable column.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn2">
+<tt class="descname">adjustableColumn2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which column has an adjustable size that changes with the size of the parent layout. Ignored if there is not exactly two columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn3">
+<tt class="descname">adjustableColumn3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies that the column has an adjustable size that changes with the size of the parent layout. Ignored if there is not exactly three columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn4">
+<tt class="descname">adjustableColumn4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which column has an adjustable size that changes with the size of the parent layout. Ignored if there is not exactly four columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn5">
+<tt class="descname">adjustableColumn5</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which column has an adjustable size that changes with the size of the parent layout. Ignored if there is not exactly five columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.adjustableColumn6">
+<tt class="descname">adjustableColumn6</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.adjustableColumn6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies which column has an adjustable size that changes with the size of the parent layout. Ignored if there is not exactly six columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.changeCommand">
+<tt class="descname">changeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.changeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when the group changes state. Note that this flag should not be used in conjunction with onCommand and offCommand. That is, one should either use changeCommand and test the state of a radio button from inside the callback, or use onCommand and offCommand as separate callbacks.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.changeCommand1">
+<tt class="descname">changeCommand1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.changeCommand1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.changeCommand2">
+<tt class="descname">changeCommand2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.changeCommand2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.changeCommand3">
+<tt class="descname">changeCommand3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.changeCommand3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.changeCommand4">
+<tt class="descname">changeCommand4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.changeCommand4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify a changed state command for each respective radio button.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign">
+<tt class="descname">columnAlign</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments are : column number, alignment type. Possible alignments are: left | right | center. Specifies alignment type for the specified column.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign2">
+<tt class="descname">columnAlign2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the text alignment of both columns.  Ignored if there is not exactly two columns. Valid values are left, right, and center.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign3">
+<tt class="descname">columnAlign3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the text alignment for all 3 columns.  Ignored if there is not exactly 3 columns. Valid values are left, right, and center.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign4">
+<tt class="descname">columnAlign4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the text alignment for all 4 columns.  Ignored if there is not exactly 4 columns. Valid values are left, right, and center.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign5">
+<tt class="descname">columnAlign5</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the text alignment for all 5 columns.  Ignored if there is not exactly 5 columns. Valid values are left, right, and center.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAlign6">
+<tt class="descname">columnAlign6</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAlign6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the text alignment for all 6 columns.  Ignored if there is not exactly 6 columns. Valid values are left, right, and center.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach">
+<tt class="descname">columnAttach</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments are : column number, attachment type, and offset. Possible attachments are: left | right | both. Specifies column attachment types and offets.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach2">
+<tt class="descname">columnAttach2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the attachment type of both columns.  Ignored if there is not exactly two columns. Valid values are left, right, and both.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach3">
+<tt class="descname">columnAttach3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the attachment type for all 3 columns.  Ignored if there is not exactly 3 columns. Valid values are left, right, and both.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach4">
+<tt class="descname">columnAttach4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the attachment type for all 4 columns.  Ignored if there is not exactly 4 columns. Valid values are left, right, and both.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach5">
+<tt class="descname">columnAttach5</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the attachment type for all 5 columns.  Ignored if there is not exactly 5 columns. Valid values are left, right, and both.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnAttach6">
+<tt class="descname">columnAttach6</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnAttach6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the attachment type for all 6 columns.  Ignored if there is not exactly 6 columns. Valid values are left, right, and both.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnOffset2">
+<tt class="descname">columnOffset2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnOffset2" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used in conjunction with the -columnAttach2 flag.  If that flag is not used then this flag will be ignored.  It sets the offset for the two columns.  The offsets applied are based on the attachments specified with the -columnAttach2 flag.  Ignored if there is not exactly two columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnOffset3">
+<tt class="descname">columnOffset3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnOffset3" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used in conjunction with the -columnAttach3 flag.  If that flag is not used then this flag will be ignored.  It sets the offset for the three columns.  The offsets applied are based on the attachments specified with the -columnAttach3 flag.  Ignored if there is not exactly three columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnOffset4">
+<tt class="descname">columnOffset4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnOffset4" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used in conjunction with the -columnAttach4 flag.  If that flag is not used then this flag will be ignored.  It sets the offset for the four columns.  The offsets applied are based on the attachments specified with the -columnAttach4 flag.  Ignored if there is not exactly four columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnOffset5">
+<tt class="descname">columnOffset5</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnOffset5" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used in conjunction with the -columnAttach5 flag.  If that flag is not used then this flag will be ignored.  It sets the offset for the five columns.  The offsets applied are based on the attachments specified with the -columnAttach5 flag.  Ignored if there is not exactly five columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnOffset6">
+<tt class="descname">columnOffset6</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnOffset6" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used in conjunction with the -columnAttach6 flag.  If that flag is not used then this flag will be ignored.  It sets the offset for the six columns.  The offsets applied are based on the attachments specified with the -columnAttach6 flag.  Ignored if there is not exactly six columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth">
+<tt class="descname">columnWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments are : column number, column width. Sets the width of the specified column where the first parameter specifies the column (1 based index) and the second parameter specifies the width.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth1">
+<tt class="descname">columnWidth1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the width of the first column.  Ignored if there is not exactly one column.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth2">
+<tt class="descname">columnWidth2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the column widths of both columns.  Ignored if there is not exactly two columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth3">
+<tt class="descname">columnWidth3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the column widths for all 3 columns.  Ignored if there is not exactly 3 columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth4">
+<tt class="descname">columnWidth4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the column widths for all 4 columns.  Ignored if there is not exactly 4 columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth5">
+<tt class="descname">columnWidth5</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the column widths for all 5 columns.  Ignored if there is not exactly 5 columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.columnWidth6">
+<tt class="descname">columnWidth6</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.columnWidth6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the column widths for all 6 columns.  Ignored if there is not exactly 6 columns.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.dragCallback">
+<tt class="descname">dragCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.dragCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when the middle mouse button is pressed.  The MEL version of the callback is of the form: global proc string[] callbackName(string $dragControl, int $x, int $y, int $mods) The proc returns a string array that is transferred to the drop site. By convention the first string in the array describes the user settable message type.  Controls that are application defined drag sources may ignore the callback. $mods allows testing for the key modifiers CTL and SHIFT. Possible values are 0 == No modifiers, 1 == SHIFT, 2 == CTL, 3 == CTL + SHIFT. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def callbackName( dragControl, x, y, modifiers ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, x, y, modifiers.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(x)d %(y)d %(modifiers)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.dropCallback">
+<tt class="descname">dropCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.dropCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when a drag and drop operation is released above the drop site.  The MEL version of the callback is of the form: global proc callbackName(string $dragControl, string $dropControl, string $msgs[], int $x, int $y, int $type) The proc receives a string array that is transferred from the drag source. The first string in the msgs array describes the user defined message type. Controls that are application defined drop sites may ignore the callback. $type can have values of 1 == Move, 2 == Copy, 3 == Link. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def pythonDropTest( dragControl, dropControl, messages, x, y, dragType ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, dropControl, messages, x, y, type.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(dropControl)s %(messages)r %(x)d %(y)d %(type)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getAnnotation">
+<tt class="descname">getAnnotation</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getBackgroundColor">
+<tt class="descname">getBackgroundColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getData1">
+<tt class="descname">getData1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getData1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getData2">
+<tt class="descname">getData2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getData2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getData3">
+<tt class="descname">getData3</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getData3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getData4">
+<tt class="descname">getData4</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getData4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal data associated with each radio button.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEditable">
+<tt class="descname">getEditable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEditable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The edit state of the group.  By default, this flag is set to true and the radio button values may be changed by clicking on them.  If false then the radio buttons are &#8216;read only&#8217; and can not be clicked on. The value of the radio button can always be changed with the sl/selectflags regardless of the state of the ed/editableflag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnable">
+<tt class="descname">getEnable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnable1">
+<tt class="descname">getEnable1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnable1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnable2">
+<tt class="descname">getEnable2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnable2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnable3">
+<tt class="descname">getEnable3</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnable3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnable4">
+<tt class="descname">getEnable4</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnable4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable state of the individual radio buttons.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getEnableBackground">
+<tt class="descname">getEnableBackground</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getFullPathName">
+<tt class="descname">getFullPathName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getFullPathName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the full path name of the widget, which includes all the parents</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getHeight">
+<tt class="descname">getHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getIsObscured">
+<tt class="descname">getIsObscured</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getIsObscured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the control can actually be seen by the user. The control will be obscured if its state is invisible, if it is blocked (entirely or partially) by some other control, if it or a parent layout is unmanaged, or if the control&#8217;s window is invisible or iconified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabel">
+<tt class="descname">getLabel</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>When present on creation an optional text label will be built with the group.  The string specifes the label text.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabel1">
+<tt class="descname">getLabel1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabel1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabel2">
+<tt class="descname">getLabel2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabel2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabel3">
+<tt class="descname">getLabel3</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabel3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabel4">
+<tt class="descname">getLabel4</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabel4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify label strings for the respective radio buttons in the group.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabelArray2">
+<tt class="descname">getLabelArray2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabelArray2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabelArray3">
+<tt class="descname">getLabelArray3</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabelArray3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getLabelArray4">
+<tt class="descname">getLabelArray4</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getLabelArray4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify multiple labels in a single flag.  These flags are ignored if the number of radio buttons doesn&#8217;t match.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getManage">
+<tt class="descname">getManage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getNumberOfPopupMenus">
+<tt class="descname">getNumberOfPopupMenus</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getNumberOfPopupMenus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getPopupMenuArray">
+<tt class="descname">getPopupMenuArray</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getPopupMenuArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the names of all the popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getPreventOverride">
+<tt class="descname">getPreventOverride</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getSelect">
+<tt class="descname">getSelect</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected radio button.  The argument is a 1 based integer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getVertical">
+<tt class="descname">getVertical</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getVertical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the orientation of the radio buttons in this group are horizontal (default) or vertical.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getVisible">
+<tt class="descname">getVisible</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getVisibleChangeCommand">
+<tt class="descname">getVisibleChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.getWidth">
+<tt class="descname">getWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.offCommand">
+<tt class="descname">offCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.offCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when any radio button turns off.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.offCommand1">
+<tt class="descname">offCommand1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.offCommand1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.offCommand2">
+<tt class="descname">offCommand2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.offCommand2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.offCommand3">
+<tt class="descname">offCommand3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.offCommand3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.offCommand4">
+<tt class="descname">offCommand4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.offCommand4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Off command for each respective radio button.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.onCommand">
+<tt class="descname">onCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.onCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command executed when any radio button turns on.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.onCommand1">
+<tt class="descname">onCommand1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.onCommand1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.onCommand2">
+<tt class="descname">onCommand2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.onCommand2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.onCommand3">
+<tt class="descname">onCommand3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.onCommand3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.onCommand4">
+<tt class="descname">onCommand4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.onCommand4" title="Permalink to this definition">¶</a></dt>
+<dd><p>On command for each respective radio button.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.rowAttach">
+<tt class="descname">rowAttach</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.rowAttach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arguments are : column, attachment type, offset. Possible attachments are: top | bottom | both. Specifies attachment types and offsets for the entire row.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setAnnotation">
+<tt class="descname">setAnnotation</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setBackgroundColor">
+<tt class="descname">setBackgroundColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setData1">
+<tt class="descname">setData1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setData1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setData2">
+<tt class="descname">setData2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setData2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setData3">
+<tt class="descname">setData3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setData3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setData4">
+<tt class="descname">setData4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setData4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal data associated with each radio button.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEditable">
+<tt class="descname">setEditable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEditable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The edit state of the group.  By default, this flag is set to true and the radio button values may be changed by clicking on them.  If false then the radio buttons are &#8216;read only&#8217; and can not be clicked on. The value of the radio button can always be changed with the sl/selectflags regardless of the state of the ed/editableflag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnable">
+<tt class="descname">setEnable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnable1">
+<tt class="descname">setEnable1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnable1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnable2">
+<tt class="descname">setEnable2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnable2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnable3">
+<tt class="descname">setEnable3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnable3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnable4">
+<tt class="descname">setEnable4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnable4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable state of the individual radio buttons.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setEnableBackground">
+<tt class="descname">setEnableBackground</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setHeight">
+<tt class="descname">setHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabel">
+<tt class="descname">setLabel</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>When present on creation an optional text label will be built with the group.  The string specifes the label text.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabel1">
+<tt class="descname">setLabel1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabel1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabel2">
+<tt class="descname">setLabel2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabel2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabel3">
+<tt class="descname">setLabel3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabel3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabel4">
+<tt class="descname">setLabel4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabel4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify label strings for the respective radio buttons in the group.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabelArray2">
+<tt class="descname">setLabelArray2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabelArray2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabelArray3">
+<tt class="descname">setLabelArray3</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabelArray3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setLabelArray4">
+<tt class="descname">setLabelArray4</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setLabelArray4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify multiple labels in a single flag.  These flags are ignored if the number of radio buttons doesn&#8217;t match.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setManage">
+<tt class="descname">setManage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setPreventOverride">
+<tt class="descname">setPreventOverride</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setSelect">
+<tt class="descname">setSelect</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected radio button.  The argument is a 1 based integer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setVisible">
+<tt class="descname">setVisible</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setVisibleChangeCommand">
+<tt class="descname">setVisibleChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.RadioButtonGrp.setWidth">
+<tt class="descname">setWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.RadioButtonGrp.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.radioButtonGrp</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.RadioButton.html"
+                        title="previous chapter">pymel.core.uitypes.RadioButton</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.RadioCollection.html"
+                        title="next chapter">pymel.core.uitypes.RadioCollection</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.RadioButtonGrp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.RadioCollection.html" title="pymel.core.uitypes.RadioCollection"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.RadioButton.html" title="pymel.core.uitypes.RadioButton"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

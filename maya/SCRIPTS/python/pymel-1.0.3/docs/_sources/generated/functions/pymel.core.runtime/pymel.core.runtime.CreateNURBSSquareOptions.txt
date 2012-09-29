@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateNURBSSquareOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateNURBSSquareOptions

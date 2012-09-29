@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayVertexColors
+==========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayVertexColors
+    :parts: 1
+
+.. autoclass:: MentalrayVertexColors
+    :members:
+    :undoc-members:

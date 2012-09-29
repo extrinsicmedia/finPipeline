@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateCharacterOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateCharacterOptions

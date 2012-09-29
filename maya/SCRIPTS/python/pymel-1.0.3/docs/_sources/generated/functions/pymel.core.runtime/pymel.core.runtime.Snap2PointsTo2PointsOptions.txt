@@ -1,0 +1,6 @@
+pymel.core.runtime.Snap2PointsTo2PointsOptions
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Snap2PointsTo2PointsOptions

@@ -1,0 +1,6 @@
+pymel.core.runtime.DisplayWireframe
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DisplayWireframe

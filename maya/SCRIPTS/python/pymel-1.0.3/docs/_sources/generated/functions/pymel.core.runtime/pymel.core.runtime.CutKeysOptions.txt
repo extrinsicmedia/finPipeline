@@ -1,0 +1,6 @@
+pymel.core.runtime.CutKeysOptions
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CutKeysOptions

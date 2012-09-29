@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowTexturePlacements
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowTexturePlacements

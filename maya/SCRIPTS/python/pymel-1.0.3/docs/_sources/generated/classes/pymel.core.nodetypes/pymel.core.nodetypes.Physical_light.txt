@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Physical_light
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Physical_light
+    :parts: 1
+
+.. autoclass:: Physical_light
+    :members:
+    :undoc-members:

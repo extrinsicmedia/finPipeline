@@ -1,0 +1,6 @@
+pymel.core.other.clearShear
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.clearShear

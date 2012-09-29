@@ -1,0 +1,6 @@
+pymel.core.runtime.ActivateFullBodyPivot
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ActivateFullBodyPivot

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.RectangularLightLocator
+============================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: RectangularLightLocator
+    :parts: 1
+
+.. autoclass:: RectangularLightLocator
+    :members:
+    :undoc-members:

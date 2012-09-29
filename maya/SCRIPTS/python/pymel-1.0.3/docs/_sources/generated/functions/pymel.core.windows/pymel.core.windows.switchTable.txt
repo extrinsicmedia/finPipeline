@@ -1,0 +1,6 @@
+pymel.core.windows.switchTable
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.switchTable

@@ -1,0 +1,6 @@
+pymel.util.shellOutput
+======================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.shellOutput

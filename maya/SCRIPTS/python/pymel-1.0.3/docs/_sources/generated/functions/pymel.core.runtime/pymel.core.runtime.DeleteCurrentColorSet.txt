@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteCurrentColorSet
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteCurrentColorSet

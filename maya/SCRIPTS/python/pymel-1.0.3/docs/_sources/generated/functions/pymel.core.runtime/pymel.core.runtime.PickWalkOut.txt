@@ -1,0 +1,6 @@
+pymel.core.runtime.PickWalkOut
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PickWalkOut

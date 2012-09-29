@@ -1,0 +1,6 @@
+pymel.core.general.listNodeTypes
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.listNodeTypes

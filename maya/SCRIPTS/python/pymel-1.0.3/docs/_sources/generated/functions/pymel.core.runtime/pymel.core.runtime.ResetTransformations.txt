@@ -1,0 +1,6 @@
+pymel.core.runtime.ResetTransformations
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ResetTransformations

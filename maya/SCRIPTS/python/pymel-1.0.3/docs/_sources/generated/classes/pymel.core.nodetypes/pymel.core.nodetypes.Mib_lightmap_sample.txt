@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lightmap_sample
+========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lightmap_sample
+    :parts: 1
+
+.. autoclass:: Mib_lightmap_sample
+    :members:
+    :undoc-members:

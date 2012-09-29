@@ -1,0 +1,6 @@
+pymel.core.windows.paneLayout
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.paneLayout

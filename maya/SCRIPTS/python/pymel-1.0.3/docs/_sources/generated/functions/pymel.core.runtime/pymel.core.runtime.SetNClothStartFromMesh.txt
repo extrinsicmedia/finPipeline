@@ -1,0 +1,6 @@
+pymel.core.runtime.SetNClothStartFromMesh
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetNClothStartFromMesh

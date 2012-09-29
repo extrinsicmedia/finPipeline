@@ -1,0 +1,6 @@
+pymel.core.runtime.ConnectionEditor
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConnectionEditor

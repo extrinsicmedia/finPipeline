@@ -1,0 +1,11 @@
+pymel.core.nodetypes.FurFeedback
+================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: FurFeedback
+    :parts: 1
+
+.. autoclass:: FurFeedback
+    :members:
+    :undoc-members:

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Parti_volume
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Parti_volume
+    :parts: 1
+
+.. autoclass:: Parti_volume
+    :members:
+    :undoc-members:

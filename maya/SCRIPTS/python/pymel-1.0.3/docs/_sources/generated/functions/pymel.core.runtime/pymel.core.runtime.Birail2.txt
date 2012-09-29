@@ -1,0 +1,6 @@
+pymel.core.runtime.Birail2
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Birail2

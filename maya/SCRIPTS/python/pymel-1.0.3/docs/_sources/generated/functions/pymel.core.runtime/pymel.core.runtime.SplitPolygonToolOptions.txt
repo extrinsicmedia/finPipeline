@@ -1,0 +1,6 @@
+pymel.core.runtime.SplitPolygonToolOptions
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SplitPolygonToolOptions

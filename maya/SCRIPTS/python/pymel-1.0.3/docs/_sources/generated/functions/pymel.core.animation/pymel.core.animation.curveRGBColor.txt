@@ -1,0 +1,6 @@
+pymel.core.animation.curveRGBColor
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.curveRGBColor

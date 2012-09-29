@@ -1,0 +1,6 @@
+pymel.core.animation.shotRipple
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.shotRipple

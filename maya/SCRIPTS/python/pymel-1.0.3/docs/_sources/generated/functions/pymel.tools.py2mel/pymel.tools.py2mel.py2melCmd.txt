@@ -1,0 +1,6 @@
+pymel.tools.py2mel.py2melCmd
+============================
+
+.. currentmodule:: pymel.tools
+
+.. automethod:: py2mel.py2melCmd

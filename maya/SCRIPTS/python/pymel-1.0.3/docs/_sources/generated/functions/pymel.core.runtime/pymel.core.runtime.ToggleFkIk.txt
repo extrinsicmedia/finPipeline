@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleFkIk
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleFkIk

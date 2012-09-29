@@ -1,0 +1,6 @@
+pymel.core.runtime.deleteGeometryCache
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.deleteGeometryCache

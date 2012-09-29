@@ -1,0 +1,6 @@
+pymel.core.runtime.PostInfinityLinear
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PostInfinityLinear

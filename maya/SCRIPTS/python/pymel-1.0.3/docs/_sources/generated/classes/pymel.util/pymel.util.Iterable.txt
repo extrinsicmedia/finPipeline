@@ -1,0 +1,11 @@
+pymel.util.Iterable
+===================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Iterable
+    :parts: 1
+
+.. autoclass:: Iterable
+    :members:
+    :undoc-members:

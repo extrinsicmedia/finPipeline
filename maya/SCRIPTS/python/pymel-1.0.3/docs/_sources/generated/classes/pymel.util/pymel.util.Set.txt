@@ -1,0 +1,11 @@
+pymel.util.Set
+==============
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Set
+    :parts: 1
+
+.. autoclass:: Set
+    :members:
+    :undoc-members:

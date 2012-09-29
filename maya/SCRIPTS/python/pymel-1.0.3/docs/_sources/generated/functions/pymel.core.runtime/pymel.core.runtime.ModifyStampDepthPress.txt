@@ -1,0 +1,6 @@
+pymel.core.runtime.ModifyStampDepthPress
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ModifyStampDepthPress

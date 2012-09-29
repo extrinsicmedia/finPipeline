@@ -1,0 +1,6 @@
+pymel.core.runtime.TangentsFlat
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TangentsFlat

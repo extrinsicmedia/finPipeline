@@ -1,0 +1,6 @@
+pymel.core.runtime.AddDivisionsOptions
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddDivisionsOptions

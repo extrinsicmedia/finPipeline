@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtendCurveOnSurfaceOptions
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtendCurveOnSurfaceOptions

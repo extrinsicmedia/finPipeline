@@ -1,0 +1,6 @@
+pymel.core.runtime.ThreeRightSplitViewArrangement
+=================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ThreeRightSplitViewArrangement

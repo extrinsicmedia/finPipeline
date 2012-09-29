@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_continue
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_continue
+    :parts: 1
+
+.. autoclass:: Mib_continue
+    :members:
+    :undoc-members:

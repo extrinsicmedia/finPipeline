@@ -1,0 +1,6 @@
+pymel.core.other.cMuscleSplineBind
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.cMuscleSplineBind

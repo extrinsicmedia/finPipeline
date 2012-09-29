@@ -1,0 +1,6 @@
+pymel.util.atan2
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.atan2

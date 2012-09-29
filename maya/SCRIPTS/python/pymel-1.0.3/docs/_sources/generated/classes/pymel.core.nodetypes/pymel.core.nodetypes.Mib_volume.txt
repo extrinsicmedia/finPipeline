@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_volume
+===============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_volume
+    :parts: 1
+
+.. autoclass:: Mib_volume
+    :members:
+    :undoc-members:

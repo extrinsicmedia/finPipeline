@@ -1,0 +1,6 @@
+pymel.core.runtime.CycleFBIKReachKeyingOption
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CycleFBIKReachKeyingOption

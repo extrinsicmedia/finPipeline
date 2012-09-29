@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.attributeQuery &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.bakePartialHistory" href="pymel.core.general.bakePartialHistory.html" />
+    <link rel="prev" title="pymel.core.general.attributeName" href="pymel.core.general.attributeName.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.bakePartialHistory.html" title="pymel.core.general.bakePartialHistory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.attributeName.html" title="pymel.core.general.attributeName"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-attributequery">
+<h1>pymel.core.general.attributeQuery<a class="headerlink" href="#pymel-core-general-attributequery" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.attributeQuery">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">attributeQuery</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.attributeQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>attributeQuery returns information about the configuration of an attribute. It handles both boolean flags, returning
+true or false, as well as other return values. Specifying more than one boolean flag will return the logical andof all
+the specified boolean flags.  You may not specify any two flags when both do not provide a boolean return type.  (eg.
+-internal -hiddenis okay but -range -hiddenor -range -softRangeis not.)</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>connectable (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the connectable status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>enum (e)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute is a enum attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute exists</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>hidden (h)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the hidden status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>indexMatters (im)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the indexMatters status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>internal (i)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute is either internalSet or internalGet</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>internalGet (ig)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute come from getCachedValue</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>internalSet (internalSet)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute must be set through setCachedValue</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>keyable (k)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the keyable status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listChildren (lc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the list of children attributes of the given attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listDefault (ld)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the default values of numeric and compound numeric attributes.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listEnum (le)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the list of enum strings for the given attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listParent (lp)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the parent of the given attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>listSiblings (ls)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the list of sibling attributes of the given attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>longName (ln)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the long name of the attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>maxExists (mxe)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a hard maximum. A min does not have to be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>maximum (max)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the hard maximum of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>message (msg)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute is a message attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>minExists (mne)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a hard minimum. A max does not have to be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>minimum (min)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the hard minimum of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>multi (m)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute is a multi-attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>niceName (nn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the nice name (or UI name) of the attribute.                                       Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>node (n)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use all attributes from node named NAME</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>numberOfChildren (nc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the number of children the attribute has</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>range (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the hard range of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>rangeExists (re)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a hard range. Both min and max must be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>readable (rd)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the readable status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>shortName (sn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the short name of the attribute.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softMax (smx)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the soft max (slider range) of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softMaxExists (sxe)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a soft maximum. A min does not have to be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softMin (smn)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the soft min (slider range) of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softMinExists (sme)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a soft minimum. A max does not have to be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softRange (s)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the soft range (slider range) of the attribute&#8217;s value</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>softRangeExists (se)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute has a soft range. Both min and max must be present.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>storable (st)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute is storable</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>type (typ)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use static attributes from nodes of type TYPE.  Includes attributes inherited from parent class nodes.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>typeExact (tex)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Use static attributes only from nodes of type TYPE.  Does not included inherited attributes.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>usedAsColor (uac)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return true if the attribute should bring up a color picker</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>writable (w)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Return the writable status of the attribute</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.attributeQuery</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Determine the hidden status of the &quot;selector&quot; attribute on choice nodes.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;selector&#39;</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="s">&#39;choice&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: False #</span>
+<span class="c"># Result: 0</span>
+<span class="c"># Determine the hidden status of the &quot;selector&quot; attribute on this choice node.</span>
+<span class="c"># (Usually the same but you can do this for dynamic attributes too.)</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span> <span class="s">&#39;choice&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s">&#39;whoIsIt&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.Choice(u&#39;whoIsIt&#39;) #</span>
+<span class="c"># Result: choice1</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;selector&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s">&#39;whoIsIt&#39;</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: False #</span>
+<span class="c"># Result: 0</span>
+<span class="c"># Determine the range of the selector value on choice nodes.</span>
+<span class="c"># In this case there is no range.</span>
+<span class="c"># Note, if there is only a minimum or only a maximum range will not set.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;selector&#39;</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="s">&#39;choice&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># For the next several examples create a poly cube and add extra attributes.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">polyCube</span><span class="p">(</span> <span class="n">cuv</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ch</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sy</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sz</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span> <span class="s">&#39;|pCube1&#39;</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s">&#39;egRange&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;long&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span><span class="mi">2</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span> <span class="s">&#39;|pCube1.egRange&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">keyable</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span>
+<span class="c"># Determine if an attribute is keyable</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;egRange&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: 0</span>
+<span class="c"># Determine the minimum and maximum values of the added attribute egRange</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;egRange&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: [0.0, 5.0]</span>
+<span class="c"># Determine if there is a minimum for the attribute.</span>
+<span class="c"># Note, having a minimum or maximum value does not imply the attribute has a range.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span> <span class="s">&#39;|pCube1&#39;</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s">&#39;egMin&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;long&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">2</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;egMin&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="n">minExists</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: 1</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;egMin&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="n">maxExists</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: 0</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;egMin&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="c"># Result: [2.0]</span>
+<span class="c"># Determine if an attribute is an enum</span>
+<span class="c"># List the enum strings. This will use &#39;:&#39; as a separator like the attr is written in</span>
+<span class="c"># an .ma file.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span> <span class="s">&#39;|pCube1&#39;</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="s">&#39;myEnum&#39;</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="s">&#39;enum&#39;</span><span class="p">,</span> <span class="n">en</span><span class="o">=</span><span class="s">&#39;chicken:turkey:duck:&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">attributeQuery</span><span class="p">(</span> <span class="s">&#39;myEnum&#39;</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="s">&#39;pCube1&#39;</span><span class="p">,</span> <span class="n">listEnum</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="p">[</span><span class="s">u&#39;chicken:turkey:duck&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.attributeName.html"
+                        title="previous chapter">pymel.core.general.attributeName</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.bakePartialHistory.html"
+                        title="next chapter">pymel.core.general.bakePartialHistory</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.attributeQuery.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.bakePartialHistory.html" title="pymel.core.general.bakePartialHistory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.attributeName.html" title="pymel.core.general.attributeName"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

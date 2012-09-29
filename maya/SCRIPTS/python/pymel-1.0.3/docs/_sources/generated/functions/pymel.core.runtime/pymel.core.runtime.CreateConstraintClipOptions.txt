@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateConstraintClipOptions
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateConstraintClipOptions

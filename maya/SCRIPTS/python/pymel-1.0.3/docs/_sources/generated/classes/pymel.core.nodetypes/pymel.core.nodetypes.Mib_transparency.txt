@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_transparency
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_transparency
+    :parts: 1
+
+.. autoclass:: Mib_transparency
+    :members:
+    :undoc-members:

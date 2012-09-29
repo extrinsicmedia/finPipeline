@@ -1,0 +1,6 @@
+pymel.util.arguments.postorderArgs
+==================================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arguments.postorderArgs

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.DecomposeMatrix
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: DecomposeMatrix
+    :parts: 1
+
+.. autoclass:: DecomposeMatrix
+    :members:
+    :undoc-members:

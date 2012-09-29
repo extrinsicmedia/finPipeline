@@ -1,0 +1,6 @@
+pymel.core.datatypes.cosh
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.cosh

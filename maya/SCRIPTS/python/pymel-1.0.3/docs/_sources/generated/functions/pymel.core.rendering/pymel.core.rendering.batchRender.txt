@@ -1,0 +1,6 @@
+pymel.core.rendering.batchRender
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.batchRender

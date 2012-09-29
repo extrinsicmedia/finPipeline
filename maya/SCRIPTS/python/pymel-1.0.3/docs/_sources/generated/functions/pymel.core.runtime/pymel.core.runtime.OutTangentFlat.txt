@@ -1,0 +1,6 @@
+pymel.core.runtime.OutTangentFlat
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.OutTangentFlat

@@ -1,0 +1,6 @@
+pymel.core.runtime.ModifyUVVectorRelease
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ModifyUVVectorRelease

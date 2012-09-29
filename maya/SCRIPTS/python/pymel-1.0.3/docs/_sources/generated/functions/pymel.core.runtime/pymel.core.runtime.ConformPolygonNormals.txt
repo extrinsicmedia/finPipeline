@@ -1,0 +1,6 @@
+pymel.core.runtime.ConformPolygonNormals
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConformPolygonNormals

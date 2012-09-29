@@ -1,0 +1,6 @@
+pymel.core.runtime.ConnectNodeToIKFK
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConnectNodeToIKFK

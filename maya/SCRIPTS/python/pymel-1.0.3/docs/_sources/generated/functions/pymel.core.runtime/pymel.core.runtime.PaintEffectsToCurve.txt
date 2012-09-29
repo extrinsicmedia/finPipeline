@@ -1,0 +1,6 @@
+pymel.core.runtime.PaintEffectsToCurve
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PaintEffectsToCurve

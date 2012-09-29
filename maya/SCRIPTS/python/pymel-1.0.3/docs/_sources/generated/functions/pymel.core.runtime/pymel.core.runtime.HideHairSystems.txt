@@ -1,0 +1,6 @@
+pymel.core.runtime.HideHairSystems
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideHairSystems

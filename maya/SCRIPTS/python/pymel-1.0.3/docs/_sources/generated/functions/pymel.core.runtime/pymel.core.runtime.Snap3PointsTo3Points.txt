@@ -1,0 +1,6 @@
+pymel.core.runtime.Snap3PointsTo3Points
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Snap3PointsTo3Points

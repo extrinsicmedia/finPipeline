@@ -1,0 +1,11 @@
+pymel.core.nodetypes.StudioClearCoat
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: StudioClearCoat
+    :parts: 1
+
+.. autoclass:: StudioClearCoat
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.util.smoothmap
+====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.smoothmap

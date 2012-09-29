@@ -1,0 +1,6 @@
+pymel.core.general.align
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.align

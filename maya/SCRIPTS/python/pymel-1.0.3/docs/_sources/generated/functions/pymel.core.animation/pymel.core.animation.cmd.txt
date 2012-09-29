@@ -1,0 +1,6 @@
+pymel.core.animation.cmd
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.cmd

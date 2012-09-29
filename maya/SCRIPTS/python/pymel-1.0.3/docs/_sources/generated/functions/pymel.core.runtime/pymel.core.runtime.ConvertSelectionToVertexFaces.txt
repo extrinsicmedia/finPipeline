@@ -1,0 +1,6 @@
+pymel.core.runtime.ConvertSelectionToVertexFaces
+================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConvertSelectionToVertexFaces

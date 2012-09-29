@@ -1,0 +1,6 @@
+pymel.core.other.sbs_GetSubstanceBuildVersion
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_GetSubstanceBuildVersion

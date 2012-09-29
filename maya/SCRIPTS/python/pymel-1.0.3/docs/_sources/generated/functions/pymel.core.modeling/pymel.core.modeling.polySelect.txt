@@ -1,0 +1,6 @@
+pymel.core.modeling.polySelect
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.polySelect

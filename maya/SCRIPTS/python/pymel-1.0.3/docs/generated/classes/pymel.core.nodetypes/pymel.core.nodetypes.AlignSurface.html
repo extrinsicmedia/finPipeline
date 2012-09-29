@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.AlignSurface &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.AmbientLight" href="pymel.core.nodetypes.AmbientLight.html" />
+    <link rel="prev" title="pymel.core.nodetypes.AlignCurve" href="pymel.core.nodetypes.AlignCurve.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.AmbientLight.html" title="pymel.core.nodetypes.AmbientLight"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.AlignCurve.html" title="pymel.core.nodetypes.AlignCurve"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-alignsurface">
+<h1>pymel.core.nodetypes.AlignSurface<a class="headerlink" href="#pymel-core-nodetypes-alignsurface" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-1f74fe8925955736240b382c4f7375e55a771dc3.png" alt="Inheritance diagram of AlignSurface" usemap="#inheritance9f7419991f" class="inheritance"/>
+<map id="inheritance9f7419991f" name="inheritance9f7419991f">
+<area shape="rect" href="#pymel.core.nodetypes.AlignSurface" title="AlignSurface" alt="" coords="24,160,112,184"/>
+<area shape="rect" href="pymel.core.nodetypes.AbstractBaseCreate.html#pymel.core.nodetypes.AbstractBaseCreate" title="AbstractBaseCreate" alt="" coords="5,121,131,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="24,82,112,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="23,5,113,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="32,44,104,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.AlignSurface">
+<em class="property">class </em><tt class="descname">AlignSurface</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">alignSurface</span></tt></p>
+<p>The surface align command is used to align surfaces in maya. The main alignment options are positional, tangent and curvature continuity. Curvature continuity implies tangent continuity. NOTE: this tool is based on Studio&#8217;s align tool. Positional continuity means the surfaces (move) or the ends of the surfaces (modify) are changed. Tangent continuity means one of the surfaces is modified to be tangent at the points where they meet. Curvature continuity means one of the surfaces is modified to be curvature continuous as well as tangent. The default behaviour, when no surfaces or flags are passed, is to only do positional and tangent continuity on the active list with the end of the first surface and the start of the other surface used for alignment.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getCaching">
+<tt class="descname">getCaching</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node caching mode. See the node documentation for more information. Note:For advanced users only.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getCurvatureContinuity">
+<tt class="descname">getCurvatureContinuity</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getCurvatureContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature continuity is on if true and off otherwise. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getCurvatureScale1">
+<tt class="descname">getCurvatureScale1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getCurvatureScale1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature scale applied to curvature of first surface for curvature continuity. Default:0.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getCurvatureScale2">
+<tt class="descname">getCurvatureScale2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getCurvatureScale2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature scale applied to curvature of second surface for curvature continuity. Default:0.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getDirectionU">
+<tt class="descname">getDirectionU</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getDirectionU" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true use U direction of surface and V direction otherwise. Default:true                        Advanced flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getJoinParameter">
+<tt class="descname">getJoinParameter</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getJoinParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter on reference surface where modified surface is to be aligned to. Default:123456.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getNodeState">
+<tt class="descname">getNodeState</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getNodeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node state. See the node documentation for more information. Note:For advanced users only.                   Common flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getPositionalContinuity">
+<tt class="descname">getPositionalContinuity</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getPositionalContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Positional continuity is on if true and off otherwise. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getPositionalContinuityType">
+<tt class="descname">getPositionalContinuityType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getPositionalContinuityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Positional continuity type legal values: 1 - move first surface, 2 - move second surface, 3 - move both surfaces, 4 - modify first surface, 5 - modify second surface, 6 - modify both surfaces Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getReverse1">
+<tt class="descname">getReverse1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getReverse1" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the direction (specified by directionU) of the first input surface before doing align. Otherwise, do nothing to the first input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getReverse2">
+<tt class="descname">getReverse2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getReverse2" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the direction (specified by directionU) of the second input surface before doing align. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getSwap1">
+<tt class="descname">getSwap1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getSwap1" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, swap the UV directions of the first input surface before doing align. Otherwise, do nothing to the first input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getSwap2">
+<tt class="descname">getSwap2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getSwap2" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, swap the UV directions of the second input surface before doing align. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getTangentContinuity">
+<tt class="descname">getTangentContinuity</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getTangentContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent continuity is on if true and off otherwise. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getTangentContinuityType">
+<tt class="descname">getTangentContinuityType</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getTangentContinuityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent continuity type legal values: 1 - do tangent continuity on first surface, 2 - do tangent continuity on second surface Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getTangentScale1">
+<tt class="descname">getTangentScale1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getTangentScale1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent scale applied to tangent of first surface for tangent continuity. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getTangentScale2">
+<tt class="descname">getTangentScale2</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getTangentScale2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent scale applied to tangent of second surface for tangent continuity. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.getTwist">
+<tt class="descname">getTwist</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.getTwist" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the second surface in the opposite direction (specified by directionU) before doing align. This will avoid twists in the aligned surfaces. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setCaching">
+<tt class="descname">setCaching</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node caching mode. See the node documentation for more information. Note:For advanced users only.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setCurvatureContinuity">
+<tt class="descname">setCurvatureContinuity</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setCurvatureContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature continuity is on if true and off otherwise. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setCurvatureScale1">
+<tt class="descname">setCurvatureScale1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setCurvatureScale1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature scale applied to curvature of first surface for curvature continuity. Default:0.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setCurvatureScale2">
+<tt class="descname">setCurvatureScale2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setCurvatureScale2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature scale applied to curvature of second surface for curvature continuity. Default:0.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setDirectionU">
+<tt class="descname">setDirectionU</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setDirectionU" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true use U direction of surface and V direction otherwise. Default:true                        Advanced flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setJoinParameter">
+<tt class="descname">setJoinParameter</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setJoinParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter on reference surface where modified surface is to be aligned to. Default:123456.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setNodeState">
+<tt class="descname">setNodeState</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setNodeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node state. See the node documentation for more information. Note:For advanced users only.                   Common flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setPositionalContinuity">
+<tt class="descname">setPositionalContinuity</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setPositionalContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Positional continuity is on if true and off otherwise. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setPositionalContinuityType">
+<tt class="descname">setPositionalContinuityType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setPositionalContinuityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Positional continuity type legal values: 1 - move first surface, 2 - move second surface, 3 - move both surfaces, 4 - modify first surface, 5 - modify second surface, 6 - modify both surfaces Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setReverse1">
+<tt class="descname">setReverse1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setReverse1" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the direction (specified by directionU) of the first input surface before doing align. Otherwise, do nothing to the first input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setReverse2">
+<tt class="descname">setReverse2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setReverse2" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the direction (specified by directionU) of the second input surface before doing align. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setSwap1">
+<tt class="descname">setSwap1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setSwap1" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, swap the UV directions of the first input surface before doing align. Otherwise, do nothing to the first input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setSwap2">
+<tt class="descname">setSwap2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setSwap2" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, swap the UV directions of the second input surface before doing align. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setTangentContinuity">
+<tt class="descname">setTangentContinuity</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setTangentContinuity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent continuity is on if true and off otherwise. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setTangentContinuityType">
+<tt class="descname">setTangentContinuityType</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setTangentContinuityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent continuity type legal values: 1 - do tangent continuity on first surface, 2 - do tangent continuity on second surface Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setTangentScale1">
+<tt class="descname">setTangentScale1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setTangentScale1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent scale applied to tangent of first surface for tangent continuity. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setTangentScale2">
+<tt class="descname">setTangentScale2</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setTangentScale2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangent scale applied to tangent of second surface for tangent continuity. Default:1.0</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.AlignSurface.setTwist">
+<tt class="descname">setTwist</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.AlignSurface.setTwist" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, reverse the second surface in the opposite direction (specified by directionU) before doing align. This will avoid twists in the aligned surfaces. Otherwise, do nothing to the second input surface before aligning. NOTE: setting this attribute to random values will cause unpredictable results and is not supported. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.alignSurface</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.AlignCurve.html"
+                        title="previous chapter">pymel.core.nodetypes.AlignCurve</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.AmbientLight.html"
+                        title="next chapter">pymel.core.nodetypes.AmbientLight</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.AlignSurface.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.AmbientLight.html" title="pymel.core.nodetypes.AmbientLight"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.AlignCurve.html" title="pymel.core.nodetypes.AlignCurve"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

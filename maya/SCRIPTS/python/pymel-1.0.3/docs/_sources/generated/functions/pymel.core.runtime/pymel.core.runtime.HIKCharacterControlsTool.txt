@@ -1,0 +1,6 @@
+pymel.core.runtime.HIKCharacterControlsTool
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HIKCharacterControlsTool

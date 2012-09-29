@@ -1,0 +1,6 @@
+pymel.core.runtime.BakeTopologyToTargets
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.BakeTopologyToTargets

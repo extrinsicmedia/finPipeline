@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtendSurfacesOptions
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtendSurfacesOptions

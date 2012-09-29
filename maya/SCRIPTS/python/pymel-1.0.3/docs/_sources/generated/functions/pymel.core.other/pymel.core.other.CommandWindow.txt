@@ -1,0 +1,6 @@
+pymel.core.other.CommandWindow
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.CommandWindow

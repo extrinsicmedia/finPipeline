@@ -1,0 +1,6 @@
+pymel.core.runtime.LockNormals
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.LockNormals

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_refraction_index
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_refraction_index
+    :parts: 1
+
+.. autoclass:: Mib_refraction_index
+    :members:
+    :undoc-members:

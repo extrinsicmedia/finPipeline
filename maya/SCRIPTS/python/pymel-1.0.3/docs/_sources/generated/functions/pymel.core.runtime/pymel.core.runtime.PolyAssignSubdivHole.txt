@@ -1,0 +1,6 @@
+pymel.core.runtime.PolyAssignSubdivHole
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolyAssignSubdivHole

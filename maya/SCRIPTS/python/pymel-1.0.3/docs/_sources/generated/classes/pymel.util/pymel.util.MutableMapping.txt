@@ -1,0 +1,11 @@
+pymel.util.MutableMapping
+=========================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: MutableMapping
+    :parts: 1
+
+.. autoclass:: MutableMapping
+    :members:
+    :undoc-members:

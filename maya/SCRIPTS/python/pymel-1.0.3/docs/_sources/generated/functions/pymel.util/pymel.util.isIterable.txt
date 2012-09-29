@@ -1,0 +1,6 @@
+pymel.util.isIterable
+=====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.isIterable

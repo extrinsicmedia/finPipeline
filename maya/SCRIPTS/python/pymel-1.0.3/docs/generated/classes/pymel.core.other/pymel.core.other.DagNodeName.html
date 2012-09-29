@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.other.DagNodeName &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.other" href="../../pymel.core.other.html" />
+    <link rel="next" title="pymel.core.other.DependNodeName" href="pymel.core.other.DependNodeName.html" />
+    <link rel="prev" title="pymel.core.other.AttributeName" href="pymel.core.other.AttributeName.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.other.DependNodeName.html" title="pymel.core.other.DependNodeName"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.other.AttributeName.html" title="pymel.core.other.AttributeName"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.other.html" accesskey="U">pymel.core.other</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-other-dagnodename">
+<h1>pymel.core.other.DagNodeName<a class="headerlink" href="#pymel-core-other-dagnodename" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-20536ef7428b8dcbb4c24a958676b470c4c302d2.png" alt="Inheritance diagram of DagNodeName" usemap="#inheritance483aa8b697" class="inheritance"/>
+<map id="inheritance483aa8b697" name="inheritance483aa8b697">
+<area shape="rect" href="#pymel.core.other.DagNodeName" title="DagNodeName" alt="" coords="15,83,116,107"/>
+<area shape="rect" href="pymel.core.other.DependNodeName.html#pymel.core.other.DependNodeName" title="DependNodeName" alt="" coords="5,44,125,68"/>
+<area shape="rect" href="pymel.core.other.NameParser.html#pymel.core.other.NameParser" title="NameParser" alt="" coords="23,5,108,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.other.DagNodeName">
+<em class="property">class </em><tt class="descname">DagNodeName</tt><a class="headerlink" href="#pymel.core.other.DagNodeName" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.other.DagNodeName.firstParent">
+<tt class="descname">firstParent</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.other.DagNodeName.firstParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>firstParentOf</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.other.DagNodeName.getParent">
+<tt class="descname">getParent</tt><big>(</big><em>generations=1</em><big>)</big><a class="headerlink" href="#pymel.core.other.DagNodeName.getParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parent node</p>
+<dl class="docutils">
+<dt>Modifications:</dt>
+<dd><ul class="first last">
+<li><p class="first">added optional generations flag, which gives the number of levels up that you wish to go for the parent;
+ie:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">DagNodeName</span><span class="p">(</span><span class="s">&quot;NS1:TopLevel|Next|ns2:Third|Fourth&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getParent</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">DagNodeName(u&#39;NS1:TopLevel|Next&#39;)</span>
+</pre></div>
+</div>
+<p>Negative values will traverse from the top, not counting the initial node name:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">DagNodeName</span><span class="p">(</span><span class="s">&quot;NS1:TopLevel|Next|ns2:Third|Fourth&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getParent</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">DagNodeName(u&#39;NS1:TopLevel|Next|ns2:Third&#39;)</span>
+</pre></div>
+</div>
+<p>A value of 0 will return the same node.
+The default value is 1.</p>
+<p>Since the original command returned None if there is no parent, to sync with this behavior, None will
+be returned if generations is out of bounds (no IndexError will be thrown).</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.other.DagNodeName.getRoot">
+<tt class="descname">getRoot</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.other.DagNodeName.getRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>unlike the root command which determines the parent via string formatting, this
+command uses the listRelatives command</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.other.DagNodeName.nodeName">
+<tt class="descname">nodeName</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.other.DagNodeName.nodeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>basename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.other.DagNodeName.root">
+<tt class="descname">root</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.other.DagNodeName.root" title="Permalink to this definition">¶</a></dt>
+<dd><p>rootOf</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.other.AttributeName.html"
+                        title="previous chapter">pymel.core.other.AttributeName</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.other.DependNodeName.html"
+                        title="next chapter">pymel.core.other.DependNodeName</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.other/pymel.core.other.DagNodeName.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.other.DependNodeName.html" title="pymel.core.other.DependNodeName"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.other.AttributeName.html" title="pymel.core.other.AttributeName"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.other.html" >pymel.core.other</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

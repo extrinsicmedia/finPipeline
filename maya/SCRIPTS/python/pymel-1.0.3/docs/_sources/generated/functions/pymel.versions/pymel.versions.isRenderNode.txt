@@ -1,0 +1,6 @@
+pymel.versions.isRenderNode
+===========================
+
+.. currentmodule:: pymel
+
+.. automethod:: versions.isRenderNode

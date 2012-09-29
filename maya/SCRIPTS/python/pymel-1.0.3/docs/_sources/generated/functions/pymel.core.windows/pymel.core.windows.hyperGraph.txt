@@ -1,0 +1,6 @@
+pymel.core.windows.hyperGraph
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.hyperGraph

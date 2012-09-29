@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalrayIblShape
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalrayIblShape
+    :parts: 1
+
+.. autoclass:: MentalrayIblShape
+    :members:
+    :undoc-members:

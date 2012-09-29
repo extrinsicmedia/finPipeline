@@ -1,0 +1,6 @@
+pymel.core.other.OneClickGetState
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.OneClickGetState

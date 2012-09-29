@@ -1,0 +1,6 @@
+pymel.util.arrays.acosh
+=======================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arrays.acosh

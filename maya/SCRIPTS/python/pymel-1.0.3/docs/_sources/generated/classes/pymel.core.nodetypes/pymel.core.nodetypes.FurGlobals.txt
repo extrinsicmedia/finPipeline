@@ -1,0 +1,11 @@
+pymel.core.nodetypes.FurGlobals
+===============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: FurGlobals
+    :parts: 1
+
+.. autoclass:: FurGlobals
+    :members:
+    :undoc-members:

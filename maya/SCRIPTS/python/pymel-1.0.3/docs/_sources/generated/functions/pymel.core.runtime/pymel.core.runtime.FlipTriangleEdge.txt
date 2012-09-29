@@ -1,0 +1,6 @@
+pymel.core.runtime.FlipTriangleEdge
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FlipTriangleEdge

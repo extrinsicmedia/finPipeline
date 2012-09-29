@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowFur
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowFur

@@ -1,0 +1,6 @@
+pymel.core.windows.hotkey
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.hotkey

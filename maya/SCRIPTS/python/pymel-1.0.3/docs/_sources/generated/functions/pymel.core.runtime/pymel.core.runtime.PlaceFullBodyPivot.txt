@@ -1,0 +1,6 @@
+pymel.core.runtime.PlaceFullBodyPivot
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PlaceFullBodyPivot

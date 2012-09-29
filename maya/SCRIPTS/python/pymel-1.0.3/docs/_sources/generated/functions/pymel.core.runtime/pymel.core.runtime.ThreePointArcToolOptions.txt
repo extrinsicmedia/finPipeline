@@ -1,0 +1,6 @@
+pymel.core.runtime.ThreePointArcToolOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ThreePointArcToolOptions

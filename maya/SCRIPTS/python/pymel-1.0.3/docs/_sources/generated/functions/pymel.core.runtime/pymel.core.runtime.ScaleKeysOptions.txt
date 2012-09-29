@@ -1,0 +1,6 @@
+pymel.core.runtime.ScaleKeysOptions
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ScaleKeysOptions

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.FurPointOnMeshInfo
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: FurPointOnMeshInfo
+    :parts: 1
+
+.. autoclass:: FurPointOnMeshInfo
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.ModifyConstraintAxis
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ModifyConstraintAxis

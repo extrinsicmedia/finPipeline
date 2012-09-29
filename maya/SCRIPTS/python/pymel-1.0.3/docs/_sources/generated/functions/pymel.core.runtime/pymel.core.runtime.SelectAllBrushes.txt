@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllBrushes
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllBrushes

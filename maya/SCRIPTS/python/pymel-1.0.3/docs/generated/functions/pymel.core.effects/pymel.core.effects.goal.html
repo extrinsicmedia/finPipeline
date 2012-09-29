@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.effects.goal &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.effects" href="../../pymel.core.effects.html" />
+    <link rel="next" title="pymel.core.effects.gravity" href="pymel.core.effects.gravity.html" />
+    <link rel="prev" title="pymel.core.effects.getParticleAttr" href="pymel.core.effects.getParticleAttr.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.gravity.html" title="pymel.core.effects.gravity"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.getParticleAttr.html" title="pymel.core.effects.getParticleAttr"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" accesskey="U">pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-effects-goal">
+<h1>pymel.core.effects.goal<a class="headerlink" href="#pymel-core-effects-goal" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.effects.goal">
+<em class="property">static </em><tt class="descclassname">effects.</tt><tt class="descname">goal</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.effects.goal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the given objects as being goals for the given particle object.  If the goal objects are geometry, each
+particle in the particle object will each try to follow or match its position to that of a certain vertex/CV/lattice
+point of the goal.  If the goal object is another particle object, each particle will try to follow a paricle of the
+goal. In any other case, all the particles will try to follow the current location of the goal object&#8217;s transform.  You
+can get this latter behavior for a geometry or particle object too by using -utr true. The goal weight can be keyframed.
+It lives on the particle object to which the goal was added and is a multi-attribute.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>goal (g)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies string to be a goal of the particle object on the command line or the currently selected particle object.  This flag can be used multiple
+times to specify multiple goals for a particle object.  Query is for use by the attribute editor.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>index (i)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns array of multi-attribute indices for the goals. Intended for use by the Attribute Editor.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useTransformAsGoal (utr)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Use transform of specified object instead of the shape. Meaningful only for particle and geometry objects.  Can only be passed once, applies to all objects passed
+with -g.                       Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>weight (w)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This specifies the goal weight as a value from 0 to 1.  A value of 0 means that the goal&#8217;s position will have no effect on the particle object, while a weight of
+1 will make the particle object try to follow the goal object exactly.  This flag can only be passed once and sets the weight for every goal passed with the
+-g/-goal flag.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.goal</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">(</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;surface1&#39;</span><span class="p">)</span>
+<span class="c"># Result: [nt.Transform(u&#39;surface1&#39;), nt.MakeNurbSphere(u&#39;makeNurbSphere1&#39;)] #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">particle</span><span class="p">(</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;Particle&#39;</span><span class="p">)</span>
+<span class="c"># Result: [nt.Transform(u&#39;Particle&#39;), nt.Particle(u&#39;ParticleShape&#39;)] #</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">goal</span><span class="p">(</span> <span class="s">&#39;Particle&#39;</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="n">w</span><span class="o">=.</span><span class="mi">75</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;surface1Shape&#39;] #</span>
+
+<span class="c"># This command assigns surface1 as a goal of Particle with a goal</span>
+<span class="c"># weight of 0.75.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">goal</span><span class="p">(</span> <span class="s">&#39;Particle&#39;</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="s">&#39;surface1&#39;</span><span class="p">,</span> <span class="n">w</span><span class="o">=.</span><span class="mi">75</span><span class="p">,</span> <span class="n">utr</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span>
+<span class="c"># Result: [u&#39;surface1&#39;] #</span>
+
+<span class="c"># This command assigns the transform of surface1 as a goal of Particle</span>
+<span class="c"># with a goal weight of 0.75.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">goal</span><span class="p">(</span> <span class="s">&#39;Particle&#39;</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="s">&#39;camera1&#39;</span><span class="p">,</span> <span class="n">w</span><span class="o">=.</span><span class="mi">75</span> <span class="p">)</span>
+
+<span class="c"># This command assigns the transform of camera1 as a goal of Particle</span>
+<span class="c"># with a goal weight of 0.75.  The -utr flag is not relevant because</span>
+<span class="c"># only the transform can be used for any object other than geometry</span>
+<span class="c"># or particles.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.effects.getParticleAttr.html"
+                        title="previous chapter">pymel.core.effects.getParticleAttr</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.effects.gravity.html"
+                        title="next chapter">pymel.core.effects.gravity</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.effects/pymel.core.effects.goal.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.gravity.html" title="pymel.core.effects.gravity"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.getParticleAttr.html" title="pymel.core.effects.getParticleAttr"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" >pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

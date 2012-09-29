@@ -1,0 +1,6 @@
+pymel.core.general.artAttrTool
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.artAttrTool

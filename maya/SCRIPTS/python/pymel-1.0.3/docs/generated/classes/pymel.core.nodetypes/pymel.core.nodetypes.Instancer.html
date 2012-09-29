@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.Instancer &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.IntersectSurface" href="pymel.core.nodetypes.IntersectSurface.html" />
+    <link rel="prev" title="pymel.core.nodetypes.InsertKnotSurface" href="pymel.core.nodetypes.InsertKnotSurface.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.IntersectSurface.html" title="pymel.core.nodetypes.IntersectSurface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.InsertKnotSurface.html" title="pymel.core.nodetypes.InsertKnotSurface"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-instancer">
+<h1>pymel.core.nodetypes.Instancer<a class="headerlink" href="#pymel-core-nodetypes-instancer" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-b100dc68f3e2def91a3ab60c0db3dfa4920128af.png" alt="Inheritance diagram of Instancer" usemap="#inheritancefb06b7e84f" class="inheritance"/>
+<map id="inheritancefb06b7e84f" name="inheritancefb06b7e84f">
+<area shape="rect" href="#pymel.core.nodetypes.Instancer" title="Instancer" alt="" coords="19,276,91,300"/>
+<area shape="rect" href="pymel.core.nodetypes.Transform.html#pymel.core.nodetypes.Transform" title="Transform" alt="" coords="17,237,92,261"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="19,198,91,222"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,82,99,106"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="5,121,104,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="19,160,91,184"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Instancer">
+<em class="property">class </em><tt class="descname">Instancer</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">instancer</span></tt></p>
+<p>This command is used to create a instancer node and set the proper attributes in the node.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.addObject">
+<tt class="descname">addObject</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.addObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag indicates that objects specified by the -object flag will be added to the instancer node as instanced objects.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.allInstances">
+<tt class="descname">allInstances</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.allInstances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about all instances generated by a particular particle instancer node. Since many particles will typically instance similar sets of paths, the information is returned in a compact representation. An array of paths is returned, representing the unique set of paths that are instanced by any particle in the system. For each particle, the routine returns a set of indices into this path array to illustrate the paths instanced at that particle. The index arrays for all particles are concatenated together, so a &#8220;start index&#8221; array is used to indicate which is the first entry in the index array for each particle. For each particle, the routine also returns the transformation matrix applied to that particle&#8217;s instanced paths to generate the final particle instance transformations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> list, <tt class="xref py py-obj docutils literal"><span class="pre">Matrix</span></tt> list, <tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt> list, <tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt> list)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnInstancer.allInstances</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getCycle">
+<tt class="descname">getCycle</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getCycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle attribute for the instancer node. The options are noneor sequential.  The default is none.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getCycleStep">
+<tt class="descname">getCycleStep</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getCycleStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle step attribute for the instancer node.  This attribute indicates the size of the step in frames or seconds (see cycleStepUnit).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getCycleStepUnits">
+<tt class="descname">getCycleStepUnits</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getCycleStepUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle step unit attribute for the instancer node.  The options are framesor seconds.  The default is frames.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getIndex">
+<tt class="descname">getIndex</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used to query the name of the ith instanced object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getLevelOfDetail">
+<tt class="descname">getLevelOfDetail</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getLevelOfDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the level of detail of the instanced objects.  The options are geometry, boundingBox, boundingBoxes.  The default is geometry.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getObject">
+<tt class="descname">getObject</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag indicates which objects will be add/removed from the list of instanced objects.  The flag is used in conjuction with the -add and -remove flags.  If neither of these flags is specified on the command line then -add is assumed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getObjectPosition">
+<tt class="descname">getObjectPosition</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getObjectPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag queries the given objects position.  This object can be any instanced object or sub-object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getObjectRotation">
+<tt class="descname">getObjectRotation</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getObjectRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag queries the given objects rotation.  This object can be any instanced object or sub-object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getObjectScale">
+<tt class="descname">getObjectScale</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getObjectScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag queries the given objects scale.  This object can be any instanced object or sub-object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getPointDataSource">
+<tt class="descname">getPointDataSource</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getPointDataSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used to query the source node supply the data for the input points.                                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getRotationUnits">
+<tt class="descname">getRotationUnits</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getRotationUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag specifies the rotation units associated with the rotation flag.  The options are degrees or radians.  By default the attribute is degrees.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.getValueName">
+<tt class="descname">getValueName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.getValueName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is used to query the value(s) of the array associated with the given name.  If the -index flag is used in conjuction with this flag then the ith value will be returned.  Otherwise, the entire array will be returned.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.instancesForParticle">
+<tt class="descname">instancesForParticle</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.instancesForParticle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DAG paths and instancer matrix for all instances generated by a specified particle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>p <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></span></dt>
+<dd><p class="first last">The index of the particle being queried.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(<tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> list, <tt class="xref py py-obj docutils literal"><span class="pre">Matrix</span></tt>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnInstancer.instancesForParticle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.particleCount">
+<tt class="descname">particleCount</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.particleCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of particles feeding the active instancer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnInstancer.particleCount</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.removeObject">
+<tt class="descname">removeObject</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.removeObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag indicates that objects specified by the -object flag will be removed from the instancer node as instanced objects.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setCycle">
+<tt class="descname">setCycle</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setCycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle attribute for the instancer node. The options are noneor sequential.  The default is none.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setCycleStep">
+<tt class="descname">setCycleStep</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setCycleStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle step attribute for the instancer node.  This attribute indicates the size of the step in frames or seconds (see cycleStepUnit).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setCycleStepUnits">
+<tt class="descname">setCycleStepUnits</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setCycleStepUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the cycle step unit attribute for the instancer node.  The options are framesor seconds.  The default is frames.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setLevelOfDetail">
+<tt class="descname">setLevelOfDetail</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setLevelOfDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag sets or queries the level of detail of the instanced objects.  The options are geometry, boundingBox, boundingBoxes.  The default is geometry.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setObject">
+<tt class="descname">setObject</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag indicates which objects will be add/removed from the list of instanced objects.  The flag is used in conjuction with the -add and -remove flags.  If neither of these flags is specified on the command line then -add is assumed.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Instancer.setRotationUnits">
+<tt class="descname">setRotationUnits</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Instancer.setRotationUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag specifies the rotation units associated with the rotation flag.  The options are degrees or radians.  By default the attribute is degrees.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.instancer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.InsertKnotSurface.html"
+                        title="previous chapter">pymel.core.nodetypes.InsertKnotSurface</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.IntersectSurface.html"
+                        title="next chapter">pymel.core.nodetypes.IntersectSurface</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.Instancer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.IntersectSurface.html" title="pymel.core.nodetypes.IntersectSurface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.InsertKnotSurface.html" title="pymel.core.nodetypes.InsertKnotSurface"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

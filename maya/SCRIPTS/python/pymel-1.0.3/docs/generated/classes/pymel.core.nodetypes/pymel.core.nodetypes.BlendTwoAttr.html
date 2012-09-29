@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.BlendTwoAttr &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.BlendWeighted" href="pymel.core.nodetypes.BlendWeighted.html" />
+    <link rel="prev" title="pymel.core.nodetypes.BlendShape" href="pymel.core.nodetypes.BlendShape.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BlendWeighted.html" title="pymel.core.nodetypes.BlendWeighted"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BlendShape.html" title="pymel.core.nodetypes.BlendShape"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-blendtwoattr">
+<h1>pymel.core.nodetypes.BlendTwoAttr<a class="headerlink" href="#pymel-core-nodetypes-blendtwoattr" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-55d03b047268e12d3f4b81bbd550ea439a31dea6.png" alt="Inheritance diagram of BlendTwoAttr" usemap="#inheritance3db85ce295" class="inheritance"/>
+<map id="inheritance3db85ce295" name="inheritance3db85ce295">
+<area shape="rect" href="#pymel.core.nodetypes.BlendTwoAttr" title="BlendTwoAttr" alt="" coords="5,160,96,184"/>
+<area shape="rect" href="pymel.core.nodetypes.Blend.html#pymel.core.nodetypes.Blend" title="Blend" alt="" coords="15,121,87,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="7,82,95,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="5,5,96,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="15,44,87,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.BlendTwoAttr">
+<em class="property">class </em><tt class="descname">BlendTwoAttr</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">blendTwoAttr</span></tt></p>
+<p>A blendTwoAttr nodes takes two inputs, and blends the values of the inputs from one to the other, into an output value. The blending of the two inputs uses a blending function, and the following formula: (1 - blendFunction) * input[0]  +  blendFunction * input[1] The blendTwoAttr command can be used to blend the animation of an object to transition smoothly between the animation of two other objects. When the blendTwoAttr command is issued, it creates a blendTwoAttr node on the specified attributes, and reconnects whatever was previously connected to the attributes to the new blend nodes. You may also specify which two attributes should be used to blend together. The driver is used when you want to keyframe an object after it is being animated by a blend node. The current driver index specifies which of the two blended attributes should be keyframed.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.getAttribute0">
+<tt class="descname">getAttribute0</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.getAttribute0" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attribute that should be connected to the first input of the new blendTwoAttr node. When queried, it returns a string.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.getAttribute1">
+<tt class="descname">getAttribute1</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.getAttribute1" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attribute that should be connected to the second input of the new blendTwoAttr node. When queried, it returns a string.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.getBlender">
+<tt class="descname">getBlender</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.getBlender" title="Permalink to this definition">¶</a></dt>
+<dd><p>The blender attribute. This is the attribute that will be connected to the newly created blendTwoAttr node(s) blender attribute. This attribute controls how much of each of the two attributes to use in the blend. If this flag is not specified, a new animation curve is created whose value goes from 1 to 0 throughout the time range specified by the -t flag. If -t is not specified, an abrupt change from the value of the first to the value of the second attribute will occur at the current time when this command is issued.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.getDriver">
+<tt class="descname">getDriver</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.getDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the driver attribute for this blend node (0 or 1) When queried, it returns an integer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.getName">
+<tt class="descname">getName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>name for the new blend node(s)</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.setAttribute0">
+<tt class="descname">setAttribute0</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.setAttribute0" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attribute that should be connected to the first input of the new blendTwoAttr node. When queried, it returns a string.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.setAttribute1">
+<tt class="descname">setAttribute1</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.setAttribute1" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attribute that should be connected to the second input of the new blendTwoAttr node. When queried, it returns a string.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.setBlender">
+<tt class="descname">setBlender</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.setBlender" title="Permalink to this definition">¶</a></dt>
+<dd><p>The blender attribute. This is the attribute that will be connected to the newly created blendTwoAttr node(s) blender attribute. This attribute controls how much of each of the two attributes to use in the blend. If this flag is not specified, a new animation curve is created whose value goes from 1 to 0 throughout the time range specified by the -t flag. If -t is not specified, an abrupt change from the value of the first to the value of the second attribute will occur at the current time when this command is issued.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.BlendTwoAttr.setDriver">
+<tt class="descname">setDriver</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.BlendTwoAttr.setDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the driver attribute for this blend node (0 or 1) When queried, it returns an integer.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.blendTwoAttr</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.BlendShape.html"
+                        title="previous chapter">pymel.core.nodetypes.BlendShape</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.BlendWeighted.html"
+                        title="next chapter">pymel.core.nodetypes.BlendWeighted</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.BlendTwoAttr.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BlendWeighted.html" title="pymel.core.nodetypes.BlendWeighted"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.BlendShape.html" title="pymel.core.nodetypes.BlendShape"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

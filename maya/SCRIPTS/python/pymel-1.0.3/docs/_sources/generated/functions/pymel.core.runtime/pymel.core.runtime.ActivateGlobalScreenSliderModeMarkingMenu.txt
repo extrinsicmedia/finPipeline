@@ -1,0 +1,6 @@
+pymel.core.runtime.ActivateGlobalScreenSliderModeMarkingMenu
+============================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ActivateGlobalScreenSliderModeMarkingMenu

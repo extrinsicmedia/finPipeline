@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mi_metallic_paint
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mi_metallic_paint
+    :parts: 1
+
+.. autoclass:: Mi_metallic_paint
+    :members:
+    :undoc-members:

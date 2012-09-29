@@ -1,0 +1,6 @@
+pymel.core.runtime.CurveEditTool
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CurveEditTool

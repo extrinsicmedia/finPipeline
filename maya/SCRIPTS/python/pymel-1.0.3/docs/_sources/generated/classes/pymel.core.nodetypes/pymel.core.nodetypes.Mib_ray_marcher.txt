@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_ray_marcher
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_ray_marcher
+    :parts: 1
+
+.. autoclass:: Mib_ray_marcher
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowClothPanels
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowClothPanels

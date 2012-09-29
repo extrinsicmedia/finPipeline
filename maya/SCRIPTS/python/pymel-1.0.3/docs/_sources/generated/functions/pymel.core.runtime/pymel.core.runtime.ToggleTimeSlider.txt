@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleTimeSlider
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleTimeSlider

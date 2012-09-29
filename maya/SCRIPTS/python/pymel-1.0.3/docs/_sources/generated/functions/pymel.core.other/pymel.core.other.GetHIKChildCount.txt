@@ -1,0 +1,6 @@
+pymel.core.other.GetHIKChildCount
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.GetHIKChildCount

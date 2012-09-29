@@ -1,0 +1,11 @@
+pymel.util.Hashable
+===================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Hashable
+    :parts: 1
+
+.. autoclass:: Hashable
+    :members:
+    :undoc-members:

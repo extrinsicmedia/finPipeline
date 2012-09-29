@@ -1,0 +1,6 @@
+pymel.core.runtime.TransformPolygonComponentOptions
+===================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TransformPolygonComponentOptions

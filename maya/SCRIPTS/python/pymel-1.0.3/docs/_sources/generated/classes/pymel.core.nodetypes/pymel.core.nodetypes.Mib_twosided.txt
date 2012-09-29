@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_twosided
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_twosided
+    :parts: 1
+
+.. autoclass:: Mib_twosided
+    :members:
+    :undoc-members:

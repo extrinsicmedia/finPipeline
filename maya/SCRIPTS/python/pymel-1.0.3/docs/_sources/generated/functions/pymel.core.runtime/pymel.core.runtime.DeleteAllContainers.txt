@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllContainers
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllContainers

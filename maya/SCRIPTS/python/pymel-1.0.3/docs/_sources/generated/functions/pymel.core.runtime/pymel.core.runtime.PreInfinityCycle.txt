@@ -1,0 +1,6 @@
+pymel.core.runtime.PreInfinityCycle
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PreInfinityCycle

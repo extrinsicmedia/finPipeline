@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.Loft &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.LookAt" href="pymel.core.nodetypes.LookAt.html" />
+    <link rel="prev" title="pymel.core.nodetypes.LodThresholds" href="pymel.core.nodetypes.LodThresholds.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LookAt.html" title="pymel.core.nodetypes.LookAt"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LodThresholds.html" title="pymel.core.nodetypes.LodThresholds"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-loft">
+<h1>pymel.core.nodetypes.Loft<a class="headerlink" href="#pymel-core-nodetypes-loft" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-9e7671b1cd00ba899d77a6941fd452fbc97ea4ca.png" alt="Inheritance diagram of Loft" usemap="#inheritancecb078d0218" class="inheritance"/>
+<map id="inheritancecb078d0218" name="inheritancecb078d0218">
+<area shape="rect" href="#pymel.core.nodetypes.Loft" title="Loft" alt="" coords="32,160,104,184"/>
+<area shape="rect" href="pymel.core.nodetypes.AbstractBaseCreate.html#pymel.core.nodetypes.AbstractBaseCreate" title="AbstractBaseCreate" alt="" coords="5,121,131,145"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="24,82,112,106"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="23,5,113,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="32,44,104,68"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Loft">
+<em class="property">class </em><tt class="descname">Loft</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">loft</span></tt></p>
+<p>This command computes a skinned (lofted) surface passing through a number of NURBS curves. There must be at least two curves present. The NURBS curves may be surface isoparms, curve on surfaces, trimmed edges or polygon edges.</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getAutoReverse">
+<tt class="descname">getAutoReverse</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getAutoReverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the direction of the curves for the loft is computed automatically.  If set to false, the values of the multi-use reverse flag are used instead. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getCaching">
+<tt class="descname">getCaching</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node caching mode. See the node documentation for more information. Note:For advanced users only.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getClose">
+<tt class="descname">getClose</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getClose" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the resulting surface will be closed (periodic) with the start (end) at the first curve.  If set to false, the surface will remain open. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getCreateCusp">
+<tt class="descname">getCreateCusp</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getCreateCusp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-use flag; each occurence of the flag refers to the matching curve in the loft operation; if the flag is set the particular profile will have a cusp (tangent break) in the resulting surface. Default:false                         Advanced flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getDegree">
+<tt class="descname">getDegree</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getDegree" title="Permalink to this definition">¶</a></dt>
+<dd><p>The degree of the resulting surface Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getNodeState">
+<tt class="descname">getNodeState</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getNodeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node state. See the node documentation for more information. Note:For advanced users only.                   Common flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getReverse">
+<tt class="descname">getReverse</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getReverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-use flag; each occurence of the flag refers to the matching curve in the loft operation; if the flag is set the particular curve will be reversed before being used in the loft operation. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getReverseSurfaceNormals">
+<tt class="descname">getReverseSurfaceNormals</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getReverseSurfaceNormals" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set, the surface normals on the output NURBS surface will be reversed.  This is accomplished by swapping the U and V parametric directions. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getSectionSpans">
+<tt class="descname">getSectionSpans</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getSectionSpans" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of surface spans between consecutive curves in the loft. Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.getUniform">
+<tt class="descname">getUniform</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.getUniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the resulting surface will have uniform parameterization in the loft direction.  If set to false, the parameterization will be chord length. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setAutoReverse">
+<tt class="descname">setAutoReverse</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setAutoReverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the direction of the curves for the loft is computed automatically.  If set to false, the values of the multi-use reverse flag are used instead. Default:true</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setCaching">
+<tt class="descname">setCaching</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node caching mode. See the node documentation for more information. Note:For advanced users only.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setClose">
+<tt class="descname">setClose</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setClose" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the resulting surface will be closed (periodic) with the start (end) at the first curve.  If set to false, the surface will remain open. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setCreateCusp">
+<tt class="descname">setCreateCusp</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setCreateCusp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-use flag; each occurence of the flag refers to the matching curve in the loft operation; if the flag is set the particular profile will have a cusp (tangent break) in the resulting surface. Default:false                         Advanced flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setDegree">
+<tt class="descname">setDegree</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setDegree" title="Permalink to this definition">¶</a></dt>
+<dd><p>The degree of the resulting surface Default:3</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setNodeState">
+<tt class="descname">setNodeState</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setNodeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the node state. See the node documentation for more information. Note:For advanced users only.                   Common flags</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setReverse">
+<tt class="descname">setReverse</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setReverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-use flag; each occurence of the flag refers to the matching curve in the loft operation; if the flag is set the particular curve will be reversed before being used in the loft operation. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setReverseSurfaceNormals">
+<tt class="descname">setReverseSurfaceNormals</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setReverseSurfaceNormals" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set, the surface normals on the output NURBS surface will be reversed.  This is accomplished by swapping the U and V parametric directions. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setSectionSpans">
+<tt class="descname">setSectionSpans</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setSectionSpans" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of surface spans between consecutive curves in the loft. Default:1</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Loft.setUniform">
+<tt class="descname">setUniform</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Loft.setUniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>If set to true, the resulting surface will have uniform parameterization in the loft direction.  If set to false, the parameterization will be chord length. Default:false</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.loft</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.LodThresholds.html"
+                        title="previous chapter">pymel.core.nodetypes.LodThresholds</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.LookAt.html"
+                        title="next chapter">pymel.core.nodetypes.LookAt</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.Loft.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LookAt.html" title="pymel.core.nodetypes.LookAt"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.LodThresholds.html" title="pymel.core.nodetypes.LodThresholds"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

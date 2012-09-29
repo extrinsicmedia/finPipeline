@@ -1,0 +1,6 @@
+pymel.core.runtime.PanePop
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PanePop

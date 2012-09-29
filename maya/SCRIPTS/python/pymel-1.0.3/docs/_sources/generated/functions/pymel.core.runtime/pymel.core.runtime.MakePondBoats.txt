@@ -1,0 +1,6 @@
+pymel.core.runtime.MakePondBoats
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakePondBoats

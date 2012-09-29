@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleFBIKEffectorsRotatePinState
+====================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleFBIKEffectorsRotatePinState

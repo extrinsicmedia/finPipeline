@@ -1,0 +1,6 @@
+pymel.core.modeling.polyTorus
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.polyTorus

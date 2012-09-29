@@ -1,0 +1,6 @@
+pymel.core.runtime.CycleIKHandleStickyState
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CycleIKHandleStickyState

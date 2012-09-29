@@ -1,0 +1,6 @@
+pymel.core.runtime.HideNURBSCurves
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideNURBSCurves

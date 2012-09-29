@@ -1,0 +1,6 @@
+pymel.core.runtime.UnlockContainer
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UnlockContainer

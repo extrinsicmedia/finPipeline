@@ -1,0 +1,6 @@
+pymel.core.system.selLoadSettings
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.selLoadSettings

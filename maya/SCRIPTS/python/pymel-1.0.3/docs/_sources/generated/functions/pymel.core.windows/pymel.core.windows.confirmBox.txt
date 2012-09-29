@@ -1,0 +1,6 @@
+pymel.core.windows.confirmBox
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.confirmBox

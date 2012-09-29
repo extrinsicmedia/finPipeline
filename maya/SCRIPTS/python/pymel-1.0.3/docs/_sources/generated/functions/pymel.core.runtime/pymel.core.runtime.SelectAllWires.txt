@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllWires
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllWires

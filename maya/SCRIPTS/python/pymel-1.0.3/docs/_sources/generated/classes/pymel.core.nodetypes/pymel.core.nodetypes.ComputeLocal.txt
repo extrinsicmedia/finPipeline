@@ -1,0 +1,11 @@
+pymel.core.nodetypes.ComputeLocal
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: ComputeLocal
+    :parts: 1
+
+.. autoclass:: ComputeLocal
+    :members:
+    :undoc-members:

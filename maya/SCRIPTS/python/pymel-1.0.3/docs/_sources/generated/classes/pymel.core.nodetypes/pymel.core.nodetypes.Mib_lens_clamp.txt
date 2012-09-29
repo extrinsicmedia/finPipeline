@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lens_clamp
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lens_clamp
+    :parts: 1
+
+.. autoclass:: Mib_lens_clamp
+    :members:
+    :undoc-members:

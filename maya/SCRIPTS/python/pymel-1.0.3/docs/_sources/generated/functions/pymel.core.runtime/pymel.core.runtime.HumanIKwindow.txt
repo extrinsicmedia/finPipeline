@@ -1,0 +1,6 @@
+pymel.core.runtime.HumanIKwindow
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HumanIKwindow

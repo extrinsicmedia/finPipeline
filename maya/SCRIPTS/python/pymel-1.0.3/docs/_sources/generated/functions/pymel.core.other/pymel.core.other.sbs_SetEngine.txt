@@ -1,0 +1,6 @@
+pymel.core.other.sbs_SetEngine
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_SetEngine

@@ -1,0 +1,6 @@
+pymel.core.other.FrameAll
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.FrameAll

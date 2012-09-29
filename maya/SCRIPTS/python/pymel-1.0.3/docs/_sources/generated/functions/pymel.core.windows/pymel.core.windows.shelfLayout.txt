@@ -1,0 +1,6 @@
+pymel.core.windows.shelfLayout
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.shelfLayout

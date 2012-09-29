@@ -1,0 +1,6 @@
+pymel.core.runtime.TruncateHairCache
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TruncateHairCache

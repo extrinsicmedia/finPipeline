@@ -1,0 +1,6 @@
+pymel.util.putEnv
+=================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.putEnv

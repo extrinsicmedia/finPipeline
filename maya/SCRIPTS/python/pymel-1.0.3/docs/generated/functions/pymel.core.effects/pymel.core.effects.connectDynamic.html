@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.effects.connectDynamic &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.effects" href="../../pymel.core.effects.html" />
+    <link rel="next" title="pymel.core.effects.constrain" href="pymel.core.effects.constrain.html" />
+    <link rel="prev" title="pymel.core.effects.colorAtPoint" href="pymel.core.effects.colorAtPoint.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.constrain.html" title="pymel.core.effects.constrain"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.colorAtPoint.html" title="pymel.core.effects.colorAtPoint"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" accesskey="U">pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-effects-connectdynamic">
+<h1>pymel.core.effects.connectDynamic<a class="headerlink" href="#pymel-core-effects-connectdynamic" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.effects.connectDynamic">
+<em class="property">static </em><tt class="descclassname">effects.</tt><tt class="descname">connectDynamic</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.effects.connectDynamic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamic connection specifies that the force fields, emitters, or collisions of an object affect another dynamic object.
+The dynamic object that is connected to a field, emitter, or collision object is influenced by those fields, emitters
+and collision objects. Connections are made to individual fields, emitters, collisions.  So, if an object owns several
+fields, if the user wants some of the fields to affect an object, s/he can specify each field with a -fflag; but if the
+user wants to connect all the fields owned by an object, s/he can specify the object name with the -fflag. The same is
+true for emitters and collisions. Different connection types (i.e., for fields vs. emitters) between the same pair of
+objects are logically independent. In other words, an object can be influenced by another object&#8217;s fields without being
+influenced by its emitters or collisions. Each connected object must be a dynamic object. The object connected to can be
+any object that owns fields, emitters, etc.; it need not be dynamic. Objects that can own influences are particles,
+geometry objects (nurbs and polys) and lattices.  You can specify either the shape name or the transform name of the
+object to be influenced.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>collisions (c)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Connects each object to the collision models of the given object.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>delete (d)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Deletes existing connections.                     Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>emitters (em)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Connects each object to the emitters of the given object.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fields (f)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Connects each object to the fields of the given object.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.connectDynamic</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Book&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s">&#39;Floor&#39;</span> <span class="p">)</span>
+<span class="c"># Connects the dynamic object &quot;Book&quot; to the collision model of the</span>
+<span class="c"># &quot;Floor&quot;. This means that the book will collide with and bounce off of</span>
+<span class="c"># the floor.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Moon&#39;</span><span class="p">,</span> <span class="s">&#39;Spaceship&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="s">&#39;Moon&#39;</span> <span class="p">)</span>
+<span class="c"># Connects dynamic object &quot;Spaceship&quot; to the all fields and emitters</span>
+<span class="c"># owned by &quot;Moon&quot;.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Spaceship&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="s">&#39;newtonField1&#39;</span> <span class="p">)</span>
+<span class="c"># Connects dynamic object &quot;Spaceship&quot; to &quot;newtonField1&quot; owned by &quot;Moon&quot;.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Moon&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="s">&#39;newtonField1&#39;</span> <span class="p">)</span>
+<span class="c"># If the selection list consists of &quot;Spaceship&quot;, connects dynamic object</span>
+<span class="c"># &quot;Spaceship&quot; to &quot;newtonField1&quot; and all emitters owned by &quot;Moon&quot;.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Spaceship&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="s">&#39;Moon&#39;</span> <span class="p">)</span>
+<span class="c"># Deletes the field connection between all the fields owned by &quot;Moon&quot; and</span>
+<span class="c"># &quot;Spaceship&quot;. Note that the command establishing the connection need not</span>
+<span class="c"># be in the undo queue.</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">connectDynamic</span><span class="p">(</span> <span class="s">&#39;Spaceship&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="s">&#39;newtonField1&#39;</span> <span class="p">)</span>
+<span class="c"># Deletes the field connection between &quot;newtonField1&quot; owned by &quot;Moon&quot; and</span>
+<span class="c"># &quot;Spaceship&quot;.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.effects.colorAtPoint.html"
+                        title="previous chapter">pymel.core.effects.colorAtPoint</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.effects.constrain.html"
+                        title="next chapter">pymel.core.effects.constrain</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.effects/pymel.core.effects.connectDynamic.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.constrain.html" title="pymel.core.effects.constrain"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.effects.colorAtPoint.html" title="pymel.core.effects.colorAtPoint"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.effects.html" >pymel.core.effects</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

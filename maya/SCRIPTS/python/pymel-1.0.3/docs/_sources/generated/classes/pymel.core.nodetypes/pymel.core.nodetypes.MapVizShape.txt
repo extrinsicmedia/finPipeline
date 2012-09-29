@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MapVizShape
+================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MapVizShape
+    :parts: 1
+
+.. autoclass:: MapVizShape
+    :members:
+    :undoc-members:

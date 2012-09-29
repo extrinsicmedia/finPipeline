@@ -1,0 +1,6 @@
+pymel.core.general.displayPref
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.displayPref

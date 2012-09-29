@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleFalloff
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleFalloff
+    :parts: 1
+
+.. autoclass:: CMuscleFalloff
+    :members:
+    :undoc-members:

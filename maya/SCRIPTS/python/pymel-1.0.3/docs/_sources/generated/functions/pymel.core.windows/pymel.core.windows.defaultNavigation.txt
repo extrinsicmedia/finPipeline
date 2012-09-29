@@ -1,0 +1,6 @@
+pymel.core.windows.defaultNavigation
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.defaultNavigation

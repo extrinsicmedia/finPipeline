@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateReference
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateReference

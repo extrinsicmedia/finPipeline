@@ -1,0 +1,6 @@
+pymel.core.runtime.RemoveFromContainer
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RemoveFromContainer

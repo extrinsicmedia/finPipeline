@@ -1,0 +1,6 @@
+pymel.core.runtime.ProjectCurveOnMesh
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ProjectCurveOnMesh

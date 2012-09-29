@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mi_metallic_paint_output_mixer
+===================================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mi_metallic_paint_output_mixer
+    :parts: 1
+
+.. autoclass:: Mi_metallic_paint_output_mixer
+    :members:
+    :undoc-members:

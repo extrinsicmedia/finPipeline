@@ -1,0 +1,11 @@
+pymel.core.nodetypes.MentalraySubdivApprox
+==========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: MentalraySubdivApprox
+    :parts: 1
+
+.. autoclass:: MentalraySubdivApprox
+    :members:
+    :undoc-members:

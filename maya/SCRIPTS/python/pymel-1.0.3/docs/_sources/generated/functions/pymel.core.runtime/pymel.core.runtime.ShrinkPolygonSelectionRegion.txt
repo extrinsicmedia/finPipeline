@@ -1,0 +1,6 @@
+pymel.core.runtime.ShrinkPolygonSelectionRegion
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShrinkPolygonSelectionRegion

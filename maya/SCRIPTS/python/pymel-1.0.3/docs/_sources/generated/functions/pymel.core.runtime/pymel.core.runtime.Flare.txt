@@ -1,0 +1,6 @@
+pymel.core.runtime.Flare
+========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Flare

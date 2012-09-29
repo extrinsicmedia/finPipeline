@@ -1,0 +1,6 @@
+pymel.core.runtime.AttachBrushToCurves
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AttachBrushToCurves

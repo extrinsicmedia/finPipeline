@@ -1,0 +1,6 @@
+pymel.core.runtime.CustomNURBSComponentsOptions
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CustomNURBSComponentsOptions

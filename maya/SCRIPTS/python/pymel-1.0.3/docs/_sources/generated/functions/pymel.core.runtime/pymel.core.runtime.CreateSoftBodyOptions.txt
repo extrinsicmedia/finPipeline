@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateSoftBodyOptions
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateSoftBodyOptions

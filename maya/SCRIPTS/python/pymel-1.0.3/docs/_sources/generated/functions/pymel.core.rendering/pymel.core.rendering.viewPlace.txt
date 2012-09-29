@@ -1,0 +1,6 @@
+pymel.core.rendering.viewPlace
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.viewPlace

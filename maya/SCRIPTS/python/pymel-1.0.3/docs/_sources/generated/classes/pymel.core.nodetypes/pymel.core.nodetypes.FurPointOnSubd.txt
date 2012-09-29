@@ -1,0 +1,11 @@
+pymel.core.nodetypes.FurPointOnSubd
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: FurPointOnSubd
+    :parts: 1
+
+.. autoclass:: FurPointOnSubd
+    :members:
+    :undoc-members:

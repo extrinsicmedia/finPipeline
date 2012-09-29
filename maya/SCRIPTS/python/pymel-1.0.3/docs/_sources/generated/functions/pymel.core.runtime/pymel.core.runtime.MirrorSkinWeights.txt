@@ -1,0 +1,6 @@
+pymel.core.runtime.MirrorSkinWeights
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MirrorSkinWeights

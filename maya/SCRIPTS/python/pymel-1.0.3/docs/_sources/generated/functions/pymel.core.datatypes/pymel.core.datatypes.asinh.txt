@@ -1,0 +1,6 @@
+pymel.core.datatypes.asinh
+==========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: datatypes.asinh

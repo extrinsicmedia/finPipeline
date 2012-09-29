@@ -1,0 +1,6 @@
+pymel.util.breadthIterArgs
+==========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.breadthIterArgs

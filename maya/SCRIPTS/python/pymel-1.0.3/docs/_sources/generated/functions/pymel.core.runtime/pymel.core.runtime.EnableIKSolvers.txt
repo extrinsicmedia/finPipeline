@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableIKSolvers
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableIKSolvers

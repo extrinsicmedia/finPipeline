@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mia_portal_light
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mia_portal_light
+    :parts: 1
+
+.. autoclass:: Mia_portal_light
+    :members:
+    :undoc-members:

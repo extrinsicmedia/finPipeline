@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleDisplace
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleDisplace
+    :parts: 1
+
+.. autoclass:: CMuscleDisplace
+    :members:
+    :undoc-members:

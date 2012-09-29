@@ -1,0 +1,11 @@
+pymel.util.Container
+====================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Container
+    :parts: 1
+
+.. autoclass:: Container
+    :members:
+    :undoc-members:

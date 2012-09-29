@@ -1,0 +1,6 @@
+pymel.core.other.polyProjectCurve
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.polyProjectCurve

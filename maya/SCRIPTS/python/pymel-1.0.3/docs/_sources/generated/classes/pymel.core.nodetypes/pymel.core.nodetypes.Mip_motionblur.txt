@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_motionblur
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_motionblur
+    :parts: 1
+
+.. autoclass:: Mip_motionblur
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleSceneTimecode
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleSceneTimecode

@@ -1,0 +1,6 @@
+pymel.core.runtime.UVCentricUVLinkingEditor
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UVCentricUVLinkingEditor

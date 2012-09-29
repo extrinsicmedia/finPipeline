@@ -1,0 +1,6 @@
+pymel.core.runtime.TogglePolygonFaceTriangles
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.TogglePolygonFaceTriangles

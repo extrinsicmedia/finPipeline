@@ -1,0 +1,11 @@
+pymel.core.nodetypes.DiscLightLocator
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: DiscLightLocator
+    :parts: 1
+
+.. autoclass:: DiscLightLocator
+    :members:
+    :undoc-members:

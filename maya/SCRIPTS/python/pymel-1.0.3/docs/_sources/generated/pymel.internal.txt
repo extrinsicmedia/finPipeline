@@ -1,0 +1,24 @@
+pymel.internal
+==============
+
+.. automodule:: pymel.internal
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+    :toctree: functions/pymel.internal
+    :nosignatures:
+   
+      getLogger
+   
+   
+
+   
+   
+   
+
+   
+   
+   

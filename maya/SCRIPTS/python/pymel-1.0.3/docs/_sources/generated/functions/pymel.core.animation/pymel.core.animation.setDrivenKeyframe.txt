@@ -1,0 +1,6 @@
+pymel.core.animation.setDrivenKeyframe
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.setDrivenKeyframe

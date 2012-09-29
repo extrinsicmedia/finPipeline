@@ -1,0 +1,6 @@
+pymel.core.general.toolDropped
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.toolDropped

@@ -1,0 +1,6 @@
+pymel.core.runtime.SubstituteGeometryOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SubstituteGeometryOptions

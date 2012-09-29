@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectTool
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectTool

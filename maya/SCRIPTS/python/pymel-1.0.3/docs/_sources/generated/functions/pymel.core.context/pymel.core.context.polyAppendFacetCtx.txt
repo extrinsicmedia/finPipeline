@@ -1,0 +1,6 @@
+pymel.core.context.polyAppendFacetCtx
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: context.polyAppendFacetCtx

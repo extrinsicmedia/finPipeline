@@ -1,0 +1,6 @@
+pymel.core.runtime.ExpressionEditor
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExpressionEditor

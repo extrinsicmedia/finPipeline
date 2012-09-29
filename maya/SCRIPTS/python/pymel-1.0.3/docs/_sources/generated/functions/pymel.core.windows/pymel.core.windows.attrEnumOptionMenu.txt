@@ -1,0 +1,6 @@
+pymel.core.windows.attrEnumOptionMenu
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.attrEnumOptionMenu

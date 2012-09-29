@@ -1,0 +1,6 @@
+pymel.core.windows.checkBoxGrp
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.checkBoxGrp

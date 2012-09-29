@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_color_spread
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_color_spread
+    :parts: 1
+
+.. autoclass:: Mib_color_spread
+    :members:
+    :undoc-members:

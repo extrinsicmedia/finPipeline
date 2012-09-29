@@ -1,0 +1,11 @@
+pymel.core.nodetypes.FurAttractors
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: FurAttractors
+    :parts: 1
+
+.. autoclass:: FurAttractors
+    :members:
+    :undoc-members:

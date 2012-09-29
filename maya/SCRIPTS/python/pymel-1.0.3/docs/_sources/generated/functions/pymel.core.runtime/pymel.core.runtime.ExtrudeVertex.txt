@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtrudeVertex
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtrudeVertex

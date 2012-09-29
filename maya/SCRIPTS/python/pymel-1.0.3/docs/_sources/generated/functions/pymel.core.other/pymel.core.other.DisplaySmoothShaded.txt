@@ -1,0 +1,6 @@
+pymel.core.other.DisplaySmoothShaded
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.DisplaySmoothShaded

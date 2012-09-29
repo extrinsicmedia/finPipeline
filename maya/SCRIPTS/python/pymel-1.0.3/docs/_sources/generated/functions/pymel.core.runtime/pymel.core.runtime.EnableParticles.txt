@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableParticles
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableParticles

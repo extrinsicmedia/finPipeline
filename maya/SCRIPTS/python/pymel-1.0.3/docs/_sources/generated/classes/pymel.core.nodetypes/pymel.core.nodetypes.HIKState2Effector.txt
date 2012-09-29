@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKState2Effector
+======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKState2Effector
+    :parts: 1
+
+.. autoclass:: HIKState2Effector
+    :members:
+    :undoc-members:

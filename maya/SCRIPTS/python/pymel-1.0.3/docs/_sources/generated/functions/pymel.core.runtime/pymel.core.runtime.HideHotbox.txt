@@ -1,0 +1,6 @@
+pymel.core.runtime.HideHotbox
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideHotbox

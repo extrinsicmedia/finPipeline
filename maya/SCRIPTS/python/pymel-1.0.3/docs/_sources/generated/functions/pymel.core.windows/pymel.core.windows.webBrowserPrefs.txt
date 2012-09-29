@@ -1,0 +1,6 @@
+pymel.core.windows.webBrowserPrefs
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.webBrowserPrefs

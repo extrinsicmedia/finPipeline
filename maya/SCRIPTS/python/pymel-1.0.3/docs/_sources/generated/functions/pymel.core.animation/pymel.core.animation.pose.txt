@@ -1,0 +1,6 @@
+pymel.core.animation.pose
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: animation.pose

@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.isDirty &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.isTrue" href="pymel.core.general.isTrue.html" />
+    <link rel="prev" title="pymel.core.general.isConnected" href="pymel.core.general.isConnected.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.isTrue.html" title="pymel.core.general.isTrue"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.isConnected.html" title="pymel.core.general.isConnected"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-isdirty">
+<h1>pymel.core.general.isDirty<a class="headerlink" href="#pymel-core-general-isdirty" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.isDirty">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">isDirty</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.isDirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>The isDirtycommand is used to check if a plug is dirty.  The return value is 0 if it is not and 1 if it is.  If more
+than one plug is specified then the result is the logical orof all objects (ie. returns 1 if *any* of the plugs are
+dirty).</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>connection (c)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Check the connection of the plug (default).                       Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>datablock (d)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Check the datablock entry for the plug.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.isDirty</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Create a plusMinusAverage node and a transform. We set the &#39;skipSelect&#39;</span>
+<span class="c"># flag so that they are not displayed in the Attribute Editor because</span>
+<span class="c"># that would force an evaluation and cause the plugs to become clean.</span>
+<span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="kn">as</span> <span class="nn">cmds</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s">&#39;plusMinusAverage&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s">&#39;pma&#39;</span><span class="p">,</span> <span class="n">skipSelect</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Result: nt.PlusMinusAverage(u&#39;pma&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s">&#39;transform&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s">&#39;t&#39;</span><span class="p">,</span> <span class="n">skipSelect</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;t&#39;) #</span>
+
+<span class="c"># Hide the transform so that Maya&#39;s draw won&#39;t force an evaluation which</span>
+<span class="c"># would clean its plugs.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+
+<span class="c"># Connect the transform&#39;s &#39;tx&#39; to one of the plusMinusAverage node&#39;s</span>
+<span class="c"># inputs.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectAttr</span><span class="p">(</span><span class="s">&#39;t.tx&#39;</span><span class="p">,</span> <span class="s">&#39;pma.input1D[0]&#39;</span><span class="p">)</span>
+
+<span class="c"># Set the value of the transform&#39;s &#39;tx&#39; and check that the</span>
+<span class="c"># target of the connection has become dirty.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span><span class="s">&#39;t.tx&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">isDirty</span><span class="p">(</span><span class="s">&#39;pma.input1D[0]&#39;</span><span class="p">)</span>
+<span class="c"># Result: True #</span>
+
+<span class="c"># If we retrieve the value of the destination attribute</span>
+<span class="c"># then the connection becomes clean.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span><span class="s">&#39;pma.input1D[0]&#39;</span><span class="p">)</span>
+<span class="c"># Result: 13.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">isDirty</span><span class="p">(</span><span class="s">&#39;pma.input1D[0]&#39;</span><span class="p">)</span>
+<span class="c"># Result: False #</span>
+
+<span class="c"># A plusMinusAverage node&#39;s &#39;output1D&#39; attribute depends</span>
+<span class="c"># upon the values in its &#39;input1D&#39; array. Since we haven&#39;t</span>
+<span class="c"># retrieved its value yet, it should still be dirty. However,</span>
+<span class="c"># it seems to be clean:</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">isDirty</span><span class="p">(</span><span class="s">&#39;pma.output1D&#39;</span><span class="p">)</span>
+<span class="c"># Result: False #</span>
+
+<span class="c"># The reason for this is that the &#39;isDirty&#39; command</span>
+<span class="c"># by default only checks connections and &#39;output1D&#39; has</span>
+<span class="c"># no connection to be dirty. If we instead check its</span>
+<span class="c"># value in the datablock, we get the expected result:</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">isDirty</span><span class="p">(</span><span class="s">&#39;pma.output1D&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Result: True #</span>
+
+<span class="c"># The output value will remain dirty until we</span>
+<span class="c"># force its evaluation by retrieving it.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span><span class="s">&#39;pma.output1D&#39;</span><span class="p">)</span>
+<span class="c"># Result: 13.0 #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">isDirty</span><span class="p">(</span><span class="s">&#39;pma.output1D&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Result: False #</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.isConnected.html"
+                        title="previous chapter">pymel.core.general.isConnected</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.isTrue.html"
+                        title="next chapter">pymel.core.general.isTrue</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.isDirty.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.isTrue.html" title="pymel.core.general.isTrue"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.isConnected.html" title="pymel.core.general.isConnected"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

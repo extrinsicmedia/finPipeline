@@ -1,0 +1,6 @@
+pymel.core.windows.columnLayout
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.columnLayout

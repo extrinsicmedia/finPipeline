@@ -1,0 +1,6 @@
+pymel.core.windows.layerButton
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.layerButton

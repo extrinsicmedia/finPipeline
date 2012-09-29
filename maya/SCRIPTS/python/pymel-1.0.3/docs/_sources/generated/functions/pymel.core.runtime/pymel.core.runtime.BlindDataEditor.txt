@@ -1,0 +1,6 @@
+pymel.core.runtime.BlindDataEditor
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.BlindDataEditor

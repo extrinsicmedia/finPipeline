@@ -1,0 +1,6 @@
+pymel.core.runtime.IntersectCurve
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.IntersectCurve

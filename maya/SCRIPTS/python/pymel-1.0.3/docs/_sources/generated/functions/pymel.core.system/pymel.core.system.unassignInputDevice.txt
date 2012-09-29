@@ -1,0 +1,6 @@
+pymel.core.system.unassignInputDevice
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.unassignInputDevice

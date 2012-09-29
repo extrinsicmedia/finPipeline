@@ -1,0 +1,6 @@
+pymel.util.copysign
+===================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.copysign

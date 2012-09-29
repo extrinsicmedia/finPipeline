@@ -1,0 +1,6 @@
+pymel.core.runtime.HideIntermediateObjects
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideIntermediateObjects

@@ -1,0 +1,12 @@
+<map id="inheritance9200671aa6" name="inheritance9200671aa6">
+<area shape="rect" href="#pymel.core.nodetypes.CMuscleSurfAttach" title="CMuscleSurfAttach" alt="" coords="5,354,128,378"/>
+<area shape="rect" href="pymel.core.nodetypes.THlocatorShape.html#pymel.core.nodetypes.THlocatorShape" title="THlocatorShape" alt="" coords="13,315,120,339"/>
+<area shape="rect" href="pymel.core.nodetypes.Locator.html#pymel.core.nodetypes.Locator" title="Locator" alt="" coords="31,276,103,300"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="21,6,112,30"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="31,44,103,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="23,83,111,107"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryShape.html#pymel.core.nodetypes.GeometryShape" title="GeometryShape" alt="" coords="13,238,120,262"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="17,122,116,146"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="31,160,103,184"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="31,199,103,223"/>
+</map>

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateSpotLightOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateSpotLightOptions

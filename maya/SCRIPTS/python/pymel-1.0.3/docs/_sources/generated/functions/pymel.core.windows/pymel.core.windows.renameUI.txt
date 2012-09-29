@@ -1,0 +1,6 @@
+pymel.core.windows.renameUI
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.renameUI

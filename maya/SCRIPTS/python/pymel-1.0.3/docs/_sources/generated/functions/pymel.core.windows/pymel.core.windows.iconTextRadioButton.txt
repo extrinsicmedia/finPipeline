@@ -1,0 +1,6 @@
+pymel.core.windows.iconTextRadioButton
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.iconTextRadioButton

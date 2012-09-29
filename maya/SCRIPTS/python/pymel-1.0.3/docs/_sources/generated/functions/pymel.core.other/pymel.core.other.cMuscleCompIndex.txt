@@ -1,0 +1,6 @@
+pymel.core.other.cMuscleCompIndex
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.cMuscleCompIndex

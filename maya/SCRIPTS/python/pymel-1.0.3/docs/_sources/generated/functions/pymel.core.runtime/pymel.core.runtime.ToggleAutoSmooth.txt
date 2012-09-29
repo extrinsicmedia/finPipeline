@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleAutoSmooth
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleAutoSmooth

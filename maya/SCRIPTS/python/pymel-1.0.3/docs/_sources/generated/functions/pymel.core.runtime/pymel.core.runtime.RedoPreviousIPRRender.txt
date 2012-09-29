@@ -1,0 +1,6 @@
+pymel.core.runtime.RedoPreviousIPRRender
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RedoPreviousIPRRender

@@ -1,0 +1,6 @@
+pymel.core.other.GetHIKEffectorName
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.GetHIKEffectorName

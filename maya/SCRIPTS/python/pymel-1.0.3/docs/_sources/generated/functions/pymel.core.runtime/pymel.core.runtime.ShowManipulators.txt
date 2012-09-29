@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowManipulators
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowManipulators

@@ -1,0 +1,6 @@
+pymel.core.runtime.ConvertToBreakdown
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ConvertToBreakdown

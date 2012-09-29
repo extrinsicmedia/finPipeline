@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateDirectionalLightOptions
+================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateDirectionalLightOptions

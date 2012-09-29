@@ -1,0 +1,6 @@
+pymel.core.modeling.uvSnapshot
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.uvSnapshot

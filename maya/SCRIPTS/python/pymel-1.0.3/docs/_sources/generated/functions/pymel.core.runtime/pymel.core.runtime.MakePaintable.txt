@@ -1,0 +1,6 @@
+pymel.core.runtime.MakePaintable
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakePaintable

@@ -1,0 +1,6 @@
+pymel.core.modeling.subdLayoutUV
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.subdLayoutUV

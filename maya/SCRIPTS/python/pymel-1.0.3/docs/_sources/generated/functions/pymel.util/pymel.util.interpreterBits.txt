@@ -1,0 +1,6 @@
+pymel.util.interpreterBits
+==========================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.interpreterBits

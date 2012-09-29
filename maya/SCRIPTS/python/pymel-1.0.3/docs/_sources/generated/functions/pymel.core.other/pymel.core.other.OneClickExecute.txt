@@ -1,0 +1,6 @@
+pymel.core.other.OneClickExecute
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.OneClickExecute

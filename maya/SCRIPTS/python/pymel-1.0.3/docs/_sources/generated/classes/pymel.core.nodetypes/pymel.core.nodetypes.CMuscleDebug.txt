@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleDebug
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleDebug
+    :parts: 1
+
+.. autoclass:: CMuscleDebug
+    :members:
+    :undoc-members:

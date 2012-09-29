@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_color_alpha
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_color_alpha
+    :parts: 1
+
+.. autoclass:: Mib_color_alpha
+    :members:
+    :undoc-members:

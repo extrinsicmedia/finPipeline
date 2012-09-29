@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowDeformers
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowDeformers

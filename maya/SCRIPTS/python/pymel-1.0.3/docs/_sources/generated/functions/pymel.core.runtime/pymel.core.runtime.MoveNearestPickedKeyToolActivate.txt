@@ -1,0 +1,6 @@
+pymel.core.runtime.MoveNearestPickedKeyToolActivate
+===================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MoveNearestPickedKeyToolActivate

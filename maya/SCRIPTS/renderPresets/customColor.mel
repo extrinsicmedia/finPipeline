@@ -1,0 +1,6 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+setRenderPassType -defaultDataType -type "CSTCOL" -numChannels 4 $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "customColor"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

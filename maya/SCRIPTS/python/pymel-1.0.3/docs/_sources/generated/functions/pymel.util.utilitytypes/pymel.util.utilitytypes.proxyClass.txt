@@ -1,0 +1,6 @@
+pymel.util.utilitytypes.proxyClass
+==================================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: utilitytypes.proxyClass

@@ -1,0 +1,6 @@
+pymel.core.runtime.UnparentOptions
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UnparentOptions

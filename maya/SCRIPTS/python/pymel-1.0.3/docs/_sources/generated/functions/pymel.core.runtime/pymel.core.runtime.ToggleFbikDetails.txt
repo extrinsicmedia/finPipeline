@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleFbikDetails
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleFbikDetails

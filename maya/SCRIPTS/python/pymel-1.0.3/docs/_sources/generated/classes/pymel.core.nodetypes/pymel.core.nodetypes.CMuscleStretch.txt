@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleStretch
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleStretch
+    :parts: 1
+
+.. autoclass:: CMuscleStretch
+    :members:
+    :undoc-members:

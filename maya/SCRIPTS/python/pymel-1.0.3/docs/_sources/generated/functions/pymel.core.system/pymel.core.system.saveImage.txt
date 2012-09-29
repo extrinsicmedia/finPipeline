@@ -1,0 +1,6 @@
+pymel.core.system.saveImage
+===========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.saveImage

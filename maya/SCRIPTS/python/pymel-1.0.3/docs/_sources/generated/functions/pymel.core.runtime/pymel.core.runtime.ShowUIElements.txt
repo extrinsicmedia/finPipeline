@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowUIElements
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowUIElements

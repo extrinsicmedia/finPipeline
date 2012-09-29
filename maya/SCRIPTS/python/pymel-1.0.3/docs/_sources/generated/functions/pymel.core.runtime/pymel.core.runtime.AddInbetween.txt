@@ -1,0 +1,6 @@
+pymel.core.runtime.AddInbetween
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AddInbetween

@@ -1,0 +1,6 @@
+pymel.core.runtime.PartitionEditor
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PartitionEditor

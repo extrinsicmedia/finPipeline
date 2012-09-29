@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Ik2Bsolver
+===============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Ik2Bsolver
+    :parts: 1
+
+.. autoclass:: Ik2Bsolver
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateCameraAimOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateCameraAimOptions

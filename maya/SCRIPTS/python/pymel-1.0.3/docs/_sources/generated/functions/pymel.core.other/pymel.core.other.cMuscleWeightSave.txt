@@ -1,0 +1,6 @@
+pymel.core.other.cMuscleWeightSave
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.cMuscleWeightSave

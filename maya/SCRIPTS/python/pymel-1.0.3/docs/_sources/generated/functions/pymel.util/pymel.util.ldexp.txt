@@ -1,0 +1,6 @@
+pymel.util.ldexp
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.ldexp

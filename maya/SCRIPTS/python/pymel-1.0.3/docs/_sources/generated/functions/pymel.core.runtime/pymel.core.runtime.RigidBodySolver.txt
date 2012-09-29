@@ -1,0 +1,6 @@
+pymel.core.runtime.RigidBodySolver
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RigidBodySolver

@@ -1,0 +1,6 @@
+pymel.core.runtime.Create2DContainerOptions
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Create2DContainerOptions

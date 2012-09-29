@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_rayswitch_environment
+==============================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_rayswitch_environment
+    :parts: 1
+
+.. autoclass:: Mip_rayswitch_environment
+    :members:
+    :undoc-members:

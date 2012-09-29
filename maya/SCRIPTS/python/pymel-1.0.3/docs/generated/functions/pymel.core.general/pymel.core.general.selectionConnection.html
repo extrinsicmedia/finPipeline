@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.selectionConnection &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.setAttr" href="pymel.core.general.setAttr.html" />
+    <link rel="prev" title="pymel.core.general.selectedNodes" href="pymel.core.general.selectedNodes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.setAttr.html" title="pymel.core.general.setAttr"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.selectedNodes.html" title="pymel.core.general.selectedNodes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-selectionconnection">
+<h1>pymel.core.general.selectionConnection<a class="headerlink" href="#pymel-core-general-selectionconnection" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.general.selectionConnection">
+<em class="property">static </em><tt class="descclassname">general.</tt><tt class="descname">selectionConnection</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.selectionConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command creates a named selectionConnection object. This object is simply a shared selection list. It may be used
+by editors to share their highlight data. For example, an outliner may attach its selected list to one of these objects,
+and a graph editor may use the same object as a list source. Then, the graph editor would only display objects that are
+selected in the outliner. Selection connections are UI objects which contain a list of model objects. Selection
+connections are useful for specifying which objects are to be displayed within a particular editor. Editor&#8217;s have three
+plug socketswhere a selection connection may be attached. They are: mainListConnectionan inputsocket which contains a
+list of objects that are to be displayed within the editorselectionConnectionan outputsocket which contains a list of
+objects that are selectedwithin the editorhighlightConnectionan inputsocket which contains a list of objects that are to
+be highlightedwithin the editorThere are several different types of selection connections that may be created. They
+include: activeLista selection connection which contains a list of everything in the model which is active (which
+includes geometry objects and keys)modelLista selection connection which contains a list of all the geometry (i.e.
+excluding keys) objects that are currently activekeyframeLista selection connection which contains a list of all the
+keys that are currently activeworldLista selection connection which contains a list of all the objects in the
+worldobjectLista selection connection which contains one model object (which may be a set)listLista selection connection
+which contains a list of selection connectionseditorLista selection connection which contains a list of objects that are
+attached to the mainListConnection of the specified editorsetLista selection connection which contains a list of all the
+sets in the worldcharacterLista selection connection which contains a list of all the characters in the
+worldhighlightLista selection connection which contains a list of objects to be highlighted in some fashionBelow is an
+example selectionConnection network between two editors. Editor 1 is setup to display objects on the activeList. Editor
+2 is setup to display objects which are selected within Editor 1, and objects that are selected in Editor 2 are
+highlighted within Editor 1: &#8211; Editor 1&#8211;       &#8211; Editor 2&#8211; inputList&#8211;| main |      |  <a href="#id1"><span class="problematic" id="id2">|-|</span></a> main |      | |      |
+sele <a href="#id3"><span class="problematic" id="id4">|&#8211;|</span></a>  |      | sele <a href="#id5"><span class="problematic" id="id6">|&#8211;|</span></a> <a href="#id7"><span class="problematic" id="id8">|-|</span></a> high |      |     | high |      |  | |   &#8212;&#8212;&#8212;&#8212;-       &#8212;&#8212;&#8212;&#8212;-   |
+<a href="#id9"><span class="problematic" id="id10">|&#8212;&#8212;&#8212;&#8212;- fromEditor2 &#8212;&#8212;&#8212;&#8212;-|</span></a> The following commands will establish this network: selectionConnection
+-activeList inputList; selectionConnection fromEditor1; selectionConnection fromEditor2; editor -edit
+-mainListConnection inputList Editor1; editor -edit -selectionConnection fromEditor1 Editor1; editor -edit
+-mainListConnection fromEditor1 Editor2; editor -edit -selectionConnection fromEditor2 Editor2; editor -edit
+-highlightConnection fromEditor2 Editor1; Note: to delete a selection connectionuse the deleteUI commandNote: commands
+which expect objects may be given a selection connection instead, and the command will operate upon the objects wrapped
+by the selection connectionNote: the graph editor and the dope sheet are the only editors which can use the editor
+connection to the highlightConnection of another editorWARNING: some flag combinations may not behave as you expect.
+The command is really intended for internal use for managing the outliner used by the various editors.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>activeCacheList (atc)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the cache that objects on the active list belong to.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>activeCharacterList (acl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the characters that objects on the active list belong to.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>activeList (act)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the active list (geometry objects and keys).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addScript (addScript)</strong></td>
+<td><em>script</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify a script to be called when something is added to the selection.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>addTo (add)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The name of a selection connection that should be added to this list of connections.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>characterList (cl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect all the characters in the world.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>clear (clr)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Remove everything from the selection connection.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>connectionList (lst)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should contain a list of selection connections.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>defineTemplate (dt)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Puts a command in a mode where any other flags and args are parsed and added to the command template specified in the argument. They will be used as default
+arguments in any subsequent invocations of the command when templateName is set as the current template.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>deselect (d)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Remove something from the selection.                      Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>editor (ed)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the -mainListConnection of the specified editor.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true|false depending upon whether the specified object exists.  Other flags are ignored.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>filter (f)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Optionally specifies an itemFilter for this connection. An empty string () clears the current filter. If a filter is specified, all the information going into the
+selectionConnection must first pass through the filter before being accepted.  NOTE: filters can only be attached to regular selectionConnections. They cannot be
+attached to any connection created using the -act, -mdl, -key, -wl, -sl, -cl, -lst, -obj, or -ren flags. We strongly recommend that you do not attach filters to a
+selectionConnection &#8212; it is better to attach your filter to the editor that is using the selectionConnection instead.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>findObject (fo)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Find a selection connection in this list that wraps the specified object.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>g (g)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>A global selection connection cannot be deleted by any script commands.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>highlightList (hl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection is being used as a highlight list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>identify (id)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Find out what type of selection connection this is.  May be: activeList | modelList | keyframeList | worldList | objectList listList | editorList | connection |
+unknown</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>keyframeList (key)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the animation portion of the active list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>lock (lck)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>For activeList connections, locking the connection means that it will not listen to activeList changes.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>modelList (mdl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect the modeling (i.e. excluding keys) portion of the active list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>object (obj)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Specifies that this connection should wrap around the specified object (which may be a set).  Query will return all the members of the selection connection (if
+the connection wraps a set, the set members will be returned)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>parent (p)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The name of a UI object this should be attached to.  When the parent is destroyed, the selectionConnection will auto-delete. If no parent is specified, the
+connection is created in the current controlLayout.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>remove (rm)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The name of a selection connection that should be removed from this list of connections.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>removeScript (rs)</strong></td>
+<td><em>script</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specify a script to be called when something is removed from the selection.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>select (s)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Add something to the selection. This does not replace the existing selection.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>setList (sl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect all the sets in the world.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>switch (sw)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Acts as a modifier to -connectionList which sets the list of objects to be the first non-empty selection connection.  selection connections are tested in the
+order in which they are added.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useTemplate (ut)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Force the command to use a command template other than the current one.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldList (wl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies that this connection should reflect all objects in the world.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.selectionConnection</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c">#    Example 1.</span>
+<span class="c">#</span>
+<span class="c">#    Create a window with two Outliner editors and a</span>
+<span class="c">#    selection connection network.  Editor 1 will display the</span>
+<span class="c">#    current scene&#39;s active list.  Editor 2 will display the items</span>
+<span class="c">#    selected in Editor 1.</span>
+<span class="c">#</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="s">&#39;window&#39;</span><span class="p">,</span> <span class="n">wh</span><span class="o">=</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">configuration</span><span class="o">=</span><span class="s">&#39;vertical2&#39;</span> <span class="p">)</span>
+<span class="c"># Result: ui.PaneLayout(&#39;window|paneLayout6&#39;) #</span>
+<span class="n">editor1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">outlinerEditor</span><span class="p">()</span>
+<span class="n">editor2</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">outlinerEditor</span><span class="p">()</span>
+
+<span class="c">#    Create the selection connection network.</span>
+<span class="c">#</span>
+<span class="n">inputList</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">selectionConnection</span><span class="p">(</span> <span class="n">activeList</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+<span class="n">fromEditor1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">selectionConnection</span><span class="p">()</span>
+<span class="n">fromEditor2</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">selectionConnection</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">editor</span><span class="p">(</span> <span class="n">editor1</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">mainListConnection</span><span class="o">=</span><span class="n">inputList</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">editor</span><span class="p">(</span> <span class="n">editor1</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">selectionConnection</span><span class="o">=</span><span class="n">fromEditor1</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">editor</span><span class="p">(</span> <span class="n">editor2</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">mainListConnection</span><span class="o">=</span><span class="n">fromEditor1</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">editor</span><span class="p">(</span> <span class="n">editor2</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">selectionConnection</span><span class="o">=</span><span class="n">fromEditor2</span> <span class="p">)</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">showWindow</span><span class="p">(</span> <span class="n">window</span> <span class="p">)</span>
+
+<span class="c">#    Create some objects and select them.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">cone</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">cylinder</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="nb">all</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># Now as you select objects on the left side, they will be</span>
+<span class="c"># displayed on the right side.  You can also add a callback</span>
+<span class="c"># script to do further processing on the list when objects</span>
+<span class="c"># are added. (Use -removeScript for when objects are removed.)</span>
+
+<span class="k">def</span> <span class="nf">addScriptCallback</span><span class="p">(</span> <span class="n">array</span> <span class="p">):</span>
+    <span class="k">print</span> <span class="s">&quot;Contents of callback array: </span><span class="si">%s</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">array</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">selectionConnection</span><span class="p">(</span> <span class="n">fromEditor1</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">addScript</span><span class="o">=</span><span class="n">addScriptCallback</span> <span class="p">)</span>
+
+
+<span class="c">#    Example 2.</span>
+<span class="c">#</span>
+<span class="c">#    Create a selection connection for a paritcular object.  Delete</span>
+<span class="c">#    the selection connection and the object.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">(</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;sphere&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Create a selection connection to wrap the sphere.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">selectionConnection</span><span class="p">(</span> <span class="s">&#39;holder&#39;</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="s">&#39;sphere&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Select the sphere using the selection connection.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="s">&#39;holder&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Delete the members (sphere) of the selection connection</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span> <span class="s">&#39;holder&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Delete the selection connection (does not delete the members of</span>
+<span class="c">#    the selection connection.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">deleteUI</span><span class="p">(</span> <span class="s">&#39;holder&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.selectedNodes.html"
+                        title="previous chapter">pymel.core.general.selectedNodes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.setAttr.html"
+                        title="next chapter">pymel.core.general.setAttr</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.general/pymel.core.general.selectionConnection.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.setAttr.html" title="pymel.core.general.setAttr"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.selectedNodes.html" title="pymel.core.general.selectedNodes"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

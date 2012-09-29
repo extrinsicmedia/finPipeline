@@ -1,0 +1,6 @@
+pymel.core.runtime.PolygonBooleanUnion
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolygonBooleanUnion

@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectFacePath
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectFacePath

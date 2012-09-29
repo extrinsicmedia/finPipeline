@@ -1,0 +1,6 @@
+pymel.util.patchMath
+====================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.patchMath

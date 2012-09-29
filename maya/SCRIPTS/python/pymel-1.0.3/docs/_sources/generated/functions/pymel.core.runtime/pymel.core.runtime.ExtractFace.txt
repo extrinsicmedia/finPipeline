@@ -1,0 +1,6 @@
+pymel.core.runtime.ExtractFace
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ExtractFace

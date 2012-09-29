@@ -1,0 +1,6 @@
+pymel.core.other.sbs_GetGlobalTextureHeight
+===========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_GetGlobalTextureHeight

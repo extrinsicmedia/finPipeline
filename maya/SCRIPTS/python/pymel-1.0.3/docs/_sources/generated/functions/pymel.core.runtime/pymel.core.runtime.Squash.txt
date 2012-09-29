@@ -1,0 +1,6 @@
+pymel.core.runtime.Squash
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Squash

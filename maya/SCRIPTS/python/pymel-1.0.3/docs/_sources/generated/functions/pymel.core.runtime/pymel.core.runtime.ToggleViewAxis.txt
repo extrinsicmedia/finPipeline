@@ -1,0 +1,6 @@
+pymel.core.runtime.ToggleViewAxis
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ToggleViewAxis

@@ -1,0 +1,6 @@
+pymel.core.runtime.SplitMeshWithProjectedCurve
+==============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SplitMeshWithProjectedCurve

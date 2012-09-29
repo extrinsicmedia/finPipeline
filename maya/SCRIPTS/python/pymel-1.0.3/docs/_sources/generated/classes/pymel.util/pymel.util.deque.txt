@@ -1,0 +1,11 @@
+pymel.util.deque
+================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: deque
+    :parts: 1
+
+.. autoclass:: deque
+    :members:
+    :undoc-members:

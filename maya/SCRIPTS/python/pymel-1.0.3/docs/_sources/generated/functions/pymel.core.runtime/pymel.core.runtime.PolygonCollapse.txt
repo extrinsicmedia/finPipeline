@@ -1,0 +1,6 @@
+pymel.core.runtime.PolygonCollapse
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PolygonCollapse

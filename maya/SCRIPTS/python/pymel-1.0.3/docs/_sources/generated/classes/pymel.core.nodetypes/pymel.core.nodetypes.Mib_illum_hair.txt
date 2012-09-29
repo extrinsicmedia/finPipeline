@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_illum_hair
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_illum_hair
+    :parts: 1
+
+.. autoclass:: Mib_illum_hair
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.other.dynTestData
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.dynTestData

@@ -1,0 +1,3 @@
+startAttrPreset( "renderPass" );
+blendAttr "renderable" 1; 
+endAttrPreset();

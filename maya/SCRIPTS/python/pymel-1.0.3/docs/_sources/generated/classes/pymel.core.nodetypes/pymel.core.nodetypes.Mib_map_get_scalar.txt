@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_map_get_scalar
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_map_get_scalar
+    :parts: 1
+
+.. autoclass:: Mib_map_get_scalar
+    :members:
+    :undoc-members:

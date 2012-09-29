@@ -1,0 +1,6 @@
+pymel.util.arrays.sqrt
+======================
+
+.. currentmodule:: pymel.util
+
+.. automethod:: arrays.sqrt

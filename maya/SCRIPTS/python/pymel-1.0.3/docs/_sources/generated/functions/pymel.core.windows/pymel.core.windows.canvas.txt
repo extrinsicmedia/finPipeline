@@ -1,0 +1,6 @@
+pymel.core.windows.canvas
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.canvas

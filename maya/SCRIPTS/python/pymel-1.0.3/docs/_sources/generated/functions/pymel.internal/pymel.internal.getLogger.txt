@@ -1,0 +1,6 @@
+pymel.internal.getLogger
+========================
+
+.. currentmodule:: pymel
+
+.. automethod:: internal.getLogger

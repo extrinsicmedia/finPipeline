@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePassiveRigidBody
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePassiveRigidBody

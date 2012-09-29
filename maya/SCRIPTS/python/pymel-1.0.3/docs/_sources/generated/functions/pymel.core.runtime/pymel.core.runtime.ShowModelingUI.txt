@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowModelingUI
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowModelingUI

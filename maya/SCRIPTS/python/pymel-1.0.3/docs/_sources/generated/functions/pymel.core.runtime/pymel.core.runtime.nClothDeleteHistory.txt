@@ -1,0 +1,6 @@
+pymel.core.runtime.nClothDeleteHistory
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.nClothDeleteHistory

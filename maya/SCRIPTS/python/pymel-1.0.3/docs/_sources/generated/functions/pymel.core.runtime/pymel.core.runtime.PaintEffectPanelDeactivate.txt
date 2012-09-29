@@ -1,0 +1,6 @@
+pymel.core.runtime.PaintEffectPanelDeactivate
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PaintEffectPanelDeactivate

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mip_card_opacity
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mip_card_opacity
+    :parts: 1
+
+.. autoclass:: Mip_card_opacity
+    :members:
+    :undoc-members:

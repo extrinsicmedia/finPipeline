@@ -1,0 +1,6 @@
+pymel.core.windows.deviceEditor
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.deviceEditor

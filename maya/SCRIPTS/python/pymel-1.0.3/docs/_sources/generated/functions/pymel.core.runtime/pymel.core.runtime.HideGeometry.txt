@@ -1,0 +1,6 @@
+pymel.core.runtime.HideGeometry
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideGeometry

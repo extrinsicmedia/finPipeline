@@ -1,0 +1,6 @@
+pymel.core.runtime.WaveOptions
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.WaveOptions

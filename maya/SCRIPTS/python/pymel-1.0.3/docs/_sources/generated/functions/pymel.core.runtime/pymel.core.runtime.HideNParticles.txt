@@ -1,0 +1,6 @@
+pymel.core.runtime.HideNParticles
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.HideNParticles

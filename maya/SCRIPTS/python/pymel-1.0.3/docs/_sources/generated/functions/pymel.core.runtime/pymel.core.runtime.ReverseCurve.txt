@@ -1,0 +1,6 @@
+pymel.core.runtime.ReverseCurve
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ReverseCurve

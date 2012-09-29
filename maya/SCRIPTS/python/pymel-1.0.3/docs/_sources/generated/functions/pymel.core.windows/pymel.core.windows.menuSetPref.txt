@@ -1,0 +1,6 @@
+pymel.core.windows.menuSetPref
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.menuSetPref

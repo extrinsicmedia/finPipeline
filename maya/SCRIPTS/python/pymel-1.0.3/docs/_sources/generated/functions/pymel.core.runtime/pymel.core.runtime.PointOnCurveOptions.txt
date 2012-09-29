@@ -1,0 +1,6 @@
+pymel.core.runtime.PointOnCurveOptions
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PointOnCurveOptions

@@ -1,0 +1,6 @@
+pymel.core.runtime.GoToFBIKStancePose
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.GoToFBIKStancePose

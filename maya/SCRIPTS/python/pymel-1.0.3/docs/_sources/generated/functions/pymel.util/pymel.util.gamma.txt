@@ -1,0 +1,6 @@
+pymel.util.gamma
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.gamma

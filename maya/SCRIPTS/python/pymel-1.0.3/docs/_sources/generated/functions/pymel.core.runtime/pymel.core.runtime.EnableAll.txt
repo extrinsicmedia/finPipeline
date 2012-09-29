@@ -1,0 +1,6 @@
+pymel.core.runtime.EnableAll
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.EnableAll

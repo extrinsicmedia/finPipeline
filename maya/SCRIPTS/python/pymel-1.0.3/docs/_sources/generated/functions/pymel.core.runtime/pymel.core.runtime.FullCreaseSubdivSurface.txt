@@ -1,0 +1,6 @@
+pymel.core.runtime.FullCreaseSubdivSurface
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.FullCreaseSubdivSurface

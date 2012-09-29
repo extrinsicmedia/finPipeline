@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectVertexFaceMask
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectVertexFaceMask

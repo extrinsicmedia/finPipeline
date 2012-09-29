@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_geo_cone
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_geo_cone
+    :parts: 1
+
+.. autoclass:: Mib_geo_cone
+    :members:
+    :undoc-members:

@@ -1,0 +1,6 @@
+pymel.core.runtime.DeleteAllStrokes
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.DeleteAllStrokes

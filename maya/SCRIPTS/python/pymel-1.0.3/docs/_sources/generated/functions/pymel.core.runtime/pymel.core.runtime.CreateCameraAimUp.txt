@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateCameraAimUp
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateCameraAimUp

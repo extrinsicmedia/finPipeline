@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_illum_ward
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_illum_ward
+    :parts: 1
+
+.. autoclass:: Mib_illum_ward
+    :members:
+    :undoc-members:

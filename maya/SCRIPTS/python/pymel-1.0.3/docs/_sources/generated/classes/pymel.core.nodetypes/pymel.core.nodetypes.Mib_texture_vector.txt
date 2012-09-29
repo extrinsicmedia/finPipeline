@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_texture_vector
+=======================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_texture_vector
+    :parts: 1
+
+.. autoclass:: Mib_texture_vector
+    :members:
+    :undoc-members:

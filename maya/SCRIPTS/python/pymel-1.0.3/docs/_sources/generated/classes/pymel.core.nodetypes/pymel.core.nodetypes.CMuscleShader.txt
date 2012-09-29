@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleShader
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleShader
+    :parts: 1
+
+.. autoclass:: CMuscleShader
+    :members:
+    :undoc-members:

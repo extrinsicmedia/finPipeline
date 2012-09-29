@@ -1,0 +1,6 @@
+pymel.core.runtime.ChangeEdgeWidth
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ChangeEdgeWidth

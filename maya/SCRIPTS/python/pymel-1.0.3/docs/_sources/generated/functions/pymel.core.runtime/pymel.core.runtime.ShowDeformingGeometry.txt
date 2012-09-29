@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowDeformingGeometry
+========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowDeformingGeometry

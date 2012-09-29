@@ -1,0 +1,6 @@
+pymel.util.cotan
+================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.cotan

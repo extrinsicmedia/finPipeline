@@ -1,0 +1,1148 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.Particle &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.ParticleAgeMapper" href="pymel.core.nodetypes.ParticleAgeMapper.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Parti_volume_photon" href="pymel.core.nodetypes.Parti_volume_photon.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.ParticleAgeMapper.html" title="pymel.core.nodetypes.ParticleAgeMapper"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Parti_volume_photon.html" title="pymel.core.nodetypes.Parti_volume_photon"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-particle">
+<h1>pymel.core.nodetypes.Particle<a class="headerlink" href="#pymel-core-nodetypes-particle" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-9d1dbd708e688d4a63b301409fa7838d0478247c.png" alt="Inheritance diagram of Particle" usemap="#inheritance3cc7ed18a7" class="inheritance"/>
+<map id="inheritance3cc7ed18a7" name="inheritance3cc7ed18a7">
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="15,121,113,145"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="28,160,100,184"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="20,83,108,107"/>
+<area shape="rect" href="pymel.core.nodetypes.DeformableShape.html#pymel.core.nodetypes.DeformableShape" title="DeformableShape" alt="" coords="5,276,123,300"/>
+<area shape="rect" href="#pymel.core.nodetypes.Particle" title="Particle" alt="" coords="28,315,100,339"/>
+<area shape="rect" href="pymel.core.nodetypes.GeometryShape.html#pymel.core.nodetypes.GeometryShape" title="GeometryShape" alt="" coords="11,237,117,261"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="19,5,109,29"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="28,44,100,68"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="28,199,100,223"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Particle">
+<em class="property">class </em><tt class="descname">Particle</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">particle</span></tt></p>
+<p>The particle command creates a new particle object from a list of world space points. If a particle object is created, the command returns the names of the new particle shape and its associated particle object dependency node. If an object was queried, the results of the query are returned. Per particle attributes can be queried using the particleId or the order of the particle in the particle array. If an object was edited, nothing is returned.</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Particle.Point">
+<em class="property">class </em><tt class="descname">Point</tt><big>(</big><em>node</em>, <em>item</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.Point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pymel.core.nodetypes.Particle.PointArray">
+<em class="property">class </em><tt class="descclassname">Particle.</tt><tt class="descname">PointArray</tt><big>(</big><em>name</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.PointArray" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.acceleration">
+<tt class="descclassname">Particle.</tt><tt class="descname">acceleration</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>To return acceleration array for all particles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.acceleration</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.age">
+<tt class="descclassname">Particle.</tt><tt class="descname">age</tt><big>(</big><em>ages</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.age" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the given array with the age values of the particles in this system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">ages : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.age</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.betterIllum">
+<tt class="descclassname">Particle.</tt><tt class="descname">betterIllum</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.betterIllum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kCloud.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.betterIllum</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.castsShadows">
+<tt class="descclassname">Particle.</tt><tt class="descname">castsShadows</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.castsShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the rendering attribute for particles casting shadows has been enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.castsShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.deformedParticleShape">
+<tt class="descclassname">Particle.</tt><tt class="descname">deformedParticleShape</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.deformedParticleShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get the deformed particleShape.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.deformedParticleShape</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.disableCloudAxis">
+<tt class="descclassname">Particle.</tt><tt class="descname">disableCloudAxis</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.disableCloudAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kCloud.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.disableCloudAxis</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.emission">
+<tt class="descclassname">Particle.</tt><tt class="descname">emission</tt><big>(</big><em>emissions</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the given array with the incandescence values of the particles in this system, if the particles have this attribute. See  hasEmission() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">emissions : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.emission</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.emit">
+<tt class="descclassname">Particle.</tt><tt class="descname">emit</tt><big>(</big><em>v</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.emit" title="Permalink to this definition">¶</a></dt>
+<dd><p>To add a new particle at the given position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>v <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="#pymel.core.nodetypes.Particle.Point" title="pymel.core.nodetypes.Particle.Point"><tt class="xref py py-obj docutils literal"><span class="pre">Point</span></tt></a></span></dt>
+<dd><p class="first last">The particle&#8217;s position</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.emit</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.evaluateDynamics">
+<tt class="descclassname">Particle.</tt><tt class="descname">evaluateDynamics</tt><big>(</big><em>to</em>, <em>runupFromStart</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.evaluateDynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run up the particle system to a certain frame, from either the current frame, or from the start of the simulation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first">to : <a class="reference internal" href="pymel.core.nodetypes.Time.html#pymel.core.nodetypes.Time" title="pymel.core.nodetypes.Time"><tt class="xref py py-obj docutils literal"><span class="pre">Time</span></tt></a></p>
+<p class="last">runupFromStart : <tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.evaluateDynamics</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.flatShaded">
+<tt class="descclassname">Particle.</tt><tt class="descname">flatShaded</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.flatShaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>To check if a particle shape of cloud type is flat shaded. This is only for use with an  MFnParticleSystem  of renderType kCloud.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.flatShaded</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.floatValue">
+<tt class="descclassname">Particle.</tt><tt class="descname">floatValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.floatValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used only in per particle attribute edit.  Specifies that the edit is of a float attribute and must be followed by the new float value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">getAttribute</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the name of the attribute being queried or edited.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getCache">
+<tt class="descclassname">Particle.</tt><tt class="descname">getCache</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns caching on/off for the particle shape.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getConserve">
+<tt class="descclassname">Particle.</tt><tt class="descname">getConserve</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getConserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conservation of momentum control (between 0 and 1).  Specifies the fraction of the particle shape&#8217;s existing momentum which is conserved from frame to frame. A value of 1 (the default) corresponds to true Newtonian physics, in which momentum is conserved.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getCount">
+<tt class="descclassname">Particle.</tt><tt class="descname">getCount</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the particle count at the current frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.count</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getDynamicAttrList">
+<tt class="descclassname">Particle.</tt><tt class="descname">getDynamicAttrList</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getDynamicAttrList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the dynamic attributes in the object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getGridSpacing">
+<tt class="descclassname">Particle.</tt><tt class="descname">getGridSpacing</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getGridSpacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spacing between particles in the grid.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getInherit">
+<tt class="descclassname">Particle.</tt><tt class="descname">getInherit</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getInherit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit this fraction (0-1) of emitting object&#8217;s velocity.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getJitterBasePoint">
+<tt class="descclassname">Particle.</tt><tt class="descname">getJitterBasePoint</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getJitterBasePoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base point (center point) for jitters.  The command will create one swatch of jitters for each base point.  It will pair up other flags with base points in the order they are given in the command line.  If not enough instances of the other flags are availble, the last one on the line with be used for all other instances of -jpb.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getJitterRadius">
+<tt class="descclassname">Particle.</tt><tt class="descname">getJitterRadius</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getJitterRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max radius from the center to place the particle instances.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getLowerLeft">
+<tt class="descclassname">Particle.</tt><tt class="descname">getLowerLeft</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getLowerLeft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower left point of grid.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getName">
+<tt class="descclassname">Particle.</tt><tt class="descname">getName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of particle object</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getNumJitters">
+<tt class="descclassname">Particle.</tt><tt class="descname">getNumJitters</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getNumJitters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of jitters (instances) per particle.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getOrder">
+<tt class="descclassname">Particle.</tt><tt class="descname">getOrder</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the zero-based order (index) of the particle whose attribute is being queried  or edited in the particle array. Querying the value of a per particle attribute requires the -attribute and -id or -order flags and their arguments to precede the -q flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getParticleId">
+<tt class="descclassname">Particle.</tt><tt class="descname">getParticleId</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getParticleId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the id of the particle whose attribute is being queried or edited. Querying the value of a per particle attribute requires the -attribute and -id or -order flags and their arguments to precede the -q flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getPerParticleAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">getPerParticleAttribute</tt><big>(</big><em>attrName</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getPerParticleAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get per particle integer attribute with its attribute name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>attrName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The input attribute name</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(<tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt> list)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.getPerParticleAttribute</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getPerParticleDouble">
+<tt class="descclassname">Particle.</tt><tt class="descname">getPerParticleDouble</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getPerParticleDouble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the per-particle double attributes, excluding initial-state, cache, and information-only attributes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getPerParticleVector">
+<tt class="descclassname">Particle.</tt><tt class="descname">getPerParticleVector</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getPerParticleVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the per-particle vector attributes, excluding initial-state, cache, and information-only attributes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getShapeName">
+<tt class="descclassname">Particle.</tt><tt class="descname">getShapeName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getShapeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the shape name used for geometry instancing. DO not confuse this with the -n flag which names the particle object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.getUpperRight">
+<tt class="descclassname">Particle.</tt><tt class="descname">getUpperRight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.getUpperRight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper right point of grid.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.hasEmission">
+<tt class="descclassname">Particle.</tt><tt class="descname">hasEmission</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.hasEmission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the particles in this system have an emission attribute. See  emission() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.hasEmission</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.hasLifespan">
+<tt class="descclassname">Particle.</tt><tt class="descname">hasLifespan</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.hasLifespan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the particles in this system have a lifespan attribute. See  lifespan() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.hasLifespan</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.hasOpacity">
+<tt class="descclassname">Particle.</tt><tt class="descname">hasOpacity</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.hasOpacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the particles in this system have an opacity attribute. See  opacity() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.hasOpacity</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.hasRgb">
+<tt class="descclassname">Particle.</tt><tt class="descname">hasRgb</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.hasRgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the particles in this system have an rgb attribute. See  rgb() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.hasRgb</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.isDeformedParticleShape">
+<tt class="descclassname">Particle.</tt><tt class="descname">isDeformedParticleShape</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.isDeformedParticleShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>To return if this particle shape is deformed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.isDeformedParticleShape</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.isPerParticleDoubleAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">isPerParticleDoubleAttribute</tt><big>(</big><em>attrName</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.isPerParticleDoubleAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>To check if the input attribute is a per particle double attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>attrName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The input attribute name</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.isPerParticleDoubleAttribute</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.isPerParticleIntAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">isPerParticleIntAttribute</tt><big>(</big><em>attrName</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.isPerParticleIntAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>To check if the input attribute is a per particle integer attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>attrName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The input attribute name</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.isPerParticleIntAttribute</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.isPerParticleVectorAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">isPerParticleVectorAttribute</tt><big>(</big><em>attrName</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.isPerParticleVectorAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>To check if the input attribute is a per particle vector attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>attrName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The input attribute name</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.isPerParticleVectorAttribute</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.isValid">
+<tt class="descclassname">Particle.</tt><tt class="descname">isValid</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.isValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns false if the particle array is NULL.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.isValid</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.lifespan">
+<tt class="descclassname">Particle.</tt><tt class="descname">lifespan</tt><big>(</big><em>lifespans</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.lifespan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the given array with the lifespan values of the particles in this system, if the particles have this attribute. See  hasLifespan() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">lifespans : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.lifespan</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.mass">
+<tt class="descclassname">Particle.</tt><tt class="descname">mass</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>To return mass array for all particles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.mass</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.num">
+<tt class="descclassname">Particle.</tt><tt class="descname">num</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.num" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.opacity">
+<tt class="descclassname">Particle.</tt><tt class="descname">opacity</tt><big>(</big><em>opacities</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.opacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the given array with the opacity values of the particles in this system, if the particles have this attribute. See  hasOpacity() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">opacities : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.opacity</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.originalParticleShape">
+<tt class="descclassname">Particle.</tt><tt class="descname">originalParticleShape</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.originalParticleShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>To get the original particleShape.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.originalParticleShape</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.particleIds">
+<tt class="descclassname">Particle.</tt><tt class="descname">particleIds</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.particleIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array of particle identifiers at the start of the time step. The array of particle id&#8217;s is correlated with the other per-particle arrays returned by this class, so ids[i] will be the id for the particle with position position[i], velocity[i], etc., as long as all these arrays were retrieved for the same time step.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.particleIds</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.particleName">
+<tt class="descclassname">Particle.</tt><tt class="descname">particleName</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.particleName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of this particle system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.particleName</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.pointCount">
+<tt class="descclassname">Particle.</tt><tt class="descname">pointCount</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.pointCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pymel.core.nodetypes.Particle.points">
+<tt class="descclassname">Particle.</tt><tt class="descname">points</tt><a class="headerlink" href="#pymel.core.nodetypes.Particle.points" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.position">
+<tt class="descclassname">Particle.</tt><tt class="descname">position</tt><big>(</big><em>positions</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute each particle&#8217;s position at the start of the time step. This is done by taking the particle&#8217;s current position and velocity, and extrapolation backwards in time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">positions : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.position</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.position0">
+<tt class="descclassname">Particle.</tt><tt class="descname">position0</tt><big>(</big><em>positions</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.position0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kTube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">positions : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.position0</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.position1">
+<tt class="descclassname">Particle.</tt><tt class="descname">position1</tt><big>(</big><em>positions</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.position1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kTube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">positions : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.position1</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.primaryVisibility">
+<tt class="descclassname">Particle.</tt><tt class="descname">primaryVisibility</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.primaryVisibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the rendering attribute for primary visibility in reflections has been enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.primaryVisibility</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pymel.core.nodetypes.Particle.pt">
+<tt class="descclassname">Particle.</tt><tt class="descname">pt</tt><a class="headerlink" href="#pymel.core.nodetypes.Particle.pt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.radius">
+<tt class="descclassname">Particle.</tt><tt class="descname">radius</tt><big>(</big><em>radii</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates particle radii.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">radii : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.radius</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.radius0">
+<tt class="descclassname">Particle.</tt><tt class="descname">radius0</tt><big>(</big><em>radii</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.radius0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kTube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">radii : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.radius0</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.radius1">
+<tt class="descclassname">Particle.</tt><tt class="descname">radius1</tt><big>(</big><em>radii</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.radius1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kTube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">radii : <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.radius1</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.receiveShadows">
+<tt class="descclassname">Particle.</tt><tt class="descname">receiveShadows</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.receiveShadows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the rendering attribute for particles receiving shadows has been enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.receiveShadows</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.renderType">
+<tt class="descclassname">Particle.</tt><tt class="descname">renderType</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.renderType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the render type used by the particle object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Particle.RenderType</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.renderType</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.rgb">
+<tt class="descclassname">Particle.</tt><tt class="descname">rgb</tt><big>(</big><em>colors</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the given array with the color values of the particles in this system, if the particles have this attribute. See  hasRgb() .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">colors : <tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.rgb</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.saveInitialState">
+<tt class="descclassname">Particle.</tt><tt class="descname">saveInitialState</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.saveInitialState" title="Permalink to this definition">¶</a></dt>
+<dd><p>To reset the particle&#8217;s current state as the initial state.
+Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.saveInitialState</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">setAttribute</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the name of the attribute being queried or edited.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setCache">
+<tt class="descclassname">Particle.</tt><tt class="descname">setCache</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns caching on/off for the particle shape.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setConserve">
+<tt class="descclassname">Particle.</tt><tt class="descname">setConserve</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setConserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conservation of momentum control (between 0 and 1).  Specifies the fraction of the particle shape&#8217;s existing momentum which is conserved from frame to frame. A value of 1 (the default) corresponds to true Newtonian physics, in which momentum is conserved.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setCount">
+<tt class="descclassname">Particle.</tt><tt class="descname">setCount</tt><big>(</big><em>count</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the particle count at the current frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">count : <tt class="xref py py-obj docutils literal"><span class="pre">int</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.setCount</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setInherit">
+<tt class="descclassname">Particle.</tt><tt class="descname">setInherit</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setInherit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherit this fraction (0-1) of emitting object&#8217;s velocity.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setName">
+<tt class="descclassname">Particle.</tt><tt class="descname">setName</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of particle object</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setOrder">
+<tt class="descclassname">Particle.</tt><tt class="descname">setOrder</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the zero-based order (index) of the particle whose attribute is being queried  or edited in the particle array. Querying the value of a per particle attribute requires the -attribute and -id or -order flags and their arguments to precede the -q flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setParticleId">
+<tt class="descclassname">Particle.</tt><tt class="descname">setParticleId</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setParticleId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in per particle attribute query and edit. Specifies the id of the particle whose attribute is being queried or edited. Querying the value of a per particle attribute requires the -attribute and -id or -order flags and their arguments to precede the -q flag.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setPerParticleAttribute">
+<tt class="descclassname">Particle.</tt><tt class="descname">setPerParticleAttribute</tt><big>(</big><em>attrName</em>, <em>array</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setPerParticleAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>To set the per particle vector attribute of the given name with the given values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>attrName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The input attribute name</p>
+</dd>
+<dt>array <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</span></dt>
+<dd><p class="first last">The input vector array</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.setPerParticleAttribute</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.setShapeName">
+<tt class="descclassname">Particle.</tt><tt class="descname">setShapeName</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.setShapeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the shape name used for geometry instancing. DO not confuse this with the -n flag which names the particle object.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.surfaceShading">
+<tt class="descclassname">Particle.</tt><tt class="descname">surfaceShading</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.surfaceShading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kCloud.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.surfaceShading</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.tailSize">
+<tt class="descclassname">Particle.</tt><tt class="descname">tailSize</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.tailSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kTube.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.tailSize</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.threshold">
+<tt class="descclassname">Particle.</tt><tt class="descname">threshold</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only for use with an  MFnParticleSystem  of renderType kCloud or kBlobby.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.threshold</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.vectorValue">
+<tt class="descclassname">Particle.</tt><tt class="descname">vectorValue</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.vectorValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used only in per particle attribute edit.  Specifies that the edit is of a vector attribute and must be followed by all three float values for the vector.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.particle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.velocity">
+<tt class="descclassname">Particle.</tt><tt class="descname">velocity</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>To return velocity array for all particles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Vector</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.velocity</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.visibleInReflections">
+<tt class="descclassname">Particle.</tt><tt class="descname">visibleInReflections</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.visibleInReflections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the rendering attribute for particle visibility in reflections has been enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.visibleInReflections</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Particle.visibleInRefractions">
+<tt class="descclassname">Particle.</tt><tt class="descname">visibleInRefractions</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Particle.visibleInRefractions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether or not the rendering attribute for particle visibility in refractions has been enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaFX.MFnParticleSystem.visibleInRefractions</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Parti_volume_photon.html"
+                        title="previous chapter">pymel.core.nodetypes.Parti_volume_photon</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.ParticleAgeMapper.html"
+                        title="next chapter">pymel.core.nodetypes.ParticleAgeMapper</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.Particle.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.ParticleAgeMapper.html" title="pymel.core.nodetypes.ParticleAgeMapper"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Parti_volume_photon.html" title="pymel.core.nodetypes.Parti_volume_photon"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

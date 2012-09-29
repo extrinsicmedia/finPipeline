@@ -1,0 +1,6 @@
+pymel.core.windows.colorSliderButtonGrp
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.colorSliderButtonGrp

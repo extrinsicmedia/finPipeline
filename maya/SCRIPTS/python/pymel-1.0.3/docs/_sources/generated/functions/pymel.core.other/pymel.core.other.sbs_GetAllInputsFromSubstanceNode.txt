@@ -1,0 +1,6 @@
+pymel.core.other.sbs_GetAllInputsFromSubstanceNode
+==================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: other.sbs_GetAllInputsFromSubstanceNode

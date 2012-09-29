@@ -1,0 +1,6 @@
+pymel.core.runtime.nClothMakeCollide
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.nClothMakeCollide

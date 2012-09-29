@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateAreaLightOptions
+=========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateAreaLightOptions

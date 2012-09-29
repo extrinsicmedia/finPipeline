@@ -1,0 +1,6 @@
+pymel.core.modeling.intersect
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.intersect

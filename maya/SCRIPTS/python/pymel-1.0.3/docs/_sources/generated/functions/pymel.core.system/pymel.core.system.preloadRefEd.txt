@@ -1,0 +1,6 @@
+pymel.core.system.preloadRefEd
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: system.preloadRefEd

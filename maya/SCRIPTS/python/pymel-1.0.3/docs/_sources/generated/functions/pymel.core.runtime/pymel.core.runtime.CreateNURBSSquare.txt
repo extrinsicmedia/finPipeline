@@ -1,0 +1,6 @@
+pymel.core.runtime.CreateNURBSSquare
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreateNURBSSquare

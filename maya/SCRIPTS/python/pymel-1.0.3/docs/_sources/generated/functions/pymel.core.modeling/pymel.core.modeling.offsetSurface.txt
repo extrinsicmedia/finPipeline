@@ -1,0 +1,6 @@
+pymel.core.modeling.offsetSurface
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.offsetSurface

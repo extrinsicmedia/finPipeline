@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.util.arrays &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../index.html" />
+    <link rel="next" title="pymel.util.arrays.abs" href="functions/pymel.util.arrays/pymel.util.arrays.abs.html" />
+    <link rel="prev" title="pymel.util.arguments.RemovedKey" href="classes/pymel.util.arguments/pymel.util.arguments.RemovedKey.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.util.arrays/pymel.util.arrays.abs.html" title="pymel.util.arrays.abs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classes/pymel.util.arguments/pymel.util.arguments.RemovedKey.html" title="pymel.util.arguments.RemovedKey"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-pymel.util.arrays">
+<span id="pymel-util-arrays"></span><h1>pymel.util.arrays<a class="headerlink" href="#module-pymel.util.arrays" title="Permalink to this headline">¶</a></h1>
+<p>A generic n-dimensionnal Array class serving as base for arbitrary length VectorN and MatrixN classes</p>
+<p class="rubric">Functions</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.abs.html#pymel.util.arrays.abs" title="pymel.util.arrays.abs"><tt class="xref py py-obj docutils literal"><span class="pre">abs</span></tt></a></td>
+<td>abs(number) -&gt; number</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.acos.html#pymel.util.arrays.acos" title="pymel.util.arrays.acos"><tt class="xref py py-obj docutils literal"><span class="pre">acos</span></tt></a></td>
+<td>acos(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.acosh.html#pymel.util.arrays.acosh" title="pymel.util.arrays.acosh"><tt class="xref py py-obj docutils literal"><span class="pre">acosh</span></tt></a></td>
+<td>acosh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.all.html#pymel.util.arrays.all" title="pymel.util.arrays.all"><tt class="xref py py-obj docutils literal"><span class="pre">all</span></tt></a></td>
+<td>all(a, [,axis=(axis0, axis1, ...)]) &#8211;&gt; bool or Array of booleans</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.angle.html#pymel.util.arrays.angle" title="pymel.util.arrays.angle"><tt class="xref py py-obj docutils literal"><span class="pre">angle</span></tt></a></td>
+<td>angle(u, v) &#8211;&gt; float</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.any.html#pymel.util.arrays.any" title="pymel.util.arrays.any"><tt class="xref py py-obj docutils literal"><span class="pre">any</span></tt></a></td>
+<td>any(a [,axis=(axis0, axis1, ...)]) &#8211;&gt; bool or Array of booleans</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.asin.html#pymel.util.arrays.asin" title="pymel.util.arrays.asin"><tt class="xref py py-obj docutils literal"><span class="pre">asin</span></tt></a></td>
+<td>asin(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.asinh.html#pymel.util.arrays.asinh" title="pymel.util.arrays.asinh"><tt class="xref py py-obj docutils literal"><span class="pre">asinh</span></tt></a></td>
+<td>asinh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.atan.html#pymel.util.arrays.atan" title="pymel.util.arrays.atan"><tt class="xref py py-obj docutils literal"><span class="pre">atan</span></tt></a></td>
+<td>atan(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.atan2.html#pymel.util.arrays.atan2" title="pymel.util.arrays.atan2"><tt class="xref py py-obj docutils literal"><span class="pre">atan2</span></tt></a></td>
+<td>atan2(y, x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.atanh.html#pymel.util.arrays.atanh" title="pymel.util.arrays.atanh"><tt class="xref py py-obj docutils literal"><span class="pre">atanh</span></tt></a></td>
+<td>atanh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.axis.html#pymel.util.arrays.axis" title="pymel.util.arrays.axis"><tt class="xref py py-obj docutils literal"><span class="pre">axis</span></tt></a></td>
+<td>axis(u, v[, normalize=False]) &#8211;&gt; VectorN</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.blend.html#pymel.util.arrays.blend" title="pymel.util.arrays.blend"><tt class="xref py py-obj docutils literal"><span class="pre">blend</span></tt></a></td>
+<td>blend(a, b[, weight=0.5]) :</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.ceil.html#pymel.util.arrays.ceil" title="pymel.util.arrays.ceil"><tt class="xref py py-obj docutils literal"><span class="pre">ceil</span></tt></a></td>
+<td>ceil(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.clamp.html#pymel.util.arrays.clamp" title="pymel.util.arrays.clamp"><tt class="xref py py-obj docutils literal"><span class="pre">clamp</span></tt></a></td>
+<td>Clamps the value x between min and max</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.clsname.html#pymel.util.arrays.clsname" title="pymel.util.arrays.clsname"><tt class="xref py py-obj docutils literal"><span class="pre">clsname</span></tt></a></td>
+<td></td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.conjugate.html#pymel.util.arrays.conjugate" title="pymel.util.arrays.conjugate"><tt class="xref py py-obj docutils literal"><span class="pre">conjugate</span></tt></a></td>
+<td>the conjugate part of x</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.copysign.html#pymel.util.arrays.copysign" title="pymel.util.arrays.copysign"><tt class="xref py py-obj docutils literal"><span class="pre">copysign</span></tt></a></td>
+<td>copysign(x,y)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.cos.html#pymel.util.arrays.cos" title="pymel.util.arrays.cos"><tt class="xref py py-obj docutils literal"><span class="pre">cos</span></tt></a></td>
+<td>cos(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.cosh.html#pymel.util.arrays.cosh" title="pymel.util.arrays.cosh"><tt class="xref py py-obj docutils literal"><span class="pre">cosh</span></tt></a></td>
+<td>cosh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.cotan.html#pymel.util.arrays.cotan" title="pymel.util.arrays.cotan"><tt class="xref py py-obj docutils literal"><span class="pre">cotan</span></tt></a></td>
+<td>cotan(u, v) &#8211;&gt; float :</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.cross.html#pymel.util.arrays.cross" title="pymel.util.arrays.cross"><tt class="xref py py-obj docutils literal"><span class="pre">cross</span></tt></a></td>
+<td>cross(u, v) &#8211;&gt; VectorN</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.degrees.html#pymel.util.arrays.degrees" title="pymel.util.arrays.degrees"><tt class="xref py py-obj docutils literal"><span class="pre">degrees</span></tt></a></td>
+<td>degrees(x) -&gt; converts angle x from radians to degrees</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.det.html#pymel.util.arrays.det" title="pymel.util.arrays.det"><tt class="xref py py-obj docutils literal"><span class="pre">det</span></tt></a></td>
+<td>det(m) &#8211;&gt; float</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.dist.html#pymel.util.arrays.dist" title="pymel.util.arrays.dist"><tt class="xref py py-obj docutils literal"><span class="pre">dist</span></tt></a></td>
+<td>dist(a, b[, axis=(axis0, axis1, ...)]) &#8211;&gt; float or Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.dot.html#pymel.util.arrays.dot" title="pymel.util.arrays.dot"><tt class="xref py py-obj docutils literal"><span class="pre">dot</span></tt></a></td>
+<td>dot(u, v) &#8211;&gt; float</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.exp.html#pymel.util.arrays.exp" title="pymel.util.arrays.exp"><tt class="xref py py-obj docutils literal"><span class="pre">exp</span></tt></a></td>
+<td>exp(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.fabs.html#pymel.util.arrays.fabs" title="pymel.util.arrays.fabs"><tt class="xref py py-obj docutils literal"><span class="pre">fabs</span></tt></a></td>
+<td>fabs(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.factorial.html#pymel.util.arrays.factorial" title="pymel.util.arrays.factorial"><tt class="xref py py-obj docutils literal"><span class="pre">factorial</span></tt></a></td>
+<td>factorial(x) -&gt; Integral</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.floor.html#pymel.util.arrays.floor" title="pymel.util.arrays.floor"><tt class="xref py py-obj docutils literal"><span class="pre">floor</span></tt></a></td>
+<td>floor(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.fmod.html#pymel.util.arrays.fmod" title="pymel.util.arrays.fmod"><tt class="xref py py-obj docutils literal"><span class="pre">fmod</span></tt></a></td>
+<td>fmod(x,y)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.frexp.html#pymel.util.arrays.frexp" title="pymel.util.arrays.frexp"><tt class="xref py py-obj docutils literal"><span class="pre">frexp</span></tt></a></td>
+<td>frexp(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.fsum.html#pymel.util.arrays.fsum" title="pymel.util.arrays.fsum"><tt class="xref py py-obj docutils literal"><span class="pre">fsum</span></tt></a></td>
+<td>sum(iterable)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.gamma.html#pymel.util.arrays.gamma" title="pymel.util.arrays.gamma"><tt class="xref py py-obj docutils literal"><span class="pre">gamma</span></tt></a></td>
+<td>Gamma color correction of c with a single scalar gamma value g</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.hermite.html#pymel.util.arrays.hermite" title="pymel.util.arrays.hermite"><tt class="xref py py-obj docutils literal"><span class="pre">hermite</span></tt></a></td>
+<td>As the MEL command : This command returns x point along on x hermite curve from the five given control arguments.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.hermiteInterp.html#pymel.util.arrays.hermiteInterp" title="pymel.util.arrays.hermiteInterp"><tt class="xref py py-obj docutils literal"><span class="pre">hermiteInterp</span></tt></a></td>
+<td>Hermite interpolation of x between points y0 and y1 of tangent slope s0 and s1</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.hypot.html#pymel.util.arrays.hypot" title="pymel.util.arrays.hypot"><tt class="xref py py-obj docutils literal"><span class="pre">hypot</span></tt></a></td>
+<td>hypot(x,y)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.imag.html#pymel.util.arrays.imag" title="pymel.util.arrays.imag"><tt class="xref py py-obj docutils literal"><span class="pre">imag</span></tt></a></td>
+<td>the imaginary part of x</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.inv.html#pymel.util.arrays.inv" title="pymel.util.arrays.inv"><tt class="xref py py-obj docutils literal"><span class="pre">inv</span></tt></a></td>
+<td>inv(m) &#8211;&gt; MatrixN</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.isNumeric.html#pymel.util.arrays.isNumeric" title="pymel.util.arrays.isNumeric"><tt class="xref py py-obj docutils literal"><span class="pre">isNumeric</span></tt></a></td>
+<td>Returns True if an object is a number type, otherwise returns False.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.isinf.html#pymel.util.arrays.isinf" title="pymel.util.arrays.isinf"><tt class="xref py py-obj docutils literal"><span class="pre">isinf</span></tt></a></td>
+<td>isinf(x) -&gt; bool</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.isnan.html#pymel.util.arrays.isnan" title="pymel.util.arrays.isnan"><tt class="xref py py-obj docutils literal"><span class="pre">isnan</span></tt></a></td>
+<td>isnan(x) -&gt; bool</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.ldexp.html#pymel.util.arrays.ldexp" title="pymel.util.arrays.ldexp"><tt class="xref py py-obj docutils literal"><span class="pre">ldexp</span></tt></a></td>
+<td>ldexp(x, i) -&gt; x * (2**i)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.length.html#pymel.util.arrays.length" title="pymel.util.arrays.length"><tt class="xref py py-obj docutils literal"><span class="pre">length</span></tt></a></td>
+<td>length(a[, axis=(axis0, axis1, ...)]) &#8211;&gt; numeric or Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.linmap.html#pymel.util.arrays.linmap" title="pymel.util.arrays.linmap"><tt class="xref py py-obj docutils literal"><span class="pre">linmap</span></tt></a></td>
+<td>Returns the value of a linear remapping function.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.linstep.html#pymel.util.arrays.linstep" title="pymel.util.arrays.linstep"><tt class="xref py py-obj docutils literal"><span class="pre">linstep</span></tt></a></td>
+<td>Returns the value of a linear step function.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.log.html#pymel.util.arrays.log" title="pymel.util.arrays.log"><tt class="xref py py-obj docutils literal"><span class="pre">log</span></tt></a></td>
+<td>log(x[, base]) -&gt; the logarithm of x to the given base.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.log10.html#pymel.util.arrays.log10" title="pymel.util.arrays.log10"><tt class="xref py py-obj docutils literal"><span class="pre">log10</span></tt></a></td>
+<td>log10(x) -&gt; the base 10 logarithm of x.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.log1p.html#pymel.util.arrays.log1p" title="pymel.util.arrays.log1p"><tt class="xref py py-obj docutils literal"><span class="pre">log1p</span></tt></a></td>
+<td>log1p(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.max.html#pymel.util.arrays.max" title="pymel.util.arrays.max"><tt class="xref py py-obj docutils literal"><span class="pre">max</span></tt></a></td>
+<td>max(iterable[, key=func[, axis=(axis0, axis1, ...)]]) &#8211;&gt; value</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.min.html#pymel.util.arrays.min" title="pymel.util.arrays.min"><tt class="xref py py-obj docutils literal"><span class="pre">min</span></tt></a></td>
+<td>min(iterable[, key=func[, axis=(axis0, axis1, ...)]]) &#8211;&gt; value</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.modf.html#pymel.util.arrays.modf" title="pymel.util.arrays.modf"><tt class="xref py py-obj docutils literal"><span class="pre">modf</span></tt></a></td>
+<td>modf(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.normal.html#pymel.util.arrays.normal" title="pymel.util.arrays.normal"><tt class="xref py py-obj docutils literal"><span class="pre">normal</span></tt></a></td>
+<td>normal(a[, axis=(axis0, axis1, ...)]) &#8211;&gt; Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.outer.html#pymel.util.arrays.outer" title="pymel.util.arrays.outer"><tt class="xref py py-obj docutils literal"><span class="pre">outer</span></tt></a></td>
+<td>outer(u, v) &#8211;&gt; MatrixN</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.patchMath.html#pymel.util.arrays.patchMath" title="pymel.util.arrays.patchMath"><tt class="xref py py-obj docutils literal"><span class="pre">patchMath</span></tt></a></td>
+<td>Overload various math functions to work element-wise on iterables</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.pow.html#pymel.util.arrays.pow" title="pymel.util.arrays.pow"><tt class="xref py py-obj docutils literal"><span class="pre">pow</span></tt></a></td>
+<td>pow(x,y)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.prod.html#pymel.util.arrays.prod" title="pymel.util.arrays.prod"><tt class="xref py py-obj docutils literal"><span class="pre">prod</span></tt></a></td>
+<td>prod(a[, start=1[, axis=(axis0, axis1, ...)]]) &#8211;&gt; numeric or Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.radians.html#pymel.util.arrays.radians" title="pymel.util.arrays.radians"><tt class="xref py py-obj docutils literal"><span class="pre">radians</span></tt></a></td>
+<td>radians(x) -&gt; converts angle x from degrees to radians</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.readonly.html#pymel.util.arrays.readonly" title="pymel.util.arrays.readonly"><tt class="xref py py-obj docutils literal"><span class="pre">readonly</span></tt></a></td>
+<td>Marks a class member as protected, allowing metaProtected to prevent re-assignation on the classes it generates</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.real.html#pymel.util.arrays.real" title="pymel.util.arrays.real"><tt class="xref py py-obj docutils literal"><span class="pre">real</span></tt></a></td>
+<td>the real part of x</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.round.html#pymel.util.arrays.round" title="pymel.util.arrays.round"><tt class="xref py py-obj docutils literal"><span class="pre">round</span></tt></a></td>
+<td>round(number[, ndigits]) -&gt; float</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.setRange.html#pymel.util.arrays.setRange" title="pymel.util.arrays.setRange"><tt class="xref py py-obj docutils literal"><span class="pre">setRange</span></tt></a></td>
+<td>Resets x range from x linear interpolation of oldmin to oldmax to x linear interpolation from newmin to newmax</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.sin.html#pymel.util.arrays.sin" title="pymel.util.arrays.sin"><tt class="xref py py-obj docutils literal"><span class="pre">sin</span></tt></a></td>
+<td>sin(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.sinh.html#pymel.util.arrays.sinh" title="pymel.util.arrays.sinh"><tt class="xref py py-obj docutils literal"><span class="pre">sinh</span></tt></a></td>
+<td>sinh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.smoothmap.html#pymel.util.arrays.smoothmap" title="pymel.util.arrays.smoothmap"><tt class="xref py py-obj docutils literal"><span class="pre">smoothmap</span></tt></a></td>
+<td>Returns the value of a smooth remapping function.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.smoothstep.html#pymel.util.arrays.smoothstep" title="pymel.util.arrays.smoothstep"><tt class="xref py py-obj docutils literal"><span class="pre">smoothstep</span></tt></a></td>
+<td>Returns the value of a smooth step function.</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.sqlength.html#pymel.util.arrays.sqlength" title="pymel.util.arrays.sqlength"><tt class="xref py py-obj docutils literal"><span class="pre">sqlength</span></tt></a></td>
+<td>sqlength(a[, axis=(axis0, axis1, ...)]) &#8211;&gt; numeric or Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.sqrt.html#pymel.util.arrays.sqrt" title="pymel.util.arrays.sqrt"><tt class="xref py py-obj docutils literal"><span class="pre">sqrt</span></tt></a></td>
+<td>sqrt(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.sum.html#pymel.util.arrays.sum" title="pymel.util.arrays.sum"><tt class="xref py py-obj docutils literal"><span class="pre">sum</span></tt></a></td>
+<td>sum(a[, start=0[, axis=(axis0, axis1, ...)]]) &#8211;&gt; numeric or Array</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.tan.html#pymel.util.arrays.tan" title="pymel.util.arrays.tan"><tt class="xref py py-obj docutils literal"><span class="pre">tan</span></tt></a></td>
+<td>tan(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.tanh.html#pymel.util.arrays.tanh" title="pymel.util.arrays.tanh"><tt class="xref py py-obj docutils literal"><span class="pre">tanh</span></tt></a></td>
+<td>tanh(x)</td>
+</tr>
+<tr><td><a class="reference internal" href="functions/pymel.util.arrays/pymel.util.arrays.trunc.html#pymel.util.arrays.trunc" title="pymel.util.arrays.trunc"><tt class="xref py py-obj docutils literal"><span class="pre">trunc</span></tt></a></td>
+<td>trunc(x:Real) -&gt; Integral</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="classes/pymel.util.arrays/pymel.util.arrays.Array.html#pymel.util.arrays.Array" title="pymel.util.arrays.Array"><tt class="xref py py-obj docutils literal"><span class="pre">Array</span></tt></a></td>
+<td>A generic n-dimensional array class using nested lists for storage.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.util.arrays/pymel.util.arrays.ArrayIter.html#pymel.util.arrays.ArrayIter" title="pymel.util.arrays.ArrayIter"><tt class="xref py py-obj docutils literal"><span class="pre">ArrayIter</span></tt></a></td>
+<td>A general purpose iterator on Arrays.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.util.arrays/pymel.util.arrays.MatrixN.html#pymel.util.arrays.MatrixN" title="pymel.util.arrays.MatrixN"><tt class="xref py py-obj docutils literal"><span class="pre">MatrixN</span></tt></a></td>
+<td>A generic size MatrixN class, basically a 2 dimensional Array.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.util.arrays/pymel.util.arrays.VectorN.html#pymel.util.arrays.VectorN" title="pymel.util.arrays.VectorN"><tt class="xref py py-obj docutils literal"><span class="pre">VectorN</span></tt></a></td>
+<td>A generic size VectorN class derived from Array, basically a 1 dimensional Array.</td>
+</tr>
+<tr><td><a class="reference internal" href="classes/pymel.util.arrays/pymel.util.arrays.metaReadOnlyAttr.html#pymel.util.arrays.metaReadOnlyAttr" title="pymel.util.arrays.metaReadOnlyAttr"><tt class="xref py py-obj docutils literal"><span class="pre">metaReadOnlyAttr</span></tt></a></td>
+<td>A metaclass to allow to define read-only class attributes, accessible either on the class or it&#8217;s instances and protected against re-write or re-definition.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="classes/pymel.util.arguments/pymel.util.arguments.RemovedKey.html"
+                        title="previous chapter">pymel.util.arguments.RemovedKey</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="functions/pymel.util.arrays/pymel.util.arrays.abs.html"
+                        title="next chapter">pymel.util.arrays.abs</a></p>
+<h3><a href="../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/pymel.util.arrays.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="functions/pymel.util.arrays/pymel.util.arrays.abs.html" title="pymel.util.arrays.abs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classes/pymel.util.arguments/pymel.util.arguments.RemovedKey.html" title="pymel.util.arguments.RemovedKey"
+             >previous</a> |</li>
+        <li><a href="../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

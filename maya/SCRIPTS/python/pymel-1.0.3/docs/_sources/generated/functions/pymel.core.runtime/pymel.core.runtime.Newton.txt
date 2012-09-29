@@ -1,0 +1,6 @@
+pymel.core.runtime.Newton
+=========================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.Newton

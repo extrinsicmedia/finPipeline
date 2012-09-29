@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKState2SK
+================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKState2SK
+    :parts: 1
+
+.. autoclass:: HIKState2SK
+    :members:
+    :undoc-members:

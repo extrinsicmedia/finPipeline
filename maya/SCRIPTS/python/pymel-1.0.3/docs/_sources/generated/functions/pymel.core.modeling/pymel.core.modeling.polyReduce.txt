@@ -1,0 +1,6 @@
+pymel.core.modeling.polyReduce
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.polyReduce

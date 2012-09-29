@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Misss_fast_skin_phen
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Misss_fast_skin_phen
+    :parts: 1
+
+.. autoclass:: Misss_fast_skin_phen
+    :members:
+    :undoc-members:

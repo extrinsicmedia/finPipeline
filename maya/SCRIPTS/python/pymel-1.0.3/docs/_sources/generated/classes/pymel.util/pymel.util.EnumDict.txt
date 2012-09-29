@@ -1,0 +1,11 @@
+pymel.util.EnumDict
+===================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: EnumDict
+    :parts: 1
+
+.. autoclass:: EnumDict
+    :members:
+    :undoc-members:

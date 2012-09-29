@@ -1,0 +1,6 @@
+pymel.core.effects.particleRenderInfo
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: effects.particleRenderInfo

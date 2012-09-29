@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePolygonPyramid
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePolygonPyramid

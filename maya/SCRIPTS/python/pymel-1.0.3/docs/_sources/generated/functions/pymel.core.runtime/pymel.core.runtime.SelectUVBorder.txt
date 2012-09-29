@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectUVBorder
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectUVBorder

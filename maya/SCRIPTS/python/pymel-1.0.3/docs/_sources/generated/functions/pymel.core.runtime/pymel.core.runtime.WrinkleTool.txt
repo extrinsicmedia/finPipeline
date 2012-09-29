@@ -1,0 +1,6 @@
+pymel.core.runtime.WrinkleTool
+==============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.WrinkleTool

@@ -1,0 +1,6 @@
+pymel.core.effects.volumeAxis
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: effects.volumeAxis

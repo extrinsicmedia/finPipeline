@@ -1,0 +1,6 @@
+pymel.core.runtime.NURBSSmoothnessMediumOptions
+===============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.NURBSSmoothnessMediumOptions

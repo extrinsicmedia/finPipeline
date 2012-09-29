@@ -1,0 +1,6 @@
+pymel.util.compareCascadingDicts
+================================
+
+.. currentmodule:: pymel
+
+.. automethod:: util.compareCascadingDicts

@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Misss_fast_lmap_maya
+=========================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Misss_fast_lmap_maya
+    :parts: 1
+
+.. autoclass:: Misss_fast_lmap_maya
+    :members:
+    :undoc-members:

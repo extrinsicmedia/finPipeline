@@ -1,0 +1,6 @@
+pymel.core.runtime.AffectSelectedObject
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.AffectSelectedObject

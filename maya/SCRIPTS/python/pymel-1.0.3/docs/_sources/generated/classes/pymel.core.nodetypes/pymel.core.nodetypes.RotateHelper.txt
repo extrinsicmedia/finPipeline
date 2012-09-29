@@ -1,0 +1,11 @@
+pymel.core.nodetypes.RotateHelper
+=================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: RotateHelper
+    :parts: 1
+
+.. autoclass:: RotateHelper
+    :members:
+    :undoc-members:

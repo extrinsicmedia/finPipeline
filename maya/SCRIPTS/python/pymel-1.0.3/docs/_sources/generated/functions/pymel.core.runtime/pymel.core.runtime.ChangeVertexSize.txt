@@ -1,0 +1,6 @@
+pymel.core.runtime.ChangeVertexSize
+===================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ChangeVertexSize

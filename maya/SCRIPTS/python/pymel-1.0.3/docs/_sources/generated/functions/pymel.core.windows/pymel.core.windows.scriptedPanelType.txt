@@ -1,0 +1,6 @@
+pymel.core.windows.scriptedPanelType
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.scriptedPanelType

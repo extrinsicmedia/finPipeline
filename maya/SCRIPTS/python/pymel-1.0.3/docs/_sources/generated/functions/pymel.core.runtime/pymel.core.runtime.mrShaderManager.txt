@@ -1,0 +1,6 @@
+pymel.core.runtime.mrShaderManager
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.mrShaderManager

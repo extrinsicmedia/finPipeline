@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowAttributeEditorOrChannelBox
+==================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowAttributeEditorOrChannelBox

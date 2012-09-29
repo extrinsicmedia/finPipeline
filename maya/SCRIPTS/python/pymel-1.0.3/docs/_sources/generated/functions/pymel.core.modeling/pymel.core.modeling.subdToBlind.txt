@@ -1,0 +1,6 @@
+pymel.core.modeling.subdToBlind
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: modeling.subdToBlind

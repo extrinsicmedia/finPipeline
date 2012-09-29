@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllNURBSCurves
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllNURBSCurves

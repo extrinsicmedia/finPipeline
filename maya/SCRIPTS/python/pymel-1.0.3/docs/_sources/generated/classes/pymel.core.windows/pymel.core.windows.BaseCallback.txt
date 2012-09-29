@@ -1,0 +1,11 @@
+pymel.core.windows.BaseCallback
+===============================
+
+.. currentmodule:: pymel.core.windows
+
+.. inheritance-diagram:: BaseCallback
+    :parts: 1
+
+.. autoclass:: BaseCallback
+    :members:
+    :undoc-members:

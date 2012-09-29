@@ -1,0 +1,11 @@
+pymel.util.Sequence
+===================
+
+.. currentmodule:: pymel.util
+
+.. inheritance-diagram:: Sequence
+    :parts: 1
+
+.. autoclass:: Sequence
+    :members:
+    :undoc-members:

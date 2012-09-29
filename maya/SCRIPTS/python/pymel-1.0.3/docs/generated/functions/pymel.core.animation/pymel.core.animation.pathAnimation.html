@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.animation.pathAnimation &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.animation" href="../../pymel.core.animation.html" />
+    <link rel="next" title="pymel.core.animation.percent" href="pymel.core.animation.percent.html" />
+    <link rel="prev" title="pymel.core.animation.pasteKey" href="pymel.core.animation.pasteKey.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.percent.html" title="pymel.core.animation.percent"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.pasteKey.html" title="pymel.core.animation.pasteKey"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" accesskey="U">pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-animation-pathanimation">
+<h1>pymel.core.animation.pathAnimation<a class="headerlink" href="#pymel-core-animation-pathanimation" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.animation.pathAnimation">
+<em class="property">static </em><tt class="descclassname">animation.</tt><tt class="descname">pathAnimation</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.animation.pathAnimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pathAnimation command constructs the necessary graph nodes and their interconnections for a motion path animation.
+Motion path animation requires a curve and one or more other objects. During the animation, the objects will be moved
+along the 3D curve or the curveOnSurface.There are two ways to specify the moving objects: by explicitly specifying
+their names in the command line, orby making the objects selected (interactively, or through a MEL command).Likewise,
+there are two ways to specify a motion curve: by explicitly specifying the name of the motion curve in the command line
+(i.e. using the -c curve_name option), orby selecting the moving objects first before selecting the motion curve. I.e.
+if the name of the motion curve is not provided in the command line, the curve will be taken to be the last selected
+object in the selection list.When the end time is not specified: only one keyframe will be created either at the current
+time, or at the specified start time.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>bank (b)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If on, enable alignment of the up axis of the moving object(s) to the curvature of the path geometry.Default is false.When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>bankScale (bs)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies a factor to scale the amount of bank angle.Default is 1.0When queried, this flag returns a float.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>bankThreshold (bt)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies the limit of the bank angle.Default is 90 degreesWhen queried, this flag returns an angle.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>curve (c)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies the name of the curve for the path.Default is NONEWhen queried, this flag returns a string.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>endTimeU (etu)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies the ending time of the animation for the u parameter.Default is NONE.When queried, this flag returns a time.                          Flag can
+have multiple arguments, passed either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>endU (eu)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies the ending value of the u parameterization for the animation.Default is the end parameterization value of the curve.When queried, this flag
+returns a linear.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>follow (f)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If on, enable alignment of the front axis of the moving object(s).Default is false.When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>followAxis (fa)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies which object local axis to be aligned to the tangent of the path curve.Default is yWhen queried, this flag returns a string.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>fractionMode (fm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If on, evaluation on the path is based on the fraction of length of the path curve.Default is false.When queried, this flag returns a boolean.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>inverseFront (inverseFront)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies whether or not to align the front axis of the moving object(s) to the opposite direction of the tangent vector of the path geometry.Default is
+false.When queried, this flag returns a boolean.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>inverseUp (iu)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies whether or not to align the up axis of the moving object(s) to the opposite direction of the normal vector of the path geometry.Default is
+false.When queried, this flag returns a boolean.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies the name for the new motion path node. (instead of the default name)When queried, this flag returns a string.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>startTimeU (stu)</strong></td>
+<td><em>time</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies the starting time of the animation for the u parameter.Default is the the current time.When queried, this flag returns a time.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>startU (su)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">This flag specifies the starting value of the u parameterization for the animation.Default is the start parameterization value of the curve.When queried, this
+flag returns a linear.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>upAxis (ua)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag specifies which object local axis to be aligned a computed up direction.Default is zWhen queried, this flag returns a string.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useNormal (un)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is now obsolete. Use -wut/worldUpType instead.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpObject (wuo)</strong></td>
+<td><em>PyNode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the DAG object to use for worldUpType objectand objectrotation. See -wut/worldUpType for greater detail. The default value is no up object, which is
+interpreted as world space.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpType (wut)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set the type of the world up vector computation. The worldUpType can have one of 5 values: scene, object, objectrotation, vector, or normal. If the value is
+scene, the upVector is aligned with the up axis of the scene and worldUpVector and worldUpObject are ignored. If the value is object, the upVector is aimed as
+closely as possible to the origin of the space of the worldUpObject and the worldUpVector is ignored. If the value is objectrotationthen the worldUpVector is
+interpreted as being in the coordinate space of the worldUpObject, transformed into world space and the upVector is aligned as closely as possible to the result.
+If the value is vector, the upVector is aligned with worldUpVector as closely as possible and worldUpObject is ignored. Finally, if the value is normalthe
+upVector is aligned to the path geometry. The default worldUpType is vector.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldUpVector (wu)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Set world up vector.  This is the vector in world coordinates that up vector should align with. See -wut/worldUpType for greater detail. If not given at creation
+time, the default value of (0.0, 1.0, 0.0) is used.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.pathAnimation</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Create a set of simple objects for the motion path animation</span>
+
+<span class="c"># create a path, e,g, a curve</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">),(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span><span class="n">k</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c"># create an object, e.g. a sphere</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.2</span> <span class="p">)</span>
+
+<span class="c"># 1. To animate the sphere along the curve, with one keyframe at</span>
+<span class="c"># the current time:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">path</span> <span class="p">)</span>
+<span class="c"># Result: u&#39;motionPath1&#39; #</span>
+
+<span class="c"># or:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">path</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">()</span>
+
+<span class="c"># 2. To animate the sphere along the curve, from time 0 to time 30:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">etu</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">path</span> <span class="p">)</span>
+
+<span class="c"># 3. To align the sphere to its path:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">etu</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">follow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">path</span> <span class="p">)</span>
+
+<span class="c"># 4. To align the Z axis of sphere to the tangent of the curve, and</span>
+<span class="c"># to align the Y axis of the sphere to the up direction of the</span>
+<span class="c"># motion curve:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">etu</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">fa</span><span class="o">=</span><span class="s">&#39;z&#39;</span><span class="p">,</span> <span class="n">ua</span><span class="o">=</span><span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">path</span> <span class="p">)</span>
+
+<span class="c"># 5. To align the Z axis of sphere to the tangent of the motion curve,</span>
+<span class="c"># to align the Y axis of sphere to the up direction of the motion</span>
+<span class="c"># curve, and to bank with the curvature of the motion curve:</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="nb">object</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">etu</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">fa</span><span class="o">=</span><span class="s">&#39;z&#39;</span><span class="p">,</span> <span class="n">ua</span><span class="o">=</span><span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="n">bank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">path</span> <span class="p">)</span>
+
+<span class="c"># 6. To change the setting on the bankScale for the motionPath1</span>
+<span class="c"># to negative 2.5 (i.e. bank out and multiply the computed</span>
+<span class="c"># bank value by 2.5):</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">pathAnimation</span><span class="p">(</span> <span class="s">&#39;motionPath1&#39;</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bankScale</span><span class="o">=-</span><span class="mf">2.5</span> <span class="p">)</span>
+
+<span class="c"># Notes:</span>
+<span class="c"># If the computed bank angles are not large enough, the user can</span>
+<span class="c"># specify the bankScale to amplify them. The default value is 1.</span>
+
+<span class="c"># Positive bankScale produces inward bank angle,</span>
+<span class="c"># negative bankScale produces outward bank angle.</span>
+
+<span class="c"># The user can also change the maximum bank angle through</span>
+<span class="c"># the bankThreshold option. Default value is 90 degrees.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.animation.pasteKey.html"
+                        title="previous chapter">pymel.core.animation.pasteKey</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.animation.percent.html"
+                        title="next chapter">pymel.core.animation.percent</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.animation/pymel.core.animation.pathAnimation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.percent.html" title="pymel.core.animation.percent"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.animation.pasteKey.html" title="pymel.core.animation.pasteKey"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.animation.html" >pymel.core.animation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

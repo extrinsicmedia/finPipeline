@@ -1,0 +1,6 @@
+pymel.core.runtime.SetCurrentUVSet
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SetCurrentUVSet

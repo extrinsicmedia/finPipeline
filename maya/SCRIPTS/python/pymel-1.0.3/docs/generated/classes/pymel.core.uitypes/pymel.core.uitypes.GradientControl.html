@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.uitypes.GradientControl &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.uitypes" href="../../pymel.core.uitypes.html" />
+    <link rel="next" title="pymel.core.uitypes.GradientControlNoAttr" href="pymel.core.uitypes.GradientControlNoAttr.html" />
+    <link rel="prev" title="pymel.core.uitypes.GlRenderEditor" href="pymel.core.uitypes.GlRenderEditor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.GradientControlNoAttr.html" title="pymel.core.uitypes.GradientControlNoAttr"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.GlRenderEditor.html" title="pymel.core.uitypes.GlRenderEditor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" accesskey="U">pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-uitypes-gradientcontrol">
+<h1>pymel.core.uitypes.GradientControl<a class="headerlink" href="#pymel-core-uitypes-gradientcontrol" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-68399e732bc95ee4c3c3218d08009daf6332c525.png" alt="Inheritance diagram of GradientControl" usemap="#inheritanceed5f2817cf" class="inheritance"/>
+<map id="inheritanceed5f2817cf" name="inheritanceed5f2817cf">
+<area shape="rect" href="#pymel.core.uitypes.GradientControl" title="GradientControl" alt="" coords="5,44,112,68"/>
+<area shape="rect" href="pymel.core.uitypes.PyUI.html#pymel.core.uitypes.PyUI" title="PyUI" alt="" coords="23,5,95,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.uitypes.GradientControl">
+<em class="property">class </em><tt class="descname">GradientControl</tt><a class="headerlink" href="#pymel.core.uitypes.GradientControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">gradientControl</span></tt></p>
+<p>This command creates a control that displays the gradient attribute specified. The gradient attribute must be of the correct form and naming. It should be a multi attribute with each entry a compound composed of: Either a color compound or a float value (the control will automatically detect which and display a ramp or graph accordingly).A single float attribute for position.An enum for the interpolation types.Currently the routines to get the value of a ramp structure (with interpolation) are not available through MEL, which limits the use of this control by end users. The MEL command AEaddRampControl should be used to attach this control to an attribute from attribute editor templates.</p>
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.dragCallback">
+<tt class="descname">dragCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.dragCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when the middle mouse button is pressed.  The MEL version of the callback is of the form: global proc string[] callbackName(string $dragControl, int $x, int $y, int $mods) The proc returns a string array that is transferred to the drop site. By convention the first string in the array describes the user settable message type.  Controls that are application defined drag sources may ignore the callback. $mods allows testing for the key modifiers CTL and SHIFT. Possible values are 0 == No modifiers, 1 == SHIFT, 2 == CTL, 3 == CTL + SHIFT. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def callbackName( dragControl, x, y, modifiers ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, x, y, modifiers.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(x)d %(y)d %(modifiers)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.dropCallback">
+<tt class="descname">dropCallback</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.dropCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback that is called when a drag and drop operation is released above the drop site.  The MEL version of the callback is of the form: global proc callbackName(string $dragControl, string $dropControl, string $msgs[], int $x, int $y, int $type) The proc receives a string array that is transferred from the drag source. The first string in the msgs array describes the user defined message type. Controls that are application defined drop sites may ignore the callback. $type can have values of 1 == Move, 2 == Copy, 3 == Link. In Python, it is similar, but there are two ways to specify the callback.  The recommended way is to pass a Python function object as the argument.  In that case, the Python callback should have the form: def pythonDropTest( dragControl, dropControl, messages, x, y, dragType ): The values of these arguments are the same as those for the MEL version above. The other way to specify the callback in Python is to specify a string to be executed.  In that case, the string will have the values substituted into it via the standard Python format operator.  The format values are passed in a dictionary with the keys dragControl, dropControl, messages, x, y, type.  The dragControlvalue is a string and the other values are integers (eg the callback string could be print &#8216;%(dragControl)s %(dropControl)s %(messages)r %(x)d %(y)d %(type)d&#8217;</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getAdaptiveScaling">
+<tt class="descname">getAdaptiveScaling</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getAdaptiveScaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow the ramp widget display to scale vertically to accommodate values greater than 1.0. True if adaptive scaling is enabled, false (the default) if not.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getAnnotation">
+<tt class="descname">getAnnotation</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getBackgroundColor">
+<tt class="descname">getBackgroundColor</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getDocTag">
+<tt class="descname">getDocTag</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getEnable">
+<tt class="descname">getEnable</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getEnableBackground">
+<tt class="descname">getEnableBackground</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getFullPathName">
+<tt class="descname">getFullPathName</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getFullPathName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the full path name of the widget, which includes all the parents</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getHeight">
+<tt class="descname">getHeight</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getIsObscured">
+<tt class="descname">getIsObscured</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getIsObscured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the control can actually be seen by the user. The control will be obscured if its state is invisible, if it is blocked (entirely or partially) by some other control, if it or a parent layout is unmanaged, or if the control&#8217;s window is invisible or iconified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getManage">
+<tt class="descname">getManage</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getNumberOfControls">
+<tt class="descname">getNumberOfControls</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getNumberOfControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of controls in the ramp widget</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getNumberOfPopupMenus">
+<tt class="descname">getNumberOfPopupMenus</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getNumberOfPopupMenus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getPopupMenuArray">
+<tt class="descname">getPopupMenuArray</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getPopupMenuArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the names of all the popup menus attached to this control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getPreventOverride">
+<tt class="descname">getPreventOverride</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getRefreshOnRelease">
+<tt class="descname">getRefreshOnRelease</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getRefreshOnRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define how updates are dispatched during interactive editing of the ramp widget. True causes updates to only dispatch after releasing the mouse button after editing. False (the default) causes updates to dispatch interactively during editing (e.g. while moving ramp curve points). Note that the global update mode, if set to on releasecan disable the effect of this option.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getStaticNumberOfControls">
+<tt class="descname">getStaticNumberOfControls</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getStaticNumberOfControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this flag disables the creation/deletion of ramp entries (control points) via ramp widget interaction. Default is false.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getStaticPositions">
+<tt class="descname">getStaticPositions</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getStaticPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this flag disables the interactive modification of ramp entry positions. Default is false.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getUpperLimitControl">
+<tt class="descname">getUpperLimitControl</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getUpperLimitControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the name of a text control which is updated with the current upper display limit for the ramp. This option is only effective when adaptiveScaling is specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getVerticalLayout">
+<tt class="descname">getVerticalLayout</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getVerticalLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this makes the control orient vertically rather than horizontally. The default is <tt class="xref py py-obj docutils literal"><span class="pre">false</span></tt> or horizontal.                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getVisible">
+<tt class="descname">getVisible</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getVisibleChangeCommand">
+<tt class="descname">getVisibleChangeCommand</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.getWidth">
+<tt class="descname">getWidth</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.selectedColorControl">
+<tt class="descname">selectedColorControl</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.selectedColorControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a color control to edit the selected color.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.selectedInterpControl">
+<tt class="descname">selectedInterpControl</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.selectedInterpControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of an enum control to edit the selected interpolation.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.selectedPositionControl">
+<tt class="descname">selectedPositionControl</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.selectedPositionControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of a float slider to edit the selected position.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setAdaptiveScaling">
+<tt class="descname">setAdaptiveScaling</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setAdaptiveScaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow the ramp widget display to scale vertically to accommodate values greater than 1.0. True if adaptive scaling is enabled, false (the default) if not.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setAnnotation">
+<tt class="descname">setAnnotation</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate the control with an extra string value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setBackgroundColor">
+<tt class="descname">setBackgroundColor</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setBackgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background color of the control. The arguments correspond to the red, green, and blue color components. Each component ranges in value from 0.0 to 1.0. When setting backgroundColor, the background is automatically enabled, unless enableBackground is also specified with a false value.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setDocTag">
+<tt class="descname">setDocTag</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setDocTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a documentation flag to the control.  The documentation flag has a directory structure like hierarchy. Eg. -dt render/multiLister/createNode/material</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setEnable">
+<tt class="descname">setEnable</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enable state of the control.  By default, this flag is set to true and the control is enabled.  Specify false and the control will appear dimmed or greyed-out indicating it is disabled.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setEnableBackground">
+<tt class="descname">setEnableBackground</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setEnableBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the background color of the control.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setHeight">
+<tt class="descname">setHeight</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setManage">
+<tt class="descname">setManage</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setManage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage state of the control.  An unmanaged control is not visible, nor does it take up any screen real estate.  All controls are created managed by default.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setPreventOverride">
+<tt class="descname">setPreventOverride</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setPreventOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, this flag disallows overriding the control&#8217;s attribute via the control&#8217;s right mouse button menu.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setRefreshOnRelease">
+<tt class="descname">setRefreshOnRelease</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setRefreshOnRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define how updates are dispatched during interactive editing of the ramp widget. True causes updates to only dispatch after releasing the mouse button after editing. False (the default) causes updates to dispatch interactively during editing (e.g. while moving ramp curve points). Note that the global update mode, if set to on releasecan disable the effect of this option.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setStaticNumberOfControls">
+<tt class="descname">setStaticNumberOfControls</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setStaticNumberOfControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this flag disables the creation/deletion of ramp entries (control points) via ramp widget interaction. Default is false.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setStaticPositions">
+<tt class="descname">setStaticPositions</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setStaticPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this flag disables the interactive modification of ramp entry positions. Default is false.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setUpperLimitControl">
+<tt class="descname">setUpperLimitControl</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setUpperLimitControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the name of a text control which is updated with the current upper display limit for the ramp. This option is only effective when adaptiveScaling is specified.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setVerticalLayout">
+<tt class="descname">setVerticalLayout</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setVerticalLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &#8216;true&#8217;, this makes the control orient vertically rather than horizontally. The default is <tt class="xref py py-obj docutils literal"><span class="pre">false</span></tt> or horizontal.                     Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setVisible">
+<tt class="descname">setVisible</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>The visible state of the control.  A control is created visible by default.  Note that a control&#8217;s actual appearance is also dependent on the visible state of its parent layout(s).</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setVisibleChangeCommand">
+<tt class="descname">setVisibleChangeCommand</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setVisibleChangeCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command that gets executed when visible state of the control changes.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.uitypes.GradientControl.setWidth">
+<tt class="descname">setWidth</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.uitypes.GradientControl.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the control.  The control will attempt to be this size if it is not overruled by parent layout conditions.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.gradientControl</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.GlRenderEditor.html"
+                        title="previous chapter">pymel.core.uitypes.GlRenderEditor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.uitypes.GradientControlNoAttr.html"
+                        title="next chapter">pymel.core.uitypes.GradientControlNoAttr</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.uitypes/pymel.core.uitypes.GradientControl.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.GradientControlNoAttr.html" title="pymel.core.uitypes.GradientControlNoAttr"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.uitypes.GlRenderEditor.html" title="pymel.core.uitypes.GlRenderEditor"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.uitypes.html" >pymel.core.uitypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

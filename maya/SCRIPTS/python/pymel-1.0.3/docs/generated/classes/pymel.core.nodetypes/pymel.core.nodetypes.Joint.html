@@ -1,0 +1,1263 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.Joint &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.JointCluster" href="pymel.core.nodetypes.JointCluster.html" />
+    <link rel="prev" title="pymel.core.nodetypes.Jiggle" href="pymel.core.nodetypes.Jiggle.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.JointCluster.html" title="pymel.core.nodetypes.JointCluster"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Jiggle.html" title="pymel.core.nodetypes.Jiggle"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-joint">
+<h1>pymel.core.nodetypes.Joint<a class="headerlink" href="#pymel-core-nodetypes-joint" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-04991d3a1e6cffeba641a2c014830e94534eb5f2.png" alt="Inheritance diagram of Joint" usemap="#inheritanced77d2c7843" class="inheritance"/>
+<map id="inheritanced77d2c7843" name="inheritanced77d2c7843">
+<area shape="rect" href="pymel.core.nodetypes.Transform.html#pymel.core.nodetypes.Transform" title="Transform" alt="" coords="17,237,92,261"/>
+<area shape="rect" href="#pymel.core.nodetypes.Joint" title="Joint" alt="" coords="19,276,91,300"/>
+<area shape="rect" href="pymel.core.nodetypes.DagNode.html#pymel.core.nodetypes.DagNode" title="DagNode" alt="" coords="19,198,91,222"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,82,99,106"/>
+<area shape="rect" href="pymel.core.nodetypes.ContainerBase.html#pymel.core.nodetypes.ContainerBase" title="ContainerBase" alt="" coords="5,121,104,145"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
+<area shape="rect" href="pymel.core.nodetypes.Entity.html#pymel.core.nodetypes.Entity" title="Entity" alt="" coords="19,160,91,184"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.Joint">
+<em class="property">class </em><tt class="descname">Joint</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint" title="Permalink to this definition">¶</a></dt>
+<dd><p>class counterpart of mel function <tt class="xref py py-obj docutils literal"><span class="pre">joint</span></tt></p>
+<p>The joint command is used to create, edit, and query, joints within Maya. (The standard edit(-e) and query(-q) flags are used for edit and query functions). If the object is not specified, the currently selected object (dag object) will be used. Multiple objects are allowed only for the edit mode. The same edit flags will be applied on all the joints selected, except for -p without -r (set joint position in the world space). An ik handle in the object list is equivalent to the list of joints the ik handle commands. When -ch/children is present, all the child joints of the specified joints, including the joints implied by possible ik handles, will also be included. In the creation mode, a new joint will be created as a child of a selected transform or starts a hierarchy by itself if no transform is selected. An ik handle will be treated as a transform in the creation mode. The default values of the arguments are: -degreeOfFreedom xyz -name Joint#-position 0 0 0 -absolute -dof xyz-scale 1.0 1.0 1.0 -scaleCompensate true -orientation 0.0 0.0 0.0 -scaleOrientation 0.0 0.0 0.0 -limitX -360 360 -limitY -360 360 -limitZ -360 360 -angleX 0.0 -angleY 0.0 -angleZ 0.0 -stiffnessX 0.0 -stiffnessY 0.0 -stiffnessZ 0.0 -limitSwitchX no -limitSwitchY no -limitSwitchZ no -rotationOrder xyz Those arguments can be specified in the creation mode, editied in the edit mode (-e), or queried in the query mode (-q).</p>
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.assumePreferredAngles">
+<tt class="descname">assumePreferredAngles</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.assumePreferredAngles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Meaningful only in the edit mode. It sets the joint angles to the corresponding preferred angles.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.children">
+<tt class="descname">children</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.children" title="Permalink to this definition">¶</a></dt>
+<dd><p>It tells the command to apply all the edit options not only to the selected joints, but also to their descendent joints in the DAG.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.component">
+<tt class="descname">component</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use with the -position switch to position the joint relative to its parent (like -relative) but to compute new positions for all children joints so their world coordinate positions do not change.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.connect">
+<tt class="descname">connect</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>This cmd will connect two skeletons based on the selected two joints. The first selected joint can be made a child of
+the parent of the second selected joint or a child of the second selected joint, depending on the flags used. Note1: The
+first selected joint must be the root of a skeleton. The second selected joint must have a parent. Note2: If a joint
+name is specified in the cmd line, it is used as the child and the first selected joint will be the parent. If no joint
+name is given at the cmd line, two joints must be selected.</p>
+<p>(&lt;function connectJoint at 0xb487578&gt;, &lt;function addCmdDocsCallback at 0xbc036e0&gt;, (&#8216;connectJoint&#8217;, &#8216;&#8217;), {})</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>connectMode (cm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The first selected joint will be parented under the parent of the second selected joint.                          Flag can have multiple arguments, passed either
+as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>parentMode (pm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The first selected joint will be parented under the second selected joint. Both joints will be in the active list(selection list).</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.connectJoint</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># make joint1 a child of joint4.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectJoint</span><span class="p">(</span> <span class="s">&#39;joint1&#39;</span><span class="p">,</span> <span class="s">&#39;joint4&#39;</span><span class="p">,</span> <span class="n">pm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+
+<span class="c"># make joint1 a child of joint4&#39;s parent</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectJoint</span><span class="p">(</span> <span class="s">&#39;joint1&#39;</span><span class="p">,</span> <span class="s">&#39;joint4&#39;</span><span class="p">,</span> <span class="n">cm</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.disconnect">
+<tt class="descname">disconnect</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command will break a skeleton at the selected joint and delete any associated handles.</p>
+<p>(&lt;function disconnectJoint at 0xb490050&gt;, &lt;function addCmdDocsCallback at 0xbc036e0&gt;, (&#8216;disconnectJoint&#8217;, &#8216;&#8217;), {})</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>attachHandleMode (ahm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>This flag is obsolete and no longer supported.                    Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>deleteHandleMode (dhm)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Delete the handle on the associated joint.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.disconnectJoint</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;jointA&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;jointB&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;jointC&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">disconnectJoint</span><span class="p">(</span> <span class="s">&#39;jointB&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getAngleX">
+<tt class="descname">getAngleX</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getAngleX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the x-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getAngleY">
+<tt class="descname">getAngleY</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getAngleY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the y-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getAngleZ">
+<tt class="descname">getAngleZ</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getAngleZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the z-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getDegreeOfFreedom">
+<tt class="descname">getDegreeOfFreedom</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getDegreeOfFreedom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the degrees of freedom for the IK. Valid strings consist of non-duplicate letters from x, y, and z. The letters in the string indicate what rotations are to be used by IK. The order a letter appear in the string does not matter. Examples are x, yz, xyz. When queried, this flag returns a string. Modifying dof will change the locking state of the corresponding rotation attributes. The rule is: if an rotation is turned into a dof, it will be unlocked if it is currently locked. When it is turned into a non-dof, it will be locked if it is not currently locked.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getDegreesOfFreedom">
+<tt class="descname">getDegreesOfFreedom</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getDegreesOfFreedom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get degrees of freedom of this joint</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getDegreesOfFreedom</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getExists">
+<tt class="descname">getExists</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the named joint exist? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitSwitchX">
+<tt class="descname">getLimitSwitchX</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitSwitchX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the limit the x-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitSwitchY">
+<tt class="descname">getLimitSwitchY</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitSwitchY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the limit the y-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitSwitchZ">
+<tt class="descname">getLimitSwitchZ</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitSwitchZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Limit the z-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitX">
+<tt class="descname">getLimitX</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the x-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitY">
+<tt class="descname">getLimitY</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the y-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getLimitZ">
+<tt class="descname">getLimitZ</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getLimitZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the z-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampXRange">
+<tt class="descname">getMaxRotateDampXRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampXRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the maximum of the damping range in X. This corresponds to the maxRotateDampXRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampXRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampXStrength">
+<tt class="descname">getMaxRotateDampXStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampXStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampXStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampYRange">
+<tt class="descname">getMaxRotateDampYRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampYRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the maximum of the damping range in Y. This corresponds to the maxRotateDampYRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampYRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampYStrength">
+<tt class="descname">getMaxRotateDampYStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampYStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampYStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampZRange">
+<tt class="descname">getMaxRotateDampZRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampZRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the maximum of the damping range in Z. This corresponds to the maxRotateDampZRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampZRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMaxRotateDampZStrength">
+<tt class="descname">getMaxRotateDampZStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMaxRotateDampZStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.maxRotateDampZStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampXRange">
+<tt class="descname">getMinRotateDampXRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampXRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping range in X. This corresponds to the minRotateDampXRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampXRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampXStrength">
+<tt class="descname">getMinRotateDampXStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampXStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampXStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampYRange">
+<tt class="descname">getMinRotateDampYRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampYRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping range in Y. This corresponds to the minRotateDampYRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampYRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampYStrength">
+<tt class="descname">getMinRotateDampYStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampYStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampYStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampZRange">
+<tt class="descname">getMinRotateDampZRange</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampZRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping range in Z. This corresponds to the minRotateDampZRange attribute on the joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampZRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getMinRotateDampZStrength">
+<tt class="descname">getMinRotateDampZStrength</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getMinRotateDampZStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.minRotateDampZStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getOrientation">
+<tt class="descname">getOrientation</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the joint orientation. This corresponds to the jointOrient attribute on the joint, which is stored internally as a quaternion. It is different from the rotation orientation defined in the transform node. Modifying the jointOrient changes the coordinate axes, which affects how scaling a joint behaves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Quaternion</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getOrientation</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getPreferedAngle">
+<tt class="descname">getPreferedAngle</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getPreferedAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the preferred orientation for this joint (in XYZ order)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getPreferedAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getRadius">
+<tt class="descname">getRadius</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the joint radius.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getScale">
+<tt class="descname">getScale</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale of the joint. When queried, this flag returns 3 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getScaleCompensate">
+<tt class="descname">getScaleCompensate</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getScaleCompensate" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the scaleCompenstate attribute of the joint to the given argument. When this is true, the scale of the parent joint will be compensated before any rotation of this joint is applied, so that the bone to the joint is scaled but not the bones to its child joints. When queried, this flag returns an boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getScaleOrientation">
+<tt class="descname">getScaleOrientation</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getScaleOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the orientation of the coordinate axes for rotation. This is equivalent to calling the  MFnTransform::rotateOrientation  method, and corresponds to the rotateAxis attribute on the joint node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">Quaternion</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getScaleOrientation</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getSegmentScale">
+<tt class="descname">getSegmentScale</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getSegmentScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the local space scale values for the joint segment (bone). This is equivalent to calling  MFnTransform::getScale .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getSegmentScale</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getStiffness">
+<tt class="descname">getStiffness</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getStiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stiffness (from 0 to 100.0) for the joint. The stiffness attribute is used by ik solvers to generate a resistance to a joint motion. The higher the stiffness the less it will rotate. Stiffness works in relative sense: it determines the willingness of this joint to rotate with respect to the other joint in the ik chain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.getStiffness</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getStiffnessX">
+<tt class="descname">getStiffnessX</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getStiffnessX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for x-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getStiffnessY">
+<tt class="descname">getStiffnessY</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getStiffnessY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for y-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.getStiffnessZ">
+<tt class="descname">getStiffnessZ</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.getStiffnessZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for z-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.hikJointName">
+<tt class="descname">hikJointName</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.hikJointName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the name that the HumanIK solver uses to identify this joint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.hikJointName</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.insert">
+<tt class="descname">insert</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command will insert a new joint under the given or selected joint. If the given joint has child joints, they will
+be reparented under the new inserted joint. The given joint(or selected joint) should not have skin attached. The
+command works on the selected joint. No options or flags are necessary.</p>
+<p>(&lt;function insertJoint at 0xb49e5f0&gt;, &lt;function addCmdDocsCallback at 0xbc036e0&gt;, (&#8216;insertJoint&#8217;, &#8216;&#8217;), {})</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.insertJoint</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># Will insert a new joint under joint2. Child joints of joint2 will be</span>
+<span class="c"># under the new inserted joint.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">insertJoint</span><span class="p">(</span> <span class="s">&#39;joint2&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.orientJoint">
+<tt class="descname">orientJoint</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.orientJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The argument can be one of the following strings: xyz, yzx, zxy, zyx, yxz, xzy, none. It modifies the joint orientation and scale orientation so that the axis indicated by the first letter in the argument will be aligned with the vector from this joint to its first child joint. For example, if the argument is xyz, the x-axis will point towards the child joint. The alignment of the remaining two joint orient axes are dependent on whether or not the -sao/-secondaryAxisOrient flag is used. If the -sao flag is used, see the documentation for that flag for how the remaining axes are aligned. In the absence of a user specification for the secondary axis orientation, the rotation axis indicated by the last letter in the argument will be aligned with the vector perpendicular to first axis and the vector from this joint to its parent joint. The remaining axis is aligned according the right hand rule. If the argument is none, the joint orientation will be set to zero and its effect to the hierarchy below will be offset by modifying the scale orientation. The flag will be ignored if: A. the joint has non-zero rotations when the argument is not none. B. the joint does not have child joint, or the distance to the child joint is zero when the argument is not none. C. either flag -o or -so is set.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.secondaryAxisOrient">
+<tt class="descname">secondaryAxisOrient</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.secondaryAxisOrient" title="Permalink to this definition">¶</a></dt>
+<dd><p>The argument can be one of the following strings: xup, xdown, yup, ydown, zup, zdown, none. This flag is used in conjunction with the -oj/orientJoint flag. It specifies the scene axis that the second axis should align with. For example, a flag combination of -oj yzx -sao yupwould result in the y-axis pointing down the bone, the z-axis oriented with the scene&#8217;s positive y-axis, and the x-axis oriented according to the right hand rule.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setAngleX">
+<tt class="descname">setAngleX</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setAngleX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the x-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setAngleY">
+<tt class="descname">setAngleY</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setAngleY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the y-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setAngleZ">
+<tt class="descname">setAngleZ</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setAngleZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the z-axis angle. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setDegreeOfFreedom">
+<tt class="descname">setDegreeOfFreedom</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setDegreeOfFreedom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the degrees of freedom for the IK. Valid strings consist of non-duplicate letters from x, y, and z. The letters in the string indicate what rotations are to be used by IK. The order a letter appear in the string does not matter. Examples are x, yz, xyz. When queried, this flag returns a string. Modifying dof will change the locking state of the corresponding rotation attributes. The rule is: if an rotation is turned into a dof, it will be unlocked if it is currently locked. When it is turned into a non-dof, it will be locked if it is not currently locked.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setDegreesOfFreedom">
+<tt class="descname">setDegreesOfFreedom</tt><big>(</big><em>freeInX</em>, <em>freeInY</em>, <em>freeInZ</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setDegreesOfFreedom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the degrees of freedom of this joint by specifying which axes are allowed to rotate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>freeInX <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">the first degree of freedom</p>
+</dd>
+<dt>freeInY <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">the second degree of freedom</p>
+</dd>
+<dt>freeInZ <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">the third degree of freedom</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setDegreesOfFreedom</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitSwitchX">
+<tt class="descname">setLimitSwitchX</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitSwitchX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the limit the x-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitSwitchY">
+<tt class="descname">setLimitSwitchY</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitSwitchY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the limit the y-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitSwitchZ">
+<tt class="descname">setLimitSwitchZ</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitSwitchZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the Limit the z-axis rotation? When queried, this flag returns a boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitX">
+<tt class="descname">setLimitX</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the x-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitY">
+<tt class="descname">setLimitY</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the y-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setLimitZ">
+<tt class="descname">setLimitZ</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setLimitZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set lower and upper limits on the z-axis of rotation.  Also turns on the joint limit. When queried, this flag returns 2 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampXRange">
+<tt class="descname">setMaxRotateDampXRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampXRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping range in X</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">the damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampXRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampXStrength">
+<tt class="descname">setMaxRotateDampXStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampXStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping strength in X.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampXStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampYRange">
+<tt class="descname">setMaxRotateDampYRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampYRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping range in Y</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">the damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampYRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampYStrength">
+<tt class="descname">setMaxRotateDampYStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampYStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping strength in Y.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampYStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampZRange">
+<tt class="descname">setMaxRotateDampZRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampZRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping range in Z</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">the damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampZRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMaxRotateDampZStrength">
+<tt class="descname">setMaxRotateDampZStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMaxRotateDampZStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping strength in Z.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMaxRotateDampZStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampXRange">
+<tt class="descname">setMinRotateDampXRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampXRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the minimum of the damping range in X</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampXRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampXStrength">
+<tt class="descname">setMinRotateDampXStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampXStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping strength in Z.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampXStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampYRange">
+<tt class="descname">setMinRotateDampYRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampYRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the minimum of the damping range in Y</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">the damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampYRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampYStrength">
+<tt class="descname">setMinRotateDampYStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampYStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum of the damping strength in Y.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampYStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampZRange">
+<tt class="descname">setMinRotateDampZRange</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampZRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the minimum of the damping range in Z</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">the damping range to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampZRange</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setMinRotateDampZStrength">
+<tt class="descname">setMinRotateDampZStrength</tt><big>(</big><em>angle</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setMinRotateDampZStrength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the minimum of the damping strength in Z.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt></span></dt>
+<dd><p class="first last">The new damping strength value</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setMinRotateDampZStrength</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setOrientation">
+<tt class="descname">setOrientation</tt><big>(</big><em>quaternion</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the jointOrient value. This corresponds to the jointOrient attribute on the joint, which is stored internally as a quaternion. It is different from the rotation orientation defined in the transform node. Modifying the jointOrient changes the coordinate axes, which affects how scaling a joint behaves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>quaternion <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Quaternion</span></tt></span></dt>
+<dd><p class="first last">the joint orientation</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setOrientation</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setPreferedAngle">
+<tt class="descname">setPreferedAngle</tt><big>(</big><em>rotation</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setPreferedAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the preferred orientation for this joint (in XYZ order)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>rotation <span class="classifier-delimiter">:</span> <span class="classifier">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</span></dt>
+<dd><p class="first last">the array into which we will store the angles</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setPreferedAngle</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setPreferredAngles">
+<tt class="descname">setPreferredAngles</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setPreferredAngles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Meaningful only in the edit mode. It sets the preferred angles to the current joint angles.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setRadius">
+<tt class="descname">setRadius</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setRadius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the joint radius.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setScale">
+<tt class="descname">setScale</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale of the joint. When queried, this flag returns 3 floats.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setScaleCompensate">
+<tt class="descname">setScaleCompensate</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setScaleCompensate" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the scaleCompenstate attribute of the joint to the given argument. When this is true, the scale of the parent joint will be compensated before any rotation of this joint is applied, so that the bone to the joint is scaled but not the bones to its child joints. When queried, this flag returns an boolean.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setScaleOrientation">
+<tt class="descname">setScaleOrientation</tt><big>(</big><em>quaternion</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setScaleOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the orientation of the coordinate axes for rotation. This is equivalent to calling the  MFnTransform::setRotateOrientation  method, and corresponds to the rotateAxis attribute on the joint node. The matrix equations used to combine the rotateAxis with the other transformation attributes of the joint are described in the description for the  MFnIkJoint  class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>quaternion <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Quaternion</span></tt></span></dt>
+<dd><p class="first last">the rotate orientation</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setScaleOrientation</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setSegmentScale">
+<tt class="descname">setSegmentScale</tt><big>(</big><em>scale</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setSegmentScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the local space scale values for the joint segment (bone). This is equivalent to calling Ttransform::setScale.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>scale <span class="classifier-delimiter">:</span> <span class="classifier">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</span></dt>
+<dd><p class="first last">the new scale values to set</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setSegmentScale</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setStiffness">
+<tt class="descname">setStiffness</tt><big>(</big><em>stiffness</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setStiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for the joint. The stiffness attribute is used by ik solvers to generate a resistance to a joint motion. The higher the stiffness the less it will rotate. Stiffness works in relative sense: it determines the willingness of this joint to rotate with respect to the other joint in the ik chain.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>stiffness <span class="classifier-delimiter">:</span> <span class="classifier">(<tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>, <tt class="xref py py-obj docutils literal"><span class="pre">float</span></tt>)</span></dt>
+<dd><p class="first last">the X, Y, and Z stiffness values</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaAnim.MFnIkJoint.setStiffness</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setStiffnessX">
+<tt class="descname">setStiffnessX</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setStiffnessX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for x-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setStiffnessY">
+<tt class="descname">setStiffnessY</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setStiffnessY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for y-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.setStiffnessZ">
+<tt class="descname">setStiffnessZ</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.setStiffnessZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the stiffness (from 0 to 100.0) for z-axis. When queried, this flag returns a float.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.Joint.zeroScaleOrient">
+<tt class="descname">zeroScaleOrient</tt><big>(</big><em>val=True</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.Joint.zeroScaleOrient" title="Permalink to this definition">¶</a></dt>
+<dd><p>It sets the scale orientation to zero and compensate the change by modifing the translation and joint orientation for joint or rotation for general transform of all its child transformations. The flag will be ignored if the flag -so is set.                          Flag can have multiple arguments, passed either as a tuple or a list.</p>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.joint</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.Jiggle.html"
+                        title="previous chapter">pymel.core.nodetypes.Jiggle</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.JointCluster.html"
+                        title="next chapter">pymel.core.nodetypes.JointCluster</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.Joint.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.JointCluster.html" title="pymel.core.nodetypes.JointCluster"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.Jiggle.html" title="pymel.core.nodetypes.Jiggle"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

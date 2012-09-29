@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKPinning2State
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKPinning2State
+    :parts: 1
+
+.. autoclass:: HIKPinning2State
+    :members:
+    :undoc-members:

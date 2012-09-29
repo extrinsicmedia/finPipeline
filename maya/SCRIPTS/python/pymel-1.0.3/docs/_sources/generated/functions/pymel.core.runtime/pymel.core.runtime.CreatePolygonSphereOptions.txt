@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePolygonSphereOptions
+=============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePolygonSphereOptions

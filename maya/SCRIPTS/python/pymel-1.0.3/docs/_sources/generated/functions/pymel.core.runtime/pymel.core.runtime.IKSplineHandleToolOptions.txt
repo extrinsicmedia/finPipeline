@@ -1,0 +1,6 @@
+pymel.core.runtime.IKSplineHandleToolOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.IKSplineHandleToolOptions

@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.windows.panelHistory &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.windows" href="../../pymel.core.windows.html" />
+    <link rel="next" title="pymel.core.windows.pathButtonGrp" href="pymel.core.windows.pathButtonGrp.html" />
+    <link rel="prev" title="pymel.core.windows.panelConfiguration" href="pymel.core.windows.panelConfiguration.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.pathButtonGrp.html" title="pymel.core.windows.pathButtonGrp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.panelConfiguration.html" title="pymel.core.windows.panelConfiguration"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" accesskey="U">pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-windows-panelhistory">
+<h1>pymel.core.windows.panelHistory<a class="headerlink" href="#pymel-core-windows-panelhistory" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.windows.panelHistory">
+<em class="property">static </em><tt class="descclassname">windows.</tt><tt class="descname">panelHistory</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.windows.panelHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>This command creates a panel history object.  The object is targeted on a particular paneLayout and thereafter notes
+changes in panel configurations within that paneLayout, building up a history list.  The list can be stepped through
+backwards or forwards.</p>
+<dl class="docutils">
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>back (b)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Go back one level on the history list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>clear (cl)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Clear the history stack</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>defineTemplate (dt)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Puts a command in a mode where any other flags and args are parsed and added to the command template specified in the argument. They will be used as default
+arguments in any subsequent invocations of the command when templateName is set as the current template.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>exists (ex)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true|false depending upon whether the specified object exists.  Other flags are ignored.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>forward (f)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Go forward one level on the history list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>historyDepth (hd)</strong></td>
+<td><em>int</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies how many levels of history are maintained.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>isEmpty (ie)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Returns true if there is currently no panel history.                      Flag can have multiple arguments, passed either as a tuple or a list.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>suspend (s)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/edit.gif" class="first last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies whether to suspend or resume updates to the panel history. Useful for chunking a number of changes into one history event.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>targetPane (tp)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first" src="../../../_images/create.gif" />
+<img alt="../../../_images/query.gif" class="last" src="../../../_images/query.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies which paneLayout the history will be maintained for.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>useTemplate (ut)</strong></td>
+<td><em>unicode</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Force the command to use a command template other than the current one.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>wrap (w)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/query.gif" class="first" src="../../../_images/query.gif" />
+<img alt="../../../_images/edit.gif" class="last" src="../../../_images/edit.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Specifies whether the history will wrap at the end and beginning.  This value is true by default.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.panelHistory</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c">#    Create a window containing a pane layout.  The window also contains</span>
+<span class="c">#    an option menu for changing the layout configuration and two buttons</span>
+<span class="c">#    for stepping through the configuration history.</span>
+<span class="c">#</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">window</span><span class="p">(</span> <span class="n">title</span><span class="o">=</span><span class="s">&#39;panelHistory Example&#39;</span> <span class="p">)</span>
+<span class="n">form</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">formLayout</span><span class="p">()</span>
+
+<span class="c">#    Create the option menu for panel configuration.</span>
+<span class="c">#</span>
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Configuration&#39;</span><span class="p">,</span> <span class="n">columnWidth2</span><span class="o">=</span><span class="p">(</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span> <span class="p">)</span> <span class="p">)</span>
+
+<span class="n">single</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Single&#39;</span> <span class="p">)</span>
+<span class="n">stacked</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;2 Stacked&#39;</span> <span class="p">)</span>
+<span class="n">sideBySide</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;2 Side by Side&#39;</span> <span class="p">)</span>
+<span class="n">four</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Four&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Create the buttons for stepping through configuration history.</span>
+<span class="c">#</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">rowLayout</span><span class="p">(</span> <span class="n">numberOfColumns</span><span class="o">=</span><span class="mi">3</span> <span class="p">,</span> <span class="n">columnWidth3</span><span class="o">=</span><span class="p">(</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">75</span> <span class="p">),</span>
+                                              <span class="n">columnAttach</span><span class="o">=</span><span class="p">[(</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;both&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">),(</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;both&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)]</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;History&#39;</span> <span class="p">)</span>
+<span class="n">backBtn</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">button</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Back&#39;</span> <span class="p">)</span>
+<span class="n">forwardBtn</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">button</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Forward&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s">&#39;..&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Create the pane layout.</span>
+<span class="c">#</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">frameLayout</span><span class="p">(</span> <span class="n">labelVisible</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span>
+<span class="n">panes</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">()</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Pane 1&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Pane 2&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Pane 3&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">text</span><span class="p">(</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;Pane 4&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Set up the attachments.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">formLayout</span><span class="p">(</span> <span class="n">form</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                             <span class="n">attachForm</span><span class="o">=</span><span class="p">[(</span><span class="n">configuration</span><span class="p">,</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">configuration</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="s">&#39;right&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s">&#39;left&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s">&#39;right&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                     <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s">&#39;bottom&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)],</span>
+                             <span class="n">attachControl</span><span class="o">=</span><span class="p">[(</span><span class="n">history</span><span class="p">,</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">configuration</span><span class="p">),</span>
+                                                            <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">history</span><span class="p">)]</span> <span class="p">)</span>
+
+<span class="c">#    Create the panel history object.</span>
+<span class="c">#</span>
+<span class="n">panelHistory</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">panelHistory</span><span class="p">(</span><span class="n">targetPane</span><span class="o">=</span><span class="n">panes</span><span class="p">)</span>
+
+<span class="c">#    Attach a command to the option menu to change the panel layout</span>
+<span class="c">#    configuration accordingly.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">configuration</span><span class="p">,</span>
+                                    <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                    <span class="n">changeCommand</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;ExampleUpdatePaneLayout( </span><span class="se">\&quot;</span><span class="s">&#39;</span><span class="o">+</span> <span class="n">configuration</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">panes</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s"> )&#39;</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c">#    Attach commands to the buttons for stepping through the configuration</span>
+<span class="c">#    history.  The commands should also update the value of the option menu.</span>
+<span class="c">#</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">button</span><span class="p">(</span> <span class="n">backBtn</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                     <span class="n">command</span><span class="o">=</span><span class="s">&#39;pm.panelHistory( panelHistory, edit=True, back=True ); ExampleUpdateConfiguration( </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">configuration</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">panes</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s"> )&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">button</span><span class="p">(</span> <span class="n">forwardBtn</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                     <span class="n">command</span><span class="o">=</span><span class="s">&#39;pm.panelHistory( panelHistory, edit=True, forward=True ); ExampleUpdateConfiguration( </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">configuration</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">panes</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\&quot;</span><span class="s"> )&#39;</span> <span class="p">)</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">showWindow</span><span class="p">(</span> <span class="n">window</span> <span class="p">)</span>
+
+<span class="c">#    Call this procedure whenever the option menu&#39;s configuration value</span>
+<span class="c">#    changes.  This procedure will update the configuration of the</span>
+<span class="c">#    pane layout to reflect the change.</span>
+<span class="c">#</span>
+<span class="k">def</span> <span class="nf">ExampleUpdatePaneLayout</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">paneLayout</span> <span class="p">):</span>
+    <span class="k">if</span> <span class="n">optionMenuGrp</span> <span class="o">==</span> <span class="s">&quot;&quot;</span> <span class="ow">or</span> <span class="n">paneLayout</span> <span class="o">==</span> <span class="s">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s">&quot;Single&quot;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">paneLayout</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="s">&#39;single&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s">&quot;2 Stacked&quot;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">paneLayout</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="s">&#39;horizontal2&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s">&quot;2 Side by Side&quot;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">paneLayout</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="s">&#39;vertical2&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="s">&quot;Four&quot;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">paneLayout</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="s">&#39;quad&#39;</span> <span class="p">)</span>
+
+<span class="c">#    Call this procedure whenever the panel configuration changes due to</span>
+<span class="c">#    stepping through the panel history (ie. pressing either the &quot;Forward&quot;</span>
+<span class="c">#    or &quot;Back&quot; buttons.  This procedure will update the value of the</span>
+<span class="c">#    option menu to reflect the new pane layout configuration.</span>
+<span class="c">#</span>
+<span class="k">def</span> <span class="nf">ExampleUpdateConfiguration</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">paneLayout</span> <span class="p">):</span>
+    <span class="k">if</span> <span class="n">optionMenuGrp</span> <span class="o">==</span> <span class="s">&quot;&quot;</span> <span class="ow">or</span> <span class="n">paneLayout</span> <span class="o">==</span> <span class="s">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+
+    <span class="n">configuration</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">paneLayout</span><span class="p">(</span> <span class="n">paneLayout</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="bp">True</span> <span class="p">);</span>
+
+    <span class="k">if</span> <span class="n">configuration</span> <span class="o">==</span> <span class="s">&#39;single&#39;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;Single&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">configuration</span> <span class="o">==</span> <span class="s">&#39;horizontal2&#39;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;2 Stacked&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">configuration</span> <span class="o">==</span> <span class="s">&#39;vertical2&#39;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;2 Side by Side&#39;</span> <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">configuration</span> <span class="o">==</span> <span class="s">&#39;quad&#39;</span><span class="p">:</span>
+            <span class="n">pm</span><span class="o">.</span><span class="n">optionMenuGrp</span><span class="p">(</span> <span class="n">optionMenuGrp</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;Four&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.windows.panelConfiguration.html"
+                        title="previous chapter">pymel.core.windows.panelConfiguration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.windows.pathButtonGrp.html"
+                        title="next chapter">pymel.core.windows.pathButtonGrp</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.windows/pymel.core.windows.panelHistory.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.pathButtonGrp.html" title="pymel.core.windows.pathButtonGrp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.windows.panelConfiguration.html" title="pymel.core.windows.panelConfiguration"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.windows.html" >pymel.core.windows</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

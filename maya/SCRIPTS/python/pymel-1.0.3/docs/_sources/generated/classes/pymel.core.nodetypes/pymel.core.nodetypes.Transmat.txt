@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Transmat
+=============================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Transmat
+    :parts: 1
+
+.. autoclass:: Transmat
+    :members:
+    :undoc-members:

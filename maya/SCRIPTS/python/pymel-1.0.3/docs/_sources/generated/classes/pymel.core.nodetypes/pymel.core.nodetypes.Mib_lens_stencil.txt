@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mib_lens_stencil
+=====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mib_lens_stencil
+    :parts: 1
+
+.. autoclass:: Mib_lens_stencil
+    :members:
+    :undoc-members:

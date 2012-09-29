@@ -1,0 +1,6 @@
+pymel.core.runtime.ResolveInterpenetrationOptions
+=================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ResolveInterpenetrationOptions

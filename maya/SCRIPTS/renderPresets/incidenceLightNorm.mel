@@ -1,0 +1,6 @@
+startAttrPreset( "renderPass" );
+global string $gAEAttrPresetCurrentTarget;
+setRenderPassType -defaultDataType -type "INCILN" $gAEAttrPresetCurrentTarget; 
+blendAttrStr "passGroupName" "Matte"; 
+blendAttr "renderable" 1; 
+endAttrPreset();

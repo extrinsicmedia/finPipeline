@@ -1,0 +1,6 @@
+pymel.core.windows.createEditor
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.createEditor

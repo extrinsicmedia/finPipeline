@@ -1,0 +1,6 @@
+pymel.core.rendering.shadingNode
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: rendering.shadingNode

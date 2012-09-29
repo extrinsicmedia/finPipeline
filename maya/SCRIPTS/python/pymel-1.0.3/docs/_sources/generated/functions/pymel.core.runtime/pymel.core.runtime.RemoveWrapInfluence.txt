@@ -1,0 +1,6 @@
+pymel.core.runtime.RemoveWrapInfluence
+======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RemoveWrapInfluence

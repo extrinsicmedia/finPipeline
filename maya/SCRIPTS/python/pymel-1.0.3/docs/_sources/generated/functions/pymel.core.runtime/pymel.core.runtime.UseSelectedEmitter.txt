@@ -1,0 +1,6 @@
+pymel.core.runtime.UseSelectedEmitter
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UseSelectedEmitter

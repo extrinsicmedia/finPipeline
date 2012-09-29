@@ -1,0 +1,6 @@
+pymel.core.runtime.RotateUVs
+============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RotateUVs

@@ -1,0 +1,1093 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.general.AttributeDefaults &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.general" href="../../pymel.core.general.html" />
+    <link rel="next" title="pymel.core.general.Component" href="pymel.core.general.Component.html" />
+    <link rel="prev" title="pymel.core.general.Attribute" href="pymel.core.general.Attribute.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.Component.html" title="pymel.core.general.Component"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.Attribute.html" title="pymel.core.general.Attribute"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" accesskey="U">pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-general-attributedefaults">
+<h1>pymel.core.general.AttributeDefaults<a class="headerlink" href="#pymel-core-general-attributedefaults" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-076a9be1fafcfb9856537081c03221302503144f.png" alt="Inheritance diagram of AttributeDefaults" usemap="#inheritancefdad0e603b" class="inheritance"/>
+<map id="inheritancefdad0e603b" name="inheritancefdad0e603b">
+<area shape="rect" href="#pymel.core.general.AttributeDefaults" title="AttributeDefaults" alt="" coords="5,83,117,107"/>
+<area shape="rect" href="pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="25,44,97,68"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="16,5,107,29"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.general.AttributeDefaults">
+<em class="property">class </em><tt class="descname">AttributeDefaults</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.accepts">
+<tt class="descname">accepts</tt><big>(</big><em>type</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.accepts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute can accept a connection of the given type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>type <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">Data.Type</span></tt></span></dt>
+<dd><p class="first">data type</p>
+<p class="last">values: &#8216;numeric&#8217;, &#8216;plugin&#8217;, &#8216;pluginGeometry&#8217;, &#8216;string&#8217;, &#8216;matrix&#8217;, &#8216;stringArray&#8217;, &#8216;doubleArray&#8217;, &#8216;intArray&#8217;, &#8216;pointArray&#8217;, &#8216;vectorArray&#8217;, &#8216;componentList&#8217;, &#8216;mesh&#8217;, &#8216;lattice&#8217;, &#8216;nurbsCurve&#8217;, &#8216;nurbsSurface&#8217;, &#8216;sphere&#8217;, &#8216;dynArrayAttrs&#8217;, &#8216;dynSweptGeometry&#8217;, &#8216;subdSurface&#8217;, &#8216;NObject&#8217;, &#8216;NId&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnData.accepts</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.addToCategory">
+<tt class="descname">addToCategory</tt><big>(</big><em>category</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.addToCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the attribute to the named category.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">New category to which the attribute is to be added</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.addToCategory</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getAddAttrCmd">
+<tt class="descname">getAddAttrCmd</tt><big>(</big><em>useLongName=False</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getAddAttrCmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string containing the  addAttr  command which would be required to recreate the  attribute  on a node. The command includes the terminating semicolon and is formatted as if for use with a selected node, meaning that it contains no node name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>useLongName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">if true, use the attribute&#8217;s long name rather than its short name</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.getAddAttrCmd</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getAffectsAppearance">
+<tt class="descname">getAffectsAppearance</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getAffectsAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute affects the appearance of the object when rendering in the viewport.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.affectsAppearance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getCategories">
+<tt class="descname">getCategories</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all of the categories to which this attribute belongs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">list</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.getCategories</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getDisconnectBehavior">
+<tt class="descname">getDisconnectBehavior</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getDisconnectBehavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the behavior of this attribute when it is disconnected. The possible settings are as follows:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">AttributeDefaults.DisconnectBehavior</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.disconnectBehavior</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getIndexMatters">
+<tt class="descname">getIndexMatters</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getIndexMatters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the user must specify an index when connecting to this attribute, or whether the next available index can be used. This method only applies to array attributes which are non readable, i.e. destination attributes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.indexMatters</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getInternal">
+<tt class="descname">getInternal</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getInternal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if a node has internal member data representing this attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.internal</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.getUsesArrayDataBuilder">
+<tt class="descname">getUsesArrayDataBuilder</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.getUsesArrayDataBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute uses an array data builder. If so, then the  MArrayDataBuilder  class may be used with this attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.usesArrayDataBuilder</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.hasCategory">
+<tt class="descname">hasCategory</tt><big>(</big><em>category</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.hasCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if the attribute belongs to the named category.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">Category to check for attribute membership</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.hasCategory</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isAffectsWorldSpace">
+<tt class="descname">isAffectsWorldSpace</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isAffectsWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute affects worldspace.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isAffectsWorldSpace</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isArray">
+<tt class="descname">isArray</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute supports an array of data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isArray</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isCached">
+<tt class="descname">isCached</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isCached" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is cached locally in the node&#8217;s data block. The default for this is true. Caching a node locally causes a copy of the attribute value for the node to be cached with the node. This removes the need to traverse through the graph to get the value each time it is requested.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isCached</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isChannelBoxFlagSet">
+<tt class="descname">isChannelBoxFlagSet</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isChannelBoxFlagSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute has its channel box flag set. Attributes will appear in the channel box if their channel box flag is set or if they are keyable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isChannelBoxFlagSet</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isConnectable">
+<tt class="descname">isConnectable</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isConnectable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute accepts dependency graph connections. If it does, then the readable and writable methods will indicate what types of connections are accepted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isConnectable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isDynamic">
+<tt class="descname">isDynamic</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isDynamic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is a dynamic attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isDynamic</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isExtension">
+<tt class="descname">isExtension</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isExtension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is an extension attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isExtension</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isHidden">
+<tt class="descname">isHidden</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isHidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is to hidden from the UI. The attribute will not show up in attribute editors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isHidden</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isIndeterminant">
+<tt class="descname">isIndeterminant</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isIndeterminant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is indeterminant. If an attribute may or may not be used during an evaluation then it is indeterminant. This attribute classification is mainly used on rendering nodes to indicate that some attributes are not always used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isIndeterminant</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isKeyable">
+<tt class="descname">isKeyable</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isKeyable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is keyable. Keyable attributes will be keyed by AutoKey and the Set Keyframe UI. Non-keyable attributes prevent the user from setting keys via the obvious UI provided for keying. Being non-keyable is not a hard block against adding keys to an attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isKeyable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isReadable">
+<tt class="descname">isReadable</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isReadable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is readable. If an attribute is readable, then it can be used as the source in a dependency graph connection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isReadable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isRenderSource">
+<tt class="descname">isRenderSource</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isRenderSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is a render source. This attribute is used on rendering nodes to override the rendering sampler info.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isRenderSource</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isStorable">
+<tt class="descname">isStorable</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isStorable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is to be stored when the node is saved to a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isStorable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isUsedAsColor">
+<tt class="descname">isUsedAsColor</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isUsedAsColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is to be presented as a color in the UI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isUsedAsColor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isUsedAsFilename">
+<tt class="descname">isUsedAsFilename</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isUsedAsFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is to be used as a filename. In the UI this attr will be presented as a file name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isUsedAsFilename</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isWorldSpace">
+<tt class="descname">isWorldSpace</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is worldspace.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isWorldSpace</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.isWritable">
+<tt class="descname">isWritable</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.isWritable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if this attribute is writable. If an attribute is writable, then it can be used as the destination in a dependency graph connection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.isWritable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.name">
+<tt class="descname">name</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.parent">
+<tt class="descname">parent</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parent of this attribute, if it has one.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="pymel.core.general.PyNode"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></a></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.parent</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.removeFromCategory">
+<tt class="descname">removeFromCategory</tt><big>(</big><em>category</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.removeFromCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the attribute from the named category.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>category <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">Category from which the attribute is to be removed</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.removeFromCategory</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setAffectsAppearance">
+<tt class="descname">setAffectsAppearance</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setAffectsAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute affects the appearance of the object when rendering in the viewport.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute affects the appearance of the object when rendering in the viewport.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setAffectsAppearance</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setAffectsWorldSpace">
+<tt class="descname">setAffectsWorldSpace</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setAffectsWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should affect worldspace. NOTES: This property is ignored on non-dag nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute should affect worldspace</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setAffectsWorldSpace</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setArray">
+<tt class="descname">setArray</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should have an array of data. This should be set to true if the attribute needs to accept multiple incoming connections.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to have an array of data</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setArray</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setCached">
+<tt class="descname">setCached</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setCached" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the data for this attribute is cached locally in the node&#8217;s data block. The default for this is true. Caching a node locally causes a copy of the attribute value for the node to be cached with the node. This removes the need to traverse through the graph to get the value each time it is requested. This should only get called in the initialize call of your node creator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be cached locally</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setCached</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setChannelBox">
+<tt class="descname">setChannelBox</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setChannelBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should appear in the channel box when the node is selected. This should only get called in the initialize call of your node creator. Keyable attributes are always shown in the channel box so this flag is ignored on keyable attributes. It is for intended for use on non-keyable attributes which you want to appear in the channel box.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to appear in the channel box</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setChannelBox</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setConnectable">
+<tt class="descname">setConnectable</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setConnectable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should allow dependency graph connections. This should only get called in the initialize call of your node creator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be connectable</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setConnectable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setDisconnectBehavior">
+<tt class="descname">setDisconnectBehavior</tt><big>(</big><em>behavior</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setDisconnectBehavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the disconnection behavior for this attribute. This determines what happens when a connection to this attribute is deleted. This should only get called in the initialize call of your node creator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>behavior <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">AttributeDefaults.DisconnectBehavior</span></tt></span></dt>
+<dd><p class="first">the new disconnect behavior</p>
+<p class="last">values: &#8216;delete&#8217;, &#8216;reset&#8217;, &#8216;nothing&#8217;</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setDisconnectBehavior</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setHidden">
+<tt class="descname">setHidden</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setHidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be hidden from the UI. This is useful if the attribute is being used for blind data, or if it is being used as scratch space for a geometry calculation (should also be marked non-connectable in that case).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be hidden</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setHidden</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setIndeterminant">
+<tt class="descname">setIndeterminant</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setIndeterminant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute is indeterminant. If an attribute may or may not be used during an evaluation then it is indeterminant. This attribute classification is mainly used on rendering nodes to indicate that some attributes are not always used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute indeterminant</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setIndeterminant</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setIndexMatters">
+<tt class="descname">setIndexMatters</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setIndexMatters" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the attribute is an array, then this method specifies whether to force the user to specify an index when connecting to this attribute, or to use the next available index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute&#8217;s index must be specified when connecting to this attribute using the connectAttr command</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setIndexMatters</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setInternal">
+<tt class="descname">setInternal</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setInternal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function controls an attribute&#8217;s data storage. When set to true, the virtual methods  MPxNode::setInternalValueInContext()  and  MPxNode::getInternalValueInContext()  are invoked whenever the attribute value is set or queried, respectively. By default, attributes are not internal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute uses internal data</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setInternal</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setKeyable">
+<tt class="descname">setKeyable</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setKeyable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should accept keyframe data. This should only get called in the initialize call of your node creator. Keyable attributes will be keyed by AutoKey and the Set Keyframe UI. Non-keyable attributes prevent the user from setting keys via the obvious UI provided for keying. Being non-keyable is not a hard block against adding keys to an attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be keyable</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setKeyable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setNiceNameOverride">
+<tt class="descname">setNiceNameOverride</tt><big>(</big><em>localizedName</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setNiceNameOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the localized string which should be used for this attribute in the UI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>localizedName <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The name to use for the current locale.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setNiceNameOverride</span></tt></p>
+<p><strong>Undo is not currently supported for this method</strong></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setReadable">
+<tt class="descname">setReadable</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setReadable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be readable. If an attribute is readable, then it can be used as the source in a dependency graph connection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be readable</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setReadable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setRenderSource">
+<tt class="descname">setRenderSource</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setRenderSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be used as a render source attribute. When writing shader plug-ins, it is sometimes useful to be able to modify the sampler info, so upstream shading network can be re- evaluated with different sampler info values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be a render source</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setRenderSource</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setStorable">
+<tt class="descname">setStorable</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setStorable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be storable. If an attribute is storable, then it will be writen out when the node is stored to a file. This should only get called in the initialize call of your node creator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be storable</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setStorable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setUsedAsColor">
+<tt class="descname">setUsedAsColor</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setUsedAsColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be presented as a color in the UI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be presented as a color</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setUsedAsColor</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setUsedAsFilename">
+<tt class="descname">setUsedAsFilename</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setUsedAsFilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be presented as a filename in the UI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be presented as a filename</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setUsedAsFilename</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setUsesArrayDataBuilder">
+<tt class="descname">setUsesArrayDataBuilder</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setUsesArrayDataBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute uses an array data builder. If true, then the  MArrayDataBuilder  class may be used with this attribute to generate its data. If false,  MArrayDataHandle::builder  will fail.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute uses an array data builder</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setUsesArrayDataBuilder</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setWorldSpace">
+<tt class="descname">setWorldSpace</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setWorldSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be treated as worldspace. Being worldspace indicates the attribute is dependent on the worldSpace transformation of this node, and will be marked dirty by any attribute changes in the hierarchy that affects the worldSpace transformation. The attribute needs to be an array since during instancing there are multiple worldSpace paths to the node &amp; Maya requires one array element per path for worldSpace attributes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be presented as worldspace</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setWorldSpace</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.setWritable">
+<tt class="descname">setWritable</tt><big>(</big><em>state</em><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.setWritable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether this attribute should be writable. If an attribute is writable, then it can be used as the destination in a dependency graph connection. If an attribute is not writable then  setAttr  commands will fail to change the attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first last docutils">
+<dt>state <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></span></dt>
+<dd><p class="first last">whether the attribute is to be writable</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.setWritable</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.general.AttributeDefaults.shortName">
+<tt class="descname">shortName</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.general.AttributeDefaults.shortName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the short name of the attribute. If the attribute has no short name then its long name is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMaya.MFnAttribute.shortName</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.general.Attribute.html"
+                        title="previous chapter">pymel.core.general.Attribute</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.general.Component.html"
+                        title="next chapter">pymel.core.general.Component</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.general/pymel.core.general.AttributeDefaults.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.Component.html" title="pymel.core.general.Component"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.general.Attribute.html" title="pymel.core.general.Attribute"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.general.html" >pymel.core.general</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.runtime.UnlockCurveLength
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.UnlockCurveLength

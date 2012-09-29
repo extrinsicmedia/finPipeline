@@ -1,0 +1,6 @@
+pymel.core.runtime.ModifyOpacityPress
+=====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ModifyOpacityPress

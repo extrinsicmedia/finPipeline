@@ -1,0 +1,11 @@
+pymel.core.nodetypes.CMuscleDisplay
+===================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: CMuscleDisplay
+    :parts: 1
+
+.. autoclass:: CMuscleDisplay
+    :members:
+    :undoc-members:

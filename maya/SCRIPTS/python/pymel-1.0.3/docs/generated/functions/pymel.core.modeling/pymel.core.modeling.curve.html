@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.modeling.curve &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.modeling" href="../../pymel.core.modeling.html" />
+    <link rel="next" title="pymel.core.modeling.curveIntersect" href="pymel.core.modeling.curveIntersect.html" />
+    <link rel="prev" title="pymel.core.modeling.createSubdivRegion" href="pymel.core.modeling.createSubdivRegion.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.curveIntersect.html" title="pymel.core.modeling.curveIntersect"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.createSubdivRegion.html" title="pymel.core.modeling.createSubdivRegion"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" accesskey="U">pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-modeling-curve">
+<h1>pymel.core.modeling.curve<a class="headerlink" href="#pymel-core-modeling-curve" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="pymel.core.modeling.curve">
+<em class="property">static </em><tt class="descclassname">modeling.</tt><tt class="descname">curve</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.modeling.curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>The curve command creates a new curve from a list of control vertices (CVs).  A string is returned containing the
+pathname to the newly created curve.  You can create a curve from points either in world space or object (local) space,
+either with weights or without. You can replace an existing curve by using the -r/replaceflag.  You can append a point
+to an existing curve by using the -a/appendflag. To create a curve-on-surface, use the curveOnSurface command. To change
+the degree of a curve, use the rebuildCurve command. To change the of parameter range curve, use the rebuildCurve
+command.</p>
+<dl class="docutils">
+<dt>Maya Bug Fix:</dt>
+<dd><ul class="first last simple">
+<li>name parameter only applied to transform. now applies to shape as well</li>
+</ul>
+</dd>
+<dt>Flags:</dt>
+<dd><table border="1" class="first last docutils">
+<colgroup>
+<col width="1%" />
+<col width="61%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Long name (short name)</th>
+<th class="head">Argument Types</th>
+<th class="head">Properties</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td colspan="2"><strong>append (a)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Appends point(s) to the end of an existing curve. If you use this flag, you must specify the name of the curve to append to, at the end of the command.  (See
+examples below.)</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>bezier (bez)</strong></td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>degree (d)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The degree of the new curve.  Default is 3.  Note that you need (degree+1) curve points to create a visible curve span.  eg. you must place 4 points for a degree
+3 curve.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>editPoint (ep)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The x, y, z position of an edit point.  linearmeans that this flag can take values with units.  This flag can not be used with the -point or the -pointWeight
+flags.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>knot (k)</strong></td>
+<td><em>float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>A knot value in a knot vector.  One flag per knot value. There must be (numberOfPoints + degree - 1) knots and the knot vector must be non-decreasing.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>name (n)</strong></td>
+<td><em>unicode</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr><td colspan="2"><strong>objectSpace (os)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Points are in object, or localspace.  This is the default. You cannot specify both -osand -wsin the same command.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>periodic (per)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>If on, creates a curve that is periodic.  Default is off.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>point (p)</strong></td>
+<td><em>float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>The x, y, z position of a point.  linearmeans that this flag can take values with units.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>pointWeight (pw)</strong></td>
+<td><em>float, float, float, float</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">The x,y,z and w values of a point, where the w is a weight value. A rational curve will be created if this flag is used. linearmeans that this flag can take
+values with units.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+<tr><td colspan="2"><strong>replace (r)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Replaces an entire existing curve. If you use this flag, you must specify the name of the curve to replace, at the end of the command.  (See examples below.)</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td colspan="2"><strong>worldSpace (ws)</strong></td>
+<td><em>bool</em></td>
+<td><img alt="../../../_images/create.gif" class="first last" src="../../../_images/create.gif" />
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td colspan="3"><p class="first">Points are in world space.  The default is -os. You cannot specify both -osand -wsin the same command.                    Flag can have multiple arguments, passed
+either as a tuple or a list.</p>
+<blockquote class="last">
+<div></div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>Derived from mel command <tt class="xref py py-obj docutils literal"><span class="pre">maya.cmds.curve</span></tt></p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pymel.core</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="c"># These commands create curves with four control vertices.</span>
+<span class="c"># The first one is created without weights.  The third command</span>
+<span class="c"># shows how you can use units to specify position.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve1&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="n">pw</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve2&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="s">&#39;0cm&#39;</span><span class="p">,</span> <span class="s">&#39;0cm&#39;</span><span class="p">,</span> <span class="s">&#39;0cm&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;3in&#39;</span><span class="p">,</span> <span class="s">&#39;5in&#39;</span><span class="p">,</span> <span class="s">&#39;6in&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;5ft&#39;</span><span class="p">,</span> <span class="s">&#39;6ft&#39;</span><span class="p">,</span> <span class="s">&#39;7ft&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve3&#39;) #</span>
+
+<span class="c"># This command replaces an existing curve, curve1, with the given points.</span>
+<span class="c"># Do not use this flag on a curve that is a result of a construction</span>
+<span class="c"># history operation.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve1&#39;) #</span>
+
+<span class="c"># This command adds two CVs to an existing curve, curve1.</span>
+<span class="c"># The &quot;-ws&quot; flag can be used if the specified CVs are in world space.</span>
+<span class="c"># Do not use this flag on a curve that is a result of a construction</span>
+<span class="c"># history operation.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">)]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve1&#39;) #</span>
+
+<span class="c"># This command creates a curve with five control vertices,</span>
+<span class="c"># with a knot vector. Notice that there must be</span>
+<span class="c"># (number of CVs + degree - 1) knots and that the knot</span>
+<span class="c"># vector must be non-decreasing.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span> <span class="n">k</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve4&#39;) #</span>
+
+<span class="c"># This command creates a closed (or &quot;periodic&quot;) curve with</span>
+<span class="c"># four distinct CVs. You must specify a knot vector when the</span>
+<span class="c"># &quot;-per&quot; flag is used. Notice that the first &quot;degree&quot; points</span>
+<span class="c"># are the same as the last &quot;degree&quot; points (ie. the first three</span>
+<span class="c"># points are the same as the last three points). Notice also</span>
+<span class="c"># that the knot spacing between the first &quot;degree&quot; knots must</span>
+<span class="c"># be the same as the spacing between the last &quot;degree&quot; knots</span>
+<span class="c"># (ie. the space between the 1st and 2nd knots is the same as</span>
+<span class="c"># the space between the 7th and 8th knots, and the space between</span>
+<span class="c"># the 2nd and 3rd knots is the same as the space between the</span>
+<span class="c"># 8th and 9th knots). There must be space between the first</span>
+<span class="c"># &quot;degree&quot; knots, unlike the previous example, where the first</span>
+<span class="c"># &quot;degree&quot; knots are the same.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">curve</span><span class="p">(</span> <span class="n">per</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)],</span> <span class="n">k</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="p">)</span>
+<span class="c"># Result: nt.Transform(u&#39;curve5&#39;) #</span>
+
+<span class="c"># How to query curve properties:</span>
+
+<span class="c"># This returns the degree of the curve.  Note that the</span>
+<span class="c"># number of CVs = degree + spans.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.degree&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 3 #</span>
+
+<span class="c"># This returns the number of spans in the curve.  Note that the</span>
+<span class="c"># number of CVs = degree + spans.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.spans&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 3 #</span>
+
+<span class="c"># This returns the curve form.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.form&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0 #</span>
+
+<span class="c"># This returns the minimum parameter value on the curve.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.minValue&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 0.0 #</span>
+
+<span class="c"># This returns the maximum parameter value on the curve.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.maxValue&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 3.0 #</span>
+
+<span class="c"># This returns the local x,y,z of the 1st CV.  Use a curve info node if</span>
+<span class="c"># the curve is a result of a construction history operation.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.cv[0]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: dt.Vector([0.0, 0.0, 0.0]) #</span>
+
+<span class="c"># This returns the local x,y,z of the 1st three CVs.  Use a curve info</span>
+<span class="c"># node if the curve is a result of a construction history operation.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.cv[*]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: (0.0, 0.0, 0.0) #</span>
+
+<span class="c"># This returns the local x,y,z of all CVs.  Use a curve info node if</span>
+<span class="c"># the curve is a result of a construction history operation.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curve1.cv[0:2]&#39;</span> <span class="p">)</span>
+<span class="c"># Result: (0.0, 0.0, 0.0) #</span>
+
+<span class="c"># This returns the arc length of the curve.  Use &quot;-ch&quot; flag with</span>
+<span class="c"># the arclen command to get a curve info node that constantly updates</span>
+<span class="c"># to the current arc length.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">arclen</span><span class="p">(</span> <span class="s">&#39;curve1&#39;</span> <span class="p">)</span>
+<span class="c"># Result: 27.332876670668441 #</span>
+
+<span class="c"># This sequence creates a curve info node, connects the info node to the</span>
+<span class="c"># curve and queries the knot vector of the curve using the curve info node.</span>
+<span class="c"># You can use the curve info node to query other attributes such as</span>
+<span class="c"># world space CV values and arc length.</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span> <span class="s">&#39;curveInfo&#39;</span> <span class="p">)</span>
+<span class="c"># Result: nt.CurveInfo(u&#39;curveInfo1&#39;) #</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">connectAttr</span><span class="p">(</span> <span class="s">&#39;curveShape1.worldSpace&#39;</span><span class="p">,</span> <span class="s">&#39;curveInfo1.inputCurve&#39;</span> <span class="p">)</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">getAttr</span><span class="p">(</span> <span class="s">&#39;curveInfo1.knots[*]&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.createSubdivRegion.html"
+                        title="previous chapter">pymel.core.modeling.createSubdivRegion</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.modeling.curveIntersect.html"
+                        title="next chapter">pymel.core.modeling.curveIntersect</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/functions/pymel.core.modeling/pymel.core.modeling.curve.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.curveIntersect.html" title="pymel.core.modeling.curveIntersect"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.modeling.createSubdivRegion.html" title="pymel.core.modeling.createSubdivRegion"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.modeling.html" >pymel.core.modeling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

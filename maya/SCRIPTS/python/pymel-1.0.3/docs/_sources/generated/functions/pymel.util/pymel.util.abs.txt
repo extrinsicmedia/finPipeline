@@ -1,0 +1,6 @@
+pymel.util.abs
+==============
+
+.. currentmodule:: pymel
+
+.. automethod:: util.abs

@@ -1,0 +1,6 @@
+pymel.core.general.instanceable
+===============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: general.instanceable

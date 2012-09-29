@@ -1,0 +1,11 @@
+pymel.core.nodetypes.Mia_physicalsky
+====================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: Mia_physicalsky
+    :parts: 1
+
+.. autoclass:: Mia_physicalsky
+    :members:
+    :undoc-members:

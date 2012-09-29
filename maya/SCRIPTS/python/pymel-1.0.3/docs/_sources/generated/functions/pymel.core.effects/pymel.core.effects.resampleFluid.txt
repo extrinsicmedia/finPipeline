@@ -1,0 +1,6 @@
+pymel.core.effects.resampleFluid
+================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: effects.resampleFluid

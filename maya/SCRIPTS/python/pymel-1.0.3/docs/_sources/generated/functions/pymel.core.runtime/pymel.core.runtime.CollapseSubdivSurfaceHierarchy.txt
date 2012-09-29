@@ -1,0 +1,6 @@
+pymel.core.runtime.CollapseSubdivSurfaceHierarchy
+=================================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CollapseSubdivSurfaceHierarchy

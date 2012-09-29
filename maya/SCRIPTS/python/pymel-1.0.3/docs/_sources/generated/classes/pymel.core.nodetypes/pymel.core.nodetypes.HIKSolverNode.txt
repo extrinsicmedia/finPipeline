@@ -1,0 +1,11 @@
+pymel.core.nodetypes.HIKSolverNode
+==================================
+
+.. currentmodule:: pymel.core.nodetypes
+
+.. inheritance-diagram:: HIKSolverNode
+    :parts: 1
+
+.. autoclass:: HIKSolverNode
+    :members:
+    :undoc-members:

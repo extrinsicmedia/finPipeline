@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pymel.core.nodetypes.RenderLayer &mdash; PyMEL v1.0.3 documentation</title>
+    <link rel="stylesheet" href="../../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="PyMEL v1.0.3 documentation" href="../../../index.html" />
+    <link rel="up" title="pymel.core.nodetypes" href="../../pymel.core.nodetypes.html" />
+    <link rel="next" title="pymel.core.nodetypes.RenderLayerManager" href="pymel.core.nodetypes.RenderLayerManager.html" />
+    <link rel="prev" title="pymel.core.nodetypes.RenderGlobalsList" href="pymel.core.nodetypes.RenderGlobalsList.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.RenderLayerManager.html" title="pymel.core.nodetypes.RenderLayerManager"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.RenderGlobalsList.html" title="pymel.core.nodetypes.RenderGlobalsList"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" accesskey="U">pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pymel-core-nodetypes-renderlayer">
+<h1>pymel.core.nodetypes.RenderLayer<a class="headerlink" href="#pymel-core-nodetypes-renderlayer" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="../../../_images/inheritance-614264a915f17779ffd2b5b1f62573c37f36827d.png" alt="Inheritance diagram of RenderLayer" usemap="#inheritance197718e998" class="inheritance"/>
+<map id="inheritance197718e998" name="inheritance197718e998">
+<area shape="rect" href="#pymel.core.nodetypes.RenderLayer" title="RenderLayer" alt="" coords="7,122,95,146"/>
+<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="7,83,95,107"/>
+<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="15,44,87,68"/>
+<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="5,6,96,30"/>
+</map>
+</p>
+<dl class="class">
+<dt id="pymel.core.nodetypes.RenderLayer">
+<em class="property">class </em><tt class="descname">RenderLayer</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.addAdjustments">
+<tt class="descname">addAdjustments</tt><big>(</big><em>members</em>, <em>noRecurse</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.addAdjustments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.addMembers">
+<tt class="descname">addMembers</tt><big>(</big><em>members</em>, <em>noRecurse=True</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.addMembers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.adjustmentPlug">
+<tt class="descname">adjustmentPlug</tt><big>(</big><em>scenePlug</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.adjustmentPlug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the render layer adjustment value plug for the specified plug. If there is no layer override on the plug, a copy of scenePlug is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>scenePlug <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">The plug for which the adjustment is sought.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.adjustmentPlug</span></tt></p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.nodetypes.RenderLayer.currentLayer">
+<em class="property">classmethod </em><tt class="descname">currentLayer</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.currentLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the  MObject  for the current render layer. This  MObject  can be used in  MFnRenderLayer .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.currentLayer</span></tt></p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.nodetypes.RenderLayer.defaultRenderLayer">
+<em class="property">classmethod </em><tt class="descname">defaultRenderLayer</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.defaultRenderLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the  MObject  for the defaultRenderLayer. This  MObject  can be used in  MFnRenderLayer .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.defaultRenderLayer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.externalRenderPasses">
+<tt class="descname">externalRenderPasses</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.externalRenderPasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function builds an array of unique render pass nodes ( MObject ) that are connected to the renderPass attribute. This function descends recursively into render pass sets to collect all connected render passes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.externalRenderPasses</span></tt></p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.nodetypes.RenderLayer.findLayerByName">
+<em class="property">classmethod </em><tt class="descname">findLayerByName</tt><big>(</big><em>renderLayer</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.findLayerByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns an  MObject  to a render layer that matches the specified name. If no render layer is found with the given name,  MObject::kNullObj  is returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>renderLayer <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">unicode</span></tt></span></dt>
+<dd><p class="first last">The name of the render layer.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.findLayerByName</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.inCurrentRenderLayer">
+<tt class="descname">inCurrentRenderLayer</tt><big>(</big><em>objectPath</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.inCurrentRenderLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function checks if the given object is present in the current render layer or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>objectPath <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">Path of the render layer object.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.inCurrentRenderLayer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.inLayer">
+<tt class="descname">inLayer</tt><big>(</big><em>transform</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.inLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the given shape is in this layer. This method will check all container layers for transform containment. The  MObject  specified must be a shape node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>transform <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">of the shape we are testing against.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.inLayer</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.isPlugAdjusted">
+<tt class="descname">isPlugAdjusted</tt><big>(</big><em>scenePlug</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.isPlugAdjusted" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function checks if the specified plug is adjusted or not; returns true if the plug is adjusted, else returns false.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>scenePlug <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">The plug which needs to be checked for adjustment.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.isPlugAdjusted</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.layerChildren">
+<tt class="descname">layerChildren</tt><big>(</big><em>recurse=False</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.layerChildren" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the container layers for this layer. Container layers provide the ability for a given render layer to &#8220;contain&#8221; other render layers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body">recurse : <tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.layerChildren</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.listAdjustments">
+<tt class="descname">listAdjustments</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.listAdjustments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="pymel.core.nodetypes.RenderLayer.listAllRenderLayers">
+<em class="property">classmethod </em><tt class="descname">listAllRenderLayers</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.listAllRenderLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of render layers currently in the system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt> list</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.listAllRenderLayers</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.listMembers">
+<tt class="descname">listMembers</tt><big>(</big><em>fullNames=True</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.listMembers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.passHasLight">
+<tt class="descname">passHasLight</tt><big>(</big><em>renderPass</em>, <em>light</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.passHasLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the specified light contributes to the given render pass, based on the pass contribution maps attached to this layer. This method does not verify whether the light or the renderPass are actually rendered by the layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>renderPass <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">a render pass node</p>
+</dd>
+<dt>light <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">a light shape node</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.passHasLight</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.passHasObject">
+<tt class="descname">passHasObject</tt><big>(</big><em>renderPass</em>, <em>objectInstance</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.passHasObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the specified object instance contributes to the given render pass, based on the pass contribution maps attached to the layer. This method does not verify whether the object instance or the renderPass are actually rendered by the layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><dl class="first docutils">
+<dt>renderPass <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">a render pass node</p>
+</dd>
+<dt>objectInstance <span class="classifier-delimiter">:</span> <span class="classifier"><tt class="xref py py-obj docutils literal"><span class="pre">PyNode</span></tt></span></dt>
+<dd><p class="first last">DAG path of a shape instance</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><tt class="xref py py-obj docutils literal"><span class="pre">bool</span></tt></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Derived from api method <tt class="xref py py-obj docutils literal"><span class="pre">maya.OpenMayaRender.MFnRenderLayer.passHasObject</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.removeAdjustments">
+<tt class="descname">removeAdjustments</tt><big>(</big><em>members</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.removeAdjustments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.removeMembers">
+<tt class="descname">removeMembers</tt><big>(</big><em>members</em><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.removeMembers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pymel.core.nodetypes.RenderLayer.setCurrent">
+<tt class="descname">setCurrent</tt><big>(</big><big>)</big><a class="headerlink" href="#pymel.core.nodetypes.RenderLayer.setCurrent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.RenderGlobalsList.html"
+                        title="previous chapter">pymel.core.nodetypes.RenderGlobalsList</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pymel.core.nodetypes.RenderLayerManager.html"
+                        title="next chapter">pymel.core.nodetypes.RenderLayerManager</a></p>
+<h3><a href="../../../modules.html">Core</a></h3>
+<ul>   
+	<li><a class="reference external" href="../../pymel.core.animation.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.effects.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.general.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.language.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.modeling.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.rendering.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.system.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.windows.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+</ul>
+<h3><a href="../../../modules.html">Core Modules</a></h3>
+<ul> 
+	<li><a class="reference external" href="../../pymel.core.datatypes.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+	<li><a class="reference external" href="../../pymel.core.nodetypes.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>  
+	<li><a class="reference external" href="../../pymel.core.uitypes.html#module-pymel.core.uitypes"><tt class="xref">uitypes</tt></a></li>  
+</ul>
+<h3><a href="../../../modules.html">Other Modules</a></h3>
+<ul>
+	<li><a class="reference external" href="../../pymel.api.html#module-pymel.api"><tt class="xref">api</tt></a></li> 
+	<li><a class="reference external" href="../../pymel.mayautils.html#module-pymel.mayautils"><tt class="xref">mayautils</tt></a></li>
+	<li><a class="reference external" href="../../pymel.util.html#module-pymel.util"><tt class="xref">util</tt></a></li>
+	<li><a class="reference external" href="../../pymel.versions.html#module-pymel.versions"><tt class="xref">versions</tt></a></li>
+</ul>
+
+
+
+
+<!--
+<ul>   
+<li><a class="reference external" href="../../pymel.core.animation.html.html#module-pymel.core.animation"><tt class="xref">animation</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.datatypes.html.html#module-pymel.core.datatypes"><tt class="xref">datatypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.effects.html.html#module-pymel.core.effects"><tt class="xref">effects</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.general.html.html#module-pymel.core.general"><tt class="xref">general</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.language.html.html#module-pymel.core.language"><tt class="xref">language</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.modeling.html.html#module-pymel.core.modeling"><tt class="xref">modeling</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.nodetypes.html.html#module-pymel.core.nodetypes"><tt class="xref">nodetypes</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.rendering.html.html#module-pymel.core.rendering"><tt class="xref">rendering</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.system.html.html#module-pymel.core.system"><tt class="xref">system</tt></a></li>
+<li><a class="reference external" href="../../pymel.core.windows.html.html#module-pymel.core.windows"><tt class="xref">windows</tt></a></li>
+<li><a class="reference external" href="../../pymel.util.html.html#module-pymel.util"><tt class="xref">pymel.util</tt></a></li>
+
+</ul>
+-->
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/generated/classes/pymel.core.nodetypes/pymel.core.nodetypes.RenderLayer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.RenderLayerManager.html" title="pymel.core.nodetypes.RenderLayerManager"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pymel.core.nodetypes.RenderGlobalsList.html" title="pymel.core.nodetypes.RenderGlobalsList"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">PyMEL v1.0.3 documentation</a> &raquo;</li>
+          <li><a href="../../pymel.core.nodetypes.html" >pymel.core.nodetypes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Chad Dombrova.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pymel.core.runtime.PrefixHierarchyNames
+=======================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.PrefixHierarchyNames

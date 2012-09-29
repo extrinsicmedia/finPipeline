@@ -1,0 +1,6 @@
+pymel.core.runtime.CreatePoseOptions
+====================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.CreatePoseOptions

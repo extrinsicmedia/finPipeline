@@ -1,0 +1,6 @@
+pymel.core.runtime.MakeCollideHair
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.MakeCollideHair

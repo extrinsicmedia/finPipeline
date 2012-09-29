@@ -1,0 +1,6 @@
+pymel.core.runtime.SculptPolygonsToolOptions
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SculptPolygonsToolOptions

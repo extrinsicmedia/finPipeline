@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowKinematics
+=================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowKinematics

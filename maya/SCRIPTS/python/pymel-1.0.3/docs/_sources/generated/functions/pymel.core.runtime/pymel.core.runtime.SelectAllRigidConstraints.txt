@@ -1,0 +1,6 @@
+pymel.core.runtime.SelectAllRigidConstraints
+============================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.SelectAllRigidConstraints

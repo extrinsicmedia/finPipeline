@@ -1,0 +1,6 @@
+pymel.core.windows.toolButton
+=============================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: windows.toolButton

@@ -1,0 +1,6 @@
+pymel.core.runtime.RemoveBlendShapeOptions
+==========================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.RemoveBlendShapeOptions

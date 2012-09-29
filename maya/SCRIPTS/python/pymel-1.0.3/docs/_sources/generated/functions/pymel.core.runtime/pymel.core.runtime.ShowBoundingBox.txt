@@ -1,0 +1,6 @@
+pymel.core.runtime.ShowBoundingBox
+==================================
+
+.. currentmodule:: pymel.core
+
+.. automethod:: runtime.ShowBoundingBox
