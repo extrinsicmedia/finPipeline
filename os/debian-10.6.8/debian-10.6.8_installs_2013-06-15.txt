@@ -1,0 +1,2 @@
+## FFMBC dependencies
+brew install frei0r libdc1394 dirac
