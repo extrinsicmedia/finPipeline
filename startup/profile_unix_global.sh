@@ -4,6 +4,10 @@
 
 UNAME=`uname`
 
+### Default Alias Settings
+alias ll="ls -l"
+alias la ="ls -a"
+
 ### Shared Server and multiple use items. Change this based on FIN location
 ## Make a linux version here
 
