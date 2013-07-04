@@ -4,10 +4,6 @@
 
 UNAME=`uname`
 
-### Default Alias Settings
-alias ll="ls -l"
-alias la ="ls -a"
-
 ### Shared Server and multiple use items. Change this based on FIN location
 ## Make a linux version here
 
@@ -165,3 +161,6 @@ if [ "$UNAME" == "Darwin" ]; then
     # $MAYA_SHARED_DIR/SCRIPTS/python:$MAYA_SHARED_DIR/SCRIPTS/python/pymel-1.0.3:
 fi
 
+### Default Alias Settings
+alias ll="ls -l"
+alias la ="ls -a"
