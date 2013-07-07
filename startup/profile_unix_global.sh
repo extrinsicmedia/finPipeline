@@ -9,10 +9,10 @@ UNAME=`uname`
 
 if [ "$UNAME" == "Darwin" ]; then
     ### mobile servers
-    if [[ -d "/Users/mileslauridsen/FIN_Google_Drive/Google Drive/PRODUCTION/" ]];
+    if [[ -d "/Users/mileslauridsen/FIN_Google_Drive/PRODUCTION/" ]];
     then
             # Stupid whitespace in Google Drive Path so using * to pass the "Google\ Drive" portion of the path
-            export MOBILE_SERVER="/Users/mileslauridsen/FIN_Google_Drive/*/PRODUCTION";export MOBILE_SERVER
+            export MOBILE_SERVER="/Users/mileslauridsen/FIN_Google_Drive/PRODUCTION";export MOBILE_SERVER
             export MOBILE_SYSTEMS_SERVER="$MOBILE_SERVER/SYSTEMS";export MOBILE_SYSTEMS_SERVER
             export MOBILE_JOB_SERVER="$MOBILE_SERVER/PROJECTS";export MOBILE_JOB_SERVER
             export MOBILE_PYTHON_SERVER="$MOBILE_SYSTEMS_SERVER/python";export MOBILE_PYTHON_SERVER
@@ -163,4 +163,4 @@ fi
 
 ### Default Alias Settings
 alias ll="ls -l"
-alias la ="ls -a"
+alias la="ls -a"
