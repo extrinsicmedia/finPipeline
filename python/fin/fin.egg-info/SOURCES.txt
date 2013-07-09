@@ -1,7 +1,0 @@
-setup.py
-fin/__init__.py
-fin.egg-info/PKG-INFO
-fin.egg-info/SOURCES.txt
-fin.egg-info/dependency_links.txt
-fin.egg-info/not-zip-safe
-fin.egg-info/top_level.txt
