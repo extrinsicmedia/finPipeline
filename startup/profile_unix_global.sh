@@ -55,7 +55,7 @@ fi
 
 ## Unix
 if [ "$UNAME" == "Darwin" ]; then
-    PATH="$SYSTEMS_SERVER/software/darwin-10.6/qt-4.7.1/bin:$PATH:$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin:$PYMEL_PATH/python/tools/bin"; export PATH
+    PATH="$PATH:$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin"; export PATH
     export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0";export BOOST_ROOT
 fi
 
