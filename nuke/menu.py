@@ -104,6 +104,12 @@ toolbar = nuke.toolbar("Nodes")
 ### BEGIN DEFAULTS SETUP ###
 nuke.addOnUserCreate(firstFrameEval, nodeClass = 'FrameHold')
 nuke.addOnUserCreate(guiOn, nodeClass = 'DiskCache')
+shuffleLabel = "<b>[value in]"
+nuke.knobDefault( 'Shuffle.label', shuffleLabel )
+nuke.knobDefault( 'EXPTool.mode', 'Stops' )
+
+# Node Colors
+nuke.knobDefault( 'Transform.tile_color', '1278560767.0' )
 
 ### END DEFAULTS SETUP ###
 
