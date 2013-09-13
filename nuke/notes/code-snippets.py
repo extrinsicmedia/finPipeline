@@ -14,3 +14,7 @@ nuke.tcl("value label")
 # setting defaults in menu.py or init.py. http://docs.thefoundry.co.uk/nuke/63/pythondevguide/basics.html
 nuke.knobDefault("Blur.size", "20")
 nuke.knobDefault("Read.exr.compression", "2")
+
+# Return an expression on a knob if it eists
+if knob.hasExpression():
+    origExpression = knob.toScript()

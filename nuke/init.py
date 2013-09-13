@@ -18,7 +18,6 @@ import platform
 import sys
 import nuke
 import re
-import fin_globals
 
 ### BEGIN FILEPATH CORRECTION ###
 # Make all filepaths load without errors regardless of OS
@@ -37,8 +36,22 @@ nuke.addFilenameFilter(myFilenameFilter)
 ### BEGIN PLUGIN ADDITIONS ###
 nuke.pluginAddPath(os.path.join('plugins', 'all', 'pixelfudger'))
 
-# Add OS specific plugin directories
+# Add OS specific paths to directories
 if nuke.env['MACOS']:
+	
+	# Add gizmos
+	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'gizmos'))
+	
+	# Add tcl
+	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'tcl'))
+	
+	# Add icons
+	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'icons'))
+	
+	# Add python
+	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'python'))
+	
+	# Add OSX plugins
 	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'plugins', 'osx'))
 
 	# Add Geometry plugins
@@ -188,8 +201,8 @@ if __name__ == '__main__':
     if not nuke.GUI:
         # We're not gonna need it anymore, cleanup...
         del gizManager
-		
-	
+
+
 ### Read and Write nodes change defaults
 nuke.knobDefault("Read.before", "black")
 nuke.knobDefault("Read.after", "black")

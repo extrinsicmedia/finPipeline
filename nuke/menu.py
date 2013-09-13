@@ -17,7 +17,7 @@ import os
 import re
 import sys
 import nuke
-import Send2Rush as s2r
+#import Send2Rush as s2r
 import os.path
 import djv_this
 import fin_assetManager

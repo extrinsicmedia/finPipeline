@@ -91,8 +91,9 @@ fi
 
 ## Nuke
 if [ "$UNAME" == "Darwin" ]; then
-    alias nukex='/Applications/Nuke6.3v8/NukeX6.3v8.app/NukeX6.3v8'
-    alias nuke='/Applications/Nuke6.3v8/Nuke6.3v8.app/Nuke6.3v8'
+    alias nukex='/Applications/Nuke7.0v8/NukeX7.0v8.app/NukeX7.0v8'
+    alias nuke='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
+    alias nuke70v8='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
     alias nuke63v8='/Applications/Nuke6.3v8/Nuke6.3v8.app/Nuke6.3v8'
     alias nukex63v8='/Applications/Nuke6.3v8/NukeX6.3v8.app/NukeX6.3v8'
     alias nukex62v2='/Applications/Nuke6.2v2/NukeX6.2v2.app/NukeX6.2v2'
