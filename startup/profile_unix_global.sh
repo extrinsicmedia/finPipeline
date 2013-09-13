@@ -87,6 +87,7 @@ fi
 if [ "$UNAME" == "Darwin" ]; then
     alias rv='/Applications/RV64.app/Contents/MacOS/RV64'
     alias rvpkg='/Applications/RV64.app/Contents/MacOS/rvpkg'
+    export RVRC_CONFIG="1"
 fi
 
 ## Nuke
