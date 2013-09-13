@@ -18,3 +18,7 @@ nuke.knobDefault("Read.exr.compression", "2")
 # Return an expression on a knob if it eists
 if knob.hasExpression():
     origExpression = knob.toScript()
+
+# List all knobs on a node
+for i in nuke.selectedNodes().knobs():
+    print i
