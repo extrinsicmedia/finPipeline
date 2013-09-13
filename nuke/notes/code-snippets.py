@@ -22,3 +22,11 @@ if knob.hasExpression():
 # List all knobs on a node
 for i in nuke.selectedNodes().knobs():
     print i
+
+# Code for Tagging system
+for n in nuke.allNodes():
+    if "LUT_CORRECT" in n['label'].getValue():
+        n['disable'].setValue(True)
+
+for n in nuke.selectedNodes():
+    n['label'].setValue("{PULSE}")
