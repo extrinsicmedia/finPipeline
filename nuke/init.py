@@ -24,10 +24,17 @@ import re
 def myFilenameFilter(filename):
 	if nuke.env['MACOS']:
 		filename = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('MAC_SERVER', None) )
+        filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('MAC_SERVER', None) )
+
 	if nuke.env['WIN32']:
 		filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('WIN_SERVER', None) )
-		
-	return filename
+        filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('WIN_SERVER', None) )
+
+    if nuke.env['LINUX']:
+        filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('NIX_SERVER', None) )
+        filename2 = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('NIX_SERVER', None) )
+
+	return filename, filename2
 
 # Use the filenameFilter(s)
 nuke.addFilenameFilter(myFilenameFilter)
