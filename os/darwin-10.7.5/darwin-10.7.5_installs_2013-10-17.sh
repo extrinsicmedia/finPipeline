@@ -25,16 +25,15 @@ brew install -v python --universal --with-brewed-openssl
 brew install -v ilmbase
 brew install -v openexr
 brew install -v git
-
 brew install -v qt --universal --with-docs --with-mysql
-brew install -v python3
 brew install -v pyqt
-brew install -v boost
+brew install -v htop
+brew install -v opencolorio --with-docs --with-java --with-python --with-tests
+brew install -v boost --universal 
+brew install -v python3 --quicktest --with-brewed-openssl
+
 brew install -v hdf5
 brew install -v alembic
-brew install -v htop
-
-
 
 # Update python3 setuptools and pip
 sudo pip3 install --upgrade setuptools
@@ -65,4 +64,6 @@ sudo pip3 install --upgrade pip
 # OpenOffice
 # Virtualbox
 # Cuda
+# Cyberduck
+# Transmission
 
