@@ -2,7 +2,7 @@
 
 '''
 fin_ffmpeg.py - A module to turn a QT into a file sequence or a file sequence into a QT
-Copyright (C) 2012  Miles Lauridsen
+Copyright (c) 2012  Miles Lauridsen
 
 Based on BSD 2-Clause License  http://opensource.org/licenses/BSD-2-Clause
 
@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import os
 import sys
-import subprocess
+import subprocess as sp
 
 ### DEFINITIONS
 
@@ -62,7 +62,7 @@ def movToImg(file_in, file_out):
     return cmd
     
 def movInfo(file_in):
-    cmd = ['ffmpeg', 'i', file_in]
+    cmd = ['ffmpeg', '-i', file_in]
     return cmd
 
 def files(path):

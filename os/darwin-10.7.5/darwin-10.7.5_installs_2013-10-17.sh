@@ -31,13 +31,22 @@ brew install -v htop
 brew install -v opencolorio --with-docs --with-java --with-python --with-tests
 brew install -v boost --universal 
 brew install -v python3 --quicktest --with-brewed-openssl
+brew install -v doxygen
+brew install -v vim
+brew install -v gfortran
 
-brew install -v hdf5
-brew install -v alembic
+
 
 # Update python3 setuptools and pip
 sudo pip3 install --upgrade setuptools
 sudo pip3 install --upgrade pip
+
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
+sudo pip install numpy
+sudo pip install scipy
+sudo pip install scikit-learn
+
 
 ## Manual installs
 # Komodo Edit
@@ -66,4 +75,18 @@ sudo pip3 install --upgrade pip
 # Cuda
 # Cyberduck
 # Transmission
+# Drobbox
+# Audacity
+# XQuartz
+
+# Possibly need to delete these:
+cp lib/libopenctm.dylib /usr/local/opt/
+cp lib/openctm.h /usr/local/include/
+cp lib/openctmpp.h /usr/local/include/
+cp tools/ctmconv /usr/local/bin/
+cp tools/ctmviewer /usr/local/bin/
+mkdir -p /usr/local/share/man/man1/
+cp doc/ctmconv.1 /usr/local/share/man/man1/
+cp doc/ctmviewer.1 /usr/local/share/man/man1/
+
 
