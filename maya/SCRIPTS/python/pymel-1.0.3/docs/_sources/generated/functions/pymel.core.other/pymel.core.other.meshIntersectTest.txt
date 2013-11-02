@@ -1,6 +1,0 @@
-pymel.core.other.meshIntersectTest
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.meshIntersectTest

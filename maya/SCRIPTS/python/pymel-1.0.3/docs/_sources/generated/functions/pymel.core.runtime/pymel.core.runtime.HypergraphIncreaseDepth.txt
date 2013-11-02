@@ -1,6 +1,0 @@
-pymel.core.runtime.HypergraphIncreaseDepth
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HypergraphIncreaseDepth

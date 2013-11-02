@@ -1,6 +1,0 @@
-pymel.core.runtime.DeactivateGlobalScreenSliderModeMarkingMenu
-==============================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeactivateGlobalScreenSliderModeMarkingMenu

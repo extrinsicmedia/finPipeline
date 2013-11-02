@@ -1,6 +1,0 @@
-pymel.core.runtime.deleteNclothCache
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.deleteNclothCache

@@ -1,6 +1,0 @@
-pymel.core.context.lassoContext
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.lassoContext

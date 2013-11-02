@@ -1,6 +1,0 @@
-pymel.core.runtime.PostInfinityOscillate
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PostInfinityOscillate

@@ -1,6 +1,0 @@
-pymel.core.system.date
-======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.date

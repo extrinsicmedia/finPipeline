@@ -1,6 +1,0 @@
-pymel.core.runtime.ExportOptions
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExportOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateSubdivCube
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateSubdivCube

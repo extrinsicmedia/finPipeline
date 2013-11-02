@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateNodeWindow
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateNodeWindow

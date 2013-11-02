@@ -1,6 +1,0 @@
-pymel.core.rendering.renderLayerPostProcess
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.renderLayerPostProcess

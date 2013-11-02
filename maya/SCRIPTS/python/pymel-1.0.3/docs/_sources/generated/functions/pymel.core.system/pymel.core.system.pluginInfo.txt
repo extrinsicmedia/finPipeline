@@ -1,6 +1,0 @@
-pymel.core.system.pluginInfo
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.pluginInfo

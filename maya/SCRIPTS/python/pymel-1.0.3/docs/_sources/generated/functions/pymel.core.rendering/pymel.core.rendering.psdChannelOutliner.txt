@@ -1,6 +1,0 @@
-pymel.core.rendering.psdChannelOutliner
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.psdChannelOutliner

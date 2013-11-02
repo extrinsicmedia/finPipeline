@@ -1,6 +1,0 @@
-pymel.util.all
-==============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.all

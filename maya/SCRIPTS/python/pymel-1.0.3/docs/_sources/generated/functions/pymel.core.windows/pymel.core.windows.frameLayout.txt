@@ -1,6 +1,0 @@
-pymel.core.windows.frameLayout
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.frameLayout

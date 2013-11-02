@@ -1,6 +1,0 @@
-pymel.core.other.addIK2BsolverCallbacks
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.addIK2BsolverCallbacks

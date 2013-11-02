@@ -1,6 +1,0 @@
-pymel.core.runtime.WedgePolygonOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.WedgePolygonOptions

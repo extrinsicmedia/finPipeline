@@ -1,6 +1,0 @@
-pymel.core.other.cMuscleWeightPrune
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.cMuscleWeightPrune

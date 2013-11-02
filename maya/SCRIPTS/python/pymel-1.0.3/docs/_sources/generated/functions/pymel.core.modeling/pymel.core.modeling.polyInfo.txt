@@ -1,6 +1,0 @@
-pymel.core.modeling.polyInfo
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyInfo

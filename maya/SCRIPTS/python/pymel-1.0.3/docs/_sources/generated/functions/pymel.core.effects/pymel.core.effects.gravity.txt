@@ -1,6 +1,0 @@
-pymel.core.effects.gravity
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.gravity

@@ -1,6 +1,0 @@
-pymel.core.runtime.LongPolygonNormals
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LongPolygonNormals

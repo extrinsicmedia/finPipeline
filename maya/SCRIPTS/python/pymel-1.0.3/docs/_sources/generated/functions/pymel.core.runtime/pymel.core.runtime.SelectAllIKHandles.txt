@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllIKHandles
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllIKHandles

@@ -1,6 +1,0 @@
-pymel.core.runtime.ParticleTool
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ParticleTool

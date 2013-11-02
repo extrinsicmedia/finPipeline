@@ -1,6 +1,0 @@
-pymel.mayautils.recurseMayaScriptPath
-=====================================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.recurseMayaScriptPath

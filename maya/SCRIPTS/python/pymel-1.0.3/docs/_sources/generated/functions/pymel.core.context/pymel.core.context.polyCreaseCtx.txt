@@ -1,6 +1,0 @@
-pymel.core.context.polyCreaseCtx
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyCreaseCtx

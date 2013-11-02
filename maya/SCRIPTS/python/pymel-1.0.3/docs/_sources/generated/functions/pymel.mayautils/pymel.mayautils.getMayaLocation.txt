@@ -1,6 +1,0 @@
-pymel.mayautils.getMayaLocation
-===============================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.getMayaLocation

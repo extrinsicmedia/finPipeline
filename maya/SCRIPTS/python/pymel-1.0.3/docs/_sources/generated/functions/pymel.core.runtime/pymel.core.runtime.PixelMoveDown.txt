@@ -1,6 +1,0 @@
-pymel.core.runtime.PixelMoveDown
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PixelMoveDown

@@ -1,6 +1,0 @@
-pymel.core.runtime.HideTexturePlacements
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideTexturePlacements

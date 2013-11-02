@@ -1,6 +1,0 @@
-pymel.core.effects.air
-======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.air

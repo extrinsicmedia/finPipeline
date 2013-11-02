@@ -1,6 +1,0 @@
-pymel.core.runtime.NewScene
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NewScene

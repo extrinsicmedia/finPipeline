@@ -1,6 +1,0 @@
-pymel.core.runtime.PanZoomTool
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PanZoomTool

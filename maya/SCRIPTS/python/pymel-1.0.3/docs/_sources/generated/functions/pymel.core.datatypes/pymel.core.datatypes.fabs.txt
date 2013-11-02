@@ -1,6 +1,0 @@
-pymel.core.datatypes.fabs
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.fabs

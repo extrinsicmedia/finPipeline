@@ -1,6 +1,0 @@
-pymel.core.runtime.setNClothStartState
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.setNClothStartState

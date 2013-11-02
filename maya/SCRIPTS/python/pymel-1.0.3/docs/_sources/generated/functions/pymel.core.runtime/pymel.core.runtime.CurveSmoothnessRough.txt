@@ -1,6 +1,0 @@
-pymel.core.runtime.CurveSmoothnessRough
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CurveSmoothnessRough

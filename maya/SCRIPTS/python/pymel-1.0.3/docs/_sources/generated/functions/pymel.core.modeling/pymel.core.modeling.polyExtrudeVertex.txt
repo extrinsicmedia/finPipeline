@@ -1,6 +1,0 @@
-pymel.core.modeling.polyExtrudeVertex
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyExtrudeVertex

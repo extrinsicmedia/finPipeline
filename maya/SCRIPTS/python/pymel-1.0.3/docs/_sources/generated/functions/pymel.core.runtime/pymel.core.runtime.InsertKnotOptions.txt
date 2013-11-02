@@ -1,6 +1,0 @@
-pymel.core.runtime.InsertKnotOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InsertKnotOptions

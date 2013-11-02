@@ -1,6 +1,0 @@
-pymel.util.floor
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.floor

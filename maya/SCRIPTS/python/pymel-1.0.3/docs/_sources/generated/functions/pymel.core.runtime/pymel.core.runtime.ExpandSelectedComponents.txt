@@ -1,6 +1,0 @@
-pymel.core.runtime.ExpandSelectedComponents
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExpandSelectedComponents

@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleCreaseVertices
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleCreaseVertices

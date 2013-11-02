@@ -1,6 +1,0 @@
-pymel.core.other.polySpinEdge
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.polySpinEdge

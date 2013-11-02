@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivSmoothnessMediumOptions
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivSmoothnessMediumOptions

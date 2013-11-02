@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleMeshEdges
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleMeshEdges

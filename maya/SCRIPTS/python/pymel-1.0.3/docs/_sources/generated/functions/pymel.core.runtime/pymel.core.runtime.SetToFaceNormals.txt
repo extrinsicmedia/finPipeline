@@ -1,6 +1,0 @@
-pymel.core.runtime.SetToFaceNormals
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetToFaceNormals

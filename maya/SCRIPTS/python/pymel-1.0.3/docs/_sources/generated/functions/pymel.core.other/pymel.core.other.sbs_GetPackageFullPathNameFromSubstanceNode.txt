@@ -1,6 +1,0 @@
-pymel.core.other.sbs_GetPackageFullPathNameFromSubstanceNode
-============================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.sbs_GetPackageFullPathNameFromSubstanceNode

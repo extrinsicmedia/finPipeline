@@ -1,6 +1,0 @@
-pymel.core.runtime.LockContainer
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LockContainer

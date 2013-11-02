@@ -1,6 +1,0 @@
-pymel.core.runtime.UnmirrorSmoothProxyOptions
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnmirrorSmoothProxyOptions

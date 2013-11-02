@@ -1,6 +1,0 @@
-pymel.core.runtime.GoToBindPose
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GoToBindPose

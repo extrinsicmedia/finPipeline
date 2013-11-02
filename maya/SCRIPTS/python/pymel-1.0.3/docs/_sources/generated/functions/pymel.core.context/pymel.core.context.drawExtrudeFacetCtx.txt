@@ -1,6 +1,0 @@
-pymel.core.context.drawExtrudeFacetCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.drawExtrudeFacetCtx

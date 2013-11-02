@@ -1,6 +1,0 @@
-pymel.core.other.subgraph
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.subgraph

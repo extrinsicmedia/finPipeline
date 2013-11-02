@@ -1,6 +1,0 @@
-pymel.core.system.sceneName
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.sceneName

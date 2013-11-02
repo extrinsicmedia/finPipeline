@@ -1,6 +1,0 @@
-pymel.core.general.toggle
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.toggle

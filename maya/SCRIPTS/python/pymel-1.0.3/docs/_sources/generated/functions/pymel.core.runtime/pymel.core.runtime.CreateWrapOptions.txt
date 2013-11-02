@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateWrapOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateWrapOptions

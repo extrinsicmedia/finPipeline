@@ -1,6 +1,0 @@
-pymel.core.runtime.PreviousKey
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreviousKey

@@ -1,6 +1,0 @@
-pymel.core.language.evalEcho
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: language.evalEcho

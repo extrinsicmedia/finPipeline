@@ -1,6 +1,0 @@
-pymel.core.runtime.AppendToHairCache
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AppendToHairCache

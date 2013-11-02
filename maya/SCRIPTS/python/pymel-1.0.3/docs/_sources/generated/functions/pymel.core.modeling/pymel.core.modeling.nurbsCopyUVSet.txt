@@ -1,6 +1,0 @@
-pymel.core.modeling.nurbsCopyUVSet
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.nurbsCopyUVSet

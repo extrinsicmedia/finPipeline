@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleWireframeInArtisan
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleWireframeInArtisan

@@ -1,6 +1,0 @@
-pymel.core.animation.copySkinWeights
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.copySkinWeights

@@ -1,6 +1,0 @@
-pymel.core.context.createPolyHelixCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyHelixCtx

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyMultiLayoutUV
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyMultiLayoutUV

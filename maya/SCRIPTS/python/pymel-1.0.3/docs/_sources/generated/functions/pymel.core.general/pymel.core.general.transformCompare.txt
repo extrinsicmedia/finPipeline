@@ -1,6 +1,0 @@
-pymel.core.general.transformCompare
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.transformCompare

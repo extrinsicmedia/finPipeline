@@ -1,6 +1,0 @@
-pymel.core.runtime.HideMarkers
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideMarkers

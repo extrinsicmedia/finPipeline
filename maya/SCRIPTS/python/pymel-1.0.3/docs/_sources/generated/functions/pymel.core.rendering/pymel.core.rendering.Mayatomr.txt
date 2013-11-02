@@ -1,6 +1,0 @@
-pymel.core.rendering.Mayatomr
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.Mayatomr

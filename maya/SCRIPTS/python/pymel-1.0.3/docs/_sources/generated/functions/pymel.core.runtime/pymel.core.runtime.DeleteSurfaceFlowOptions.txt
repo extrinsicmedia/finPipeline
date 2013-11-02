@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteSurfaceFlowOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteSurfaceFlowOptions

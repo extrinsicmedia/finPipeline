@@ -1,6 +1,0 @@
-pymel.core.effects.stroke
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.stroke

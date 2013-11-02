@@ -1,6 +1,0 @@
-pymel.core.runtime.EditCharacterAttributes
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EditCharacterAttributes

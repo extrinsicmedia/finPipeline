@@ -1,6 +1,0 @@
-pymel.core.runtime.BatchBake
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BatchBake

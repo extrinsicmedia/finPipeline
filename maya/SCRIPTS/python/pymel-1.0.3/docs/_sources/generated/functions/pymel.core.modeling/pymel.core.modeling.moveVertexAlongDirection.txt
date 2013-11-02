@@ -1,6 +1,0 @@
-pymel.core.modeling.moveVertexAlongDirection
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.moveVertexAlongDirection

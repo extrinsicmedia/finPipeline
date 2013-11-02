@@ -1,6 +1,0 @@
-pymel.core.runtime.MoveNormalTool
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MoveNormalTool

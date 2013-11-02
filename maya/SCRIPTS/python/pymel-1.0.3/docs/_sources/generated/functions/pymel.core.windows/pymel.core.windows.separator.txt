@@ -1,6 +1,0 @@
-pymel.core.windows.separator
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.separator

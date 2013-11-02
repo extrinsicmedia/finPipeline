@@ -1,6 +1,0 @@
-pymel.core.runtime.UpdateCurrentSceneSoftimage
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UpdateCurrentSceneSoftimage

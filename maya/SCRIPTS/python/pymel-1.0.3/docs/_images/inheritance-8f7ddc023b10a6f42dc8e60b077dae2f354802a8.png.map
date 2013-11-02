@@ -1,7 +1,0 @@
-<map id="inheritanceff3b811aa2" name="inheritanceff3b811aa2">
-<area shape="rect" href="#pymel.core.nodetypes.Mip_binaryproxy" title="Mip_binaryproxy" alt="" coords="5,160,112,184"/>
-<area shape="rect" href="pymel.core.nodetypes.THdependNode.html#pymel.core.nodetypes.THdependNode" title="THdependNode" alt="" coords="7,121,111,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="15,82,103,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="13,5,104,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="23,44,95,68"/>
-</map>

@@ -1,6 +1,0 @@
-pymel.core.runtime.FrameSelected
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FrameSelected

@@ -1,6 +1,0 @@
-pymel.core.runtime.Create2DContainerEmitterOptions
-==================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Create2DContainerEmitterOptions

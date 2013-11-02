@@ -1,6 +1,0 @@
-pymel.core.other.sbs_SetEditionModeScale
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.sbs_SetEditionModeScale

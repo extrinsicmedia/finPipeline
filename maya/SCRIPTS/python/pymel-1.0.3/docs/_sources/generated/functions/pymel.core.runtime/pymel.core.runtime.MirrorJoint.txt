@@ -1,6 +1,0 @@
-pymel.core.runtime.MirrorJoint
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MirrorJoint

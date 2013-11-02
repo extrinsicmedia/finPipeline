@@ -1,6 +1,0 @@
-pymel.core.effects.dynPref
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.dynPref

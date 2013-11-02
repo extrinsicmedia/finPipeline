@@ -1,6 +1,0 @@
-pymel.core.runtime.FlowPathObjectOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FlowPathObjectOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleToolSettings
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleToolSettings

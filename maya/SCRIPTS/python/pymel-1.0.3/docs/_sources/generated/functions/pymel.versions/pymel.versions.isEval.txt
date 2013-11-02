@@ -1,6 +1,0 @@
-pymel.versions.isEval
-=====================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.isEval

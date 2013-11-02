@@ -1,6 +1,0 @@
-pymel.core.runtime.RepeatLastActionAtMousePosition
-==================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RepeatLastActionAtMousePosition

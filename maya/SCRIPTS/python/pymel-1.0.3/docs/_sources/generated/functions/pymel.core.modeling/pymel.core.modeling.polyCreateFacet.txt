@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCreateFacet
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCreateFacet

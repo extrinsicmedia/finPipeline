@@ -1,6 +1,0 @@
-pymel.core.general.createDisplayLayer
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.createDisplayLayer

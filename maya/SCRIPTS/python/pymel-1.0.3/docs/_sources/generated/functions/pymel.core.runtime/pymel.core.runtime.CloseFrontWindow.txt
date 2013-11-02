@@ -1,6 +1,0 @@
-pymel.core.runtime.CloseFrontWindow
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CloseFrontWindow

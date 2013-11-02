@@ -1,6 +1,0 @@
-pymel.core.runtime.FullHotboxDisplay
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FullHotboxDisplay

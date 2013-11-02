@@ -1,6 +1,0 @@
-pymel.core.general.itemFilterRender
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.itemFilterRender

@@ -1,6 +1,0 @@
-pymel.core.windows.shelfButton
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.shelfButton

@@ -1,6 +1,0 @@
-pymel.core.animation.defineVirtualDevice
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.defineVirtualDevice

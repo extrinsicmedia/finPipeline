@@ -1,6 +1,0 @@
-pymel.core.runtime.AssignHairConstraintOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AssignHairConstraintOptions

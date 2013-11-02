@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllHistory
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllHistory

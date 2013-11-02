@@ -1,6 +1,0 @@
-pymel.core.context.texRotateContext
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texRotateContext

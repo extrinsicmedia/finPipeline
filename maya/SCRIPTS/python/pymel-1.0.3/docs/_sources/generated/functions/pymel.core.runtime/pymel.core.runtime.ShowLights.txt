@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowLights
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowLights

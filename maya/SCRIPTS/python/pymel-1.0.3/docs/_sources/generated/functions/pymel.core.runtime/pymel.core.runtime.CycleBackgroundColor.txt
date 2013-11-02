@@ -1,6 +1,0 @@
-pymel.core.runtime.CycleBackgroundColor
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CycleBackgroundColor

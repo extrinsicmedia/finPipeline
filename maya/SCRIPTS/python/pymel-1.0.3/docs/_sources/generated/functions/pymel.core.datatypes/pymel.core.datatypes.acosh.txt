@@ -1,6 +1,0 @@
-pymel.core.datatypes.acosh
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.acosh

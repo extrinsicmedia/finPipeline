@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyStampDepthRelease
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyStampDepthRelease

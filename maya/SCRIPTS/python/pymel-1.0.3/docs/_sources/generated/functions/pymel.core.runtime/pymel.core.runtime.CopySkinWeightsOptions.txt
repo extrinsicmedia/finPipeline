@@ -1,6 +1,0 @@
-pymel.core.runtime.CopySkinWeightsOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CopySkinWeightsOptions

@@ -1,6 +1,0 @@
-pymel.core.modeling.reverseCurve
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.reverseCurve

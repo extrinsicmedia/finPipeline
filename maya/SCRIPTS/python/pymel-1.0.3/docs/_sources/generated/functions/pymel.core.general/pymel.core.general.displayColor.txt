@@ -1,6 +1,0 @@
-pymel.core.general.displayColor
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.displayColor

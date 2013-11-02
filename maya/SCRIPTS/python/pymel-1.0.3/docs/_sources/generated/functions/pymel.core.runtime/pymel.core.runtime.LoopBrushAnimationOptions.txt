@@ -1,6 +1,0 @@
-pymel.core.runtime.LoopBrushAnimationOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LoopBrushAnimationOptions

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyMergeVertex
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyMergeVertex

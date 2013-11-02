@@ -1,6 +1,0 @@
-pymel.core.runtime.PixelMoveUp
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PixelMoveUp

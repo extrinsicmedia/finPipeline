@@ -1,6 +1,0 @@
-pymel.core.general.containerBind
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.containerBind

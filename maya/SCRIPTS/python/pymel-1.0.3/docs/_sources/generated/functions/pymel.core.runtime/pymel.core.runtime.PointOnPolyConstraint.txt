@@ -1,6 +1,0 @@
-pymel.core.runtime.PointOnPolyConstraint
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PointOnPolyConstraint

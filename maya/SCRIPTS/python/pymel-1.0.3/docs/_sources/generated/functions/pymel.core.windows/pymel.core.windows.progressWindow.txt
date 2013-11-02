@@ -1,6 +1,0 @@
-pymel.core.windows.progressWindow
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.progressWindow

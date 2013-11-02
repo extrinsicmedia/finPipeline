@@ -1,6 +1,0 @@
-pymel.core.runtime.ParameterTool
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ParameterTool

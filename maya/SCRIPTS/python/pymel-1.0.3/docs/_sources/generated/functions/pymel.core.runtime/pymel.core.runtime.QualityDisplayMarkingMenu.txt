@@ -1,6 +1,0 @@
-pymel.core.runtime.QualityDisplayMarkingMenu
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.QualityDisplayMarkingMenu

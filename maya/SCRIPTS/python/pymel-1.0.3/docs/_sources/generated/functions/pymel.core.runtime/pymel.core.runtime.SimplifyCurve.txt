@@ -1,6 +1,0 @@
-pymel.core.runtime.SimplifyCurve
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SimplifyCurve

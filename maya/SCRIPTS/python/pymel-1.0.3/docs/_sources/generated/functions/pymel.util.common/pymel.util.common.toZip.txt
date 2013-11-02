@@ -1,6 +1,0 @@
-pymel.util.common.toZip
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: common.toZip

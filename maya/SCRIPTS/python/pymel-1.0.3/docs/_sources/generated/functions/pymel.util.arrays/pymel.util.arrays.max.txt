@@ -1,6 +1,0 @@
-pymel.util.arrays.max
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.max

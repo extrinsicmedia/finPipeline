@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToVertices
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToVertices

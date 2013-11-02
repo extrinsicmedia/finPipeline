@@ -1,6 +1,0 @@
-pymel.core.context.threePointArcCtx
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.threePointArcCtx

@@ -1,6 +1,0 @@
-pymel.util.arrays.axis
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.axis

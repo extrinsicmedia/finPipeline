@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllSculptObjects
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllSculptObjects

@@ -1,6 +1,0 @@
-pymel.core.runtime.TangentsFixed
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TangentsFixed

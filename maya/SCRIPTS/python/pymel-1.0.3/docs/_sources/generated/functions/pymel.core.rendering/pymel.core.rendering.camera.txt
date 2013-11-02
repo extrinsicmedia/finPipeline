@@ -1,6 +1,0 @@
-pymel.core.rendering.camera
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.camera

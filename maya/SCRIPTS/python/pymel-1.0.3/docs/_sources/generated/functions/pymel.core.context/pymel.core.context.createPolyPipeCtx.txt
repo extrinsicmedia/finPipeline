@@ -1,6 +1,0 @@
-pymel.core.context.createPolyPipeCtx
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyPipeCtx

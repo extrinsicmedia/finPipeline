@@ -1,6 +1,0 @@
-pymel.util.arrays.gamma
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.gamma

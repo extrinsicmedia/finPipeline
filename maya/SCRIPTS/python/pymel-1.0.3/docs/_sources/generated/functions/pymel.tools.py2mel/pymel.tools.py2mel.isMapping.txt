@@ -1,6 +1,0 @@
-pymel.tools.py2mel.isMapping
-============================
-
-.. currentmodule:: pymel.tools
-
-.. automethod:: py2mel.isMapping

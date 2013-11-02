@@ -1,6 +1,0 @@
-pymel.core.windows.informBox
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.informBox

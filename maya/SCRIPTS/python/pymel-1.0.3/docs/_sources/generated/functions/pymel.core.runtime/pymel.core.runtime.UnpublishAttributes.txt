@@ -1,6 +1,0 @@
-pymel.core.runtime.UnpublishAttributes
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnpublishAttributes

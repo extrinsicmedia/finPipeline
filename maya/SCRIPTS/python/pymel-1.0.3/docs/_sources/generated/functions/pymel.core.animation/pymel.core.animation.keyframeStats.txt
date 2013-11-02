@@ -1,6 +1,0 @@
-pymel.core.animation.keyframeStats
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.keyframeStats

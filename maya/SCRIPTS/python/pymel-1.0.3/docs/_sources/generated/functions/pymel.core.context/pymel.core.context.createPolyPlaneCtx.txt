@@ -1,6 +1,0 @@
-pymel.core.context.createPolyPlaneCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyPlaneCtx

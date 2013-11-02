@@ -1,6 +1,0 @@
-pymel.core.runtime.ResetSoftSelectOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ResetSoftSelectOptions

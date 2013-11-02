@@ -1,6 +1,0 @@
-pymel.core.context.wrinkleContext
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.wrinkleContext

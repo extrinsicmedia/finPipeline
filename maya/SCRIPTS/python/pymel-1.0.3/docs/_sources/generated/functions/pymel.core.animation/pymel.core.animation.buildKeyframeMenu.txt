@@ -1,6 +1,0 @@
-pymel.core.animation.buildKeyframeMenu
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.buildKeyframeMenu

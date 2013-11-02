@@ -1,6 +1,0 @@
-pymel.core.general.colorIndex
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.colorIndex

@@ -1,6 +1,0 @@
-pymel.core.runtime.BendCurves
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BendCurves

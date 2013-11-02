@@ -1,6 +1,0 @@
-pymel.core.system.ogs
-=====================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.ogs

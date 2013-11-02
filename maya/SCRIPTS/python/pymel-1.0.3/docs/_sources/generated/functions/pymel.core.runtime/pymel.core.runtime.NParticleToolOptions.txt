@@ -1,6 +1,0 @@
-pymel.core.runtime.NParticleToolOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NParticleToolOptions

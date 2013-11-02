@@ -1,6 +1,0 @@
-pymel.core.runtime.PreInfinityOscillate
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreInfinityOscillate

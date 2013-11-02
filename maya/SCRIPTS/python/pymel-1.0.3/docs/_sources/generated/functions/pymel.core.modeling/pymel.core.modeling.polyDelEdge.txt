@@ -1,6 +1,0 @@
-pymel.core.modeling.polyDelEdge
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyDelEdge

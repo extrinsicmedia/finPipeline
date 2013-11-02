@@ -1,6 +1,0 @@
-pymel.core.runtime.StraightenCurvesOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.StraightenCurvesOptions

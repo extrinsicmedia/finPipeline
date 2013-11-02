@@ -1,6 +1,0 @@
-pymel.core.runtime.TwoSideBySideViewArrangement
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TwoSideBySideViewArrangement

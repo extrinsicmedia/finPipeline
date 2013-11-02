@@ -1,6 +1,0 @@
-pymel.core.system.displayWarning
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.displayWarning

@@ -1,6 +1,0 @@
-pymel.core.runtime.AddWire
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddWire

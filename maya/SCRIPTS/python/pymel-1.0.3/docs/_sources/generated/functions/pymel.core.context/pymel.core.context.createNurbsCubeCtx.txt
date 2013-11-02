@@ -1,6 +1,0 @@
-pymel.core.context.createNurbsCubeCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createNurbsCubeCtx

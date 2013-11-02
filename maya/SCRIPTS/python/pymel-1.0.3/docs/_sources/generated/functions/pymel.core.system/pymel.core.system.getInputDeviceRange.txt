@@ -1,6 +1,0 @@
-pymel.core.system.getInputDeviceRange
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.getInputDeviceRange

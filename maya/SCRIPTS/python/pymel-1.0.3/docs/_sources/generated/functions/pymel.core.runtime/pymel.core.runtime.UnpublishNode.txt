@@ -1,6 +1,0 @@
-pymel.core.runtime.UnpublishNode
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnpublishNode

@@ -1,6 +1,0 @@
-pymel.core.system.iterReferences
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.iterReferences

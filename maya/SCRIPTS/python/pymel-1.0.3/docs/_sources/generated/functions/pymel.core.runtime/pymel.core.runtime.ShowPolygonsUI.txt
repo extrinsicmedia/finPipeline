@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowPolygonsUI
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowPolygonsUI

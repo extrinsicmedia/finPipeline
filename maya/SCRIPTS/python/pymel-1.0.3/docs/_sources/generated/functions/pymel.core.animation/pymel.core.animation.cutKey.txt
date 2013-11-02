@@ -1,6 +1,0 @@
-pymel.core.animation.cutKey
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.cutKey

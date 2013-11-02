@@ -1,6 +1,0 @@
-pymel.core.runtime.Redo
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Redo

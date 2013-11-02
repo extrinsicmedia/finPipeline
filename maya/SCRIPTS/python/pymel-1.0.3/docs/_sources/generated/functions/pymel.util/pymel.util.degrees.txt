@@ -1,6 +1,0 @@
-pymel.util.degrees
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.degrees

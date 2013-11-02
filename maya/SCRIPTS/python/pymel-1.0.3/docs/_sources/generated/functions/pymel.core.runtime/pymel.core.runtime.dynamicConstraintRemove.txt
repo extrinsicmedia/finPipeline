@@ -1,6 +1,0 @@
-pymel.core.runtime.dynamicConstraintRemove
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.dynamicConstraintRemove

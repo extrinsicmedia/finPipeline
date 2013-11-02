@@ -1,6 +1,0 @@
-pymel.core.windows.progressBar
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.progressBar

@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowAnimationUI
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowAnimationUI

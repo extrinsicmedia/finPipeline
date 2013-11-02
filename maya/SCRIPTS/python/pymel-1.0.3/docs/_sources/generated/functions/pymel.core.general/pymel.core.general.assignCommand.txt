@@ -1,6 +1,0 @@
-pymel.core.general.assignCommand
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.assignCommand

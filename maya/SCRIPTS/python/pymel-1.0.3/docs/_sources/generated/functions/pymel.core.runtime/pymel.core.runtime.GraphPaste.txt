@@ -1,6 +1,0 @@
-pymel.core.runtime.GraphPaste
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GraphPaste

@@ -1,6 +1,0 @@
-pymel.core.modeling.subdiv
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdiv

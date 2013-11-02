@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintOperationMarkingMenuPress
-=================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintOperationMarkingMenuPress

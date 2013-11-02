@@ -1,6 +1,0 @@
-pymel.core.runtime.TranslateToolMarkingMenu
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TranslateToolMarkingMenu

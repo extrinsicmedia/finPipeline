@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleObjectDetails
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleObjectDetails

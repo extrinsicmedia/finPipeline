@@ -1,6 +1,0 @@
-pymel.util.convertListArgs
-==========================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.convertListArgs

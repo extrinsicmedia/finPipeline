@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderPassSetEditor
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderPassSetEditor

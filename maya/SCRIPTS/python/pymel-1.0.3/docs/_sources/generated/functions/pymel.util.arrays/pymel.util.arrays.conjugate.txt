@@ -1,6 +1,0 @@
-pymel.util.arrays.conjugate
-===========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.conjugate

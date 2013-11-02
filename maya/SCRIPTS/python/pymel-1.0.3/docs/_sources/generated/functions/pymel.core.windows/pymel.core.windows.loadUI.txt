@@ -1,6 +1,0 @@
-pymel.core.windows.loadUI
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.loadUI

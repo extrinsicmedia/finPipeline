@@ -1,6 +1,0 @@
-pymel.core.language.stackTrace
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: language.stackTrace

@@ -1,6 +1,0 @@
-pymel.util.arrays.isnan
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.isnan

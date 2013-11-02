@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowPlanes
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowPlanes

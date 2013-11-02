@@ -1,6 +1,0 @@
-pymel.core.runtime.MovePolygonComponentOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MovePolygonComponentOptions

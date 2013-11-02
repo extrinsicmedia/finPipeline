@@ -1,6 +1,0 @@
-pymel.core.datatypes.modf
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.modf

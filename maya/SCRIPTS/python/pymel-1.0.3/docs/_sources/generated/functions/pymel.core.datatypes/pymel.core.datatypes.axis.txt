@@ -1,6 +1,0 @@
-pymel.core.datatypes.axis
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.axis

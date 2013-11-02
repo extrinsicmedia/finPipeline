@@ -1,6 +1,0 @@
-pymel.core.runtime.SnapToCurve
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SnapToCurve

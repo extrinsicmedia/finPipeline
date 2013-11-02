@@ -1,6 +1,0 @@
-pymel.core.runtime.ExportSkinWeightMapsOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExportSkinWeightMapsOptions

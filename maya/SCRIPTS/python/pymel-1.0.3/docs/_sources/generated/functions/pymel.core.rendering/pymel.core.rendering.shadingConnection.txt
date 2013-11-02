@@ -1,6 +1,0 @@
-pymel.core.rendering.shadingConnection
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.shadingConnection

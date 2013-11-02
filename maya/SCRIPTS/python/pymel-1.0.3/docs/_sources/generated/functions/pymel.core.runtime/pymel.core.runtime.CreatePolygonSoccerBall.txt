@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonSoccerBall
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonSoccerBall

@@ -1,6 +1,0 @@
-pymel.core.runtime.LevelOfDetailGroup
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LevelOfDetailGroup

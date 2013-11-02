@@ -1,6 +1,0 @@
-pymel.core.context.scriptCtx
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.scriptCtx

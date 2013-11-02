@@ -1,6 +1,0 @@
-pymel.core.uitypes.toQtObject
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: uitypes.toQtObject

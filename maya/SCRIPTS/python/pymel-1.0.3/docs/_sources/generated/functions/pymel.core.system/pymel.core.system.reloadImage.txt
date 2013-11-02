@@ -1,6 +1,0 @@
-pymel.core.system.reloadImage
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.reloadImage

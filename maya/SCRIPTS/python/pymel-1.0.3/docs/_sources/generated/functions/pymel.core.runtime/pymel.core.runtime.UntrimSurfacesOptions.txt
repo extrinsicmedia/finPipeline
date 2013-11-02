@@ -1,6 +1,0 @@
-pymel.core.runtime.UntrimSurfacesOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UntrimSurfacesOptions

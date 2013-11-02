@@ -1,6 +1,0 @@
-pymel.util.arrays.fsum
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.fsum

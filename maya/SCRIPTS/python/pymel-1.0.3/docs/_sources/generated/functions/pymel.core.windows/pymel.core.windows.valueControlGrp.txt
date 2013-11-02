@@ -1,6 +1,0 @@
-pymel.core.windows.valueControlGrp
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.valueControlGrp

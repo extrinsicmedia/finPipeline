@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleChannelBox
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleChannelBox

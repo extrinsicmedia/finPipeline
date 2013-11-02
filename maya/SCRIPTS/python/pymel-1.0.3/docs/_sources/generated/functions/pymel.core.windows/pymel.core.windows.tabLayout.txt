@@ -1,6 +1,0 @@
-pymel.core.windows.tabLayout
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.tabLayout

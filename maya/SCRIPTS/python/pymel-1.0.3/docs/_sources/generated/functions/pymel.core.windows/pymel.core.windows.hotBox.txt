@@ -1,6 +1,0 @@
-pymel.core.windows.hotBox
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.hotBox

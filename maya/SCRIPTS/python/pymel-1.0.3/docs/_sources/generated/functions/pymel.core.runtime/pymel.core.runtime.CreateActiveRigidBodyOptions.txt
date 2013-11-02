@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateActiveRigidBodyOptions
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateActiveRigidBodyOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.SendAsNewSceneSoftimage
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SendAsNewSceneSoftimage

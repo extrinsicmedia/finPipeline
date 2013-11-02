@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleShowBufferCurves
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleShowBufferCurves

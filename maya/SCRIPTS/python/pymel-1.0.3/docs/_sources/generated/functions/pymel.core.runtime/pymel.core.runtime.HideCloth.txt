@@ -1,6 +1,0 @@
-pymel.core.runtime.HideCloth
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideCloth

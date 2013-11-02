@@ -1,6 +1,0 @@
-pymel.core.runtime.Undo
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Undo

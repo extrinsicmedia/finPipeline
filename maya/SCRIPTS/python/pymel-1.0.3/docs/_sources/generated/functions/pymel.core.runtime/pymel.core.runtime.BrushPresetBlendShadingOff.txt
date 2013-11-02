@@ -1,6 +1,0 @@
-pymel.core.runtime.BrushPresetBlendShadingOff
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BrushPresetBlendShadingOff

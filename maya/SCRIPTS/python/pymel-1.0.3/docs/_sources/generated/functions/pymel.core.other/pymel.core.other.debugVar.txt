@@ -1,6 +1,0 @@
-pymel.core.other.debugVar
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.debugVar

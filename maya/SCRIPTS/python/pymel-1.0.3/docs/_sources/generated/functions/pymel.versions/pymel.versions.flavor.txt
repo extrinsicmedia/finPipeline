@@ -1,6 +1,0 @@
-pymel.versions.flavor
-=====================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.flavor

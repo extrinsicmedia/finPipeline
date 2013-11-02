@@ -1,6 +1,0 @@
-pymel.mayautils.getUserScriptsDir
-=================================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.getUserScriptsDir

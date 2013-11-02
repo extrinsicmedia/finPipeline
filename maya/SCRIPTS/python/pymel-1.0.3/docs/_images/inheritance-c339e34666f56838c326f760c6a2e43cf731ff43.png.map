@@ -1,7 +1,0 @@
-<map id="inheritance51a556be54" name="inheritance51a556be54">
-<area shape="rect" href="#pymel.core.nodetypes.AnimBlendNodeAdditiveScale" title="AnimBlendNodeAdditiveScale" alt="" coords="5,160,184,184"/>
-<area shape="rect" href="pymel.core.nodetypes.AnimBlendNodeBase.html#pymel.core.nodetypes.AnimBlendNodeBase" title="AnimBlendNodeBase" alt="" coords="29,121,160,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="51,82,139,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="49,5,140,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="59,44,131,68"/>
-</map>

@@ -1,6 +1,0 @@
-pymel.core.runtime.BridgeEdgeOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BridgeEdgeOptions

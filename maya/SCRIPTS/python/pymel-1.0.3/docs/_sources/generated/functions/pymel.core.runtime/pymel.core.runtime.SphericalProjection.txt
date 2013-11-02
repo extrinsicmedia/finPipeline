@@ -1,6 +1,0 @@
-pymel.core.runtime.SphericalProjection
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SphericalProjection

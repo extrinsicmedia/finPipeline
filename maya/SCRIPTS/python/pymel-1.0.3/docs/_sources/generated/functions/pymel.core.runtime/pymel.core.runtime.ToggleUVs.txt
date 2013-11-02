@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleUVs
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleUVs

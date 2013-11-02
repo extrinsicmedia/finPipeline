@@ -1,6 +1,0 @@
-pymel.core.windows.toQtMenuItem
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.toQtMenuItem

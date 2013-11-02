@@ -1,6 +1,0 @@
-pymel.core.runtime.PreferencesWindow
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreferencesWindow

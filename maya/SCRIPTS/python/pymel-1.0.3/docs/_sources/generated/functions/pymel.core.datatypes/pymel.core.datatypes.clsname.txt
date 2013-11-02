@@ -1,6 +1,0 @@
-pymel.core.datatypes.clsname
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.clsname

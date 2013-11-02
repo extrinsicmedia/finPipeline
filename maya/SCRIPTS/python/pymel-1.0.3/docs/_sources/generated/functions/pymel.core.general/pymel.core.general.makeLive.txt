@@ -1,6 +1,0 @@
-pymel.core.general.makeLive
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.makeLive

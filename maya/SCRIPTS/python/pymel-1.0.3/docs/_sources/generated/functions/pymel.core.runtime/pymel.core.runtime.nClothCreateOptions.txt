@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothCreateOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothCreateOptions

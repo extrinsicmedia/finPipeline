@@ -1,6 +1,0 @@
-pymel.core.runtime.HideFur
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideFur

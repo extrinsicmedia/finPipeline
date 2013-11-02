@@ -1,6 +1,0 @@
-pymel.core.runtime.LayoutUVRectangle
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LayoutUVRectangle

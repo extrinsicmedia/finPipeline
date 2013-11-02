@@ -1,6 +1,0 @@
-pymel.core.runtime.OffsetEdgeLoopToolOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OffsetEdgeLoopToolOptions

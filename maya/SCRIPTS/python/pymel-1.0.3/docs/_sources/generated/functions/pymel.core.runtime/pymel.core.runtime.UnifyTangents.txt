@@ -1,6 +1,0 @@
-pymel.core.runtime.UnifyTangents
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnifyTangents

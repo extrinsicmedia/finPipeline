@@ -1,6 +1,0 @@
-pymel.core.general.displayRGBColor
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.displayRGBColor

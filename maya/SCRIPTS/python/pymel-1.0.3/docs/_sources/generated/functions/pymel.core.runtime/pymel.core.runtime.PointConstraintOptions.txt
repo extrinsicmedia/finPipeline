@@ -1,6 +1,0 @@
-pymel.core.runtime.PointConstraintOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PointConstraintOptions

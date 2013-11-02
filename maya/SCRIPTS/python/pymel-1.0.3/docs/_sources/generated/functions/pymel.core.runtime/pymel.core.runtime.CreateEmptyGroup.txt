@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateEmptyGroup
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateEmptyGroup

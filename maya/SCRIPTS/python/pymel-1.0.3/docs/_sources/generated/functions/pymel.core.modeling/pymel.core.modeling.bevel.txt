@@ -1,6 +1,0 @@
-pymel.core.modeling.bevel
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.bevel

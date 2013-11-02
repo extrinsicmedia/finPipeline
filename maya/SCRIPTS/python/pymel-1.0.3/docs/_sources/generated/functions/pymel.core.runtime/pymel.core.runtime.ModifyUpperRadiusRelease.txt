@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyUpperRadiusRelease
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyUpperRadiusRelease

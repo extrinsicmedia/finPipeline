@@ -1,6 +1,0 @@
-pymel.core.runtime.AttachToPathOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AttachToPathOptions

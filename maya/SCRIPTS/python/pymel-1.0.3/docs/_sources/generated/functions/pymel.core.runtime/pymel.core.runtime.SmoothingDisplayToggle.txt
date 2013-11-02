@@ -1,6 +1,0 @@
-pymel.core.runtime.SmoothingDisplayToggle
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SmoothingDisplayToggle

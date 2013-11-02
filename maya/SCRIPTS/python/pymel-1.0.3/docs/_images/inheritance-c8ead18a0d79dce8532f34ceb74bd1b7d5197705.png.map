@@ -1,7 +1,0 @@
-<map id="inheritancedf61b8343a" name="inheritancedf61b8343a">
-<area shape="rect" href="#pymel.core.nodetypes.ObjectTypeFilter" title="ObjectTypeFilter" alt="" coords="5,160,109,184"/>
-<area shape="rect" href="pymel.core.nodetypes.ObjectFilter.html#pymel.core.nodetypes.ObjectFilter" title="ObjectFilter" alt="" coords="17,121,97,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="13,82,101,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="12,5,103,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="21,44,93,68"/>
-</map>

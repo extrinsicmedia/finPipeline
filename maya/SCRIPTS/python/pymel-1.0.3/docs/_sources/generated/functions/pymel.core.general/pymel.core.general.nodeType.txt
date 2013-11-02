@@ -1,6 +1,0 @@
-pymel.core.general.nodeType
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.nodeType

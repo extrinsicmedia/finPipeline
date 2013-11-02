@@ -1,6 +1,0 @@
-pymel.core.other.GetProperty2StateAttrNameFromHIKEffectorId
-===========================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.GetProperty2StateAttrNameFromHIKEffectorId

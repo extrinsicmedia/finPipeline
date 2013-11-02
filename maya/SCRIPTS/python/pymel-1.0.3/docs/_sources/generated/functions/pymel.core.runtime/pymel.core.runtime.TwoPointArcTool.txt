@@ -1,6 +1,0 @@
-pymel.core.runtime.TwoPointArcTool
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TwoPointArcTool

@@ -1,6 +1,0 @@
-pymel.core.runtime.GraphEditor
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GraphEditor

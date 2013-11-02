@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToShell
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToShell

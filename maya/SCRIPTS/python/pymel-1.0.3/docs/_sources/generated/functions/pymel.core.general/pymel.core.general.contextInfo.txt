@@ -1,6 +1,0 @@
-pymel.core.general.contextInfo
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.contextInfo

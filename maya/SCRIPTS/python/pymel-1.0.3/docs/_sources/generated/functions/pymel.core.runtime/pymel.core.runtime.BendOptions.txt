@@ -1,6 +1,0 @@
-pymel.core.runtime.BendOptions
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BendOptions

@@ -1,6 +1,0 @@
-pymel.core.animation.orientConstraint
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.orientConstraint

@@ -1,6 +1,0 @@
-pymel.core.runtime.ArtPaintAttrToolOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ArtPaintAttrToolOptions

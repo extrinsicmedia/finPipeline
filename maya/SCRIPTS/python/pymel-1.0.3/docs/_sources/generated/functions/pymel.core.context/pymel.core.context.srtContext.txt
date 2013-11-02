@@ -1,6 +1,0 @@
-pymel.core.context.srtContext
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.srtContext

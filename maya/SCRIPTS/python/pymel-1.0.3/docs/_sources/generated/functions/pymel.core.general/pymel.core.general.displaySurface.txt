@@ -1,6 +1,0 @@
-pymel.core.general.displaySurface
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.displaySurface

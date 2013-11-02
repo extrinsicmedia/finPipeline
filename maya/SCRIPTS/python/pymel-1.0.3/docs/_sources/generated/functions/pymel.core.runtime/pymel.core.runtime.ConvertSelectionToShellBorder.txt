@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToShellBorder
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToShellBorder

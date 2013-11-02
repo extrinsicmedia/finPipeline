@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectEdgeRingSp
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectEdgeRingSp

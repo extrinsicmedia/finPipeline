@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateMotionTrail
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateMotionTrail

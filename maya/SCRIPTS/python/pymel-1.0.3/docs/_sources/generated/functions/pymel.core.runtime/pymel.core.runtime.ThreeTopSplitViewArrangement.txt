@@ -1,6 +1,0 @@
-pymel.core.runtime.ThreeTopSplitViewArrangement
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ThreeTopSplitViewArrangement

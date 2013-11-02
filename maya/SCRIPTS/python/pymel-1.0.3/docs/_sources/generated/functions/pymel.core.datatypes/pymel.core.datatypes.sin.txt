@@ -1,6 +1,0 @@
-pymel.core.datatypes.sin
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.sin

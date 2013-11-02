@@ -1,6 +1,0 @@
-pymel.core.runtime.InsertKeyToolActivate
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InsertKeyToolActivate

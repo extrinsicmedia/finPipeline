@@ -1,6 +1,0 @@
-pymel.core.context.createNurbsConeCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createNurbsConeCtx

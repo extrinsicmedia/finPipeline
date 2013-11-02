@@ -1,6 +1,0 @@
-pymel.core.runtime.PruneSmallWeightsOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PruneSmallWeightsOptions

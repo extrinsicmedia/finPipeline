@@ -1,6 +1,0 @@
-pymel.core.runtime.InteractivePlayback
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InteractivePlayback

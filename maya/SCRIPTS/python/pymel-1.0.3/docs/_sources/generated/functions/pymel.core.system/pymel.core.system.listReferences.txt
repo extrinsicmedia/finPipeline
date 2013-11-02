@@ -1,6 +1,0 @@
-pymel.core.system.listReferences
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.listReferences

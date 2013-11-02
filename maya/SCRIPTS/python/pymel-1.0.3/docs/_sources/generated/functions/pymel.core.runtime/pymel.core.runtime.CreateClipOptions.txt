@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateClipOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateClipOptions

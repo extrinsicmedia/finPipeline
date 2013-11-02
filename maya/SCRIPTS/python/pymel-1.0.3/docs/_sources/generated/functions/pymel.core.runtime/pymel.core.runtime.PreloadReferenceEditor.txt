@@ -1,6 +1,0 @@
-pymel.core.runtime.PreloadReferenceEditor
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreloadReferenceEditor

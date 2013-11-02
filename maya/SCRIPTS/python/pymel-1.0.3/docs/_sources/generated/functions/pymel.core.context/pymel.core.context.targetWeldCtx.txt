@@ -1,6 +1,0 @@
-pymel.core.context.targetWeldCtx
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.targetWeldCtx

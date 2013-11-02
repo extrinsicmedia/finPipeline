@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableSelectedIKHandles
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableSelectedIKHandles

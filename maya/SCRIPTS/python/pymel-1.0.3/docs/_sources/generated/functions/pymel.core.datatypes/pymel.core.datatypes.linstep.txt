@@ -1,6 +1,0 @@
-pymel.core.datatypes.linstep
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.linstep

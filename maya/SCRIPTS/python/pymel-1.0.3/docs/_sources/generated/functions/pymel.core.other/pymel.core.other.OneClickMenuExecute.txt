@@ -1,6 +1,0 @@
-pymel.core.other.OneClickMenuExecute
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.OneClickMenuExecute

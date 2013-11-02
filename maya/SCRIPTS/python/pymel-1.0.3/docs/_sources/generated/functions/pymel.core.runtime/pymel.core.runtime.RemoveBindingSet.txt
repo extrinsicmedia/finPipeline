@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveBindingSet
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveBindingSet

@@ -1,6 +1,0 @@
-pymel.core.windows.gradientControl
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.gradientControl

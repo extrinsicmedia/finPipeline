@@ -1,6 +1,0 @@
-pymel.core.animation.joint
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.joint

@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleScalePivots
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleScalePivots

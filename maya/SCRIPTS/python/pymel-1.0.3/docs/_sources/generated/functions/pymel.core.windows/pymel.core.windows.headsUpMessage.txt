@@ -1,6 +1,0 @@
-pymel.core.windows.headsUpMessage
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.headsUpMessage

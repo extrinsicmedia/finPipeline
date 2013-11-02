@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectFacetMask
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectFacetMask

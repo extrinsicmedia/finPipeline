@@ -1,6 +1,0 @@
-pymel.core.runtime.DisconnectJoint
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisconnectJoint

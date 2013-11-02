@@ -1,6 +1,0 @@
-pymel.core.runtime.SwapBlendShape
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SwapBlendShape

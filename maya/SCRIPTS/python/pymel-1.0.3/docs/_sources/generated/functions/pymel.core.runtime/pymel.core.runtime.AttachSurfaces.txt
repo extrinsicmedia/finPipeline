@@ -1,6 +1,0 @@
-pymel.core.runtime.AttachSurfaces
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AttachSurfaces

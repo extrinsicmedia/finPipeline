@@ -1,6 +1,0 @@
-pymel.core.runtime.SetKeyOptions
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetKeyOptions

@@ -1,6 +1,0 @@
-pymel.core.animation.deformerWeights
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.deformerWeights

@@ -1,6 +1,0 @@
-pymel.core.system.sceneUIReplacement
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.sceneUIReplacement

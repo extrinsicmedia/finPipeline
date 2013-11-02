@@ -1,6 +1,0 @@
-pymel.core.runtime.AddPondDynamicBuoyOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddPondDynamicBuoyOptions

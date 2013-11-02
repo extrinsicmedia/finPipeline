@@ -1,6 +1,0 @@
-pymel.core.datatypes.abs
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.abs

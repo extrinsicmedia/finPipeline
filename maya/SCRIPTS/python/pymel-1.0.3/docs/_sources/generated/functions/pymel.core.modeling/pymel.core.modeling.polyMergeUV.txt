@@ -1,6 +1,0 @@
-pymel.core.modeling.polyMergeUV
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyMergeUV

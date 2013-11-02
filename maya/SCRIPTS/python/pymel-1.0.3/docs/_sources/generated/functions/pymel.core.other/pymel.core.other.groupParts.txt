@@ -1,6 +1,0 @@
-pymel.core.other.groupParts
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.groupParts

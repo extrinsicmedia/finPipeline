@@ -1,6 +1,0 @@
-pymel.util.asin
-===============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.asin

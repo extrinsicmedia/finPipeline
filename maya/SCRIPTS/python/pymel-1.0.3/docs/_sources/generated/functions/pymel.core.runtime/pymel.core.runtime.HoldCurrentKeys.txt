@@ -1,6 +1,0 @@
-pymel.core.runtime.HoldCurrentKeys
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HoldCurrentKeys

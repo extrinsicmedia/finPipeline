@@ -1,6 +1,0 @@
-pymel.core.windows.glRenderEditor
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.glRenderEditor

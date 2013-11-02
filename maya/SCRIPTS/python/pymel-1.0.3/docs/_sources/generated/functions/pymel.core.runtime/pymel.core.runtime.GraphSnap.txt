@@ -1,6 +1,0 @@
-pymel.core.runtime.GraphSnap
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GraphSnap

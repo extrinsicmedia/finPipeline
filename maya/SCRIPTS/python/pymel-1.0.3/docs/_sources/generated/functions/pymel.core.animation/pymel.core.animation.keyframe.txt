@@ -1,6 +1,0 @@
-pymel.core.animation.keyframe
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.keyframe

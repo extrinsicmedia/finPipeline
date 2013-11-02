@@ -1,6 +1,0 @@
-pymel.core.runtime.SetPassiveKey
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetPassiveKey

@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFullBodyIKKeysKeyToPin
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFullBodyIKKeysKeyToPin

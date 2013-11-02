@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyPaintValueRelease
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyPaintValueRelease

@@ -1,6 +1,0 @@
-pymel.core.runtime.InTangentAuto
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InTangentAuto

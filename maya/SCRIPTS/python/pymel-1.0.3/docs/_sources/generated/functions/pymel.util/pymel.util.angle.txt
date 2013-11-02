@@ -1,6 +1,0 @@
-pymel.util.angle
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.angle

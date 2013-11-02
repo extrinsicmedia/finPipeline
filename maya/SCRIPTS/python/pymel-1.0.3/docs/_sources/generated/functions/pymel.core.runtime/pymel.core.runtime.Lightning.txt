@@ -1,6 +1,0 @@
-pymel.core.runtime.Lightning
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Lightning

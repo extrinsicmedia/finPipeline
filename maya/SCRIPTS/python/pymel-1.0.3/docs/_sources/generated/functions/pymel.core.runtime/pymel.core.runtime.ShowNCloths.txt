@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowNCloths
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowNCloths

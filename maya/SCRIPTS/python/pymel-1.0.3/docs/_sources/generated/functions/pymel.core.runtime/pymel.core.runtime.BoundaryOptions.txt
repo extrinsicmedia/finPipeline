@@ -1,6 +1,0 @@
-pymel.core.runtime.BoundaryOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BoundaryOptions

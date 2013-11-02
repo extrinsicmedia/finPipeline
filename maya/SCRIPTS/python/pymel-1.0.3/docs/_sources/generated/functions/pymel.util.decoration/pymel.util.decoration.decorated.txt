@@ -1,6 +1,0 @@
-pymel.util.decoration.decorated
-===============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: decoration.decorated

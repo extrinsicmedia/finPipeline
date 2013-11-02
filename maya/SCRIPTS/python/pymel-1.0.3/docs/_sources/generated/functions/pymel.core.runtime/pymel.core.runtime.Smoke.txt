@@ -1,6 +1,0 @@
-pymel.core.runtime.Smoke
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Smoke

@@ -1,6 +1,0 @@
-pymel.core.runtime.ChamferVertex
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ChamferVertex

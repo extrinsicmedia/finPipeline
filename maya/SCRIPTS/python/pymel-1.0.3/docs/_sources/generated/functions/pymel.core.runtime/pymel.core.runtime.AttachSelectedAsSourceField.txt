@@ -1,6 +1,0 @@
-pymel.core.runtime.AttachSelectedAsSourceField
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AttachSelectedAsSourceField

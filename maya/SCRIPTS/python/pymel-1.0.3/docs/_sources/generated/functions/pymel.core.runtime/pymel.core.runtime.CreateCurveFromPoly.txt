@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateCurveFromPoly
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateCurveFromPoly

@@ -1,6 +1,0 @@
-pymel.core.runtime.GridOptions
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GridOptions

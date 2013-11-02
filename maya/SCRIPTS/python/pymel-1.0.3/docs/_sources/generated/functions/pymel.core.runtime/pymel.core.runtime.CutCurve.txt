@@ -1,6 +1,0 @@
-pymel.core.runtime.CutCurve
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CutCurve

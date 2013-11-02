@@ -1,6 +1,0 @@
-pymel.core.datatypes.outer
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.outer

@@ -1,6 +1,0 @@
-pymel.core.other.sbs_GetGraphsNamesFromSubstanceNode
-====================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.sbs_GetGraphsNamesFromSubstanceNode

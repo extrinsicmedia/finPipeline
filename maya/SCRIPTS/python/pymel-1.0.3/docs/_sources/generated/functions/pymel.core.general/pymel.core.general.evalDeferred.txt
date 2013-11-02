@@ -1,6 +1,0 @@
-pymel.core.general.evalDeferred
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.evalDeferred

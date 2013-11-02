@@ -1,6 +1,0 @@
-pymel.core.runtime.InTangentLinear
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InTangentLinear

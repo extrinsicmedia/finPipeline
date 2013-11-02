@@ -1,6 +1,0 @@
-pymel.core.other.flushIdleQueue
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.flushIdleQueue

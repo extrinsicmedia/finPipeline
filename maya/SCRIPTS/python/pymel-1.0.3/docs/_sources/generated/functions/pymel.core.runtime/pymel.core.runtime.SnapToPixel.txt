@@ -1,6 +1,0 @@
-pymel.core.runtime.SnapToPixel
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SnapToPixel

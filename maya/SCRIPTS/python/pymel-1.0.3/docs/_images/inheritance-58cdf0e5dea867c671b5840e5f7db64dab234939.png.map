@@ -1,7 +1,0 @@
-<map id="inheritancea0ebef1b59" name="inheritancea0ebef1b59">
-<area shape="rect" href="#pymel.core.nodetypes.SubdHierBlind" title="SubdHierBlind" alt="" coords="19,160,115,184"/>
-<area shape="rect" href="pymel.core.nodetypes.BlindDataTemplate.html#pymel.core.nodetypes.BlindDataTemplate" title="BlindDataTemplate" alt="" coords="5,121,128,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="23,82,111,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="21,5,112,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="31,44,103,68"/>
-</map>

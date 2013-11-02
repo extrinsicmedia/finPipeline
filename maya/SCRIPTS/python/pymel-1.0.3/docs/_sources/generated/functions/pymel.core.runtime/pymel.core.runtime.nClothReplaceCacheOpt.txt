@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothReplaceCacheOpt
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothReplaceCacheOpt

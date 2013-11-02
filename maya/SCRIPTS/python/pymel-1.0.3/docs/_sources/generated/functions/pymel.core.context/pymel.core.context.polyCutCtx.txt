@@ -1,6 +1,0 @@
-pymel.core.context.polyCutCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyCutCtx

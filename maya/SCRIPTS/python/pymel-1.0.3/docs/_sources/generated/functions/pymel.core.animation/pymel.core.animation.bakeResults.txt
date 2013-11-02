@@ -1,6 +1,0 @@
-pymel.core.animation.bakeResults
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.bakeResults

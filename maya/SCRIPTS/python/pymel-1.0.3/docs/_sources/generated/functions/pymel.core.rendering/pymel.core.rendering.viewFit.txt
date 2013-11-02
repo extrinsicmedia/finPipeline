@@ -1,6 +1,0 @@
-pymel.core.rendering.viewFit
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.viewFit

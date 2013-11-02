@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleLatticePoints
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleLatticePoints

@@ -1,6 +1,0 @@
-pymel.core.modeling.blindDataType
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.blindDataType

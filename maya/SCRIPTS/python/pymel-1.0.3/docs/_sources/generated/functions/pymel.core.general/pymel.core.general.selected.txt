@@ -1,6 +1,0 @@
-pymel.core.general.selected
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.selected

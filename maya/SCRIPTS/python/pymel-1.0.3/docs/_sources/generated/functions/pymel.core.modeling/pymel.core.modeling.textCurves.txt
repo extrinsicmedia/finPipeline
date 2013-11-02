@@ -1,6 +1,0 @@
-pymel.core.modeling.textCurves
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.textCurves

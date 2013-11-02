@@ -1,6 +1,0 @@
-pymel.core.context.texSelectContext
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texSelectContext

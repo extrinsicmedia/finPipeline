@@ -1,6 +1,0 @@
-pymel.core.runtime.IPROptions
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.IPROptions

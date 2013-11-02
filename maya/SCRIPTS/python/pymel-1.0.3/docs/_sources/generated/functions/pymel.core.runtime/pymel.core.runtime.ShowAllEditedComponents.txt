@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowAllEditedComponents
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowAllEditedComponents

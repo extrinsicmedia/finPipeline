@@ -1,6 +1,0 @@
-pymel.core.general.createNode
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.createNode

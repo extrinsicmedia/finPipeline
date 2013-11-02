@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintVertexColorTool
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintVertexColorTool

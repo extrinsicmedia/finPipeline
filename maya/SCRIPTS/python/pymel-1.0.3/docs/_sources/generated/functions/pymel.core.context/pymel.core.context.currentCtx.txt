@@ -1,6 +1,0 @@
-pymel.core.context.currentCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.currentCtx

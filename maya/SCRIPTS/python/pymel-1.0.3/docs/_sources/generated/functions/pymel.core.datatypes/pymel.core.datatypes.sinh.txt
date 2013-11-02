@@ -1,6 +1,0 @@
-pymel.core.datatypes.sinh
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.sinh

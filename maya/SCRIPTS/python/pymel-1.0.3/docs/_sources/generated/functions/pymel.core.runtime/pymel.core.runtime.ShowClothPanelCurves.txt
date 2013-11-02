@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowClothPanelCurves
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowClothPanelCurves

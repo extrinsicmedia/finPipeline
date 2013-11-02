@@ -1,6 +1,0 @@
-pymel.core.windows.loadPrefObjects
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.loadPrefObjects

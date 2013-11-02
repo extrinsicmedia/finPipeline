@@ -1,6 +1,0 @@
-pymel.core.modeling.surface
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.surface

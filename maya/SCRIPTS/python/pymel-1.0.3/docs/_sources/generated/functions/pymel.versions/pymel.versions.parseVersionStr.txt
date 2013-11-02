@@ -1,6 +1,0 @@
-pymel.versions.parseVersionStr
-==============================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.parseVersionStr

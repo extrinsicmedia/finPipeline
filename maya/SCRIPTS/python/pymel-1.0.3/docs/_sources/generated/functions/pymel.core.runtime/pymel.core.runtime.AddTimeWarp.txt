@@ -1,6 +1,0 @@
-pymel.core.runtime.AddTimeWarp
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddTimeWarp

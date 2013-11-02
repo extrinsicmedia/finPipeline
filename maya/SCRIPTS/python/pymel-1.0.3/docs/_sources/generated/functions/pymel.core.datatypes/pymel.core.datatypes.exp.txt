@@ -1,6 +1,0 @@
-pymel.core.datatypes.exp
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.exp

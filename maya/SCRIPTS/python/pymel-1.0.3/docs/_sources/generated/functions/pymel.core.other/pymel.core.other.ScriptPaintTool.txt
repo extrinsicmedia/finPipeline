@@ -1,6 +1,0 @@
-pymel.core.other.ScriptPaintTool
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ScriptPaintTool

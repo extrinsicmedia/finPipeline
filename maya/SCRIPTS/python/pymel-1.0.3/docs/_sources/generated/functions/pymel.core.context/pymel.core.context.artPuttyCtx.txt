@@ -1,6 +1,0 @@
-pymel.core.context.artPuttyCtx
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.artPuttyCtx

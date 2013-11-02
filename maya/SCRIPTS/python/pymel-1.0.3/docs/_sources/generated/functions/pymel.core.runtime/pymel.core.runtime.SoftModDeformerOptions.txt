@@ -1,6 +1,0 @@
-pymel.core.runtime.SoftModDeformerOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SoftModDeformerOptions

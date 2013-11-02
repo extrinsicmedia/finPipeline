@@ -1,6 +1,0 @@
-pymel.core.runtime.JointToolOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.JointToolOptions

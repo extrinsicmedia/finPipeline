@@ -1,6 +1,0 @@
-pymel.core.runtime.GoalOptions
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GoalOptions

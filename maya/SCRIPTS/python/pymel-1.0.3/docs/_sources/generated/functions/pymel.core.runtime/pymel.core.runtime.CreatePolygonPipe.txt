@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonPipe
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonPipe

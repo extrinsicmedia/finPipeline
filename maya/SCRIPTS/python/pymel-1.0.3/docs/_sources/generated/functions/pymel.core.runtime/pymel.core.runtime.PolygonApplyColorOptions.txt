@@ -1,6 +1,0 @@
-pymel.core.runtime.PolygonApplyColorOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolygonApplyColorOptions

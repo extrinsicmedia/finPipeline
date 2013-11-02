@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothCache
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothCache

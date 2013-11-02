@@ -1,6 +1,0 @@
-pymel.util.arrays.cross
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.cross

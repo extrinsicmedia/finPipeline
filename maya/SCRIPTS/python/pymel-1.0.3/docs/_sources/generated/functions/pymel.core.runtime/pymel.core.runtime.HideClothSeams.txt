@@ -1,6 +1,0 @@
-pymel.core.runtime.HideClothSeams
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideClothSeams

@@ -1,6 +1,0 @@
-pymel.core.runtime.AveragePolygonNormals
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AveragePolygonNormals

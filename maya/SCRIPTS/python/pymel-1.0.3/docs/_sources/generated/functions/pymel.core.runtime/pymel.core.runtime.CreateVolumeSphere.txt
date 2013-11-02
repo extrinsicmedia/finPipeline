@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateVolumeSphere
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateVolumeSphere

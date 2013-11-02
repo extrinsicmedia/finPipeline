@@ -1,6 +1,0 @@
-pymel.core.animation.geometryConstraint
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.geometryConstraint

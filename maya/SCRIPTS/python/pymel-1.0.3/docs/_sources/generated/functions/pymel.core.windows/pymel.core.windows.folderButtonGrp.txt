@@ -1,6 +1,0 @@
-pymel.core.windows.folderButtonGrp
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.folderButtonGrp

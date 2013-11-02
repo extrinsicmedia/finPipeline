@@ -1,6 +1,0 @@
-pymel.util.breadth
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.breadth

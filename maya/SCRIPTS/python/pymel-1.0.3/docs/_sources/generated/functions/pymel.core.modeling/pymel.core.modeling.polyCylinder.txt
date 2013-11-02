@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCylinder
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCylinder

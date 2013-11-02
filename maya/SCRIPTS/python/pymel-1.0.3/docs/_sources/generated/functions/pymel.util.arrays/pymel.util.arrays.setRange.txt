@@ -1,6 +1,0 @@
-pymel.util.arrays.setRange
-==========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.setRange

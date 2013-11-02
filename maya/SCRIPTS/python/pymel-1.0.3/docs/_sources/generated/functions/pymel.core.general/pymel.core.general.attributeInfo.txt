@@ -1,6 +1,0 @@
-pymel.core.general.attributeInfo
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.attributeInfo

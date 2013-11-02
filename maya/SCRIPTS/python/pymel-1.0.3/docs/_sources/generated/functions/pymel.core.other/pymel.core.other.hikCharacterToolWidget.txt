@@ -1,6 +1,0 @@
-pymel.core.other.hikCharacterToolWidget
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.hikCharacterToolWidget

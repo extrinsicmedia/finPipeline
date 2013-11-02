@@ -1,6 +1,0 @@
-pymel.util.arrays.cosh
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.cosh

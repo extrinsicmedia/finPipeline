@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllConstraints
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllConstraints

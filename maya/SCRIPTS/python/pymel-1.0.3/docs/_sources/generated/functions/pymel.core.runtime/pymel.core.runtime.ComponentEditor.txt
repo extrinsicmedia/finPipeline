@@ -1,6 +1,0 @@
-pymel.core.runtime.ComponentEditor
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ComponentEditor

@@ -1,6 +1,0 @@
-pymel.core.modeling.pointOnSurface
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.pointOnSurface

@@ -1,6 +1,0 @@
-pymel.core.animation.poleVectorConstraint
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.poleVectorConstraint

@@ -1,6 +1,0 @@
-pymel.core.runtime.FitBSplineOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FitBSplineOptions

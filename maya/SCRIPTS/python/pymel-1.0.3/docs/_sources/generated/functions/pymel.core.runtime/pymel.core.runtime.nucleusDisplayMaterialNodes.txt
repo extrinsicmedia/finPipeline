@@ -1,6 +1,0 @@
-pymel.core.runtime.nucleusDisplayMaterialNodes
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nucleusDisplayMaterialNodes

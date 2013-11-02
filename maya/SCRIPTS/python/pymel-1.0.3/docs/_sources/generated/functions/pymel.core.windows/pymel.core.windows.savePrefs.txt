@@ -1,6 +1,0 @@
-pymel.core.windows.savePrefs
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.savePrefs

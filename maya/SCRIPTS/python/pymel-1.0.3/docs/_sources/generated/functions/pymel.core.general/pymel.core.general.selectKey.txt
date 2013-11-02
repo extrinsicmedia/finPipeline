@@ -1,6 +1,0 @@
-pymel.core.general.selectKey
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.selectKey

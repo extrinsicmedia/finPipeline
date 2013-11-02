@@ -1,6 +1,0 @@
-pymel.core.runtime.MoveToolOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MoveToolOptions

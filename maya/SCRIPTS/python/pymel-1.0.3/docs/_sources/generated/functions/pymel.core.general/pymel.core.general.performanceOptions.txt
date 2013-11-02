@@ -1,6 +1,0 @@
-pymel.core.general.performanceOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.performanceOptions

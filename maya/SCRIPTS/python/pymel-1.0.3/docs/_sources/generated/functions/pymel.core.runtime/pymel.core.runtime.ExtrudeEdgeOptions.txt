@@ -1,6 +1,0 @@
-pymel.core.runtime.ExtrudeEdgeOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExtrudeEdgeOptions

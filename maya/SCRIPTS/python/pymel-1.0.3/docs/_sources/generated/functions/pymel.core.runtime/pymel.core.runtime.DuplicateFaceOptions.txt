@@ -1,6 +1,0 @@
-pymel.core.runtime.DuplicateFaceOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DuplicateFaceOptions

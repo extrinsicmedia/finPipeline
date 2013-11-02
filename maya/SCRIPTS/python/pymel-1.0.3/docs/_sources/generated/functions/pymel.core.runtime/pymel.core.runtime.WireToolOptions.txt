@@ -1,6 +1,0 @@
-pymel.core.runtime.WireToolOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.WireToolOptions

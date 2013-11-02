@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeBoats
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeBoats

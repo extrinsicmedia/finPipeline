@@ -1,6 +1,0 @@
-pymel.core.runtime.TogglePaintOnPaintableObjects
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TogglePaintOnPaintableObjects

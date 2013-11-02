@@ -1,6 +1,0 @@
-pymel.core.windows.hardwareRenderPanel
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.hardwareRenderPanel

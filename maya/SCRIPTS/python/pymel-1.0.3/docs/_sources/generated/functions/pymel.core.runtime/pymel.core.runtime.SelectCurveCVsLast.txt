@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectCurveCVsLast
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectCurveCVsLast

@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectHierarchy
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectHierarchy

@@ -1,6 +1,0 @@
-pymel.core.runtime.SetVertexNormal
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetVertexNormal

@@ -1,6 +1,0 @@
-pymel.core.modeling.revolve
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.revolve

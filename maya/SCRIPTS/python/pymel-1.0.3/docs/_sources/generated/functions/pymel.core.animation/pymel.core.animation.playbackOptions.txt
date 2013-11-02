@@ -1,6 +1,0 @@
-pymel.core.animation.playbackOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.playbackOptions

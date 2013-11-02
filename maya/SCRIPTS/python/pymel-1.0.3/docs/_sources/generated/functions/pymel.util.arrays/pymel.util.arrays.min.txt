@@ -1,6 +1,0 @@
-pymel.util.arrays.min
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.min

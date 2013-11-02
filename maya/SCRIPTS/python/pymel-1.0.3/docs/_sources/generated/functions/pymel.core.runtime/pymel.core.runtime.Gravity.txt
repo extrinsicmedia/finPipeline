@@ -1,6 +1,0 @@
-pymel.core.runtime.Gravity
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Gravity

@@ -1,6 +1,0 @@
-pymel.core.runtime.FireOptions
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FireOptions

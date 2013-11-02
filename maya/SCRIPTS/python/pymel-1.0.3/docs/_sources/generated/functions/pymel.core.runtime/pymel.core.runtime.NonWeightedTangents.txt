@@ -1,6 +1,0 @@
-pymel.core.runtime.NonWeightedTangents
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NonWeightedTangents

@@ -1,6 +1,0 @@
-pymel.core.windows.cmdScrollFieldReporter
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.cmdScrollFieldReporter

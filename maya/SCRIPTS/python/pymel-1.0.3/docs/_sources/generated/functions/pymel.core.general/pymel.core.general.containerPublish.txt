@@ -1,6 +1,0 @@
-pymel.core.general.containerPublish
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.containerPublish

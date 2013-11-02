@@ -1,6 +1,0 @@
-pymel.core.runtime.ReassignBoneLatticeJoint
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReassignBoneLatticeJoint

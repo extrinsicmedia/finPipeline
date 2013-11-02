@@ -1,6 +1,0 @@
-pymel.core.runtime.CurlCurves
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CurlCurves

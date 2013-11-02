@@ -1,6 +1,0 @@
-pymel.core.runtime.AddHolderOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddHolderOptions

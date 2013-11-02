@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleKeepWireCulling
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleKeepWireCulling

@@ -1,6 +1,0 @@
-pymel.core.context.latticeDeformKeyCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.latticeDeformKeyCtx

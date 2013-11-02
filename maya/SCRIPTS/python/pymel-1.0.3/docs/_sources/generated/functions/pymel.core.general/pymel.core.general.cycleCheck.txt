@@ -1,6 +1,0 @@
-pymel.core.general.cycleCheck
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.cycleCheck

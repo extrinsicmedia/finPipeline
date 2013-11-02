@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyLowerRadiusRelease
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyLowerRadiusRelease

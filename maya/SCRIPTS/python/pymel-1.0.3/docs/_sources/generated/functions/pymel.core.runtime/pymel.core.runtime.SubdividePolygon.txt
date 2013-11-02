@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdividePolygon
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdividePolygon

@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectPolygonToolMarkingMenu
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectPolygonToolMarkingMenu

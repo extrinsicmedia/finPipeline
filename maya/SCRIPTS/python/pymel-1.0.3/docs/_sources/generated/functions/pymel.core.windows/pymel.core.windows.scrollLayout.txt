@@ -1,6 +1,0 @@
-pymel.core.windows.scrollLayout
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.scrollLayout

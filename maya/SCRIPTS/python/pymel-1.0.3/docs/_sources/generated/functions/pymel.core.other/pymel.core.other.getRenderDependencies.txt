@@ -1,6 +1,0 @@
-pymel.core.other.getRenderDependencies
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.getRenderDependencies

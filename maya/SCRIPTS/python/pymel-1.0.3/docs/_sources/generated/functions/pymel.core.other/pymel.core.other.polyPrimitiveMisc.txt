@@ -1,6 +1,0 @@
-pymel.core.other.polyPrimitiveMisc
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.polyPrimitiveMisc

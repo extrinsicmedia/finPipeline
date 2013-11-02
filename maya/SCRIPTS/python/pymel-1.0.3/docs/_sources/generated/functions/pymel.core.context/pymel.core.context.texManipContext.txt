@@ -1,6 +1,0 @@
-pymel.core.context.texManipContext
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texManipContext

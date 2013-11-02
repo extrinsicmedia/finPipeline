@@ -1,6 +1,0 @@
-pymel.core.runtime.GetFluidExample
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GetFluidExample

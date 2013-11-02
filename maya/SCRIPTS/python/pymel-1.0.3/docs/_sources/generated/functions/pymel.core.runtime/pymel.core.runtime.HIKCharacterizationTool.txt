@@ -1,6 +1,0 @@
-pymel.core.runtime.HIKCharacterizationTool
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HIKCharacterizationTool

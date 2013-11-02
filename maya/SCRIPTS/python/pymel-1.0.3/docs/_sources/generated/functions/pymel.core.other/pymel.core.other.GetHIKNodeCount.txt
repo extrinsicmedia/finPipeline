@@ -1,6 +1,0 @@
-pymel.core.other.GetHIKNodeCount
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.GetHIKNodeCount

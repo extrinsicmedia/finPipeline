@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleFBIKEffectorsTranslatePinState
-=======================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleFBIKEffectorsTranslatePinState

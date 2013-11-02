@@ -1,6 +1,0 @@
-pymel.core.animation.movieInfo
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.movieInfo

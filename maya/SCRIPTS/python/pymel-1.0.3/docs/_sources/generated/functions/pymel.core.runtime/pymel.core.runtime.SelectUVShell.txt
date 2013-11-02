@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectUVShell
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectUVShell

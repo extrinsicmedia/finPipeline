@@ -1,6 +1,0 @@
-pymel.util.prod
-===============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.prod

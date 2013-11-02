@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFluidAttrFromCurveOptions
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFluidAttrFromCurveOptions

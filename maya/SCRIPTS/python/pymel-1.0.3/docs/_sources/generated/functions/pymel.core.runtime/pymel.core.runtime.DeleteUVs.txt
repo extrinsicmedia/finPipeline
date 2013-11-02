@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteUVs
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteUVs

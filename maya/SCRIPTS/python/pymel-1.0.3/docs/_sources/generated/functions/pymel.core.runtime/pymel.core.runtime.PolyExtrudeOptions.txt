@@ -1,6 +1,0 @@
-pymel.core.runtime.PolyExtrudeOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolyExtrudeOptions

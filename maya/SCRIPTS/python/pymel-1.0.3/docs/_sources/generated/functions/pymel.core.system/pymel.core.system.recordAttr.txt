@@ -1,6 +1,0 @@
-pymel.core.system.recordAttr
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.recordAttr

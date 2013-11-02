@@ -1,6 +1,0 @@
-pymel.core.runtime.AddOceanSurfaceLocator
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddOceanSurfaceLocator

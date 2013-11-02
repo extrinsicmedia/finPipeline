@@ -1,6 +1,0 @@
-pymel.core.other.cMuscleAbout
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.cMuscleAbout

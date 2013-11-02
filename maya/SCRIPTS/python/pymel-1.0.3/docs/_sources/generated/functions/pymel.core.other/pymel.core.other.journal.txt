@@ -1,6 +1,0 @@
-pymel.core.other.journal
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.journal

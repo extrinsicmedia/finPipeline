@@ -1,7 +1,0 @@
-<map id="inheritance5d04607c9e" name="inheritance5d04607c9e">
-<area shape="rect" href="#pymel.core.nodetypes.EnvFog" title="EnvFog" alt="" coords="15,160,87,184"/>
-<area shape="rect" href="pymel.core.nodetypes.LightFog.html#pymel.core.nodetypes.LightFog" title="LightFog" alt="" coords="15,121,87,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="7,82,95,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="5,5,96,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="15,44,87,68"/>
-</map>

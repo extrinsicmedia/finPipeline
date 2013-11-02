@@ -1,6 +1,0 @@
-pymel.versions.shortName
-========================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.shortName

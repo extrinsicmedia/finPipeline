@@ -1,6 +1,0 @@
-pymel.core.modeling.polyGeoSampler
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyGeoSampler

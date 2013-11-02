@@ -1,6 +1,0 @@
-pymel.core.runtime.Create3DContainer
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Create3DContainer

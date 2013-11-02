@@ -1,6 +1,0 @@
-pymel.core.modeling.polyTransfer
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyTransfer

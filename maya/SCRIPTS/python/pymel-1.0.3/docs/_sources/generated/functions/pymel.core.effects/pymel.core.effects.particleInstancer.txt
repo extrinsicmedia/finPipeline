@@ -1,6 +1,0 @@
-pymel.core.effects.particleInstancer
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.particleInstancer

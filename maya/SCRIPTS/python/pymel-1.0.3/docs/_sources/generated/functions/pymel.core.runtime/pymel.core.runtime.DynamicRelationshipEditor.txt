@@ -1,6 +1,0 @@
-pymel.core.runtime.DynamicRelationshipEditor
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DynamicRelationshipEditor

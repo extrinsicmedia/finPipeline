@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableExpressions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableExpressions

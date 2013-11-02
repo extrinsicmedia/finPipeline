@@ -1,6 +1,0 @@
-pymel.core.runtime.SurfaceFlow
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SurfaceFlow

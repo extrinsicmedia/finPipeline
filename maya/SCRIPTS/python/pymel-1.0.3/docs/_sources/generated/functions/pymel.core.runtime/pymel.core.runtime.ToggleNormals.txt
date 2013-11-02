@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleNormals
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleNormals

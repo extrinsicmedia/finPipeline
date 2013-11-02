@@ -1,6 +1,0 @@
-pymel.core.system.dgInfo
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.dgInfo

@@ -1,6 +1,0 @@
-pymel.core.system.newFile
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.newFile

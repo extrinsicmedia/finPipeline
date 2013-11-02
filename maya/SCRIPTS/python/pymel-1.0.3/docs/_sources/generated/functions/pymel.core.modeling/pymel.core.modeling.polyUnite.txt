@@ -1,6 +1,0 @@
-pymel.core.modeling.polyUnite
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyUnite

@@ -1,6 +1,0 @@
-pymel.core.runtime.SeparatePolygon
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SeparatePolygon

@@ -1,6 +1,0 @@
-pymel.core.runtime.nucleusDisplayNComponentNodes
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nucleusDisplayNComponentNodes

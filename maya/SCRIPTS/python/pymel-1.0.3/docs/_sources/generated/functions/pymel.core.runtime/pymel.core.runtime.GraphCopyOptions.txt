@@ -1,6 +1,0 @@
-pymel.core.runtime.GraphCopyOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GraphCopyOptions

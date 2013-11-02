@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllNRigids
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllNRigids

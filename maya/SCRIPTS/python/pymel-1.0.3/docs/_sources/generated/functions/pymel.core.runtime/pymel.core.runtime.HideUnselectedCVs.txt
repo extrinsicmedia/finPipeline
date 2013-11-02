@@ -1,6 +1,0 @@
-pymel.core.runtime.HideUnselectedCVs
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideUnselectedCVs

@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectEdgeLoop
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectEdgeLoop

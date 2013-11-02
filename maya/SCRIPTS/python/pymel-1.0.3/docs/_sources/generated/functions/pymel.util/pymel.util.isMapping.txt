@@ -1,6 +1,0 @@
-pymel.util.isMapping
-====================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.isMapping

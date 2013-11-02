@@ -1,6 +1,0 @@
-pymel.util.hermite
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.hermite

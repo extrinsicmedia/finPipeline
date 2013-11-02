@@ -1,6 +1,0 @@
-pymel.core.runtime.CVHardnessOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CVHardnessOptions

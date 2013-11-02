@@ -1,6 +1,0 @@
-pymel.core.runtime.DuplicateEdges
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DuplicateEdges

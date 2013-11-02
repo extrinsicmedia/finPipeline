@@ -1,6 +1,0 @@
-pymel.core.runtime.ExportOfflineFileOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExportOfflineFileOptions

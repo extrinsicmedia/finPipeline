@@ -1,6 +1,0 @@
-pymel.core.runtime.AddDynamicBuoyOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddDynamicBuoyOptions

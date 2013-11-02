@@ -1,6 +1,0 @@
-pymel.core.modeling.nurbsToSubdiv
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.nurbsToSubdiv

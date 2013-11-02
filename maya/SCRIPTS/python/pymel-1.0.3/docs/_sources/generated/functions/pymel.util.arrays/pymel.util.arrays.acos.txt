@@ -1,6 +1,0 @@
-pymel.util.arrays.acos
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.acos

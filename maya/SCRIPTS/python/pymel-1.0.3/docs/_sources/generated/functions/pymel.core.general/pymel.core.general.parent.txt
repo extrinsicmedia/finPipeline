@@ -1,6 +1,0 @@
-pymel.core.general.parent
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.parent

@@ -1,6 +1,0 @@
-pymel.core.context.createPolyCylinderCtx
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyCylinderCtx

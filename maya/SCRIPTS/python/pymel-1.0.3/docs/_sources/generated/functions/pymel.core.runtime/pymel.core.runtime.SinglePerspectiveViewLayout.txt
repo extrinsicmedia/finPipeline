@@ -1,6 +1,0 @@
-pymel.core.runtime.SinglePerspectiveViewLayout
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SinglePerspectiveViewLayout

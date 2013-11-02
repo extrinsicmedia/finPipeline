@@ -1,6 +1,0 @@
-pymel.core.runtime.AutobindContainer
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AutobindContainer

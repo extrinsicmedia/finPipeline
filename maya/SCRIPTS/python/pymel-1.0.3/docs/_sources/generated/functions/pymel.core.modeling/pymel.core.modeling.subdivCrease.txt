@@ -1,6 +1,0 @@
-pymel.core.modeling.subdivCrease
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdivCrease

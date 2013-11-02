@@ -1,6 +1,0 @@
-pymel.core.runtime.MirrorDeformerWeights
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MirrorDeformerWeights

@@ -1,6 +1,0 @@
-pymel.core.windows.showWindow
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.showWindow

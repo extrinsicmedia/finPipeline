@@ -1,6 +1,0 @@
-pymel.core.runtime.HideLightManipulators
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideLightManipulators

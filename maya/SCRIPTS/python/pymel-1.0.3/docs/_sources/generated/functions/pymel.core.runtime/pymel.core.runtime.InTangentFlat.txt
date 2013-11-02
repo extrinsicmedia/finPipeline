@@ -1,6 +1,0 @@
-pymel.core.runtime.InTangentFlat
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InTangentFlat

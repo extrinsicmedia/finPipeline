@@ -1,6 +1,0 @@
-pymel.core.runtime.DisplayShadedAndTextured
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisplayShadedAndTextured

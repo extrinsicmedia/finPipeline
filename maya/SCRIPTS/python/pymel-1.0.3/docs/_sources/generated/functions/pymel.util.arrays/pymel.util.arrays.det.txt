@@ -1,6 +1,0 @@
-pymel.util.arrays.det
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.det

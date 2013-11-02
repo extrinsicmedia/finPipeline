@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateHairOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateHairOptions

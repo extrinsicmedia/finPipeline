@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableNucleuses
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableNucleuses

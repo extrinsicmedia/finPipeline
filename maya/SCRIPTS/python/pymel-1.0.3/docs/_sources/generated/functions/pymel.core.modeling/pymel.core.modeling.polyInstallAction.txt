@@ -1,6 +1,0 @@
-pymel.core.modeling.polyInstallAction
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyInstallAction

@@ -1,6 +1,0 @@
-pymel.core.runtime.EPCurveToolOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EPCurveToolOptions

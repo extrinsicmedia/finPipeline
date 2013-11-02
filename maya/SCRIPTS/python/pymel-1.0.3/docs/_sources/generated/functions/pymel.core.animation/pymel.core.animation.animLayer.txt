@@ -1,6 +1,0 @@
-pymel.core.animation.animLayer
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.animLayer

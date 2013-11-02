@@ -1,6 +1,0 @@
-pymel.core.runtime.AlignSurfaces
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AlignSurfaces

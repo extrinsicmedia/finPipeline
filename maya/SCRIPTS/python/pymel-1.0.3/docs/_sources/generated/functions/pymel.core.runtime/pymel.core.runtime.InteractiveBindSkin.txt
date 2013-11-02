@@ -1,6 +1,0 @@
-pymel.core.runtime.InteractiveBindSkin
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InteractiveBindSkin

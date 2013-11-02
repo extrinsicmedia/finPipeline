@@ -1,6 +1,0 @@
-pymel.core.animation.mute
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.mute

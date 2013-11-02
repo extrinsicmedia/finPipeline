@@ -1,6 +1,0 @@
-pymel.core.runtime.FreeformFilletOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FreeformFilletOptions

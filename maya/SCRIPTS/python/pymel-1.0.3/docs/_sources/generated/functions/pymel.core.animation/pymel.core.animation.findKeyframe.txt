@@ -1,6 +1,0 @@
-pymel.core.animation.findKeyframe
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.findKeyframe

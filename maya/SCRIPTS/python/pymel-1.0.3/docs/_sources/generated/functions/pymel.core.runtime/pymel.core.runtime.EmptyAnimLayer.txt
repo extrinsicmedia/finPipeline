@@ -1,6 +1,0 @@
-pymel.core.runtime.EmptyAnimLayer
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EmptyAnimLayer

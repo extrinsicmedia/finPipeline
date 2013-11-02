@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllGeometry
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllGeometry

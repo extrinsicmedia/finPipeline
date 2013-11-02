@@ -1,6 +1,0 @@
-pymel.core.runtime.InTangentClamped
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InTangentClamped

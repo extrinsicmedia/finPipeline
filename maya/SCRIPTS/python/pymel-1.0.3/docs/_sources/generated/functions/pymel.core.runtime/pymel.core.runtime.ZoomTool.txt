@@ -1,6 +1,0 @@
-pymel.core.runtime.ZoomTool
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ZoomTool

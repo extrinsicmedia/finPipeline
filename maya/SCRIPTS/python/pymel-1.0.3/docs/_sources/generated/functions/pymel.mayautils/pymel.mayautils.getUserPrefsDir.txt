@@ -1,6 +1,0 @@
-pymel.mayautils.getUserPrefsDir
-===============================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.getUserPrefsDir

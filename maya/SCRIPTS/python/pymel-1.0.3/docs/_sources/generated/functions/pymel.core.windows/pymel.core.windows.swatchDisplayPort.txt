@@ -1,6 +1,0 @@
-pymel.core.windows.swatchDisplayPort
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.swatchDisplayPort

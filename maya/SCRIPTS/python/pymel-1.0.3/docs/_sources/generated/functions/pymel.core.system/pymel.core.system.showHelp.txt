@@ -1,6 +1,0 @@
-pymel.core.system.showHelp
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.showHelp

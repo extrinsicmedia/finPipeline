@@ -1,6 +1,0 @@
-pymel.util.arrays.normal
-========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.normal

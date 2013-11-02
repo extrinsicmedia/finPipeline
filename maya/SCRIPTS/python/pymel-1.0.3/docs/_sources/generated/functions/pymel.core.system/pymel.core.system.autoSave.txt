@@ -1,6 +1,0 @@
-pymel.core.system.autoSave
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.autoSave

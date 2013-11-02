@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleSelectDetails
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleSelectDetails

@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowClothSeams
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowClothSeams

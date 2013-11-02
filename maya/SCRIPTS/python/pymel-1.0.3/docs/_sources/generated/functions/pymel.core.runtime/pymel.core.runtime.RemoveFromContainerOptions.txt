@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveFromContainerOptions
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveFromContainerOptions

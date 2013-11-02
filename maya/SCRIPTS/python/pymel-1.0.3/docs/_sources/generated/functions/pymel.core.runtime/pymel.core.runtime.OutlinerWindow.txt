@@ -1,6 +1,0 @@
-pymel.core.runtime.OutlinerWindow
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OutlinerWindow

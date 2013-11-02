@@ -1,6 +1,0 @@
-pymel.core.runtime.CurveUtilitiesMarkingMenu
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CurveUtilitiesMarkingMenu

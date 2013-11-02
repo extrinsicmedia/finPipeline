@@ -1,6 +1,0 @@
-pymel.core.windows.textCurves
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.textCurves

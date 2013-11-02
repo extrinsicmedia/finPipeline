@@ -1,6 +1,0 @@
-pymel.core.effects.truncateFluidCache
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.truncateFluidCache

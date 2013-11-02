@@ -1,6 +1,0 @@
-pymel.core.runtime.PolyConvertToLoopAndDuplicate
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolyConvertToLoopAndDuplicate

@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleAutoFrame
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleAutoFrame

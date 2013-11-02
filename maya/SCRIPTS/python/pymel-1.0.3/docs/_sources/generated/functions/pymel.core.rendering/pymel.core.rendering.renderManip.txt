@@ -1,6 +1,0 @@
-pymel.core.rendering.renderManip
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.renderManip

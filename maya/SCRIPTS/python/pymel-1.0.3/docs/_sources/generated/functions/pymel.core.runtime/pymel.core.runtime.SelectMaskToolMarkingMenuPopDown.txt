@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectMaskToolMarkingMenuPopDown
-===================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectMaskToolMarkingMenuPopDown

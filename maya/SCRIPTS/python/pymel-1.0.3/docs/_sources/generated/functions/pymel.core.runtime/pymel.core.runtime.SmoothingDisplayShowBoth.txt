@@ -1,6 +1,0 @@
-pymel.core.runtime.SmoothingDisplayShowBoth
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SmoothingDisplayShowBoth

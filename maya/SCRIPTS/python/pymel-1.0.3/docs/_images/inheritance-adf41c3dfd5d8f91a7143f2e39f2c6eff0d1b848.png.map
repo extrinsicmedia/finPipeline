@@ -1,8 +1,0 @@
-<map id="inheritance0398024dcf" name="inheritance0398024dcf">
-<area shape="rect" href="#pymel.core.nodetypes.PolyMergeFace" title="PolyMergeFace" alt="" coords="5,199,104,223"/>
-<area shape="rect" href="pymel.core.nodetypes.PolyModifier.html#pymel.core.nodetypes.PolyModifier" title="PolyModifier" alt="" coords="13,160,96,184"/>
-<area shape="rect" href="pymel.core.nodetypes.PolyBase.html#pymel.core.nodetypes.PolyBase" title="PolyBase" alt="" coords="19,121,91,145"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="9,5,100,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="19,44,91,68"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="11,83,99,107"/>
-</map>

@@ -1,6 +1,0 @@
-pymel.core.windows.intFieldGrp
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.intFieldGrp

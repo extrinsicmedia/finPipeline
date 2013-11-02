@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleFastInteraction
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleFastInteraction

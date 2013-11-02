@@ -1,6 +1,0 @@
-pymel.core.context.orbitCtx
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.orbitCtx

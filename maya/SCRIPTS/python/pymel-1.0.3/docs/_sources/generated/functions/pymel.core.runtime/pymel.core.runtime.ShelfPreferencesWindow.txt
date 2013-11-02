@@ -1,6 +1,0 @@
-pymel.core.runtime.ShelfPreferencesWindow
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShelfPreferencesWindow

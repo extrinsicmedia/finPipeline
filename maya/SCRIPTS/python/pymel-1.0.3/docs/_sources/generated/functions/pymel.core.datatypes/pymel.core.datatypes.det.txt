@@ -1,6 +1,0 @@
-pymel.core.datatypes.det
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.det

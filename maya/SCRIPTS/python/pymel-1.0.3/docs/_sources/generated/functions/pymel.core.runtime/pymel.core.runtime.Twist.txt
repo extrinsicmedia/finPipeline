@@ -1,6 +1,0 @@
-pymel.core.runtime.Twist
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Twist

@@ -1,6 +1,0 @@
-pymel.core.runtime.HideUIElements
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideUIElements

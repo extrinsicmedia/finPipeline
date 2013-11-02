@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowAll
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowAll

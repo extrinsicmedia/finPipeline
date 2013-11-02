@@ -1,6 +1,0 @@
-pymel.core.runtime.ActivateViewport20
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ActivateViewport20

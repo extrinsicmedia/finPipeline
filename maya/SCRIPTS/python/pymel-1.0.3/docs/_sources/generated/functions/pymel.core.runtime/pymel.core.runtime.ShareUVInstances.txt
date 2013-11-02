@@ -1,6 +1,0 @@
-pymel.core.runtime.ShareUVInstances
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShareUVInstances

@@ -1,6 +1,0 @@
-pymel.core.windows.shelfTabLayout
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.shelfTabLayout

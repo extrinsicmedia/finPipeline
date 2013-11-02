@@ -1,7 +1,0 @@
-<map id="inheritance5e4cdfe103" name="inheritance5e4cdfe103">
-<area shape="rect" href="#pymel.core.nodetypes.Substance" title="Substance" alt="" coords="19,160,96,184"/>
-<area shape="rect" href="pymel.core.nodetypes.THdependNode.html#pymel.core.nodetypes.THdependNode" title="THdependNode" alt="" coords="5,121,109,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="13,82,101,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="12,5,103,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="21,44,93,68"/>
-</map>

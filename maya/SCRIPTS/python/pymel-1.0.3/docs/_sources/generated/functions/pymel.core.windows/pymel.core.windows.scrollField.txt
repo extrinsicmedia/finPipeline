@@ -1,6 +1,0 @@
-pymel.core.windows.scrollField
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.scrollField

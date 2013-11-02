@@ -1,6 +1,0 @@
-pymel.core.context.alignCtx
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.alignCtx

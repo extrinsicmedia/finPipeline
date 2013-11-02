@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectPreviousObjectsMotionBuilder
-=====================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectPreviousObjectsMotionBuilder

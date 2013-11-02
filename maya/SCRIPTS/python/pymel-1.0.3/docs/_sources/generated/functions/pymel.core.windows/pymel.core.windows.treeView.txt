@@ -1,6 +1,0 @@
-pymel.core.windows.treeView
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.treeView

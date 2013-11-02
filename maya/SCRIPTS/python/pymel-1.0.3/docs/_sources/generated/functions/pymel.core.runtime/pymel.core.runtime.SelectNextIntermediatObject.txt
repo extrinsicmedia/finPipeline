@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectNextIntermediatObject
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectNextIntermediatObject

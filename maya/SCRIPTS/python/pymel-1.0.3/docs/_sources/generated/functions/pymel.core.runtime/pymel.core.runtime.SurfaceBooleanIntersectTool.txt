@@ -1,6 +1,0 @@
-pymel.core.runtime.SurfaceBooleanIntersectTool
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SurfaceBooleanIntersectTool

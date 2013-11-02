@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFullBodyIKKeysSelected
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFullBodyIKKeysSelected

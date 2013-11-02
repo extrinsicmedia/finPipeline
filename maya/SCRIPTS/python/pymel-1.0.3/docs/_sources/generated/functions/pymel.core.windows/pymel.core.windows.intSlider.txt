@@ -1,6 +1,0 @@
-pymel.core.windows.intSlider
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.intSlider

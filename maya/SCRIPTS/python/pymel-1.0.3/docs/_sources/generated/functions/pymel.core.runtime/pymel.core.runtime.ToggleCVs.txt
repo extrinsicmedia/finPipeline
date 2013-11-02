@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleCVs
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleCVs

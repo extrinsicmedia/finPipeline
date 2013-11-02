@@ -1,6 +1,0 @@
-pymel.core.context.curveCVCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.curveCVCtx

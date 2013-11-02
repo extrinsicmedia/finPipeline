@@ -1,6 +1,0 @@
-pymel.core.rendering.layeredTexturePort
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.layeredTexturePort

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateCreaseSet
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateCreaseSet

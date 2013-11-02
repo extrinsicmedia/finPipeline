@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectObjectsIlluminatedByLight
-==================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectObjectsIlluminatedByLight

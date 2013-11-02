@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonPyramidOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonPyramidOptions

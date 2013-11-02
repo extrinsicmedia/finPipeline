@@ -1,6 +1,0 @@
-pymel.core.windows.gridLayout
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.gridLayout

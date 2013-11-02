@@ -1,6 +1,0 @@
-pymel.core.rendering.convertLightmap
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.convertLightmap

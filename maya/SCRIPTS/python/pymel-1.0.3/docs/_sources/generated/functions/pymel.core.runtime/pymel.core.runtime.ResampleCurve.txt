@@ -1,6 +1,0 @@
-pymel.core.runtime.ResampleCurve
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ResampleCurve

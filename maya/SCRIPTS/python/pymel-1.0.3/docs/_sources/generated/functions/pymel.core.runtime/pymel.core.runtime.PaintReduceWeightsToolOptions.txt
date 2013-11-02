@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintReduceWeightsToolOptions
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintReduceWeightsToolOptions

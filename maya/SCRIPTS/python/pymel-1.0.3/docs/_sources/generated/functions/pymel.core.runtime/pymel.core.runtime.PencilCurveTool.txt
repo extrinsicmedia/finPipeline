@@ -1,6 +1,0 @@
-pymel.core.runtime.PencilCurveTool
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PencilCurveTool

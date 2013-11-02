@@ -1,6 +1,0 @@
-pymel.core.windows.fontDialog
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.fontDialog

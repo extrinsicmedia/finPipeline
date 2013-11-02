@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFullBodyIKKeysBodyPart
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFullBodyIKKeysBodyPart

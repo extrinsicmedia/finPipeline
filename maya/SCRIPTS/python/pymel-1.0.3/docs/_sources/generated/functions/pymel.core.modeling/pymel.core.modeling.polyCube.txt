@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCube
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCube

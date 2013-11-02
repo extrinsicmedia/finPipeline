@@ -1,6 +1,0 @@
-pymel.core.windows.componentBox
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.componentBox

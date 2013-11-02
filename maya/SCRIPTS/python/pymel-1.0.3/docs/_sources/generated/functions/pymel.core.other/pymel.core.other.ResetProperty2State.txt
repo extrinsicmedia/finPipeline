@@ -1,6 +1,0 @@
-pymel.core.other.ResetProperty2State
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ResetProperty2State

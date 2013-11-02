@@ -1,6 +1,0 @@
-pymel.core.system.exportEdits
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.exportEdits

@@ -1,6 +1,0 @@
-pymel.core.datatypes.cotan
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.cotan

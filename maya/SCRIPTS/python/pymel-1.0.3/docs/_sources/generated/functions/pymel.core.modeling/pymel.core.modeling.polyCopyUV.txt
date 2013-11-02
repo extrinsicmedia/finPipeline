@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCopyUV
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCopyUV

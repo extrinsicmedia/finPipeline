@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteFBIKBodyPartKeys
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteFBIKBodyPartKeys

@@ -1,6 +1,0 @@
-pymel.core.runtime.InsertIsoparmsOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InsertIsoparmsOptions

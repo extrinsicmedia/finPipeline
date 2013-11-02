@@ -1,6 +1,0 @@
-pymel.core.runtime.GraphCutOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GraphCutOptions

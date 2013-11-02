@@ -1,6 +1,0 @@
-pymel.core.general.addAttr
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.addAttr

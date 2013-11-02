@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllTransforms
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllTransforms

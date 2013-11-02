@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateContainerOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateContainerOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.PlanarProjectionOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PlanarProjectionOptions

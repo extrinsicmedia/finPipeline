@@ -1,6 +1,0 @@
-pymel.core.runtime.MarkingMenuPreferencesWindow
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MarkingMenuPreferencesWindow

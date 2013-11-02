@@ -1,6 +1,0 @@
-pymel.core.runtime.DetachSurfaces
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DetachSurfaces

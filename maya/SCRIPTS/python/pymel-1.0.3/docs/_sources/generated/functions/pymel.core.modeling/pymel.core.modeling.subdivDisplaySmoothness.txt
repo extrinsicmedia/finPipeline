@@ -1,6 +1,0 @@
-pymel.core.modeling.subdivDisplaySmoothness
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdivDisplaySmoothness

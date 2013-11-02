@@ -1,6 +1,0 @@
-pymel.core.runtime.RelaxInitialState
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RelaxInitialState

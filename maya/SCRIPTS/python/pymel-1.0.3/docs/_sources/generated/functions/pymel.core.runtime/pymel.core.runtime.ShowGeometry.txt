@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowGeometry
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowGeometry

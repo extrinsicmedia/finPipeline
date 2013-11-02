@@ -1,6 +1,0 @@
-pymel.core.runtime.GetToonExample
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GetToonExample

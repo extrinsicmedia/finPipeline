@@ -1,6 +1,0 @@
-pymel.util.cross
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.cross

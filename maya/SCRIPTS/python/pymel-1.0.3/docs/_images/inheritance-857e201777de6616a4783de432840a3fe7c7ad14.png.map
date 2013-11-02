@@ -1,8 +1,0 @@
-<map id="inheritancec2336cbca5" name="inheritancec2336cbca5">
-<area shape="rect" href="#pymel.core.nodetypes.SubdCleanTopology" title="SubdCleanTopology" alt="" coords="5,199,131,223"/>
-<area shape="rect" href="pymel.core.nodetypes.SubdModifier.html#pymel.core.nodetypes.SubdModifier" title="SubdModifier" alt="" coords="23,160,113,184"/>
-<area shape="rect" href="pymel.core.nodetypes.SubdBase.html#pymel.core.nodetypes.SubdBase" title="SubdBase" alt="" coords="31,121,105,145"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="23,5,113,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="32,44,104,68"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="24,83,112,107"/>
-</map>

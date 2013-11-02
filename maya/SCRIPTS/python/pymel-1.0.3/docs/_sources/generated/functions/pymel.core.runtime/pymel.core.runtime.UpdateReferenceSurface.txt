@@ -1,6 +1,0 @@
-pymel.core.runtime.UpdateReferenceSurface
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UpdateReferenceSurface

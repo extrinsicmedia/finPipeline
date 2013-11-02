@@ -1,6 +1,0 @@
-pymel.core.general.move
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.move

@@ -1,6 +1,0 @@
-pymel.core.context.polySuperCtx
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polySuperCtx

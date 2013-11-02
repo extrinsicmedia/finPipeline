@@ -1,6 +1,0 @@
-pymel.core.context.keyframeRegionDollyCtx
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.keyframeRegionDollyCtx

@@ -1,6 +1,0 @@
-pymel.core.runtime.SculptGeometryTool
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SculptGeometryTool

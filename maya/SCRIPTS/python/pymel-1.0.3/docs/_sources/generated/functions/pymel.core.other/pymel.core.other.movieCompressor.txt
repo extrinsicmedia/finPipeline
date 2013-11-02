@@ -1,6 +1,0 @@
-pymel.core.other.movieCompressor
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.movieCompressor

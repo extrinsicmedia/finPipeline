@@ -1,6 +1,0 @@
-pymel.core.general.transformLimits
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.transformLimits

@@ -1,6 +1,0 @@
-pymel.core.runtime.PlaybackToggle
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PlaybackToggle

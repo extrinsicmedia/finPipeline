@@ -1,6 +1,0 @@
-pymel.core.runtime.VisorWindow
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.VisorWindow

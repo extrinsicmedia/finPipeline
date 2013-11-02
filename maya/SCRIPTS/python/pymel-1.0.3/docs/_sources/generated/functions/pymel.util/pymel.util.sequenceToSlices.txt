@@ -1,6 +1,0 @@
-pymel.util.sequenceToSlices
-===========================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.sequenceToSlices

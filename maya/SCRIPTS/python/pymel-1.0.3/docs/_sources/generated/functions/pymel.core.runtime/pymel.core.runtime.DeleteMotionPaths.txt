@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteMotionPaths
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteMotionPaths

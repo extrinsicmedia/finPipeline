@@ -1,6 +1,0 @@
-pymel.core.runtime.SetProject
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetProject

@@ -1,6 +1,0 @@
-pymel.core.windows.objectTypeUI
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.objectTypeUI

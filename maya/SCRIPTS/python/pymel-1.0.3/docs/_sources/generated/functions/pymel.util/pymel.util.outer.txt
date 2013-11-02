@@ -1,6 +1,0 @@
-pymel.util.outer
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.outer

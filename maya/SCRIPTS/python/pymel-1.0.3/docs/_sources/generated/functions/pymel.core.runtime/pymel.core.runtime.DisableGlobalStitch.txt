@@ -1,6 +1,0 @@
-pymel.core.runtime.DisableGlobalStitch
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisableGlobalStitch

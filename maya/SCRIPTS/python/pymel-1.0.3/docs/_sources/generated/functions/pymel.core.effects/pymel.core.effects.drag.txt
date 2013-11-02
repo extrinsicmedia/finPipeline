@@ -1,6 +1,0 @@
-pymel.core.effects.drag
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.drag

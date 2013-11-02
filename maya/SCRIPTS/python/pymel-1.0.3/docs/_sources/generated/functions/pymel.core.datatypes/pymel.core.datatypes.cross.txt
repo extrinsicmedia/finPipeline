@@ -1,6 +1,0 @@
-pymel.core.datatypes.cross
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.cross

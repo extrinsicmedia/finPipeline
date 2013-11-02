@@ -1,6 +1,0 @@
-pymel.core.runtime.PolygonSelectionConstraints
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolygonSelectionConstraints

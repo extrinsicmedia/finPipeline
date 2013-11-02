@@ -1,6 +1,0 @@
-pymel.core.effects.spring
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.spring

@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderGlobalsWindow
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderGlobalsWindow

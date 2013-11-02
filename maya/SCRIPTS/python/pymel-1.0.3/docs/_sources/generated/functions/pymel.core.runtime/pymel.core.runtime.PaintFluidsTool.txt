@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintFluidsTool
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintFluidsTool

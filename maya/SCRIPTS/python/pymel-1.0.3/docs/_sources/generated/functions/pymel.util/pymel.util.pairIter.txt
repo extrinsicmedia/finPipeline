@@ -1,6 +1,0 @@
-pymel.util.pairIter
-===================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.pairIter

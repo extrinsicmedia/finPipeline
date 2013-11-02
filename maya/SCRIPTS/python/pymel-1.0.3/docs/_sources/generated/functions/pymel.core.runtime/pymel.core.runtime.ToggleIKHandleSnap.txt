@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleIKHandleSnap
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleIKHandleSnap

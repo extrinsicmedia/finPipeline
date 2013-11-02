@@ -1,6 +1,0 @@
-pymel.util.arrays.readonly
-==========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.readonly

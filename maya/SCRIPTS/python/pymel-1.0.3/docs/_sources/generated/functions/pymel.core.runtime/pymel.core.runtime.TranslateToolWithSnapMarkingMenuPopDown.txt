@@ -1,6 +1,0 @@
-pymel.core.runtime.TranslateToolWithSnapMarkingMenuPopDown
-==========================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TranslateToolWithSnapMarkingMenuPopDown

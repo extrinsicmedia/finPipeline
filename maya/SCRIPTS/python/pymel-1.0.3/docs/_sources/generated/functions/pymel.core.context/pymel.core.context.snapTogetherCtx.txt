@@ -1,6 +1,0 @@
-pymel.core.context.snapTogetherCtx
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.snapTogetherCtx

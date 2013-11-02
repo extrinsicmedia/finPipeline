@@ -1,6 +1,0 @@
-pymel.tools.loggingControl.refreshLoggerHierarchy
-=================================================
-
-.. currentmodule:: pymel.tools
-
-.. automethod:: loggingControl.refreshLoggerHierarchy

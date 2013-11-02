@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleEdgeIDs
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleEdgeIDs

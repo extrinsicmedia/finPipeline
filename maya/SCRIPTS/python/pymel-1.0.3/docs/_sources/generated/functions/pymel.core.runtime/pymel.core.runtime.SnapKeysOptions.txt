@@ -1,6 +1,0 @@
-pymel.core.runtime.SnapKeysOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SnapKeysOptions

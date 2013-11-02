@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowBatchRender
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowBatchRender

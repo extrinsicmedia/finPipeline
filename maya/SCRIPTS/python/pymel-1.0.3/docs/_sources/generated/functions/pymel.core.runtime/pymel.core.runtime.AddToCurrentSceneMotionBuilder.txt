@@ -1,6 +1,0 @@
-pymel.core.runtime.AddToCurrentSceneMotionBuilder
-=================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddToCurrentSceneMotionBuilder

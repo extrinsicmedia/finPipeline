@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateNURBSPlane
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateNURBSPlane

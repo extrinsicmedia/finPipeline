@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowHairSystems
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowHairSystems

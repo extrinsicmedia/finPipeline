@@ -1,6 +1,0 @@
-pymel.core.windows.blendShapeEditor
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.blendShapeEditor

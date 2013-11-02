@@ -1,6 +1,0 @@
-pymel.core.runtime.CircularFillet
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CircularFillet

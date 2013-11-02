@@ -1,6 +1,0 @@
-pymel.core.effects.fluidEmitter
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.fluidEmitter

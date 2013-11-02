@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowMarkers
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowMarkers

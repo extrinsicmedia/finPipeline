@@ -1,6 +1,0 @@
-pymel.core.runtime.IKHandleToolOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.IKHandleToolOptions

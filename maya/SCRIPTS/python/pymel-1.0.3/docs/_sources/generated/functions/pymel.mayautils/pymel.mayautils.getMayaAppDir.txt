@@ -1,6 +1,0 @@
-pymel.mayautils.getMayaAppDir
-=============================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.getMayaAppDir

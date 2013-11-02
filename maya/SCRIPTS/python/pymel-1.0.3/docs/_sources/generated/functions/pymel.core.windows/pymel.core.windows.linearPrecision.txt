@@ -1,6 +1,0 @@
-pymel.core.windows.linearPrecision
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.linearPrecision

@@ -1,6 +1,0 @@
-pymel.util.arguments.iterateArgs
-================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.iterateArgs

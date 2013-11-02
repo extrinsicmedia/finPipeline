@@ -1,6 +1,0 @@
-pymel.core.context.polySplitCtx
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polySplitCtx

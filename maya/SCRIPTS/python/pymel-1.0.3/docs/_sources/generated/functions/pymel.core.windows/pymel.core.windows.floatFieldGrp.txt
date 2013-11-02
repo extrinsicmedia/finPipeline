@@ -1,6 +1,0 @@
-pymel.core.windows.floatFieldGrp
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.floatFieldGrp

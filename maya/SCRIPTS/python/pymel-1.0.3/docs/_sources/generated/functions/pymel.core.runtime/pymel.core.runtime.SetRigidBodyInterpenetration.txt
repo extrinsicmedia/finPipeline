@@ -1,6 +1,0 @@
-pymel.core.runtime.SetRigidBodyInterpenetration
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetRigidBodyInterpenetration

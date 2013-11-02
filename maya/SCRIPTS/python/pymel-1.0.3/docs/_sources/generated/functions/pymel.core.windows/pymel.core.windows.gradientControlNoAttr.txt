@@ -1,6 +1,0 @@
-pymel.core.windows.gradientControlNoAttr
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.gradientControlNoAttr

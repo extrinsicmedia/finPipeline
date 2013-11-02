@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeShadowLinks
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeShadowLinks

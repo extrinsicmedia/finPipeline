@@ -1,6 +1,0 @@
-pymel.core.datatypes.readonly
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.readonly

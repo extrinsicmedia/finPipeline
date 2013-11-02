@@ -1,6 +1,0 @@
-pymel.core.rendering.nodeIconButton
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.nodeIconButton

@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteVertex
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteVertex

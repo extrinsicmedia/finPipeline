@@ -1,6 +1,0 @@
-pymel.core.runtime.GhostObject
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GhostObject

@@ -1,6 +1,0 @@
-pymel.core.runtime.SendAsNewSceneMudbox
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SendAsNewSceneMudbox

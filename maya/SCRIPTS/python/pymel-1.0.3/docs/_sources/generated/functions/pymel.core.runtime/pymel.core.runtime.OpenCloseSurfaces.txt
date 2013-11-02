@@ -1,6 +1,0 @@
-pymel.core.runtime.OpenCloseSurfaces
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OpenCloseSurfaces

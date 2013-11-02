@@ -1,6 +1,0 @@
-pymel.core.windows.symbolCheckBox
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.symbolCheckBox

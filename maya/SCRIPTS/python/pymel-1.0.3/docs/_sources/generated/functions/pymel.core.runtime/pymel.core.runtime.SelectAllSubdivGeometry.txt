@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllSubdivGeometry
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllSubdivGeometry

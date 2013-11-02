@@ -1,6 +1,0 @@
-pymel.core.datatypes.isnan
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.isnan

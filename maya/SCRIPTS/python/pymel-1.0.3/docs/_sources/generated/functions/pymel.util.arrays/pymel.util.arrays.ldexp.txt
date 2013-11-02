@@ -1,6 +1,0 @@
-pymel.util.arrays.ldexp
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.ldexp

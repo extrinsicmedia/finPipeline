@@ -1,6 +1,0 @@
-pymel.core.runtime.ArchiveScene
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ArchiveScene

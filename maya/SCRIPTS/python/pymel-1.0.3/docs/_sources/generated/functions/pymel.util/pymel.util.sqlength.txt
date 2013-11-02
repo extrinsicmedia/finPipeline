@@ -1,6 +1,0 @@
-pymel.util.sqlength
-===================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.sqlength

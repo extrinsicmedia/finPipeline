@@ -1,6 +1,0 @@
-pymel.core.runtime.SmoothHairCurves
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SmoothHairCurves

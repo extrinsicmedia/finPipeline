@@ -1,6 +1,0 @@
-pymel.util.arrays.hypot
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.hypot

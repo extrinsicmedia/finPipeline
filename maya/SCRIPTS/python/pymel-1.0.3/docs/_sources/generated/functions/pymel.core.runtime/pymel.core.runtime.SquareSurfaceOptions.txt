@@ -1,6 +1,0 @@
-pymel.core.runtime.SquareSurfaceOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SquareSurfaceOptions

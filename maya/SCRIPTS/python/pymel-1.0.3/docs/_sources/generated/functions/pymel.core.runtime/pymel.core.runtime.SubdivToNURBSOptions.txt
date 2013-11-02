@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivToNURBSOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivToNURBSOptions

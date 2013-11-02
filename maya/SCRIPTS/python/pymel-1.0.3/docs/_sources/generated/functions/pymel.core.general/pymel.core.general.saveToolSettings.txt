@@ -1,6 +1,0 @@
-pymel.core.general.saveToolSettings
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.saveToolSettings

@@ -1,6 +1,0 @@
-pymel.core.context.keyframeRegionMoveKeyCtx
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.keyframeRegionMoveKeyCtx

@@ -1,6 +1,0 @@
-pymel.core.runtime.HighQualityDisplay
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HighQualityDisplay

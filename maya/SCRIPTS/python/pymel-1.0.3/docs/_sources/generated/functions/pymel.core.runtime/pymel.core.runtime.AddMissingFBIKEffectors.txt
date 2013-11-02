@@ -1,6 +1,0 @@
-pymel.core.runtime.AddMissingFBIKEffectors
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddMissingFBIKEffectors

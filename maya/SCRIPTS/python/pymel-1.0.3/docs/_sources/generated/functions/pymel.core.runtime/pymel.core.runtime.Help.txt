@@ -1,6 +1,0 @@
-pymel.core.runtime.Help
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Help

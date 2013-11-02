@@ -1,6 +1,0 @@
-pymel.core.runtime.CopyUVsToUVSet
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CopyUVsToUVSet

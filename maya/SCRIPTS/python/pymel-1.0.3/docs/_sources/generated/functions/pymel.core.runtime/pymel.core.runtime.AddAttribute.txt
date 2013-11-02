@@ -1,6 +1,0 @@
-pymel.core.runtime.AddAttribute
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddAttribute

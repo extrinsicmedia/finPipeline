@@ -1,6 +1,0 @@
-pymel.core.windows.toggleWindowVisibility
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.toggleWindowVisibility

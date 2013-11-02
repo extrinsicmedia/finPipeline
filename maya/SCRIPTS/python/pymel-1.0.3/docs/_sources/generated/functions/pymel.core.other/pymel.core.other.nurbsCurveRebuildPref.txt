@@ -1,6 +1,0 @@
-pymel.core.other.nurbsCurveRebuildPref
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.nurbsCurveRebuildPref

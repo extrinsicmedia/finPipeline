@@ -1,6 +1,0 @@
-pymel.core.runtime.PerspGraphHypergraphLayout
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PerspGraphHypergraphLayout

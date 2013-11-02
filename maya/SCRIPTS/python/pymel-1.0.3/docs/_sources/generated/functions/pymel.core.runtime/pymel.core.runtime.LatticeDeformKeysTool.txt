@@ -1,6 +1,0 @@
-pymel.core.runtime.LatticeDeformKeysTool
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LatticeDeformKeysTool

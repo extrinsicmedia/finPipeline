@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToUVEdgeLoop
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToUVEdgeLoop

@@ -1,6 +1,0 @@
-pymel.core.datatypes.tan
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.tan

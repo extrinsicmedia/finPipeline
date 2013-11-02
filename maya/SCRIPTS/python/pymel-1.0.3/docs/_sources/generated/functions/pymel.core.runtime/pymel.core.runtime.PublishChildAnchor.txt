@@ -1,6 +1,0 @@
-pymel.core.runtime.PublishChildAnchor
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PublishChildAnchor

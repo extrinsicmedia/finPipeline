@@ -1,6 +1,0 @@
-pymel.core.runtime.BakeChannel
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BakeChannel

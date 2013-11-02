@@ -1,6 +1,0 @@
-pymel.core.rendering.projectionManip
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.projectionManip

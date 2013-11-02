@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintRandomOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintRandomOptions

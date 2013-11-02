@@ -1,6 +1,0 @@
-pymel.core.runtime.SimplifyStrokePathCurves
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SimplifyStrokePathCurves

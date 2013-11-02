@@ -1,6 +1,0 @@
-pymel.core.other.LoadHIKCharacterState
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.LoadHIKCharacterState

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyConnectComponents
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyConnectComponents

@@ -1,6 +1,0 @@
-pymel.core.context.softModContext
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.softModContext

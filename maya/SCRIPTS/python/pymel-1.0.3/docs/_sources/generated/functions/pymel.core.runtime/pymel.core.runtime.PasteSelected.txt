@@ -1,6 +1,0 @@
-pymel.core.runtime.PasteSelected
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PasteSelected

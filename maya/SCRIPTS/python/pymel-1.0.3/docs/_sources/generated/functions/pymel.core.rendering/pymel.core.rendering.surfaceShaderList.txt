@@ -1,6 +1,0 @@
-pymel.core.rendering.surfaceShaderList
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.surfaceShaderList

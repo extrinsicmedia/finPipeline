@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateFBIK
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateFBIK

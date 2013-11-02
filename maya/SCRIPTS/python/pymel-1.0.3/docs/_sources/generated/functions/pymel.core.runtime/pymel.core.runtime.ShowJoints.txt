@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowJoints
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowJoints

@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdCutUVs
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdCutUVs

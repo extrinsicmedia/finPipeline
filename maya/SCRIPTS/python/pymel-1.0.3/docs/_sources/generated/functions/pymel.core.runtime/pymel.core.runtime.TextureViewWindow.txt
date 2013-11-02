@@ -1,6 +1,0 @@
-pymel.core.runtime.TextureViewWindow
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TextureViewWindow

@@ -1,6 +1,0 @@
-pymel.core.other.polySetVertices
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.polySetVertices

@@ -1,6 +1,0 @@
-pymel.core.runtime.ConnectComponents
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConnectComponents

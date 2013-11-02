@@ -1,6 +1,0 @@
-pymel.core.windows.commandLine
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.commandLine

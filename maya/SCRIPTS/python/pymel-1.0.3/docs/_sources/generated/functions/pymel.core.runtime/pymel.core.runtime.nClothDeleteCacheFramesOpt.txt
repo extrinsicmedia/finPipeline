@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothDeleteCacheFramesOpt
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothDeleteCacheFramesOpt

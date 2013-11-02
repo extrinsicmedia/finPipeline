@@ -1,6 +1,0 @@
-pymel.core.runtime.DisplayShadingMarkingMenuPopDown
-===================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisplayShadingMarkingMenuPopDown

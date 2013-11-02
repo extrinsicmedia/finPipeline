@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllHairSystem
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllHairSystem

@@ -1,6 +1,0 @@
-pymel.core.general.connectAttr
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.connectAttr

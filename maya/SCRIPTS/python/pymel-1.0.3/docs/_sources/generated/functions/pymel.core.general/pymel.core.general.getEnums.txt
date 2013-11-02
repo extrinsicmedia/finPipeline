@@ -1,6 +1,0 @@
-pymel.core.general.getEnums
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.getEnums

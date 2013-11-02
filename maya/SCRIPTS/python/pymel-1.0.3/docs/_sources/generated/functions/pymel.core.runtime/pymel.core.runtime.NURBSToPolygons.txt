@@ -1,6 +1,0 @@
-pymel.core.runtime.NURBSToPolygons
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NURBSToPolygons

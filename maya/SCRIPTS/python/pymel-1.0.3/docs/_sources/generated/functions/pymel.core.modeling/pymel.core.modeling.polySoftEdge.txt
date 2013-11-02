@@ -1,6 +1,0 @@
-pymel.core.modeling.polySoftEdge
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySoftEdge

@@ -1,6 +1,0 @@
-pymel.core.runtime.PolygonPaste
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolygonPaste

@@ -1,6 +1,0 @@
-pymel.core.runtime.AddKeyToolActivate
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddKeyToolActivate

@@ -1,6 +1,0 @@
-pymel.core.context.curveBezierCtx
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.curveBezierCtx

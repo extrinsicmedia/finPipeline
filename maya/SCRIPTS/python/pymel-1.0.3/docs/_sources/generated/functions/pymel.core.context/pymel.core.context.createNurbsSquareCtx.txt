@@ -1,6 +1,0 @@
-pymel.core.context.createNurbsSquareCtx
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createNurbsSquareCtx

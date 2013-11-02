@@ -1,6 +1,0 @@
-pymel.core.runtime.HideNonlinears
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideNonlinears

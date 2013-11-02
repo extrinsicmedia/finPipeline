@@ -1,6 +1,0 @@
-pymel.core.runtime.SendAsNewSceneMotionBuilder
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SendAsNewSceneMotionBuilder

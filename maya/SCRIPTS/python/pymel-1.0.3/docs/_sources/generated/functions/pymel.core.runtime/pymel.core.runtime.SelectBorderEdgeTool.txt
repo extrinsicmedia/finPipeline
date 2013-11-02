@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectBorderEdgeTool
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectBorderEdgeTool

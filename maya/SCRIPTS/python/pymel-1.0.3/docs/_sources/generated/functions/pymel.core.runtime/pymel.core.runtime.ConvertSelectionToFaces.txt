@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToFaces
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToFaces

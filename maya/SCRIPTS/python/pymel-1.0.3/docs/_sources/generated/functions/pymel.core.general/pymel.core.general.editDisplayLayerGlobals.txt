@@ -1,6 +1,0 @@
-pymel.core.general.editDisplayLayerGlobals
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.editDisplayLayerGlobals

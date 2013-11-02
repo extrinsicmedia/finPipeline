@@ -1,6 +1,0 @@
-pymel.core.runtime.BevelPolygon
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BevelPolygon

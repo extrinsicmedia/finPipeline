@@ -1,6 +1,0 @@
-pymel.core.general.xform
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.xform

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyEvaluate
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyEvaluate

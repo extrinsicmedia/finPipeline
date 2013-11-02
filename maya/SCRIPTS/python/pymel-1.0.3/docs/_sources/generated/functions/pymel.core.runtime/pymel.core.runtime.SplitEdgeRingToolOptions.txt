@@ -1,6 +1,0 @@
-pymel.core.runtime.SplitEdgeRingToolOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SplitEdgeRingToolOptions

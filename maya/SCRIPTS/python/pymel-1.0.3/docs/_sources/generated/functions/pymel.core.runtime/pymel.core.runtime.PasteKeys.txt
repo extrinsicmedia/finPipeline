@@ -1,6 +1,0 @@
-pymel.core.runtime.PasteKeys
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PasteKeys

@@ -1,6 +1,0 @@
-pymel.core.runtime.ReverseSurfaceDirectionOptions
-=================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReverseSurfaceDirectionOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.AddToCurrentSceneMudbox
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddToCurrentSceneMudbox

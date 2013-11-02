@@ -1,6 +1,0 @@
-pymel.core.runtime.SineOptions
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SineOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateSubdivCylinder
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateSubdivCylinder

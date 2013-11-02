@@ -1,6 +1,0 @@
-pymel.core.runtime.CleanupPolygon
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CleanupPolygon

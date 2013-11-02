@@ -1,6 +1,0 @@
-pymel.core.runtime.PresetBlendingWindow
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PresetBlendingWindow

@@ -1,6 +1,0 @@
-pymel.core.runtime.DuplicateWithTransform
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DuplicateWithTransform

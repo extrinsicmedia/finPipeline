@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateEmptyUVSet
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateEmptyUVSet

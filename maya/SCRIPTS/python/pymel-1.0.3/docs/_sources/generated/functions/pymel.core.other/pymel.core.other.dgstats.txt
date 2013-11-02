@@ -1,6 +1,0 @@
-pymel.core.other.dgstats
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.dgstats

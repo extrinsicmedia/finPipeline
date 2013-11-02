@@ -1,6 +1,0 @@
-pymel.core.runtime.CopyKeys
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CopyKeys

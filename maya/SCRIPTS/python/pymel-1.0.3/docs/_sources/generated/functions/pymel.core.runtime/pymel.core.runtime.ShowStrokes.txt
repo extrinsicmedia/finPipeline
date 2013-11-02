@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowStrokes
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowStrokes

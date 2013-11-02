@@ -1,6 +1,0 @@
-pymel.core.runtime.DeactivateGlobalScreenSlider
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeactivateGlobalScreenSlider

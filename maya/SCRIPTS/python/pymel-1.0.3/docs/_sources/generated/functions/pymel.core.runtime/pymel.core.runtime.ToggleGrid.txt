@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleGrid
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleGrid

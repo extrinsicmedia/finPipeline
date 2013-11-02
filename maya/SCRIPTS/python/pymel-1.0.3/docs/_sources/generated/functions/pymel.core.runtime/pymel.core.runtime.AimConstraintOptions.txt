@@ -1,6 +1,0 @@
-pymel.core.runtime.AimConstraintOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AimConstraintOptions

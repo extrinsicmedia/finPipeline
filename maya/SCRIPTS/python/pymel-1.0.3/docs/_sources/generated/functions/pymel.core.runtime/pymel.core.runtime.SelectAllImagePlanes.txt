@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllImagePlanes
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllImagePlanes

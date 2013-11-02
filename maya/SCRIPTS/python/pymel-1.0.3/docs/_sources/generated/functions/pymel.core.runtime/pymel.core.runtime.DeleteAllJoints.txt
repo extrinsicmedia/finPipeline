@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllJoints
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllJoints

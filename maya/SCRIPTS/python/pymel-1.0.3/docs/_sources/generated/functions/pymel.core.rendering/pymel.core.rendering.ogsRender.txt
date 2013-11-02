@@ -1,6 +1,0 @@
-pymel.core.rendering.ogsRender
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.ogsRender

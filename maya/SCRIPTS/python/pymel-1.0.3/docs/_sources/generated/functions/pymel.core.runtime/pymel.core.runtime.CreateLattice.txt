@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateLattice
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateLattice

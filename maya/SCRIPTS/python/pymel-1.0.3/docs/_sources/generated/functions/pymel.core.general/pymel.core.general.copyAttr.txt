@@ -1,6 +1,0 @@
-pymel.core.general.copyAttr
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.copyAttr

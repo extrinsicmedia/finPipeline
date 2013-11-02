@@ -1,6 +1,0 @@
-pymel.util.mathutils.round
-==========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.round

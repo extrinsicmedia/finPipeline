@@ -1,6 +1,0 @@
-pymel.core.windows.floatScrollBar
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.floatScrollBar

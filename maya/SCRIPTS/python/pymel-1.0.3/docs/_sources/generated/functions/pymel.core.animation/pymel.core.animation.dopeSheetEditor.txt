@@ -1,6 +1,0 @@
-pymel.core.animation.dopeSheetEditor
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.dopeSheetEditor

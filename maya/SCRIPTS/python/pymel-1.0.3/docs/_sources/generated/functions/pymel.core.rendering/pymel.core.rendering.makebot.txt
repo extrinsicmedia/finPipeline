@@ -1,6 +1,0 @@
-pymel.core.rendering.makebot
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.makebot

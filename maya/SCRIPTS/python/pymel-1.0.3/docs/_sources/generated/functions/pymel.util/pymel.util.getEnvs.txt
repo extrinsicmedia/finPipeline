@@ -1,6 +1,0 @@
-pymel.util.getEnvs
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.getEnvs

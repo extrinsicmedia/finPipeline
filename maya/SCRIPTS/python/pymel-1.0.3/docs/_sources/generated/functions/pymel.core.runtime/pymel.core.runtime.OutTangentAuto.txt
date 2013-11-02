@@ -1,6 +1,0 @@
-pymel.core.runtime.OutTangentAuto
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OutTangentAuto

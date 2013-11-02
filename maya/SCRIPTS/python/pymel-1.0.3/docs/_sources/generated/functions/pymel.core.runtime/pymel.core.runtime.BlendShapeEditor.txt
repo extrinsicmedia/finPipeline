@@ -1,6 +1,0 @@
-pymel.core.runtime.BlendShapeEditor
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BlendShapeEditor

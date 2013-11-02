@@ -1,6 +1,0 @@
-pymel.core.runtime.ScaleCurvature
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ScaleCurvature

@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeBrushSpring
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeBrushSpring

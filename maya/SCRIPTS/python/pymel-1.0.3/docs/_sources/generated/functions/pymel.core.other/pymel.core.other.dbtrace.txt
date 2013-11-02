@@ -1,6 +1,0 @@
-pymel.core.other.dbtrace
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.dbtrace

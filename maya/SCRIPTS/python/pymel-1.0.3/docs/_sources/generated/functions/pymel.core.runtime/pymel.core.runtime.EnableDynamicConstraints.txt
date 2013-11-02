@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableDynamicConstraints
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableDynamicConstraints

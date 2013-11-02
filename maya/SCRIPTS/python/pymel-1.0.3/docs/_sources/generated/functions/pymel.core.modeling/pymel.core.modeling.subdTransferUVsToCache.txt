@@ -1,6 +1,0 @@
-pymel.core.modeling.subdTransferUVsToCache
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdTransferUVsToCache

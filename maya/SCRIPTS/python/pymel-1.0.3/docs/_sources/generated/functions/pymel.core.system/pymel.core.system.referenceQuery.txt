@@ -1,6 +1,0 @@
-pymel.core.system.referenceQuery
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.referenceQuery

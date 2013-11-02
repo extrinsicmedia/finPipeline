@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowPolygonSurfaces
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowPolygonSurfaces

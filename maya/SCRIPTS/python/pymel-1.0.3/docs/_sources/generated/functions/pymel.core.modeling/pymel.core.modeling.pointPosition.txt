@@ -1,6 +1,0 @@
-pymel.core.modeling.pointPosition
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.pointPosition

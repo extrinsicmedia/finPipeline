@@ -1,6 +1,0 @@
-pymel.core.runtime.NEmitFromObject
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NEmitFromObject

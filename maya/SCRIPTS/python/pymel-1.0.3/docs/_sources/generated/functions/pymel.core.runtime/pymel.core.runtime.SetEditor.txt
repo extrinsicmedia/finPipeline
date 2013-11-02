@@ -1,6 +1,0 @@
-pymel.core.runtime.SetEditor
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetEditor

@@ -1,6 +1,0 @@
-pymel.core.windows.setStartupMessage
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.setStartupMessage

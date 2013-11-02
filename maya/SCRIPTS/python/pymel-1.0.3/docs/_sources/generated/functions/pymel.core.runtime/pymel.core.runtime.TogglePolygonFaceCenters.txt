@@ -1,6 +1,0 @@
-pymel.core.runtime.TogglePolygonFaceCenters
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TogglePolygonFaceCenters

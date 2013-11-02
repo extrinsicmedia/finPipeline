@@ -1,6 +1,0 @@
-pymel.core.runtime.ReversePolygonNormals
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReversePolygonNormals

@@ -1,6 +1,0 @@
-pymel.core.runtime.geometryCache
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.geometryCache

@@ -1,6 +1,0 @@
-pymel.core.modeling.polySewEdge
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySewEdge

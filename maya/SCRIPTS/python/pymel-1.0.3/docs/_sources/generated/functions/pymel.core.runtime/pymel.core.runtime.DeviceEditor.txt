@@ -1,6 +1,0 @@
-pymel.core.runtime.DeviceEditor
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeviceEditor

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePartitionOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePartitionOptions

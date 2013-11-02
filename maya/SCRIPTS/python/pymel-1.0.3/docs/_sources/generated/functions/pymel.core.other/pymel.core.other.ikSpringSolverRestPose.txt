@@ -1,6 +1,0 @@
-pymel.core.other.ikSpringSolverRestPose
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ikSpringSolverRestPose

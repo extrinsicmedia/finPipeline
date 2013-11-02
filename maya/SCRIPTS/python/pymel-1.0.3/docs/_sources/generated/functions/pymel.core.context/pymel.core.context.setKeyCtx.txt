@@ -1,6 +1,0 @@
-pymel.core.context.setKeyCtx
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.setKeyCtx

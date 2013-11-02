@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothAppendOpt
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothAppendOpt

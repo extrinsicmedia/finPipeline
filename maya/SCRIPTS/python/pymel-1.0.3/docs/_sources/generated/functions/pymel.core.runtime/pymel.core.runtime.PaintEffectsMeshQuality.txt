@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintEffectsMeshQuality
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintEffectsMeshQuality

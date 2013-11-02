@@ -1,6 +1,0 @@
-pymel.core.modeling.polyBevel
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyBevel

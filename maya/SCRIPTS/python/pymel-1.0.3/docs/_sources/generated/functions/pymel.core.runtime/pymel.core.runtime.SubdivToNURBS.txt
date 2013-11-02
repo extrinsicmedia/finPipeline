@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivToNURBS
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivToNURBS

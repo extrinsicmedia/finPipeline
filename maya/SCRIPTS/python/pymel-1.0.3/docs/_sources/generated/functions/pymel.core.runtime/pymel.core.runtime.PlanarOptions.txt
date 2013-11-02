@@ -1,6 +1,0 @@
-pymel.core.runtime.PlanarOptions
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PlanarOptions

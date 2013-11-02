@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderTextureRange
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderTextureRange

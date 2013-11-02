@@ -1,6 +1,0 @@
-pymel.util.arguments.getCascadingDictItem
-=========================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.getCascadingDictItem

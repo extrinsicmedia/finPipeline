@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateBezierCurveToolOptions
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateBezierCurveToolOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.ApplySettingsToSelectedStroke
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ApplySettingsToSelectedStroke

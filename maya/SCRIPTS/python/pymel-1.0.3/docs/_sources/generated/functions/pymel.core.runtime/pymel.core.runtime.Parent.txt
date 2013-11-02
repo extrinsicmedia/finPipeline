@@ -1,6 +1,0 @@
-pymel.core.runtime.Parent
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Parent

@@ -1,6 +1,0 @@
-pymel.core.datatypes.prod
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.prod

@@ -1,6 +1,0 @@
-pymel.core.context.dynSelectCtx
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.dynSelectCtx

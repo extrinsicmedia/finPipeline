@@ -1,6 +1,0 @@
-pymel.core.animation.playblast
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.playblast

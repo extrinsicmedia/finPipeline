@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintCacheTool
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintCacheTool

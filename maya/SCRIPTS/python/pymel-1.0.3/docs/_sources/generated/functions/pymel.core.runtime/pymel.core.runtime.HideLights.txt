@@ -1,6 +1,0 @@
-pymel.core.runtime.HideLights
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideLights

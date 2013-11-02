@@ -1,6 +1,0 @@
-pymel.core.context.polyMergeEdgeCtx
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyMergeEdgeCtx

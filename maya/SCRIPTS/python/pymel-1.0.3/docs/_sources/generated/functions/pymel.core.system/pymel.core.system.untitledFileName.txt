@@ -1,6 +1,0 @@
-pymel.core.system.untitledFileName
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.untitledFileName

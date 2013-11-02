@@ -1,6 +1,0 @@
-pymel.core.runtime.AbortCurrentTool
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AbortCurrentTool

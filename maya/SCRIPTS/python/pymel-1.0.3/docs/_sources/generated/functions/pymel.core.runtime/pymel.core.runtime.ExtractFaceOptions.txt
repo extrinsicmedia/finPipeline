@@ -1,6 +1,0 @@
-pymel.core.runtime.ExtractFaceOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExtractFaceOptions

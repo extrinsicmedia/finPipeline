@@ -1,6 +1,0 @@
-pymel.core.other.GetHIKNode
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.GetHIKNode

@@ -1,6 +1,0 @@
-pymel.core.general.pause
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.pause

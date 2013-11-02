@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateReferenceOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateReferenceOptions

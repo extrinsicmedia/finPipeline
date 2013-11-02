@@ -1,6 +1,0 @@
-pymel.core.datatypes.frexp
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.frexp

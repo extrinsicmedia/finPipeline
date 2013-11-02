@@ -1,6 +1,0 @@
-pymel.util.radians
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.radians

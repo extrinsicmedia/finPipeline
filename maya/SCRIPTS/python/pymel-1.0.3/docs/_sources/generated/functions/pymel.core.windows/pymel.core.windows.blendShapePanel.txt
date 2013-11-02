@@ -1,6 +1,0 @@
-pymel.core.windows.blendShapePanel
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.blendShapePanel

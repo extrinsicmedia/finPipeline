@@ -1,6 +1,0 @@
-pymel.core.context.textureLassoContext
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.textureLassoContext

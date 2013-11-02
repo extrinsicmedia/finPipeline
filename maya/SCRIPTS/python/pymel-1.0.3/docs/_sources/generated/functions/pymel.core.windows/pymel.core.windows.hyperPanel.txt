@@ -1,6 +1,0 @@
-pymel.core.windows.hyperPanel
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.hyperPanel

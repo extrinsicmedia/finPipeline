@@ -1,6 +1,0 @@
-pymel.core.general.paramLocator
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.paramLocator

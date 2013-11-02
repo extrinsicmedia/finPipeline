@@ -1,6 +1,0 @@
-pymel.core.runtime.CopyMeshAttributes
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CopyMeshAttributes

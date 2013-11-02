@@ -1,6 +1,0 @@
-pymel.core.uitypes.toQtWindow
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: uitypes.toQtWindow

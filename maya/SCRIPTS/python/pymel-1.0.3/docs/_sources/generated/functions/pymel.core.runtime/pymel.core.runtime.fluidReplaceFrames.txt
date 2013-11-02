@@ -1,6 +1,0 @@
-pymel.core.runtime.fluidReplaceFrames
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.fluidReplaceFrames

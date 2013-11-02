@@ -1,6 +1,0 @@
-pymel.core.runtime.SetCurrentColorSet
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetCurrentColorSet

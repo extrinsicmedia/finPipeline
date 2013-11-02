@@ -1,6 +1,0 @@
-pymel.util.arrays.dist
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.dist

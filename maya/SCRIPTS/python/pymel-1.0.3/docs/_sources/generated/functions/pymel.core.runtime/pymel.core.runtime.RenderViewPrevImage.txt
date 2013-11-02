@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderViewPrevImage
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderViewPrevImage

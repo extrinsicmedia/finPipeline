@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintEffectsPanel
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintEffectsPanel

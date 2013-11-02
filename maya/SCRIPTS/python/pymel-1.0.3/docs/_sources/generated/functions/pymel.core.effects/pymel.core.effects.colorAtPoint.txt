@@ -1,6 +1,0 @@
-pymel.core.effects.colorAtPoint
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.colorAtPoint

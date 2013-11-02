@@ -1,6 +1,0 @@
-pymel.core.runtime.AddPondDynamicLocator
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddPondDynamicLocator

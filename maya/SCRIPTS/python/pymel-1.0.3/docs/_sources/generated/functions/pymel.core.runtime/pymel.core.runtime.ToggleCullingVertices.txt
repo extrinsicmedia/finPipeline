@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleCullingVertices
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleCullingVertices

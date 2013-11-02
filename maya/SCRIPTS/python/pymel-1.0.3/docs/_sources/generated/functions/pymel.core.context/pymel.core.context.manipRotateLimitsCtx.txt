@@ -1,6 +1,0 @@
-pymel.core.context.manipRotateLimitsCtx
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.manipRotateLimitsCtx

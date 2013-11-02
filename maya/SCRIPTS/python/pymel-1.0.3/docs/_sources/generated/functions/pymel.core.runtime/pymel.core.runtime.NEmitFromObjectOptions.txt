@@ -1,6 +1,0 @@
-pymel.core.runtime.NEmitFromObjectOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NEmitFromObjectOptions

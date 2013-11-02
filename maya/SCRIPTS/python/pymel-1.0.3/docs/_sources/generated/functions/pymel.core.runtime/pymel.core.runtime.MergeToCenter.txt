@@ -1,6 +1,0 @@
-pymel.core.runtime.MergeToCenter
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MergeToCenter

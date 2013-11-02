@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowWrapInfluences
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowWrapInfluences

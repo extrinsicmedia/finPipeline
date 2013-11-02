@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCheck
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCheck

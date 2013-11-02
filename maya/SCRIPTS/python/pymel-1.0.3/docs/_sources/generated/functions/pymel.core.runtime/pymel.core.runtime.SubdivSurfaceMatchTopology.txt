@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivSurfaceMatchTopology
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivSurfaceMatchTopology

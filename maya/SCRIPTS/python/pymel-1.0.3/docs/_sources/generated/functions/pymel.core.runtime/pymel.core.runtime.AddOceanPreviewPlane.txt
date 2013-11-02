@@ -1,6 +1,0 @@
-pymel.core.runtime.AddOceanPreviewPlane
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddOceanPreviewPlane

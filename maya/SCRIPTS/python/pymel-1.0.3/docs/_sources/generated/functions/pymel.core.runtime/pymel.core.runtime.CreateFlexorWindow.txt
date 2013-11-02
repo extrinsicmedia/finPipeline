@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateFlexorWindow
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateFlexorWindow

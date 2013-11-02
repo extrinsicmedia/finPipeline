@@ -1,6 +1,0 @@
-pymel.core.context.curveMoveEPCtx
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.curveMoveEPCtx

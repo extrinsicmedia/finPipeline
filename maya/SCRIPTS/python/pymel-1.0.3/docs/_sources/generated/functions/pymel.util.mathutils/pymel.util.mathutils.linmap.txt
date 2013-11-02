@@ -1,6 +1,0 @@
-pymel.util.mathutils.linmap
-===========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.linmap

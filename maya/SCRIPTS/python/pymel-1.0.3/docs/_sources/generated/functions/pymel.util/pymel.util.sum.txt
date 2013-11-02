@@ -1,6 +1,0 @@
-pymel.util.sum
-==============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.sum

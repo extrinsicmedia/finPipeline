@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleBackfaceGeometry
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleBackfaceGeometry

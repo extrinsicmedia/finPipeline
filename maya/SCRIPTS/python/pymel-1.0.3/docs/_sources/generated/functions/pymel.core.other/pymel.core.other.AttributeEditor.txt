@@ -1,6 +1,0 @@
-pymel.core.other.AttributeEditor
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.AttributeEditor

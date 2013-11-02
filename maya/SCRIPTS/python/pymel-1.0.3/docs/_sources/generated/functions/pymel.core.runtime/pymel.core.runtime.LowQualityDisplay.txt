@@ -1,6 +1,0 @@
-pymel.core.runtime.LowQualityDisplay
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LowQualityDisplay

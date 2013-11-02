@@ -1,6 +1,0 @@
-pymel.core.modeling.polyUVSet
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyUVSet

@@ -1,6 +1,0 @@
-pymel.core.runtime.ProductInformation
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ProductInformation

@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteChannelsOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteChannelsOptions

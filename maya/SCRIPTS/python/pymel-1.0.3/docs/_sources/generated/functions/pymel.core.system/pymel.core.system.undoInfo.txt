@@ -1,6 +1,0 @@
-pymel.core.system.undoInfo
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.undoInfo

@@ -1,6 +1,0 @@
-pymel.core.context.ctxTraverse
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.ctxTraverse

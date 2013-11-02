@@ -1,6 +1,0 @@
-pymel.util.arrays.angle
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.angle

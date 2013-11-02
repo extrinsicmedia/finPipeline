@@ -1,6 +1,0 @@
-pymel.core.runtime.UpdateBindingSetOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UpdateBindingSetOptions

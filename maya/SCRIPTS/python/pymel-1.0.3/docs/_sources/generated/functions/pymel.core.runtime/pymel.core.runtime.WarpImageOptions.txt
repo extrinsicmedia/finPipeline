@@ -1,6 +1,0 @@
-pymel.core.runtime.WarpImageOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.WarpImageOptions

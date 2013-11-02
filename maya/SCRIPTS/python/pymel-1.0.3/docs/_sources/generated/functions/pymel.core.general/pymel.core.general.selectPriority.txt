@@ -1,6 +1,0 @@
-pymel.core.general.selectPriority
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.selectPriority

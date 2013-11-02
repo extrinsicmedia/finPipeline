@@ -1,6 +1,0 @@
-pymel.core.effects.expressionEditorListen
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.expressionEditorListen

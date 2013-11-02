@@ -1,6 +1,0 @@
-pymel.core.windows.attrNavigationControlGrp
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.attrNavigationControlGrp

@@ -1,6 +1,0 @@
-pymel.core.runtime.RaiseMainWindow
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RaiseMainWindow

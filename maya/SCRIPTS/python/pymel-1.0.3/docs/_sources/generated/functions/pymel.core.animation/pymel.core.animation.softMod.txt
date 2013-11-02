@@ -1,6 +1,0 @@
-pymel.core.animation.softMod
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.softMod

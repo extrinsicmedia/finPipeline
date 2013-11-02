@@ -1,6 +1,0 @@
-pymel.util.exp
-==============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.exp

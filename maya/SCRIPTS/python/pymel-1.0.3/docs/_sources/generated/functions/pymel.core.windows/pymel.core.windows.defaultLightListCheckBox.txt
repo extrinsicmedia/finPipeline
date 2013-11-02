@@ -1,6 +1,0 @@
-pymel.core.windows.defaultLightListCheckBox
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.defaultLightListCheckBox

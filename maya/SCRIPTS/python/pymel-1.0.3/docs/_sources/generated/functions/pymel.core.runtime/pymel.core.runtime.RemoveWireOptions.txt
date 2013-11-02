@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveWireOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveWireOptions

@@ -1,6 +1,0 @@
-pymel.core.other.directConnectPath
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.directConnectPath

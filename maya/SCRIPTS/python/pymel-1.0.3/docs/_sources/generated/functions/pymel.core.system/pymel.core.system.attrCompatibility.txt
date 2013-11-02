@@ -1,6 +1,0 @@
-pymel.core.system.attrCompatibility
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.attrCompatibility

@@ -1,6 +1,0 @@
-pymel.core.runtime.fluidDeleteCacheFramesOpt
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.fluidDeleteCacheFramesOpt

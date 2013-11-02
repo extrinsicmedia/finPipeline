@@ -1,6 +1,0 @@
-pymel.core.modeling.illustratorCurves
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.illustratorCurves

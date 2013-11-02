@@ -1,6 +1,0 @@
-pymel.core.context.texMoveContext
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texMoveContext

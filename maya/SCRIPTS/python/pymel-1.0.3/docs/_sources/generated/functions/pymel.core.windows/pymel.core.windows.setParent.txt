@@ -1,6 +1,0 @@
-pymel.core.windows.setParent
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.setParent

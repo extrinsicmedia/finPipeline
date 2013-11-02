@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintEffectsToNurbsOptions
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintEffectsToNurbsOptions

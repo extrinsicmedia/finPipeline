@@ -1,6 +1,0 @@
-pymel.core.system.decorator
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.decorator

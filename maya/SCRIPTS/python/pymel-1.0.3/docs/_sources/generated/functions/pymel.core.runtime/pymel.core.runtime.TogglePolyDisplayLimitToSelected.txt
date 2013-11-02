@@ -1,6 +1,0 @@
-pymel.core.runtime.TogglePolyDisplayLimitToSelected
-===================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TogglePolyDisplayLimitToSelected

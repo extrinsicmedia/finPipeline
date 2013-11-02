@@ -1,6 +1,0 @@
-pymel.core.animation.bakeSimulation
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.bakeSimulation

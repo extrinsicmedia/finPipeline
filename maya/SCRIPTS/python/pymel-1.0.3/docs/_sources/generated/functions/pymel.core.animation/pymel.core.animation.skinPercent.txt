@@ -1,6 +1,0 @@
-pymel.core.animation.skinPercent
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.skinPercent

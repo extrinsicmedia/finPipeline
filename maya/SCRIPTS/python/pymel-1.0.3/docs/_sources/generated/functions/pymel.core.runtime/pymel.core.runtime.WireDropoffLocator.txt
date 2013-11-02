@@ -1,6 +1,0 @@
-pymel.core.runtime.WireDropoffLocator
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.WireDropoffLocator

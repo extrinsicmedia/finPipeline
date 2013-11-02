@@ -1,6 +1,0 @@
-pymel.core.system.reference
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.reference

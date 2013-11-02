@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowLastHidden
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowLastHidden

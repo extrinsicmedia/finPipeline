@@ -1,6 +1,0 @@
-pymel.core.runtime.BufferCurveSnapshot
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BufferCurveSnapshot

@@ -1,6 +1,0 @@
-pymel.core.windows.soundControl
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.soundControl

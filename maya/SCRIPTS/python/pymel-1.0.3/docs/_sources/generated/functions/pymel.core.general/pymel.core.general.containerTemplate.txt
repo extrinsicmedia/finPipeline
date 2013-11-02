@@ -1,6 +1,0 @@
-pymel.core.general.containerTemplate
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.containerTemplate

@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableMemoryCaching
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableMemoryCaching

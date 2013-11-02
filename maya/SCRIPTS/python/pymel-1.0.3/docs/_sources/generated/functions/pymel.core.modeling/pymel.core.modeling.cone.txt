@@ -1,6 +1,0 @@
-pymel.core.modeling.cone
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.cone

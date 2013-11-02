@@ -1,6 +1,0 @@
-pymel.core.runtime.PickColorActivate
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PickColorActivate

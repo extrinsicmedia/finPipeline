@@ -1,6 +1,0 @@
-pymel.core.runtime.nucleusGetEffectsAsset
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nucleusGetEffectsAsset

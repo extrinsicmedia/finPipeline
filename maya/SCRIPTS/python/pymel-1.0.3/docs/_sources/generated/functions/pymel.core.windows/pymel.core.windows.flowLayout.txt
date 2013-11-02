@@ -1,6 +1,0 @@
-pymel.core.windows.flowLayout
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.flowLayout

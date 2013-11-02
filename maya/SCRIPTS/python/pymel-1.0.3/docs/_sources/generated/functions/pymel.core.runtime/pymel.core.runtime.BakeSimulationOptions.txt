@@ -1,6 +1,0 @@
-pymel.core.runtime.BakeSimulationOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BakeSimulationOptions

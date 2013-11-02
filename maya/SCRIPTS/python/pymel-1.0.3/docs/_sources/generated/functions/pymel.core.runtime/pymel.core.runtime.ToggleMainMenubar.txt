@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleMainMenubar
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleMainMenubar

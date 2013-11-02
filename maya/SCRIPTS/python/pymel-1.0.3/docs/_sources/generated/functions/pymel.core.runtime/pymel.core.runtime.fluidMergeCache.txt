@@ -1,6 +1,0 @@
-pymel.core.runtime.fluidMergeCache
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.fluidMergeCache

@@ -1,6 +1,0 @@
-pymel.core.runtime.LastActionTool
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LastActionTool

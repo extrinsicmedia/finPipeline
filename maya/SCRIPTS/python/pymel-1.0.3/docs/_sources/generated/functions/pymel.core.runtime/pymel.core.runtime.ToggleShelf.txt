@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleShelf
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleShelf

@@ -1,6 +1,0 @@
-pymel.core.general.threadCount
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.threadCount

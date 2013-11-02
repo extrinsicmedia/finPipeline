@@ -1,6 +1,0 @@
-pymel.core.runtime.AnimationSweepOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AnimationSweepOptions

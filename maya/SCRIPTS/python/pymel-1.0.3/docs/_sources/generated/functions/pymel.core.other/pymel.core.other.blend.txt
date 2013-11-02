@@ -1,6 +1,0 @@
-pymel.core.other.blend
-======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.blend

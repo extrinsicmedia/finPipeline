@@ -1,6 +1,0 @@
-pymel.core.animation.disconnectJoint
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.disconnectJoint

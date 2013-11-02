@@ -1,6 +1,0 @@
-pymel.core.other.flagTest
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.flagTest

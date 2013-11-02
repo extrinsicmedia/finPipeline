@@ -1,6 +1,0 @@
-pymel.core.runtime.EditOversamplingForCacheSettings
-===================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EditOversamplingForCacheSettings

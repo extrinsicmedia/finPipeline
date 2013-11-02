@@ -1,6 +1,0 @@
-pymel.util.utilitytypes.makeMethod
-==================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: utilitytypes.makeMethod

@@ -1,6 +1,0 @@
-pymel.core.other.testPa
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.testPa

@@ -1,6 +1,0 @@
-pymel.util.arrays.frexp
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.frexp

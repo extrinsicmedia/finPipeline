@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonCylinderOptions
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonCylinderOptions

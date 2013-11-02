@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateQuickSelectSet
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateQuickSelectSet

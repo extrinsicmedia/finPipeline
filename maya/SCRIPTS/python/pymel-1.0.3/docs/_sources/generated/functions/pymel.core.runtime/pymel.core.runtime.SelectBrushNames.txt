@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectBrushNames
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectBrushNames

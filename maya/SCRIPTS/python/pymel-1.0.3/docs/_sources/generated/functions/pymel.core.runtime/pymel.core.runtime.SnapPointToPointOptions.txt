@@ -1,6 +1,0 @@
-pymel.core.runtime.SnapPointToPointOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SnapPointToPointOptions

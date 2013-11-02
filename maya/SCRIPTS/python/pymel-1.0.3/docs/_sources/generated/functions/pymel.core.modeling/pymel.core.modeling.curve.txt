@@ -1,6 +1,0 @@
-pymel.core.modeling.curve
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.curve

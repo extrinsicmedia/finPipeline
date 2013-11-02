@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowNURBSCurves
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowNURBSCurves

@@ -1,6 +1,0 @@
-pymel.versions.bitness
-======================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.bitness

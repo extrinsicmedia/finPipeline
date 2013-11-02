@@ -1,6 +1,0 @@
-pymel.core.context.propModCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.propModCtx

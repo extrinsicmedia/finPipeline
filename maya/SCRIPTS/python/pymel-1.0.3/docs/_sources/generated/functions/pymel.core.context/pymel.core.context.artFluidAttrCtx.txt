@@ -1,6 +1,0 @@
-pymel.core.context.artFluidAttrCtx
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.artFluidAttrCtx

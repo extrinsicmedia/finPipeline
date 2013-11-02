@@ -1,6 +1,0 @@
-pymel.core.effects.event
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.event

@@ -1,6 +1,0 @@
-pymel.core.runtime.ReattachSkeletonJoints
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReattachSkeletonJoints

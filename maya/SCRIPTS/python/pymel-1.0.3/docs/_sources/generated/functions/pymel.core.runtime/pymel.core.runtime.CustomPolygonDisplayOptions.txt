@@ -1,6 +1,0 @@
-pymel.core.runtime.CustomPolygonDisplayOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CustomPolygonDisplayOptions

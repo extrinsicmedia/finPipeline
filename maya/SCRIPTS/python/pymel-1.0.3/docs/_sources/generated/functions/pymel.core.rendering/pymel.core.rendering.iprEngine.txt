@@ -1,6 +1,0 @@
-pymel.core.rendering.iprEngine
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.iprEngine

@@ -1,6 +1,0 @@
-pymel.util.preorder
-===================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.preorder

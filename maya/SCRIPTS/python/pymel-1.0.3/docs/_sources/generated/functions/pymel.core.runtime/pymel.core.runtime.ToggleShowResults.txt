@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleShowResults
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleShowResults

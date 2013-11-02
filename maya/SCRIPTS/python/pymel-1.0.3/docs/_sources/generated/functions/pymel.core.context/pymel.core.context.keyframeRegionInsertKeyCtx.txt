@@ -1,6 +1,0 @@
-pymel.core.context.keyframeRegionInsertKeyCtx
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.keyframeRegionInsertKeyCtx

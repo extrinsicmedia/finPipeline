@@ -1,6 +1,0 @@
-pymel.core.runtime.RigidBindSkinOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RigidBindSkinOptions

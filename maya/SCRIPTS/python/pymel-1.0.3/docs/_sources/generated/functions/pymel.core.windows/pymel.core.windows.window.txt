@@ -1,6 +1,0 @@
-pymel.core.windows.window
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.window

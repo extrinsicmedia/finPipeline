@@ -1,6 +1,0 @@
-pymel.core.rendering.roll
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.roll

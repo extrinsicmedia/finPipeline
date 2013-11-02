@@ -1,6 +1,0 @@
-pymel.core.other.adskAssetLibrary
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.adskAssetLibrary

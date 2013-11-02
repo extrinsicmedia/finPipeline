@@ -1,6 +1,0 @@
-pymel.core.other.polySplitCtx2
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.polySplitCtx2

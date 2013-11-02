@@ -1,6 +1,0 @@
-pymel.core.context.distanceDimContext
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.distanceDimContext

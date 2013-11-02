@@ -1,6 +1,0 @@
-pymel.core.modeling.polySlideEdge
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySlideEdge

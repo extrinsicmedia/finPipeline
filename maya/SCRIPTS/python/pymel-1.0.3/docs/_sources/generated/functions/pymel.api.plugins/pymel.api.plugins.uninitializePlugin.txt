@@ -1,6 +1,0 @@
-pymel.api.plugins.uninitializePlugin
-====================================
-
-.. currentmodule:: pymel.api
-
-.. automethod:: plugins.uninitializePlugin

@@ -1,6 +1,0 @@
-pymel.core.runtime.CurveFlow
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CurveFlow

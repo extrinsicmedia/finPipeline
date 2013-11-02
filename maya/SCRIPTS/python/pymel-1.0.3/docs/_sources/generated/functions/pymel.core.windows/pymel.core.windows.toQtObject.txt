@@ -1,6 +1,0 @@
-pymel.core.windows.toQtObject
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.toQtObject

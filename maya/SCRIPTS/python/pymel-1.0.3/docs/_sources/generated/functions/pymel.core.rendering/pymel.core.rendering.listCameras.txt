@@ -1,6 +1,0 @@
-pymel.core.rendering.listCameras
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.listCameras

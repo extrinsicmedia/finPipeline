@@ -1,6 +1,0 @@
-pymel.core.other.hikGlobals
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.hikGlobals

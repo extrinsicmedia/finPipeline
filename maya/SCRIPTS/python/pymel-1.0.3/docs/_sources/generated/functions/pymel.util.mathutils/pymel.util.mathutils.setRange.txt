@@ -1,6 +1,0 @@
-pymel.util.mathutils.setRange
-=============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.setRange

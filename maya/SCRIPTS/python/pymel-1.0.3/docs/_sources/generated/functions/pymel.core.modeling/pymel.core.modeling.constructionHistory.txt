@@ -1,6 +1,0 @@
-pymel.core.modeling.constructionHistory
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.constructionHistory

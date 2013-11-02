@@ -1,6 +1,0 @@
-pymel.core.runtime.TangentsLinear
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TangentsLinear

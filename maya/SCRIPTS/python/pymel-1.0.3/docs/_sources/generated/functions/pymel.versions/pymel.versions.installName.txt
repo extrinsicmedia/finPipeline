@@ -1,6 +1,0 @@
-pymel.versions.installName
-==========================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.installName

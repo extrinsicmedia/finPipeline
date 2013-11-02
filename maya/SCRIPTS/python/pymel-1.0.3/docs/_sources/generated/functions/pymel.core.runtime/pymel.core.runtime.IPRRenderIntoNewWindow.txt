@@ -1,6 +1,0 @@
-pymel.core.runtime.IPRRenderIntoNewWindow
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.IPRRenderIntoNewWindow

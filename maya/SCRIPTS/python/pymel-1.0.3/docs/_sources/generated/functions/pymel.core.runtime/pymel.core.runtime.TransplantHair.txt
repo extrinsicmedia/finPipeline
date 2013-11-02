@@ -1,6 +1,0 @@
-pymel.core.runtime.TransplantHair
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TransplantHair

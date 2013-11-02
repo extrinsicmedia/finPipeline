@@ -1,6 +1,0 @@
-pymel.core.runtime.HideFkSkeleton
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideFkSkeleton

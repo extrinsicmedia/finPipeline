@@ -1,6 +1,0 @@
-pymel.util.postorder
-====================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.postorder

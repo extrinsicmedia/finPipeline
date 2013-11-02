@@ -1,6 +1,0 @@
-pymel.tools.mel2py.findMelOnlyCommands
-======================================
-
-.. currentmodule:: pymel.tools
-
-.. automethod:: mel2py.findMelOnlyCommands

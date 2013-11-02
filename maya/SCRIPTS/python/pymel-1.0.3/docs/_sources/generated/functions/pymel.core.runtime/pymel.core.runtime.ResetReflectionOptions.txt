@@ -1,6 +1,0 @@
-pymel.core.runtime.ResetReflectionOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ResetReflectionOptions

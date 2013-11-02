@@ -1,6 +1,0 @@
-pymel.core.animation.shot
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.shot

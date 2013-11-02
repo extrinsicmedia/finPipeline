@@ -1,6 +1,0 @@
-pymel.core.system.dbmessage
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.dbmessage

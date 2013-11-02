@@ -1,6 +1,0 @@
-pymel.util.isinf
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.isinf

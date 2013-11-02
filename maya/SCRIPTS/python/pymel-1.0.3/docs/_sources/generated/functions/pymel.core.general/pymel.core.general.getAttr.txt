@@ -1,6 +1,0 @@
-pymel.core.general.getAttr
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.getAttr

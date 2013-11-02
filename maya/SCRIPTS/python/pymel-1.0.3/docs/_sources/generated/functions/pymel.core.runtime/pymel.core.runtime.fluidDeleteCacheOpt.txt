@@ -1,6 +1,0 @@
-pymel.core.runtime.fluidDeleteCacheOpt
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.fluidDeleteCacheOpt

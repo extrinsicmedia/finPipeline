@@ -1,7 +1,0 @@
-<map id="inheritance20258e4f8f" name="inheritance20258e4f8f">
-<area shape="rect" href="#pymel.core.nodetypes.AnimBlendInOut" title="AnimBlendInOut" alt="" coords="5,160,115,184"/>
-<area shape="rect" href="pymel.core.nodetypes.AnimBlend.html#pymel.core.nodetypes.AnimBlend" title="AnimBlend" alt="" coords="20,121,100,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="16,82,104,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="15,5,105,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="24,44,96,68"/>
-</map>

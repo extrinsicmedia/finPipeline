@@ -1,6 +1,0 @@
-pymel.core.context.setEditCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.setEditCtx

@@ -1,6 +1,0 @@
-pymel.core.modeling.polySmooth
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySmooth

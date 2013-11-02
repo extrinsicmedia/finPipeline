@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyDisplacementPress
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyDisplacementPress

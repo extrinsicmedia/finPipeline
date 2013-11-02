@@ -1,6 +1,0 @@
-pymel.core.modeling.freeFormFillet
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.freeFormFillet

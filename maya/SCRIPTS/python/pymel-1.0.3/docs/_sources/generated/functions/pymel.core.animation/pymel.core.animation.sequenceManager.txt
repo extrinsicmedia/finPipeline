@@ -1,6 +1,0 @@
-pymel.core.animation.sequenceManager
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.sequenceManager

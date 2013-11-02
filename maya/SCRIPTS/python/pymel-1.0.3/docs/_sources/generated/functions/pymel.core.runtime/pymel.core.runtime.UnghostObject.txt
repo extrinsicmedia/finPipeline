@@ -1,6 +1,0 @@
-pymel.core.runtime.UnghostObject
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnghostObject

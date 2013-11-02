@@ -1,6 +1,0 @@
-pymel.core.runtime.DuplicateSpecial
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DuplicateSpecial

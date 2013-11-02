@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleFaceNormalDisplay
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleFaceNormalDisplay

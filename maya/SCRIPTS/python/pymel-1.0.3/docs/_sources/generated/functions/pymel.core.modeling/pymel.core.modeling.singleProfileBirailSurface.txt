@@ -1,6 +1,0 @@
-pymel.core.modeling.singleProfileBirailSurface
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.singleProfileBirailSurface

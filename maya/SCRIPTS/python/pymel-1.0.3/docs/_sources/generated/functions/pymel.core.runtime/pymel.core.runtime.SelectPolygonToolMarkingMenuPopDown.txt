@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectPolygonToolMarkingMenuPopDown
-======================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectPolygonToolMarkingMenuPopDown

@@ -1,6 +1,0 @@
-pymel.core.runtime.PerPointEmissionRates
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PerPointEmissionRates

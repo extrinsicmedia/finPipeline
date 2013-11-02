@@ -1,6 +1,0 @@
-pymel.core.context.skinBindCtx
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.skinBindCtx

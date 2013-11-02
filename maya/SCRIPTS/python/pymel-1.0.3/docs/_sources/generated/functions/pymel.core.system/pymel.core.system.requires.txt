@@ -1,6 +1,0 @@
-pymel.core.system.requires
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.requires

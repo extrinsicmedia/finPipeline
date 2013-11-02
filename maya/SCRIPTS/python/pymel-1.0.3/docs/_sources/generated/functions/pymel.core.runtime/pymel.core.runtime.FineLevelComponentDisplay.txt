@@ -1,6 +1,0 @@
-pymel.core.runtime.FineLevelComponentDisplay
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FineLevelComponentDisplay

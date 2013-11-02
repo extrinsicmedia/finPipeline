@@ -1,6 +1,0 @@
-pymel.core.runtime.CutUVs
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CutUVs

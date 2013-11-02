@@ -1,6 +1,0 @@
-pymel.core.runtime.SculptReferenceVectorMarkingMenuRelease
-==========================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SculptReferenceVectorMarkingMenuRelease

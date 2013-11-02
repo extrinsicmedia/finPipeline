@@ -1,6 +1,0 @@
-pymel.util.utilitytypes.addLazyDocString
-========================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: utilitytypes.addLazyDocString

@@ -1,6 +1,0 @@
-pymel.core.windows.helpLine
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.helpLine

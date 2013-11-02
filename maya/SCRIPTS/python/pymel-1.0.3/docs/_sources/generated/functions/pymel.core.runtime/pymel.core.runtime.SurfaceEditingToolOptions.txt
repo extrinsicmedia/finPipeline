@@ -1,6 +1,0 @@
-pymel.core.runtime.SurfaceEditingToolOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SurfaceEditingToolOptions

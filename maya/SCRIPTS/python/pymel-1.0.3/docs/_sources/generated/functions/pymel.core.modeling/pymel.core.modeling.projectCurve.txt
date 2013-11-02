@@ -1,6 +1,0 @@
-pymel.core.modeling.projectCurve
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.projectCurve

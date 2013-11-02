@@ -1,6 +1,0 @@
-pymel.core.runtime.OptimizeSceneOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OptimizeSceneOptions

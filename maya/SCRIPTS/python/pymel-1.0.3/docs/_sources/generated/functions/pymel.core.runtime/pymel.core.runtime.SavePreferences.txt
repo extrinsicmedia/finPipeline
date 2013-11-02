@@ -1,6 +1,0 @@
-pymel.core.runtime.SavePreferences
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SavePreferences

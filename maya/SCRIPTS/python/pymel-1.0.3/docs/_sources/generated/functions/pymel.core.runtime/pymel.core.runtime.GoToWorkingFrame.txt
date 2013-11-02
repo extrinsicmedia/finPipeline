@@ -1,6 +1,0 @@
-pymel.core.runtime.GoToWorkingFrame
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GoToWorkingFrame

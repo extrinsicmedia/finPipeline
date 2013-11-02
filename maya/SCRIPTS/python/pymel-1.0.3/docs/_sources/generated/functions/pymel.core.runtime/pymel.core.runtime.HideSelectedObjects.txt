@@ -1,6 +1,0 @@
-pymel.core.runtime.HideSelectedObjects
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideSelectedObjects

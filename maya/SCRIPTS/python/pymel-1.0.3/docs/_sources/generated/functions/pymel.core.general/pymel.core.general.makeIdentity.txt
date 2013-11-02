@@ -1,6 +1,0 @@
-pymel.core.general.makeIdentity
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.makeIdentity

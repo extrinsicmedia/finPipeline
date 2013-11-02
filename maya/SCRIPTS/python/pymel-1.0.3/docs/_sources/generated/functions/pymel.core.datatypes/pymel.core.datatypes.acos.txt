@@ -1,6 +1,0 @@
-pymel.core.datatypes.acos
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.acos

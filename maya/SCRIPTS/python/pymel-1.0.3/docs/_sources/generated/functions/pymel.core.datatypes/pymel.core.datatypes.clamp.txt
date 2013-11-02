@@ -1,6 +1,0 @@
-pymel.core.datatypes.clamp
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.clamp

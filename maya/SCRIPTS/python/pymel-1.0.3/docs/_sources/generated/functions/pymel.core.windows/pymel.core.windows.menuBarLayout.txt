@@ -1,6 +1,0 @@
-pymel.core.windows.menuBarLayout
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.menuBarLayout

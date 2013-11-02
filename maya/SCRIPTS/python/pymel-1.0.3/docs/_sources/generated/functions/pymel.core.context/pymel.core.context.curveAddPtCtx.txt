@@ -1,6 +1,0 @@
-pymel.core.context.curveAddPtCtx
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.curveAddPtCtx

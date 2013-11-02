@@ -1,6 +1,0 @@
-pymel.core.runtime.CombinePolygons
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CombinePolygons

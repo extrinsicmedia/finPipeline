@@ -1,6 +1,0 @@
-pymel.core.runtime.ExportDeformerWeights
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExportDeformerWeights

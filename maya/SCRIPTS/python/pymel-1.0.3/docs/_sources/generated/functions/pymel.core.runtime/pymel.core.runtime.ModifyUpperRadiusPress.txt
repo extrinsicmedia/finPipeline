@@ -1,6 +1,0 @@
-pymel.core.runtime.ModifyUpperRadiusPress
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ModifyUpperRadiusPress

@@ -1,6 +1,0 @@
-pymel.core.runtime.GlobalDiskCacheControl
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GlobalDiskCacheControl

@@ -1,6 +1,0 @@
-pymel.core.runtime.ParticleCollisionEvents
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ParticleCollisionEvents

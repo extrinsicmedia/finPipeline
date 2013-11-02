@@ -1,6 +1,0 @@
-pymel.util.arrays.degrees
-=========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.degrees

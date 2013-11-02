@@ -1,6 +1,0 @@
-pymel.core.runtime.SewUVs
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SewUVs

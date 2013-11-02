@@ -1,6 +1,0 @@
-pymel.core.runtime.NextSkinPaintMode
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NextSkinPaintMode

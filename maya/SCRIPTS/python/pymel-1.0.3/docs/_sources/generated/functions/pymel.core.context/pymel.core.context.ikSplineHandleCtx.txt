@@ -1,6 +1,0 @@
-pymel.core.context.ikSplineHandleCtx
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.ikSplineHandleCtx

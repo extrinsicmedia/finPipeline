@@ -1,6 +1,0 @@
-pymel.core.runtime.AssetEditor
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AssetEditor

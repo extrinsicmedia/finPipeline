@@ -1,6 +1,0 @@
-pymel.core.datatypes.atan
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.atan

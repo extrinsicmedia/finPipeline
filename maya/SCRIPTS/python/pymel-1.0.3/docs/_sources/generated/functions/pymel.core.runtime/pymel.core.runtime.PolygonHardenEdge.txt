@@ -1,6 +1,0 @@
-pymel.core.runtime.PolygonHardenEdge
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolygonHardenEdge

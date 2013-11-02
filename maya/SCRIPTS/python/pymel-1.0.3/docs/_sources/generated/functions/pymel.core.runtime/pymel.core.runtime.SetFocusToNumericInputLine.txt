@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFocusToNumericInputLine
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFocusToNumericInputLine

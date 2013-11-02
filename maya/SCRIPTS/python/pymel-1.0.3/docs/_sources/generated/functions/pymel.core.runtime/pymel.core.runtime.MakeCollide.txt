@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeCollide
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeCollide

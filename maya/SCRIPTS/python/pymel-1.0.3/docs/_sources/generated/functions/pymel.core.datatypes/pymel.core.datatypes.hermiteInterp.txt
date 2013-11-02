@@ -1,6 +1,0 @@
-pymel.core.datatypes.hermiteInterp
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.hermiteInterp

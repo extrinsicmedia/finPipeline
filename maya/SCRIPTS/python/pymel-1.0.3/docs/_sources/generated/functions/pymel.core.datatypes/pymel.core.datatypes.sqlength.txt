@@ -1,6 +1,0 @@
-pymel.core.datatypes.sqlength
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.sqlength

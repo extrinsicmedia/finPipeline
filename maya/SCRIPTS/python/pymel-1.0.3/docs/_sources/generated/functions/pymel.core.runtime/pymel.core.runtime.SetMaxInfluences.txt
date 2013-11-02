@@ -1,6 +1,0 @@
-pymel.core.runtime.SetMaxInfluences
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetMaxInfluences

@@ -1,6 +1,0 @@
-pymel.core.animation.wire
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.wire

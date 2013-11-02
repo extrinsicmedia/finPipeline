@@ -1,6 +1,0 @@
-pymel.util.arrays.linstep
-=========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.linstep

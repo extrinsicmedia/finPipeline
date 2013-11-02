@@ -1,6 +1,0 @@
-pymel.core.runtime.OrientConstraintOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OrientConstraintOptions

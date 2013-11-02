@@ -1,6 +1,0 @@
-pymel.core.context.polyCreateFacetCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyCreateFacetCtx

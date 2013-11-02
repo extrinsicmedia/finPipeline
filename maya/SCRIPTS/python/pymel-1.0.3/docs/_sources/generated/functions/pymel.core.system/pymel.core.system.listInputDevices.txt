@@ -1,6 +1,0 @@
-pymel.core.system.listInputDevices
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.listInputDevices

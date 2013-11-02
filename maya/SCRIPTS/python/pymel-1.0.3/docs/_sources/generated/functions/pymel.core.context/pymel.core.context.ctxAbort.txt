@@ -1,6 +1,0 @@
-pymel.core.context.ctxAbort
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.ctxAbort

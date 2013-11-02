@@ -1,6 +1,0 @@
-pymel.core.runtime.RenameAttribute
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenameAttribute

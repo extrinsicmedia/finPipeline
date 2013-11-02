@@ -1,6 +1,0 @@
-pymel.core.effects.runup
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.runup

@@ -1,6 +1,0 @@
-pymel.core.runtime.DuplicateNURBSPatches
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DuplicateNURBSPatches

@@ -1,6 +1,0 @@
-pymel.core.other.rampWidget
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.rampWidget

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyNormal
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyNormal

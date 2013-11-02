@@ -1,6 +1,0 @@
-pymel.util.arrays.linmap
-========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.linmap

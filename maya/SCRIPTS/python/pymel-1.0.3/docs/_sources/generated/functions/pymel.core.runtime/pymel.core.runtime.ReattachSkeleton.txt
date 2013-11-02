@@ -1,6 +1,0 @@
-pymel.core.runtime.ReattachSkeleton
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReattachSkeleton

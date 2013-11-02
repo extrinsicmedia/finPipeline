@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteExpressionsOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteExpressionsOptions

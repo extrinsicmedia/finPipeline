@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableNCloths
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableNCloths

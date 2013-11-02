@@ -1,6 +1,0 @@
-pymel.util.arrays.blend
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.blend

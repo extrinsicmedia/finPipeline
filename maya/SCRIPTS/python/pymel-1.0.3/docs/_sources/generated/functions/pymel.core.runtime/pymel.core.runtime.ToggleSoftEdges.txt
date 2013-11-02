@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleSoftEdges
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleSoftEdges

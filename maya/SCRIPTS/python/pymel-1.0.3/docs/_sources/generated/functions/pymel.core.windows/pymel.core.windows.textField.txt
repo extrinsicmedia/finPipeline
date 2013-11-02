@@ -1,6 +1,0 @@
-pymel.core.windows.textField
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.textField

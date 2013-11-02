@@ -1,6 +1,0 @@
-pymel.core.rendering.directionalLight
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.directionalLight

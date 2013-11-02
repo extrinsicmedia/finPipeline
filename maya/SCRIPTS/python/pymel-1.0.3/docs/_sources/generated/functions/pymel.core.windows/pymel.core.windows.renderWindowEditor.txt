@@ -1,6 +1,0 @@
-pymel.core.windows.renderWindowEditor
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.renderWindowEditor

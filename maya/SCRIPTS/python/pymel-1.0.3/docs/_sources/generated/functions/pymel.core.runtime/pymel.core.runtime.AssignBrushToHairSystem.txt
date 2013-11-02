@@ -1,6 +1,0 @@
-pymel.core.runtime.AssignBrushToHairSystem
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AssignBrushToHairSystem

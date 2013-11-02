@@ -1,6 +1,0 @@
-pymel.core.animation.pointConstraint
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.pointConstraint

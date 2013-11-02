@@ -1,6 +1,0 @@
-pymel.core.datatypes.degrees
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.degrees

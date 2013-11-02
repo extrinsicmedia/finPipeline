@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateHair
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateHair

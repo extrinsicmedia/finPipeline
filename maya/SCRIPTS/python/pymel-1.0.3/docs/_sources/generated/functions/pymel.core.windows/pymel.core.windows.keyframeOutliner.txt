@@ -1,6 +1,0 @@
-pymel.core.windows.keyframeOutliner
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.keyframeOutliner

@@ -1,6 +1,0 @@
-pymel.core.modeling.offsetCurve
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.offsetCurve

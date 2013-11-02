@@ -1,6 +1,0 @@
-pymel.core.runtime.ExportProxyContainerOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExportProxyContainerOptions

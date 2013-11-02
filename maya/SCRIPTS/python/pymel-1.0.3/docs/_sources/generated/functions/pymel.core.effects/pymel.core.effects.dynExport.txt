@@ -1,6 +1,0 @@
-pymel.core.effects.dynExport
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.dynExport

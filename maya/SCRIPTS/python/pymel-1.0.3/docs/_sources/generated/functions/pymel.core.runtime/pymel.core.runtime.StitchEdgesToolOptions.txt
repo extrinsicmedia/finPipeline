@@ -1,6 +1,0 @@
-pymel.core.runtime.StitchEdgesToolOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.StitchEdgesToolOptions

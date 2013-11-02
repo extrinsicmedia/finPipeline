@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectToolMarkingMenu
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectToolMarkingMenu

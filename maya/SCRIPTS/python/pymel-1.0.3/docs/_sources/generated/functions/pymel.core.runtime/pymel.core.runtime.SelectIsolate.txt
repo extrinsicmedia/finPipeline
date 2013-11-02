@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectIsolate
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectIsolate

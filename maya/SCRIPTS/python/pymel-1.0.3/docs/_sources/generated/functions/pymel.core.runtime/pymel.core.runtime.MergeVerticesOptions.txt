@@ -1,6 +1,0 @@
-pymel.core.runtime.MergeVerticesOptions
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MergeVerticesOptions

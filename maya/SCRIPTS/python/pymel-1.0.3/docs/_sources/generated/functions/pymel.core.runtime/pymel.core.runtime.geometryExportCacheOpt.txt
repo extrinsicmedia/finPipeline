@@ -1,6 +1,0 @@
-pymel.core.runtime.geometryExportCacheOpt
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.geometryExportCacheOpt

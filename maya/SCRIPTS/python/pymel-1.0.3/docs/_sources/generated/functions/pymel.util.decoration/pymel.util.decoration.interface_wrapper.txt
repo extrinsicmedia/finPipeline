@@ -1,6 +1,0 @@
-pymel.util.decoration.interface_wrapper
-=======================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: decoration.interface_wrapper

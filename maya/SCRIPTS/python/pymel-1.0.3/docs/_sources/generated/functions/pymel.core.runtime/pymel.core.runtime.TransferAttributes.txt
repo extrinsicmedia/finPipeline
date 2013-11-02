@@ -1,6 +1,0 @@
-pymel.core.runtime.TransferAttributes
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TransferAttributes

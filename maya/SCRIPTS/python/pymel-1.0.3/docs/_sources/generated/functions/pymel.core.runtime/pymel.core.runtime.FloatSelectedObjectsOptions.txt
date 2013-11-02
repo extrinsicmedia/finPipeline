@@ -1,6 +1,0 @@
-pymel.core.runtime.FloatSelectedObjectsOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FloatSelectedObjectsOptions

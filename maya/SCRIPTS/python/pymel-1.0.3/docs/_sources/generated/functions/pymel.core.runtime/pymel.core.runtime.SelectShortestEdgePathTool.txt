@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectShortestEdgePathTool
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectShortestEdgePathTool

@@ -1,6 +1,0 @@
-pymel.core.runtime.AddInfluenceOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddInfluenceOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.ArtPaintSkinWeightsTool
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ArtPaintSkinWeightsTool

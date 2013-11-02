@@ -1,6 +1,0 @@
-pymel.core.windows.intField
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.intField

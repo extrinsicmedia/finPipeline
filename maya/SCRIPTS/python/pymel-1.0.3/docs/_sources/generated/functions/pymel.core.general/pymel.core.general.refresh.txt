@@ -1,6 +1,0 @@
-pymel.core.general.refresh
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.refresh

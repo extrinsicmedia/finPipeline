@@ -1,6 +1,0 @@
-pymel.core.modeling.polySetToFaceNormal
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySetToFaceNormal

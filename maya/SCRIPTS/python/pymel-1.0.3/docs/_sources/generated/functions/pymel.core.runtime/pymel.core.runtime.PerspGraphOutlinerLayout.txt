@@ -1,6 +1,0 @@
-pymel.core.runtime.PerspGraphOutlinerLayout
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PerspGraphOutlinerLayout

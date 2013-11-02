@@ -1,6 +1,0 @@
-pymel.core.windows.iconTextRadioCollection
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.iconTextRadioCollection

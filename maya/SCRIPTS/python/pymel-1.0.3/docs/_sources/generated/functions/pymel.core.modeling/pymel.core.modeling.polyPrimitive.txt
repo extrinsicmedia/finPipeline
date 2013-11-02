@@ -1,6 +1,0 @@
-pymel.core.modeling.polyPrimitive
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyPrimitive

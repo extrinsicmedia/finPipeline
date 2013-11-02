@@ -1,6 +1,0 @@
-pymel.core.rendering.track
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.track

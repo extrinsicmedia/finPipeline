@@ -1,6 +1,0 @@
-pymel.util.arrays.any
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.any

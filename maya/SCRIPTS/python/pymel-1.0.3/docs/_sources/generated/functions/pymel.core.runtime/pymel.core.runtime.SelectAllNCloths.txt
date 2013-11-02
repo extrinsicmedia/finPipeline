@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllNCloths
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllNCloths

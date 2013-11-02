@@ -1,6 +1,0 @@
-pymel.core.windows.panelHistory
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.panelHistory

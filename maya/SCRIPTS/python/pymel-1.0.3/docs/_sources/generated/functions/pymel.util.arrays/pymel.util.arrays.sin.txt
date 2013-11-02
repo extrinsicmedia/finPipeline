@@ -1,6 +1,0 @@
-pymel.util.arrays.sin
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.sin

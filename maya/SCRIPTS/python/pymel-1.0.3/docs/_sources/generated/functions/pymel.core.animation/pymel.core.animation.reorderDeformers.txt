@@ -1,6 +1,0 @@
-pymel.core.animation.reorderDeformers
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.reorderDeformers

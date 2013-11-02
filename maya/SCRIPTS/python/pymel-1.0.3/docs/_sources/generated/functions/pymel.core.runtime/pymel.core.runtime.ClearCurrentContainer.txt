@@ -1,6 +1,0 @@
-pymel.core.runtime.ClearCurrentContainer
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ClearCurrentContainer

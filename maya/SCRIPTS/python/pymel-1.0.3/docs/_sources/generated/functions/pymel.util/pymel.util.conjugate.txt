@@ -1,6 +1,0 @@
-pymel.util.conjugate
-====================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.conjugate

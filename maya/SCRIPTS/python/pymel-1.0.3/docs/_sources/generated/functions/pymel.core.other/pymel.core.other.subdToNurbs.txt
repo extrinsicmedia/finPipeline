@@ -1,6 +1,0 @@
-pymel.core.other.subdToNurbs
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.subdToNurbs

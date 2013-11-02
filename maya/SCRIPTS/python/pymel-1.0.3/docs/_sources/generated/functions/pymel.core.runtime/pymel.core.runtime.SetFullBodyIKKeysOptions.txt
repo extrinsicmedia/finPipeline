@@ -1,6 +1,0 @@
-pymel.core.runtime.SetFullBodyIKKeysOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetFullBodyIKKeysOptions

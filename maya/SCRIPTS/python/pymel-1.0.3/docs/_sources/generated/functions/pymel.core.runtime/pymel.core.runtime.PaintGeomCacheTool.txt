@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintGeomCacheTool
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintGeomCacheTool

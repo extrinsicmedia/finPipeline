@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleLocalRotationAxes
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleLocalRotationAxes

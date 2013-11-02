@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleAutoActivateBodyPart
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleAutoActivateBodyPart

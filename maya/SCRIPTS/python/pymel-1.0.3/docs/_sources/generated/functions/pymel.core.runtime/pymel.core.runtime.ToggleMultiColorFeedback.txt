@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleMultiColorFeedback
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleMultiColorFeedback

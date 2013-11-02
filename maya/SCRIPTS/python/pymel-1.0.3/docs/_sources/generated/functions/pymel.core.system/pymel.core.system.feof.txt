@@ -1,6 +1,0 @@
-pymel.core.system.feof
-======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.feof

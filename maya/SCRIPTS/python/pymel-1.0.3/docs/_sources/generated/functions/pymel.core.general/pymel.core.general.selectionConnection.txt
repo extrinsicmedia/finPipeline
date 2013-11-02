@@ -1,6 +1,0 @@
-pymel.core.general.selectionConnection
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.selectionConnection

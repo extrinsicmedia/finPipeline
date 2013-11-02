@@ -1,6 +1,0 @@
-pymel.util.isnan
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.isnan

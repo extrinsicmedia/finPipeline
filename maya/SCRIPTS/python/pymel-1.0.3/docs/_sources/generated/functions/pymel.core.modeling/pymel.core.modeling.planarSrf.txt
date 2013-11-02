@@ -1,6 +1,0 @@
-pymel.core.modeling.planarSrf
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.planarSrf

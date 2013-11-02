@@ -1,6 +1,0 @@
-pymel.core.windows.currentMenuParent
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.currentMenuParent

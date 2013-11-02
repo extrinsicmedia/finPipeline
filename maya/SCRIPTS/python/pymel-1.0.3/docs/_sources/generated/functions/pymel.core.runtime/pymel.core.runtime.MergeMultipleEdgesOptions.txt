@@ -1,6 +1,0 @@
-pymel.core.runtime.MergeMultipleEdgesOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MergeMultipleEdgesOptions

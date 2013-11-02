@@ -1,6 +1,0 @@
-pymel.core.animation.normalConstraint
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.normalConstraint

@@ -1,6 +1,0 @@
-pymel.core.runtime.ResetWire
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ResetWire

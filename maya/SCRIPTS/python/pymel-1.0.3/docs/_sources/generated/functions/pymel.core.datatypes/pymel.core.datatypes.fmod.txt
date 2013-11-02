@@ -1,6 +1,0 @@
-pymel.core.datatypes.fmod
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.fmod

@@ -1,6 +1,0 @@
-pymel.core.context.mateCtx
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.mateCtx

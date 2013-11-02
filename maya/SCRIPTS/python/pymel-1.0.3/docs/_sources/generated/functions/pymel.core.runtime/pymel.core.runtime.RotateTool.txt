@@ -1,6 +1,0 @@
-pymel.core.runtime.RotateTool
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RotateTool

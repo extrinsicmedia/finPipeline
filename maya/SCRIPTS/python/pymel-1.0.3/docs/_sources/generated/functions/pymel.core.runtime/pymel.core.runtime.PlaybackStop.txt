@@ -1,6 +1,0 @@
-pymel.core.runtime.PlaybackStop
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PlaybackStop

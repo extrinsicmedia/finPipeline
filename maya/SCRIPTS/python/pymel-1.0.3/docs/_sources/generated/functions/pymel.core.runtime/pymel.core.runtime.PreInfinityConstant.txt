@@ -1,6 +1,0 @@
-pymel.core.runtime.PreInfinityConstant
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreInfinityConstant

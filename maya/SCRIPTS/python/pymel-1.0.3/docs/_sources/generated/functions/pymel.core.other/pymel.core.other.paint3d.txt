@@ -1,6 +1,0 @@
-pymel.core.other.paint3d
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.paint3d

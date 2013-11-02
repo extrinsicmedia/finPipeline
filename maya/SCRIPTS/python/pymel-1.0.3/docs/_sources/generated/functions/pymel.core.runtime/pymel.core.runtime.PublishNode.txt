@@ -1,6 +1,0 @@
-pymel.core.runtime.PublishNode
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PublishNode

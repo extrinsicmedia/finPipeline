@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintGrid
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintGrid

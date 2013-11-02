@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleSurfaceFaceCenters
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleSurfaceFaceCenters

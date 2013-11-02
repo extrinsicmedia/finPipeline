@@ -1,6 +1,0 @@
-pymel.core.system.clearCache
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.clearCache

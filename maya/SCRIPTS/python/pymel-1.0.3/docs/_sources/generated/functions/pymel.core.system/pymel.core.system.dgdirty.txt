@@ -1,6 +1,0 @@
-pymel.core.system.dgdirty
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.dgdirty

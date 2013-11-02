@@ -1,6 +1,0 @@
-pymel.core.system.audioTrack
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.audioTrack

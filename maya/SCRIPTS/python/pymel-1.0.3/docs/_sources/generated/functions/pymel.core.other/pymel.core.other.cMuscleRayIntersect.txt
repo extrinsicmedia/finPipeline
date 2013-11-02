@@ -1,6 +1,0 @@
-pymel.core.other.cMuscleRayIntersect
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.cMuscleRayIntersect

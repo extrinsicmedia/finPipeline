@@ -1,6 +1,0 @@
-pymel.core.runtime.PruneLattice
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PruneLattice

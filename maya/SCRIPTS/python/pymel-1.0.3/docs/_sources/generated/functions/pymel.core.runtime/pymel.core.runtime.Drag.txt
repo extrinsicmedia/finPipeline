@@ -1,6 +1,0 @@
-pymel.core.runtime.Drag
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Drag

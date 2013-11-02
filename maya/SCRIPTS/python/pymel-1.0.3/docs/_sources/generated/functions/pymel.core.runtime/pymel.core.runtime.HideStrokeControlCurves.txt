@@ -1,6 +1,0 @@
-pymel.core.runtime.HideStrokeControlCurves
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideStrokeControlCurves

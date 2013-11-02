@@ -1,6 +1,0 @@
-pymel.core.datatypes.inv
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.inv

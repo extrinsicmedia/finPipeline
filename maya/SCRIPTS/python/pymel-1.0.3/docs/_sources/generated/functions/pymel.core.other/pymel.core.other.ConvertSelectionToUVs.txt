@@ -1,6 +1,0 @@
-pymel.core.other.ConvertSelectionToUVs
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ConvertSelectionToUVs

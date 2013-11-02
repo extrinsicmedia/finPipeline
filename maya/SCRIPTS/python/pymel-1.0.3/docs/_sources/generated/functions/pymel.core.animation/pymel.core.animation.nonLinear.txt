@@ -1,6 +1,0 @@
-pymel.core.animation.nonLinear
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.nonLinear

@@ -1,6 +1,0 @@
-pymel.core.animation.clipEditor
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.clipEditor

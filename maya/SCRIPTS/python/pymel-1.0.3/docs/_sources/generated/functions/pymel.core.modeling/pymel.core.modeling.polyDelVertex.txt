@@ -1,6 +1,0 @@
-pymel.core.modeling.polyDelVertex
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyDelVertex

@@ -1,6 +1,0 @@
-pymel.core.runtime.ParentConstraintOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ParentConstraintOptions

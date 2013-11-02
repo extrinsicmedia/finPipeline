@@ -1,6 +1,0 @@
-pymel.core.system.openGLExtension
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.openGLExtension

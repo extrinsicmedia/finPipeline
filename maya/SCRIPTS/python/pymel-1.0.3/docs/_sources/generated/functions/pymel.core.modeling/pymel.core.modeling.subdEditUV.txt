@@ -1,6 +1,0 @@
-pymel.core.modeling.subdEditUV
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdEditUV

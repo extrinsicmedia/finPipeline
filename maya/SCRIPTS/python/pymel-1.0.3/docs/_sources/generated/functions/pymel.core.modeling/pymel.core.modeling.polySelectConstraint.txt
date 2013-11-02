@@ -1,6 +1,0 @@
-pymel.core.modeling.polySelectConstraint
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySelectConstraint

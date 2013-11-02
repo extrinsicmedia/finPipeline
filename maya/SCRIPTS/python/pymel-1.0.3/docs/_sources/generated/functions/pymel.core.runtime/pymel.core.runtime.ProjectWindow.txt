@@ -1,6 +1,0 @@
-pymel.core.runtime.ProjectWindow
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ProjectWindow

@@ -1,6 +1,0 @@
-pymel.core.animation.sound
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.sound

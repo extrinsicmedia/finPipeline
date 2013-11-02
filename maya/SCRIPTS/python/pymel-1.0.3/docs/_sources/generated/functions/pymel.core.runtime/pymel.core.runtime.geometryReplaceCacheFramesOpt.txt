@@ -1,6 +1,0 @@
-pymel.core.runtime.geometryReplaceCacheFramesOpt
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.geometryReplaceCacheFramesOpt

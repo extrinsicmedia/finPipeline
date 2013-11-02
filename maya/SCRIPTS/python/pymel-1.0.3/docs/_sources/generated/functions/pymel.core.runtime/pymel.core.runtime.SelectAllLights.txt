@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllLights
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllLights

@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowNURBSSurfaces
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowNURBSSurfaces

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateFBIKOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateFBIKOptions

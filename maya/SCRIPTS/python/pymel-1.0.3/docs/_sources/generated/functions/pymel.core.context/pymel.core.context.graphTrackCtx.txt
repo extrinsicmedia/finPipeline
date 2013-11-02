@@ -1,6 +1,0 @@
-pymel.core.context.graphTrackCtx
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.graphTrackCtx

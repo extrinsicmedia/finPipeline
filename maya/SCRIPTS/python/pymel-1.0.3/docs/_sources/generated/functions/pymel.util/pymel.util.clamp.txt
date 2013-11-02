@@ -1,6 +1,0 @@
-pymel.util.clamp
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.clamp

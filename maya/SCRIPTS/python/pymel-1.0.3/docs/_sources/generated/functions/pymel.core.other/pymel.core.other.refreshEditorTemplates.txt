@@ -1,6 +1,0 @@
-pymel.core.other.refreshEditorTemplates
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.refreshEditorTemplates

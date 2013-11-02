@@ -1,6 +1,0 @@
-pymel.core.windows.connectControl
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.connectControl

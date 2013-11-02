@@ -1,6 +1,0 @@
-pymel.core.system.mouse
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.mouse

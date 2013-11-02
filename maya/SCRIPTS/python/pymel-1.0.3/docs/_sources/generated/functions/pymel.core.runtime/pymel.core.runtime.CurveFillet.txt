@@ -1,6 +1,0 @@
-pymel.core.runtime.CurveFillet
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CurveFillet

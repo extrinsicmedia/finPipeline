@@ -1,6 +1,0 @@
-pymel.core.general.rename
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.rename

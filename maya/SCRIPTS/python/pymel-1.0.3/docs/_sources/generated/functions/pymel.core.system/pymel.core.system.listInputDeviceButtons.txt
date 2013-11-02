@@ -1,6 +1,0 @@
-pymel.core.system.listInputDeviceButtons
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.listInputDeviceButtons

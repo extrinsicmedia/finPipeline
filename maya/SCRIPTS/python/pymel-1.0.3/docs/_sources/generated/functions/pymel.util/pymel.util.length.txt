@@ -1,6 +1,0 @@
-pymel.util.length
-=================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.length

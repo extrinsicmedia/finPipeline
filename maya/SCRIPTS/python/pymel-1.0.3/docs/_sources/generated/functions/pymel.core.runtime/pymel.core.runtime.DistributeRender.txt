@@ -1,6 +1,0 @@
-pymel.core.runtime.DistributeRender
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DistributeRender

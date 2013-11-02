@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateBindingSet
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateBindingSet

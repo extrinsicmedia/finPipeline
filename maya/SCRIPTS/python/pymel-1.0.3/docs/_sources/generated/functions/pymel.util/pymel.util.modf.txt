@@ -1,6 +1,0 @@
-pymel.util.modf
-===============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.modf

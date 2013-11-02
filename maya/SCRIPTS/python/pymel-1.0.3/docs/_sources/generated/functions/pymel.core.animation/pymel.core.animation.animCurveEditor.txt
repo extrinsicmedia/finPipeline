@@ -1,6 +1,0 @@
-pymel.core.animation.animCurveEditor
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.animCurveEditor

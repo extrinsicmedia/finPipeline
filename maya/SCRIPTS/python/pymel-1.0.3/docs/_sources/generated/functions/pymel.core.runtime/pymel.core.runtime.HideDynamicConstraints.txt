@@ -1,6 +1,0 @@
-pymel.core.runtime.HideDynamicConstraints
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideDynamicConstraints

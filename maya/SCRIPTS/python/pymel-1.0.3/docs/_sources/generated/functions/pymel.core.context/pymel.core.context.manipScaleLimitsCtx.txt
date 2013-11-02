@@ -1,6 +1,0 @@
-pymel.core.context.manipScaleLimitsCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.manipScaleLimitsCtx

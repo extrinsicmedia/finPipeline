@@ -1,6 +1,0 @@
-pymel.core.runtime.UIModeMarkingMenuPopDown
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UIModeMarkingMenuPopDown

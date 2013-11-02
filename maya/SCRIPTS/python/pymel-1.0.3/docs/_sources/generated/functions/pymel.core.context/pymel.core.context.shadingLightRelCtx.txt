@@ -1,6 +1,0 @@
-pymel.core.context.shadingLightRelCtx
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.shadingLightRelCtx

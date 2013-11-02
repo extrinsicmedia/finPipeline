@@ -1,6 +1,0 @@
-pymel.core.runtime.RaiseApplicationWindows
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RaiseApplicationWindows

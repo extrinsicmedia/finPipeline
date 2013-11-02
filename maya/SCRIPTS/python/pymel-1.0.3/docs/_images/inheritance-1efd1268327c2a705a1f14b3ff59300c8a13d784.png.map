@@ -1,7 +1,0 @@
-<map id="inheritanced1e4eb6862" name="inheritanced1e4eb6862">
-<area shape="rect" href="#pymel.core.nodetypes.Mip_rayswitch_stage" title="Mip_rayswitch_stage" alt="" coords="5,160,136,184"/>
-<area shape="rect" href="pymel.core.nodetypes.THdependNode.html#pymel.core.nodetypes.THdependNode" title="THdependNode" alt="" coords="19,121,123,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="27,82,115,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="25,5,116,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="35,44,107,68"/>
-</map>

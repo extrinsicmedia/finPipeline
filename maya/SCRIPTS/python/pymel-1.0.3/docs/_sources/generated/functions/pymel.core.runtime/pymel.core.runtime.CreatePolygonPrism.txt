@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonPrism
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonPrism

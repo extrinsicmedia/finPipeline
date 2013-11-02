@@ -1,6 +1,0 @@
-pymel.core.runtime.FluidGradientsOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FluidGradientsOptions

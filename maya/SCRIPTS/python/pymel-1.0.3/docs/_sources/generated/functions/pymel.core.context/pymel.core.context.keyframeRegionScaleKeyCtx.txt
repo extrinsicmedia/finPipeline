@@ -1,6 +1,0 @@
-pymel.core.context.keyframeRegionScaleKeyCtx
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.keyframeRegionScaleKeyCtx

@@ -1,6 +1,0 @@
-pymel.core.general.scale
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.scale

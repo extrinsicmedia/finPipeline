@@ -1,6 +1,0 @@
-pymel.core.datatypes.getPlugValue
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.getPlugValue

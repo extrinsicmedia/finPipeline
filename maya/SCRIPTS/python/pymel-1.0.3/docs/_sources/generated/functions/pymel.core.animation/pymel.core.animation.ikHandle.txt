@@ -1,6 +1,0 @@
-pymel.core.animation.ikHandle
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.ikHandle

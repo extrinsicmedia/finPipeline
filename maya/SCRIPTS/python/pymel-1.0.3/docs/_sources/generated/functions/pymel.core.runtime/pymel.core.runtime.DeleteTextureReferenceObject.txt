@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteTextureReferenceObject
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteTextureReferenceObject

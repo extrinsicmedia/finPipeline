@@ -1,6 +1,0 @@
-pymel.core.datatypes.copysign
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.copysign

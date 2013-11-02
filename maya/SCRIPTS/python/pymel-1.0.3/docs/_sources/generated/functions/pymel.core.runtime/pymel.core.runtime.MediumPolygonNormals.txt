@@ -1,6 +1,0 @@
-pymel.core.runtime.MediumPolygonNormals
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MediumPolygonNormals

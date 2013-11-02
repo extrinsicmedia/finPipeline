@@ -1,6 +1,0 @@
-pymel.core.runtime.NormalConstraint
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NormalConstraint

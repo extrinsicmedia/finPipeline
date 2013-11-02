@@ -1,6 +1,0 @@
-pymel.core.runtime.InsertEdgeLoopTool
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InsertEdgeLoopTool

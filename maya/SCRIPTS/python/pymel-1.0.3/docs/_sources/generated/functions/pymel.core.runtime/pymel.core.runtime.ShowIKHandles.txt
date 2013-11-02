@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowIKHandles
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowIKHandles

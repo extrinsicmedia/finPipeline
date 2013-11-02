@@ -1,6 +1,0 @@
-pymel.util.addLazyDocString
-===========================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.addLazyDocString

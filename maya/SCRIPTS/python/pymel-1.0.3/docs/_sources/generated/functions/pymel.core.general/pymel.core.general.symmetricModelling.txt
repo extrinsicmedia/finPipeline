@@ -1,6 +1,0 @@
-pymel.core.general.symmetricModelling
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.symmetricModelling

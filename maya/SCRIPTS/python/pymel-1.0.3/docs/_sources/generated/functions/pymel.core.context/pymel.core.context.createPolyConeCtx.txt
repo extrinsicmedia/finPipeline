@@ -1,6 +1,0 @@
-pymel.core.context.createPolyConeCtx
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyConeCtx

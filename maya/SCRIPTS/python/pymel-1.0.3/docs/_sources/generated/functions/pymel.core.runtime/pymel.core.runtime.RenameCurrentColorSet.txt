@@ -1,6 +1,0 @@
-pymel.core.runtime.RenameCurrentColorSet
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenameCurrentColorSet

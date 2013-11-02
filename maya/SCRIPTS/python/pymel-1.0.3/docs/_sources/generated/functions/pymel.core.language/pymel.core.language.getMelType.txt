@@ -1,6 +1,0 @@
-pymel.core.language.getMelType
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: language.getMelType

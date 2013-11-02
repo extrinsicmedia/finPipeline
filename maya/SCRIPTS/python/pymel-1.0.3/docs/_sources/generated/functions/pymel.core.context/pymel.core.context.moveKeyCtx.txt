@@ -1,6 +1,0 @@
-pymel.core.context.moveKeyCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.moveKeyCtx

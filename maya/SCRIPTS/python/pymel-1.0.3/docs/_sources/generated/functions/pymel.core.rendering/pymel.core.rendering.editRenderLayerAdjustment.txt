@@ -1,6 +1,0 @@
-pymel.core.rendering.editRenderLayerAdjustment
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.editRenderLayerAdjustment

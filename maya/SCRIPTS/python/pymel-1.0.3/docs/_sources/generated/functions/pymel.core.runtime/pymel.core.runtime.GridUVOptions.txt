@@ -1,6 +1,0 @@
-pymel.core.runtime.GridUVOptions
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GridUVOptions

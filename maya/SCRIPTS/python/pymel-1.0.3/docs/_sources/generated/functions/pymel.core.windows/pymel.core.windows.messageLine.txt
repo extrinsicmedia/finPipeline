@@ -1,6 +1,0 @@
-pymel.core.windows.messageLine
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.messageLine

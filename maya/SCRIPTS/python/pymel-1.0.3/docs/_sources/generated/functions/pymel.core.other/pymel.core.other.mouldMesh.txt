@@ -1,6 +1,0 @@
-pymel.core.other.mouldMesh
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.mouldMesh

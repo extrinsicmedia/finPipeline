@@ -1,6 +1,0 @@
-pymel.core.modeling.polyBridgeEdge
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyBridgeEdge

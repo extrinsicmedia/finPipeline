@@ -1,6 +1,0 @@
-pymel.core.runtime.HideNRigids
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideNRigids

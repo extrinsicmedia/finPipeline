@@ -1,6 +1,0 @@
-pymel.core.modeling.polyToSubdiv
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyToSubdiv

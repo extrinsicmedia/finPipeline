@@ -1,6 +1,0 @@
-pymel.core.language.getMelGlobal
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: language.getMelGlobal

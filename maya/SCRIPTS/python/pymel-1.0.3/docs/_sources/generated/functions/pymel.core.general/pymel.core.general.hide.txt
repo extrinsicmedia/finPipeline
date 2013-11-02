@@ -1,6 +1,0 @@
-pymel.core.general.hide
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.hide

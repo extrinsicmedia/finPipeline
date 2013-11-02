@@ -1,6 +1,0 @@
-pymel.core.runtime.UVSetEditor
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UVSetEditor

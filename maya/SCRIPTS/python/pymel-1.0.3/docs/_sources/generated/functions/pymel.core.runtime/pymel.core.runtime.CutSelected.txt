@@ -1,6 +1,0 @@
-pymel.core.runtime.CutSelected
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CutSelected

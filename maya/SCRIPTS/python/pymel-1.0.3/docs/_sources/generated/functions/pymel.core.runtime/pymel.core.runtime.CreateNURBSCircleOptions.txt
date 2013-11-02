@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateNURBSCircleOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateNURBSCircleOptions

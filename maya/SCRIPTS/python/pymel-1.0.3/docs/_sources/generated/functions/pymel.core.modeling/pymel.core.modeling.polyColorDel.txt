@@ -1,6 +1,0 @@
-pymel.core.modeling.polyColorDel
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyColorDel

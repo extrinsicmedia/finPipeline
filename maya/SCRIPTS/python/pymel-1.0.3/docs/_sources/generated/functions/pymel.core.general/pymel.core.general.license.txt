@@ -1,6 +1,0 @@
-pymel.core.general.license
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.license

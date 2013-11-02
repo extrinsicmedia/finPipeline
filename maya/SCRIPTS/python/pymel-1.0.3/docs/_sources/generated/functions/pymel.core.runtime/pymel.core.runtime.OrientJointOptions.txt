@@ -1,6 +1,0 @@
-pymel.core.runtime.OrientJointOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.OrientJointOptions

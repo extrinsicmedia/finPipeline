@@ -1,6 +1,0 @@
-pymel.core.windows.autoLayout
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.autoLayout

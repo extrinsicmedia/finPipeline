@@ -1,6 +1,0 @@
-pymel.core.runtime.PruneWire
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PruneWire

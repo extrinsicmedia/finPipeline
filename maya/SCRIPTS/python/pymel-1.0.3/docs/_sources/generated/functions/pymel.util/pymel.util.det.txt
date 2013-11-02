@@ -1,6 +1,0 @@
-pymel.util.det
-==============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.det

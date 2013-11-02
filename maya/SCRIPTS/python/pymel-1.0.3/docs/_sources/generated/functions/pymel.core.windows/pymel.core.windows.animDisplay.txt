@@ -1,6 +1,0 @@
-pymel.core.windows.animDisplay
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.animDisplay

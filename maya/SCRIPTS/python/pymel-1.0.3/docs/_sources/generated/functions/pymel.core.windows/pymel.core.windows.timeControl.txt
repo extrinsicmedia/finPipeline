@@ -1,6 +1,0 @@
-pymel.core.windows.timeControl
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.timeControl

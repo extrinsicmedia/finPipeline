@@ -1,6 +1,0 @@
-pymel.core.windows.disable
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.disable

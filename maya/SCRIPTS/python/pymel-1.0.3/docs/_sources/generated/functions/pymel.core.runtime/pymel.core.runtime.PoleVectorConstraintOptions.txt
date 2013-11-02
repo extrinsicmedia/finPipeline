@@ -1,6 +1,0 @@
-pymel.core.runtime.PoleVectorConstraintOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PoleVectorConstraintOptions

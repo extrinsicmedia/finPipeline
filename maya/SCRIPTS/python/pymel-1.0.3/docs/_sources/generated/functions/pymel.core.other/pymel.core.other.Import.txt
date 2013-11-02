@@ -1,6 +1,0 @@
-pymel.core.other.Import
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.Import

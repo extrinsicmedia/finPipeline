@@ -1,6 +1,0 @@
-pymel.core.windows.spreadSheetEditor
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.spreadSheetEditor

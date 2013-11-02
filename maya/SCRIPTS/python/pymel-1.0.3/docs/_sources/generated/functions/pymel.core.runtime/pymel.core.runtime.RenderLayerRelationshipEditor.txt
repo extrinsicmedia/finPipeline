@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderLayerRelationshipEditor
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderLayerRelationshipEditor

@@ -1,6 +1,0 @@
-pymel.core.context.roundCRCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.roundCRCtx

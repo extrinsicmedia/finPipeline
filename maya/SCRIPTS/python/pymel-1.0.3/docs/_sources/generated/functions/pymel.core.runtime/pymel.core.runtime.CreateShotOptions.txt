@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateShotOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateShotOptions

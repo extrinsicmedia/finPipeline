@@ -1,6 +1,0 @@
-pymel.core.context.artAttrSkinPaintCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.artAttrSkinPaintCtx

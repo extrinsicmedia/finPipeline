@@ -1,6 +1,0 @@
-pymel.core.general.stringArrayIntersector
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.stringArrayIntersector

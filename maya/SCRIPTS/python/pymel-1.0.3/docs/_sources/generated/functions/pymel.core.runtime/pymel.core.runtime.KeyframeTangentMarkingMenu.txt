@@ -1,6 +1,0 @@
-pymel.core.runtime.KeyframeTangentMarkingMenu
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.KeyframeTangentMarkingMenu

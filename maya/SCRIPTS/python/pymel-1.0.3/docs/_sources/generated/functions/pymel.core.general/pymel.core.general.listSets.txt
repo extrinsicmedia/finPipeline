@@ -1,6 +1,0 @@
-pymel.core.general.listSets
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.listSets

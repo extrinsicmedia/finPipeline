@@ -1,6 +1,0 @@
-pymel.core.effects.getParticleAttr
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.getParticleAttr

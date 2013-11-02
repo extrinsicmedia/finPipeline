@@ -1,6 +1,0 @@
-pymel.core.other.ubercam
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ubercam

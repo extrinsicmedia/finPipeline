@@ -1,6 +1,0 @@
-pymel.core.runtime.Boundary
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Boundary

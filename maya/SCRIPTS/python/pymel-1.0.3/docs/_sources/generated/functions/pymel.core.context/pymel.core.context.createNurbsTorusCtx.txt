@@ -1,6 +1,0 @@
-pymel.core.context.createNurbsTorusCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createNurbsTorusCtx

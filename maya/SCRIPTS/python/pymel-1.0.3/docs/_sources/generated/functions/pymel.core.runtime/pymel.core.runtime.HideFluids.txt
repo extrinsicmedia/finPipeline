@@ -1,6 +1,0 @@
-pymel.core.runtime.HideFluids
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideFluids

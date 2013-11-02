@@ -1,6 +1,0 @@
-pymel.core.runtime.EnableGlobalStitch
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.EnableGlobalStitch

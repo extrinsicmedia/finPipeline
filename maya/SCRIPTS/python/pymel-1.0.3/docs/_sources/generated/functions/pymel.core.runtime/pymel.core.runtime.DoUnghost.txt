@@ -1,6 +1,0 @@
-pymel.core.runtime.DoUnghost
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DoUnghost

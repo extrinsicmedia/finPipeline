@@ -1,6 +1,0 @@
-pymel.core.context.dollyCtx
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.dollyCtx

@@ -1,6 +1,0 @@
-pymel.core.datatypes.dist
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.dist

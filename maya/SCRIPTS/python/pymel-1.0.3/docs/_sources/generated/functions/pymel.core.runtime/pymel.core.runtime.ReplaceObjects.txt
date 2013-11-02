@@ -1,6 +1,0 @@
-pymel.core.runtime.ReplaceObjects
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReplaceObjects

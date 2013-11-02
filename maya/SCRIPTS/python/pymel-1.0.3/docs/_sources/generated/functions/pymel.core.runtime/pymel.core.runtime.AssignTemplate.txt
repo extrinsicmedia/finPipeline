@@ -1,6 +1,0 @@
-pymel.core.runtime.AssignTemplate
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AssignTemplate

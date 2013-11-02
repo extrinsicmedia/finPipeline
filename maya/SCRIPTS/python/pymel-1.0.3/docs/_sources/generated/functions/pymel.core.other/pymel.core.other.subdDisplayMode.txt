@@ -1,6 +1,0 @@
-pymel.core.other.subdDisplayMode
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.subdDisplayMode

@@ -1,6 +1,0 @@
-pymel.core.modeling.subdAutoProjection
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdAutoProjection

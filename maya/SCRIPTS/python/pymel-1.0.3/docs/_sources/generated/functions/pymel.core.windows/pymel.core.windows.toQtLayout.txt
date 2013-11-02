@@ -1,6 +1,0 @@
-pymel.core.windows.toQtLayout
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.toQtLayout

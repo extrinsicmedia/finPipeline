@@ -1,6 +1,0 @@
-pymel.core.system.fileDialog2
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.fileDialog2

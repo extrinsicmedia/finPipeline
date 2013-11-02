@@ -1,6 +1,0 @@
-pymel.core.runtime.SculptReferenceVectorMarkingMenuPress
-========================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SculptReferenceVectorMarkingMenuPress

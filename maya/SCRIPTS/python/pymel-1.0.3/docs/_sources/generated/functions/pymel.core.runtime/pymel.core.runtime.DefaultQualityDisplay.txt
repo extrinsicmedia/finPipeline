@@ -1,6 +1,0 @@
-pymel.core.runtime.DefaultQualityDisplay
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DefaultQualityDisplay

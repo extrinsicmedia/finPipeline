@@ -1,6 +1,0 @@
-pymel.core.system.aaf2fcp
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.aaf2fcp

@@ -1,6 +1,0 @@
-pymel.core.other.cMuscleBindSticky
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.cMuscleBindSticky

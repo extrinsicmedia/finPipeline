@@ -1,6 +1,0 @@
-pymel.core.windows.promptDialog
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.promptDialog

@@ -1,6 +1,0 @@
-pymel.core.runtime.PreviousFrame
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreviousFrame

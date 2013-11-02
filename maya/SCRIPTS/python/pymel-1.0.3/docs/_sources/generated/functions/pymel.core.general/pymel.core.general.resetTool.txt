@@ -1,6 +1,0 @@
-pymel.core.general.resetTool
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.resetTool

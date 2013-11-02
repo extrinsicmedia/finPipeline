@@ -1,6 +1,0 @@
-pymel.core.windows.editor
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.editor

@@ -1,6 +1,0 @@
-pymel.util.arguments.isNumeric
-==============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.isNumeric

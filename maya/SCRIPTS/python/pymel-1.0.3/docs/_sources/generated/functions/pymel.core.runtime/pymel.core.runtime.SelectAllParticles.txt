@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllParticles
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllParticles

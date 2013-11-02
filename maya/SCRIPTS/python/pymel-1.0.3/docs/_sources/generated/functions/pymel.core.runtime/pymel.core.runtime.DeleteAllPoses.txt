@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllPoses
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllPoses

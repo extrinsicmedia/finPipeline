@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCut
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCut

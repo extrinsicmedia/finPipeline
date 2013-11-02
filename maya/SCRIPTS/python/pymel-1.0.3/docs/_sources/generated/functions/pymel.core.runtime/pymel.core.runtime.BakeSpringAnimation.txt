@@ -1,6 +1,0 @@
-pymel.core.runtime.BakeSpringAnimation
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BakeSpringAnimation

@@ -1,6 +1,0 @@
-pymel.core.windows.optionMenuGrp
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.optionMenuGrp

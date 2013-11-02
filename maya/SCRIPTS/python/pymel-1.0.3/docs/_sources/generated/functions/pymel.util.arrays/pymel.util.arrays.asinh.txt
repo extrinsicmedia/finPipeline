@@ -1,6 +1,0 @@
-pymel.util.arrays.asinh
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.asinh

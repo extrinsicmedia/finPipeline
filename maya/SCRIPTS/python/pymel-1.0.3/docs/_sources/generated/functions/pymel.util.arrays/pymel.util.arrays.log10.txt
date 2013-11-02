@@ -1,6 +1,0 @@
-pymel.util.arrays.log10
-=======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.log10

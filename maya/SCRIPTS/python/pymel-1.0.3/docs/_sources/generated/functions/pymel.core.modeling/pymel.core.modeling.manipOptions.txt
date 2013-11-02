@@ -1,6 +1,0 @@
-pymel.core.modeling.manipOptions
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.manipOptions

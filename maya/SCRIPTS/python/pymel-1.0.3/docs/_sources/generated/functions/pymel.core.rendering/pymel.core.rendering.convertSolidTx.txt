@@ -1,6 +1,0 @@
-pymel.core.rendering.convertSolidTx
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.convertSolidTx

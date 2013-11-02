@@ -1,6 +1,0 @@
-pymel.core.runtime.DisableFluids
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisableFluids

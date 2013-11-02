@@ -1,6 +1,0 @@
-pymel.core.runtime.Wave
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Wave

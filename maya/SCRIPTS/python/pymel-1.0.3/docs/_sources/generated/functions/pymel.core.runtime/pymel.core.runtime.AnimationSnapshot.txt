@@ -1,6 +1,0 @@
-pymel.core.runtime.AnimationSnapshot
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AnimationSnapshot

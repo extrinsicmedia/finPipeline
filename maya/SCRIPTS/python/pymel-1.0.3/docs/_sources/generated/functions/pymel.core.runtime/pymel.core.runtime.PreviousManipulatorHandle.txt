@@ -1,6 +1,0 @@
-pymel.core.runtime.PreviousManipulatorHandle
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PreviousManipulatorHandle

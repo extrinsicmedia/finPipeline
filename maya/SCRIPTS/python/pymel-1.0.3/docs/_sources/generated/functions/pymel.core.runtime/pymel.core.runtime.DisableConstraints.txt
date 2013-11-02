@@ -1,6 +1,0 @@
-pymel.core.runtime.DisableConstraints
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisableConstraints

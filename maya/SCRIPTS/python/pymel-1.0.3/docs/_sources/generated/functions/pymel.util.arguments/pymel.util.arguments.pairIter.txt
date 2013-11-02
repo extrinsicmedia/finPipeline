@@ -1,6 +1,0 @@
-pymel.util.arguments.pairIter
-=============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.pairIter

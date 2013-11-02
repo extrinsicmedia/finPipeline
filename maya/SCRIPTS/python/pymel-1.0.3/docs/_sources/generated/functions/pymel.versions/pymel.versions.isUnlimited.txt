@@ -1,6 +1,0 @@
-pymel.versions.isUnlimited
-==========================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.isUnlimited

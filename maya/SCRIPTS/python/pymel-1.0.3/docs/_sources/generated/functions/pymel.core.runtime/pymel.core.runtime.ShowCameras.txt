@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowCameras
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowCameras

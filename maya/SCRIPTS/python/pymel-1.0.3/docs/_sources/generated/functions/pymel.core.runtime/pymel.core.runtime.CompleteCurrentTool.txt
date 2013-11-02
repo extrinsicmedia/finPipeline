@@ -1,6 +1,0 @@
-pymel.core.runtime.CompleteCurrentTool
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CompleteCurrentTool

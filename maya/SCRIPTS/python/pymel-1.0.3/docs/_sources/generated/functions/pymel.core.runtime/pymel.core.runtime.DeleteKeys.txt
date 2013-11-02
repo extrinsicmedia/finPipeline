@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteKeys
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteKeys

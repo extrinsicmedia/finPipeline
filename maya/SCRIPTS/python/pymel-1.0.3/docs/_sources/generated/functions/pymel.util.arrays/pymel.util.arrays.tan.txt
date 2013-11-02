@@ -1,6 +1,0 @@
-pymel.util.arrays.tan
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.tan

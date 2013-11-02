@@ -1,6 +1,0 @@
-pymel.core.windows.rowColumnLayout
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.rowColumnLayout

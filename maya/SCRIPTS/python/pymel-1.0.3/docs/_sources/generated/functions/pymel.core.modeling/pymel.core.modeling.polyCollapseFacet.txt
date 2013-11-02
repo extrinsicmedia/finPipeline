@@ -1,6 +1,0 @@
-pymel.core.modeling.polyCollapseFacet
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyCollapseFacet

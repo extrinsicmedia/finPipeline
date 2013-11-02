@@ -1,6 +1,0 @@
-pymel.util.arrays.imag
-======================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.imag

@@ -1,6 +1,0 @@
-pymel.core.runtime.DisplacementToPolygon
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisplacementToPolygon

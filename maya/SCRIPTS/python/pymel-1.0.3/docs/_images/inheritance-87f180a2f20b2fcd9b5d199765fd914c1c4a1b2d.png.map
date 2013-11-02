@@ -1,9 +1,0 @@
-<map id="inheritance0ffbe5fe1e" name="inheritance0ffbe5fe1e">
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="51,83,139,107"/>
-<area shape="rect" href="pymel.core.nodetypes.AbstractBaseCreate.html#pymel.core.nodetypes.AbstractBaseCreate" title="AbstractBaseCreate" alt="" coords="32,122,157,146"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="59,44,131,68"/>
-<area shape="rect" href="pymel.core.nodetypes.NurbsToSubdiv.html#pymel.core.nodetypes.NurbsToSubdiv" title="NurbsToSubdiv" alt="" coords="45,199,144,223"/>
-<area shape="rect" href="#pymel.core.nodetypes.NurbsToSubdivProc" title="NurbsToSubdivProc" alt="" coords="33,238,156,262"/>
-<area shape="rect" href="pymel.core.nodetypes.AbstractBaseNurbsConversion.html#pymel.core.nodetypes.AbstractBaseNurbsConversion" title="AbstractBaseNurbsConversion" alt="" coords="5,160,184,184"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="49,6,140,30"/>
-</map>

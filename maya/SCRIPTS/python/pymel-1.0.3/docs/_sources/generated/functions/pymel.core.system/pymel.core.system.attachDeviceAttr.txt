@@ -1,6 +1,0 @@
-pymel.core.system.attachDeviceAttr
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.attachDeviceAttr

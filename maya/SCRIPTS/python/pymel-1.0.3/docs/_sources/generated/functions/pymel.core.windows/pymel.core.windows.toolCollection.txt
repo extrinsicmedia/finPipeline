@@ -1,6 +1,0 @@
-pymel.core.windows.toolCollection
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.toolCollection

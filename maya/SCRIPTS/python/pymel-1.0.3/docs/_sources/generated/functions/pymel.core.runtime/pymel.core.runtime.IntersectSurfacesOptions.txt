@@ -1,6 +1,0 @@
-pymel.core.runtime.IntersectSurfacesOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.IntersectSurfacesOptions

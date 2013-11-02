@@ -1,6 +1,0 @@
-pymel.core.windows.clipEditor
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.clipEditor

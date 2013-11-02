@@ -1,6 +1,0 @@
-pymel.core.context.arcLenDimContext
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.arcLenDimContext

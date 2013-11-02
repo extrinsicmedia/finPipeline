@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllJoints
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllJoints

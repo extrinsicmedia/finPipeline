@@ -1,6 +1,0 @@
-pymel.core.modeling.polyBlindData
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyBlindData

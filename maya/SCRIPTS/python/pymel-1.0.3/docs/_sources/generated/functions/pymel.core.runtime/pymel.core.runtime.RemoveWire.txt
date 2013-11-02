@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveWire
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveWire

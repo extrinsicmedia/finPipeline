@@ -1,6 +1,0 @@
-pymel.core.other.sbs_GetGlobalTextureWidth
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.sbs_GetGlobalTextureWidth

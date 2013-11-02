@@ -1,6 +1,0 @@
-pymel.core.runtime.SculptSubdivsToolOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SculptSubdivsToolOptions

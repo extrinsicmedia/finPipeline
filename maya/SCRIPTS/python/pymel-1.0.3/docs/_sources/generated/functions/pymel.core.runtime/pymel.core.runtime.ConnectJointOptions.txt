@@ -1,6 +1,0 @@
-pymel.core.runtime.ConnectJointOptions
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConnectJointOptions

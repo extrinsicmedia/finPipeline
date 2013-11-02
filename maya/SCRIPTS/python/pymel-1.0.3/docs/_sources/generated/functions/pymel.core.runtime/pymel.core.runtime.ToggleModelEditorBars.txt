@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleModelEditorBars
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleModelEditorBars

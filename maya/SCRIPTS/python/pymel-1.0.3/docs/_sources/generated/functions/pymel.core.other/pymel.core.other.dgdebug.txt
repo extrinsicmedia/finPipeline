@@ -1,6 +1,0 @@
-pymel.core.other.dgdebug
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.dgdebug

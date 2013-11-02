@@ -1,6 +1,0 @@
-pymel.core.runtime.CutPolygonOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CutPolygonOptions

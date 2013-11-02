@@ -1,6 +1,0 @@
-pymel.core.runtime.DopeSheetEditor
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DopeSheetEditor

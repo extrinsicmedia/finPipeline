@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAllClusters
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAllClusters

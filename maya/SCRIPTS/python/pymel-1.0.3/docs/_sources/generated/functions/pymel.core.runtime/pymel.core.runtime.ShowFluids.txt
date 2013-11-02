@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowFluids
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowFluids

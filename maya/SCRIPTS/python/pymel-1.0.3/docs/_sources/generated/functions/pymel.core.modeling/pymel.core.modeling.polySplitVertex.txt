@@ -1,6 +1,0 @@
-pymel.core.modeling.polySplitVertex
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySplitVertex

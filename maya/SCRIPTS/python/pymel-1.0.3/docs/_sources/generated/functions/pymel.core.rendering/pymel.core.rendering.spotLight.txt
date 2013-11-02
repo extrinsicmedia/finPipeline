@@ -1,6 +1,0 @@
-pymel.core.rendering.spotLight
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.spotLight

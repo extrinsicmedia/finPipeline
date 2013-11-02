@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllLattices
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllLattices

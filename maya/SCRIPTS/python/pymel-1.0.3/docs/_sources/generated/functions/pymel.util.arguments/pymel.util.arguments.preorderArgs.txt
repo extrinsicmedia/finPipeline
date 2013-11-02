@@ -1,6 +1,0 @@
-pymel.util.arguments.preorderArgs
-=================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.preorderArgs

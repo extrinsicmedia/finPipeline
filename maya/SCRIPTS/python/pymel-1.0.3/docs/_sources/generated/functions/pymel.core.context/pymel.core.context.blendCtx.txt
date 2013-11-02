@@ -1,6 +1,0 @@
-pymel.core.context.blendCtx
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.blendCtx

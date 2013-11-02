@@ -1,6 +1,0 @@
-pymel.core.other.CenterPivot
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.CenterPivot

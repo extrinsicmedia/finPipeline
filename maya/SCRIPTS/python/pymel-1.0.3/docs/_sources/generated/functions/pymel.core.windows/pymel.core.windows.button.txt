@@ -1,6 +1,0 @@
-pymel.core.windows.button
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.button

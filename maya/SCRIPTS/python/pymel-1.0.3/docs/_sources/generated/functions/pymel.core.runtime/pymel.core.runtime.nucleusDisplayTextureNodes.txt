@@ -1,6 +1,0 @@
-pymel.core.runtime.nucleusDisplayTextureNodes
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nucleusDisplayTextureNodes

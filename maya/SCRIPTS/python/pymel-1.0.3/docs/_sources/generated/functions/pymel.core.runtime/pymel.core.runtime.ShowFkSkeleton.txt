@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowFkSkeleton
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowFkSkeleton

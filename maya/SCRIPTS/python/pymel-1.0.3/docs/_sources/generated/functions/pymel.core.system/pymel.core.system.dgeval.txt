@@ -1,6 +1,0 @@
-pymel.core.system.dgeval
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.dgeval

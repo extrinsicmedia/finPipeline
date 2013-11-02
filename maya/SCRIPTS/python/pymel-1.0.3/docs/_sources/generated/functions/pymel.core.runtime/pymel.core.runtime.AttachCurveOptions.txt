@@ -1,6 +1,0 @@
-pymel.core.runtime.AttachCurveOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AttachCurveOptions

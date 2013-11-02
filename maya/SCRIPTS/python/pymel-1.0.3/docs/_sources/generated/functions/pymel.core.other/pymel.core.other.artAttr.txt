@@ -1,6 +1,0 @@
-pymel.core.other.artAttr
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.artAttr

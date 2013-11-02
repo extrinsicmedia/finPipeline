@@ -1,6 +1,0 @@
-pymel.core.runtime.ScaleConstraintOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ScaleConstraintOptions

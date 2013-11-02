@@ -1,6 +1,0 @@
-pymel.core.runtime.GoToPreviousView
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.GoToPreviousView

@@ -1,6 +1,0 @@
-pymel.core.modeling.filletCurve
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.filletCurve

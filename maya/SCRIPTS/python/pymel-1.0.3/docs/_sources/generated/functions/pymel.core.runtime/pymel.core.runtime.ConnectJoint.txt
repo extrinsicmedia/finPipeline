@@ -1,6 +1,0 @@
-pymel.core.runtime.ConnectJoint
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConnectJoint

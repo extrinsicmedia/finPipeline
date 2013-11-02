@@ -1,6 +1,0 @@
-pymel.core.windows.layoutDialog
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.layoutDialog

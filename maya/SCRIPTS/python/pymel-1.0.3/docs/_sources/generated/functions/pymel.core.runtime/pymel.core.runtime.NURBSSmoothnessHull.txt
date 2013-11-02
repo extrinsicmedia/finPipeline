@@ -1,6 +1,0 @@
-pymel.core.runtime.NURBSSmoothnessHull
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.NURBSSmoothnessHull

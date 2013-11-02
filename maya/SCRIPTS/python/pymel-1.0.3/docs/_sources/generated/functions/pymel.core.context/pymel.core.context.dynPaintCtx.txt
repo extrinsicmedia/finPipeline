@@ -1,6 +1,0 @@
-pymel.core.context.dynPaintCtx
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.dynPaintCtx

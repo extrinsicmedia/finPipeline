@@ -1,6 +1,0 @@
-pymel.core.system.exportAnim
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.exportAnim

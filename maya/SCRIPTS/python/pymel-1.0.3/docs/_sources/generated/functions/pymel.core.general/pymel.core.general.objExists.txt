@@ -1,6 +1,0 @@
-pymel.core.general.objExists
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.objExists

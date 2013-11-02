@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateGhostOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateGhostOptions

@@ -1,6 +1,0 @@
-pymel.core.windows.scriptEditorInfo
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.scriptEditorInfo

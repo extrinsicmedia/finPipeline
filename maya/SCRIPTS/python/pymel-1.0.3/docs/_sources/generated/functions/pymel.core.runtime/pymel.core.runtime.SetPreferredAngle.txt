@@ -1,6 +1,0 @@
-pymel.core.runtime.SetPreferredAngle
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetPreferredAngle

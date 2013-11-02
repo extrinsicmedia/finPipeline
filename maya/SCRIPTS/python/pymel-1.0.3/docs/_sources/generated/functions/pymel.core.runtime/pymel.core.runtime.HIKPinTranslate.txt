@@ -1,6 +1,0 @@
-pymel.core.runtime.HIKPinTranslate
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HIKPinTranslate

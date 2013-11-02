@@ -1,6 +1,0 @@
-pymel.core.windows.dockControl
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.dockControl

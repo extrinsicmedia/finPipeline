@@ -1,6 +1,0 @@
-pymel.core.runtime.STRSTweakModeOff
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.STRSTweakModeOff

@@ -1,6 +1,0 @@
-pymel.core.windows.modelPanel
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.modelPanel

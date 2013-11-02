@@ -1,6 +1,0 @@
-pymel.core.modeling.polySeparate
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySeparate

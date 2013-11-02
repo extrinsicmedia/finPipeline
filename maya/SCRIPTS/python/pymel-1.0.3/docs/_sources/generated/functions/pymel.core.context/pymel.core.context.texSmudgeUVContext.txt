@@ -1,6 +1,0 @@
-pymel.core.context.texSmudgeUVContext
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texSmudgeUVContext

@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectComponentToolMarkingMenuPopDown
-========================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectComponentToolMarkingMenuPopDown

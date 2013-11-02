@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveInbetween
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveInbetween

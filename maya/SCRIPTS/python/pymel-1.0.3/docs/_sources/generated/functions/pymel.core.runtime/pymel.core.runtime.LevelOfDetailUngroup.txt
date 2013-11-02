@@ -1,6 +1,0 @@
-pymel.core.runtime.LevelOfDetailUngroup
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.LevelOfDetailUngroup

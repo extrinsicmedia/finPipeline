@@ -1,6 +1,0 @@
-pymel.core.runtime.FloatSelectedPondObjects
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FloatSelectedPondObjects

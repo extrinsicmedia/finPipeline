@@ -1,6 +1,0 @@
-pymel.core.other.ikSpringSolverCallbacks
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.ikSpringSolverCallbacks

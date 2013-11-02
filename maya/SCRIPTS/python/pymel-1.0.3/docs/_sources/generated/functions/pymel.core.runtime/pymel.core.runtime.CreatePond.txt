@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePond
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePond

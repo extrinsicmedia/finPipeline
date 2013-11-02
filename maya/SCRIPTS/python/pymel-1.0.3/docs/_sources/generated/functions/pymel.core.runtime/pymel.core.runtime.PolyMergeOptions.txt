@@ -1,6 +1,0 @@
-pymel.core.runtime.PolyMergeOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolyMergeOptions

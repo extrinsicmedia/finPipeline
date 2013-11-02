@@ -1,6 +1,0 @@
-pymel.core.general.reorderContainer
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.reorderContainer

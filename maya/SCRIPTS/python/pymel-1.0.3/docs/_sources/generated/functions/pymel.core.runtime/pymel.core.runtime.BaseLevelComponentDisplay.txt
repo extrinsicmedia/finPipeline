@@ -1,6 +1,0 @@
-pymel.core.runtime.BaseLevelComponentDisplay
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BaseLevelComponentDisplay

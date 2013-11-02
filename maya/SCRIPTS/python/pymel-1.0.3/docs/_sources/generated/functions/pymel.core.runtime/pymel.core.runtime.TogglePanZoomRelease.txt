@@ -1,6 +1,0 @@
-pymel.core.runtime.TogglePanZoomRelease
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TogglePanZoomRelease

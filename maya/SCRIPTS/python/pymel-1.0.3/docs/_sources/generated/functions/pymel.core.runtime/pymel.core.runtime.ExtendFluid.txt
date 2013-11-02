@@ -1,6 +1,0 @@
-pymel.core.runtime.ExtendFluid
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExtendFluid

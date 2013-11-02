@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeCurvesDynamicOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeCurvesDynamicOptions

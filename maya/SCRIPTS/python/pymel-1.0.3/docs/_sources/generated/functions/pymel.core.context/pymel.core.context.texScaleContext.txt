@@ -1,6 +1,0 @@
-pymel.core.context.texScaleContext
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.texScaleContext

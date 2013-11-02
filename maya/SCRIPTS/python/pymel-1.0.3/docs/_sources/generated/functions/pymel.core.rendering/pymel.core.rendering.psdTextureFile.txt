@@ -1,6 +1,0 @@
-pymel.core.rendering.psdTextureFile
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.psdTextureFile

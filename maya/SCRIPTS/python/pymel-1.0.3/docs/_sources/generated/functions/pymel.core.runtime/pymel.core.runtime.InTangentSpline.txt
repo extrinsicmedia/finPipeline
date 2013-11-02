@@ -1,6 +1,0 @@
-pymel.core.runtime.InTangentSpline
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InTangentSpline

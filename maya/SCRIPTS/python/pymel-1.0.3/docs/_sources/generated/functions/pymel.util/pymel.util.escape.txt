@@ -1,6 +1,0 @@
-pymel.util.escape
-=================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.escape

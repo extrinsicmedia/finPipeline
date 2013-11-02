@@ -1,6 +1,0 @@
-pymel.util.arguments.listForNone
-================================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.listForNone

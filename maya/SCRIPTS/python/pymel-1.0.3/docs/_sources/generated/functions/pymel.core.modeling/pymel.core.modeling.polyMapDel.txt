@@ -1,6 +1,0 @@
-pymel.core.modeling.polyMapDel
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyMapDel

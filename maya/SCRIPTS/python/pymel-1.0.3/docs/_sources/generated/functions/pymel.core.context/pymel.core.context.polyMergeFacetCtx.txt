@@ -1,6 +1,0 @@
-pymel.core.context.polyMergeFacetCtx
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyMergeFacetCtx

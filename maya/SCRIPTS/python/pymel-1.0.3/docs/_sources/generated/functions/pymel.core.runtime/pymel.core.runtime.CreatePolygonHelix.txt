@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePolygonHelix
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePolygonHelix

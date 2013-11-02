@@ -1,6 +1,0 @@
-pymel.util.arrays.sum
-=====================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.sum

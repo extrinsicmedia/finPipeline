@@ -1,6 +1,0 @@
-pymel.core.runtime.MakeMotorBoats
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakeMotorBoats

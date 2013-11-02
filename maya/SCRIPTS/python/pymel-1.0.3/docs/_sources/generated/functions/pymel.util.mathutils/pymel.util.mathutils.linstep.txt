@@ -1,6 +1,0 @@
-pymel.util.mathutils.linstep
-============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.linstep

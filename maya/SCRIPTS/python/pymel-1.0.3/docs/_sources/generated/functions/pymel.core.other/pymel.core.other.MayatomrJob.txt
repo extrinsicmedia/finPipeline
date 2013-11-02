@@ -1,6 +1,0 @@
-pymel.core.other.MayatomrJob
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.MayatomrJob

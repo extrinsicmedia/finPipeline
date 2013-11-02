@@ -1,6 +1,0 @@
-pymel.core.context.graphSelectContext
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.graphSelectContext

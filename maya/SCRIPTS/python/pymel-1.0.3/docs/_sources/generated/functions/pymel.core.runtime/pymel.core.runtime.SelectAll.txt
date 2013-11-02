@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectAll
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectAll

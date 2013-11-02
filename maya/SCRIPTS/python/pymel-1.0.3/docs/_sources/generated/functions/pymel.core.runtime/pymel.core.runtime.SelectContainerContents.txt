@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectContainerContents
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectContainerContents

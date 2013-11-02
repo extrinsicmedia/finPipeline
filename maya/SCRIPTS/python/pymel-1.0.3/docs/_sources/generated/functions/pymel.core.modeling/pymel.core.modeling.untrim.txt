@@ -1,6 +1,0 @@
-pymel.core.modeling.untrim
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.untrim

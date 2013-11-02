@@ -1,6 +1,0 @@
-pymel.core.system.hardware
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.hardware

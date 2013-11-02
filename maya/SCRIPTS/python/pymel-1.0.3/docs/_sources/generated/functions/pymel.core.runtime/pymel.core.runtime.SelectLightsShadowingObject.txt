@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectLightsShadowingObject
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectLightsShadowingObject

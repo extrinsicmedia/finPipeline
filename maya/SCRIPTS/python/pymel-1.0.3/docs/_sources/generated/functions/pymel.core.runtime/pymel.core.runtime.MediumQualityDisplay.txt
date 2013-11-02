@@ -1,6 +1,0 @@
-pymel.core.runtime.MediumQualityDisplay
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MediumQualityDisplay

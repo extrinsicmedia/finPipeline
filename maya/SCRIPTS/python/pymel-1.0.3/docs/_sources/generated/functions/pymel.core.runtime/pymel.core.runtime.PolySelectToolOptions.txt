@@ -1,6 +1,0 @@
-pymel.core.runtime.PolySelectToolOptions
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolySelectToolOptions

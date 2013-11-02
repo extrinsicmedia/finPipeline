@@ -1,6 +1,0 @@
-pymel.core.runtime.ResetLattice
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ResetLattice

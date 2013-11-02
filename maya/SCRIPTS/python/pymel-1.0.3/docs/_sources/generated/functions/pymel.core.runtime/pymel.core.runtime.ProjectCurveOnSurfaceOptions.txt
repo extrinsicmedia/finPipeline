@@ -1,6 +1,0 @@
-pymel.core.runtime.ProjectCurveOnSurfaceOptions
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ProjectCurveOnSurfaceOptions

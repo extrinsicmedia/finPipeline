@@ -1,6 +1,0 @@
-pymel.core.runtime.MirrorPolygonGeometry
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MirrorPolygonGeometry

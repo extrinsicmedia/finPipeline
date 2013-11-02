@@ -1,6 +1,0 @@
-pymel.core.runtime.SculptSurfacesToolOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SculptSurfacesToolOptions

@@ -1,6 +1,0 @@
-pymel.core.runtime.AddWireOptions
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AddWireOptions

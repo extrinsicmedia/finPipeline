@@ -1,6 +1,0 @@
-pymel.core.modeling.polyHole
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyHole

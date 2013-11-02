@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowSurfaceCVs
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowSurfaceCVs

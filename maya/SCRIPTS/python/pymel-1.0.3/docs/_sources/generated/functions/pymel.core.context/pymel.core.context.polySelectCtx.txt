@@ -1,6 +1,0 @@
-pymel.core.context.polySelectCtx
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polySelectCtx

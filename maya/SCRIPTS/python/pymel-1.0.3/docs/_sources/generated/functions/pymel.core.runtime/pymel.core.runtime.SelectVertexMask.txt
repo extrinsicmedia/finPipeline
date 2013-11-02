@@ -1,6 +1,0 @@
-pymel.core.runtime.SelectVertexMask
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SelectVertexMask

@@ -1,6 +1,0 @@
-pymel.core.rendering.createLayeredPsdFile
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.createLayeredPsdFile

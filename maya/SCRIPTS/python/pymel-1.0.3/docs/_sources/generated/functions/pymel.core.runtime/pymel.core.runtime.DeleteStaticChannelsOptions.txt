@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteStaticChannelsOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteStaticChannelsOptions

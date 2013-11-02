@@ -1,6 +1,0 @@
-pymel.core.modeling.attachCurve
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.attachCurve

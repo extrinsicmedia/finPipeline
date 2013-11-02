@@ -1,6 +1,0 @@
-pymel.core.effects.dynExpression
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.dynExpression

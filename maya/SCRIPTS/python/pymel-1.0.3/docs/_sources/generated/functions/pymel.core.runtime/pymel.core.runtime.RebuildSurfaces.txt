@@ -1,6 +1,0 @@
-pymel.core.runtime.RebuildSurfaces
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RebuildSurfaces

@@ -1,6 +1,0 @@
-pymel.core.runtime.PolygonCopyOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolygonCopyOptions

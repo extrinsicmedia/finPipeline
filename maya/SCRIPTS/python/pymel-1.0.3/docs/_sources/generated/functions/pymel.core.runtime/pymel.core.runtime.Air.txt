@@ -1,6 +1,0 @@
-pymel.core.runtime.Air
-======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.Air

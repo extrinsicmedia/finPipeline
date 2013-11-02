@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowBaseWire
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowBaseWire

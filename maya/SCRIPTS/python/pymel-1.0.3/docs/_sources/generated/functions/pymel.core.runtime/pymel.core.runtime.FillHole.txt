@@ -1,6 +1,0 @@
-pymel.core.runtime.FillHole
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FillHole

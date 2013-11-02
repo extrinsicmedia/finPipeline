@@ -1,6 +1,0 @@
-pymel.versions.is64bit
-======================
-
-.. currentmodule:: pymel
-
-.. automethod:: versions.is64bit

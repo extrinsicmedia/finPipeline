@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteEdge
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteEdge

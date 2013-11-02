@@ -1,6 +1,0 @@
-pymel.core.runtime.UnfoldUVOptions
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UnfoldUVOptions

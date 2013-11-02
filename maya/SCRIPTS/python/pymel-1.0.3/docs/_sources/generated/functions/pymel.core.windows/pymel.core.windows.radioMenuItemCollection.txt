@@ -1,6 +1,0 @@
-pymel.core.windows.radioMenuItemCollection
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.radioMenuItemCollection

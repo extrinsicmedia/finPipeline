@@ -1,7 +1,0 @@
-<map id="inheritancec3a64b6eaa" name="inheritancec3a64b6eaa">
-<area shape="rect" href="#pymel.core.nodetypes.Mip_motion_vector" title="Mip_motion_vector" alt="" coords="5,160,125,184"/>
-<area shape="rect" href="pymel.core.nodetypes.THdependNode.html#pymel.core.nodetypes.THdependNode" title="THdependNode" alt="" coords="13,121,117,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="21,82,109,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="20,5,111,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="29,44,101,68"/>
-</map>

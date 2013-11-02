@@ -1,6 +1,0 @@
-pymel.core.context.dpBirailCtx
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.dpBirailCtx

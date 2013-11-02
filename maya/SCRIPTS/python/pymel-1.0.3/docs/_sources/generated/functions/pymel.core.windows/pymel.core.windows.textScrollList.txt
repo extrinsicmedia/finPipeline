@@ -1,6 +1,0 @@
-pymel.core.windows.textScrollList
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.textScrollList

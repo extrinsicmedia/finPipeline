@@ -1,6 +1,0 @@
-pymel.core.general.listHistory
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.listHistory

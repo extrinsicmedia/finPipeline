@@ -1,6 +1,0 @@
-pymel.core.windows.clipSchedulerOutliner
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.clipSchedulerOutliner

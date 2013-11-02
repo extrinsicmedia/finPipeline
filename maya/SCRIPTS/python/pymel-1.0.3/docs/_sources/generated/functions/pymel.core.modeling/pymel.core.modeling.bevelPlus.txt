@@ -1,6 +1,0 @@
-pymel.core.modeling.bevelPlus
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.bevelPlus

@@ -1,6 +1,0 @@
-pymel.util.trunc
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.trunc

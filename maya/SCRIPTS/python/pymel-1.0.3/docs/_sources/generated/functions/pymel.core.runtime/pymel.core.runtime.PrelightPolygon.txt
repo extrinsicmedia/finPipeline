@@ -1,6 +1,0 @@
-pymel.core.runtime.PrelightPolygon
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PrelightPolygon

@@ -1,6 +1,0 @@
-pymel.core.runtime.RenderViewWindow
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RenderViewWindow

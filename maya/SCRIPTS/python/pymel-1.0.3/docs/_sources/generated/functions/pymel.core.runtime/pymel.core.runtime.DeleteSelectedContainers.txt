@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteSelectedContainers
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteSelectedContainers

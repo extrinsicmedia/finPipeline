@@ -1,6 +1,0 @@
-pymel.core.runtime.RelaxUVShell
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RelaxUVShell

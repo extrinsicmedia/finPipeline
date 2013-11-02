@@ -1,6 +1,0 @@
-pymel.core.windows.confirmDialog
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.confirmDialog

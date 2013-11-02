@@ -1,6 +1,0 @@
-pymel.core.general.containerView
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.containerView

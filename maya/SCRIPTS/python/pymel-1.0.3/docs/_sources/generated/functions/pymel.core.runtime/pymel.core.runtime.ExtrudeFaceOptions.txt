@@ -1,6 +1,0 @@
-pymel.core.runtime.ExtrudeFaceOptions
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ExtrudeFaceOptions

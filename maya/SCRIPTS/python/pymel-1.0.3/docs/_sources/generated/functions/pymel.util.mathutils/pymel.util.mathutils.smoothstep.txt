@@ -1,6 +1,0 @@
-pymel.util.mathutils.smoothstep
-===============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.smoothstep

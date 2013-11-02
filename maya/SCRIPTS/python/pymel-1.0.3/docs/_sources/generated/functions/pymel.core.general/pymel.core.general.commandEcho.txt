@@ -1,6 +1,0 @@
-pymel.core.general.commandEcho
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.commandEcho

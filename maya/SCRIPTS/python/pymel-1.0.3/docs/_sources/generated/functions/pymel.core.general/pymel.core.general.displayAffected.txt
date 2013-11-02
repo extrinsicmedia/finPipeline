@@ -1,6 +1,0 @@
-pymel.core.general.displayAffected
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.displayAffected

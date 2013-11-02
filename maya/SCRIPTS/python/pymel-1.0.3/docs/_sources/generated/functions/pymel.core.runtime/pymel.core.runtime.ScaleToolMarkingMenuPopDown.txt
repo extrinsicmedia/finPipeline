@@ -1,6 +1,0 @@
-pymel.core.runtime.ScaleToolMarkingMenuPopDown
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ScaleToolMarkingMenuPopDown

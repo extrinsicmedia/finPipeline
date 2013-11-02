@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowNonlinears
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowNonlinears

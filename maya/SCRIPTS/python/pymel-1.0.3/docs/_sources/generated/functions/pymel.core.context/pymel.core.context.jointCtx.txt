@@ -1,6 +1,0 @@
-pymel.core.context.jointCtx
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.jointCtx

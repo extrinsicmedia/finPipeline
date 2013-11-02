@@ -1,6 +1,0 @@
-pymel.core.runtime.UpdateEraseSurface
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UpdateEraseSurface

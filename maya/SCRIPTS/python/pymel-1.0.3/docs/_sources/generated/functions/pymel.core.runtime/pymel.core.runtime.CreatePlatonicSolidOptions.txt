@@ -1,6 +1,0 @@
-pymel.core.runtime.CreatePlatonicSolidOptions
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreatePlatonicSolidOptions

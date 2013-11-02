@@ -1,6 +1,0 @@
-pymel.core.runtime.SetKeyTranslate
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetKeyTranslate

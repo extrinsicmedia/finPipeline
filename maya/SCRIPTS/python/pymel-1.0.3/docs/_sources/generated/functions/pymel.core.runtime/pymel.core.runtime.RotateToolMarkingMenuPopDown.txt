@@ -1,6 +1,0 @@
-pymel.core.runtime.RotateToolMarkingMenuPopDown
-===============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RotateToolMarkingMenuPopDown

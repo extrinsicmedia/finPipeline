@@ -1,6 +1,0 @@
-pymel.util.arguments.isScalar
-=============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arguments.isScalar

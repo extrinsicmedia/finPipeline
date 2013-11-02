@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToEdges
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToEdges

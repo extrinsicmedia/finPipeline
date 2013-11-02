@@ -1,6 +1,0 @@
-pymel.core.windows.attrFieldGrp
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.attrFieldGrp

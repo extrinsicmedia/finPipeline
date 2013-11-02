@@ -1,6 +1,0 @@
-pymel.core.runtime.TurbulenceOptions
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TurbulenceOptions

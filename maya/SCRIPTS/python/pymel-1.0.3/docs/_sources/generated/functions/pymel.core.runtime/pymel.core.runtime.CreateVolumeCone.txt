@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateVolumeCone
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateVolumeCone

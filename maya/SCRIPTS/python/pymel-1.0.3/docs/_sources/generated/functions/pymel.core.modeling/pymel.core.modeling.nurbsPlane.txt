@@ -1,6 +1,0 @@
-pymel.core.modeling.nurbsPlane
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.nurbsPlane

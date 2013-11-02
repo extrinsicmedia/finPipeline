@@ -1,6 +1,0 @@
-pymel.core.context.clipEditorCurrentTimeCtx
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.clipEditorCurrentTimeCtx

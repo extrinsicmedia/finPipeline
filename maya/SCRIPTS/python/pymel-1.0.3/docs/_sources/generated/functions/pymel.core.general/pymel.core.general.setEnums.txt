@@ -1,6 +1,0 @@
-pymel.core.general.setEnums
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.setEnums

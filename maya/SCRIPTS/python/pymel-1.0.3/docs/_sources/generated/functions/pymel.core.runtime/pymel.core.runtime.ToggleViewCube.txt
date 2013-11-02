@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleViewCube
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleViewCube

@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateSubdivSurface
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateSubdivSurface

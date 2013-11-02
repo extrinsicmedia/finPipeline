@@ -1,6 +1,0 @@
-pymel.core.windows.vectorFieldGrp
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.vectorFieldGrp

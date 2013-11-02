@@ -1,6 +1,0 @@
-pymel.core.modeling.grid
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.grid

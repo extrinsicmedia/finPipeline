@@ -1,6 +1,0 @@
-pymel.core.runtime.nClothReplaceFrames
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nClothReplaceFrames

@@ -1,6 +1,0 @@
-pymel.core.runtime.HideSculptObjects
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HideSculptObjects

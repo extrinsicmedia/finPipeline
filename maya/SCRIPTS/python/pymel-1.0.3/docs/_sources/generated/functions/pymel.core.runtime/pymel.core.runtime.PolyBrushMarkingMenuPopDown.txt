@@ -1,6 +1,0 @@
-pymel.core.runtime.PolyBrushMarkingMenuPopDown
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PolyBrushMarkingMenuPopDown

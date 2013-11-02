@@ -1,6 +1,0 @@
-pymel.core.rendering.renderPassRegistry
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.renderPassRegistry

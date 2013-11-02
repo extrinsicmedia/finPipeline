@@ -1,6 +1,0 @@
-pymel.core.runtime.RemoveJoint
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.RemoveJoint

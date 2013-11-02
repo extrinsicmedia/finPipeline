@@ -1,6 +1,0 @@
-pymel.core.runtime.KeyframeTangentMarkingMenuPopDown
-====================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.KeyframeTangentMarkingMenuPopDown

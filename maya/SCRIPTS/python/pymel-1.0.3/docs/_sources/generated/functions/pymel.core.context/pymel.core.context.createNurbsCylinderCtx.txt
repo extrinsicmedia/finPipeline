@@ -1,6 +1,0 @@
-pymel.core.context.createNurbsCylinderCtx
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createNurbsCylinderCtx

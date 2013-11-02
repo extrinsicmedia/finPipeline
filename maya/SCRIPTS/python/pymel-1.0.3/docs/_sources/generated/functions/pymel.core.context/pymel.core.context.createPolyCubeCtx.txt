@@ -1,6 +1,0 @@
-pymel.core.context.createPolyCubeCtx
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.createPolyCubeCtx

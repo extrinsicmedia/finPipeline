@@ -1,6 +1,0 @@
-pymel.core.runtime.nucleusGetnParticleExample
-=============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.nucleusGetnParticleExample

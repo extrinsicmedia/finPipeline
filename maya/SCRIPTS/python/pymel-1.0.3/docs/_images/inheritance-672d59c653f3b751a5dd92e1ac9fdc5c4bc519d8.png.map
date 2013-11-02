@@ -1,7 +1,0 @@
-<map id="inheritance2d825b2be0" name="inheritance2d825b2be0">
-<area shape="rect" href="#pymel.core.nodetypes.WriteToColorBuffer" title="WriteToColorBuffer" alt="" coords="8,160,128,184"/>
-<area shape="rect" href="pymel.core.nodetypes.WriteToFrameBuffer.html#pymel.core.nodetypes.WriteToFrameBuffer" title="WriteToFrameBuffer" alt="" coords="5,121,131,145"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="24,82,112,106"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="23,5,113,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="32,44,104,68"/>
-</map>

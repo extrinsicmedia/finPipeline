@@ -1,6 +1,0 @@
-pymel.core.modeling.propMove
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.propMove

@@ -1,8 +1,0 @@
-<map id="inheritance2fdee8e1d5" name="inheritance2fdee8e1d5">
-<area shape="rect" href="#pymel.core.nodetypes.SoftMod" title="SoftMod" alt="" coords="37,199,109,223"/>
-<area shape="rect" href="pymel.core.nodetypes.WeightGeometryFilter.html#pymel.core.nodetypes.WeightGeometryFilter" title="WeightGeometryFilter" alt="" coords="5,160,141,184"/>
-<area shape="rect" href="../pymel.util.utilitytypes/pymel.util.utilitytypes.ProxyUnicode.html#pymel.util.utilitytypes.ProxyUnicode" title="ProxyUnicode" alt="" coords="28,5,119,29"/>
-<area shape="rect" href="../pymel.core.general/pymel.core.general.PyNode.html#pymel.core.general.PyNode" title="PyNode" alt="" coords="37,44,109,68"/>
-<area shape="rect" href="pymel.core.nodetypes.DependNode.html#pymel.core.nodetypes.DependNode" title="DependNode" alt="" coords="29,83,117,107"/>
-<area shape="rect" href="pymel.core.nodetypes.GeometryFilter.html#pymel.core.nodetypes.GeometryFilter" title="GeometryFilter" alt="" coords="24,121,123,145"/>
-</map>

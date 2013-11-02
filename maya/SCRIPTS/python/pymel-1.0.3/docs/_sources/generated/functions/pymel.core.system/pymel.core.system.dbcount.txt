@@ -1,6 +1,0 @@
-pymel.core.system.dbcount
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.dbcount

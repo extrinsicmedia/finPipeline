@@ -1,6 +1,0 @@
-pymel.core.runtime.UniformOptions
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UniformOptions

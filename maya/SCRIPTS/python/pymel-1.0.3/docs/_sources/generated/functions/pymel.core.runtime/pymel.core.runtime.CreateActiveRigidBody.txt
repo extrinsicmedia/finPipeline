@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateActiveRigidBody
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateActiveRigidBody

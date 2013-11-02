@@ -1,6 +1,0 @@
-pymel.core.animation.flow
-=========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.flow

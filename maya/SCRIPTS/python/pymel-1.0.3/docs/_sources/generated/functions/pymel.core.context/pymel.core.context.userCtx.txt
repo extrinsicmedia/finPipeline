@@ -1,6 +1,0 @@
-pymel.core.context.userCtx
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.userCtx

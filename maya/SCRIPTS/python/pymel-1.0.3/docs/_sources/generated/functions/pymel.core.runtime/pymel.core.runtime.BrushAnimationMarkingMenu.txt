@@ -1,6 +1,0 @@
-pymel.core.runtime.BrushAnimationMarkingMenu
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BrushAnimationMarkingMenu

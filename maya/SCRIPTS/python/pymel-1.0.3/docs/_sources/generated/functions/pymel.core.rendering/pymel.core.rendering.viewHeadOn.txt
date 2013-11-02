@@ -1,6 +1,0 @@
-pymel.core.rendering.viewHeadOn
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.viewHeadOn

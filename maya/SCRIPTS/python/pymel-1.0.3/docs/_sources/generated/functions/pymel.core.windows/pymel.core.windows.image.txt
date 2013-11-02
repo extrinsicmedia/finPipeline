@@ -1,6 +1,0 @@
-pymel.core.windows.image
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.image

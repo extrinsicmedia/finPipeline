@@ -1,6 +1,0 @@
-pymel.core.runtime.MakePondMotorBoatsOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.MakePondMotorBoatsOptions

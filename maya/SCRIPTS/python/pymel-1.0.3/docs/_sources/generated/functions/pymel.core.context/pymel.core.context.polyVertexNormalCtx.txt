@@ -1,6 +1,0 @@
-pymel.core.context.polyVertexNormalCtx
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.polyVertexNormalCtx

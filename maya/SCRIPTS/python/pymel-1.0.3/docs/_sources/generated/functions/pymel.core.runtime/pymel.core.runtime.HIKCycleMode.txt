@@ -1,6 +1,0 @@
-pymel.core.runtime.HIKCycleMode
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HIKCycleMode

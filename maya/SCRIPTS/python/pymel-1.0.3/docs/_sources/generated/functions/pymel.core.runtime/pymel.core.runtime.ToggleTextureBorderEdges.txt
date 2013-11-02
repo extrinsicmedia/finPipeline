@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleTextureBorderEdges
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleTextureBorderEdges

@@ -1,6 +1,0 @@
-pymel.core.context.softSelectOptionsCtx
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.softSelectOptionsCtx

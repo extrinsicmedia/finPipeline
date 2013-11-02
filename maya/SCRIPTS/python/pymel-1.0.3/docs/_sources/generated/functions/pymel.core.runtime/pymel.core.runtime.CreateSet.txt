@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateSet
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateSet

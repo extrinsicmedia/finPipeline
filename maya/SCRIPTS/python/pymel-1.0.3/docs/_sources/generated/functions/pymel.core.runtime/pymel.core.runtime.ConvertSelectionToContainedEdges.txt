@@ -1,6 +1,0 @@
-pymel.core.runtime.ConvertSelectionToContainedEdges
-===================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ConvertSelectionToContainedEdges

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyPlanarProjection
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyPlanarProjection

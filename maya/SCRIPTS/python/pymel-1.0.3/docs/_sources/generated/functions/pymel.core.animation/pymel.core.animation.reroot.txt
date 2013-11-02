@@ -1,6 +1,0 @@
-pymel.core.animation.reroot
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.reroot

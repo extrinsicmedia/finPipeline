@@ -1,6 +1,0 @@
-pymel.util.clsname
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.clsname

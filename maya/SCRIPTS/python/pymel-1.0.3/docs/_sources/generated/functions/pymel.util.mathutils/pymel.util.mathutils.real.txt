@@ -1,6 +1,0 @@
-pymel.util.mathutils.real
-=========================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.real

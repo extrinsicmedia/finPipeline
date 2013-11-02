@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateNURBSConeOptions
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateNURBSConeOptions

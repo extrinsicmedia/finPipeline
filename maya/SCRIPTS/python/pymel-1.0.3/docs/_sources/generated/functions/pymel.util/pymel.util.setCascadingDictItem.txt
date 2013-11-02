@@ -1,6 +1,0 @@
-pymel.util.setCascadingDictItem
-===============================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.setCascadingDictItem

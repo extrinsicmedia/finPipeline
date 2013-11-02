@@ -1,6 +1,0 @@
-pymel.mayautils.source
-======================
-
-.. currentmodule:: pymel
-
-.. automethod:: mayautils.source

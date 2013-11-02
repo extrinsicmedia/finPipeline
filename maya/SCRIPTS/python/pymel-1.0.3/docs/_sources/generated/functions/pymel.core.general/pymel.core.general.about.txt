@@ -1,6 +1,0 @@
-pymel.core.general.about
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.about

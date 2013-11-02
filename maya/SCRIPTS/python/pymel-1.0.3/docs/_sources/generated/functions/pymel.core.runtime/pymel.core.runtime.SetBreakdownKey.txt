@@ -1,6 +1,0 @@
-pymel.core.runtime.SetBreakdownKey
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetBreakdownKey

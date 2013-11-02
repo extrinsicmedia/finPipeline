@@ -1,6 +1,0 @@
-pymel.core.effects.emit
-=======================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: effects.emit

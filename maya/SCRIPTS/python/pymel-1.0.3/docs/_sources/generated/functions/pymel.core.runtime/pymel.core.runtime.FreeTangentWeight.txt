@@ -1,6 +1,0 @@
-pymel.core.runtime.FreeTangentWeight
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.FreeTangentWeight

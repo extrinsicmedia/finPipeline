@@ -1,6 +1,0 @@
-pymel.core.windows.keyframeStats
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.keyframeStats

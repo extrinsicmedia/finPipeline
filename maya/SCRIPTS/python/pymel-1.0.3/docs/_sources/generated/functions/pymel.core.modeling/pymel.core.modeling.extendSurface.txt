@@ -1,6 +1,0 @@
-pymel.core.modeling.extendSurface
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.extendSurface

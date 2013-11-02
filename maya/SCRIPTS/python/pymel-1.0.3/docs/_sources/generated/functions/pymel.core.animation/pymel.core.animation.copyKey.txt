@@ -1,6 +1,0 @@
-pymel.core.animation.copyKey
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.copyKey

@@ -1,6 +1,0 @@
-pymel.core.windows.intSliderGrp
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.intSliderGrp

@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivSmoothnessHull
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivSmoothnessHull

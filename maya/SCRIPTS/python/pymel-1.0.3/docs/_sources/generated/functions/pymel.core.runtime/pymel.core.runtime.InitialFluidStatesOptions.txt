@@ -1,6 +1,0 @@
-pymel.core.runtime.InitialFluidStatesOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.InitialFluidStatesOptions

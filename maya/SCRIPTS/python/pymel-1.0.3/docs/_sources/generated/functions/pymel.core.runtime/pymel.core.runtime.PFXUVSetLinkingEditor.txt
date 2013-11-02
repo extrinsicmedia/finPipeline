@@ -1,6 +1,0 @@
-pymel.core.runtime.PFXUVSetLinkingEditor
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PFXUVSetLinkingEditor

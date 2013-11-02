@@ -1,6 +1,0 @@
-pymel.core.other.isDescendentPulling
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.isDescendentPulling

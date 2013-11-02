@@ -1,6 +1,0 @@
-pymel.core.runtime.SmoothSkinWeightsOptions
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SmoothSkinWeightsOptions

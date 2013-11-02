@@ -1,6 +1,0 @@
-pymel.core.runtime.TogglePolyCount
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TogglePolyCount

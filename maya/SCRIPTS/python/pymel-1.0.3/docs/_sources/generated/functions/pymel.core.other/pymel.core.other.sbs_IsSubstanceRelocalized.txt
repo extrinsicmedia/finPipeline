@@ -1,6 +1,0 @@
-pymel.core.other.sbs_IsSubstanceRelocalized
-===========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.sbs_IsSubstanceRelocalized

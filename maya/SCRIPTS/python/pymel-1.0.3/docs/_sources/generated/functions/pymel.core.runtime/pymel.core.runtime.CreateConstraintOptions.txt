@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateConstraintOptions
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateConstraintOptions

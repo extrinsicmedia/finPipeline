@@ -1,6 +1,0 @@
-pymel.core.windows.radioButtonGrp
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.radioButtonGrp

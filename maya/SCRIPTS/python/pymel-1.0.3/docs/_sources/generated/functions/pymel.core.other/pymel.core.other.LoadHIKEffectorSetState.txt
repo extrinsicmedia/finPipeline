@@ -1,6 +1,0 @@
-pymel.core.other.LoadHIKEffectorSetState
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.LoadHIKEffectorSetState

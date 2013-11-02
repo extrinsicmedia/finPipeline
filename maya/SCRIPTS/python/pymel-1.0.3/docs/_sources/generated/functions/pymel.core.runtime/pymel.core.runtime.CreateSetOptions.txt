@@ -1,6 +1,0 @@
-pymel.core.runtime.CreateSetOptions
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CreateSetOptions

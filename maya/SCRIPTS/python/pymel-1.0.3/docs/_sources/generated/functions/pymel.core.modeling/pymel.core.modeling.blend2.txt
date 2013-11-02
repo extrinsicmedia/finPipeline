@@ -1,6 +1,0 @@
-pymel.core.modeling.blend2
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.blend2

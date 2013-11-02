@@ -1,6 +1,0 @@
-pymel.core.modeling.insertKnotCurve
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.insertKnotCurve

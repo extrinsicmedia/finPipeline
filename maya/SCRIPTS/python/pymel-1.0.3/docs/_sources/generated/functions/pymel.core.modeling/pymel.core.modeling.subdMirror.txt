@@ -1,6 +1,0 @@
-pymel.core.modeling.subdMirror
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.subdMirror

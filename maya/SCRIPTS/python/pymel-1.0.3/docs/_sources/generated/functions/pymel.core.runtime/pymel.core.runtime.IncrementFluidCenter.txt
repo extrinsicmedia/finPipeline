@@ -1,6 +1,0 @@
-pymel.core.runtime.IncrementFluidCenter
-=======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.IncrementFluidCenter

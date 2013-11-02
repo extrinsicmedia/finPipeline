@@ -1,6 +1,0 @@
-pymel.core.datatypes.pow
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.pow

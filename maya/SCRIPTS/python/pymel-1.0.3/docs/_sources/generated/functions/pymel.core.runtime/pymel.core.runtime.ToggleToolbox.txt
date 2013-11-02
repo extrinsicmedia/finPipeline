@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleToolbox
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleToolbox

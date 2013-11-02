@@ -1,6 +1,0 @@
-pymel.core.runtime.DeleteAllClusters
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DeleteAllClusters

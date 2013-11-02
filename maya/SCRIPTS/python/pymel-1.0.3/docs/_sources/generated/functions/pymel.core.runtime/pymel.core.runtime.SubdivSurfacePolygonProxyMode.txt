@@ -1,6 +1,0 @@
-pymel.core.runtime.SubdivSurfacePolygonProxyMode
-================================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SubdivSurfacePolygonProxyMode

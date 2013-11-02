@@ -1,6 +1,0 @@
-pymel.core.runtime.PruneSculpt
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PruneSculpt

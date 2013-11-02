@@ -1,6 +1,0 @@
-pymel.core.runtime.DisableRigidBodies
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DisableRigidBodies

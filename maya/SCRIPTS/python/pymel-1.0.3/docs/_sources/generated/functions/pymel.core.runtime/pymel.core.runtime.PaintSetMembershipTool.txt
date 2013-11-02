@@ -1,6 +1,0 @@
-pymel.core.runtime.PaintSetMembershipTool
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PaintSetMembershipTool

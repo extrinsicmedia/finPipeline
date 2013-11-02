@@ -1,6 +1,0 @@
-pymel.core.rendering.binMembership
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.binMembership

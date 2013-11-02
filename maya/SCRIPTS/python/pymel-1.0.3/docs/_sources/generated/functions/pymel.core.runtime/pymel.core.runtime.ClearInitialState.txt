@@ -1,6 +1,0 @@
-pymel.core.runtime.ClearInitialState
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ClearInitialState

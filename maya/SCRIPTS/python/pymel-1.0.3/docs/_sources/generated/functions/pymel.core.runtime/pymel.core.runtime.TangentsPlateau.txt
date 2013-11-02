@@ -1,6 +1,0 @@
-pymel.core.runtime.TangentsPlateau
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TangentsPlateau

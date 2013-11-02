@@ -1,6 +1,0 @@
-pymel.core.runtime.SetKeyVertexColor
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.SetKeyVertexColor

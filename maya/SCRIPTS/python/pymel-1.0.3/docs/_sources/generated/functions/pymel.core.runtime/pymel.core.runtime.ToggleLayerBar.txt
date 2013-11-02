@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleLayerBar
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleLayerBar

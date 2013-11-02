@@ -1,6 +1,0 @@
-pymel.core.runtime.PublishRootTransformOptions
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.PublishRootTransformOptions

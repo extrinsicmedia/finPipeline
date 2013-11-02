@@ -1,6 +1,0 @@
-pymel.core.modeling.polyMergeEdge
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyMergeEdge

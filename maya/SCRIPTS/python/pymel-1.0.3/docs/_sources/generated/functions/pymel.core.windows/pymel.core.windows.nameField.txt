@@ -1,6 +1,0 @@
-pymel.core.windows.nameField
-============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.nameField

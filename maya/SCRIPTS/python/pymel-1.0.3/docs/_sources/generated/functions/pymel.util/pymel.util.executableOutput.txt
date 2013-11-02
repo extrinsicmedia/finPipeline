@@ -1,6 +1,0 @@
-pymel.util.executableOutput
-===========================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.executableOutput

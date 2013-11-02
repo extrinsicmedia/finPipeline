@@ -1,6 +1,0 @@
-pymel.core.modeling.transferAttributes
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.transferAttributes

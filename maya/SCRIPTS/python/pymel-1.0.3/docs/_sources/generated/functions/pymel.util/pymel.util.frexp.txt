@@ -1,6 +1,0 @@
-pymel.util.frexp
-================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.frexp

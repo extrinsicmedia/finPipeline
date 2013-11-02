@@ -1,6 +1,0 @@
-pymel.core.general.instance
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.instance

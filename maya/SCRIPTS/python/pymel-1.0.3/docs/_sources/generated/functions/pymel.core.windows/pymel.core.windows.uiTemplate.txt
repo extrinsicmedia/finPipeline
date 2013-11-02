@@ -1,6 +1,0 @@
-pymel.core.windows.uiTemplate
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.uiTemplate

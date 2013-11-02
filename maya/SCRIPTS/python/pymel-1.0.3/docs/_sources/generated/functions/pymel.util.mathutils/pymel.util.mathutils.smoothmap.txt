@@ -1,6 +1,0 @@
-pymel.util.mathutils.smoothmap
-==============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: mathutils.smoothmap

@@ -1,6 +1,0 @@
-pymel.core.system.timerX
-========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.timerX

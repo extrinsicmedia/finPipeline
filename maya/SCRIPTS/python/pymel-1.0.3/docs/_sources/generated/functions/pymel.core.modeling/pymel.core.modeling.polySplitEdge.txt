@@ -1,6 +1,0 @@
-pymel.core.modeling.polySplitEdge
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polySplitEdge

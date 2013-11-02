@@ -1,6 +1,0 @@
-pymel.core.modeling.rebuildSurface
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.rebuildSurface

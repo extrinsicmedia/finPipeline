@@ -1,6 +1,0 @@
-pymel.core.runtime.HypershadeRenderPerspLayout
-==============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HypershadeRenderPerspLayout

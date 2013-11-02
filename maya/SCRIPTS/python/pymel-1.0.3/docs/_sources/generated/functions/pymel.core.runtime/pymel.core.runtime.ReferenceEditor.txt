@@ -1,6 +1,0 @@
-pymel.core.runtime.ReferenceEditor
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReferenceEditor

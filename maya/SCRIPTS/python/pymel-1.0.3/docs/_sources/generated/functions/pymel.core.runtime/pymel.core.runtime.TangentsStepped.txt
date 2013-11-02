@@ -1,6 +1,0 @@
-pymel.core.runtime.TangentsStepped
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.TangentsStepped

@@ -1,6 +1,0 @@
-pymel.core.context.artBaseCtx
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.artBaseCtx

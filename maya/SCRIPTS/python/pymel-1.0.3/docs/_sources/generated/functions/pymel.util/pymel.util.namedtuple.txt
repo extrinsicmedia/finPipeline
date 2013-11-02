@@ -1,6 +1,0 @@
-pymel.util.namedtuple
-=====================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.namedtuple

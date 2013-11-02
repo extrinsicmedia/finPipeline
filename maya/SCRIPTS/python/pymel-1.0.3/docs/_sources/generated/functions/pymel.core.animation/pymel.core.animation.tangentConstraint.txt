@@ -1,6 +1,0 @@
-pymel.core.animation.tangentConstraint
-======================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: animation.tangentConstraint

@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleHelpLine
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleHelpLine

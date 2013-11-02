@@ -1,6 +1,0 @@
-pymel.core.language.pythonToMelCmd
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: language.pythonToMelCmd

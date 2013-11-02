@@ -1,6 +1,0 @@
-pymel.core.system.exportAll
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.exportAll

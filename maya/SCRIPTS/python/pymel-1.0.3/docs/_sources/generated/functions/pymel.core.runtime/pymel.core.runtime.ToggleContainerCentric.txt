@@ -1,6 +1,0 @@
-pymel.core.runtime.ToggleContainerCentric
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ToggleContainerCentric

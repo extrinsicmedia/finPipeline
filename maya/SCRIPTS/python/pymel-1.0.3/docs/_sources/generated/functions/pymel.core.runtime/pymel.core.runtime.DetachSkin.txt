@@ -1,6 +1,0 @@
-pymel.core.runtime.DetachSkin
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.DetachSkin

@@ -1,6 +1,0 @@
-pymel.core.modeling.polyClipboard
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyClipboard

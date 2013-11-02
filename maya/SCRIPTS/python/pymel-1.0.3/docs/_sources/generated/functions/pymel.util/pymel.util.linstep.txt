@@ -1,6 +1,0 @@
-pymel.util.linstep
-==================
-
-.. currentmodule:: pymel
-
-.. automethod:: util.linstep

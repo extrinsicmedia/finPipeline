@@ -1,6 +1,0 @@
-pymel.core.runtime.CopyVertexSkinWeights
-========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.CopyVertexSkinWeights

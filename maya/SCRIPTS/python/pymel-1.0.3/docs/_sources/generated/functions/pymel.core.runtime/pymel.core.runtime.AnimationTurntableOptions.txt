@@ -1,6 +1,0 @@
-pymel.core.runtime.AnimationTurntableOptions
-============================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.AnimationTurntableOptions

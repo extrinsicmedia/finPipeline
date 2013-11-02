@@ -1,6 +1,0 @@
-pymel.core.general.paramDimension
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.paramDimension

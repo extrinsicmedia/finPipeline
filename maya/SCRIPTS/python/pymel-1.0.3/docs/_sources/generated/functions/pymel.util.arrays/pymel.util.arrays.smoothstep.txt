@@ -1,6 +1,0 @@
-pymel.util.arrays.smoothstep
-============================
-
-.. currentmodule:: pymel.util
-
-.. automethod:: arrays.smoothstep

@@ -1,6 +1,0 @@
-pymel.core.system.listNamespaces_old
-====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: system.listNamespaces_old

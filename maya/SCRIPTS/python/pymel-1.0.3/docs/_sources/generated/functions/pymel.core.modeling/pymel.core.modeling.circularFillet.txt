@@ -1,6 +1,0 @@
-pymel.core.modeling.circularFillet
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.circularFillet

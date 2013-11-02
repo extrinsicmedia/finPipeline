@@ -1,6 +1,0 @@
-pymel.core.runtime.BevelOptions
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.BevelOptions

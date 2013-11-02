@@ -1,6 +1,0 @@
-pymel.core.context.stitchSurfaceCtx
-===================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.stitchSurfaceCtx

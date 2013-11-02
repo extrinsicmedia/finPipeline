@@ -1,6 +1,0 @@
-pymel.core.other.CreateContainer
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.CreateContainer

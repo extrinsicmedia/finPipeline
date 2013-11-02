@@ -1,6 +1,0 @@
-pymel.core.context.selectKeyCtx
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.selectKeyCtx

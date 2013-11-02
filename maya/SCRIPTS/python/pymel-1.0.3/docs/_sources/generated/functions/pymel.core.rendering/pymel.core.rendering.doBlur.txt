@@ -1,6 +1,0 @@
-pymel.core.rendering.doBlur
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: rendering.doBlur

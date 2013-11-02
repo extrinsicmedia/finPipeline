@@ -1,6 +1,0 @@
-pymel.core.runtime.ShowCameraManipulators
-=========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ShowCameraManipulators

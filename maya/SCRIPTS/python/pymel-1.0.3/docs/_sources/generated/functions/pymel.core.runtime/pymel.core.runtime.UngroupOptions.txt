@@ -1,6 +1,0 @@
-pymel.core.runtime.UngroupOptions
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.UngroupOptions

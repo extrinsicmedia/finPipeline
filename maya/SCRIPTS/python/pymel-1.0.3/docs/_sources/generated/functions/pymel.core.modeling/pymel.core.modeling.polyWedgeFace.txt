@@ -1,6 +1,0 @@
-pymel.core.modeling.polyWedgeFace
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyWedgeFace

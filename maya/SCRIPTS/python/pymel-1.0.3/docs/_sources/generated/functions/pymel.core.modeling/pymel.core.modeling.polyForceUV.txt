@@ -1,6 +1,0 @@
-pymel.core.modeling.polyForceUV
-===============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyForceUV

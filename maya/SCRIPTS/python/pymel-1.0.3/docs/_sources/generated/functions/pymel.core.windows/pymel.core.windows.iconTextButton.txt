@@ -1,6 +1,0 @@
-pymel.core.windows.iconTextButton
-=================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.iconTextButton

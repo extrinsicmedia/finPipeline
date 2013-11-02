@@ -1,6 +1,0 @@
-pymel.core.runtime.ReducePolygon
-================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.ReducePolygon

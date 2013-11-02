@@ -1,6 +1,0 @@
-pymel.core.datatypes.trunc
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: datatypes.trunc

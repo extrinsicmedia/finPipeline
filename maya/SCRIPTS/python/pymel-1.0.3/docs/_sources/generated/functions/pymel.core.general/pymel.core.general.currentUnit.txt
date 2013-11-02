@@ -1,6 +1,0 @@
-pymel.core.general.currentUnit
-==============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: general.currentUnit

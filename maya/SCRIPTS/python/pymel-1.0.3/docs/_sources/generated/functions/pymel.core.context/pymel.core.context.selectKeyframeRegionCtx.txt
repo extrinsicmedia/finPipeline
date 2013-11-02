@@ -1,6 +1,0 @@
-pymel.core.context.selectKeyframeRegionCtx
-==========================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: context.selectKeyframeRegionCtx

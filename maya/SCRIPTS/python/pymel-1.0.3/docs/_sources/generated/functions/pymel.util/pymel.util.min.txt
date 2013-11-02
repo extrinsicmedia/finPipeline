@@ -1,6 +1,0 @@
-pymel.util.min
-==============
-
-.. currentmodule:: pymel
-
-.. automethod:: util.min

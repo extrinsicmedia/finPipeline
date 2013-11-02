@@ -1,6 +1,0 @@
-pymel.core.windows.menuItem
-===========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.menuItem

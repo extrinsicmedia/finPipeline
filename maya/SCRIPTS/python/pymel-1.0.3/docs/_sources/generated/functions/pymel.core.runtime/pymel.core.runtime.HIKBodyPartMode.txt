@@ -1,6 +1,0 @@
-pymel.core.runtime.HIKBodyPartMode
-==================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: runtime.HIKBodyPartMode

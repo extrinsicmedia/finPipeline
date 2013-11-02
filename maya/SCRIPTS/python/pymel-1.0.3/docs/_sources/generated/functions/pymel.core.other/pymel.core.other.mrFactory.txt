@@ -1,6 +1,0 @@
-pymel.core.other.mrFactory
-==========================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: other.mrFactory

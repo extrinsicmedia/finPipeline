@@ -1,6 +1,0 @@
-pymel.core.modeling.polyAverageNormal
-=====================================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: modeling.polyAverageNormal

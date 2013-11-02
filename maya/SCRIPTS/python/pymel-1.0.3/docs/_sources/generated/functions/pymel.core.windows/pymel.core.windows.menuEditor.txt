@@ -1,6 +1,0 @@
-pymel.core.windows.menuEditor
-=============================
-
-.. currentmodule:: pymel.core
-
-.. automethod:: windows.menuEditor
