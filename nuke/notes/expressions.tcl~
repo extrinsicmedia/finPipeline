@@ -26,9 +26,3 @@ random(1,frame)
 <font color="red">Some red text</font> # change font color
 <font color="blue">Some blue text</font> # a different font color
 <b>Bold text</b> # bold text
-
-# Root dir
-[file dirname [knob [topnode].file]]
-
-# Filename
-[file tail [knob [topnode].file]]
