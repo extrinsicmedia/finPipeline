@@ -22,19 +22,19 @@ import re
 ### BEGIN FILEPATH CORRECTION ###
 # Make all filepaths load without errors regardless of OS
 def myFilenameFilter(filename):
-	if nuke.env['MACOS']:
-		filename = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('MAC_SERVER', None) )
+    if nuke.env['MACOS']:
+        filename = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('MAC_SERVER', None) )
         filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('MAC_SERVER', None) )
 
-	if nuke.env['WIN32']:
-		filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('WIN_SERVER', None) )
+    if nuke.env['WIN32']:
+        filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('WIN_SERVER', None) )
         filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('WIN_SERVER', None) )
 
     if nuke.env['LINUX']:
-        filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('NIX_SERVER', None) )
-        filename2 = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('NIX_SERVER', None) )
+            filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('NIX_SERVER', None) )
+            filename2 = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('NIX_SERVER', None) )
 
-	return filename, filename2
+    return filename, filename2
 
 # Use the filenameFilter(s)
 nuke.addFilenameFilter(myFilenameFilter)
@@ -45,27 +45,29 @@ nuke.pluginAddPath(os.path.join('plugins', 'all', 'pixelfudger'))
 
 # Add OS specific paths to directories
 if nuke.env['MACOS']:
-	
-	# Add gizmos
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'gizmos'))
-	
-	# Add tcl
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'tcl'))
-	
-	# Add icons
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'icons'))
-	
-	# Add python
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'python'))
-	
-	# Add OSX plugins
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'plugins', 'osx'))
+    
+    # Add gizmos
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'gizmos'))
+    print "GIZMOS:", os.path.join(os.environ.get('NUKE_STARTUP', None), 'gizmos')
+    
+    # Add tcl
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'tcl'))
+    
+    # Add icons
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'icons'))
+    
+    # Add python
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'python'))
+    print "PYTHON:", os.path.join(os.environ.get('NUKE_STARTUP', None), 'python')
+    
+    # Add OSX plugins
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx'))
 
-	# Add Geometry plugins
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'plugins', 'osx', 'geometry'))
-	
-	# Add Dynamics plugins
-	nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_PATH', None), 'plugins', 'osx', 'dynamics'))
+    # Add Geometry plugins
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx', 'geometry'))
+    
+    # Add Dynamics plugins
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx', 'dynamics'))
 
 ### END PLUGIN ADDITIONS ###
 
@@ -73,13 +75,13 @@ if nuke.env['MACOS']:
 ## get all folders in $SHARED_SERVER location and add their path to Nuke
 nukeDirs = []
 for dirname, dirnames, filenames in os.walk(os.environ.get('NUKE_PATH', None) ):
-	for subdirname in dirnames:
-		nukeDirs.append(os.path.join(dirname, subdirname))
+    for subdirname in dirnames:
+        nukeDirs.append(os.path.join(dirname, subdirname))
 
 for path in nukeDirs:
-	nuke.pluginAddPath(path)
+    nuke.pluginAddPath(path)
 
-	
+    
 ## LUMA gizmo collector
 CUSTOM_GIZMO_LOCATION = os.path.join(os.environ.get('NUKE_PATH', None), 'gizmos')
 
@@ -213,7 +215,7 @@ if __name__ == '__main__':
 ### Read and Write nodes change defaults
 nuke.knobDefault("Read.before", "black")
 nuke.knobDefault("Read.after", "black")
-	
+    
 
 ### Image Formats
 nuke.addFormat ("2048 1556 2.0 2k_anamorphic")

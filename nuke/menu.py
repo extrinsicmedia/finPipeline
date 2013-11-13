@@ -17,12 +17,8 @@ import os
 import re
 import sys
 import nuke
-#import Send2Rush as s2r
-import os.path
 import djv_this
 import fin_assetManager
-import pixelfudger
-import animatedSnap3D
 
 ### GET ENV VARS SETUP ###
 finServer = os.environ.get('SERVER', None)
@@ -56,19 +52,15 @@ def guiOn():
         
 # Create paths
 def createPaths():
-    n = nuke.allNodes()
+    n = nuke.allNodes(recurseGroups=True)
     for x in n:
         if x.Class() == "Write":
             path = x.knob("file").value()
-            path = path.split("/")
-            pathNum = len(path)
-            pathNum = pathNum - 1
-            del path[pathNum]
-            path = "/".join(path)
+            path = os.path.dirname(path)
             if os.path.exists(path):
                 pass
             else:
-                os.mkdir(path)
+                os.makedirs(path)
                 create = True
     if create == True:
         nuke.message( "Paths have been created" )
@@ -177,10 +169,10 @@ nuke.knobDefault( 'Write.beforeRender', 'fin_assetManager.createOutDirs()')
 ### END ASSET MANAGEMENT SETUP ###
 
 
-### BEGIN RUSH SETUP ###
+### BEGIN RENDER SETUP ###
 ## Uncomment this if RUSH is used
 #m = menubar.addMenu("Render")
-#m.addCommand("Create Paths", "fin_Tools.createPaths()")
+#m.addCommand("Create Paths", "createPaths()")
 #m.addCommand("Fix Paths", "fixPath.fixPath()")
 #m.addCommand("Send2Rush", "s2r.Nuke2Rush()")
 
