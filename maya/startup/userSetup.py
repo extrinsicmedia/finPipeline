@@ -27,7 +27,6 @@ import maya.cmds as cmds
 import maya.OpenMaya as api
 import maya.mel as mel
 import maya.utils as mu
-import fin_globals
 
 ## get environment variables
 scriptsPath = os.environ.get('MAYA_SCRIPT_PATH', None)

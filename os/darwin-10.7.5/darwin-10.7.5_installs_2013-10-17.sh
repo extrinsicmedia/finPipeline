@@ -52,12 +52,18 @@ brew install -v boost --universal
 brew install -v python3 --quicktest --with-brewed-openssl
 brew install -v doxygen
 brew install -v vim
+brew install -v colordiff
 brew install -v gfortran
 brew install -v tbb
 brew install -v scons
 brew install -v fltk
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
+brew install -v unrar
+
+brew tap homebrew/science
+brew install -v hdf5
+brew install -v alembic
 
 # New way to install all ffmpeg options
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-schroedinger --with-speex --with-theora --with-tools 
@@ -75,11 +81,6 @@ tar -xvjf FFmbc-0.7-rc8.tar.bz2
 cd FFmbc-0.7-rc8/
 ./configure --enable-gpl --enable-nonfree --enable-shared --enable-postproc --enable-runtime-cpudetect --enable-frei0r --enable-libdc1394 --enable-libdirac --enable-libfaac --enable-libmp3lame --enable-libopenjpeg --enable-libschroedinger --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-pthreads --enable-libxvid --enable-zlib
 
-brew install OpenImageIO
-
-
-
-
 # Update python3 setuptools and pip
 sudo pip3 install --upgrade setuptools
 sudo pip3 install --upgrade pip
@@ -89,6 +90,13 @@ sudo pip install virtualenvwrapper
 sudo pip install numpy
 sudo pip install scipy
 sudo pip install scikit-learn
+sudo pip install pyp
+sudo pip install cython
+sudo pip install scikit-image
+
+# Maya files setup
+cp $SYSTEMS_SERVER/maya/STARTUP/userSetup.py ~/Library/Preferences/Autodesk/maya/2014-x64/scripts/
+cp $SYSTEMS_SERVER/maya/STARTUP/_user_files/Maya_mac.env ~/Library/Preferences/Autodesk/maya/2014-x64/
 
 
 # Possibly need to delete these:

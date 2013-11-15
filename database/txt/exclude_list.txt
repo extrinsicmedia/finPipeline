@@ -1,0 +1,12 @@
+.dropbox
+.DS_Store
+.bzvol
+.Spotlight-V100
+.fseventsd
+.TemporaryItems
+.Trashes
+*.gdoc
+*.gsheet
+*.gscript
+Icon*
+*.pyc
