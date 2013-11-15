@@ -4,10 +4,10 @@
 	<shelfItem icon="deleteHist.png" cmds="mel.eval('DeleteHistory;')" ann="Delete History"/>
 	<shelfItem icon="deleteAllHist.png" cmds="mel.eval('DeleteAllHistory;')" ann="Delete All History"/>
 	<shelfItem icon="freezeTransform.png" cmds="cmds.makeIdentity( a=True, t=True, r=True, s=True, n=False)" ann="Freeze Transformation - Translate, Rotation, and Scale"/>
-	<shelfItem icon="newCam.png" cmds="import finCam; finCam.newCam()" ann="Create New Camera"/>
-	<shelfItem icon="renderRes.png" cmds="import finCam; finCam.renderResolution()" ann="Change Render Resolution"/>
-	<shelfItem icon="linear.png" cmds="mel.eval( 'unifiedRenderGlobalsWindow();window -e -vis 1 unifiedRenderGlobalsWindow;source fin_linSRGB;fin_linSRGB();' )" ann="Set sRGB files, Linear Output Workflow"/>
-	<shelfItem icon="exr.png" cmds="import fin_exr; fin_exr.fin_exr()" ann="Set up EXR workflow"/>
-	<shelfItem icon="unifSamp.png" cmds="import fin_unifiedSampling; fin_unifiedSampling.setUnifRen()" ann="Turn Unified Sampling on"/>
+	<shelfItem icon="newCam.png" cmds="import setCam; setCam.newCam()" ann="Create New Camera"/>
+	<shelfItem icon="renderRes.png" cmds="import setCam; setCam.renderResolution()" ann="Change Render Resolution"/>
+	<shelfItem icon="linear.png" cmds="mel.eval( 'unifiedRenderGlobalsWindow();window -e -vis 1 unifiedRenderGlobalsWindow;source setLinearsRGB;setLinearsRGB();' )" ann="Set sRGB files, Linear Output Workflow"/>
+	<shelfItem icon="exr.png" cmds="import setEXR; setEXR.setEXR()" ann="Set up EXR workflow"/>
+	<shelfItem icon="unifSamp.png" cmds="import setUnifiedSampling; setUnifiedSampling.setUnifRen()" ann="Turn Unified Sampling on"/>
 	<shelfItem icon="end.png" cmds="import Maya2Rush; Maya2Rush.Maya2Rush()" ann="Submit Render to Rush"/>
 </finShelf>
