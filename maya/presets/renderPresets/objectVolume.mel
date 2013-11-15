@@ -1,6 +1,0 @@
-startAttrPreset( "renderPass" );
-global string $gAEAttrPresetCurrentTarget;
-setRenderPassType -defaultDataType -type "VOLOBJ" -numChannels 4 $gAEAttrPresetCurrentTarget; 
-blendAttrStr "passGroupName" "Volume"; 
-blendAttr "renderable" 1; 
-endAttrPreset();

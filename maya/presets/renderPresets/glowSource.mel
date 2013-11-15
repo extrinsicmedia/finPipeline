@@ -1,6 +1,0 @@
-startAttrPreset( "renderPass" );
-global string $gAEAttrPresetCurrentTarget;
-setRenderPassType -defaultDataType -type "GLORAW" -numChannels 4 $gAEAttrPresetCurrentTarget; 
-blendAttrStr "passGroupName" "FX"; 
-blendAttr "renderable" 1; 
-endAttrPreset();

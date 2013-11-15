@@ -1,6 +1,0 @@
-startAttrPreset( "renderPass" );
-global string $gAEAttrPresetCurrentTarget;
-setRenderPassType -defaultDataType -type "BEAUTY" -numChannels 4 $gAEAttrPresetCurrentTarget; 
-blendAttrStr "passGroupName" "Beauties"; 
-blendAttr "renderable" 1; 
-endAttrPreset();

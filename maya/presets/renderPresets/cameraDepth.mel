@@ -1,7 +1,0 @@
-startAttrPreset( "renderPass" );
-global string $gAEAttrPresetCurrentTarget;
-setRenderPassType -defaultDataType -type "CAMZ" $gAEAttrPresetCurrentTarget; 
-blendAttrStr "passGroupName" "CGpost"; 
-blendAttr "renderable" 1; 
-blendAttr "remap" 0; 
-endAttrPreset();

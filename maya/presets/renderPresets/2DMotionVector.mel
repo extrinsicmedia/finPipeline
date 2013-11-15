@@ -1,6 +1,0 @@
-startAttrPreset( "renderPass" );
-global string $gAEAttrPresetCurrentTarget;
-setRenderPassType -defaultDataType -type "MV2E" $gAEAttrPresetCurrentTarget; 
-blendAttrStr "passGroupName" "CGPost"; 
-blendAttr "renderable" 1; 
-endAttrPreset();
