@@ -1,0 +1,9 @@
+
+global proc setLinearsRGB()
+{
+    setAttr "defaultRenderGlobals.colorProfileEnabled" 1;
+    setAttr "defaultRenderGlobals.inputColorProfile" 1;
+    setAttr "defaultRenderGlobals.outputColorProfile" 2;
+    changeInputColorProfile();
+    setAttr "defaultViewColorManager.imageColorProfile" 2;
+}
