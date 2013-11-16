@@ -94,6 +94,8 @@ def loadPlugins():
     # set the optionVar that enables hidden mentalray shaders   
     pm.optionVar['MIP_SHD_EXPOSE'] = 1
     pm.runtime.SavePreferences()
+    
+    cmds.setAttr('defaultRenderGlobals.ren', 'mentalRay', type='string' )
 
 
 ## Create group structure for initial organization
@@ -105,8 +107,9 @@ def initialStructure():
     cmds.group( em=True, name='___DYN___' )
 
 def newStuff():
-    # change render drop down
-    cmds.setAttr('defaultRenderGlobals.ren', 'mentalRay', type='string' )
+    # test stuff goes here
+    pass
+    
     
 def startupCheck():
     #import finMayaToolsInstall

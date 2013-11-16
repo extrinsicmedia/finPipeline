@@ -144,13 +144,18 @@ if [ "$UNAME" == "Darwin" ]; then
     #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
     #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
     
-    export MAYA_SCRIPT_PATH="$MAYA_SHARED_DIR/mel"
+    export MAYA_FIN_SCRIPT_PATH="$MAYA_SHARED_DIR/mel"
+    export MAYA_EXTERNAL_SCRIPT_PATH="$MAYA_SHARED_DIR/external/mel"
+    export MAYA_SCRIPT_PATH="$MAYA_FIN_SCRIPT_PATH:MAYA_EXTERNAL_SCRIPT_PATH"
     export MAYA_FIN_PLUGIN_PATH="$MAYA_SHARED_DIR/plugins"
     export MAYA_EXTERNAL_PLUGIN_PATH="$MAYA_SHARED_DIR/external/plugins"
-    export MAYA_PLUG_IN_PATH="$MAYA_FIN_PLUGIN_PATH:$MAYA_EXTERNAL_PLUGIN_PATH:$MAYA_PLUG_IN_PATH"
-    export XBMLANGPATH="$MAYA_SHARED_DIR/icons"
-    export MAYA_ICON_PATH="$MAYA_SHARED_DIR/icons"
-    export MAYA_PYTHON_PATH="$MAYA_SHARED_DIR/python"
+    export MAYA_PLUG_IN_PATH="$MAYA_FIN_PLUGIN_PATH:$MAYA_EXTERNAL_PLUGIN_PATH"
+    export MAYA_FIN_ICON_PATH="$MAYA_SHARED_DIR/icons"
+    export MAYA_EXTERNAL_ICON_PATH="$MAYA_SHARED_DIR/external/icons"
+    export XBMLANGPATH="$MAYA_FIN_ICON_PATH:$MAYA_EXTERNAL_ICON_PATH"
+    export MAYA_FIN_PYTHON_PATH="$MAYA_SHARED_DIR/python"
+    export MAYA_EXTERNAL_PYTHON_PATH="$MAYA_SHARED_DIR/external/python"
+    export MAYA_PYTHON_PATH="$MAYA_FIN_PYTHON_PATH:$MAYA_EXTERNAL_PYTHON_PATH"
     
     # Dynamic shelf variables here so Maya.env doesn't need to be set
     export MAYA_DYN_SHELF_NAME="finShelf"
