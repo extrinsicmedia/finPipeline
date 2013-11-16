@@ -1,85 +1,85 @@
-# -*- coding: utf-8 -*-
-#########################################################################
-############################# INFORMATIONS ##############################
-#########################################################################
-#
-#    TITLE : dynamicShelf
-#    AUTHOR : Nicolas Koubi
-#
-#########################################################################
-############################### READ-ME #################################
-#########################################################################
-#
-#
-# DESCRIPTION:
-#
-#   Dynamic shelf plug-in for Maya.
-#
-#
-# DEPENDENCIES:
-#
-#    maya.cmds, maya.mel, sys, os, minidom
-#
-#
-#########################################################################
+#!/usr/bin/env python
 
+'''
+finShelf.py - A plugin to create a dynamic shelf system in Maya.  Based on a
+tutorial by Nicolas Koubi http://etoia.free.fr
+Copyright (c) 2013  Miles Lauridsen
 
-#########################################################################
-##### MODULES IMPORT
-#########################################################################
+Based on BSD 2-Clause License  http://opensource.org/licenses/BSD-2-Clause
 
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+'''
+
+## IMPORTS ##
 
     ## SYS
 try:
     import sys
 except ImportError: 
     print "sys import failed"
-    
-    
+
+
     ## OS
 try:
     import os
 except ImportError: 
     print "os import failed"
 
-    
+
     ## MAYA.MEL
 try:
     import maya.mel as mel
 except ImportError: 
     print "maya.mel import failed"
-    
-    
+
+
     ## MAYA.CMDS
 try:
     import maya.cmds as cmds
 except ImportError: 
     print "maya.cmds import failed"
-    
-    
+
+
     ## MINIDOM
 try:
     from xml.dom import minidom
 except ImportError: 
     print "minidom import failed"
 
-    
-#########################################################################
-##### PATHS
-#########################################################################
 
+## Set Paths ##
 
-## Get icons path from the Maya.env ICONS_PATH variable
-iconsPath = os.environ.get('ICONS_PATH', None)
+# Get the Maya files shared directory
+sharedDir = os.environ.get('MAYA_SHARED_DIR', None)
 
-## Get project name from the Maya.env PRJ_NAME variable
-prjName = os.environ.get('PRJ_NAME', None)
+# Get icons path from the Maya.env ICONS_PATH variable
+iconsPath = os.environ.get('MAYA_ICON_PATH', None)
 
-## Get the CONFIGS_PATH from the Maya.env file and get the configuration files for the specified project
-configsPath = os.environ.get('CONFIGS_PATH', None)
-prjConfFiles = os.path.join(configsPath, prjName)
-    
-    
+# Get project name from the Maya.env PRJ_NAME variable
+prjName = os.environ.get('MAYA_DYN_SHELF_NAME', None)
+
+# Set the configs folder path
+prjConfFiles = os.path.join(sharedDir, "shelves", prjName, "configs")
+
 #####################################################################
 ## initializePlugin
 #####################################################################
@@ -114,8 +114,9 @@ def initializePlugin(mobject):
         xmlMenuDoc = minidom.parse(shelfConfFile)
         
         ## Loop trough each shelfItem entry in the shelfConfFile
-        for eachShelfItem in xmlMenuDoc.getElementsByTagName("shelfItem") :
-	    ## Get the icon name
+        for eachShelfItem in xmlMenuDoc.getElementsByTagName("shelfItem"):
+        
+            ## Get the icon name
             getIcon = eachShelfItem.attributes['icon'].value
             ## Join the icon name to the icons path in order to get the full path of the icon
             shelfBtnIcon = os.path.join(iconsPath, getIcon)
@@ -124,7 +125,7 @@ def initializePlugin(mobject):
             ## Get the command to launch
             getCommand = eachShelfItem.attributes['cmds'].value
 
-	    ## Create the actual shelf button with the above parameters
+        ## Create the actual shelf button with the above parameters
             cmds.shelfButton(command=getCommand, annotation=getAnnotation, image=shelfBtnIcon)
             
             

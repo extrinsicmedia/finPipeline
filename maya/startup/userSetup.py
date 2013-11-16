@@ -17,8 +17,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html/>.
 '''
 
-### Copy this file to the user script directory
-### On MacOSX - /Users/<userName>/Library/Preferences/Autodesk/maya/2012-x64/scripts
+### Symlink this file to the user script directory
+### On MacOSX - ln -s $SYSTEMS_SERVER/maya/startup/userSetup.py /Users/<userName>/Library/Preferences/Autodesk/maya/2012-x64/scripts/userSetup.py
 ### On Windows - 
 
 import sys
@@ -27,11 +27,12 @@ import maya.cmds as cmds
 import maya.OpenMaya as api
 import maya.mel as mel
 import maya.utils as mu
+import pymel as pm
 
 ## get environment variables
 scriptsPath = os.environ.get('MAYA_SCRIPT_PATH', None)
 mayaPythonPath = os.environ.get('MAYA_PYTHON_PATH', None)
-startupPath = os.path.join(os.environ.get('MAYA_SHARED_DIR', None) , 'STARTUP')
+startupPath = os.path.join(os.environ.get('MAYA_SHARED_DIR', None) , 'startup')
 
 sys.path.append( startupPath )
 sys.path.append( mayaPythonPath )
@@ -42,9 +43,10 @@ import finUserSetup as fus
 def printConfirm():
     print "FIN Startup Complete"
 
-mu.executeDeferred( 'fus.loadPlugins()' )
-mu.executeDeferred( 'fus.initialStructure()' )
-mu.executeDeferred( 'fus.newStuff()' )
-mu.executeDeferred( 'fus.startupMenu()' )
-mu.executeDeferred( 'printConfirm()' )
+pm.mayautils.executeDeferred( 'fus.osPlugins()' )
+pm.mayautils.executeDeferred( 'fus.loadPlugins()' )
+pm.mayautils.executeDeferred( 'fus.initialStructure()' )
+pm.mayautils.executeDeferred( 'fus.newStuff()' )
+pm.mayautils.executeDeferred( 'fus.startupCheck()' )
+pm.mayautils.executeDeferred( 'printConfirm()' )
 

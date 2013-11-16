@@ -116,8 +116,8 @@ if [ "$UNAME" == "Darwin" ]; then
     alias nuke='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
     alias nuke70v8='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
 
-    export NUKE_PATH="$SYSTEMS_SERVER/nuke/STARTUP";
-    export NUKE_STARTUP="$SYSTEMS_SERVER/nuke/STARTUP";
+    export NUKE_PATH="$SYSTEMS_SERVER/nuke/STARTUP"
+    export NUKE_STARTUP="$SYSTEMS_SERVER/nuke/STARTUP"
 
     ## Adobe Photoshop
     alias photoshop='/Applications/Adobe\ Photoshop\ CC/Adobe\ Photoshop\ CC.app/Contents/MacOS/Adobe\ Photoshop\ CC'
@@ -139,11 +139,16 @@ if [ "$UNAME" == "Darwin" ]; then
     #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
     #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
     
-    export MAYA_SCRIPT_PATH="$MAYA_SHARED_DIR/SCRIPTS/mel";export MAYA_SCRIPT_PATH
-    export MAYA_PLUG_IN_PATH="$MAYA_SHARED_DIR/PLUGINS";export MAYA_PLUG_IN_PATH
-    export XBMLANGPATH="$MAYA_SHARED_DIR/SCRIPTS/icons";export XBMLANGPATH
-    export MAYA_ICON_PATH="$MAYA_SHARED_DIR/SCRIPTS/icons";export MAYA_ICON_PATH
-    export MAYA_PYTHON_PATH="$MAYA_SHARED_DIR/SCRIPTS/python";export MAYA_PYTHON_PATH
+    export MAYA_SCRIPT_PATH="$MAYA_SHARED_DIR/mel"
+    export MAYA_FIN_PLUGIN_PATH="$MAYA_SHARED_DIR/plugins"
+    export MAYA_EXTERNAL_PLUGIN_PATH="$MAYA_SHARED_DIR/external/plugins"
+    export MAYA_PLUG_IN_PATH="$MAYA_FIN_PLUGIN_PATH:$MAYA_EXTERNAL_PLUGIN_PATH:$MAYA_PLUG_IN_PATH"
+    export XBMLANGPATH="$MAYA_SHARED_DIR/icons"
+    export MAYA_ICON_PATH="$MAYA_SHARED_DIR/icons"
+    export MAYA_PYTHON_PATH="$MAYA_SHARED_DIR/python"
+    
+    # Dynamic shelf variables here so Maya.env doesn't need to be set
+    export MAYA_DYN_SHELF_NAME="finShelf"
 
     ## Komodo
     alias komodo='/Applications/Komodo\ Edit\ 8.app/Contents/MacOS/komodo'
