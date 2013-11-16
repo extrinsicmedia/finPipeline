@@ -80,6 +80,11 @@ if [ "$UNAME" == "Darwin" ]; then
     makedate='mkdir $(date +%Y-%m-%d)'
     #export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0"
     
+    ## Python - relying on a properly set PYTHONPATH in user's .bashrc
+    ## Additonal libraries could be placed here, but THINK critically
+    ## if that is the best idea
+    #export PYTHONPATH="$PYTHONPATH"
+    
     ### Apps
     alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt'
     alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
@@ -152,14 +157,6 @@ if [ "$UNAME" == "Darwin" ]; then
 
     ## Komodo
     alias komodo='/Applications/Komodo\ Edit\ 8.app/Contents/MacOS/komodo'
-
-    ## Python
-    # Setting PATH for Python 2.7
-    PATH="/usr/local/bin/:${PATH}"
-
-    PYTHONPATH="$PYTHON_SERVER:/usr/local/lib/python2.7/site-packages"
-    ## Took the following line out for now
-    # $MAYA_SHARED_DIR/SCRIPTS/python:$MAYA_SHARED_DIR/SCRIPTS/python/pymel-1.0.3:
 fi
 
 ### jobStart tool function
