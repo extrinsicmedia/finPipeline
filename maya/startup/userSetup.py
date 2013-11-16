@@ -29,14 +29,9 @@ import maya.mel as mel
 import maya.utils as mu
 import pymel as pm
 
-## get environment variables
-#scriptsPath = os.environ.get('MAYA_SCRIPT_PATH', None)
-#mayaPythonPath = os.environ.get('MAYA_PYTHON_PATH', None)
-startupPath = os.path.join(os.environ.get('MAYA_SHARED_DIR', None) , 'startup')
-
-sys.path.append( startupPath )
-os.environ['PYTHONPATH'] = os.pathsep.join( [os.environ.get('PYTHONPATH', None), \
-                                os.environ.get('MAYA_PYTHON_PATH', None) ]) 
+## Set environment variables
+sys.path.append( os.path.join(os.environ.get('MAYA_SHARED_DIR', None) , 'startup') )
+sys.path.append( os.environ.get('MAYA_PYTHON_PATH', None))
 
 import finUserSetup as fus
 
