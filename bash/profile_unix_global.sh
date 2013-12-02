@@ -77,7 +77,8 @@ if [ "$UNAME" == "Darwin" ]; then
 
     ## Unix
     PATH="$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin:$PATH"
-    makedate='mkdir $(date +%Y-%m-%d)'
+    alias makedate='mkdir $(date +%Y-%m-%d)'
+    alias makedatetime='mkdir $(date +%Y-%m-%d_%H%M%S)'
     #export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0"
     
     ## Python - relying on a properly set PYTHONPATH in user's .bashrc
@@ -90,7 +91,7 @@ if [ "$UNAME" == "Darwin" ]; then
     alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
     ## OCIO Default setup
-    #xport OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
+    export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
 
     ### Application alias and ENV vars ###
 
@@ -138,6 +139,9 @@ if [ "$UNAME" == "Darwin" ]; then
     alias maya2014='/Applications/Autodesk/maya2014/Maya.app/Contents/bin/maya'
     export MAYA_LOCATION="/Applications/Autodesk/maya2014/Maya.app/Contents"
     export MAYA_SHARED_DIR="$SYSTEMS_SERVER/maya"
+    
+    # Add Maya bin folder to $PATH
+    export PATH="/Applications/Autodesk/maya2014/Maya.app/Contents/bin:${PATH}"
 
     # Change this based on facility license settings
     #MAYA_LICENSE=unlimited; export MAYA_LICENSE
@@ -153,6 +157,9 @@ if [ "$UNAME" == "Darwin" ]; then
     export MAYA_FIN_ICON_PATH="$MAYA_SHARED_DIR/icons"
     export MAYA_EXTERNAL_ICON_PATH="$MAYA_SHARED_DIR/external/icons"
     export XBMLANGPATH="$MAYA_FIN_ICON_PATH:$MAYA_EXTERNAL_ICON_PATH"
+    export MAYA_FIN_SHELF_PATH="$MAYA_SHARED_DIR/shelves"
+    export MAYA_EXTERNAL_SHELF_PATH="$MAYA_SHARED_DIR/external/shelves"
+    export MAYA_SHELF_PATH="$MAYA_FIN_SHELF_PATH:$MAYA_EXTERNAL_SHELF_PATH"
     export MAYA_FIN_PYTHON_PATH="$MAYA_SHARED_DIR/python"
     export MAYA_EXTERNAL_PYTHON_PATH="$MAYA_SHARED_DIR/external/python"
     export MAYA_PYTHON_PATH="$MAYA_FIN_PYTHON_PATH:$MAYA_EXTERNAL_PYTHON_PATH"
