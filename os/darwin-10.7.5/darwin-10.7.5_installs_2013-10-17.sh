@@ -93,6 +93,7 @@ sudo pip install scikit-learn
 sudo pip install pyp
 sudo pip install cython
 sudo pip install scikit-image
+sudo pip install OpenEXR
 
 # Maya files setup
 cp $SYSTEMS_SERVER/maya/STARTUP/userSetup.py ~/Library/Preferences/Autodesk/maya/2014-x64/scripts/
