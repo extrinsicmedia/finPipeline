@@ -60,6 +60,7 @@ brew install -v fltk
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 brew install -v unrar
+brew install -v coreutils
 
 brew tap homebrew/science
 brew install -v hdf5
