@@ -91,6 +91,18 @@ def loadPlugins():
     mel.eval( 'if(!`pluginInfo -query -l -n objExport`) loadPlugin "objExport";')
     mel.eval( 'if(!`pluginInfo -query -l -n fbxmaya`) loadPlugin "fbxmaya";')
     
+    # external plugins
+    print os.environ["MAYA_PLUG_IN_PATH"]
+    cmds.loadPlugin( 'SOuP.bundle')
+    mel.eval( 'if(!`pluginInfo -query -l -n "SOuP"`) loadPlugin "SOuP";')
+    mel.eval('if (`shelfLayout -exists soup `) deleteUI soup;')
+    mel.eval('loadNewShelf "shelf_soup.mel"')
+    
+    if pm.versions.current() in ( 201402, 2014 ):
+        mel.eval( 'if(!`pluginInfo -query -l -n "MASH-2014"`) loadPlugin "MASH-2014";')
+        mel.eval('if (`shelfLayout -exists MASH `) deleteUI MASH;')
+        mel.eval('loadNewShelf "shelf_MASH.mel"')
+    
     # set the optionVar that enables hidden mentalray shaders   
     pm.optionVar['MIP_SHD_EXPOSE'] = 1
     pm.runtime.SavePreferences()
