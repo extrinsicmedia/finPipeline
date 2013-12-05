@@ -1,3 +1,5 @@
+### Instructions for working with EC2 GUI instances from OTOY/Autodesk
+
 On Windows, check for GUID token:
 wmic PROCESS get Caption,Commandline | FIND "GUID="
 
