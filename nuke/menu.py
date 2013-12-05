@@ -30,12 +30,15 @@ import re
 import sys
 import nuke
 import djv_this
-import fin_assetManager
+import assetManager
 
 ### GET ENV VARS SETUP ###
 finServer = os.environ.get('SERVER', None)
 jobServer = os.environ.get('JOB_SERVER', None)
 user = os.environ.get('USER', None)
+job = os.environ.get('JOB', None)
+seq = os.environ.get('SEQUENCE', None)
+shot = os.environ.get('SHOT', None)
 
 ### END ENV VARS SETUP ###
 
@@ -143,25 +146,29 @@ nuke.menu( 'Nodes' ).addCommand( 'Image/WriteAsset', lambda: nuke.createNode( 'W
 nuke.menu( 'Nodes' ).addCommand( 'Image/Read', customRead, 'shift-r' )
 
 # ADD EASY SAVE TO SHOT MENU
-shotMenu = '%s - %s' % ( os.getenv( 'SEQ' ), os.getenv('SHOT') )
-nuke.menu( 'Nuke' ).addCommand( shotMenu+'/Easy Save', fin_assetManager.easySave )
+if seq != None:
+    shotMenu = '%s - %s' % ( seq, shot )
+else:
+    shotMenu = '%s' % shot
+    
+nuke.menu( 'Nuke' ).addCommand( shotMenu+'/Easy Save', assetManager.easySave )
 
 
 # SET FILE BROWSER FAVORITES
 nuke.addFavoriteDir(
     name = 'NUKE SCRIPTS',
-    directory = fin_assetManager.nukeDir(),
+    directory = assetManager.nukeDir(),
     type = nuke.SCRIPT)
 
 # HELPER FUNCTION FOR NUKE SCRIPT PANEL
 def nkPanelHelper():
         # GET ALL NUKE SCRIPTS FOR CURRENT SHOT
-        nkScripts = fin_assetManager.getNukeScripts()
+        nkScripts = assetManager.getNukeScripts()
         if not nkScripts:
                 # IF THERE ARE NONE DON'T DO ANYTHING
                 return
         # CREATE PANEL
-        p = fin_assetManager.NkPanel( nkScripts )
+        p = assetManager.NkPanel( nkScripts )
         # ADJUST SIZE
         p.setMinimumSize( 200, 200 )
 
@@ -171,20 +178,20 @@ def nkPanelHelper():
                         nuke.scriptOpen( p.selectedScript )
 
 # ADD CALLBACKS
-nuke.addOnScriptSave( fin_assetManager.checkScriptName )
+nuke.addOnScriptSave( assetManager.checkScriptName )
 nuke.addOnUserCreate( nkPanelHelper, nodeClass='Root')
-nuke.addOnUserCreate( fin_assetManager.createVersionKnobs, nodeClass='Read' )
-nuke.addKnobChanged( fin_assetManager.updateVersionKnob, nodeClass='Read' )
-#nuke.addBeforeRender( assetManager.createOutDirs, nodeClass='Write' )
-nuke.knobDefault( 'Write.beforeRender', 'fin_assetManager.createOutDirs()')
+nuke.addOnUserCreate( assetManager.createVersionKnobs, nodeClass='Read' )
+nuke.addKnobChanged( assetManager.updateVersionKnob, nodeClass='Read' )
+nuke.addBeforeRender( assetManager.createOutDirs, nodeClass='Write' )
+nuke.knobDefault( 'Write.beforeRender', 'assetManager.createOutDirs()')
 ### END ASSET MANAGEMENT SETUP ###
 
 
 ### BEGIN RENDER SETUP ###
-## Uncomment this if RUSH is used
-#m = menubar.addMenu("Render")
-#m.addCommand("Create Paths", "createPaths()")
+m = menubar.addMenu("Render")
+m.addCommand("Create Paths", "createPaths()")
 #m.addCommand("Fix Paths", "fixPath.fixPath()")
+## Uncomment this if RUSH is used
 #m.addCommand("Send2Rush", "s2r.Nuke2Rush()")
 
 ### END RUSH SETUP ###
@@ -206,11 +213,11 @@ nuke.menu("Nodes").addCommand("Draw/Grain_CB", "nuke.createNode('Grain_CB')", ic
 ### BEGIN MENU SETUP ###
 ## Nukepedia
 # Download these from Nukepedia.com
-import presetBackdrop
-nukepediaMenu = nuke.menu('Nuke').addMenu('Nukepedia')
-nukepediaMenu.addCommand('Preset Backdrop', 'presetBackdrop.presetBackdrop()', 'ctrl+alt+b')
-import CopyCam
-nukepediaMenu.addCommand( 'Copy Camera for Projection', 'CopyCam.copyCamForProj()', "Shift+v")
+#import presetBackdrop
+#nukepediaMenu = nuke.menu('Nuke').addMenu('Nukepedia')
+#nukepediaMenu.addCommand('Preset Backdrop', 'presetBackdrop.presetBackdrop()', 'ctrl+alt+b')
+#import CopyCam
+#nukepediaMenu.addCommand( 'Copy Camera for Projection', 'CopyCam.copyCamForProj()', "Shift+v")
 
 ## Miles Menu
 milesMenu = nuke.menu('Nuke').addMenu('Miles')
