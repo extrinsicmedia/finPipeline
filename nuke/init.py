@@ -49,7 +49,7 @@ def myFilenameFilter(filename):
     return filename, filename2
 
 # Use the filenameFilter(s)
-nuke.addFilenameFilter(myFilenameFilter)
+#nuke.addFilenameFilter(myFilenameFilter)
 ### END FILEPATH CORRECTION ###
 
 ### BEGIN PLUGIN ADDITIONS ###
@@ -60,7 +60,6 @@ if nuke.env['MACOS']:
     
     # Add gizmos
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'gizmos'))
-    print "GIZMOS:", os.path.join(os.environ.get('NUKE_STARTUP', None), 'gizmos')
     
     # Add tcl
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'tcl'))
@@ -70,7 +69,6 @@ if nuke.env['MACOS']:
     
     # Add python
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'python'))
-    print "PYTHON:", os.path.join(os.environ.get('NUKE_STARTUP', None), 'python')
     
     # Add OSX plugins
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx'))
@@ -82,17 +80,6 @@ if nuke.env['MACOS']:
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx', 'dynamics'))
 
 ### END PLUGIN ADDITIONS ###
-
-
-## get all folders in $SHARED_SERVER location and add their path to Nuke
-nukeDirs = []
-for dirname, dirnames, filenames in os.walk(os.environ.get('NUKE_STARTUP', None) ):
-    for subdirname in dirnames:
-        print "Appending:", os.path.join(dirname, subdirname)
-        nukeDirs.append(os.path.join(dirname, subdirname))
-
-for path in nukeDirs:
-    nuke.pluginAddPath(path)
 
     
 ## LUMA gizmo collector
