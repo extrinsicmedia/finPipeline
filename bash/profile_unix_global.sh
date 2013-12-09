@@ -53,6 +53,7 @@ if [ "$UNAME" == "Darwin" ]; then
     export CONFIG_DIR_NAME="config"
     export CONFIG_FILE_NAME="config.sh"
     export PROD_DIR="production"
+    export SEQ_NAME="sequences"
     
     export LOCAL_TUTORIALS="$LOCAL_SERVER/ASSETS/tutorials"
     export PROD_TUTORIALS="$PROD_SERVER/ASSETS/tutorials"
@@ -122,8 +123,8 @@ if [ "$UNAME" == "Darwin" ]; then
     alias nuke='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
     alias nuke70v8='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
 
-    export NUKE_PATH="$SYSTEMS_SERVER/nuke/STARTUP"
-    export NUKE_STARTUP="$SYSTEMS_SERVER/nuke/STARTUP"
+    export NUKE_PATH="$SYSTEMS_SERVER/nuke"
+    export NUKE_STARTUP="$SYSTEMS_SERVER/nuke"
 
     ## Adobe Photoshop
     alias photoshop='/Applications/Adobe\ Photoshop\ CC/Adobe\ Photoshop\ CC.app/Contents/MacOS/Adobe\ Photoshop\ CC'
