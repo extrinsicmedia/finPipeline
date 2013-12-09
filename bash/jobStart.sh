@@ -33,6 +33,8 @@ then
     then
         echo export JOB="$1";
         START_PATH="$JOB_SERVER/$1";
+        
+        # Run this no matter what
         if [ -f $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
         then
             eval $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
@@ -44,10 +46,12 @@ then
             then
                 if [ -z $3 ]; then
                     echo export SHOT="$2";
+                    START_PATH="$JOB_SERVER/$1/$PROD_DIR/$2";
                 else
                     echo export SEQUENCE="$2";
                 fi
-                START_PATH="$JOB_SERVER/$1/$PROD_DIR/$2";
+                
+                # Run this no matter what
                 if [ -f $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
                 then
                     eval $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
