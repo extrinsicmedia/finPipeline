@@ -1,4 +1,4 @@
-finPipeline is a VFX pipeline methodology that relies on environment variables to build out complex interopability between various image manipulation and generation software packages.
+finPipeline is a VFX pipeline methodology that relies on environment variables to build out complex interoperability between various image manipulation and generation software packages.
 
 Currently the project requires a bash environment and has been written as shell scripts and python code.
 
