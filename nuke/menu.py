@@ -103,6 +103,13 @@ import nukescripts.ViewerProcess; nukescripts.ViewerProcess.register_viewers(def
 ### BEGIN FAVORITES SETUP ###
 ## Add Favorites directories
 nuke.addFavoriteDir('Job Server', jobServer )
+if job:
+    nuke.addFavoriteDir('Job', job)
+if seq:
+    nuke.addFavoriteDir('Sequence', seq)
+if shot:
+    nuke.addFavoriteDir('Shot', shot)
+
 toolbar = nuke.toolbar("Nodes")
 
 ### END FAVORITES SETUP ###
@@ -142,8 +149,8 @@ def customRead():
         n['DB'].setFlag( 0 )
 
 # ADD CUSTOM READ AND WRITE TO TOOLBAR
-nuke.menu( 'Nodes' ).addCommand( 'Image/WriteAsset', lambda: nuke.createNode( 'WriteAsset' ), 'shift-w' )
-nuke.menu( 'Nodes' ).addCommand( 'Image/Read', customRead, 'shift-r' )
+nuke.menu( 'Nodes' ).addCommand( 'Image/WriteAsset', lambda: nuke.createNode( 'WriteAsset' ), 'Shift-w' )
+nuke.menu( 'Nodes' ).addCommand( 'Image/Read', customRead, 'Shift-r' )
 
 # ADD EASY SAVE TO SHOT MENU
 if seq != None:
@@ -198,15 +205,18 @@ m.addCommand("Create Paths", "createPaths()")
 
 
 ### BEGIN GIZMO SETUP ###
+try:
 ##Keyer_CB
-nuke.menu("Nodes").addCommand("Keyer/Keyer_CB", "nuke.createNode('Keyer_CB')", icon="Keyer.png")
+    nuke.menu("Nodes").addCommand("Keyer/Keyer_CB", "nuke.createNode('Keyer_CB')", icon="Keyer.png")
+    
+    ##ScannedGrain_CB
+    nuke.menu("Nodes").addCommand("Draw/ScannedGrain_CB", "nuke.createNode('ScannedGrain_CB')", icon="ScannedGrainCB.png")
+    
+    ##Grain_CB
+    nuke.menu("Nodes").addCommand("Draw/Grain_CB", "nuke.createNode('Grain_CB')", icon="GrainCB.png")
 
-##ScannedGrain_CB
-nuke.menu("Nodes").addCommand("Draw/ScannedGrain_CB", "nuke.createNode('ScannedGrain_CB')", icon="ScannedGrainCB.png")
-
-##Grain_CB
-nuke.menu("Nodes").addCommand("Draw/Grain_CB", "nuke.createNode('Grain_CB')", icon="GrainCB.png")
-
+except:
+    print "Error with Gizmo loading"
 ### END GIZMO SETUP ###
 
 
