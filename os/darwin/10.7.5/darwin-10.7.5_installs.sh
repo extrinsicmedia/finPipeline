@@ -1,3 +1,5 @@
+### List any changes to the the installs here
+
 ## Manual installs
 # Komodo Edit
 # VLC
