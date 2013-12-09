@@ -1,98 +1,94 @@
 #!/bin/bash
 
-### Check OS and set paths accordingly based on that info ###
-
-UNAME=`uname`
-
 ### Shared Server and multiple use items. Change this based on FIN location
-## Make a linux version here
+### local server
+if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
+then
+        export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
+        export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+        export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+        export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+fi
 
-if [ "$UNAME" == "Darwin" ]; then
-    ### mobile servers
-    if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
+### production or shared server
+if [[ -d "/Volumes/PRODUCTION_01" ]];
     then
-            # Stupid whitespace in Google Drive Path so using * to pass the "Google\ Drive" portion of the path
-            export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
-            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
-    fi
-    
-    ### home job servers
-    if [[ -d "/Volumes/PRODUCTION_01" ]];
-        then
-            export PROD_SERVER="/Volumes/PRODUCTION_01"
-            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
-    fi
-    
-    ### set server to use
-    if [[ $LOCAL_SERVER ]];
-        then
-            ### Taking this out for now for dev
-            ###export SERVER="$HOME_SERVER";export SERVER
-            export SERVER="$LOCAL_SERVER"
-        else
-            export SERVER="$PROD_SERVER"
-    fi
-            
-    ### set default servers
-    export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-    export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-    export SYSTEMS_SERVER="$SERVER/SYSTEMS"
-    
-    export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-    export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-    export JOB_SERVER="$SERVER/PROJECTS"
-    
-    export LOCAL_DB_SERVER="$LOCAL_SYSTEMS_SERVER/database"
-    export PROD_DB_SERVER="$PROD_SYSTEMS_SERVER/database"
-    export DB_SERVER="$SYSTEMS_SERVER/database"
-    
-    export CONFIG_DIR_NAME="config"
-    export CONFIG_FILE_NAME="config.sh"
-    export PROD_DIR="production"
-    export SEQ_NAME="sequences"
-    
-    export LOCAL_TUTORIALS="$LOCAL_SERVER/ASSETS/tutorials"
-    export PROD_TUTORIALS="$PROD_SERVER/ASSETS/tutorials"
-    
-    export RSYNC_EXCLUDE="$SYSTEMS_SERVER/database/txt/exclude_list.txt"
+        export PROD_SERVER="/Volumes/PRODUCTION_01"
+        export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+        export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+        export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+fi
 
-    ### misc stuff
-    export LOCAL_APP_LIBRARY="$LOCAL_SERVER/APPS"
-    export PROD_APP_LIBRARY="$PROD_SERVER/APPS"
-    export APP_LIBRARY="$SERVER/APPS"
-    
-    export LOCAL_CHARTS="$LOCAL_SERVER/ASSETS/charts"
-    export PROD_CHARTS="$PROD_SERVER/ASSETS/charts"
-    export CHARTS="$SERVER/ASSETS/charts"
-    
-    ### RSYNC Setups
-    #alias
-    export RSYNC_TIMES_DRY="--recursive --times --verbose --ignore-existing --exclude-from=$SYSTEMS_SERVER/database/txt/exclude_list.txt --dry-run"
-    export RSYNC_TIMES="--recursive --times --verbose --ignore-existing --progress --exclude-from=$SYSTEMS_SERVER/database/txt/exclude_list.txt"
-    alias rsynctimesdry='rsync $RSYNC_TIMES_DRY'
-    alias rsynctimes='rsync $RSYNC_TIMES --log-file=$SYSTEMS_SERVER/database/logs/rsync/rsync-log-"$(date +%Y-%m-%d_%H%M%S)".log'
+#######################################################################
+##### OSX USERS SHOULDN'T NEED TO ADJUST ANYTHING BELOW THIS LINE #####
+#######################################################################
 
-    ## Unix
-    PATH="$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin:$PATH"
-    alias makedate='mkdir $(date +%Y-%m-%d)'
-    alias makedatetime='mkdir $(date +%Y-%m-%d_%H%M%S)'
-    #export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0"
-    
-    ## Python - relying on a properly set PYTHONPATH in user's .bashrc
-    ## Additonal libraries could be placed here, but THINK critically
-    ## if that is the best idea
-    #export PYTHONPATH="$PYTHONPATH"
-    
+### set server to use, if only one server is used, set $LOCAL_SERVER above
+if [[ $LOCAL_SERVER ]];
+    then
+        export SERVER="$LOCAL_SERVER"
+    else
+        export SERVER="$PROD_SERVER"
+fi
+        
+### set default servers
+export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+export SYSTEMS_SERVER="$SERVER/SYSTEMS"
+
+export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+export JOB_SERVER="$SERVER/PROJECTS"
+
+export LOCAL_DB_SERVER="$LOCAL_SYSTEMS_SERVER/database"
+export PROD_DB_SERVER="$PROD_SYSTEMS_SERVER/database"
+export DB_SERVER="$SYSTEMS_SERVER/database"
+
+export CONFIG_DIR_NAME="config"
+export CONFIG_FILE_NAME="config.sh"
+export PROD_DIR="production"
+export SEQ_NAME="sequences"
+
+export LOCAL_TUTORIALS="$LOCAL_SERVER/ASSETS/tutorials"
+export PROD_TUTORIALS="$PROD_SERVER/ASSETS/tutorials"
+
+export RSYNC_EXCLUDE="$SYSTEMS_SERVER/database/txt/exclude_list.txt"
+
+### misc stuff
+export LOCAL_APP_LIBRARY="$LOCAL_SERVER/APPS"
+export PROD_APP_LIBRARY="$PROD_SERVER/APPS"
+export APP_LIBRARY="$SERVER/APPS"
+
+export LOCAL_CHARTS="$LOCAL_SERVER/ASSETS/charts"
+export PROD_CHARTS="$PROD_SERVER/ASSETS/charts"
+export CHARTS="$SERVER/ASSETS/charts"
+
+### RSYNC Setups
+#alias
+export RSYNC_TIMES_DRY="--recursive --times --verbose --ignore-existing --exclude-from=$SYSTEMS_SERVER/database/txt/exclude_list.txt --dry-run"
+export RSYNC_TIMES="--recursive --times --verbose --ignore-existing --progress --exclude-from=$SYSTEMS_SERVER/database/txt/exclude_list.txt"
+alias rsynctimesdry='rsync $RSYNC_TIMES_DRY'
+alias rsynctimes='rsync $RSYNC_TIMES --log-file=$SYSTEMS_SERVER/database/logs/rsync/rsync-log-"$(date +%Y-%m-%d_%H%M%S)".log'
+
+## Unix
+PATH="$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin:$PATH"
+alias makedate='mkdir $(date +%Y-%m-%d)'
+alias makedatetime='mkdir $(date +%Y-%m-%d_%H%M%S)'
+#export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0"
+
+## Python - relying on a properly set PYTHONPATH in user's .bashrc
+## Additonal libraries could be placed here, but THINK critically
+## if that is the best idea
+#export PYTHONPATH="$PYTHONPATH"
+
+## OCIO Default setup
+export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
+
+### Check OS and set paths accordingly based on that info ###
+if [ `uname` == "Darwin" ]; then
     ### Apps
     alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt'
     alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-
-    ## OCIO Default setup
-    export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
 
     ### Application alias and ENV vars ###
 
