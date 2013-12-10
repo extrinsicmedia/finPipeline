@@ -37,3 +37,7 @@ Thumbs.db
 *.egg-info
 *~
 *.swp
+
+# User additions #
+##################
+test_*
