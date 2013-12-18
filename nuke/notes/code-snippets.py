@@ -8,6 +8,9 @@ for n in nuke.selectedNodes():
 for n in nuke.selectedNodes("Camera2"):
     print n.name()
     
+# select a node by name
+nuke.toNode("Noise1")
+    
 # running tcl commands in python
 nuke.tcl("value label")
 
