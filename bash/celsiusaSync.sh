@@ -1,19 +1,13 @@
 #!/bin/sh
 
-shopt -s expand_aliases
+# An example of using the jobSync command to sync a project with cron
+# Root will need to be set up with finPipeline for this to work
 
-### Server Paths
-LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
-LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-PROD_SERVER="/Volumes/PRODUCTION_01"
-PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+shopt -s expand_aliases
 
 ### RSYNC Setups
 RSYNC_TIMES_DRY="--recursive --times --verbose --ignore-existing --exclude-from=$LOCAL_SYSTEMS_SERVER/database/txt/exclude_list.txt --dry-run"
 RSYNC_TIMES="--recursive --times --verbose --ignore-existing --progress --exclude-from=$LOCAL_SYSTEMS_SERVER/database/txt/exclude_list.txt"
-alias rsynctimesdry='rsync $RSYNC_TIMES_DRY'
-alias rsynctimes='rsync $RSYNC_TIMES --log-file=$LOCAL_SYSTEMS_SERVER/database/logs/rsync/rsync-log-"$(date +%Y-%m-%d_%H%M%S)".log'
 
 ### The rsync script
 if [ $1 ];
