@@ -49,7 +49,7 @@ def setup():
                 os.environ["RV_MATTE_OPACITY"] = "0"
                 return 0
    
-   def maxVal(value):
+    def maxVal(value):
        if value > 1.0:
            return 0
        else:
@@ -57,9 +57,9 @@ def setup():
 
        
 
-    rv.commands.bind("default", "global", "key-down--J", matte, "")
-    rv.commands.bind("default", "global", "key-down--K", nomatte, "")
-    rv.commands.bind("default", "global", "key-down--M", noLUT, "")
+    rv.commands.bind("default", "global", "key-down--M", matte, "")
+    rv.commands.bind("default", "global", "key-down--N", nomatte, "")
+    rv.commands.bind("default", "global", "key-down--B", noLUT, "")
    
     if os.getenv("RVRC_CONFIG") == '1':
         return
