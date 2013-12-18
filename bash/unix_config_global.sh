@@ -121,11 +121,14 @@ if [ `uname` == "Darwin" ]; then
     alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 
     ## Setup Amazon EC2 Command-Line Tools
-    export EC2_HOME=~/.ec2
-    export PATH=$PATH:$EC2_HOME/bin
-    export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-    export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+    if [ -d ~/.ec2 ];
+    then
+        export EC2_HOME=~/.ec2
+        export PATH=$PATH:$EC2_HOME/bin
+        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+        export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+    fi
 
     ## Djview Alias
     alias djview='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
@@ -183,11 +186,14 @@ if [ `uname` == "Linux" ]; then
     alias firefox='echo "set Firefox path"'
 
     ## Setup Amazon EC2 Command-Line Tools
-    export EC2_HOME=~/.ec2
-    export PATH=$PATH:$EC2_HOME/bin
-    export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-    export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-    export JAVA_HOME='echo "set JAVA_HOME path"'
+    if [ -d ~/.ec2 ];
+    then
+        export EC2_HOME=~/.ec2
+        export PATH=$PATH:$EC2_HOME/bin
+        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+        export JAVA_HOME='echo "set JAVA_HOME path"'
+    fi
 
     ## Djview Alias
     alias djview='echo "set DJView path"'
