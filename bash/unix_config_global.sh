@@ -239,3 +239,6 @@ jobStart () {
         echo "Please enter a job name"
     fi
 }
+
+# jobSync
+alias jobsync='$SYSTEMS_SERVER/bash/jobSync.sh'
