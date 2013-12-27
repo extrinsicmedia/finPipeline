@@ -2,21 +2,61 @@
 
 ### Shared Server and multiple use items. Change this based on FIN location
 ### local server
-if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
-then
-        export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
-        export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-        export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-        export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+if [ `uname` == "Darwin" ]; then
+    if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
+    then
+            export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
+            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+    fi
+    
+    ### production or shared server
+    if [[ -d "/Volumes/PRODUCTION_01" ]];
+        then
+            export PROD_SERVER="/Volumes/PRODUCTION_01"
+            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+    fi
 fi
 
-### production or shared server
-if [[ -d "/Volumes/PRODUCTION_01" ]];
+if [ `uname` == "Linux" ]; then
+    if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
     then
-        export PROD_SERVER="/Volumes/PRODUCTION_01"
-        export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-        export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-        export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+            export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
+            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+    fi
+    
+    ### production or shared server
+    if [[ -d "/Volumes/PRODUCTION_01" ]];
+        then
+            export PROD_SERVER="/Volumes/PRODUCTION_01"
+            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+    fi
+fi
+
+if [ `uname` == "CYGWIN_NT-6.1" ]; then
+    if [[ -d "/cygdrive/c/PRODUCTION" ]];
+    then
+            export LOCAL_SERVER="/cygdrive/c/PRODUCTION"
+            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+    fi
+    
+    ### production or shared server
+    if [[ -d "/Volumes/PRODUCTION_01" ]];
+        then
+            export PROD_SERVER="/Volumes/PRODUCTION_01"
+            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+    fi
 fi
 
 #######################################################################
@@ -225,6 +265,66 @@ if [ `uname` == "Linux" ]; then
 
     ## Komodo
     alias komodo='echo "set Komodo path"'
+fi
+
+if [ `uname` == "CYGWIN_NT-6.1" ]; then
+    
+    ### Application alias and ENV vars ###
+    ## Misc Apps
+    alias truecrypt='"/cygdrive/c/Program Files/TrueCrypt/TrueCrypt.exe"'
+    alias vlc='"/cygdrive/c/Program Files (x86)/VideoLAN/VLC/vlc.exe"'
+
+    ## Firefox
+    alias firefox='"/cygdrive/c/Program Files (x86)/Mozilla Firefox/firefox.exe"'
+
+    ## Setup Amazon EC2 Command-Line Tools
+    if [ -d ~/.ec2 ];
+    then
+        export EC2_HOME=~/.ec2
+        export PATH=$PATH:$EC2_HOME/bin
+        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
+        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
+        export JAVA_HOME='echo "set JAVA_HOME path"'
+    fi
+
+    ## Djview Alias
+    alias djview='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
+    alias djview-0.8.3='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
+    export DJV_PATH='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
+    export PATH="$PATH:/cygdrive/c/Program\ Files\ (x86)/djv 0.8.3/bin"
+    
+    ## RV
+    alias rv='echo "set RV path"'
+    alias rvpkg='echo "set RVPkg path"'
+
+    ## Nuke
+    alias nukex='echo "set Nuke path"'
+    alias nuke='"/cygdrive/c/Program Files/Nuke7.0v10/Nuke7.0.exe"'
+    alias nuke70v10='"/cygdrive/c/Program Files/Nuke7.0v10/Nuke7.0.exe"'
+    alias nuke80v1='"/cygdrive/c/Program Files/Nuke8.0v1/Nuke8.0.exe"'
+    
+    ## Blender
+    alias blender='"/cygdrive/c/Program Files/Blender Foundation/Blender/blender.exe"'
+    
+    ## Maya
+    alias maya='echo "set Maya path"'
+    alias maya2014='echo "set Maya 2014 path"'
+    export MAYA_LOCATION='echo "set Maya Locations path"'
+    
+    # Add Maya bin folder to $PATH
+    #export PATH='echo "add Maya bin to $PATH: /usr/<path-to>/bin:${PATH}"'
+
+    # Change this based on facility license settings
+    #MAYA_LICENSE=unlimited; export MAYA_LICENSE
+    #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
+    #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
+    
+    ## Meshlab
+    alias meshlab='"/cygdrive/c/Program Files/VCG/MeshLab/meshlab.exe"'
+    alias meshlabserver='"/cygdrive/c/Program Files/VCG/MeshLab/meshlabserver.exe"'
+    
+    ## Komodo
+    alias komodo='"/cygdrive/c/Program Files (x86)/ActiveState Komodo Edit 8/komodo.exe"'
 fi
 
 ### jobStart tool function
