@@ -3,14 +3,23 @@
 ## Install Cygwin before continuing
 # Cygwin :: http://cygwin.com/setup-x86.exe
 # Here is a minimal list of packages for Cygwin setup
-# autoconf automake binutils cmake gcc-g++ git libgfortran3 make python
-# python-imaging python-ming python-numpy python-openssl python-paramiko
-# python-pyqt4 python-setuptools python-sip python-twisted scons curl
+# autoconf automake binutils cmake gcc-g++ git libgfortran3
+# make python python-imaging python-ming python-numpy
+# python-openssl python-paramiko python-pyqt4 python-setuptools
+# python-sip python-twisted scons curl
 # fontconfig clamav gnupg hdf5 makepasswd wget openldap openldap-devel
 # openssh openssl rsync whois exif gnuplot ImageMagick jasper jpeg lcms
 # lcms2 python-lcms tiff libpng15 libpng-devel sqlite3 flac flac-devel
 # libogg0 libkate1 libkate-devel libogg0 libogg-devel pulseaudio libpulse-devel
-# libvorbis libvorbis-devel vorbis-tools speex speex-devel 
+# libvorbis libvorbis-devel vorbis-tools speex
+
+## Cygwin Ports
+# Follow instructions here:
+# https://sourceware.org/cygwinports/
+# yasm libSDL-devel libfaac-devel libaacplus-devel libgsm-devel
+# libmp3lame-devel libschroedinger1.0-devel speex-devel
+# libtheora-devel libxvidcore-devel
+# ffmpeg vlc openexr ImageMagick
 
 ### The following downloads and installs should be run in a Cygwin shell
 mkdir ~/installs && cd ~/installs
@@ -65,6 +74,5 @@ wget http://downloads.sourceforge.net/project/handbrake/0.9.9/HandBrake-0.9.9-1_
 wget http://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v3.0.0.tar.bz2
 wget http://downloads.sourceforge.net/project/mingw/Other/Cross-Hosted%20MinGW%20Build%20Tool/x86-mingw32-build-1.0/x86-mingw32-build-1.0-sh.tar.bz2
 
-### OPTIONAL
-
-# Visual Studio
+# Maya
+# http://www.autodesk.com/products/autodesk-maya
