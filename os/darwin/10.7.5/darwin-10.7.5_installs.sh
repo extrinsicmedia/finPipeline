@@ -97,6 +97,7 @@ sudo pip install pyp
 sudo pip install cython
 sudo pip install scikit-image
 sudo pip install OpenEXR
+sudo pip install psutil
 
 # Maya files setup
 cp $SYSTEMS_SERVER/maya/STARTUP/userSetup.py ~/Library/Preferences/Autodesk/maya/2014-x64/scripts/
@@ -112,5 +113,3 @@ cp tools/ctmviewer /usr/local/bin/
 mkdir -p /usr/local/share/man/man1/
 cp doc/ctmconv.1 /usr/local/share/man/man1/
 cp doc/ctmviewer.1 /usr/local/share/man/man1/
-
-
