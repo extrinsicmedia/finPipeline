@@ -18,7 +18,7 @@
 # https://sourceware.org/cygwinports/
 # yasm libSDL-devel libfaac-devel libaacplus-devel libgsm-devel
 # libmp3lame-devel libschroedinger1.0-devel speex-devel
-# libtheora-devel libxvidcore-devel
+# libtheora-devel libxvidcore-devel pkg-config
 # ffmpeg vlc openexr ImageMagick
 
 ### The following downloads and installs should be run in a Cygwin shell
@@ -51,8 +51,13 @@ wget http://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python
 
 # PIP
-wget https://github.com/pypa/pip/blob/develop/contrib/get-pip.py
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python ./get-pip.py
+
+# Still having issues with gcc linking on pip installs
+# Probably related to MinGW
+pip install virtualenv
+pip install virtualenvwrapper
 
 # Virtualbox - Install virtualbox and extension pack
 wget http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-Win.exe
