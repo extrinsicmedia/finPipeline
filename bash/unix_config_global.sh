@@ -307,12 +307,12 @@ if [ `uname` == "CYGWIN_NT-6.1" ]; then
     alias blender='"/cygdrive/c/Program Files/Blender Foundation/Blender/blender.exe"'
     
     ## Maya
-    alias maya='echo "set Maya path"'
-    alias maya2014='echo "set Maya 2014 path"'
-    export MAYA_LOCATION='echo "set Maya Locations path"'
+    alias maya='"/cygdrive/c/Program Files/Autodesk/Maya2014/bin/maya.exe"'
+    alias maya2014='"/cygdrive/c/Program Files/Autodesk/Maya2014/bin/maya.exe"'
+    export MAYA_LOCATION="/cygdrive/c/Program Files/Autodesk/Maya2014/bin"
     
     # Add Maya bin folder to $PATH
-    #export PATH='echo "add Maya bin to $PATH: /usr/<path-to>/bin:${PATH}"'
+    export PATH="$MAYA_LOCATION:$PATH"
 
     # Change this based on facility license settings
     #MAYA_LICENSE=unlimited; export MAYA_LICENSE
