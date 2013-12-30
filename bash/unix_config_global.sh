@@ -291,7 +291,7 @@ if [ `uname` == "CYGWIN_NT-6.1" ]; then
     alias djview='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
     alias djview-0.8.3='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
     export DJV_PATH='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
-    export PATH="$PATH:/cygdrive/c/Program\ Files\ (x86)/djv 0.8.3/bin"
+    export PATH="$PATH:/cygdrive/c/Program Files (x86)/djv 0.8.3/bin"
     
     ## RV
     alias rv='echo "set RV path"'

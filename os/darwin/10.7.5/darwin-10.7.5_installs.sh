@@ -113,5 +113,3 @@ cp tools/ctmviewer /usr/local/bin/
 mkdir -p /usr/local/share/man/man1/
 cp doc/ctmconv.1 /usr/local/share/man/man1/
 cp doc/ctmviewer.1 /usr/local/share/man/man1/
-
-
