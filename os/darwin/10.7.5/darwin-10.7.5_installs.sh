@@ -1,37 +1,5 @@
 ### List any changes to the the installs here
 
-## Manual installs
-# Komodo Edit
-# VLC
-# Handbrake
-# True Crypt
-# Backblaze
-# XCode
-# XCode Command Line
-# Firefox
-# Celtx
-# Meshlab
-# Adobe CC
-# Maya
-# Nuke
-# 3Delight
-# Celtx
-# djv
-# GoProStudio
-# Meshlab
-# Wacom Utility
-# Blender
-# Arduino
-# OpenOffice
-# Virtualbox
-# Cuda
-# Cyberduck
-# Transmission
-# Drobbox
-# Audacity
-# XQuartz
-
-
 # Install Homebrew and then install these
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -63,7 +31,13 @@ brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 brew install -v unrar
 brew install -v coreutils
+brew install -v glib, gdk-pixbuf, pixman, harfbuzz, fontconfig, pango
 
+# For TuttleOFX in the future
+brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo
+brew install -v openjpeg tinyxml freeglut swig boost
+
+# Additional libraries
 brew tap homebrew/science
 brew install -v hdf5
 brew install -v alembic
@@ -99,17 +73,85 @@ sudo pip install scikit-image
 sudo pip install OpenEXR
 sudo pip install psutil
 
-# Maya files setup
+### Manual installs
+mkdir ~/installs && cd ~/installs
+
+# Komodo Edit
+wget http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-macosx-x86_64.dmg
+
+# VLC
+wget http://get.videolan.org/vlc/2.1.2/macosx/vlc-2.1.2.dmg
+
+# Handbrake
+wget http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg
+
+# True Crypt - manual download
+# http://www.truecrypt.org/downloads
+
+# XCode for OS version
+# https://developer.apple.com
+
+# XCode Command Line for OS version
+# https://developer.apple.com
+
+# Firefox
+wget http://download-installer.cdn.mozilla.net/pub/firefox/releases/26.0/mac/en-US/Firefox%2026.0.dmg
+
+# Celtx - manual download
+# https://www.celtx.com/desktop.html
+
+# Meshlab
+wget http://sourceforge.net/projects/meshlab/files/meshlab/MeshLab%20v1.3.2/MeshLabMac_v132.dmg
+
+# Adobe CC - manual download
+# http://www.adobe.com/products/creativecloud.html
+
+# Maya
+# 2014
+wget http://download.autodesk.com/us/maya/service_packs/Autodesk_Maya_2014_SP1_English_Japanese_SimplifiedChinese_MAC_OSX.dmg
+
+# Nuke 7 - Requires Login and manual download
+# http://www.thefoundry.co.uk/products/nuke-product-family/nuke/downloads/
+
+# Nuke 8 - Requires Login and manual download
+# http://www.thefoundry.co.uk/products/nuke-product-family/nuke/downloads/
+
+# 3Delight - manual download
+# http://www.3delight.com/en/index.php?page=3DSP_download
+
+# DJViewer
+wget http://sourceforge.net/projects/djv/files/djv-stable/0.9.0/djv-0.9.0_osx-x64.dmg
+
+# Blender
+wget http://mirror.cs.umn.edu/blender.org/release/Blender2.69/blender-2.69-OSX_10.6-x86_64.zip
+
+# OpenOffice
+wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.0.1/binaries/en-US/Apache_OpenOffice_4.0.1_MacOS_x86_install_en-US.dmg
+
+# Virtualbox
+wget http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-OSX.dmg
+wget http://download.virtualbox.org/virtualbox/4.3.6/Oracle_VM_VirtualBox_Extension_Pack-4.3.6-91406.vbox-extpack
+
+# Cuda
+# osx 10.7 or 10.8
+wget http://developer.download.nvidia.com/compute/cuda/5_5/rel/installers/cuda_5.5.20_mac_64.pkg
+# osx 10.9
+wget http://developer.download.nvidia.com/compute/cuda/5_5/rel/installers/cuda-mac-5.5.28_10.9_64.pkg
+
+# Cyberduck
+wget https://update.cyberduck.io/Cyberduck-4.4.3.zip
+
+# XQuartz
+http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.5.dmg
+
+### finPipeline Maya files setup
 cp $SYSTEMS_SERVER/maya/STARTUP/userSetup.py ~/Library/Preferences/Autodesk/maya/2014-x64/scripts/
 cp $SYSTEMS_SERVER/maya/STARTUP/_user_files/Maya_mac.env ~/Library/Preferences/Autodesk/maya/2014-x64/
 
-
-# Possibly need to delete these:
-cp lib/libopenctm.dylib /usr/local/opt/
-cp lib/openctm.h /usr/local/include/
-cp lib/openctmpp.h /usr/local/include/
-cp tools/ctmconv /usr/local/bin/
-cp tools/ctmviewer /usr/local/bin/
-mkdir -p /usr/local/share/man/man1/
-cp doc/ctmconv.1 /usr/local/share/man/man1/
-cp doc/ctmviewer.1 /usr/local/share/man/man1/
+### OPTIONAL INSTALLS
+# GoProStudio
+# Wacom Utility
+# Arduino
+# Transmission
+# Drobbox
+# Audacity
