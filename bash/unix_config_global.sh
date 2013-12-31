@@ -1,8 +1,14 @@
 #!/bin/bash
 
-### Shared Server and multiple use items. Change this based on FIN location
-### local server
+### Shared Server and multiple use items.
+### CHANGE THIS BASED ON finPipeline LOCATION
+### If users are not working local/remote, only set the
+### $PROD_SERVER settings.
+
+
 if [ `uname` == "Darwin" ]; then
+    
+    ## local server
     if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
     then
             export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
@@ -11,7 +17,7 @@ if [ `uname` == "Darwin" ]; then
             export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
     fi
     
-    ### production or shared server
+    ## production or shared server
     if [[ -d "/Volumes/PRODUCTION_01" ]];
         then
             export PROD_SERVER="/Volumes/PRODUCTION_01"
@@ -22,6 +28,8 @@ if [ `uname` == "Darwin" ]; then
 fi
 
 if [ `uname` == "Linux" ]; then
+    
+    ## local server
     if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
     then
             export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
@@ -30,7 +38,7 @@ if [ `uname` == "Linux" ]; then
             export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
     fi
     
-    ### production or shared server
+    ## production or shared server
     if [[ -d "/Volumes/PRODUCTION_01" ]];
         then
             export PROD_SERVER="/Volumes/PRODUCTION_01"
@@ -41,6 +49,8 @@ if [ `uname` == "Linux" ]; then
 fi
 
 if [ `uname` == "CYGWIN_NT-6.1" ]; then
+    
+    ## local server
     if [[ -d "/cygdrive/c/PRODUCTION" ]];
     then
             export LOCAL_SERVER="/cygdrive/c/PRODUCTION"
@@ -49,7 +59,7 @@ if [ `uname` == "CYGWIN_NT-6.1" ]; then
             export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
     fi
     
-    ### production or shared server
+    ## production or shared server
     if [[ -d "/Volumes/PRODUCTION_01" ]];
         then
             export PROD_SERVER="/Volumes/PRODUCTION_01"
@@ -219,11 +229,11 @@ if [ `uname` == "Linux" ]; then
     
     ### Application alias and ENV vars ###
     ## Misc Apps
-    alias truecrypt='echo "set TrueCrypt path"'
-    alias vlc='echo "set VLC path"'
+    alias truecrypt='/usr/bin/truecrypt'
+    alias vlc='/usr/bin/vlc'
 
     ## Firefox
-    alias firefox='echo "set Firefox path"'
+    alias firefox='/usr/bin/firefox'
 
     ## Setup Amazon EC2 Command-Line Tools
     if [ -d ~/.ec2 ];
@@ -236,27 +246,28 @@ if [ `uname` == "Linux" ]; then
     fi
 
     ## Djview Alias
-    alias djview='echo "set DJView path"'
-    alias djview-0.9.0='echo "set DJView path"'
-    alias djview-0.8.3='echo "set DJView path"'
-    export DJV_PATH='echo "set DJView path"'
+    alias djview='/usr/local/djv/bin/djv_view'
+    alias djview-0.8.3='/usr/local/djv/bin/djv_view'
+    export DJV_PATH="/usr/local/djv/bin"
+    export PATH="/usr/local/djv/bin:$PATH"
 
     ## RV
     alias rv='echo "set RV path"'
     alias rvpkg='echo "set RVPkg path"'
 
     ## Nuke
-    alias nukex='echo "set NukeX path"'
-    alias nuke='echo "set Nuke path"'
-    alias nuke70v8='echo "set Nuke 7.0v8 path"'
+    alias nukex='/usr/local/Nuke7.0v10/Nuke7.0 --nukex -V'
+    alias nuke='/usr/local/Nuke7.0v10/Nuke7.0 -V'
+    alias nuke70v10='/usr/local/Nuke7.0v10/Nuke7.0 -V'
+    export PATH="/usr/local/Nuke7.0v10:$PATH"
     
     ## Maya
-    alias maya='echo "set Maya path"'
-    alias maya2014='echo "set Maya 2014 path"'
-    export MAYA_LOCATION='echo "set Maya Locations path"'
+    alias maya='/usr/autodesk/maya2014-x64/bin/maya2014'
+    alias maya2014='/usr/autodesk/maya2014-x64/bin/maya2014'
+    export MAYA_LOCATION='/usr/autodesk/maya2014-x64/bin'
     
     # Add Maya bin folder to $PATH
-    export PATH='echo "add Maya bin to $PATH: /usr/<path-to>/bin:${PATH}"'
+    export PATH="/usr/autodesk/maya2014-x64/bin:$PATH"
 
     # Change this based on facility license settings
     #MAYA_LICENSE=unlimited; export MAYA_LICENSE
@@ -264,7 +275,8 @@ if [ `uname` == "Linux" ]; then
     #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
 
     ## Komodo
-    alias komodo='echo "set Komodo path"'
+    alias komodo='/usr/Komodo-Edit-8/bin/komodo'
+    export PATH="/usr/Komodo-Edit-8/bin:$PATH"
 fi
 
 if [ `uname` == "CYGWIN_NT-6.1" ]; then
