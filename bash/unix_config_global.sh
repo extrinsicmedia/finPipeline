@@ -211,9 +211,7 @@ if [ `uname` == "Darwin" ]; then
     alias maya='/Applications/Autodesk/maya2014/Maya.app/Contents/bin/maya'
     alias maya2014='/Applications/Autodesk/maya2014/Maya.app/Contents/bin/maya'
     export MAYA_LOCATION="/Applications/Autodesk/maya2014/Maya.app/Contents"
-    
-    # Add Maya bin folder to $PATH
-    export PATH="/Applications/Autodesk/maya2014/Maya.app/Contents/bin:${PATH}"
+    export PATH="/Applications/Autodesk/maya2014/Maya.app/Contents/bin:$PATH"
 
     # Change this based on facility license settings
     #MAYA_LICENSE=unlimited; export MAYA_LICENSE
