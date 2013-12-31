@@ -7,7 +7,7 @@ yum install -y coreutils
 yum install -y nano
 yum install -v cmake libtool
 yum install -y zlib-devel openssl-devel sqlite-devel bzip2-devel
-yum install -y nasm
+yum install -y nasm libXp
 yum install -y expat-devel gdbm-devel readline-devel screen
 yum install -v xz-libs wget
 yum install -v gnupg openssl
@@ -15,9 +15,9 @@ yum install -v ilmbase openexr openexr-devel openjpeg opencv opencv-devel
 yum install -v qt qt-devel
 yum install -v ffmpeg vlc
 yum install -v gimp libreoffice
-yum install -v kdebase-workspace htop kdeutils kdegraphics
+yum install -v kdebase-workspace kdeutils kdegraphics htop
 yum install -y atlas atlas-devel blas blas-devel lapack lapack-devel
-yum install -v numpy scipy python-matplotlib blas blas-devel
+yum install -v numpy scipy python-matplotlib
 yum install -v boost tbb scons
 yum install -v ImageMagick
 
@@ -64,6 +64,35 @@ pip install pyp
 pip install cython
 pip install scikit-image
 pip install psutil
+
+### Downloads
+
+# 3Delight - manual download
+# http://www.3delight.com/en/index.php?page=3DSP_download
+
+# DJViewer - 0.9.0 seems to be missing files
+rpm -ivh http://sourceforge.net/projects/djv/files/djv-stable/0.8.3%20Pre2/djv-0.8.3-pre2_linux-x64.rpm
+
+# Nuke 7 - Requires Login and manual download
+# http://www.thefoundry.co.uk/products/nuke-product-family/nuke/downloads/
+
+# Nuke 8 - Requires Login and manual download
+# http://www.thefoundry.co.uk/products/nuke-product-family/nuke/downloads/
+
+# Maya
+mkdir ~/installs/maya2014 && cd ~/installs/maya2014
+wget http://download.autodesk.com/us/maya/service_packs/Autodesk_Maya_2014_SP1_English_Linux_64bit.tgz
+tar xvzf Autodesk_Maya_2014_SP1_English_Linux_64bit.tgz
+./setup
+
+# Komodo Edit
+cd ~/installs
+wget http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-linux-x86_64.tar.gz
+tar xvzf Komodo-Edit-8.5.3-14067-linux-x86_64.tar.gz
+cd Komodo-Edit-8.5.3-14067-linux-x86_64
+./install.sh # change install directory to /usr/Komodo-Edit-8
+
+### OPTIONAL
 
 ## Newest FFmpeg
 # http://linuxsysconfig.com/2013/04/compile-latest-ffmpeg-and-vlc-on-centos-6/
