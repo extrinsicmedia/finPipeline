@@ -76,8 +76,8 @@ wget http://downloads.sourceforge.net/project/handbrake/0.9.9/HandBrake-0.9.9-1_
 wget http://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v3.0.0.tar.bz2
 wget http://downloads.sourceforge.net/project/mingw/Other/Cross-Hosted%20MinGW%20Build%20Tool/x86-mingw32-build-1.0/x86-mingw32-build-1.0-sh.tar.bz2
 
-# Maya
-# http://www.autodesk.com/products/autodesk-maya
+# Maya - http://www.autodesk.com/products/autodesk-maya
+wget http://download.autodesk.com/us/maya/service_packs/Autodesk_Maya_2014_SP1_English_Japanese_SimplifiedChinese_Win_64bit.exe
 
 # 3Delight - manual download
 # http://www.3delight.com/en/index.php?page=3DSP_download
