@@ -24,9 +24,6 @@
 ### The following downloads and installs should be run in a Cygwin shell
 mkdir ~/installs && cd ~/installs
 
-# Firefox
-wget http://download-installer.cdn.mozilla.net/pub/firefox/releases/26.0/win32/en-US/Firefox%20Setup%2026.0.exe
-
 # VLC 32bit and 64bit
 wget http://get.videolan.org/vlc/2.1.2/win32/vlc-2.1.2-win32.exe
 wget http://download.videolan.org/pub/videolan/vlc/last/win64/vlc-2.1.2-win64.exe
@@ -81,3 +78,6 @@ wget http://downloads.sourceforge.net/project/mingw/Other/Cross-Hosted%20MinGW%2
 
 # Maya
 # http://www.autodesk.com/products/autodesk-maya
+
+# 3Delight - manual download
+# http://www.3delight.com/en/index.php?page=3DSP_download
