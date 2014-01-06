@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-''' rvrc.py - RV Prefs and settings. Save as ~/.rvrc.py to use.
+'''
+rvrc.py - RV Prefs and settings. Save as ~/.rvrc.py to use.
 Copyright (C) 2012  Miles Lauridsen
 
 Based on BSD 2-Clause License  http://opensource.org/licenses/BSD-2-Clause
