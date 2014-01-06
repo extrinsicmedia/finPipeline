@@ -5,9 +5,12 @@
 
 shopt -s expand_aliases
 
-### RSYNC Setups
-RSYNC_TIMES_DRY="--recursive --times --verbose --ignore-existing --exclude-from=$LOCAL_SYSTEMS_SERVER/database/txt/exclude_list.txt --dry-run"
-RSYNC_TIMES="--recursive --times --verbose --ignore-existing --progress --exclude-from=$LOCAL_SYSTEMS_SERVER/database/txt/exclude_list.txt"
+if [ -f ~/.bashrc ];
+then
+    . ~/.bashrc
+fi
+
+echo $HOME
 
 ### The rsync script
 if [ $1 ];
