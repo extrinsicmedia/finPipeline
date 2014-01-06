@@ -1,5 +1,11 @@
 ### List any changes to the the installs here
 
+# XCode for OS version
+# https://developer.apple.com
+
+# XCode Command Line for OS version
+# https://developer.apple.com
+
 # Install Homebrew and then install these
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -34,8 +40,12 @@ brew install -v coreutils
 brew install -v glib, gdk-pixbuf, pixman, harfbuzz, fontconfig, pango
 
 # For TuttleOFX in the future
-brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo
-brew install -v openjpeg tinyxml freeglut swig boost
+brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo, ctl
+brew install -v openjpeg tinyxml freeglut swig boost libpng
+brew install -v opencolorio cfitsio hdf5 field3d glew
+
+# Sys-Admin tools
+brew install -v wireshark --with-qt --with-x --with-lua --devel
 
 # Additional libraries
 brew tap homebrew/science
@@ -46,7 +56,7 @@ brew install -v alembic
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-schroedinger --with-speex --with-theora --with-tools 
 
 # New way to install imagemagick with all options
-brew install -v imagemagick --with-fontconfig --with-jasper --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-quantum-depth-32 --with-webp --with-x11
+brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp --with-x11
 
 ### Start FFMBC install
 # Helpful instructions here: http://www.movieeditor.com/2012/01/26/building-ffmbcffmpeg-on-mac-os-x-lion/
@@ -87,12 +97,6 @@ wget http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.d
 
 # True Crypt - manual download
 # http://www.truecrypt.org/downloads
-
-# XCode for OS version
-# https://developer.apple.com
-
-# XCode Command Line for OS version
-# https://developer.apple.com
 
 # Firefox
 wget http://download-installer.cdn.mozilla.net/pub/firefox/releases/26.0/mac/en-US/Firefox%2026.0.dmg
