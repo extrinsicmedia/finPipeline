@@ -3,14 +3,19 @@
 # example of iterating through selected nodes
 for n in nuke.selectedNodes():
     print n.name()
-    
+
 # same example but only using a specific node class
 for n in nuke.selectedNodes("Camera2"):
     print n.name()
-    
+
+# looking through all nodes
+for n in nuke.allNodes():
+    if n.Class() == "Read":
+        print n.name()
+
 # select a node by name
 nuke.toNode("Noise1")
-    
+
 # running tcl commands in python
 nuke.tcl("value label")
 
