@@ -15,7 +15,7 @@ $gui ? 1 : 16 #scanline render
 (1.1 - .9) * random(t) + .9
 
 # random curve expression
-random(1,frame*1)*1)+0
+(random(1,frame*1)*1)+0
 # or just simplified: 
 random(1,frame)
 # this creates a curve containing random values between 0 and 1.
