@@ -10,3 +10,5 @@
 *.gscript
 Icon*
 *.pyc
+.~lock*
+.lock*
