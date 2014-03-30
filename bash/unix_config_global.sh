@@ -1,72 +1,30 @@
 #!/bin/bash
 
-### Shared Server and multiple use items.
-### CHANGE THIS BASED ON finPipeline LOCATION
 ### If users are not working local/remote, only set the
 ### $PROD_SERVER settings.
 
-
-if [ `uname` == "Darwin" ]; then
-    
-    ## local server
-    if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
-    then
-            export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
-            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
-    fi
-    
-    ## production or shared server
-    if [[ -d "/Volumes/PRODUCTION_01" ]];
-        then
-            export PROD_SERVER="/Volumes/PRODUCTION_01"
-            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
-    fi
-fi
-
-if [ `uname` == "Linux" ]; then
-    
-    ## local server
-    if [[ -d "/Users/mileslauridsen/Dropbox/PRODUCTION/" ]];
-    then
-            export LOCAL_SERVER="/Users/mileslauridsen/Dropbox/PRODUCTION"
-            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
-    fi
-    
-    ## production or shared server
-    if [[ -d "/Volumes/PRODUCTION_01" ]];
-        then
-            export PROD_SERVER="/Volumes/PRODUCTION_01"
-            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
-    fi
-fi
-
-if [ `uname` == "CYGWIN_NT-6.1" ]; then
-    
-    ## local server
-    if [[ -d "/cygdrive/c/PRODUCTION" ]];
-    then
-            export LOCAL_SERVER="/cygdrive/c/PRODUCTION"
-            export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
-            export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-            export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
-    fi
-    
-    ## production or shared server
-    if [[ -d "/Volumes/PRODUCTION_01" ]];
-        then
-            export PROD_SERVER="/Volumes/PRODUCTION_01"
-            export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-            export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-            export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
-    fi
+## Check for config file and set servers
+if [[ -f "$HOME/finpipeline.yaml" ]];
+then
+        # Set local server
+        LOCAL_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value local_server_path)"
+        if [[ -d $LOCAL_SERVER_PATH ]];
+            then
+                export LOCAL_SERVER=$LOCAL_SERVER_PATH
+                export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
+                export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
+                export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
+        fi
+        
+        ## Set production or shared server
+        PROD_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value prod_server_path)"
+        if [[ -d $PROD_SERVER_PATH ]];
+            then
+                export PROD_SERVER=$PROD_SERVER_PATH
+                export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
+                export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
+                export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
+        fi
 fi
 
 #######################################################################
@@ -120,6 +78,9 @@ export RSYNC_TIMES="--recursive --times --verbose --ignore-existing --progress -
 alias rsynctimesdry='rsync $RSYNC_TIMES_DRY'
 alias rsynctimes='rsync $RSYNC_TIMES --log-file=$SYSTEMS_SERVER/database/logs/rsync/rsync-log-"$(date +%Y-%m-%d_%H%M%S)".log'
 
+## User Home directory backups
+alias cpuserinfo='$SYSTEMS_SERVER/bash/cpUserInfo.sh'
+
 ## Unix
 PATH="$SYSTEMS_SERVER/bin/frametools:$MAYA_LOCATION/bin:$PATH"
 alias makedate='mkdir $(date +%Y-%m-%d)'
@@ -159,19 +120,19 @@ export MAYA_DYN_SHELF_NAME="finShelf"
 export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
 
 ### OSX Application paths ###
-if [ `uname` == "Darwin" ]; then
-    ### Apps
-    #export BOOST_ROOT="/usr/local/Cellar/boost/1.49.0"
+if [[ `uname` == "Darwin" ]]; then
+    
+    ## Truecrypt
     alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt'
+    
+    ## VLC
     alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-
-    ### Application alias and ENV vars ###
 
     ## Firefox
     alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 
     ## Setup Amazon EC2 Command-Line Tools
-    if [ -d ~/.ec2 ];
+    if [[ -d ~/.ec2 ]];
     then
         export EC2_HOME=~/.ec2
         export PATH=$PATH:$EC2_HOME/bin
@@ -217,13 +178,17 @@ if [ `uname` == "Darwin" ]; then
     #MAYA_LICENSE=unlimited; export MAYA_LICENSE
     #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
     #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
-
+    
+    ## Meshlab
+    alias meshlab='/Applications/meshlab.app/Contents/MacOS/meshlab'
+    alias meshlabserver='/Applications/meshlab.app/Contents/MacOS/meshlabserver'
+    
     ## Komodo
     alias komodo='/Applications/Komodo\ Edit\ 8.app/Contents/MacOS/komodo'
 fi
 
 ### Linux Application paths - 'Linux' may need to be 'Linux2' ###
-if [ `uname` == "Linux" ]; then
+if [[ `uname` == "Linux" ]]; then
     
     ### Application alias and ENV vars ###
     ## Misc Apps
@@ -234,7 +199,7 @@ if [ `uname` == "Linux" ]; then
     alias firefox='/usr/bin/firefox'
 
     ## Setup Amazon EC2 Command-Line Tools
-    if [ -d ~/.ec2 ];
+    if [[ -d ~/.ec2 ]];
     then
         export EC2_HOME=~/.ec2
         export PATH=$PATH:$EC2_HOME/bin
@@ -277,7 +242,7 @@ if [ `uname` == "Linux" ]; then
     export PATH="/usr/Komodo-Edit-8/bin:$PATH"
 fi
 
-if [ `uname` == "CYGWIN_NT-6.1" ]; then
+if [[ `uname` == "CYGWIN_NT-6.1" ]]; then
     
     ### Application alias and ENV vars ###
     ## Misc Apps
@@ -288,7 +253,7 @@ if [ `uname` == "CYGWIN_NT-6.1" ]; then
     alias firefox='"/cygdrive/c/Program Files (x86)/Mozilla Firefox/firefox.exe"'
 
     ## Setup Amazon EC2 Command-Line Tools
-    if [ -d ~/.ec2 ];
+    if [[ -d ~/.ec2 ]];
     then
         export EC2_HOME=~/.ec2
         export PATH=$PATH:$EC2_HOME/bin
@@ -339,11 +304,11 @@ fi
 
 ### jobStart tool function
 jobStart () {
-    if [ -n $3 ]; then
+    if [[ -n $3 ]]; then
         eval "$($SYSTEMS_SERVER/bash/jobStart.sh $1 $2 $3)"
-    elif [ -n $2 ]; then
+    elif [[ -n $2 ]]; then
         eval "$($SYSTEMS_SERVER/bash/jobStart.sh $1 $2)"
-    elif [ -n $1 ]; then
+    elif [[ -n $1 ]]; then
         eval "$($SYSTEMS_SERVER/bash/jobStart.sh $1)"
     else
         echo "Please enter a job name"
