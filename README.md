@@ -20,3 +20,6 @@ Basic installation using Mac OSX 10.7.5 as example:
 5. Log any errors as Github issues or email for help.
 
 
+If you find this code useful, feel free to tip: https://www.gittip.com/extrinsicmedia
+
+
