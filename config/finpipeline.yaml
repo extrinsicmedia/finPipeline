@@ -1,0 +1,2 @@
+local_server_path: "<local server path here"
+prod_server_path: "<production server path here"
