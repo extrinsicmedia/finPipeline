@@ -6,13 +6,13 @@ Instructions for installation of software requirements for the environment can b
 
 Basic installation using Mac OSX 10.7.5 as example:
 
-1. Clone finPipeline to your shared system server.  For example: 
+1. Fork or clone finPipeline to your shared system server.  For example: 
     `cd /mnt/server/systems/ && git clone https://github.com/extrinsicmedia/finPipeline.git`
 
-2. Change the appropriate paths in your os config file.  For the example os that would be:
-    `finPipeline/bash/unix_config_global.sh`
+2. Copy the config file to your $HOME directory and change the paths for your server:
+    `cp finPipeline/config/finpipeline.yaml $HOME`
 
-3. Put the following line in your .bashrc file:
+3. Run the following to source the unix_config_global.sh in your .bashrc file:
     `echo "source /mnt/server/systems/finPipeline/bash/unix_config_global.sh" >> ~/.bashrc`
 
 4. Use /finPipeline/python/fin/fin/fileOps/dirOps.py to create your job folders.
