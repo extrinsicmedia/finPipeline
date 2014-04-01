@@ -3,9 +3,7 @@
 finPipeline is a VFX pipeline methodology that relies on environment variables to build out complex interoperability between various image manipulation and generation software packages.
 
 ###Dependencies
-Currently the project requires a bash shell environment.
-A full list of suggested installs is available in ./os for several environments.
-Here's the bare minimum to get started:
+Here's the bare minimum of dependencies to get started:
 * Bash Shell
 * Python 2.7
 * pip
