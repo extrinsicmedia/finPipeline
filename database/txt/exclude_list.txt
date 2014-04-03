@@ -12,3 +12,16 @@ Icon*
 *.pyc
 .~lock*
 .lock*
+.SyncID
+.SyncIgnore
+.SyncArchive
+*.mcdb
+*.ims
+*.pek
+*.mpgindex
+*.cfa
+*.prmdc
+*.xmp
+.BridgeCache
+.BridgeCacheT
+.BridgeSort
