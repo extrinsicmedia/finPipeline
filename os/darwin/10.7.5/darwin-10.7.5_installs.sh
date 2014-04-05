@@ -38,6 +38,7 @@ brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-
 brew install -v unrar
 brew install -v coreutils
 brew install -v glib, gdk-pixbuf, pixman, harfbuzz, fontconfig, pango
+brew install -v libyaml
 
 # For TuttleOFX in the future
 brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo, ctl
@@ -46,17 +47,19 @@ brew install -v opencolorio cfitsio hdf5 field3d glew
 
 # Sys-Admin tools
 brew install -v wireshark --with-qt --with-x --with-lua --devel
+brew install duplicity
 
 # Additional libraries
 brew tap homebrew/science
 brew install -v hdf5
 brew install -v alembic
+brew install -v opencv
 
 # New way to install all ffmpeg options
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-schroedinger --with-speex --with-theora --with-tools 
 
-# New way to install imagemagick with all options
-brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp --with-x11
+# New way to install imagemagick with all options except: --with-x11
+brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp
 
 ### Start FFMBC install
 # Helpful instructions here: http://www.movieeditor.com/2012/01/26/building-ffmbcffmpeg-on-mac-os-x-lion/
@@ -82,6 +85,11 @@ sudo pip install cython
 sudo pip install scikit-image
 sudo pip install OpenEXR
 sudo pip install psutil
+sudo pip install dagobah
+sudo pip install pysqlite
+sudo pip install sqlalchemy
+sudo pip install alembic
+sudo pip install pyyaml
 
 ### Manual installs
 mkdir ~/installs && cd ~/installs
