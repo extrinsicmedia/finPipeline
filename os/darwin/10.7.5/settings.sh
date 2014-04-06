@@ -10,3 +10,6 @@ sudo systemsetup -setkernelbootarchitecture x86_64
 
 # To select the 32-bit kernel for the current startup disk, use the following command in Terminal:
 sudo systemsetup -setkernelbootarchitecture i386
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
