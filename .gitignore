@@ -37,6 +37,7 @@ Thumbs.db
 *.egg-info
 *~
 *.swp
+.dropbox.attr
 
 # User additions #
 ##################
