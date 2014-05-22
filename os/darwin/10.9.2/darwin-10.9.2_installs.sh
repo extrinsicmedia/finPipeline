@@ -2,7 +2,7 @@
 
 # Compilers and Core requirements
 brew install -v cmake
-brew install -v gfortran
+brew install -v gcc
 brew install -v tbb
 brew install -v glib
 
