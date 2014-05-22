@@ -1,7 +1,15 @@
 .dropbox
-.DS_Store
+.dropbox*
 .bzvol
 .Spotlight-V100
+.DS_Store
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+Thumbs.db
 .fseventsd
 .TemporaryItems
 .Trashes
@@ -23,5 +31,5 @@ Icon*
 *.prmdc
 *.xmp
 .BridgeCache
-.BridgeCacheT
+.BridgeCache*
 .BridgeSort
