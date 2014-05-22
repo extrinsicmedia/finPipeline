@@ -32,3 +32,8 @@ random(1,frame)
 
 # Filename
 [file tail [knob [topnode].file]]
+
+# Retime a Camera with a Timewarp node named TimeWarp1
+# Useful when matchmove tracks the plate and then a retime is applied to match editorial
+# Place this expression on translate, rotate, and focal knobs
+curve(TimeWarp1.lookup)
