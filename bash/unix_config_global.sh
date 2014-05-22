@@ -144,7 +144,8 @@ if [[ `uname` == "Darwin" ]]; then
     ## Djview Alias
     alias djview='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
     alias djview-0.9.0='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
-    alias djview-0.8.3='/Applications/djv-0.8.3-pre2.app/Contents/MacOS/djv-0.8.3-pre2'
+    export PATH="$PATH:/Applications/djv-0.9.0.app/Contents/Resources/bin"
+    alias djvload='djview $(djv_ls -xi)'
     export DJV_PATH='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
 
     ## RV
@@ -211,6 +212,7 @@ if [[ `uname` == "Linux" ]]; then
     ## Djview Alias
     alias djview='/usr/local/djv/bin/djv_view'
     alias djview-0.8.3='/usr/local/djv/bin/djv_view'
+    alias djvload='djview $(djv_ls -xi)'
     export DJV_PATH="/usr/local/djv/bin"
     export PATH="/usr/local/djv/bin:$PATH"
 
