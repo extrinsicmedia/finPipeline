@@ -3,14 +3,14 @@
 # Komodo
 wget http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-macosx-x86_64.dmg
 
-# VLC
-wget http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.1.4/macosx/vlc-2.1.4.dmg
+# VLC - Downloaded with Boxen
+#wget http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.1.4/macosx/vlc-2.1.4.dmg
 
-# Handbrake
-wget http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg
+# Handbrake - Downloaded with Boxen
+#wget http://handbrake.fr/rotation.php?file=HandBrake-0.9.9-MacOSX.6_GUI_x86_64.dmg
 
-# Transmission
-wget http://download.transmissionbt.com/files/Transmission-2.82.dmg
+# Transmission - Downloaded with Boxen
+#wget http://download.transmissionbt.com/files/Transmission-2.82.dmg
 
 # BT Sync
 wget http://download-lb.utorrent.com/endpoint/btsync/os/osx/track/stable/BTSync.dmg
