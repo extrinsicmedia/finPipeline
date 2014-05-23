@@ -28,7 +28,7 @@ brew install -v postgresql
 # Development
 brew install -v qt --universal --with-docs --with-mysql
 brew install -v scons
-brew install -v boost --with-mpi --with-python
+brew install -v boost --with-mpi --with-python --without-single
 brew install -v doxygen
 brew install -v jsonpp
 brew install -v libyaml
