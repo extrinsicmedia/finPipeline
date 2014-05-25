@@ -74,7 +74,7 @@ sudo pip install numpy
 
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
-brew install -v opencolorio --with-docs --with-python --with-java --with-tests
+brew install -v opencolorio --with-docs --with-python
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 
