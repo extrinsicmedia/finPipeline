@@ -67,6 +67,11 @@ brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0
 # Imagemagick
 brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp
 
+
+### Pip installs 1
+sudo pip install numpy
+
+
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
 brew install -v opencolorio --with-docs --with-python --with-java --with-tests
@@ -75,14 +80,14 @@ brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-
 
 # For TuttleOFX in the future
 brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo, ctl
-brew install -v openjpeg tinyxml freeglut swig boost libpng
-brew install -v cfitsio hdf5 field3d glew
+brew install -v openjpeg tinyxml freeglut swig libpng
+brew install -v cfitsio field3d glew
 
 # Link apps such as Python and QT
 sudo brew linkapps
 
 
-### Pip installs
+### Pip installs 2
 sudo pip install dagobah
 sudo pip install shyaml
 sudo pip install pysqlite
