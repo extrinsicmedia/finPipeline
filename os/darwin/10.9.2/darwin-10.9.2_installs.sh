@@ -28,7 +28,7 @@ brew install -v postgresql
 # Development
 brew install -v qt --universal --with-docs --with-mysql
 brew install -v scons
-brew install -v boost
+brew install -v boost --with-mpi --with-python --without-single
 brew install -v doxygen
 brew install -v jsonpp
 brew install -v libyaml
@@ -62,27 +62,32 @@ brew install -v ilmbase
 brew install -v openexr
 
 # FFmpeg
-brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-schroedinger --with-speex --with-theora --with-tools 
+brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-speex --with-theora --with-tools 
 
 # Imagemagick
 brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp
 
+
+### Pip installs 1
+sudo pip install numpy
+
+
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
-brew install -v opencolorio --with-docs --with-python --with-java --with-tests
+brew install -v opencolorio --with-docs --with-python
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 
 # For TuttleOFX in the future
 brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo, ctl
-brew install -v openjpeg tinyxml freeglut swig boost libpng
-brew install -v cfitsio hdf5 field3d glew
+brew install -v openjpeg tinyxml freeglut swig libpng
+brew install -v cfitsio field3d glew
 
 # Link apps such as Python and QT
 sudo brew linkapps
 
 
-### Pip installs
+### Pip installs 2
 sudo pip install dagobah
 sudo pip install shyaml
 sudo pip install pysqlite
