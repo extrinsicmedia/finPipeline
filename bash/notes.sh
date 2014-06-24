@@ -20,3 +20,8 @@ diskutil unmount /dev/disk1s2
 # start ssh agent and add keys
 eval `ssh-agent -s`
 ssh-add
+
+# encrypt a backup tar of the users Home dir
+# http://blog.sanctum.geek.nz/linux-crypto-backups/
+tar -cf docsbackup-"$(date +%Y-%m-%d)".tar $HOME/Documents
+gpg --encrypt docsbackup-2013-07-27.tar
