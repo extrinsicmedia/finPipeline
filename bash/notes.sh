@@ -16,3 +16,7 @@ diskutil mount /dev/disk1s2
 
 # unmount drive OSX - replace '/dev/disk1s2' with drive identifier
 diskutil unmount /dev/disk1s2
+
+# start ssh agent and add keys
+eval `ssh-agent -s`
+ssh-add
