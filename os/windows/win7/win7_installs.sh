@@ -25,8 +25,8 @@
 mkdir ~/installs && cd ~/installs
 
 # VLC 32bit and 64bit
-wget http://get.videolan.org/vlc/2.1.2/win32/vlc-2.1.2-win32.exe
-wget http://download.videolan.org/pub/videolan/vlc/last/win64/vlc-2.1.2-win64.exe
+http://get.videolan.org/vlc/2.1.5/win32/vlc-2.1.5-win32.exe
+http://download.videolan.org/pub/videolan/vlc/last/win64/vlc-2.1.5-win64.exe
 
 # Meshlab 64bit
 wget http://sourceforge.net/projects/meshlab/files/meshlab/MeshLab%20v1.3.2/MeshLab_v132_64bit.exe/download
