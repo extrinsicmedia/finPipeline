@@ -25,6 +25,13 @@ then
                 export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
                 export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
         fi
+        
+        ## Set Dropbox path
+        DROPBOX_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value dropbox_path)"
+        if [[ -d $DROPBOX_SERVER_PATH ]];
+            then
+                export DROPBOX_PATH=$DROPBOX_SERVER_PATH
+        fi
 fi
 
 #######################################################################
