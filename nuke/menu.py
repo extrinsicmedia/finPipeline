@@ -94,9 +94,12 @@ m.addCommand('Flipbook Selected in &DJV', 'nukescripts.flipbook( djv_this.djv_th
 
 
 ### BEGIN OCIO SETUP ###
-import nukescripts.ViewerProcess; nukescripts.ViewerProcess.unregister_viewers()
-import nukescripts.ViewerProcess; nukescripts.ViewerProcess.register_viewers(defaultLUTS = False,\
-                                                   ocioConfigName = os.environ.get('OCIO', None));
+try:
+    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.unregister_viewers()
+    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.register_viewers(defaultLUTS = False,\
+                                                       ocioConfigName = os.environ.get('OCIO', None));
+except:
+    print "OCIO var not set, using Default OCIO"
 ### END OCIO SETUP ###
 
 
@@ -150,7 +153,7 @@ def customRead():
 
 # ADD CUSTOM READ AND WRITE TO TOOLBAR
 nuke.menu( 'Nodes' ).addCommand( 'Image/WriteAsset', lambda: nuke.createNode( 'WriteAsset' ), 'Shift-w' )
-nuke.menu( 'Nodes' ).addCommand( 'Image/Read', customRead, 'Shift-r' )
+nuke.menu( 'Nodes' ).addCommand( 'Image/CustomRead', lambda: customRead(), 'Shift-r' )
 
 # ADD EASY SAVE TO SHOT MENU
 if seq != None:
