@@ -21,6 +21,9 @@ brew install -v colordiff
 brew install -v coreutils
 brew install -v unrar
 brew install -v htop
+brew install -v nmap
+brew install -v ncdu
+brew install -v youtube-dl
 
 # Database
 brew install -v postgresql
@@ -38,6 +41,7 @@ brew install -v pixman
 brew install -v harfbuzz
 brew install -v fontconfig
 brew install -v pango
+brew install -v sphinx
 
 # Languages
 brew install -v python --universal --with-brewed-openssl
@@ -70,7 +74,7 @@ brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth
 
 ### Pip installs 1
 sudo pip install numpy
-
+sudo pip install virtualenv
 
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
@@ -83,16 +87,20 @@ brew install -v libraw libcaca libxml2 nasm xz jpeg-turbo, ctl
 brew install -v openjpeg tinyxml freeglut swig libpng
 brew install -v cfitsio field3d glew
 
+# Landsat util
+brew install https://raw.githubusercontent.com/developmentseed/landsat-util/master/Formula/landsat-util.rb
+
 # Link apps such as Python and QT
 sudo brew linkapps
 
 
 ### Pip installs 2
-sudo pip install dagobah
-sudo pip install shyaml
+sudo pip install dagobah # cronjob type program with web interface
+sudo pip install shyaml # terminal yaml reader
 sudo pip install pysqlite
 sudo pip install sqlalchemy
 sudo pip install alembic
+sudo pip install pyseq # compressed sequence string module for Python and Shell
 
 
 ### Lib Linking

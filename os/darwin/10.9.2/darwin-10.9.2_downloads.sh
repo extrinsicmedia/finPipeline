@@ -43,3 +43,6 @@ wget http://www.luxrender.net/release/luxrender/1.3/mac/LuxRender_1.3.1_OSXIntel
 
 # Aqsis Renderer
 wget http://sourceforge.net/projects/aqsis/files/aqsis-macosx/1.8.2/Aqsis-1.8.2-Darwin.dmg
+
+# Vagrant
+https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3.dmg
