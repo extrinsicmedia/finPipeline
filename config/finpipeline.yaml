@@ -1,2 +1,4 @@
 local_server_path: "<local server path here>"
 prod_server_path: "<production server path here>"
+dropbox_path: "dropbox path here"
+backup_server_path: "backup server path here"
