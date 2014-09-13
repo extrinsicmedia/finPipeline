@@ -1,6 +1,6 @@
 #finPipeline
 
-finPipeline is a VFX pipeline methodology that relies on environment variables to build out complex interoperability between various image manipulation and generation software packages.
+finPipeline is a VFX pipeline for small team and studio use on commercial and film produciton.  We believe a successful pipeline is based on providing a flexible structure that enables consistency of delivery in the face of changing creative and technical demands.  Our goal is to provide a framework of tools to help in this process.
 
 ###Dependencies
 Here's the bare minimum of dependencies to get started:
