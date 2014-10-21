@@ -10,6 +10,10 @@ Here's the bare minimum of dependencies to get started:
 * shyaml
 * A package management program (Homebrew, Cygwin, apt-get, etc)
 
+###Boxen
+If you're on OSX we highly suggest using Boxen puppet modules to do an initial install of required software.  You can find our fork of https://github.com/boxen/our-boxen which has additional software installs we use in film production here:
+https://github.com/extrinsicmedia/finboxen
+
 ###Installation
 
 Instructions for installation of software requirements for the environment can be found in the /finPipeline/os directory.
