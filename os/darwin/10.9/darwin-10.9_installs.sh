@@ -46,15 +46,15 @@ brew install -v sphinx
 # Languages
 brew install -v python --universal --with-brewed-openssl
 brew install -v pyqt
-brew install -v python3 --quicktest --with-brewed-openssl
-brew install -v pyside --with-python3
+brew install -v pyside
 
-# Sys-Admin tools
+# Sys-Admin and Security tools
 brew install -v wireshark --with-qt --with-x --with-lua --devel
 brew install -v duplicity
 brew install -v collectd --debug --java
 brew install -v osxfuse
 brew install -v boot2docker
+brew install -v clamav
 
 # Homebrew science
 brew tap homebrew/science
@@ -75,6 +75,8 @@ brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth
 ### Pip installs 1
 sudo pip install numpy
 sudo pip install virtualenv
+sudo pip install matplotlib
+sudo pip install scipy
 
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
