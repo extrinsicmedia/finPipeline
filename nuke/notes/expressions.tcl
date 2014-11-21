@@ -16,7 +16,7 @@ $gui ? 1 : 16 #scanline render
 
 # random curve expression
 (random(1,frame*1)*1)+0
-# or just simplified: 
+# or just simplified:
 random(1,frame)
 # this creates a curve containing random values between 0 and 1.
 # the breakdown controls:
@@ -33,7 +33,20 @@ random(1,frame)
 # Filename
 [file tail [knob [topnode].file]]
 
+# value of first knob
+[value this.first]
+
+# value of the input's first knob
+[value this.input.first]
+
+# value of top most node in chain's first knob
+[value [topnode].first]
+
 # Retime a Camera with a Timewarp node named TimeWarp1
 # Useful when matchmove tracks the plate and then a retime is applied to match editorial
 # Place this expression on translate, rotate, and focal knobs
 curve(TimeWarp1.lookup)
+
+# useful for determining if sharpening is needed on retimes
+# example with a Timewarp node named Timewarp1
+abs(rint(TimeWarp1.lookup)-TimeWarp1.lookup) > 0.15 ? 1:0
