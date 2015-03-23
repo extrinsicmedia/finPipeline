@@ -27,6 +27,7 @@ brew install -v youtube-dl
 
 # Database
 brew install -v postgresql
+brew install -v mongodb
 
 # Development
 brew install -v qt --universal --with-docs --with-mysql
@@ -69,7 +70,7 @@ brew install -v openexr
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-speex --with-theora --with-tools
 
 # Imagemagick
-brew install -v imagemagick --with-fontconfig --with-jasper --with-quantum-depth-32 --with-liblqr --with-librsvg --with-libtiff --with-libwmf --with-little-cms --with-openexr --with-webp
+brew install -v imagemagick --enable-hdri --with-fftw --with-fontconfig --with-jp2 --with-libtiff --with-little-cms --with-liblqr --with-librsvg --with-little-cms2 --with-openexr --with-webp --with-perl --with-quantum-depth-32 --with-x11
 
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
@@ -77,5 +78,8 @@ brew install -v opencolorio --with-docs --with-python
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 
-# Link apps such as Python and QT
+# Link apps such as Python and QT Designer
 sudo brew linkapps
+
+# Install applications via Cask
+brew install caskroom/cask/brew-cask
