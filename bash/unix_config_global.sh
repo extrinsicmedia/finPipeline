@@ -32,11 +32,158 @@ then
             then
                 export DROPBOX_PATH=$DROPBOX_SERVER_PATH
         fi
-fi
+        
+        ## Set backup server path
+        BACKUP_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value backup_server_path)"
+        if [[ -d $BACKUP_SERVER_PATH ]];
+            then
+                export BACKUP_SERVER=$BACKUP_SERVER_PATH
+        fi
 
-#######################################################################
-##### OSX USERS SHOULDN'T NEED TO ADJUST ANYTHING BELOW THIS LINE #####
-#######################################################################
+        ## Set reference/img path
+        REF_IMG_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value reference_img_path)"
+        if [[ -d $REF_IMG_PATH ]];
+            then
+                export REF_IMG_PATH=$REF_IMG_PATH
+        fi
+
+        ## Set reference/vid path
+        REF_VID_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value reference_vid_path)"
+        if [[ -d $REF_VID_PATH ]];
+            then
+                export REF_VID_PATH=$REF_VID_PATH
+        fi
+        
+        ## Set truecrypt app path
+        TRUECRYPT_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value truecrypt_app)"
+        if [[ -f $TRUECRYPT_APP ]];
+            then
+                alias truecrypt=$TRUECRYPT_APP
+                unset TRUECRYPT_APP
+        fi
+        
+        ## Set vlc app path
+        VLC_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value vlc_app)"
+        if [[ -f $VLC_APP ]];
+            then
+                alias vlc=$VLC_APP
+                unset VLC_APP
+        fi
+        
+        ## Set firefox app path
+        FIREFOX_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value firefox_app)"
+        if [[ -f $FIREFOX_APP ]];
+            then
+                alias firefox=$FIREFOX_APP
+                unset FIREFOX_APP
+        fi
+        
+        ## Set djview app path
+        DJVIEW_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value djview_app)"
+        if [[ -f $DJVIEW_APP ]];
+            then
+                alias djview=$DJVIEW_APP
+                export DJV_PATH=$DJVIEW_APP
+                alias djvload='djview $(djv_ls -xi)'
+                unset DJVIEW_APP
+        fi
+        
+        ## Set djview bin path
+        DJV_BIN_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value djv_bin_path)"
+        if [[ -f $DJV_BIN_PATH ]];
+            then
+                export PATH="$PATH:$DJV_BIN_PATH"
+                unset DJV_BIN_PATH
+        fi
+        
+        ## Set rv app path
+        RV_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value rv_app)"
+        if [[ -f $RV_APP ]];
+            then
+                alias rv=$RV_APP
+                unset RV_APP
+        fi
+        
+        ## Set rvpkg app path
+        RVPKG_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value rvpkg_app)"
+        if [[ -f $RVPKG_APP ]];
+            then
+                alias rvpkg=$RVPKG_APP
+                unset RVPKG_APP
+        fi
+        
+        ## Set nuke app path
+        NUKE_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value nuke_app)"
+        if [[ -f $NUKE_APP ]];
+            then
+                alias nuke=$NUKE_APP
+                unset NUKE_APP
+        fi
+        
+        ## Set nukex app path
+        NUKEX_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value nukex_app)"
+        if [[ -f $NUKEX_APP ]];
+            then
+                alias nukex=$NUKEX_APP
+                unset NUKEX_APP
+        fi
+        
+        ## Set nukestudio app path
+        NUKESTUDIO_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value nukestudio_app)"
+        if [[ -f $NUKESTUDIO_APP ]];
+            then
+                alias nukestudio=$NUKESTUDIO_APP
+                unset NUKESTUDIO_APP
+        fi
+        
+        ## Set photoshop app path
+        PHOTOSHOP_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value photoshop_app)"
+        if [[ -f $PHOTOSHOP_APP ]];
+            then
+                alias photoshop=$PHOTOSHOP_APP
+                unset PHOTOSHOP_APP
+        fi
+        
+        ## Set aftereffects app path
+        AFTEREFFECTS_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value aftereffects_app)"
+        if [[ -f $AFTEREFFECTS_APP ]];
+            then
+                alias aftereffects=$AFTEREFFECTS_APP
+                unset AFTEREFFECTS_APP
+        fi
+        
+        ## Set maya app path
+        MAYA_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value maya_app)"
+        if [[ -f $MAYA_APP ]];
+            then
+                alias maya=$MAYA_APP
+                unset MAYA_APP
+        fi
+        
+        ## Set djview bin path
+        MAYA_BIN_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value maya_bin_path)"
+        if [[ -f $MAYA_BIN_PATH ]];
+            then
+                export PATH="$PATH:$MAYA_BIN_PATH"
+                unset MAYA_BIN_PATH
+        fi
+        
+        ## Set meshlab app path
+        MESHLAB_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value meshlab_app)"
+        if [[ -f $MESHLAB_APP ]];
+            then
+                alias meshlab=$MESHLAB_APP
+                unset MESHLAB_APP
+        fi
+        
+        ## Set maya app path
+        KOMODO_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value komodo_app)"
+        if [[ -f $KOMODO_APP ]];
+            then
+                alias komodo="\"$KOMODO_APP"\"
+                unset KOMODO_APP
+        fi
+fi
 
 ### set server to use, if only one server is used, set $LOCAL_SERVER above
 if [[ $LOCAL_SERVER ]];
@@ -45,7 +192,7 @@ if [[ $LOCAL_SERVER ]];
     else
         export SERVER="$PROD_SERVER"
 fi
-        
+
 ### set default servers
 export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
 export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
@@ -125,191 +272,6 @@ export MAYA_DYN_SHELF_NAME="finShelf"
 
 ## OCIO Default setup
 export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
-
-### OSX Application paths ###
-if [[ `uname` == "Darwin" ]]; then
-    
-    ## Truecrypt
-    alias truecrypt='/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt'
-    
-    ## VLC
-    alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-
-    ## Firefox
-    alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
-
-    ## Setup Amazon EC2 Command-Line Tools
-    if [[ -d ~/.ec2 ]];
-    then
-        export EC2_HOME=~/.ec2
-        export PATH=$PATH:$EC2_HOME/bin
-        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-        export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
-    fi
-
-    ## Djview Alias
-    alias djview='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
-    alias djview-0.9.0='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
-    export PATH="$PATH:/Applications/djv-0.9.0.app/Contents/Resources/bin"
-    alias djvload='djview $(djv_ls -xi)'
-    export DJV_PATH='/Applications/djv-0.9.0.app/Contents/MacOS/djv-0.9.0'
-
-    ## RV
-    alias rv='/Applications/RV64.app/Contents/MacOS/RV64'
-    alias rvpkg='/Applications/RV64.app/Contents/MacOS/rvpkg'
-
-    ## Nuke
-    alias nukex='/Applications/Nuke7.0v8/NukeX7.0v8.app/NukeX7.0v8'
-    alias nuke='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
-    alias nuke70v8='/Applications/Nuke7.0v8/Nuke7.0v8.app/Nuke7.0v8'
-
-    export NUKE_PATH="$SYSTEMS_SERVER/nuke"
-    export NUKE_STARTUP="$SYSTEMS_SERVER/nuke"
-
-    ## Adobe Photoshop
-    alias photoshop='/Applications/Adobe\ Photoshop\ CC/Adobe\ Photoshop\ CC.app/Contents/MacOS/Adobe\ Photoshop\ CC'
-    
-    ## Adobe After Effects
-    alias ae='/Applications/Adobe\ After\ Effects\ CC/Adobe\ After\ Effects\ CC.app/Contents/MacOS/After\ Effects'
-
-    ## Adobe Reader
-    alias reader='/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader'
-    
-    ## Maya
-    alias maya='/Applications/Autodesk/maya2014/Maya.app/Contents/bin/maya'
-    alias maya2014='/Applications/Autodesk/maya2014/Maya.app/Contents/bin/maya'
-    export MAYA_LOCATION="/Applications/Autodesk/maya2014/Maya.app/Contents"
-    export PATH="/Applications/Autodesk/maya2014/Maya.app/Contents/bin:$PATH"
-
-    # Change this based on facility license settings
-    #MAYA_LICENSE=unlimited; export MAYA_LICENSE
-    #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
-    #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
-    
-    ## Meshlab
-    alias meshlab='/Applications/meshlab.app/Contents/MacOS/meshlab'
-    alias meshlabserver='/Applications/meshlab.app/Contents/MacOS/meshlabserver'
-    
-    ## Komodo
-    alias komodo='/Applications/Komodo\ Edit\ 8.app/Contents/MacOS/komodo'
-fi
-
-### Linux Application paths - 'Linux' may need to be 'Linux2' ###
-if [[ `uname` == "Linux" ]]; then
-    
-    ### Application alias and ENV vars ###
-    ## Misc Apps
-    alias truecrypt='/usr/bin/truecrypt'
-    alias vlc='/usr/bin/vlc'
-
-    ## Firefox
-    alias firefox='/usr/bin/firefox'
-
-    ## Setup Amazon EC2 Command-Line Tools
-    if [[ -d ~/.ec2 ]];
-    then
-        export EC2_HOME=~/.ec2
-        export PATH=$PATH:$EC2_HOME/bin
-        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-        export JAVA_HOME='echo "set JAVA_HOME path"'
-    fi
-
-    ## Djview Alias
-    alias djview='/usr/local/djv/bin/djv_view'
-    alias djview-0.8.3='/usr/local/djv/bin/djv_view'
-    alias djvload='djview $(djv_ls -xi)'
-    export DJV_PATH="/usr/local/djv/bin"
-    export PATH="/usr/local/djv/bin:$PATH"
-
-    ## RV
-    alias rv='echo "set RV path"'
-    alias rvpkg='echo "set RVPkg path"'
-
-    ## Nuke
-    alias nukex='/usr/local/Nuke7.0v10/Nuke7.0 --nukex -V'
-    alias nuke='/usr/local/Nuke7.0v10/Nuke7.0 -V'
-    alias nuke70v10='/usr/local/Nuke7.0v10/Nuke7.0 -V'
-    export PATH="/usr/local/Nuke7.0v10:$PATH"
-    
-    ## Maya
-    alias maya='/usr/autodesk/maya2014-x64/bin/maya2014'
-    alias maya2014='/usr/autodesk/maya2014-x64/bin/maya2014'
-    export MAYA_LOCATION='/usr/autodesk/maya2014-x64/bin'
-    
-    # Add Maya bin folder to $PATH
-    export PATH="/usr/autodesk/maya2014-x64/bin:$PATH"
-
-    # Change this based on facility license settings
-    #MAYA_LICENSE=unlimited; export MAYA_LICENSE
-    #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
-    #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
-
-    ## Komodo
-    alias komodo='/usr/Komodo-Edit-8/bin/komodo'
-    export PATH="/usr/Komodo-Edit-8/bin:$PATH"
-fi
-
-if [[ `uname` == "CYGWIN_NT-6.1" ]]; then
-    
-    ### Application alias and ENV vars ###
-    ## Misc Apps
-    alias truecrypt='"/cygdrive/c/Program Files/TrueCrypt/TrueCrypt.exe"'
-    alias vlc='"/cygdrive/c/Program Files (x86)/VideoLAN/VLC/vlc.exe"'
-
-    ## Firefox
-    alias firefox='"/cygdrive/c/Program Files (x86)/Mozilla Firefox/firefox.exe"'
-
-    ## Setup Amazon EC2 Command-Line Tools
-    if [[ -d ~/.ec2 ]];
-    then
-        export EC2_HOME=~/.ec2
-        export PATH=$PATH:$EC2_HOME/bin
-        export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk-*.pem`
-        export EC2_CERT=`ls $EC2_HOME/cert-*.pem`
-        export JAVA_HOME='echo "set JAVA_HOME path"'
-    fi
-
-    ## Djview Alias
-    alias djview='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
-    alias djview-0.8.3='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
-    export DJV_PATH='"/cygdrive/c/Program Files (x86)/djv 0.8.3/bin/djv_view.exe"'
-    export PATH="$PATH:/cygdrive/c/Program Files (x86)/djv 0.8.3/bin"
-    
-    ## RV
-    alias rv='echo "set RV path"'
-    alias rvpkg='echo "set RVPkg path"'
-
-    ## Nuke
-    alias nukex='echo "set Nuke path"'
-    alias nuke='"/cygdrive/c/Program Files/Nuke7.0v10/Nuke7.0.exe"'
-    alias nuke70v10='"/cygdrive/c/Program Files/Nuke7.0v10/Nuke7.0.exe"'
-    alias nuke80v1='"/cygdrive/c/Program Files/Nuke8.0v1/Nuke8.0.exe"'
-    
-    ## Blender
-    alias blender='"/cygdrive/c/Program Files/Blender Foundation/Blender/blender.exe"'
-    
-    ## Maya
-    alias maya='"/cygdrive/c/Program Files/Autodesk/Maya2014/bin/maya.exe"'
-    alias maya2014='"/cygdrive/c/Program Files/Autodesk/Maya2014/bin/maya.exe"'
-    export MAYA_LOCATION="/cygdrive/c/Program Files/Autodesk/Maya2014/bin"
-    
-    # Add Maya bin folder to $PATH
-    export PATH="$MAYA_LOCATION:$PATH"
-
-    # Change this based on facility license settings
-    #MAYA_LICENSE=unlimited; export MAYA_LICENSE
-    #MAYA_LICENSE_METHOD=Network; export MAYA_LICENSE_METHOD
-    #MAYA_ALT_EN=/var/flexlm/maya.lic; export MAYA_ALT_EN
-    
-    ## Meshlab
-    alias meshlab='"/cygdrive/c/Program Files/VCG/MeshLab/meshlab.exe"'
-    alias meshlabserver='"/cygdrive/c/Program Files/VCG/MeshLab/meshlabserver.exe"'
-    
-    ## Komodo
-    alias komodo='"/cygdrive/c/Program Files (x86)/ActiveState Komodo Edit 8/komodo.exe"'
-fi
 
 ### jobStart tool function
 jobStart () {
