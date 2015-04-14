@@ -33,3 +33,4 @@ Icon*
 .BridgeCache
 .BridgeCache*
 .BridgeSort
+*.tmp
