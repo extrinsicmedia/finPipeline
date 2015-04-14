@@ -1,4 +1,42 @@
-local_server_path: "<local server path here>"
-prod_server_path: "<production server path here>"
-dropbox_path: "dropbox path here"
-backup_server_path: "backup server path here"
+### server paths
+local_server_path: "/Volumes/PRODUCTION_02/Dropbox/PRODUCTION"
+prod_server_path: "/Volumes/FIN_RAID_01"
+dropbox_path: "/Volumes/PRODUCTION_02/Dropbox"
+backup_server_path: "/Volumes/FIN2TBWD01"
+
+### master reference img and vid paths
+reference_img_path: "/Volumes/PRODUCTION_01/ASSETS/reference/img"
+reference_vid_path: "/Volumes/PRODUCTION_01/ASSETS/reference/vid"
+
+### application paths
+truecrypt_app: "/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt"
+vlc_app: "/Applications/VLC.app/Contents/MacOS/VLC"
+firefox_app: "/Applications/Firefox.app/Contents/MacOS/firefox"
+djview_app: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/MacOS/djv-1.0.4-OSX-64"
+djview-1.0.4_app: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/MacOS/djv-1.0.4-OSX-64"
+djv_bin_path: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/Resources/bin"
+
+# RV
+rv_app: "/Applications/RV64.app/Contents/MacOS/RV64"
+rvpkg_app: "/Applications/RV64.app/Contents/MacOS/rvpkg"
+
+# Nuke
+nuke_app: "/Applications/Nuke9.0v4/Nuke9.0v4.app/Contents/MacOS/Nuke9.0v4"
+nukex_app: "/Applications/Nuke9.0v4/NukeX9.0v4.app/NukeX9.0v4"
+nukestudio_app: "/Applications/Nuke9.0v4/NukeStudio9.0v4.app/NukeStudio9.0v4"
+
+# adobe
+photoshop_app: "/Applications/Adobe\ Photoshop\ CC/Adobe\ Photoshop\ CC.app/Contents/MacOS/Adobe\ Photoshop\ CC"
+aftereffects_app: "/Applications/Adobe\ After\ Effects\ CC/Adobe\ After\ Effects\ CC.app/Contents/MacOS/After\ Effects"
+    
+# maya
+maya_app: "/Applications/Autodesk/maya2015/Maya.app/Contents/bin/maya"
+maya_location: "/Applications/Autodesk/maya2015/Maya.app/Contents"
+maya_bin_path: "/Applications/Autodesk/maya2015/Maya.app/Contents/bin"
+
+# meshlab    
+meshlab_app: "/Applications/meshlab.app/Contents/MacOS/meshlab"
+meshlabserver_app: "/Applications/meshlab.app/Contents/MacOS/meshlabserver"
+
+# komodo
+komodo_app: "/opt/homebrew-cask/Caskroom/komodo-edit/8.5.4-14424/Komodo\ Edit\ 8.app/Contents/MacOS/komodo-bin"
