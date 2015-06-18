@@ -39,6 +39,13 @@ then
             then
                 export BACKUP_SERVER=$BACKUP_SERVER_PATH
         fi
+        
+        ## Set project directory template path
+        PROJECT_DIR_TEMPLATE="$(cat $HOME/finpipeline.yaml | shyaml get-value project_dir_template)"
+        if [[ -d $PROJECT_DIR_TEMPLATE ]];
+            then
+                export PROJECT_DIR_TEMPLATE=$PROJECT_DIR_TEMPLATE
+        fi
 
         ## Set reference/img path
         REF_IMG_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value reference_img_path)"
@@ -54,12 +61,12 @@ then
                 export REF_VID_PATH=$REF_VID_PATH
         fi
         
-        ## Set truecrypt app path
-        TRUECRYPT_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value truecrypt_app)"
-        if [[ -f $TRUECRYPT_APP ]];
+        ## Set verarypt app path
+        VERACRYPT_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value veracrypt_app)"
+        if [[ -f $VERACRYPT_APP ]];
             then
-                alias truecrypt=$TRUECRYPT_APP
-                unset TRUECRYPT_APP
+                alias veracrypt=$VERACRYPT_APP
+                unset VERACRYPT_APP
         fi
         
         ## Set vlc app path
@@ -90,10 +97,28 @@ then
         
         ## Set djview bin path
         DJV_BIN_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value djv_bin_path)"
-        if [[ -f $DJV_BIN_PATH ]];
+        if [[ -d $DJV_BIN_PATH ]];
             then
                 export PATH="$PATH:$DJV_BIN_PATH"
                 unset DJV_BIN_PATH
+        fi
+        
+        ## Set bview app path
+        BVIEW_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value bview_app)"
+        if [[ -f $BVIEW_APP ]];
+            then
+                alias bview=$BVIEW_APP
+                export BVIEW_PATH=$BVIEW_APP
+                unset BVIEW_APP
+        fi
+        
+        ## Set batch_bview app path
+        BATCH_BVIEW_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value batch_bview_app)"
+        if [[ -f $BATCH_BVIEW_APP ]];
+            then
+                alias batch_bview=$BATCH_BVIEW_APP
+                export BATCH_BVIEW_PATH=$BATCH_BVIEW_APP
+                unset BATCH_BVIEW_APP
         fi
         
         ## Set rv app path
@@ -160,7 +185,7 @@ then
                 unset MAYA_APP
         fi
         
-        ## Set djview bin path
+        ## Set maya bin path
         MAYA_BIN_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value maya_bin_path)"
         if [[ -f $MAYA_BIN_PATH ]];
             then
@@ -176,7 +201,7 @@ then
                 unset MESHLAB_APP
         fi
         
-        ## Set maya app path
+        ## Set komodo app path
         KOMODO_APP="$(cat $HOME/finpipeline.yaml | shyaml get-value komodo_app)"
         if [[ -f $KOMODO_APP ]];
             then
