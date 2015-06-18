@@ -10,3 +10,4 @@ sudo pip install pysqlite
 sudo pip install sqlalchemy
 sudo pip install alembic
 sudo pip install pyseq # compressed sequence string module for Python and Shell
+sudo pip install pymongo
