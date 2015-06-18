@@ -32,7 +32,7 @@ then
     if [ -d $JOB_SERVER/$1 ];
     then
         echo export JOB="$1";
-        START_PATH="$JOB_SERVER/$1";
+        CUR_SHOT_PATH="$JOB_SERVER/$1";
         
         # Run this no matter what
         if [ -f $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
@@ -42,31 +42,34 @@ then
         
         if [ $2 ];
         then
-            if [ -d $JOB_SERVER/$1/$PROD_DIR/$2 ];
-            then
-                if [ -z $3 ]; then
-                    echo export SHOT="$2";
-                    START_PATH="$JOB_SERVER/$1/$PROD_DIR/$2";
+            if [ -z $3 ]; then
+                echo export SHOT="$2";
+                if [[ -d $JOB_SERVER/$1/$PROD_DIR/shots/$2 ]]; then   
+                    CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/shots/$2";
+                    if [[ -f $JOB_SERVER/$1/$PROD_DIR/shots/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ]]; then
+                        eval $JOB_SERVER/$1/$PROD_DIR/shots/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+                    fi
+                elif [[ -d $JOB_SERVER/$1/$PROD_DIR/$2 ]]; then
+                    CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/$2";
+                    if [[ -f $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ]]; then
+                        eval $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+                    fi
                 else
-                    echo export SEQUENCE="$2";
+                    echo "Shot does not exist"
                 fi
-                
-                # Run this no matter what
-                if [ -f $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
+            else
+                echo export SEQUENCE="$2";
+            fi
+            
+            if [ $3 ];
+            then
+                if [ -d $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3 ];
                 then
-                    eval $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
-                fi
-                
-                if [ $3 ];
-                then
-                    if [ -d $JOB_SERVER/$1/$PROD_DIR/$2/$3 ];
+                    echo export SHOT="$3";
+                    CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3";
+                    if [ -f $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
                     then
-                        echo export SHOT="$3";
-                        START_PATH="$JOB_SERVER/$1/$PROD_DIR/$2/$3";
-                        if [ -f $JOB_SERVER/$1/$PROD_DIR/$2/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
-                        then
-                            eval $JOB_SERVER/$1/$PROD_DIR/$2/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
-                        fi
+                        eval $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
                     fi
                 fi
             fi
@@ -76,4 +79,5 @@ then
     fi
 fi
 
-echo cd $START_PATH
+echo export CUR_SHOT_PATH=$CUR_SHOT_PATH
+echo cd $CUR_SHOT_PATH
