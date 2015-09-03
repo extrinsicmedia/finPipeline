@@ -25,6 +25,7 @@ random(1,frame)
 # simple html for label knobs
 <font color="red">Some red text</font> # change font color
 <font color="blue">Some blue text</font> # a different font color
+<font align="left">Left aligned text
 <b>Bold text</b> # bold text
 
 # Root dir
