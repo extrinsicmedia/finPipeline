@@ -187,7 +187,7 @@ then
         
         ## Set maya bin path
         MAYA_BIN_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value maya_bin_path)"
-        if [[ -f $MAYA_BIN_PATH ]];
+        if [[ -d $MAYA_BIN_PATH ]];
             then
                 export PATH="$PATH:$MAYA_BIN_PATH"
                 unset MAYA_BIN_PATH
@@ -298,8 +298,11 @@ export MAYA_DYN_SHELF_NAME="finShelf"
 ## OCIO Default setup
 export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
 
-### jobStart tool function
-jobStart () {
+## BView alias
+alias bvplay='bview $(lss --format %h[%r]%t)'
+
+### fin jobStart tool function
+fin () {
     if [[ -n $3 ]]; then
         eval "$($SYSTEMS_SERVER/bash/jobStart.sh $1 $2 $3)"
     elif [[ -n $2 ]]; then
