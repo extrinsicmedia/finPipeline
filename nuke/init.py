@@ -31,29 +31,30 @@ import sys
 import nuke
 import re
 
-### BEGIN FILEPATH CORRECTION ###
-# Make all filepaths load without errors regardless of OS
-def myFilenameFilter(filename):
-    if nuke.env['MACOS']:
-        filename = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('MAC_SERVER', None) )
-        filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('MAC_SERVER', None) )
+### NUKE DEFAULTS
+### Image Formats
+nuke.addFormat ("5120 2700 1.0 5K_RED")
+nuke.addFormat ("4096 2160 1.0 4K_RED")
+nuke.addFormat ("2048 1556 2.0 2k_anamorphic")
+nuke.addFormat ("4096 3112 2.0 4k_anamorphic")
+nuke.addFormat ("2048 1556 1.0 2k_super35_cc")
+nuke.addFormat ("2048 1168 1.0 2k_3perf_1168")
+nuke.addFormat ("2048 1162 1.0 2k_3perf_1162")
+nuke.addFormat ("2048 1156 1.0 2k_3perf_1156")
+nuke.addFormat ("2048 1152 1.0 2k_3perf_1152")
+nuke.addFormat ("2048 1080 1.0 2K_DCP")
+nuke.addFormat ("4096 4096 1.0 4k_square")
+nuke.addFormat ("8192 8192 1.0 8k_square")
+nuke.addFormat ("960 540 1.0 half_HD")
+nuke.addFormat ("720 405 1.0 email")
 
-    if nuke.env['WIN32']:
-        filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('WIN_SERVER', None) )
-        filename2 = filename.replace( os.environ.get('NIX_SERVER', None), os.environ.get('WIN_SERVER', None) )
+# Comp Defaults
+nuke.knobDefault('Root.format', '2K_DCP')
+nuke.knobDefault('Root.fps', '23.976')
 
-    if nuke.env['LINUX']:
-            filename = filename.replace( os.environ.get('MAC_SERVER', None), os.environ.get('NIX_SERVER', None) )
-            filename2 = filename.replace( os.environ.get('WIN_SERVER', None), os.environ.get('NIX_SERVER', None) )
-
-    return filename, filename2
-
-# Use the filenameFilter(s)
-#nuke.addFilenameFilter(myFilenameFilter)
-### END FILEPATH CORRECTION ###
 
 ### BEGIN PLUGIN ADDITIONS ###
-nuke.pluginAddPath(os.path.join('plugins', 'all', 'pixelfudger'))
+nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'plugins', 'all', 'pixelfudger'))
 
 # Add OS specific paths to directories
 if nuke.env['MACOS']:
@@ -78,12 +79,44 @@ if nuke.env['MACOS']:
     
     # Add Dynamics plugins
     nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'plugins', 'osx', 'dynamics'))
+    
+    # Add external gizmos
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'gizmos'))
+    
+    # Add external tcl
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'tcl'))
+    
+    # Add external icons
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'icons'))
+    
+    # Add external python
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'python'))
+    
+    # Add external OSX plugins
+    nuke.pluginAddPath(os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'plugins', 'osx'))
+    
+#  init.py
+#  J_Ops
+#
+#  Created by Jack Binks on 14/02/2010.
+#  Copyright (c) 2010 Jack Binks. All rights reserved.
+
+for path in nuke.pluginPath():
+    if os.path.exists(os.path.normpath(path+"/J_Ops/py")):
+        sys.path.append(path+"/J_Ops/py")
+    if os.path.exists(os.path.normpath(path+"/../J_Ops/py")):
+        sys.path.append(path+"/py")
+    if os.path.exists(os.path.normpath(path+"/../J_Ops/ndk")):
+        nuke.pluginAddPath(path+"/ndk")
+    if os.path.exists(os.path.normpath(path+"/../J_Ops/icons")):         
+        nuke.pluginAddPath(path+"/icons")
 
 ### END PLUGIN ADDITIONS ###
 
     
 ## LUMA gizmo collector
 CUSTOM_GIZMO_LOCATION = os.path.join(os.environ.get('NUKE_STARTUP', None), 'gizmos')
+CUSTOM_GIZMO_LOCATION02 = os.path.join(os.environ.get('NUKE_STARTUP', None), 'external', 'gizmos')
 
 class GizmoPathManager(object):
     def __init__(self, exclude=r'^\.', searchPaths=None):
@@ -211,19 +244,12 @@ if __name__ == '__main__':
         # We're not gonna need it anymore, cleanup...
         del gizManager
 
-
-### Read and Write nodes change defaults
-nuke.knobDefault("Read.before", "black")
-nuke.knobDefault("Read.after", "black")
-    
-
-### Image Formats
-nuke.addFormat ("2048 1556 2.0 2k_anamorphic")
-nuke.addFormat ("4096 3112 2.0 4k_anamorphic")
-nuke.addFormat ("2048 1556 1.0 2k_super35_cc")
-nuke.addFormat ("2048 1168 1.0 2k_3perf_1168")
-nuke.addFormat ("2048 1162 1.0 2k_3perf_1162")
-nuke.addFormat ("2048 1156 1.0 2k_3perf_1156")
-nuke.addFormat ("2048 1152 1.0 2k_3perf_1152")
-nuke.addFormat ("960 540 1.0 half_HD")
-nuke.addFormat ("720 405 1.0 email")
+if __name__ == '__main__':
+    if CUSTOM_GIZMO_LOCATION02 and os.path.isdir(CUSTOM_GIZMO_LOCATION02):
+        gizManager = GizmoPathManager(searchPaths=[CUSTOM_GIZMO_LOCATION02])
+    else:
+        gizManager = GizmoPathManager()
+    gizManager.addGizmoPaths()
+    if not nuke.GUI:
+        # We're not gonna need it anymore, cleanup...
+        del gizManager
