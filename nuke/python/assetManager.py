@@ -1,18 +1,64 @@
-#!/usr/bin/env python
+''' assetManager.py for use with finPipeline
+
+Modification of the asset manager from The Foundry tutorial:
+http://docs.thefoundry.co.uk/nuke/63/pythondevguide/asset.html
+
+Copyright (C) 2012  Miles Lauridsen
+
+Based on BSD 2-Clause License  http://opensource.org/licenses/BSD-2-Clause
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+'''
 
 import nukescripts
 import nuke
 import re
+import yaml
 import os
 from glob import glob
 
 ### GET ENV VARS SETUP ###
 finServer = os.environ.get('SERVER', None)
 jobServer = os.environ.get('JOB_SERVER', None)
-user = os.environ.get('USER', None)
+prodServer = os.environ.get('PROD_JOB_SERVER', None)
 job = os.environ.get('JOB', None)
-seq = os.environ.get('SEQUENCE', None)
+seq = os.environ.get('SEQ', None)
 shot = os.environ.get('SHOT', None)
+user = os.environ.get('USER', None)
+curJob = os.path.join(jobServer, job)
+curSeq = os.path.join(curJob, 'production', 'sequences', seq)
+curShot = os.environ.get('CUR_SHOT_PATH', None)
+curShotNuke = os.path.join(curShot, 'prj', 'nuke')
+if prodServer:
+    prodJob = os.path.join(prodServer, job)
+    prodSeq = os.path.join(prodJob, 'production', 'sequences', seq)
+    prodShot = os.path.join(prodSeq, 'shots', shot)
+    prodShotNuke = os.path.join(prodShot, 'prj', 'nuke')
+
+stream = file(os.path.join(curJob, "config", "config.yaml"))
+config = yaml.load(stream)
+jobshort = config["shortname"]
+
+### END ENV VARS SETUP ###
 
 # DEFINE FACILITY ROOT
 def rootDir():
@@ -20,35 +66,29 @@ def rootDir():
 
 # DEFINE SHOT'S NUKE DIR
 ##### Add error Exception here if job or shot not set
-def nukeDir():
-    print shot
-    if seq == None:
-        nkDir = os.path.join( jobServer, job, os.environ.get('PROD_DIR', None), shot, 'prj', 'nuke', 'projects' )
-    else:
-        nkDir = os.path.join( jobServer, job, os.environ.get('PROD_DIR', None), seq, shot, 'prj', 'nuke', 'projects' )
-        
-    if not os.path.isdir( nkDir ):
-        print "Starting outside jobStart system"
-    return nkDir
-
-def easySave():
-    nkDir = nukeDir()
+def easySave(scale):
+    nkDir = os.path.join(curShotNuke, 'scripts')
+    
     # GET DESCRIPTION FROM USER BUT STRIP ALL WHITE SPACES
-    description = nuke.getInput( 'script description', 'bashComp' ).replace( ' ', '' )
+    description = nuke.getInput( 'script description', 'comp' ).replace( ' ', '_' )
 
     fileSaved = False
     version = 1
+    subversion = 1
     while not fileSaved:
         # CONSTRUCT FILE NAME
         if seq == None:
-            nkName = '%s_%s_%s_v%02d.nk' % ( job, shot, description, version )
+            nkName = '%s_%s_%s_v%03d_%03d.nk' % ( jobshort, shot, description, version, subversion )
         else:
-            nkName = '%s_%s_%s_%s_v%02d.nk' % ( job, seq, shot, description, version )
+            nkName = '%s_%s_%s_v%03d_%03d.nk' % ( jobshort, shot, description, version, subversion )
         # JOIN DIRECTORY AND NAME TO FORM FULL FILE PATH
         nkPath = os.path.join( nkDir, nkName )
         # IF FILE EXISTS VERSION UP        
         if os.path.isfile( nkPath ):
-            version += 1
+            if scale == True:
+                version += 1
+            else:
+                subversion += 1
             continue
         # SAVE NUKE SCRIPT
         nuke.scriptSaveAs( nkPath )
@@ -126,7 +166,7 @@ def updateVersionKnob():
     '''
     Add as callback to list versions per type in Read node's user knob
     In menu.py or init.py:
-       nuke.addKnobChanged( fin_assetManager.updateVersionKnob, nodeClass='Read' )  
+       nuke.addKnobChanged( assetManager.updateVersionKnob, nodeClass='Read' )  
     '''
     node = nuke.thisNode()
     knob = nuke.thisKnob()
