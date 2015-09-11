@@ -70,14 +70,35 @@ def osPlugins():
             if platform.system() in ( 'Windows', 'Microsoft' ):
                 os.environ['MAYA_PLUG_IN_PATH'] = os.pathsep.join( \
                             [ os.environ.get('MAYA_PLUG_IN_PATH'), \
-                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'win_maya2013'), \
-                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'win_maya2013')])
+                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'win_maya2014'), \
+                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'win_maya2014')])
                 
             if platform.system() in ( 'Linux', 'Linux2' ):
                 os.environ['MAYA_PLUG_IN_PATH'] = os.pathsep.join( \
                             [ os.environ.get('MAYA_PLUG_IN_PATH'), \
-                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'linux_maya2013'), \
-                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'linux_maya2013')])
+                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'linux_maya2014'), \
+                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'linux_maya2014')])
+        
+        # Load Maya 2015 plugins
+        elif pm.versions.current() in ( 2015 ):
+            if platform.system() in ( 'Darwin', 'Apple' ):
+                os.environ['MAYA_PLUG_IN_PATH'] = os.pathsep.join( \
+                            [ os.environ.get('MAYA_PLUG_IN_PATH'), \
+                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'osx_maya2015'), \
+                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'osx_maya2015')])
+                
+            if platform.system() in ( 'Windows', 'Microsoft' ):
+                os.environ['MAYA_PLUG_IN_PATH'] = os.pathsep.join( \
+                            [ os.environ.get('MAYA_PLUG_IN_PATH'), \
+                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'win_maya2015'), \
+                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'win_maya2015')])
+                
+            if platform.system() in ( 'Linux', 'Linux2' ):
+                os.environ['MAYA_PLUG_IN_PATH'] = os.pathsep.join( \
+                            [ os.environ.get('MAYA_PLUG_IN_PATH'), \
+                            os.path.join(os.environ.get('MAYA_EXTERNAL_PLUGIN_PATH', None), 'linux_maya2015'), \
+                            os.path.join(os.environ.get('MAYA_FIN_PLUGIN_PATH', None), 'linux_maya2015')])
+                
                 
     except:
         raise RuntimeError('Please make sure plugin path is set correctly')
@@ -93,15 +114,15 @@ def loadPlugins():
     
     # external plugins
     try:
-        cmds.loadPlugin( 'SOuP.bundle')
-        mel.eval( 'if(!`pluginInfo -query -l -n "SOuP"`) loadPlugin "SOuP";')
-        mel.eval('if (`shelfLayout -exists soup `) deleteUI soup;')
-        mel.eval('loadNewShelf "shelf_soup.mel"')
-        
         if pm.versions.current() in ( 201402, 2014 ):
             mel.eval( 'if(!`pluginInfo -query -l -n "MASH-2014"`) loadPlugin "MASH-2014";')
             mel.eval('if (`shelfLayout -exists MASH `) deleteUI MASH;')
             mel.eval('loadNewShelf "shelf_MASH.mel"')
+
+            cmds.loadPlugin( 'SOuP.bundle')
+            mel.eval('if(!`pluginInfo -query -l -n "SOuP"`) loadPlugin "SOuP";')
+            mel.eval('if (`shelfLayout -exists soup `) deleteUI soup;')
+            mel.eval('loadNewShelf "shelf_soup.mel"')
     
     except:
         print "Check external plugin paths"
