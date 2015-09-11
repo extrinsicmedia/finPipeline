@@ -53,8 +53,8 @@ def printConfirm():
 
 #pm.mayautils.executeDeferred( 'fus.loadPlugins()' ) # this was the old way of loading
 cmds.evalDeferred( 'fus.osPlugins()' )
-cmds.evalDeferred('lowestPriority')
-cmds.evalDeferred('fus.loadPlugins()')
+#cmds.evalDeferred( 'lowestPriority' )
+cmds.evalDeferred( 'fus.loadPlugins()' )
 cmds.evalDeferred( 'fus.initialStructure()' )
 cmds.evalDeferred( 'fus.newStuff()' )
 cmds.evalDeferred( 'fus.startupCheck()' )
