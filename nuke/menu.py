@@ -28,6 +28,7 @@ POSSIBILITY OF SUCH DAMAGE.
 import os
 import re
 import sys
+import yaml
 import nuke
 import djv_this
 import assetManager
@@ -35,10 +36,25 @@ import assetManager
 ### GET ENV VARS SETUP ###
 finServer = os.environ.get('SERVER', None)
 jobServer = os.environ.get('JOB_SERVER', None)
-user = os.environ.get('USER', None)
+prodServer = os.environ.get('PROD_JOB_SERVER', None)
 job = os.environ.get('JOB', None)
-seq = os.environ.get('SEQUENCE', None)
+seq = os.environ.get('SEQ', None)
 shot = os.environ.get('SHOT', None)
+user = os.environ.get('USER', None)
+curJob = os.path.join(jobServer, job)
+curSeq = os.path.join(curJob, 'production', 'sequences', seq)
+curShot = os.environ.get('CUR_SHOT_PATH', None)
+curShotNuke = os.path.join(curShot, 'prj', 'nuke')
+if prodServer:
+    prodJob = os.path.join(prodServer, job)
+    prodSeq = os.path.join(prodJob, 'production', 'sequences', seq)
+    prodShot = os.path.join(prodSeq, 'shots', shot)
+    prodShotNuke = os.path.join(prodShot, 'prj', 'nuke')
+
+stream = file(os.path.join(curJob, "config", "config.yaml"))
+config = yaml.load(stream)
+jobshort = config["shortname"]
+print jobshort
 
 ### END ENV VARS SETUP ###
 
@@ -94,25 +110,34 @@ m.addCommand('Flipbook Selected in &DJV', 'nukescripts.flipbook( djv_this.djv_th
 
 
 ### BEGIN OCIO SETUP ###
-try:
-    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.unregister_viewers()
-    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.register_viewers(defaultLUTS = False,\
-                                                       ocioConfigName = os.environ.get('OCIO', None));
-except:
-    print "OCIO var not set, using Default OCIO"
+#try:
+#    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.unregister_viewers()
+#    import nukescripts.ViewerProcess; nukescripts.ViewerProcess.register_viewers(defaultLUTS = False,\
+#                                                       ocioConfigName = os.environ.get('OCIO', None));
+#except:
+#    print "OCIO var not set, using Default OCIO"
 ### END OCIO SETUP ###
 
 
 ### BEGIN FAVORITES SETUP ###
 ## Add Favorites directories
 nuke.addFavoriteDir('Job Server', jobServer )
-if job:
-    nuke.addFavoriteDir('Job', job)
-if seq:
-    nuke.addFavoriteDir('Sequence', seq)
-if shot:
-    nuke.addFavoriteDir('Shot', shot)
-
+if curJob:
+    nuke.addFavoriteDir('Job', curJob)
+if curSeq:
+    nuke.addFavoriteDir('Seq', curSeq)
+if curShot:
+    nuke.addFavoriteDir('Shot', curShot)
+if curShotNuke:
+    nuke.addFavoriteDir('Shot_Nuke', curShotNuke)
+if prodJob:
+    nuke.addFavoriteDir('Prod_Job', prodJob)
+if prodSeq:
+    nuke.addFavoriteDir('Prod_Seq', prodSeq)
+if prodShot:
+    nuke.addFavoriteDir('Prod_Shot', prodShot)
+if prodShotNuke:
+    nuke.addFavoriteDir('Prod_Shot_Nuke', prodShotNuke)
 toolbar = nuke.toolbar("Nodes")
 
 ### END FAVORITES SETUP ###
@@ -127,6 +152,10 @@ nuke.knobDefault( 'EXPTool.mode', 'Stops' )
 
 # Node Colors
 nuke.knobDefault( 'Transform.tile_color', '1278560767.0' )
+
+### Read and Write nodes change defaults
+nuke.knobDefault("Read.before", "black")
+nuke.knobDefault("Read.after", "black")
 ### END DEFAULTS SETUP ###
 
 ### BEGIN LUMA GIZMO SETUP ###
@@ -149,7 +178,7 @@ if __name__ == '__main__':
 # CREATE A READ NODE AND OPEN THE "DB" TAB
 def customRead():
         n = nuke.createNode( 'Read' )
-        n['DB'].setFlag( 0 )
+        #n['DB'].setFlag( 0 )
 
 # ADD CUSTOM READ AND WRITE TO TOOLBAR
 nuke.menu( 'Nodes' ).addCommand( 'Image/WriteAsset', lambda: nuke.createNode( 'WriteAsset' ), 'Shift-w' )
@@ -161,14 +190,16 @@ if seq != None:
 else:
     shotMenu = '%s' % shot
     
-nuke.menu( 'Nuke' ).addCommand( shotMenu+'/Easy Save', assetManager.easySave )
+nuke.menu( 'Nuke' ).addCommand( shotMenu+'/Easy Save Minor', "assetManager.easySave(0)" )
+nuke.menu( 'Nuke' ).addCommand( shotMenu+'/Easy Save Major', "assetManager.easySave(1)" )
+    
 
 
-# SET FILE BROWSER FAVORITES
-nuke.addFavoriteDir(
-    name = 'NUKE SCRIPTS',
-    directory = assetManager.nukeDir(),
-    type = nuke.SCRIPT)
+## SET FILE BROWSER FAVORITES
+#nuke.addFavoriteDir(
+#    name = 'NUKE SCRIPTS',
+#    directory = assetManager.nukeDir(),
+#    type = nuke.SCRIPT)
 
 # HELPER FUNCTION FOR NUKE SCRIPT PANEL
 def nkPanelHelper():
@@ -187,25 +218,20 @@ def nkPanelHelper():
                 if p.selectedScript:
                         nuke.scriptOpen( p.selectedScript )
 
-# ADD CALLBACKS
-nuke.addOnScriptSave( assetManager.checkScriptName )
-nuke.addOnUserCreate( nkPanelHelper, nodeClass='Root')
-nuke.addOnUserCreate( assetManager.createVersionKnobs, nodeClass='Read' )
-nuke.addKnobChanged( assetManager.updateVersionKnob, nodeClass='Read' )
-nuke.addBeforeRender( assetManager.createOutDirs, nodeClass='Write' )
-nuke.knobDefault( 'Write.beforeRender', 'assetManager.createOutDirs()')
-### END ASSET MANAGEMENT SETUP ###
+## ADD CALLBACKS
+#nuke.addOnScriptSave( assetManager.checkScriptName )
+#nuke.addOnUserCreate( nkPanelHelper, nodeClass='Root')
+#nuke.addOnUserCreate( assetManager.createVersionKnobs, nodeClass='Read' )
+#nuke.addKnobChanged( assetManager.updateVersionKnob, nodeClass='Read' )
+#nuke.addBeforeRender( assetManager.createOutDirs, nodeClass='Write' )
+#nuke.knobDefault( 'Write.beforeRender', 'assetManager.createOutDirs()')
+#### END ASSET MANAGEMENT SETUP ###
 
 
 ### BEGIN RENDER SETUP ###
 m = menubar.addMenu("Render")
 m.addCommand("Create Paths", "createPaths()")
 #m.addCommand("Fix Paths", "fixPath.fixPath()")
-## Uncomment this if RUSH is used
-#m.addCommand("Send2Rush", "s2r.Nuke2Rush()")
-
-### END RUSH SETUP ###
-
 
 ### BEGIN GIZMO SETUP ###
 try:
@@ -226,11 +252,12 @@ except:
 ### BEGIN MENU SETUP ###
 ## Nukepedia
 # Download these from Nukepedia.com
-#import presetBackdrop
-#nukepediaMenu = nuke.menu('Nuke').addMenu('Nukepedia')
-#nukepediaMenu.addCommand('Preset Backdrop', 'presetBackdrop.presetBackdrop()', 'ctrl+alt+b')
-#import CopyCam
-#nukepediaMenu.addCommand( 'Copy Camera for Projection', 'CopyCam.copyCamForProj()', "Shift+v")
+import presetBackdrop
+nukepediaMenu = nuke.menu('Nuke').addMenu('Nukepedia')
+nukepediaMenu.addCommand('Preset Backdrop', 'presetBackdrop.presetBackdrop()', 'ctrl+alt+b')
+
+import CopyCam
+nukepediaMenu.addCommand( 'Copy Camera for Projection', 'CopyCam.copyCamForProj()', "Shift+v")
 
 ## Miles Menu
 milesMenu = nuke.menu('Nuke').addMenu('Miles')
