@@ -60,6 +60,11 @@ brew install -v clamav
 # Homebrew science
 brew tap homebrew/science
 brew install -v hdf5
+# oiio expects libhdf5.9.dylib. This appears to fix the issue
+if [ ! -f /usr/local/lib/libhdf5.9.dylib ];
+then
+    ln -s /usr/local/lib/libhdf5.10.dylib /usr/local/lib/libhdf5.9.dylib
+fi
 brew install -v alembic
 
 # Imaging
