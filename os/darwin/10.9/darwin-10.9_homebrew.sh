@@ -65,6 +65,8 @@ brew install -v alembic
 # Imaging
 brew install -v ilmbase
 brew install -v openexr
+brew install -v opencolorio --with-docs --with-python
+brew install -v openimageio # --with-qt and --with-tests currently fail
 
 # FFmpeg
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-speex --with-theora --with-tools
@@ -74,12 +76,8 @@ brew install -v imagemagick --enable-hdri --with-fftw --with-fontconfig --with-j
 
 # Image processing
 brew install -v opencv --with-cuda --with-eigen --with-ffmpeg --with-java --with-openexr --with-openni --with-qt --with-tests
-brew install -v opencolorio --with-docs --with-python
 brew install -v pixie
 brew install -v open-scene-graph --docs --with-collada-dom --with-ffmpeg --with-gnuplot --with-openexr
 
 # Link apps such as Python and QT Designer
 sudo brew linkapps
-
-# Install applications via Cask
-brew install caskroom/cask/brew-cask
