@@ -8,6 +8,12 @@ for n in nuke.selectedNodes():
 for n in nuke.selectedNodes("Camera2"):
     print n.name()
 
+# get current script path
+print nuke.root().name()
+
+# get selected node class
+print nuke.selectedNode().Class()
+
 # looking through all nodes
 for n in nuke.allNodes():
     if n.Class() == "Read":

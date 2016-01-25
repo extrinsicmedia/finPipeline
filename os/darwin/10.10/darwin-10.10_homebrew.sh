@@ -5,12 +5,14 @@ brew install -v cmake
 brew install -v gcc
 brew install -v tbb
 brew install -v glib
+brew install -v bash
 
 # Security
 brew install -v gnupg --8192
 brew install -v pass
 brew install -v keychain
 brew install -v openssl
+brew install -v gpg-agent
 
 # Utilities
 brew install -v curl
@@ -24,6 +26,7 @@ brew install -v htop
 brew install -v nmap
 brew install -v ncdu
 brew install -v youtube-dl
+brew install -v watch
 
 # Database
 brew install -v postgresql
@@ -72,6 +75,7 @@ brew install -v ilmbase
 brew install -v openexr
 brew install -v opencolorio --with-docs --with-python
 brew install -v openimageio # --with-qt and --with-tests currently fail
+brew install -v openvdb
 
 # FFmpeg
 brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-speex --with-theora --with-tools
