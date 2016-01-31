@@ -2,6 +2,7 @@
 
 finPipeline is a VFX pipeline for small team and studio use on commercial and film produciton.  We believe a successful pipeline is based on providing a flexible structure that enables consistency of delivery in the face of changing creative and technical demands.  Our goal is to provide a framework of tools to help in this process.
 
+
 ###Dependencies
 Here's the bare minimum of dependencies to get started:
 * Bash Shell
@@ -9,6 +10,7 @@ Here's the bare minimum of dependencies to get started:
 * pip
 * shyaml
 * A package management program (Homebrew, Cygwin, apt-get, etc)
+
 
 ###Installation
 
@@ -28,8 +30,3 @@ Basic installation using Mac OSX 10.7.5 as example:
 4. Use /finPipeline/python/fin/fin/fileOps/dirOps.py to create your job folders.
 
 5. Log any errors as Github issues or email for help.
-
-
-If you find this code useful, feel free to tip: https://www.gittip.com/extrinsicmedia
-
-
