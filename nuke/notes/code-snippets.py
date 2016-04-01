@@ -37,6 +37,13 @@ if knob.hasExpression():
 for i in nuke.selectedNodes().knobs():
     print i
 
+# Set value on all Read nodes within a selected group
+for n in nuke.selectedNodes():
+    if n.Class() == "Group":
+        for s in n.nodes():
+            if s.Class() == "Read":
+                s['postage_stamp'].setValue(True)
+
 # Code for Tagging system
 for n in nuke.allNodes():
     if "LUT_CORRECT" in n['label'].getValue():
