@@ -16,8 +16,10 @@ $gui ? 1 : 16 #scanline render
 
 # random curve expression
 (random(1,frame*1)*1)+0
+
 # or just simplified:
 random(1,frame)
+
 # this creates a curve containing random values between 0 and 1.
 # the breakdown controls:
 (random(seed,frame*frequency)*amplitude)+valueOffset
@@ -27,6 +29,9 @@ random(1,frame)
 <font color="blue">Some blue text</font> # a different font color
 <font align="left">Left aligned text
 <b>Bold text</b> # bold text
+
+# metadata get exr compression type
+[metadata exr/compression]
 
 # Root dir
 [file dirname [knob [topnode].file]]
