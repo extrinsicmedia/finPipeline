@@ -1,42 +1,62 @@
+### fin profile config
+fin_profile_path: "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/bash/unix_config_global.sh"
+
 ### server paths
-local_server_path: "/Volumes/PRODUCTION_02/Dropbox/PRODUCTION"
-prod_server_path: "/Volumes/FIN_RAID_01"
-dropbox_path: "/Volumes/PRODUCTION_02/Dropbox"
-backup_server_path: "/Volumes/FIN2TBWD01"
+local_server_path: "/Users/vectorthirteen/Dropbox/PRODUCTION"
+prod_server_path: ""
+dropbox_path: "/Users/vectorthirteen/Dropbox"
+backup_server_path: ""
+
+### template paths
+project_dir_template: "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/database/xml/project_dir_template_2015-05-06.xml"
+
+### ocio default
+ocio_default: "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/ocio/spi-vfx/config.ocio"
 
 ### master reference img and vid paths
-reference_img_path: "/Volumes/PRODUCTION_01/ASSETS/reference/img"
-reference_vid_path: "/Volumes/PRODUCTION_01/ASSETS/reference/vid"
+ref_img_path: "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/img"
+ref_vid_path: "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/vid"
+ref_tut_path: "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/TUTORIALS"
 
 ### application paths
-truecrypt_app: "/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt"
-vlc_app: "/Applications/VLC.app/Contents/MacOS/VLC"
-firefox_app: "/Applications/Firefox.app/Contents/MacOS/firefox"
-djview_app: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/MacOS/djv-1.0.4-OSX-64"
-djview-1.0.4_app: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/MacOS/djv-1.0.4-OSX-64"
-djv_bin_path: "/opt/homebrew-cask/Caskroom/djv/1.0.4/djv-1.0.4-OSX-64.app/Contents/Resources/bin"
+veracrypt_app: "/Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt"
+vlc_app: "/opt/homebrew-cask/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC"
+firefox_app: "/opt/homebrew-cask/Caskroom/firefox/41.0.1/Firefox.app/Contents/MacOS/firefox"
+
+### image viewers
+djview_app: "/opt/homebrew-cask/Caskroom/djv/1.1.0/djv-1.1.0-OSX-64.app/Contents/MacOS/djv-1.1.0-OSX-64"
+djv_bin_path: "/opt/homebrew-cask/Caskroom/djv/1.1.0/djv-1.1.0-OSX-64.app/Contents/Resources/bin"
+bview_app: "/Applications/Bview.app/Contents/MacOS/bview"
+batch_bview_app: "/Applications/Bview.app/Contents/MacOS/batch_bview"
 
 # RV
 rv_app: "/Applications/RV64.app/Contents/MacOS/RV64"
 rvpkg_app: "/Applications/RV64.app/Contents/MacOS/rvpkg"
 
 # Nuke
-nuke_app: "/Applications/Nuke9.0v4/Nuke9.0v4.app/Contents/MacOS/Nuke9.0v4"
-nukex_app: "/Applications/Nuke9.0v4/NukeX9.0v4.app/NukeX9.0v4"
-nukestudio_app: "/Applications/Nuke9.0v4/NukeStudio9.0v4.app/NukeStudio9.0v4"
+nuke_app: "/Applications/Nuke9.0v7/Nuke9.0v7.app/Contents/MacOS/Nuke9.0v7"
+nukex_app: "/Applications/Nuke9.0v7/NukeX9.0v7.app/NukeX9.0v7"
+nukestudio_app: "/Applications/Nuke9.0v7/NukeStudio9.0v7.app/NukeStudio9.0v7"
 
 # adobe
 photoshop_app: "/Applications/Adobe\ Photoshop\ CC/Adobe\ Photoshop\ CC.app/Contents/MacOS/Adobe\ Photoshop\ CC"
 aftereffects_app: "/Applications/Adobe\ After\ Effects\ CC/Adobe\ After\ Effects\ CC.app/Contents/MacOS/After\ Effects"
-    
+
 # maya
-maya_app: "/Applications/Autodesk/maya2015/Maya.app/Contents/bin/maya"
-maya_location: "/Applications/Autodesk/maya2015/Maya.app/Contents"
+maya_app: "/Applications/Autodesk/maya2015/Maya.app/Contents/MacOS/Maya"
+maya_location: "/Applications/Autodesk/maya2015/Maya.app/Contents/MacOS"
 maya_bin_path: "/Applications/Autodesk/maya2015/Maya.app/Contents/bin"
 
 # meshlab    
-meshlab_app: "/Applications/meshlab.app/Contents/MacOS/meshlab"
-meshlabserver_app: "/Applications/meshlab.app/Contents/MacOS/meshlabserver"
+meshlab_app: "/opt/homebrew-cask/Caskroom/meshlab/1.3.3/meshlab.app/Contents/MacOS/meshlab"
+meshlabserver_app: "/opt/homebrew-cask/Caskroom/meshlab/1.3.3/meshlab.app/Contents/MacOS/meshlabserver"
 
 # komodo
-komodo_app: "/opt/homebrew-cask/Caskroom/komodo-edit/8.5.4-14424/Komodo\ Edit\ 8.app/Contents/MacOS/komodo-bin"
+komodo_app: "/opt/homebrew-cask/Caskroom/komodo-edit/9.1.0-15798/Komodo\ Edit\ 9.app/Contents/MacOS/komodo"
+
+# gimp
+gimp_app: "/Users/vectorthirteen/Applications/GIMP.app/Contents/MacOS/GIMP"
+
+# redcine-x and redline
+redcine_app: "/Applications/REDCINE-X Professional/REDCINE-X PRO.app/Contents/MacOS/REDCINE-X PRO"
+redline_app: "/Applications/REDCINE-X Professional/REDCINE-X PRO.app/Contents/MacOS/REDline"
