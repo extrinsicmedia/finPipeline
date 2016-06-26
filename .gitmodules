@@ -1,0 +1,3 @@
+[submodule "nuke"]
+	path = nuke
+	url = https://github.com/extrinsicmedia/finNuke.git
