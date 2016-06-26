@@ -11,6 +11,7 @@ brew install -v gnupg --8192
 brew install -v pass
 brew install -v keychain
 brew install -v openssl
+brew install -v gpg-agent
 
 # Utilities
 brew install -v curl
@@ -43,6 +44,7 @@ brew install -v harfbuzz
 brew install -v fontconfig
 brew install -v pango
 brew install -v sphinx
+brew install -v packer
 
 # Languages
 brew install -v python --universal --with-brewed-openssl
