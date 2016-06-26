@@ -1,2 +1,0 @@
-Rewrite djv_this.py
-Change guiCheck.py to definition so it's callable
