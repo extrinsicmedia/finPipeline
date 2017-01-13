@@ -25,10 +25,13 @@ Basic installation using Mac OSX as example:
     `cd /mnt/server/systems/ && git clone https://github.com/<your-git-name>/finPipeline.git`
 
 2. Copy the config file to your $HOME directory and change the paths for your server:
+
     `cp finPipeline/config/finpipeline.yaml $HOME`
+
     `vim $HOME/finpipeline.yaml`
 
 3. Run the following to source the unix_config_global.sh in your .bashrc file:
+
     `echo "source /mnt/server/systems/finPipeline/bash/unix_config_global.sh" >> ~/.bashrc`
 
 4. Log any errors as Github issues or email for help.
