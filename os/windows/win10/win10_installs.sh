@@ -5,7 +5,7 @@
 # Here is a minimal list of packages for Cygwin setup
 # git python
 
-# Install Python pip
+# Install Python pip via Cygwin shell
 python -m pip install -U pip setuptools
 
 # Install shyaml using pip
