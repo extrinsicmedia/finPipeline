@@ -18,7 +18,8 @@ Instructions for installation of software requirements for the environment can b
 
 Basic installation using Mac OSX as example:
 
-1. Fork or clone finPipeline to your shared system server.  For example: 
+1. Fork or clone finPipeline to your shared system server.  For example:
+
     `cd /mnt/server/systems/ && git clone https://github.com/extrinsicmedia/finPipeline.git`
     
     `cd /mnt/server/systems/ && git clone https://github.com/<your-git-name>/finPipeline.git`
