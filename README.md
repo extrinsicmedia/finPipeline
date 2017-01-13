@@ -20,6 +20,7 @@ Basic installation using Mac OSX as example:
 
 1. Fork or clone finPipeline to your shared system server.  For example: 
     `cd /mnt/server/systems/ && git clone https://github.com/extrinsicmedia/finPipeline.git`
+    
     `cd /mnt/server/systems/ && git clone https://github.com/<your-git-name>/finPipeline.git`
 
 2. Copy the config file to your $HOME directory and change the paths for your server:
