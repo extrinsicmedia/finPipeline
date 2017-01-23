@@ -77,8 +77,8 @@ brew install -v opencolorio --with-docs --with-python
 brew install -v openimageio # --with-qt and --with-tests currently fail
 brew install -v openvdb
 
-# FFmpeg
-brew install -v ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libaca --with-libvo-aacenc --with-libvorbis --with-libvpx --with-openjpeg --with-openssl --with-speex --with-theora --with-tools
+# FFmpeg 3.2.2
+brew install -v ffmpeg --with-chromaprint --with-fdk-aac --with-fontconfig --with-freetype --with-frei0r --with-libass --with-libbluray --with-libbs2b --with-libcaca --with-libebur128 --with-libgsm --with-libssh --with-libvidstab --with-libvpx --with-opencore-amr --with-openh264 --with-openjpeg --with-openssl --with-sdl2 --with-schroedinger --with-rubberband --with-rtmpdump --with-opus --with-snappy --with-speex --with-tesseract --with-tools --with-theora --with-two-lame --with-wavpack --with-webp --with-x265 --with-xz
 
 # Imagemagick
 brew install -v imagemagick --enable-hdri --with-fftw --with-fontconfig --with-jp2 --with-libtiff --with-little-cms --with-liblqr --with-librsvg --with-little-cms2 --with-openexr --with-webp --with-perl --with-quantum-depth-32 --with-x11
