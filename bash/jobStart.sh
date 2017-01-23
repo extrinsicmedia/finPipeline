@@ -37,7 +37,7 @@ then
         # Run this no matter what
         if [ -f $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
         then
-            eval $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+            echo source $JOB_SERVER/$1/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
         fi
         
         if [ $2 ];
@@ -47,29 +47,30 @@ then
                 if [[ -d $JOB_SERVER/$1/$PROD_DIR/shots/$2 ]]; then   
                     CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/shots/$2";
                     if [[ -f $JOB_SERVER/$1/$PROD_DIR/shots/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ]]; then
-                        eval $JOB_SERVER/$1/$PROD_DIR/shots/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+                        echo source $JOB_SERVER/$1/$PROD_DIR/shots/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
                     fi
                 elif [[ -d $JOB_SERVER/$1/$PROD_DIR/$2 ]]; then
                     CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/$2";
                     if [[ -f $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ]]; then
-                        eval $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+                        echo source $JOB_SERVER/$1/$PROD_DIR/$2/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
                     fi
                 else
                     echo "Shot does not exist"
                 fi
             else
-                echo export SEQUENCE="$2";
+                echo export SEQ="$2";
             fi
             
             if [ $3 ];
             then
                 if [ -d $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3 ];
                 then
+                    echo export SEQ="$2";
                     echo export SHOT="$3";
                     CUR_SHOT_PATH="$JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3";
                     if [ -f $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME ];
                     then
-                        eval $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
+                        echo source $JOB_SERVER/$1/$PROD_DIR/sequences/$2/shots/$3/$CONFIG_DIR_NAME/$CONFIG_FILE_NAME;
                     fi
                 fi
             fi
