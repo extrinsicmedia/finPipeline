@@ -1,0 +1,286 @@
+{
+	"configs": {
+		"bash_config": {
+			"fin_profile_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/bash/unix_config_global.sh"
+		},
+		"servers": {
+			"local_server_path": "/Users/vectorthirteen/syncthing/production",
+			"prod_server_path": "",
+			"dropbox_path": "",
+			"syncthing_path": "/Users/vectorthirteen/syncthing",
+			"backup_server_path": ""
+		},
+		"templates": {
+			"project_dir_template": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/database/xml/project_dir_template_2015-05-06.xml"
+		},
+		"color": {
+			"ocio_default": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/ocio/spi-vfx/config.ocio",
+			"luts": ""
+		},
+		"reference": {
+			"ref_img_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/img",
+			"ref_vid_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/vid",
+			"ref_tut_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/TUTORIALS"
+		},
+		"apps": [
+			{
+			"env_name": "veracrypt_app",
+			"path": "/Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt",
+			"tags": [
+				"security"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "vlc_app",
+			"path": "/opt/homebrew-cask/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC",
+			"tags": [
+				"image_viewer", "video_player"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "rv_app",
+			"path": "/Applications/RV64.app/Contents/MacOS/RV64",
+			"tags": [
+				"image_viewer", "video_player"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "rvpkg_app",
+			"path": "/Applications/RV64.app/Contents/MacOS/rvpkg",
+			"tags": [
+				"image_viewer", "video_player"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "djview_app",
+			"path": "/opt/homebrew-cask/Caskroom/djv/1.1.0/djv-1.1.0-OSX-64.app/Contents/MacOS/djv-1.1.0-OSX-64",
+			"tags": [
+				"image_viewer", "video_player"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "djv_bin_path",
+			"path": "/opt/homebrew-cask/Caskroom/djv/1.1.0/djv-1.1.0-OSX-64.app/Contents/Resources/bin",
+			"tags": [
+				"image_viewer", "video_player", "converter"
+			],
+			"type": "bin",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "bview_app",
+			"path": "/Applications/Bview.app/Contents/MacOS/bview",
+			"tags": [
+				"image_viewer", "video_player", "converter"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "batch_bview_app",
+			"path": "/Applications/Bview.app/Contents/MacOS/batch_bview",
+			"tags": [
+				"image_viewer", "video_player", "converter"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "firefox_app",
+			"path": "/opt/homebrew-cask/Caskroom/firefox/41.0.1/Firefox.app/Contents/MacOS/firefox",
+			"tags": [
+				"webbrowser"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "komodo_app",
+			"path": "/opt/homebrew-cask/Caskroom/komodo-edit/9.1.0-15798/Komodo Edit 9.app/Contents/MacOS/komodo",
+			"tags": [
+				"text_editor"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "nuke_app",
+			"path": "/Applications/Nuke10.0v4/Nuke10.0v4.app/Contents/MacOS/Nuke10.0v4",
+			"tags": [
+				"compositor", "nuke", "2d"
+			],
+			"type": "app",
+			"version": "10.0",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "nukex_app",
+			"path": "/Applications/Nuke10.0v4/NukeX10.0v4.app/NukeX10.0v4",
+			"tags": [
+				"compositor", "nuke", "2d"
+			],
+			"type": "app",
+			"version": "10.0",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "nukestudio_app",
+			"path": "/Applications/Nuke10.0v4/NukeStudio10.0v4.app/NukeStudio10.0v4",
+			"tags": [
+				"compositor", "video_editor", "nuke"
+			],
+			"type": "app",
+			"version": "10.0",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "maya_app",
+			"path": "/Applications/Autodesk/maya2016.5/Maya.app/Contents/MacOS/Maya",
+			"tags": [
+				"3d", "animation", "fx"
+			],
+			"type": "app",
+			"version": "2016.5",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "maya_location",
+			"path": "/Applications/Autodesk/maya2016.5/Maya.app/Contents/MacOS",
+			"tags": [
+				"3d", "animation", "fx", "maya"
+			],
+			"type": "path",
+			"version": "2016.5",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "maya_bin",
+			"path": "/Applications/Autodesk/maya2016.5/Maya.app/Contents/bin",
+			"tags": [
+				"3d", "animation", "fx", "maya"
+			],
+			"type": "bin_path",
+			"version": "2016.5",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "alshaders_install",
+			"path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/arnold/alShaders-osx",
+			"tags": [
+				"3d", "render", "arnold"
+			],
+			"type": "path",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "arnold_plugin_path",
+			"path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/arnold/alShaders-osx/bin",
+			"tags": [
+				"3d", "render", "arnold"
+			],
+			"type": "bin_path",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "mtoa_templates_path",
+			"path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/arnold/alShaders-osx/ae",
+			"tags": [
+				"3d", "render", "arnold"
+			],
+			"type": "path",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "maya_custom_template_path",
+			"path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/arnold/alShaders-osx/aexml",
+			"tags": [
+				"3d", "render", "arnold"
+			],
+			"type": "path",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "ffmpeg_path",
+			"path": "/usr/local/bin/ffmpeg",
+			"tags": [
+				"2d", "video", "converter"
+			],
+			"type": "cmd",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "photoshop_app",
+			"path": "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app/Contents/MacOS/Adobe Photoshop CC",
+			"tags": [
+				"2d", "image_editor", "adobe"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "aftereffects_app",
+			"path": "/Applications/Adobe After Effects CC/Adobe After Effects CC.app/Contents/MacOS/After Effects",
+			"tags": [
+				"2d", "video", "compositor", "adobe"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "meshlab_app",
+			"path": "/opt/homebrew-cask/Caskroom/meshlab/1.3.3/meshlab.app/Contents/MacOS/meshlab",
+			"tags": [
+				"3d", "meshlab"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "meshlabserver_app",
+			"path": "/opt/homebrew-cask/Caskroom/meshlab/1.3.3/meshlab.app/Contents/MacOS/meshlabserver",
+			"tags": [
+				"3d", "meshlab"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "gimp_app",
+			"path": "/Users/vectorthirteen/Applications/GIMP.app/Contents/MacOS/GIMP",
+			"tags": [
+				"2d", "image_editor"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "redcine_app",
+			"path": "/Applications/REDCINE-X Professional/REDCINE-X PRO.app/Contents/MacOS/REDCINE-X PRO",
+			"tags": [
+				"2d", "video", "converter", "RED"
+			],
+			"type": "app",
+			"os": "osx"
+		}, 
+		{
+			"env_name": "redline_app",
+			"path": "/Applications/REDCINE-X Professional/REDCINE-X PRO.app/Contents/MacOS/REDline",
+			"tags": [
+				"2d", "video", "converter", "RED"
+			],
+			"type": "cmd",
+			"os": "osx"
+		}
+	]
+	}
+}
