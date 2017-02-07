@@ -1,7 +1,7 @@
 {
 	"configs": {
 		"bash_config": {
-			"fin_profile_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/bash/unix_config_global.sh"
+			"fin_profile_path": "/Users/vectorthirteen/syncthing/production/SYSTEMS/bash/unix_config_global.sh"
 		},
 		"servers": {
 			"local_server_path": "/Users/vectorthirteen/syncthing/production",
@@ -11,16 +11,16 @@
 			"backup_server_path": ""
 		},
 		"templates": {
-			"project_dir_template": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/database/xml/project_dir_template_2015-05-06.xml"
+			"project_dir_template": "/Users/vectorthirteen/syncthing/production/SYSTEMS/database/xml/project_dir_template_2015-05-06.xml"
 		},
 		"color": {
-			"ocio_default": "/Users/vectorthirteen/Dropbox/PRODUCTION/SYSTEMS/ocio/spi-vfx/config.ocio",
+			"ocio_default": "/Users/vectorthirteen/syncthing/production/SYSTEMS/ocio/spi-vfx/config.ocio",
 			"luts": ""
 		},
 		"reference": {
-			"ref_img_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/img",
-			"ref_vid_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/reference/vid",
-			"ref_tut_path": "/Users/vectorthirteen/Dropbox/PRODUCTION/ASSETS/TUTORIALS"
+			"ref_img_path": "/Users/vectorthirteen/syncthing/production/ASSETS/reference/img",
+			"ref_vid_path": "/Users/vectorthirteen/syncthing/production/ASSETS/reference/vid",
+			"ref_tut_path": "/Users/vectorthirteen/syncthing/production/ASSETS/TUTORIALS"
 		},
 		"apps": [
 			{
