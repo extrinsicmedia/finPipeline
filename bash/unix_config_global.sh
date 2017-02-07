@@ -377,7 +377,7 @@ export OCIO="$SYSTEMS_SERVER/ocio/spi-vfx/config.ocio"
 alias bvplay='bview $(lss --format %h[%r]%t)'
 
 ### fin jobStart tool function
-fin () {
+jobstart () {
     if [[ -n $3 ]]; then
         eval "$($SYSTEMS_SERVER/bash/jobStart.sh $1 $2 $3)"
     elif [[ -n $2 ]]; then
