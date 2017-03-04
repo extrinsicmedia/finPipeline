@@ -72,4 +72,4 @@ brew install -v imagemagick --enable-hdri --with-fftw --with-fontconfig --with-j
 # Image processing
 
 # Link apps such as Python and QT Designer
-sudo brew linkapps
+brew linkapps
