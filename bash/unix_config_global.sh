@@ -11,10 +11,17 @@ then
         if [[ -d $LOCAL_SERVER_PATH ]];
             then
                 export LOCAL_SERVER=$LOCAL_SERVER_PATH
-                export LOCAL_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
                 export LOCAL_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-                export LOCAL_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
         fi
+
+        # Set systems server
+        SYSTEMS_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value systems_server_path)"
+        if [[ -d $SYSTEMS_SERVER_PATH ]];
+            then
+                export SYSTEMS_SERVER=$SYSTEMS_SERVER_PATH
+                export PYTHON_SERVER="$SYSTEMS_SERVER/python"
+                unset SYSTEMS_SERVER_PATH
+
 
         ## Set production or shared server
         PROD_SERVER_PATH="$(cat $HOME/finpipeline.yaml | shyaml get-value prod_server_path)"
@@ -24,16 +31,12 @@ then
             then
                 export PROD_SERVER=$PROD_SERVER_PATH
                 export PROD_JOB_SERVER="$PROD_SERVER/PROJECTS"
-                export PROD_SYSTEMS_SERVER="$PROD_SERVER/SYSTEMS"
-                export PROD_PYTHON_SERVER="$PROD_SYSTEMS_SERVER/python"
                 unset PROD_SERVER_PATH
                 unset LOCAL_SERVER_PATH
             fi
         else
             export PROD_SERVER=$LOCAL_SERVER_PATH
-            export PROD_SYSTEMS_SERVER="$LOCAL_SERVER/SYSTEMS"
             export PROD_JOB_SERVER="$LOCAL_SERVER/PROJECTS"
-            export PROD_PYTHON_SERVER="$LOCAL_SYSTEMS_SERVER/python"
             unset PROD_SERVER_PATH
             unset LOCAL_SERVER_PATH
         fi
@@ -300,11 +303,8 @@ if [[ -d $LOCAL_SERVER ]];
 fi
 
 ### set default servers
-export SYSTEMS_SERVER="$SERVER/SYSTEMS"
 export JOB_SERVER="$SERVER/PROJECTS"
 export BACKUP_JOB_SERVER="$BACKUP_SERVER/PRODUCTION/PROJECTS"
-export LOCAL_DB_SERVER="$LOCAL_SYSTEMS_SERVER/database"
-export PROD_DB_SERVER="$PROD_SYSTEMS_SERVER/database"
 export DB_SERVER="$SYSTEMS_SERVER/database"
 
 ### configs and naming

@@ -4,7 +4,7 @@ fin_profile_path: ""
 ### server paths
 local_server_path: ""
 prod_server_path: ""
-systems_path: ""
+systems_server_path: ""
 dropbox_path: ""
 backup_server_path: ""
 
