@@ -1,0 +1,211 @@
+{	
+	"formats": [
+		{
+			"format_name": "5k_RED",
+			"width": 5120,
+			"height": 2700,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"RED", "Dragon", "5k"
+			]
+		}
+		{
+			"format_name": "4k_RED",
+			"width": 4096,
+			"height": 2160,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"RED", "Dragon", "4k"
+			]
+		}
+		{
+			"format_name": "2k_anamorphic",
+			"width": 2048,
+			"height": 1556,
+			"pixel_aspect": 2.0,
+			"tags": [
+				"anamorphic", "film", "2k"
+			]
+		}
+		{
+			"format_name": "4k_anamorphic",
+			"width": 4096,
+			"height": 3112,
+			"pixel_aspect": 2.0,
+			"tags": [
+				"anamorphic", "film", "4k"
+			]
+		}
+		{
+			"format_name": "2k_full_ap",
+			"width": 2048,
+			"height": 1556,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"full aperture", "film", "2k", "full ap"
+			]
+		}
+		{
+			"format_name": "2k_full_ap",
+			"width": 2048,
+			"height": 1556,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"full aperture", "film", "2k", "full ap"
+			]
+		}
+		{
+			"format_name": "2k_3perf_1168",
+			"width": 2048,
+			"height": 1168,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"3 perf", "film", "2k", "3perf"
+			]
+		}
+		{
+			"format_name": "2k_3perf_1162",
+			"width": 2048,
+			"height": 1162,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"3 perf", "film", "2k", "3perf"
+			]
+		}
+		{
+			"format_name": "2k_3perf_1156",
+			"width": 2048,
+			"height": 1156,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"3 perf", "film", "2k", "3perf"
+			]
+		}
+		{
+			"format_name": "2k_3perf_1152",
+			"width": 2048,
+			"height": 1152,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"3 perf", "film", "2k", "3perf"
+			]
+		}
+		{
+			"format_name": "2k_dcp",
+			"width": 2048,
+			"height": 1080,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"dcp", "film", "2k"
+			]
+		}
+		{
+			"format_name": "square_1k",
+			"width": 1024,
+			"height": 1024,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"square", "1k"
+			]
+		}
+		{
+			"format_name": "square_2k",
+			"width": 2048,
+			"height": 2048,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"square", "2k"
+			]
+		}
+		{
+			"format_name": "square_4k",
+			"width": 4096,
+			"height": 4096,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"square", "4k"
+			]
+		}
+		{
+			"format_name": "square_8k",
+			"width": 8192,
+			"height": 8192,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"square", "8k"
+			]
+		}
+		{
+			"format_name": "square_16k",
+			"width": 16384,
+			"height": 16384,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"square", "16k"
+			]
+		}
+		{
+			"format_name": "latlong_1k",
+			"width": 1024,
+			"height": 512,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"latlong", "1k"
+			]
+		}
+		{
+			"format_name": "latlong_2k",
+			"width": 2048,
+			"height": 1024,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"latlong", "2k"
+			]
+		}
+		{
+			"format_name": "latlong_4k",
+			"width": 4096,
+			"height": 2048,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"latlong", "4k"
+			]
+		}
+		{
+			"format_name": "latlong_8k",
+			"width": 8192,
+			"height": 4096,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"latlong", "8k"
+			]
+		}
+		{
+			"format_name": "latlong_16k",
+			"width": 16384,
+			"height": 8192,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"latlong", "16k"
+			]
+		}
+		{
+			"format_name": "half_HD",
+			"width": 960,
+			"height": 540,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"hd", "16x9"
+			]
+		}
+		{
+			"format_name": "email",
+			"width": 720,
+			"height": 405,
+			"pixel_aspect": 1.0,
+			"tags": [
+				"email"
+			]
+		}
+	]
+}
