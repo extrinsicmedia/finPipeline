@@ -1,0 +1,93 @@
+#!/bin/sh
+
+# COLORS
+BLACK="\[\033[0;30m\]"
+BBLACK="\[\033[1;30m\]"
+RED="\[\033[0;31m\]"
+BRED="\[\033[1;31m\]"
+GREEN="\[\033[0;32m\]"
+BGREEN="\[\033[1;32m\]"
+YELLOW="\[\033[0;33m\]"
+BYELLOW="\[\033[1;33m\]"
+BLUE="\[\033[0;34m\]"
+BBLUE="\[\033[1;34m\]"
+PURPLE="\[\033[0;35m\]"
+BPURPLE="\[\033[1;35m\]"
+CYAN="\[\033[0;36m\]"
+BCYAN="\[\033[1;36m\]"
+WHITE="\[\033[0;37m\]"
+BWHITE="\[\033[1;37m\]"
+
+# FUNCTION DEFS
+function cleanpyc { find ${@:-'.'} -name '*.pyc' -exec rm -f {} \;;}
+function cleanstore { find ${@:-'.'} -name '.DS_Store' -exec rm -rf {} \;;}
+function findpy() { find ${@:-'.'} -name '*.py' ;}
+function findpyc() { find ${@:-'.'} -name '*.pyc' ;}
+function grepy() { grep -Rn $1 * ;}
+function sshadd() { ssh-add -t 7200 ~/.ssh/id_rsa;}
+
+# ALIASES
+alias c='clear'
+alias cleanall='cleanpyc;cleanstore'
+alias h='history'
+alias hg='history | grep'
+alias ht='history | tail -20'
+alias ls='gls -FGa --color'
+alias ll='gls -l --color'
+alias la='gls -a --color'
+alias lc='c; ll'
+alias lca='c; ll -a'
+alias mv="mv -v"
+alias qdu="sudo du -sh * | pyp"
+alias vic='vi ~/.profile; source ~/.profile'
+
+# Cron tools
+alias cronset="export EDITOR=nano && crontab -e"
+
+# COMPLETE
+complete -A user -X "_*" mail
+complete -A export printenv
+complete -A export env
+complete -A command which
+complete -A command alias
+
+# SET UP PROMPT
+export PS1="${RED}\T ${BRED}\u${RED}@\h:${GREEN}\w ${YELLOW}$ "
+
+# SET UP ls COLORS
+eval `gdircolors $HOME/.dircolorsrc`
+
+# SET UP COMMAND SEPARATOR
+if [ -f "$HOME/.bash_ps1" ]; then
+
+    . "$HOME/.bash_ps1"
+
+    fi
+
+# Only run these if we're in an interactive shell and only once per session
+if [[ $- == *i* ]]; 
+then
+    if [ -z "$SSH_AUTH_SOCK" ];
+    then
+        # SSH AGENT STARTUP
+        eval $(ssh-agent)
+        ssh-add -t 7200 ~/.ssh/id_rsa
+    fi
+
+    # GPG AGENT STARTUP
+    eval $(gpg-agent --daemon)
+    export GPG_TTY=$(tty)
+        
+    # START KEYCHAIN
+    eval $(keychain --eval)
+fi
+
+# http://signal0.com/2012/07/19/keeping_bash_history_forever.html
+HISTIGNORE="hnote*:jrnl *"
+# Used to put notes in a history file
+function hnote {
+    echo "## NOTE [`date`]: $*" >> $HOME/.history/bash_history-`date +%Y%m%d`
+}
+
+# used to keep my history forever
+PROMPT_COMMAND="[ -d $HOME/.history ] || mkdir -p $HOME/.history; echo : [\$(date)] $$ $USER \$OLDPWD\; \$(history 1 | sed -E 's/^[[:space:]]+[0-9]*[[:space:]]+//g') >> $HOME/.history/bash_history-\`date +%Y%m%d\`"
