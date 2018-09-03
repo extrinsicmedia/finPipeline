@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE REDXIF>
+<sidecar version="2.0" type="RSX" lastModifiedBy="REDCINE-X PROFESSIONAL Build 31.34738 Mac 10.9.5 64bit Public Release G881968Z5J4">
+    <looks>
+        <primary type="guid" value="B7791BEC-7776-4B88-A00A-DC60B743D0E2"/>
+        <looklist>
+            <look id="B7791BEC-7776-4B88-A00A-DC60B743D0E2" name="Look 01">
+                <lookmodules>
+                    <module name="R3DIPS" order="0">
+                        <iso type="int" value="800"/>
+                        <colorspace type="string" value="6A"/>
+                        <gammaspace type="string" value="11A"/>
+                        <sharpness type="int" value="0"/>
+                        <denoise type="int" value="0"/>
+                        <detail type="int" value="2"/>
+                        <deb type="bool" value="false"/>
+                        <blacklevel type="int" value="95"/>
+                        <whitelevel type="int" value="685"/>
+                        <drx type="float" value="0.00000"/>
+                        <flut type="float" value="0.00000"/>
+                        <shadow type="float" value="0.00000"/>
+                        <kelvin type="float" value="3200.00000"/>
+                        <tint type="float" value="0.00000"/>
+                        <saturation type="float" value="1.00000"/>
+                        <brightness type="float" value="0.00000"/>
+                        <contrast type="float" value="0.00000"/>
+                        <tonegamma type="float" value="0.60000"/>
+                        <exposurecompensation type="float" value="0.00000"/>
+                        <liftgammagain>
+                            <lift>
+                                <red type="float" value="0.00000"/>
+                                <green type="float" value="0.00000"/>
+                                <blue type="float" value="0.00000"/>
+                            </lift>
+                            <gamma>
+                                <red type="float" value="1.00000"/>
+                                <green type="float" value="1.00000"/>
+                                <blue type="float" value="1.00000"/>
+                            </gamma>
+                            <gain>
+                                <red type="float" value="1.00000"/>
+                                <green type="float" value="1.00000"/>
+                                <blue type="float" value="1.00000"/>
+                            </gain>
+                        </liftgammagain>
+                        <gain>
+                            <red type="float" value="1.00000"/>
+                            <green type="float" value="1.00000"/>
+                            <blue type="float" value="1.00000"/>
+                        </gain>
+                        <lumacurve>
+                            <blackx type="float" value="0.00000"/>
+                            <blacky type="float" value="0.00000"/>
+                            <toex type="float" value="0.25000"/>
+                            <toey type="float" value="0.25000"/>
+                            <midx type="float" value="0.50000"/>
+                            <midy type="float" value="0.50000"/>
+                            <kneex type="float" value="0.75000"/>
+                            <kneey type="float" value="0.75000"/>
+                            <whitex type="float" value="1.00000"/>
+                            <whitey type="float" value="1.00000"/>
+                        </lumacurve>
+                        <redcurve>
+                            <blackx type="float" value="0.00000"/>
+                            <blacky type="float" value="0.00000"/>
+                            <toex type="float" value="0.25000"/>
+                            <toey type="float" value="0.25000"/>
+                            <midx type="float" value="0.50000"/>
+                            <midy type="float" value="0.50000"/>
+                            <kneex type="float" value="0.75000"/>
+                            <kneey type="float" value="0.75000"/>
+                            <whitex type="float" value="1.00000"/>
+                            <whitey type="float" value="1.00000"/>
+                        </redcurve>
+                        <greencurve>
+                            <blackx type="float" value="0.00000"/>
+                            <blacky type="float" value="0.00000"/>
+                            <toex type="float" value="0.25000"/>
+                            <toey type="float" value="0.25000"/>
+                            <midx type="float" value="0.50000"/>
+                            <midy type="float" value="0.50000"/>
+                            <kneex type="float" value="0.75000"/>
+                            <kneey type="float" value="0.75000"/>
+                            <whitex type="float" value="1.00000"/>
+                            <whitey type="float" value="1.00000"/>
+                        </greencurve>
+                        <bluecurve>
+                            <blackx type="float" value="0.00000"/>
+                            <blacky type="float" value="0.00000"/>
+                            <toex type="float" value="0.25000"/>
+                            <toey type="float" value="0.25000"/>
+                            <midx type="float" value="0.50000"/>
+                            <midy type="float" value="0.50000"/>
+                            <kneex type="float" value="0.75000"/>
+                            <kneey type="float" value="0.75000"/>
+                            <whitex type="float" value="1.00000"/>
+                            <whitey type="float" value="1.00000"/>
+                        </bluecurve>
+                    </module>
+                    <module name="com.red.hdr" enabled="false" order="1">
+<blend_type value="A Frame" /><blend_bias value="0" />
+</module>
+                    <module name="com.red.effect.alchemygroup" enabled="false" order="2">
+<alchemy alchemy="0" alchemy_enabled="true" clarity="0" clarity_enabled="true" skin="0" skin_enabled="true" />
+
+</module>
+                    <module name="com.red.effect.saturation" enabled="false" order="3">
+<saturation saturation="1" />
+
+</module>
+                    <module name="com.red.effect.unsharpmask.v1" enabled="false" order="4">
+<unsharpmask unsharpmask_amount="50" unsharpmask_radius="1" unsharpmask_threshold="0" />
+
+</module>
+                    <module name="com.red.effect.filmlook.v1" enabled="false" order="5">
+<filmgrain strength="0.3" size="1.3" chroma="0.3" softness="0.3" shadow="0.35" highlight="0.75" />
+
+</module>
+                </lookmodules>
+            </look>
+        </looklist>
+    </looks>
+</sidecar>
